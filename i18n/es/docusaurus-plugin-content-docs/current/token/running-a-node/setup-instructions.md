@@ -328,7 +328,7 @@ k apply -f audius/discovery-provider/discovery-provider-deploy.yaml
 
 You can verify your upgrade with the `\health_check` endpoint.
 
-#### Next
+#### Siguiente
 
 Once you've finished setting up the Discovery Provider, continue to the [Logger](https://github.com/AudiusProject/audius-k8s-manifests#logger) section.
 
