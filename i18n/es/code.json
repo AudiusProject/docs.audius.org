@@ -71,7 +71,7 @@
     "description": "The page & hero description of the blog archive page"
   },
   "theme.blog.paginator.navAriaLabel": {
-    "message": "Navegación por la página de la lista de blogs ",
+    "message": "Navegación por la página de la lista de blogs",
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
@@ -107,7 +107,7 @@
     "description": "The label of the link targeting the tag list page"
   },
   "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "Copiar código al portapaples",
+    "message": "Copiar código al portapapeles",
     "description": "The ARIA label for copy code blocks button"
   },
   "theme.CodeBlock.copied": {
@@ -119,7 +119,7 @@
     "description": "The copy button label on code blocks"
   },
   "theme.blog.post.paginator.navAriaLabel": {
-    "message": "Navegación de la página de publicaciones del blog ",
+    "message": "Navegación de la página de publicaciones del blog",
     "description": "The ARIA label for the blog posts pagination"
   },
   "theme.blog.post.paginator.newerPost": {
