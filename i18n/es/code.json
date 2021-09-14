@@ -90,18 +90,6 @@
     "message": "Leer Más",
     "description": "The label used in blog post item excerpts to link to full blog posts"
   },
-  "theme.blog.post.paginator.navAriaLabel": {
-    "message": "Navegación de la página de publicaciones del blog ",
-    "description": "The ARIA label for the blog posts pagination"
-  },
-  "theme.blog.post.paginator.newerPost": {
-    "message": "Publicación más reciente",
-    "description": "The blog post button label to navigate to the newer/previous post"
-  },
-  "theme.blog.post.paginator.olderPost": {
-    "message": "Publicación más antigua",
-    "description": "The blog post button label to navigate to the older/next post"
-  },
   "theme.blog.sidebar.navAriaLabel": {
     "message": "Navegación de publicaciones recientes",
     "description": "The ARIA label for recent posts in the blog sidebar"
@@ -130,6 +118,26 @@
     "message": "Copiar",
     "description": "The copy button label on code blocks"
   },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "Navegación de la página de publicaciones del blog ",
+    "description": "The ARIA label for the blog posts pagination"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "Publicación más reciente",
+    "description": "The blog post button label to navigate to the newer/previous post"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "Publicación más antigua",
+    "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "Expandir barra lateral",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "Expandir barra lateral",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
   "theme.docs.paginator.navAriaLabel": {
     "message": "Navegación de páginas de documentos",
     "description": "The ARIA label for the docs pagination"
@@ -141,22 +149,6 @@
   "theme.docs.paginator.next": {
     "message": "Siguiente",
     "description": "The label used to navigate to the next doc"
-  },
-  "theme.docs.sidebar.expandButtonTitle": {
-    "message": "Expandir barra lateral",
-    "description": "The ARIA label and title attribute for expand button of doc sidebar"
-  },
-  "theme.docs.sidebar.expandButtonAriaLabel": {
-    "message": "Expandir barra lateral",
-    "description": "The ARIA label and title attribute for expand button of doc sidebar"
-  },
-  "theme.docs.tagDocListPageTitle.nDocsTagged": {
-    "message": "One doc tagged|{count} docs tagged",
-    "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
-  },
-  "theme.docs.tagDocListPageTitle": {
-    "message": "{nDocsTagged} with \"{tagName}\"",
-    "description": "The title of the page for a docs tag"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
     "message": "Colapsar barra lateral",
@@ -182,6 +174,14 @@
     "message": "última versión",
     "description": "The label used for the latest version suggestion link label"
   },
+  "theme.docs.tagDocListPageTitle.nDocsTagged": {
+    "message": "One doc tagged|{count} docs tagged",
+    "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.docs.tagDocListPageTitle": {
+    "message": "{nDocsTagged} with \"{tagName}\"",
+    "description": "The title of the page for a docs tag"
+  },
   "theme.common.editThisPage": {
     "message": "Editar esta página",
     "description": "The link label to edit the current page"
@@ -206,13 +206,13 @@
     "message": "← Back to main menu",
     "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
   },
-  "theme.common.skipToMainContent": {
-    "message": "Saltar al contenido principal",
-    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
   "theme.navbar.mobileVersionsDropdown.label": {
     "message": "Versions",
     "description": "The label for the navbar versions dropdown on mobile view"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Saltar al contenido principal",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "En esta página",
