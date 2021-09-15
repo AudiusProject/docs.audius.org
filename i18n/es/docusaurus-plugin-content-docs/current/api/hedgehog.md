@@ -9,11 +9,11 @@ Construir DApps como Apps
 
 [Github](https://github.com/AudiusProject/hedgehog) 👈
 
-Hedgehog is an open-source, client-side Ethereum wallet that uses a username and password. It aims to lower the barrier of entry to crypto projects for non tech-savvy users.
+Hedgehog es una cartera Ethereum de código abierto que utiliza un nombre de usuario y una contraseña. Su objetivo es reducir la barrera de entrada a proyectos cripto para usuarios no expertos en tecnología.
 
-Allow users to interact with your DApp just like they would any other website, no extensions required, without centralizing control of keys.
+Permite a los usuarios interactuar con tu DApp como lo harían con cualquier otro sitio web, sin necesidad de extensiones, sin centralizar el control de claves.
 
-**Hedgehog** is alternative to Metamask that manages a user's private key and wallet on the browser. It exposes a simple API to allow you to create an authentication scheme to let users sign up and login to their wallet across multiple browsers and devices.
+**Hedgehog** es una alternativa a Metamask que administra la clave privada y la billetera de un usuario en el navegador. It exposes a simple API to allow you to create an authentication scheme to let users sign up and login to their wallet across multiple browsers and devices.
 
 ### Not All Transactions Are Created Equal
 
