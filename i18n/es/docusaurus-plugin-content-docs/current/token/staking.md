@@ -3,6 +3,8 @@ sidebar_label: Staking
 sidebar_position: 2
 ---
 
+# Staking
+
 ### What is Staking?
 
 Built as a decentralized protocol on Ethereum, all the content, information and data on Audius is stored and indexed by a growing network of third-party node operators, rather than by the Audius team.
