@@ -7,14 +7,16 @@ sidebar_position: 3
 
 This guide describes how to run Audius services on a single node Kubernetes cluster. Notes about multi node clusters are given as relevant.
 
-**0. Clone the audius-k8s-manifests repository**  
+Join the node operator discord channel on the [Audius discord server](https://discord.com/invite/audius)
+
+## 0. Clone the audius-k8s-manifests repository
 [**https://github.com/AudiusProject/audius-k8s-manifests**](https://github.com/AudiusProject/audius-k8s-manifests)\*\*\*\*
 
 ```text
 git clone git@github.com:AudiusProject/audius-k8s-manifests.git
 ```
 
-#### 1. Cluster Setup
+## 1. Cluster Setup
 
 Initialize a machine running Ubuntu 16.04 LTS or higher, with at least 8 vCPUs and 16 GB of RAM.
 
@@ -26,7 +28,7 @@ yes | sh setup.sh
 
 However, if the node setup is not successful and kubectl is not available, it's advised to follow the installation steps by hand [here](https://github.com/AudiusProject/audius-k8s-manifests/blob/master/cluster-setup.md).
 
-#### 2. Audius CLI Setup
+## 2. Audius CLI Setup
 
 You can skip this section if installing for the first time.
 
@@ -42,7 +44,7 @@ You can then view all commands available via `audius-cli` by simply running:
 audius-cli -h
 ```
 
-#### 3. Storage
+## 3. Storage
 
 Provision a shared host directory for persistent storage,
 
@@ -70,94 +72,11 @@ To nuke all data and start clean,
 rm -rf /var/k8s/*
 ```
 
-#### 4. Setup Service
+## 4. Service Setup
 
 See below for a guide to deploying [Creator Node](https://github.com/AudiusProject/audius-k8s-manifests#creator-node-1) and [Discovery Provider](https://github.com/AudiusProject/audius-k8s-manifests#discovery-provider-1) via `audius-cli`. After you finish setting up the service, please continue with the Logger section.
 
 **Note:** "Creator Node" and "Discovery Provider" have recently been renamed to "Content Node" and "Discovery Node" respectively. However for consistency within the code and this README, we will continue to use the terms "Creator Node" and "Discovery Node".
-
-#### 5. Logger
-
-See the [Logger](https://github.com/AudiusProject/audius-k8s-manifests#logger) section below for instructions on setting up the logger.
-
-#### 6. Security & Infrastructure configuration
-
-1.\) In order for clients to talk to your service, you'll need to expose two ports: the web server port and the IPFS swarm port. In order to find these ports, run `kubectl get svc`. The web server port is mapped to 4000 for creator node and 5000 for discovery provider. The IPFS swarm port is mapped to 4001
-
-```text
-kubectl get svc
-
-NAME                             TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                                        AGE
-discovery-provider-backend-svc   NodePort    10.98.78.108    <none>        5000:31744/TCP                                 18h
-discovery-provider-cache-svc     ClusterIP   10.101.94.71    <none>        6379/TCP                                       18h
-discovery-provider-db-svc        ClusterIP   10.110.50.147   <none>        5432/TCP                                       18h
-discovery-provider-ipfs-svc      NodePort    10.106.89.157   <none>        4001:30480/TCP,5001:30499/TCP,8080:30508/TCP   18h
-kubernetes                       ClusterIP   10.96.0.1       <none>        443/TCP                                        7d5h
-
-In this case, the web server port is 31744 and the IPFS port is 30480.
-```
-
-2.\) Once you expose these ports, you should be able to publicly hit the health check via the public IP of your instance or load balancer. The next step is to register a DNS record. It's recommended that you map the web server port the DNS and have a domain or subdomain for each service you're running. Also make sure traffic is not allowed without HTTPS. All non HTTPS traffic should redirect to the HTTPS port.
-
-3.\) Now we will configure IPFS.
-
-IPFS has some trouble identifying the public host and port inside kubernetes, this can be fixed with `audius-cli`
-
-```text
-audius-cli configure-ipfs <hostname>
-```
-
-Example: `audius-cli configure-ipfs 108.174.10.10`
-
-4.\) Set load balancer timeouts. Minimum timeouts are 1 hour \(3600 seconds\) for Creator Node requests and 1 minutes \(60 seconds\) for Discovery Provider requests. Track uploads especially for larger files can take several minutes to complete.
-
-5.\) In addition to configuring your security groups to restrict access to just the web server and IPFS swarm port \(4001\), it's recommended that your server or load balancer is protected from DoS attacks. Services like Cloudfront and Cloudflare offer free or low cost services to do this. It would also be possible to use iptables to configure protection as laid out here [https://javapipe.com/blog/iptables-ddos-protection/](https://javapipe.com/blog/iptables-ddos-protection/). Please make sure proxies don't override the timeouts from Step 4.
-
-#### 7. Pre-registration checks
-
-Before registering a service to the dashboard we need to make sure the service is properly configured. Follow the checks below for the type of service you're configuring. Failure to verify that all of these work properly could cause user actions to fail and may lead to slashing actions.
-
-The `sp-actions/` folder contains scripts that test the health of services. Run the corresponding checks for your service type below to verify your service is correctly sete up. Be sure to run `npm install` in `sp-actions/` to install all depdencies.
-
-For more information about `sp-actions/` see the README in the [sp-actions/ folder](https://github.com/AudiusProject/audius-k8s-manifests/tree/master/sp-utilities)
-
-**Creator Node**
-
-```text
-➜ pwd
-/Audius/audius-k8s-manifests/sp-utilities/creator-node
-
-# entering creatorNodeEndpoint and delegatePrivateKey sends those values as env vars to the script without having to export to your terminal
-➜ creatorNodeEndpoint=https://creatornode.domain.co delegatePrivateKey=5e468bc1b395e2eb8f3c90ef897406087b0599d139f6ca0060ba85dcc0dce8dc node healthChecks.js
-Starting tests now. This may take a few minutes.
-✓ Health check passed
-✓ DB health check passed
-✓ Heartbeat duration health check passed
-! Non-heartbeat duration health check timed out at 180 seconds with error message: "Request failed with status code 504". This is not an issue.
-All checks passed!
-```
-
-If you see the message "Error running script" this script did not finish successfully. If you see "All checks passed!" this script finished successfully.
-
-**Discovery Provider**
-
-```text
-➜ discoveryProviderEndpoint=https://discoveryprovider.domain.co node healthChecks.js
-✓ Health check passed
-All checks passed!
-```
-
-If you see the message "Error running script" this script did not finish successfully. If you see "All checks passed!" this script finished successfully.
-
-#### 8. Register the service on the dashboard
-
-Since you've completed all the steps thus far, you're about ready to register!
-
-You can register via the dashboard on [https://dashboard.audius.org](https://dashboard.audius.org/)
-
-#### 9. Script to Initiate Rounds and Process Claims \(Optional\)
-
-If you would like to automatically run claim operations whenever a new round is initiated, a script is included for your convenience in the sp-utilities/claim folder. Further instructions are provided in the sp-utilities README.
 
 ### Creator Node
 
@@ -332,7 +251,8 @@ You can verify your upgrade with the `\health_check` endpoint.
 
 Once you've finished setting up the Discovery Provider, continue to the [Logger](https://github.com/AudiusProject/audius-k8s-manifests#logger) section.
 
-### Logger
+
+## 5. Logger
 
 In order to assist with any debugging. We provide a logging service that you may publish to.
 
@@ -379,3 +299,83 @@ kubectl apply -f audius/logger/logger.yaml
 
 kubectl -n kube-system delete pod $(kubectl -n kube-system get pods | grep "fluentd" | awk '{print $1}')
 ```
+
+
+## 6. Security & Infrastructure configuration
+
+1.\) In order for clients to talk to your service, you'll need to expose two ports: the web server port and the IPFS swarm port. In order to find these ports, run `kubectl get svc`. The web server port is mapped to 4000 for creator node and 5000 for discovery provider. The IPFS swarm port is mapped to 4001
+
+```text
+kubectl get svc
+
+NAME                             TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                                        AGE
+discovery-provider-backend-svc   NodePort    10.98.78.108    <none>        5000:31744/TCP                                 18h
+discovery-provider-cache-svc     ClusterIP   10.101.94.71    <none>        6379/TCP                                       18h
+discovery-provider-db-svc        ClusterIP   10.110.50.147   <none>        5432/TCP                                       18h
+discovery-provider-ipfs-svc      NodePort    10.106.89.157   <none>        4001:30480/TCP,5001:30499/TCP,8080:30508/TCP   18h
+kubernetes                       ClusterIP   10.96.0.1       <none>        443/TCP                                        7d5h
+
+In this case, the web server port is 31744 and the IPFS port is 30480.
+```
+
+2.\) Once you expose these ports, you should be able to publicly hit the health check via the public IP of your instance or load balancer. The next step is to register a DNS record. It's recommended that you map the web server port the DNS and have a domain or subdomain for each service you're running. Also make sure traffic is not allowed without HTTPS. All non HTTPS traffic should redirect to the HTTPS port.
+
+3.\) Now we will configure IPFS.
+
+IPFS has some trouble identifying the public host and port inside kubernetes, this can be fixed with `audius-cli`
+
+```text
+audius-cli configure-ipfs <hostname>
+```
+
+Example: `audius-cli configure-ipfs 108.174.10.10`
+
+4.\) Set load balancer timeouts. Minimum timeouts are 1 hour \(3600 seconds\) for Creator Node requests and 1 minutes \(60 seconds\) for Discovery Provider requests. Track uploads especially for larger files can take several minutes to complete.
+
+5.\) In addition to configuring your security groups to restrict access to just the web server and IPFS swarm port \(4001\), it's recommended that your server or load balancer is protected from DoS attacks. Services like Cloudfront and Cloudflare offer free or low cost services to do this. It would also be possible to use iptables to configure protection as laid out here [https://javapipe.com/blog/iptables-ddos-protection/](https://javapipe.com/blog/iptables-ddos-protection/). Please make sure proxies don't override the timeouts from Step 4.
+
+## 7. Pre-registration checks
+
+Before registering a service to the dashboard we need to make sure the service is properly configured. Follow the checks below for the type of service you're configuring. Failure to verify that all of these work properly could cause user actions to fail and may lead to slashing actions.
+
+The `sp-actions/` folder contains scripts that test the health of services. Run the corresponding checks for your service type below to verify your service is correctly sete up. Be sure to run `npm install` in `sp-actions/` to install all depdencies.
+
+For more information about `sp-actions/` see the README in the [sp-actions/ folder](https://github.com/AudiusProject/audius-k8s-manifests/tree/master/sp-utilities)
+
+**Creator Node**
+
+```text
+➜ pwd
+/Audius/audius-k8s-manifests/sp-utilities/creator-node
+
+# entering creatorNodeEndpoint and delegatePrivateKey sends those values as env vars to the script without having to export to your terminal
+➜ creatorNodeEndpoint=https://creatornode.domain.co delegatePrivateKey=5e468bc1b395e2eb8f3c90ef897406087b0599d139f6ca0060ba85dcc0dce8dc node healthChecks.js
+Starting tests now. This may take a few minutes.
+✓ Health check passed
+✓ DB health check passed
+✓ Heartbeat duration health check passed
+! Non-heartbeat duration health check timed out at 180 seconds with error message: "Request failed with status code 504". This is not an issue.
+All checks passed!
+```
+
+If you see the message "Error running script" this script did not finish successfully. If you see "All checks passed!" this script finished successfully.
+
+**Discovery Provider**
+
+```text
+➜ discoveryProviderEndpoint=https://discoveryprovider.domain.co node healthChecks.js
+✓ Health check passed
+All checks passed!
+```
+
+If you see the message "Error running script" this script did not finish successfully. If you see "All checks passed!" this script finished successfully.
+
+## 8. Register the service on the dashboard
+
+Since you've completed all the steps thus far, you're about ready to register!
+
+You can register via the dashboard on [https://dashboard.audius.org](https://dashboard.audius.org/)
+
+## 9. Script to Initiate Rounds and Process Claims \(Optional\)
+
+If you would like to automatically run claim operations whenever a new round is initiated, a script is included for your convenience in the sp-utilities/claim folder. Further instructions are provided in the sp-utilities README.
