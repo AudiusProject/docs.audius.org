@@ -12,7 +12,7 @@
     "description": "The label for category Token in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Running A Node": {
-    "message": "Running A Node",
+    "message": "Ejecutando un nodo",
     "description": "The label for category Running A Node in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.API": {
