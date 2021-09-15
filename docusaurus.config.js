@@ -93,12 +93,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           }
         ],
       },
-      algolia: {
-        // This API key is "search-only" and safe to be published
-        apiKey: "d58e0d68c875346d52645d68b13f3ac0",
-        indexName: "audius",
-        contextualSearch: true,
-      },  
+      // algolia: {
+      //   // This API key is "search-only" and safe to be published
+      //   apiKey: "d58e0d68c875346d52645d68b13f3ac0",
+      //   indexName: "audius",
+      //   contextualSearch: true,
+      // },
       footer: {
         style: 'dark',
         links: [

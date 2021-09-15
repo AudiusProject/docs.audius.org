@@ -24,12 +24,17 @@
   --ifm-font-family-base: "Avenir Next LT Pro", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   --ifm-heading-color: var(--neutral-dark-3);
   --ifm-font-color-base: var(--neutral-dark-3);
+  --ifm-font-weight-base: 500;
   --ifm-footer-background-color: #35364F !important;
 }
 
 html[data-theme='dark'] {
   --ifm-heading-color: var(--neutral-light-1);
   --ifm-font-color-base: var(--neutral-light-1);
+}
+
+html {
+  font-weight: var(--ifm-font-weight-base);
 }
 
 @keyframes fadeInUp {

@@ -27,7 +27,7 @@ Decentralized apps today require lots of technical knowledge to configure and us
 
 ### Installation
 
-```text
+```bash
 npm i --save @audius/hedgehog
 ```
 
@@ -69,7 +69,7 @@ Hedgehog is a package that lives in your front end application to create and man
 
 **NOTE**: A private key is only computed and available client side and is never transmitted or stored anywhere besides the user's browser.
 
-```text
+```javascript
 // Provide getFn, setAuthFn, setUserFn as requests to your database/backend service (more details in docs).
 const hedgehog = new Hedgehog(getFn, setAuthFn, setUserFn)
 let wallet
