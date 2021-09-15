@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Hedgehog
 
-Build DApps Like Apps
+Construir DApps como Apps
 
 [Github](https://github.com/AudiusProject/hedgehog) 👈
 
