@@ -7,19 +7,7 @@ description: >-
 
 # REST API
 
-### Selecting a Host <a id="selecting-a-host"></a>
-
-> Code Sample
-
-```text
-
-const sample = (arr) => arr[Math.floor(Math.random() * arr.length)]
-const host = await fetch('https://api.audius.co')
-  .then(r => r.json())
-  .then(j => j.data)
-  .then(d => sample(d))
-
-```
+## Selecting a Host <a id="selecting-a-host"></a>
 
 Audius is a decentralized music streaming service. To use the API, you first select an API endpoint from the list of endpoints returned by:
 
@@ -31,7 +19,19 @@ For the following documention, we've selected one for you:
 
 `https://discoveryprovider.audius1.prod-us-west-2.staked.cloud`
 
-### Specifying App Name <a id="specifying-app-name"></a>
+> Code Sample
+
+```javascript
+
+const sample = (arr) => arr[Math.floor(Math.random() * arr.length)]
+const host = await fetch('https://api.audius.co')
+  .then(r => r.json())
+  .then(j => j.data)
+  .then(d => sample(d))
+
+```
+
+## Specifying App Name <a id="specifying-app-name"></a>
 
 If you're integrating the Audius API into an app in production, we ask that you include an `&app_name=<YOUR-UNIQUE-APP-NAME>` param with each query. Your unique app name is entirely up to you!
 
@@ -39,9 +39,29 @@ If you're integrating the Audius API into an app in production, we ask that you 
 
 ### Search Users <a id="search-users"></a>
 
+`GET /users/search`
+
+_Seach for a user_
+
+#### Query Parameters <a id="search-users-parameters"></a>
+
+| Name                 | Type   | Required | Description   |
+|:-------------------- |:------ |:-------- |:------------- |
+| query                | string | true     | Search query  |
+| only\_downloadable | string | false    | none          |
+| app\_name          | string | true     | Your app name |
+
+#### Responses <a id="search-users-responses"></a>
+
+| Status | Meaning                                                                    | Description  | Schema                                                                                   |
+|:------ |:-------------------------------------------------------------------------- |:------------ |:---------------------------------------------------------------------------------------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [user\_search](https://audiusproject.github.io/api-docs/?javascript#schemauser_search) |
+| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                     |
+| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                     |
+
 > Code Sample
 
-```text
+```javascript
 
 const headers = {
   'Accept':'application/json'
@@ -61,21 +81,9 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/se
 
 ```
 
-`GET /users/search`
-
-_Seach for a user_
-
-#### Query Parameters <a id="search-users-parameters"></a>
-
-| Name                 | Type   | Required | Description   |
-|:-------------------- |:------ |:-------- |:------------- |
-| query                | string | true     | Search query  |
-| only\_downloadable | string | false    | none          |
-| app\_name          | string | true     | Your app name |
-
 > Example Response
 
-```text
+```json
 {
   "data": [
     {
@@ -105,19 +113,30 @@ _Seach for a user_
 }
 ```
 
-#### Responses <a id="search-users-responses"></a>
-
-| Status | Meaning                                                                    | Description  | Schema                                                                                   |
-|:------ |:-------------------------------------------------------------------------- |:------------ |:---------------------------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [user\_search](https://audiusproject.github.io/api-docs/?javascript#schemauser_search) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                     |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                     |
-
 ### Get User <a id="get-user"></a>
+
+`GET /users/{user_id}`
+
+_Fetch a single user_
+
+#### Query Parameters <a id="get-user-parameters"></a>
+
+| Name        | Type   | Required | Description   |
+|:----------- |:------ |:-------- |:------------- |
+| user\_id  | string | true     | A User ID     |
+| app\_name | string | true     | Your app name |
+
+#### Responses <a id="get-user-responses"></a>
+
+| Status | Meaning                                                                    | Description  | Schema                                                                                       |
+|:------ |:-------------------------------------------------------------------------- |:------------ |:-------------------------------------------------------------------------------------------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [user\_response](https://audiusproject.github.io/api-docs/?javascript#schemauser_response) |
+| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                         |
+| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                         |
 
 > Code Sample
 
-```text
+```javascript
 
 const headers = {
   'Accept':'application/json'
@@ -137,20 +156,9 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/nl
 
 ```
 
-`GET /users/{user_id}`
-
-_Fetch a single user_
-
-#### Query Parameters <a id="get-user-parameters"></a>
-
-| Name        | Type   | Required | Description   |
-|:----------- |:------ |:-------- |:------------- |
-| user\_id  | string | true     | A User ID     |
-| app\_name | string | true     | Your app name |
-
 > Example Response
 
-```text
+```json
 {
   "data": {
     "album_count": 0,
@@ -178,19 +186,30 @@ _Fetch a single user_
 }
 ```
 
-#### Responses <a id="get-user-responses"></a>
-
-| Status | Meaning                                                                    | Description  | Schema                                                                                       |
-|:------ |:-------------------------------------------------------------------------- |:------------ |:-------------------------------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [user\_response](https://audiusproject.github.io/api-docs/?javascript#schemauser_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                         |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                         |
-
 ### Get User's Favorite Tracks <a id="get-user-39-s-favorite-tracks"></a>
+
+`GET /users/{user_id}/favorites`
+
+_Fetch favorited tracks for a user_
+
+#### Query Parameters <a id="get-user&apos;s-favorite-tracks-parameters"></a>
+
+| Name        | Type   | Required | Description   |
+|:----------- |:------ |:-------- |:------------- |
+| user\_id  | string | true     | A User ID     |
+| app\_name | string | true     | Your app name |
+
+#### Responses <a id="get-user&apos;s-favorite-tracks-responses"></a>
+
+| Status | Meaning                                                                    | Description  | Schema                                                                                                 |
+|:------ |:-------------------------------------------------------------------------- |:------------ |:------------------------------------------------------------------------------------------------------ |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [favorites\_response](https://audiusproject.github.io/api-docs/?javascript#schemafavorites_response) |
+| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                                   |
+| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                                   |
 
 > Code Sample
 
-```text
+```javascript
 
 const headers = {
   'Accept':'application/json'
@@ -210,20 +229,9 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/nl
 
 ```
 
-`GET /users/{user_id}/favorites`
-
-_Fetch favorited tracks for a user_
-
-#### Query Parameters <a id="get-user&apos;s-favorite-tracks-parameters"></a>
-
-| Name        | Type   | Required | Description   |
-|:----------- |:------ |:-------- |:------------- |
-| user\_id  | string | true     | A User ID     |
-| app\_name | string | true     | Your app name |
-
 > Example Response
 
-```text
+```json
 {
   "data": [
     {
@@ -245,19 +253,31 @@ _Fetch favorited tracks for a user_
 }
 ```
 
-#### Responses <a id="get-user&apos;s-favorite-tracks-responses"></a>
-
-| Status | Meaning                                                                    | Description  | Schema                                                                                                 |
-|:------ |:-------------------------------------------------------------------------- |:------------ |:------------------------------------------------------------------------------------------------------ |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [favorites\_response](https://audiusproject.github.io/api-docs/?javascript#schemafavorites_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                                   |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                                   |
-
 ### Get User's Reposts <a id="get-user-39-s-reposts"></a>
+
+`GET /users/{user_id}/reposts`
+
+#### Query Parameters <a id="get-user&apos;s-reposts-parameters"></a>
+
+| Name        | Type   | Required | Description   |
+|:----------- |:------ |:-------- |:------------- |
+| user\_id  | string | true     | A User ID     |
+| limit       | string | false    | Limit         |
+| offset      | string | false    | Offset        |
+| app\_name | string | true     | Your app name |
+
+#### Responses <a id="get-user&apos;s-reposts-responses"></a>
+
+| Status | Meaning                                                                    | Description  | Schema                                                                        |
+|:------ |:-------------------------------------------------------------------------- |:------------ |:----------------------------------------------------------------------------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [reposts](https://audiusproject.github.io/api-docs/?javascript#schemareposts) |
+| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                          |
+| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                          |
+
 
 > Code Sample
 
-```text
+```javascript
 
 const headers = {
   'Accept':'application/json'
@@ -277,22 +297,11 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/st
 
 ```
 
-`GET /users/{user_id}/reposts`
-
-#### Query Parameters <a id="get-user&apos;s-reposts-parameters"></a>
-
-| Name        | Type   | Required | Description   |
-|:----------- |:------ |:-------- |:------------- |
-| user\_id  | string | true     | A User ID     |
-| limit       | string | false    | Limit         |
-| offset      | string | false    | Offset        |
-| app\_name | string | true     | Your app name |
-
 > Example Response
 > 
 > 200 Response
 
-```text
+```json
 {
   "data": [
     {
@@ -304,19 +313,32 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/st
 }
 ```
 
-#### Responses <a id="get-user&apos;s-reposts-responses"></a>
-
-| Status | Meaning                                                                    | Description  | Schema                                                                        |
-|:------ |:-------------------------------------------------------------------------- |:------------ |:----------------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [reposts](https://audiusproject.github.io/api-docs/?javascript#schemareposts) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                          |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                          |
-
 ### Get User's Most Used Track Tags <a id="get-user-39-s-most-used-track-tags"></a>
+
+`GET /users/{user_id}/tags`
+
+_Fetch most used tags in a user's tracks_
+
+#### Query Parameters <a id="get-user&apos;s-most-used-track-tags-parameters"></a>
+
+| Name        | Type    | Required | Description                 |
+|:----------- |:------- |:-------- |:--------------------------- |
+| user\_id  | string  | true     | A User ID                   |
+| limit       | integer | false    | Limit on the number of tags |
+| app\_name | string  | true     | Your app name               |
+| user\_id  | string  | true     | none                        |
+
+#### Responses <a id="get-user&apos;s-most-used-track-tags-responses"></a>
+
+| Status | Meaning                                                                    | Description  | Schema                                                                                       |
+|:------ |:-------------------------------------------------------------------------- |:------------ |:-------------------------------------------------------------------------------------------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [tags\_response](https://audiusproject.github.io/api-docs/?javascript#schematags_response) |
+| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                         |
+| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                         |
 
 > Code Sample
 
-```text
+```javascript
 
 const headers = {
   'Accept':'application/json'
@@ -336,24 +358,11 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/st
 
 ```
 
-`GET /users/{user_id}/tags`
-
-_Fetch most used tags in a user's tracks_
-
-#### Query Parameters <a id="get-user&apos;s-most-used-track-tags-parameters"></a>
-
-| Name        | Type    | Required | Description                 |
-|:----------- |:------- |:-------- |:--------------------------- |
-| user\_id  | string  | true     | A User ID                   |
-| limit       | integer | false    | Limit on the number of tags |
-| app\_name | string  | true     | Your app name               |
-| user\_id  | string  | true     | none                        |
-
 > Example Response
 > 
 > 200 Response
 
-```text
+```json
 {
   "data": [
     "string"
@@ -361,19 +370,33 @@ _Fetch most used tags in a user's tracks_
 }
 ```
 
-#### Responses <a id="get-user&apos;s-most-used-track-tags-responses"></a>
-
-| Status | Meaning                                                                    | Description  | Schema                                                                                       |
-|:------ |:-------------------------------------------------------------------------- |:------------ |:-------------------------------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [tags\_response](https://audiusproject.github.io/api-docs/?javascript#schematags_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                         |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                         |
-
 ### Get User's Tracks <a id="get-user-39-s-tracks"></a>
+
+`GET /users/{user_id}/tracks`
+
+_Fetch a list of tracks for a user_
+
+#### Query Parameters <a id="get-user&apos;s-tracks-parameters"></a>
+
+| Name        | Type   | Required | Description   |
+|:----------- |:------ |:-------- |:------------- |
+| user\_id  | string | true     | A User ID     |
+| limit       | string | false    | Limit         |
+| offset      | string | false    | Offset        |
+| sort        | string | false    | Sort mode     |
+| app\_name | string | true     | Your app name |
+
+#### Responses <a id="get-user&apos;s-tracks-responses"></a>
+
+| Status | Meaning                                                                    | Description  | Schema                                                                                           |
+|:------ |:-------------------------------------------------------------------------- |:------------ |:------------------------------------------------------------------------------------------------ |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [tracks\_response](https://audiusproject.github.io/api-docs/?javascript#schematracks_response) |
+| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                             |
+| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                             |
 
 > Code Sample
 
-```text
+```javascript
 
 const headers = {
   'Accept':'application/json'
@@ -393,23 +416,9 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/nl
 
 ```
 
-`GET /users/{user_id}/tracks`
-
-_Fetch a list of tracks for a user_
-
-#### Query Parameters <a id="get-user&apos;s-tracks-parameters"></a>
-
-| Name        | Type   | Required | Description   |
-|:----------- |:------ |:-------- |:------------- |
-| user\_id  | string | true     | A User ID     |
-| limit       | string | false    | Limit         |
-| offset      | string | false    | Offset        |
-| sort        | string | false    | Sort mode     |
-| app\_name | string | true     | Your app name |
-
 > Example Response
 
-```text
+```json
 {
   "data": [
     {
@@ -456,21 +465,33 @@ _Fetch a list of tracks for a user_
 }
 ```
 
-#### Responses <a id="get-user&apos;s-tracks-responses"></a>
-
-| Status | Meaning                                                                    | Description  | Schema                                                                                           |
-|:------ |:-------------------------------------------------------------------------- |:------------ |:------------------------------------------------------------------------------------------------ |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [tracks\_response](https://audiusproject.github.io/api-docs/?javascript#schematracks_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                             |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                             |
-
 ## Playlists <a id="api-playlists"></a>
 
 ### Search Playlists <a id="search-playlists"></a>
 
+`GET /playlists/search`
+
+_Search for a playlist_
+
+#### Query Parameters <a id="search-playlists-parameters"></a>
+
+| Name                 | Type   | Required | Description   |
+|:-------------------- |:------ |:-------- |:------------- |
+| query                | string | true     | Search Query  |
+| only\_downloadable | string | false    | none          |
+| app\_name          | string | true     | Your app name |
+
+#### Responses <a id="search-playlists-responses"></a>
+
+| Status | Meaning                                                                    | Description  | Schema                                                                                                            |
+|:------ |:-------------------------------------------------------------------------- |:------------ |:----------------------------------------------------------------------------------------------------------------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist\_search\_result](https://audiusproject.github.io/api-docs/?javascript#schemaplaylist_search_result) |
+| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                                              |
+| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                                              |
+
 > Code Sample
 
-```text
+```javascript
 
 const headers = {
   'Accept':'application/json'
@@ -490,21 +511,9 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/playlist
 
 ```
 
-`GET /playlists/search`
-
-_Search for a playlist_
-
-#### Query Parameters <a id="search-playlists-parameters"></a>
-
-| Name                 | Type   | Required | Description   |
-|:-------------------- |:------ |:-------- |:------------- |
-| query                | string | true     | Search Query  |
-| only\_downloadable | string | false    | none          |
-| app\_name          | string | true     | Your app name |
-
 > Example Response
 
-```text
+```json
 {
   "data": [
     {
@@ -547,19 +556,31 @@ _Search for a playlist_
 }
 ```
 
-#### Responses <a id="search-playlists-responses"></a>
-
-| Status | Meaning                                                                    | Description  | Schema                                                                                                            |
-|:------ |:-------------------------------------------------------------------------- |:------------ |:----------------------------------------------------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist\_search\_result](https://audiusproject.github.io/api-docs/?javascript#schemaplaylist_search_result) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                                              |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                                              |
-
 ### Get Playlist <a id="get-playlist"></a>
+
+`GET /playlists/{playlist_id}`
+
+_Fetch a playlist_
+
+#### Query Parameters <a id="get-playlist-parameters"></a>
+
+| Name           | Type   | Required | Description   |
+|:-------------- |:------ |:-------- |:------------- |
+| playlist\_id | string | true     | A Playlist ID |
+| app\_name    | string | true     | Your app name |
+
+#### Responses <a id="get-playlist-responses"></a>
+
+| Status | Meaning                                                                    | Description  | Schema                                                                                               |
+|:------ |:-------------------------------------------------------------------------- |:------------ |:---------------------------------------------------------------------------------------------------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist\_response](https://audiusproject.github.io/api-docs/?javascript#schemaplaylist_response) |
+| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                                 |
+| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                                 |
+
 
 > Code Sample
 
-```text
+```javascript
 
 const headers = {
   'Accept':'application/json'
@@ -579,20 +600,9 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/playlist
 
 ```
 
-`GET /playlists/{playlist_id}`
-
-_Fetch a playlist_
-
-#### Query Parameters <a id="get-playlist-parameters"></a>
-
-| Name           | Type   | Required | Description   |
-|:-------------- |:------ |:-------- |:------------- |
-| playlist\_id | string | true     | A Playlist ID |
-| app\_name    | string | true     | Your app name |
-
 > Example Response
 
-```text
+```json
 {
   "data": {
     "artwork": {
@@ -633,19 +643,31 @@ _Fetch a playlist_
 }
 ```
 
-#### Responses <a id="get-playlist-responses"></a>
-
-| Status | Meaning                                                                    | Description  | Schema                                                                                               |
-|:------ |:-------------------------------------------------------------------------- |:------------ |:---------------------------------------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist\_response](https://audiusproject.github.io/api-docs/?javascript#schemaplaylist_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                                 |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                                 |
-
 ### Get Playlist Tracks <a id="get-playlist-tracks"></a>
+
+`GET /playlists/{playlist_id}/tracks`
+
+_Fetch tracks within a playlist_
+
+#### Query Parameters <a id="get-playlist-tracks-parameters"></a>
+
+| Name           | Type   | Required | Description   |
+|:-------------- |:------ |:-------- |:------------- |
+| playlist\_id | string | true     | A Playlist ID |
+| app\_name    | string | true     | Your app name |
+
+#### Responses <a id="get-playlist-tracks-responses"></a>
+
+| Status | Meaning                                                                    | Description  | Schema                                                                                                                |
+|:------ |:-------------------------------------------------------------------------- |:------------ |:--------------------------------------------------------------------------------------------------------------------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist\_tracks\_response](https://audiusproject.github.io/api-docs/?javascript#schemaplaylist_tracks_response) |
+| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                                                  |
+| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                                                  |
+
 
 > Code Sample
 
-```text
+```javascript
 
 const headers = {
   'Accept':'application/json'
@@ -665,20 +687,9 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/playlist
 
 ```
 
-`GET /playlists/{playlist_id}/tracks`
-
-_Fetch tracks within a playlist_
-
-#### Query Parameters <a id="get-playlist-tracks-parameters"></a>
-
-| Name           | Type   | Required | Description   |
-|:-------------- |:------ |:-------- |:------------- |
-| playlist\_id | string | true     | A Playlist ID |
-| app\_name    | string | true     | Your app name |
-
 > Example Response
 
-```text
+```json
 {
   "data": [
     {
@@ -725,21 +736,35 @@ _Fetch tracks within a playlist_
 }
 ```
 
-#### Responses <a id="get-playlist-tracks-responses"></a>
-
-| Status | Meaning                                                                    | Description  | Schema                                                                                                                |
-|:------ |:-------------------------------------------------------------------------- |:------------ |:--------------------------------------------------------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist\_tracks\_response](https://audiusproject.github.io/api-docs/?javascript#schemaplaylist_tracks_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                                                  |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                                                  |
-
 ## Tracks <a id="api-tracks"></a>
 
 ### Search Tracks <a id="search-tracks"></a>
 
+`GET /tracks/search`
+
+_Search for a track_
+
+#### Query Parameters <a id="search-tracks-parameters"></a>
+
+| Name                 | Type   | Required | Description                     |
+|:-------------------- |:------ |:-------- |:------------------------------- |
+| query                | string | true     | Search Query                    |
+| only\_downloadable | string | false    | Return only downloadable tracks |
+| app\_name          | string | true     | Your app name                   |
+
+#### Responses <a id="search-tracks-responses"></a>
+
+| Status | Meaning                                                                    | Description  | Schema                                                                                     |
+|:------ |:-------------------------------------------------------------------------- |:------------ |:------------------------------------------------------------------------------------------ |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [track\_search](https://audiusproject.github.io/api-docs/?javascript#schematrack_search) |
+| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                       |
+| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                       |
+
+
+
 > Code Sample
 
-```text
+```javascript
 
 const headers = {
   'Accept':'application/json'
@@ -759,21 +784,9 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/tracks/s
 
 ```
 
-`GET /tracks/search`
-
-_Search for a track_
-
-#### Query Parameters <a id="search-tracks-parameters"></a>
-
-| Name                 | Type   | Required | Description                     |
-|:-------------------- |:------ |:-------- |:------------------------------- |
-| query                | string | true     | Search Query                    |
-| only\_downloadable | string | false    | Return only downloadable tracks |
-| app\_name          | string | true     | Your app name                   |
-
 > Example Response
 
-```text
+```json
 {
   "data": [
     {
@@ -820,19 +833,31 @@ _Search for a track_
 }
 ```
 
-#### Responses <a id="search-tracks-responses"></a>
-
-| Status | Meaning                                                                    | Description  | Schema                                                                                     |
-|:------ |:-------------------------------------------------------------------------- |:------------ |:------------------------------------------------------------------------------------------ |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [track\_search](https://audiusproject.github.io/api-docs/?javascript#schematrack_search) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                       |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                       |
-
 ### Trending Tracks <a id="trending-tracks"></a>
+
+`GET /tracks/trending`
+
+_Gets the top 100 trending \(most popular\) tracks on Audius_
+
+#### Query Parameters <a id="trending-tracks-parameters"></a>
+
+| Name        | Type   | Required | Description                                                            |
+|:----------- |:------ |:-------- |:---------------------------------------------------------------------- |
+| genre       | string | false    | Trending tracks for a specified genre                                  |
+| time        | string | false    | Trending tracks over a specified time range \(week, month, allTime\) |
+| app\_name | string | true     | Your app name                                                          |
+
+#### Responses <a id="trending-tracks-responses"></a>
+
+| Status | Meaning                                                                    | Description  | Schema                                                                                           |
+|:------ |:-------------------------------------------------------------------------- |:------------ |:------------------------------------------------------------------------------------------------ |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [tracks\_response](https://audiusproject.github.io/api-docs/?javascript#schematracks_response) |
+| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                             |
+| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                             |
 
 > Code Sample
 
-```text
+```javascript
 
 const headers = {
   'Accept':'application/json'
@@ -852,21 +877,9 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/tracks/t
 
 ```
 
-`GET /tracks/trending`
-
-_Gets the top 100 trending \(most popular\) tracks on Audius_
-
-#### Query Parameters <a id="trending-tracks-parameters"></a>
-
-| Name        | Type   | Required | Description                                                            |
-|:----------- |:------ |:-------- |:---------------------------------------------------------------------- |
-| genre       | string | false    | Trending tracks for a specified genre                                  |
-| time        | string | false    | Trending tracks over a specified time range \(week, month, allTime\) |
-| app\_name | string | true     | Your app name                                                          |
-
 > Example Response
 
-```text
+```json
 {
   "data": [
     {
@@ -913,19 +926,30 @@ _Gets the top 100 trending \(most popular\) tracks on Audius_
 }
 ```
 
-#### Responses <a id="trending-tracks-responses"></a>
-
-| Status | Meaning                                                                    | Description  | Schema                                                                                           |
-|:------ |:-------------------------------------------------------------------------- |:------------ |:------------------------------------------------------------------------------------------------ |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [tracks\_response](https://audiusproject.github.io/api-docs/?javascript#schematracks_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                             |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                             |
-
 ### Get Track <a id="get-track"></a>
+
+`GET /tracks/{track_id}`
+
+_Fetch a track_
+
+#### Query Parameters <a id="get-track-parameters"></a>
+
+| Name        | Type   | Required | Description   |
+|:----------- |:------ |:-------- |:------------- |
+| track\_id | string | true     | A Track ID    |
+| app\_name | string | true     | Your app name |
+
+#### Responses <a id="get-track-responses"></a>
+
+| Status | Meaning                                                                    | Description  | Schema                                                                                         |
+|:------ |:-------------------------------------------------------------------------- |:------------ |:---------------------------------------------------------------------------------------------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [track\_response](https://audiusproject.github.io/api-docs/?javascript#schematrack_response) |
+| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                           |
+| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                           |
 
 > Code Sample
 
-```text
+```javascript
 
 const headers = {
   'Accept':'application/json'
@@ -945,20 +969,9 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/tracks/D
 
 ```
 
-`GET /tracks/{track_id}`
-
-_Fetch a track_
-
-#### Query Parameters <a id="get-track-parameters"></a>
-
-| Name        | Type   | Required | Description   |
-|:----------- |:------ |:-------- |:------------- |
-| track\_id | string | true     | A Track ID    |
-| app\_name | string | true     | Your app name |
-
 > Example Response
 
-```text
+```json
 {
   "data": {
     "artwork": {
@@ -1003,32 +1016,7 @@ _Fetch a track_
 }
 ```
 
-#### Responses <a id="get-track-responses"></a>
-
-| Status | Meaning                                                                    | Description  | Schema                                                                                         |
-|:------ |:-------------------------------------------------------------------------- |:------------ |:---------------------------------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [track\_response](https://audiusproject.github.io/api-docs/?javascript#schematrack_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                           |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                           |
-
 ### Stream Track <a id="stream-track"></a>
-
-> Code Sample
-
-```text
-
-fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/tracks/D7KyD/stream?app_name=EXAMPLEAPP',
-{
-  method: 'GET'
-
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
 
 `GET /tracks/{track_id}/stream`
 
@@ -1053,13 +1041,47 @@ This endpoint accepts the Range header for streaming. https://developer.mozilla.
 | 416    | [Range Not Satisfiable](https://tools.ietf.org/html/rfc7233#section-4.4)   | Content range invalid | None   |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error          | None   |
 
+> Code Sample
+
+```javascript
+
+fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/tracks/D7KyD/stream?app_name=EXAMPLEAPP',
+{
+  method: 'GET'
+
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
 ## Metrics <a id="api-metrics"></a>
 
 ### get\_trailing\_app\_name\_metrics <a id="get_trailing_app_name_metrics"></a>
 
+`GET /metrics/app_name/trailing/{time_range}`
+
+_Gets trailing app name metrics from matview_
+
+#### Query Parameters <a id="get_trailing_app_name_metrics-parameters"></a>
+
+| Name          | Type   | Required | Description   |
+|:------------- |:------ |:-------- |:------------- |
+| app\_name   | string | true     | Your app name |
+| time\_range | string | true     | none          |
+
+#### Responses <a id="get_trailing_app_name_metrics-responses"></a>
+
+| Status | Meaning                                                 | Description | Schema                                                                                                                       |
+|:------ |:------------------------------------------------------- |:----------- |:---------------------------------------------------------------------------------------------------------------------------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Success     | [app\_name\_trailing\_response](https://audiusproject.github.io/api-docs/?javascript#schemaapp_name_trailing_response) |
+
 > Code Sample
 
-```text
+```javascript
 
 const headers = {
   'Accept':'application/json'
@@ -1079,22 +1101,11 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/metrics/
 
 ```
 
-`GET /metrics/app_name/trailing/{time_range}`
-
-_Gets trailing app name metrics from matview_
-
-#### Query Parameters <a id="get_trailing_app_name_metrics-parameters"></a>
-
-| Name          | Type   | Required | Description   |
-|:------------- |:------ |:-------- |:------------- |
-| app\_name   | string | true     | Your app name |
-| time\_range | string | true     | none          |
-
 > Example Response
 > 
 > 200 Response
 
-```text
+```json
 {
   "data": [
     {
@@ -1105,37 +1116,11 @@ _Gets trailing app name metrics from matview_
 }
 ```
 
-#### Responses <a id="get_trailing_app_name_metrics-responses"></a>
-
-| Status | Meaning                                                 | Description | Schema                                                                                                                       |
-|:------ |:------------------------------------------------------- |:----------- |:---------------------------------------------------------------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Success     | [app\_name\_trailing\_response](https://audiusproject.github.io/api-docs/?javascript#schemaapp_name_trailing_response) |
-
 ## Resolve <a id="api-resolve"></a>
 
 ### Resolve <a id="resolve"></a>
 
 > Code Sample
-
-```text
-
-const headers = {
-  'Accept':'text/plain'
-};
-
-fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/resolve?url=https://audius.co/camouflybeats/hypermantra-86216&app_name=EXAMPLEAPP',
-{
-  method: 'GET',
-
-  headers: headers
-})
-.then(function(res) {
-    return res.json();
-}).then(function(body) {
-    console.log(body);
-});
-
-```
 
 `GET /resolve`
 
@@ -1166,13 +1151,34 @@ This endpoint allows you to lookup and access API resources when you only know t
 
 #### Response Schema <a id="resolve-responseschema"></a>
 
+```javascript
+
+const headers = {
+  'Accept':'text/plain'
+};
+
+fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/resolve?url=https://audius.co/camouflybeats/hypermantra-86216&app_name=EXAMPLEAPP',
+{
+  method: 'GET',
+
+  headers: headers
+})
+.then(function(res) {
+    return res.json();
+}).then(function(body) {
+    console.log(body);
+});
+
+```
+
+
 ## Schemas <a id="schemas"></a>
 
 The following are examples of response formats you can expect to receive from the API.
 
 ### user\_response <a id="tocS_user_response"></a>
 
-```text
+```json
 {
   "data": {
     "album_count": 0,
@@ -1209,7 +1215,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### user <a id="tocS_user"></a>
 
-```text
+```json
 {
   "album_count": 0,
   "bio": "string",
@@ -1257,7 +1263,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### cover\_photo <a id="tocS_cover_photo"></a>
 
-```text
+```json
 {
   "640x": "string",
   "2000x": "string"
@@ -1274,7 +1280,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### profile\_picture <a id="tocS_profile_picture"></a>
 
-```text
+```json
 {
   "150x150": "string",
   "480x480": "string",
@@ -1293,7 +1299,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### tracks\_response <a id="tocS_tracks_response"></a>
 
-```text
+```json
 {
   "data": [
     {
@@ -1358,7 +1364,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### Track <a id="tocS_Track"></a>
 
-```text
+```json
 {
   "artwork": {
     "150x150": "string",
@@ -1433,7 +1439,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### track\_artwork <a id="tocS_track_artwork"></a>
 
-```text
+```json
 {
   "150x150": "string",
   "480x480": "string",
@@ -1452,7 +1458,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### remix\_parent <a id="tocS_remix_parent"></a>
 
-```text
+```json
 {
   "tracks": [
     {
@@ -1471,7 +1477,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### track\_element <a id="tocS_track_element"></a>
 
-```text
+```json
 {
   "parent_track_id": "string"
 }
@@ -1486,7 +1492,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### reposts <a id="tocS_reposts"></a>
 
-```text
+```json
 {
   "data": [
     {
@@ -1507,7 +1513,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### activity <a id="tocS_activity"></a>
 
-```text
+```json
 {
   "timestamp": "string",
   "item_type": {},
@@ -1526,7 +1532,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### favorites\_response <a id="tocS_favorites_response"></a>
 
-```text
+```json
 {
   "data": [
     {
@@ -1547,7 +1553,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### favorite <a id="tocS_favorite"></a>
 
-```text
+```json
 {
   "favorite_item_id": "string",
   "favorite_type": "string",
@@ -1566,7 +1572,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### tags\_response <a id="tocS_tags_response"></a>
 
-```text
+```json
 {
   "data": [
     "string"
@@ -1583,7 +1589,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### user\_search <a id="tocS_user_search"></a>
 
-```text
+```json
 {
   "data": [
     {
@@ -1622,7 +1628,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### playlist\_response <a id="tocS_playlist_response"></a>
 
-```text
+```json
 {
   "data": [
     {
@@ -1675,7 +1681,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### playlist <a id="tocS_playlist"></a>
 
-```text
+```json
 {
   "artwork": {
     "150x150": "string",
@@ -1732,7 +1738,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### playlist\_artwork <a id="tocS_playlist_artwork"></a>
 
-```text
+```json
 {
   "150x150": "string",
   "480x480": "string",
@@ -1751,7 +1757,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### playlist\_tracks\_response <a id="tocS_playlist_tracks_response"></a>
 
-```text
+```json
 {
   "data": [
     {
@@ -1816,7 +1822,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### playlist\_search\_result <a id="tocS_playlist_search_result"></a>
 
-```text
+```json
 {
   "data": [
     {
@@ -1869,7 +1875,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### track\_response <a id="tocS_track_response"></a>
 
-```text
+```json
 {
   "data": {
     "artwork": {
@@ -1932,7 +1938,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### track\_search <a id="tocS_track_search"></a>
 
-```text
+```json
 {
   "data": [
     {
@@ -1997,7 +2003,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### app\_name\_trailing\_response <a id="tocS_app_name_trailing_response"></a>
 
-```text
+```json
 {
   "data": [
     {
@@ -2017,7 +2023,7 @@ The following are examples of response formats you can expect to receive from th
 
 ### app\_name\_trailing\_metric <a id="tocS_app_name_trailing_metric"></a>
 
-```text
+```json
 {
   "count": 0,
   "name": "string"
