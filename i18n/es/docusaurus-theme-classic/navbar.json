@@ -1,6 +1,6 @@
 {
   "title": {
-    "message": "Audius Docs",
+    "message": "Documentos de Audius",
     "description": "The title in the navbar"
   },
   "item.label.Protocol": {
@@ -24,7 +24,7 @@
     "description": "Navbar item with label GitHub"
   },
   "item.label.Welcome": {
-    "message": "Welcome",
+    "message": "Bienvenido",
     "description": "Navbar item with label Welcome"
   }
 }
