@@ -58,6 +58,11 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
         },
         items: [
           {
+            label: 'Welcome',
+            to: 'welcome',
+            position: 'left',
+          },
+          {
             to: 'protocol/overview',
             label: 'Protocol',
             position: 'left',
@@ -101,8 +106,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             title: 'Docs',
             items: [
               {
-                label: 'Overview',
-                to: 'overview',
+                label: 'Welcome',
+                to: 'welcome'
+              },
+              {
+                label: 'Protocol Overview',
+                to: 'protocol/overview',
               },
               {
                 label: 'API',

@@ -1,4 +1,4 @@
-const theme = {
+export const theme = {
   '--background': '#242438',
 
   '--primary': '#C74BD3',
@@ -115,5 +115,3 @@ const theme = {
   '--track-slider-handle': 'var(--static-white)',
   '--stat-tile-text': 'var(--secondary-dark-1)'
 }
-
-export default theme

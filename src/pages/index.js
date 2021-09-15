@@ -6,8 +6,8 @@ import Translate from "@docusaurus/Translate";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useThemeContext from '@theme/hooks/useThemeContext';
 import styles from "./index.module.css";
-import dark from "./theme/dark";
-import light from "./theme/light";
+import { theme as dark } from "../theme/dark";
+import { theme as light } from "../theme/light";
 
 const applyTheme = (themeObject) => {
   Object.keys(themeObject).forEach(key => {
@@ -76,7 +76,7 @@ const Main = () => {
                   <div className="card__body">
                     <p>
                       <Translate description="rest-api">
-                        Query, stream, and search Arists, Tracks, and Playlists from your own
+                        Query, stream, and search Artists, Tracks, and Playlists from your own
                         app, game, or project
                       </Translate>
                     </p>

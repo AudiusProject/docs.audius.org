@@ -1,14 +1,15 @@
 ---
 sidebar_label: Hedgehog
 sidebar_position: 2
-description: Build DApps Like Apps
 ---
 
 # Hedgehog
 
+Build DApps Like Apps
+
 [Github](https://github.com/AudiusProject/hedgehog) 👈  
   
-Hedgehog is an open-source, client-side Ethereum wallet that uses a username and password.
+Hedgehog is an open-source, client-side Ethereum wallet that uses a username and password. It aims to lower the barrier of entry to crypto projects for non tech-savvy users.
 
 Allow users to interact with your DApp just like they would any other website, no extensions required, without centralizing control of keys.
 

@@ -63,13 +63,13 @@ To this effect, the staking parameters of each node is as follows:
 
 _Discovery Node_
 
-* Minimum Bond: 200,000 AUDIO
-* Maximum Bond: 7,000,000 AUDIO
+* Minimum Bond (Stake): 200,000 AUDIO
+* Maximum Bond (Stake): 7,000,000 AUDIO
 
 _Content Node_
 
-* Minimum Bond: 200,000 AUDIO
-* Maximum Bond: 10,000,0000 AUDIO
+* Minimum Bond (Stake): 200,000 AUDIO
+* Maximum Bond (Stake): 10,000,0000 AUDIO
 
 The minimum stake ensures sufficient skin in the game, while the maximum prevents the protocol from becoming too centralized. Content nodes have slightly higher minimum requirements, which is why they are able to accept more stake than discovery nodes.
 

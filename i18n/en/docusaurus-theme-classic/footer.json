@@ -13,7 +13,7 @@
   },
   "link.item.label.Overview": {
     "message": "Overview",
-    "description": "The label of footer link with label=Overview linking to overview"
+    "description": "The label of footer link with label=Overview linking to protocol/overview"
   },
   "link.item.label.API": {
     "message": "API",
@@ -34,5 +34,13 @@
   "copyright": {
     "message": "Copyright © 2021 Audius, Inc. Built with Docusaurus.",
     "description": "The footer copyright"
+  },
+  "link.item.label.Welcome": {
+    "message": "Welcome",
+    "description": "The label of footer link with label=Welcome linking to welcome"
+  },
+  "link.item.label.Protocol Overview": {
+    "message": "Protocol Overview",
+    "description": "The label of footer link with label=Protocol Overview linking to protocol/overview"
   }
 }
