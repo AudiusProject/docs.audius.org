@@ -35,42 +35,42 @@ npm i --save @audius/hedgehog
 
 Echa un vistazo a nuestros documentos técnicos [](http://audiusproject.github.io/hedgehog-docs) y [api how to](http://audiusproject.github.io/hedgehog-docs#how-to).
 
-For a quick browser-side demo, [look no further](https://codesandbox.io/embed/pp9zzv2n00). For a full end-to-end auth demonstration, see our [demo repo](https://github.com/AudiusProject/audius-hedgehog-demo).
+Para una demostración rápida del lado del navegador, [no busque más](https://codesandbox.io/embed/pp9zzv2n00). Para una demostración completa de autenticación de extremo a extremo, vea nuestra [demo repo](https://github.com/AudiusProject/audius-hedgehog-demo).
 
-### Why Use This?
+### ¿Por qué utilizarlo?
 
-#### Not All Transactions Are Created Equal
+#### No todas las transacciones son iguales
 
-Currently available wallets treat every transaction as if it were moving around your life’s savings. Hedgehog was built for use-cases involving low-to-no financial value.
+Las billeteras disponibles actualmente tratan cada transacción como si estuviera moviendo los ahorros de su vida. Hedgehog se construyó para casos de uso que implican un valor financiero bajo o nulo.
 
-**NOTE**: The primary improvement to end-user experience is by hiding wallet complexity and not forcing users to constantly confirm transactions - The opposite of what you’d want when moving significant money around.
+**NOTA**: La principal mejora de la experiencia del usuario final es ocultando la complejidad de la billetera y no obligando a los usuarios a confirmar constantemente las transacciones - lo contrario de lo que quieres cuando se mueve dinero significativo.
 
-#### Is Hedgehog Right for your DApp?
+#### ¿Es Hedgehog adecuado para tu DApp?
 
-Hedgehog isn’t right for every DApp. Massive improvements in user experience are only possible through tradeoffs. As a general rule Hedgehog should not be used for apps involving significant sums of money. As a bridge, one could start users on Hedgehog and suggest migrating to a more secure wallet if their stored value increases beyond a certain threshold; the Hedgehog paradigm is interoperable with existing web3 providers too.
+Hedgehog no es correcto para cada DApp. Las mejoras masivas en la experiencia del usuario sólo son posibles a través de las compensaciones. Como regla general, Hedgehog no debe ser utilizado para aplicaciones que impliquen sumas significativas de dinero. Como puente, se podría iniciar usuarios en Hedgehog y sugerir migrar a una cartera más segura si su valor almacenado aumenta más allá de un determinado umbral; el paradigm de Hedgehog es interoperable también con los proveedores web existentes.
 
-_\[Good use cases\]_
+_\[Buenos casos de uso\]_
 
-* **Signing data**: If you’re building decentralized applications that rely on user signed data \(eg. via EIP-712-esque signing schemes\), Hedgehog could help simplify the experience if the stakes are low enough.
-* **Gaming DApp**: Nothing ruins fun as much as signing transactions. If you’re building a gaming DApp that doesn’t use significant financial assets, improving UX is key.
-* **Decentralized Music Player**: If you’re building consumer-facing DApps, Hedgehog will dramatically improve user experience and significantly increase your potential userbase.
+* **Firmando datos**: Si está construyendo aplicaciones descentralizadas que dependen de los datos firmados por el usuario \(ej. via EIP-712-esque signing schemes\), Hedgehog podría ayudar a simplificar la experiencia si lo que está en stakes es lo suficientemente bajo.
+* **Gaming DApp**: Nada arruina tanto la diversión como firmar transacciones. Si estás construyendo un DApp de juego que no utiliza activos financieros significativos, mejorar la UX es clave.
+* **Reproductor de música descentralizado**: Si estás construyendo DApps orientadas al consumidor, Hedgehog mejorará espectacularmente la experiencia del usuario y aumentará significativamente tu base de usuarios potencial.
 
-_\[Bad use cases\]_
+_\[Casos de uso incorrecto\]_
 
-If your DApp involves moving around significant sums of money, then the tradeoff in security is most likely not worth it. Hedgehog’s primary improvement to end-user experience is by hiding the wallet and not forcing users to confirm transactions - The opposite of what you’d want when moving money around. We absolutely don’t recommend using Hedgehog in situations like these:
+Si tu DApp involucra desplazarse alrededor de cantidades significativas de dinero, es muy probable que la compensación en seguridad no valga la pena. La principal mejora de Hedgehog a la experiencia del usuario final es ocultando la cartera y no obligando a los usuarios a confirmar las transacciones - Lo contrario de lo que querrías al mover el dinero. No recomendamos en absoluto usar Hedgehog en situaciones como estas:
 
-* **Banking DApp**
-* **Decentralized Lending**
-* **Prediction Markets**
+* **DApp de Banca**
+* **Préstamos descentralizados**
+* **Mercados de predicción**
 
 ### A Closer Look
 
-Hedgehog is a package that lives in your front end application to create and manage a user's entropy \(from which a private key is derived\). Hedgehog relies on a username and password to create auth artifacts, so it's able to simulate a familiar authentication system that allows users to sign up or login from multiple browsers or devices and retrieve their entropy. Those artifacts, through hedgehog, are persisted to a backend of your choosing.
+Hedgehog es un paquete que vive en tu aplicación de front-end para crear y administrar la entropy de un usuario \\(del cual se deriva una clave privada\\). Hedgehog depende de un nombre de usuario y contraseña para crear artefactos de autor, para que sea capaz de simular un sistema de autenticación familiar que permite a los usuarios registrarse o iniciar sesión desde múltiples navegadores o dispositivos y recuperar su entrada. Esos artefactos, a través de hedgehog, persisten en el backend de tu elección.
 
-**NOTE**: A private key is only computed and available client side and is never transmitted or stored anywhere besides the user's browser.
+**NOTA**: Una clave privada solo es computada y disponible en el lado del cliente y nunca se transmite o almacena en ningún lugar del navegador del usuario.
 
 ```javascript
-// Provide getFn, setAuthFn, setUserFn as requests to your database/backend service (more details in docs).
+// Proporcionar getFn, setAuthFn, setUserFn como solicitudes a su servicio de base de datos/backend (más detalles en documentos).
 const hedgehog = new Hedgehog(getFn, setAuthFn, setUserFn)
 let wallet
 if (hedgehog.isLoggedIn()) {
@@ -82,7 +82,7 @@ if (hedgehog.isLoggedIn()) {
 }
 ```
 
-After creating or retrieving a user's wallet, you can either **fund their wallet directly** to pay transaction fees or **relay their transactions through a EIP-712 relayer**.
+Después de crear o recuperar la cartera de un usuario, usted puede **depositar directamente a su cartera** para pagar comisiones de transacción o **transmitir sus transacciones a través de un relayer EIP-712**.
 
 
-### 👉 [Take a deeper dive into the docs](https://audiusproject.github.io/hedgehog-docs/#installation) 👈
+### 👉 [Profundizar en la documentación](https://audiusproject.github.io/hedgehog-docs/#installation)👈
