@@ -53,7 +53,7 @@ _Seach for a user_
 
 #### Responses <a id="search-users-responses"></a>
 
-| Status | Meaning                                                                    | Description  | Schema                                                                                   |
+| Status | Significado                                                                | Description  | Schema                                                                                   |
 |:------ |:-------------------------------------------------------------------------- |:------------ |:---------------------------------------------------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [user\_search](https://audiusproject.github.io/api-docs/?javascript#schemauser_search) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                     |
@@ -128,7 +128,7 @@ _Obtener un único usuario_
 
 #### Respuestas <a id="get-user-responses"></a>
 
-| Estado | Comenzando                                                                      | Descripción          | Esquema                                                                                          |
+| Estado | Significado                                                                     | Descripción          | Esquema                                                                                          |
 |:------ |:------------------------------------------------------------------------------- |:-------------------- |:------------------------------------------------------------------------------------------------ |
 | 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | ninguna              | [usuario\_respuesta](https://audiusproject.github.io/api-docs/?javascript#schemauser_response) |
 | 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                                                                          |
@@ -201,7 +201,7 @@ _Obtener las pistas favoritas para un usuario_
 
 #### Responses <a id="get-user&apos;s-favorite-tracks-responses"></a>
 
-| Status | Meaning                                                                    | Description  | Schema                                                                                                 |
+| Status | Significado                                                                | Description  | Schema                                                                                                 |
 |:------ |:-------------------------------------------------------------------------- |:------------ |:------------------------------------------------------------------------------------------------------ |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [favorites\_response](https://audiusproject.github.io/api-docs/?javascript#schemafavorites_response) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                                   |
@@ -268,7 +268,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/nl
 
 #### Respuestas <a id="get-user&apos;s-reposts-responses"></a>
 
-| Estado | Comenzando                                                                      | Descripción          | Esquema                                                                       |
+| Estado | Significado                                                                     | Descripción          | Esquema                                                                       |
 |:------ |:------------------------------------------------------------------------------- |:-------------------- |:----------------------------------------------------------------------------- |
 | 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | Exitoso              | [reposts](https://audiusproject.github.io/api-docs/?javascript#schemareposts) |
 | 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                                                       |
@@ -330,7 +330,7 @@ _Obtener etiquetas más usadas en las pistas del usuario_
 
 #### Responses <a id="get-user&apos;s-most-used-track-tags-responses"></a>
 
-| Status | Meaning                                                                    | Description  | Schema                                                                                       |
+| Status | Significado                                                                | Description  | Schema                                                                                       |
 |:------ |:-------------------------------------------------------------------------- |:------------ |:-------------------------------------------------------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [tags\_response](https://audiusproject.github.io/api-docs/?javascript#schematags_response) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                         |
@@ -388,7 +388,7 @@ _Fetch a list of tracks for a user_
 
 #### Respuestas <a id="get-user&apos;s-tracks-responses"></a>
 
-| Estado | Comenzando                                                                      | Descripción          | Esquema                                                                                           |
+| Estado | Significado                                                                     | Descripción          | Esquema                                                                                           |
 |:------ |:------------------------------------------------------------------------------- |:-------------------- |:------------------------------------------------------------------------------------------------- |
 | 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | ninguna              | [pistas\_respuesta](https://audiusproject.github.io/api-docs/?javascript#schematracks_response) |
 | 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                                                                           |
@@ -483,7 +483,7 @@ _Buscar una lista de reproducción_
 
 #### Respuestas <a id="search-playlists-responses"></a>
 
-| Estado | Comenzando                                                                 | Descripción  | Esquema                                                                                                           |
+| Estado | Significado                                                                | Descripción  | Esquema                                                                                                           |
 |:------ |:-------------------------------------------------------------------------- |:------------ |:----------------------------------------------------------------------------------------------------------------- |
 | 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist\_search\_result](https://audiusproject.github.io/api-docs/?javascript#schemaplaylist_search_result) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                                              |
@@ -571,7 +571,7 @@ _Fetch a playlist_
 
 #### Responses <a id="get-playlist-responses"></a>
 
-| Status | Meaning                                                                    | Description  | Schema                                                                                               |
+| Status | Significado                                                                | Description  | Schema                                                                                               |
 |:------ |:-------------------------------------------------------------------------- |:------------ |:---------------------------------------------------------------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist\_response](https://audiusproject.github.io/api-docs/?javascript#schemaplaylist_response) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                                 |
@@ -618,23 +618,23 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/playlist
     "favorite_count": 88,
     "user": {
       "album_count": 0,
-      "bio": "The official Audius account! Creating a decentralized and open-source streaming music platform controlled by artists, fans, & developers.",
+      "bio": "The official Audius account! Crear una plataforma de música de streaming descentralizada y de código abierto controlada por artistas, fans & desarrolladores. ,
       "cover_photo": {
         "640x": "string",
-        "2000x": "string"
+        "2000x": "cadena"
       },
-      "followee_count": 69,
+      "followeek_count": 69,
       "follower_count": 6763,
       "handle": "Audius",
       "id": "eJ57D",
       "is_verified": true,
       "location": "SF & LA",
-      "name": "Audius",
+      "nombre": "Audius",
       "playlist_count": 9,
       "profile_picture": {
-        "150x150": "https://usermetadata.audius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f",
+        "150x150": "https://usermetadata. udius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f",
         "480x480": "https://usermetadata.audius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f",
-        "1000x1000": "https://usermetadata.audius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f"
+        "1000x1000": "https://usermetadata. udio. o/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f"
       },
       "repost_count": 200,
       "track_count": 0
@@ -643,29 +643,29 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/playlist
 }
 ```
 
-### Get Playlist Tracks <a id="get-playlist-tracks"></a>
+### Obtener pistas de lista de reproducción <a id="get-playlist-tracks"></a>
 
-`GET /playlists/{playlist_id}/tracks`
+`OBTENER /listas de reproducción/{playlist_id}/pistas`
 
-_Fetch tracks within a playlist_
+_Obtener pistas dentro de una lista de reproducción_
 
-#### Query Parameters <a id="get-playlist-tracks-parameters"></a>
+#### Parámetros de consulta <a id="get-playlist-tracks-parameters"></a>
 
-| Name           | Type   | Required | Description   |
-|:-------------- |:------ |:-------- |:------------- |
-| playlist\_id | string | true     | A Playlist ID |
-| app\_name    | string | true     | Your app name |
+| Nombre         | Tipo   | Requerido | Descripción                    |
+|:-------------- |:------ |:--------- |:------------------------------ |
+| playlist\_id | cadena | verdad    | Un ID de lista de reproducción |
+| app\_name    | cadena | verdad    | Nombre de tu app               |
 
-#### Responses <a id="get-playlist-tracks-responses"></a>
+#### Respuestas <a id="get-playlist-tracks-responses"></a>
 
-| Status | Meaning                                                                    | Description  | Schema                                                                                                                |
-|:------ |:-------------------------------------------------------------------------- |:------------ |:--------------------------------------------------------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist\_tracks\_response](https://audiusproject.github.io/api-docs/?javascript#schemaplaylist_tracks_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                                                  |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                                                  |
+| Estado | Significado                                                                     | Descripción          | Esquema                                                                                                                |
+|:------ |:------------------------------------------------------------------------------- |:-------------------- |:---------------------------------------------------------------------------------------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | ninguna              | [playlist\_pistas\_respuesta](https://audiusproject.github.io/api-docs/?javascript#schemaplaylist_tracks_response) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                                                                                                |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                                                                                                |
 
 
-> Code Sample
+> Muestra de código
 
 ```javascript
 
@@ -673,7 +673,7 @@ const headers = {
   'Accept':'application/json'
 };
 
-fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/playlists/DOPRl/tracks?app_name=EXAMPLEAPP',
+fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/playlists/DOPRl?app_name=EXAMPLEAPP',
 {
   method: 'GET',
 
@@ -687,7 +687,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/playlist
 
 ```
 
-> Example Response
+> Ejemplo de respuesta
 
 ```json
 {
@@ -736,17 +736,17 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/playlist
 }
 ```
 
-## Tracks <a id="api-tracks"></a>
+## Pistas <a id="api-tracks"></a>
 
-### Search Tracks <a id="search-tracks"></a>
+### Buscar pistas <a id="search-tracks"></a>
 
-`GET /tracks/search`
+`Obtener /pistas/búsqueda`
 
-_Search for a track_
+_Buscar un track_
 
-#### Query Parameters <a id="search-tracks-parameters"></a>
+#### Parámetros de consulta <a id="search-tracks-parameters"></a>
 
-| Name                 | Type   | Required | Description                     |
+| Nombre               | Tipo   | Required | Description                     |
 |:-------------------- |:------ |:-------- |:------------------------------- |
 | query                | string | true     | Search Query                    |
 | only\_downloadable | string | false    | Return only downloadable tracks |
@@ -754,7 +754,7 @@ _Search for a track_
 
 #### Responses <a id="search-tracks-responses"></a>
 
-| Status | Meaning                                                                    | Description  | Schema                                                                                     |
+| Status | Significado                                                                | Description  | Schema                                                                                     |
 |:------ |:-------------------------------------------------------------------------- |:------------ |:------------------------------------------------------------------------------------------ |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [track\_search](https://audiusproject.github.io/api-docs/?javascript#schematrack_search) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                       |
@@ -841,15 +841,15 @@ _Gets the top 100 trending \(most popular\) tracks on Audius_
 
 #### Query Parameters <a id="trending-tracks-parameters"></a>
 
-| Name        | Type   | Required | Description                                                            |
-|:----------- |:------ |:-------- |:---------------------------------------------------------------------- |
-| genre       | string | false    | Trending tracks for a specified genre                                  |
-| time        | string | false    | Trending tracks over a specified time range \(week, month, allTime\) |
-| app\_name | string | true     | Your app name                                                          |
+| Name        | Type   | Required | Description                                                                    |
+|:----------- |:------ |:-------- |:------------------------------------------------------------------------------ |
+| genre       | string | false    | Trending tracks for a specified genre                                          |
+| time        | string | falso    | Pistas populares en un rango de tiempo especificado \(semana, mes, allTime\) |
+| app\_name | cadena | verdad   | Nombre de tu app                                                               |
 
-#### Responses <a id="trending-tracks-responses"></a>
+#### Respuestas <a id="trending-tracks-responses"></a>
 
-| Status | Meaning                                                                    | Description  | Schema                                                                                           |
+| Estado | Significado                                                                | Description  | Schema                                                                                           |
 |:------ |:-------------------------------------------------------------------------- |:------------ |:------------------------------------------------------------------------------------------------ |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [tracks\_response](https://audiusproject.github.io/api-docs/?javascript#schematracks_response) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                             |
@@ -941,7 +941,7 @@ _Fetch a track_
 
 #### Responses <a id="get-track-responses"></a>
 
-| Status | Meaning                                                                    | Description  | Schema                                                                                         |
+| Status | Significado                                                                | Description  | Schema                                                                                         |
 |:------ |:-------------------------------------------------------------------------- |:------------ |:---------------------------------------------------------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [track\_response](https://audiusproject.github.io/api-docs/?javascript#schematrack_response) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                           |
@@ -1033,7 +1033,7 @@ This endpoint accepts the Range header for streaming. https://developer.mozilla.
 
 #### Responses <a id="stream-track-responses"></a>
 
-| Status | Meaning                                                                    | Description           | Schema |
+| Status | Significado                                                                | Description           | Schema |
 |:------ |:-------------------------------------------------------------------------- |:--------------------- |:------ |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success               | None   |
 | 216    | Unknown                                                                    | Partial content       | None   |
@@ -1075,7 +1075,7 @@ _Gets trailing app name metrics from matview_
 
 #### Responses <a id="get_trailing_app_name_metrics-responses"></a>
 
-| Status | Meaning                                                 | Description | Schema                                                                                                                       |
+| Status | Significado                                             | Description | Schema                                                                                                                       |
 |:------ |:------------------------------------------------------- |:----------- |:---------------------------------------------------------------------------------------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Success     | [app\_name\_trailing\_response](https://audiusproject.github.io/api-docs/?javascript#schemaapp_name_trailing_response) |
 
@@ -1145,7 +1145,7 @@ This endpoint allows you to lookup and access API resources when you only know t
 
 #### Responses <a id="resolve-responses"></a>
 
-| Status | Meaning                                                    | Description       | Schema |
+| Status | Significado                                                | Description       | Schema |
 |:------ |:---------------------------------------------------------- |:----------------- |:------ |
 | 302    | [Found](https://tools.ietf.org/html/rfc7231#section-6.4.3) | Internal redirect | None   |
 
