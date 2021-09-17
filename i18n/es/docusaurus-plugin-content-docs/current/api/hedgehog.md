@@ -63,7 +63,7 @@ Si tu DApp involucra desplazarse alrededor de cantidades significativas de diner
 * **Préstamos descentralizados**
 * **Mercados de predicción**
 
-### A Closer Look
+### Una mirada más cercana
 
 Hedgehog es un paquete que vive en tu aplicación de front-end para crear y administrar la entropy de un usuario \\(del cual se deriva una clave privada\\). Hedgehog depende de un nombre de usuario y contraseña para crear artefactos de autor, para que sea capaz de simular un sistema de autenticación familiar que permite a los usuarios registrarse o iniciar sesión desde múltiples navegadores o dispositivos y recuperar su entrada. Esos artefactos, a través de hedgehog, persisten en el backend de tu elección.
 
