@@ -4,11 +4,11 @@ sidebar_label: Whitepaper sidebar_position: 2
 
 # Whitepaper
 
-The Audius Whitepaper lays the theoretical & technical groundwork for how the platform is built and continues to grow.
+El Libro Blanco de Audius sienta las bases teóricas & técnicas de cómo se construye la plataforma y continua creciendo.
 
-## [PDF Download](https://whitepaper.audius.co)
-## [Blog post](https://blog.audius.co/posts/the-audius-white-paper-a-decentralized-community-owned-music-sharing-protocol)
+## [Descarga PDF](https://whitepaper.audius.co)
+## [Blog](https://blog.audius.co/posts/the-audius-white-paper-a-decentralized-community-owned-music-sharing-protocol)
 
-Questions? Ask & engage with the community on
+¿Preguntas? Preguntar & comprometerse con la comunidad en
 
-[Discord](https://discord.com/invite/audius) and [Reddit](https://www.reddit.com/r/audius/)
+[Discord](https://discord.com/invite/audius) y [Reddit](https://www.reddit.com/r/audius/)
