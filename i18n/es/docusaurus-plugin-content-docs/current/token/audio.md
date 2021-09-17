@@ -1,29 +1,29 @@
 ---
 sidebar_label: '$AUDIO'
 sidebar_position: 1
-description: '$AUDIO — the Audius platform token underpinning value-added actions in Audius'
+description: '$AUDIO— el token de la plataforma de Audius que sustenta las acciones de valor añadido en Audius'
 ---
 
 # $AUDIO
 
-#### How it Works
+#### Cómo funciona
 
-Audius platform tokens \(AUDIO\) have three prongs of functionality within the Audius protocol ecosystem:
+Los tokens de la plataforma de audio \(AUDIO\) tienen tres funcionalidades dentro del ecosistema del protocolo de Audius:
 
-* Security
-* Feature Access
-* Governance
+* Seguridad
+* Acceso a Funciones
+* Gobernanza
 
-AUDIO is staked as collateral for a value-added service such as operating a node or participating in governance. In exchange, stakers earn ongoing issuance, governance weight, and access to exclusive features. In the future, AUDIO will govern a global fee pool from value transfers in the network.Offering a native token to align all actors creates a parallel incentive unique to web3, and one which allows our early adopters to share in the upside of Audius as we continue to grow.The Audius community looks to ensure that AUDIO tokens are always being funneled to the most value-added actors. This is done through ongoing issuance using onchain metrics as a measurement to better route distribution to active participants, rather than simply to those staking the most AUDIO.Here’s how this pans out in practice.
+AUDIO es puesto en stake como garantía para un servicio de valor agregado como operar un nodo o participar en la gobernanza. A cambio, los interesados ganan emisión continua, peso en la gobernanza y acceso a características exclusivas. En el futuro, AUDIO gestionará un fondo global de comisiones de las transferencias de valor en la red. la fusión de un token nativo para alinear a todos los actores crea un incentivo paralelo único en la web3, y una que permita a nuestros primeros adoptadores compartir en el lado positivo del Audius mientras seguimos creciendo. la comunidad de Audius busca asegurar que los tokens de AUDIO estén siendo siempre embutidos a los actores más valiosos. Esto se hace a través de la emisión continua utilizando métricas onchain como medida para mejorar la distribución de rutas a participantes activos, en lugar de simplemente a los que están más comprometidos con AUDIO. así es como esto se desvanece en la práctica.
 
-**SECURITY**
+**SEGURIDAD**
 
-AUDIO is staked by node operators to secure the network. The larger the stake, the higher the probability of their node being used by fans and artists. Audius is entirely hosted and operated by the community, creating a permissionless ecosystem of node operators securing content for the world’s unstoppable streaming protocol.
+AUDIO es puesto en stake por operadores de nodos para asegurar la red. Cuanto mayor sea el stake, mayor es la probabilidad de que su nodo sea utilizado por los fans y los artistas. Audius está enteramente alojado y gestionado por la comunidad, creando un ecosistema sin permisos de operadores de nodos que aseguran contenido para el protocolo de streaming imparable del mundo.
 
-**FEATURE ACCESS**
+**ACCESO A FUNCIONES**
 
-AUDIO serves as collateral to unlock additional artist tooling. Early examples incubated by the community include artists tokens, badges, and earnings multipliers. In the future, fans may delegate AUDIO to specific artists and curators to share in their growth on the platform.
+AUDIO sirve como garantía para desbloquear herramientas adicionales de artistas. Ejemplos iniciales incubados por la comunidad incluyen tokens de artistas, insignias y multiplicadores de ingresos. En el futuro, los aficionados pueden delegar AUDIO a artistas y curadores específicos para participar en su crecimiento en la plataforma.
 
-**GOVERNANCE**
+**GOVERNANZA**
 
-Any AUDIO staked within Audius is assigned governance weight, used to shape future iterations of the protocol. Every aspect of Audius is governable, starting with one token staked equal to one vote. We envision governance to focus on operator incentives at inception, with the ambition for even passive fans to voice their opinion over product updates and feature upgrades too.The choice to offer ongoing issuance **aligns power with those who are continually the most active on the platform**, a mechanism Audius believes better suits future users of the protocol.
+Cualquier AUDIO en stake dentro de Audius tiene asignado peso de gobernanza, utilizado para dar forma a las futuras iteraciones del protocolo. Cada aspecto de Audius es gobernable, comenzando por un token en stake igual a un voto. Pretendemos que la gobernanza se centre en los incentivos de los operadores al principio, con la ambición de que incluso los aficionados pasivos expresen su opinión sobre actualizaciones de productos y actualizaciones de características también. él decide ofrecer una emisión continua **con aquellos que son continuamente los más activos de la plataforma**, un mecanismo Audius cree que conviene mejor a los futuros usuarios del protocolo.
