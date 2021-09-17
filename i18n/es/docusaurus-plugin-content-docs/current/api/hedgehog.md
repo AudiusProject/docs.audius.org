@@ -13,27 +13,27 @@ Hedgehog es una cartera Ethereum de código abierto que utiliza un nombre de usu
 
 Permite a los usuarios interactuar con tu DApp como lo harían con cualquier otro sitio web, sin necesidad de extensiones, sin centralizar el control de claves.
 
-**Hedgehog** es una alternativa a Metamask que administra la clave privada y la billetera de un usuario en el navegador. It exposes a simple API to allow you to create an authentication scheme to let users sign up and login to their wallet across multiple browsers and devices.
+**Hedgehog** es una alternativa a Metamask que administra la clave privada y la billetera de un usuario en el navegador. Expone una sencilla API que permite crear un esquema de autenticación para que los usuarios se registren e inicien sesión en su billetera a través de múltiples navegadores y dispositivos.
 
-### Not All Transactions Are Created Equal
+### No todas las transacciones son iguales
 
-Current Ethereum wallets treat every transaction as if it were moving your life’s savings. Hedgehog was built for use-cases involving low-to-no financial value.
+Las billeteras de Ethereum actuales tratan cada transacción como si estuviera moviendo los ahorros de su vida. Hedgehog se construyó para casos de uso que implican un valor financiero bajo o nulo.
 
-> Note: The primary improvement to end-user experience is gained by hiding wallet complexity and not forcing users to confirm transactions - the opposite of what you’d want when moving significant money around.
+> Nota: La mejora principal de la experiencia del usuario final se consigue ocultando la complejidad de la cartera y no obligando a los usuarios a confirmar las transacciones - lo contrario de lo que desearías cuando se mueve dinero significativo.
 
-#### No More Popups 🦊
+#### No hay más ventanas emergentes 🦊
 
-Decentralized apps today require lots of technical knowledge to configure and use, limiting your user base and reducing the potential for growth.
+Hoy en día, las aplicaciones descentralizadas requieren de muchos conocimientos técnicos para configurar y usar, limitar su base de usuarios y reducir el potencial de crecimiento.
 
-### Installation
+### Instalación
 
 ```bash
 npm i --save @audius/hedgehog
 ```
 
-### Docs & Examples
+### Documentos & Ejemplos
 
-Check out our full technical [docs](http://audiusproject.github.io/hedgehog-docs) and [api how-to](http://audiusproject.github.io/hedgehog-docs#how-to).
+Echa un vistazo a nuestros documentos técnicos [](http://audiusproject.github.io/hedgehog-docs) y [api how to](http://audiusproject.github.io/hedgehog-docs#how-to).
 
 For a quick browser-side demo, [look no further](https://codesandbox.io/embed/pp9zzv2n00). For a full end-to-end auth demonstration, see our [demo repo](https://github.com/AudiusProject/audius-hedgehog-demo).
 
