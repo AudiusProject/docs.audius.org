@@ -1,13 +1,13 @@
 ---
-sidebar_label: REST API
+sidebar_label: API REST
 sidebar_position: 1
 description: >-
-  The Audius API is entirely free to use. We ask that you adhere to the guidelines in this doc and always credit artists.
+  La API de Audius es totalmente gratuita. Le pedimos que se adhiera a las directrices de este doc y siempre acreditado a los artistas.
 ---
 
-# REST API
+# API REST
 
-## Selecting a Host <a id="selecting-a-host"></a>
+## Seleccionando un host <a id="selecting-a-host"></a>
 
 Audius is a decentralized music streaming service. To use the API, you first select an API endpoint from the list of endpoints returned by:
 
@@ -57,9 +57,9 @@ _Seach for a user_
 |:------ |:-------------------------------------------------------------------------- |:------------ |:---------------------------------------------------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [user\_search](https://audiusproject.github.io/api-docs/?javascript#schemauser_search) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                     |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                     |
+| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | Ninguna                                                                                  |
 
-> Code Sample
+> Muestra de código
 
 ```javascript
 
@@ -81,7 +81,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/se
 
 ```
 
-> Example Response
+> Ejemplo de respuesta
 
 ```json
 {
@@ -113,28 +113,28 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/se
 }
 ```
 
-### Get User <a id="get-user"></a>
+### Obtener usuario <a id="get-user"></a>
 
 `GET /users/{user_id}`
 
-_Fetch a single user_
+_Obtener un único usuario_
 
-#### Query Parameters <a id="get-user-parameters"></a>
+#### Parámetros de consulta <a id="get-user-parameters"></a>
 
-| Name        | Type   | Required | Description   |
-|:----------- |:------ |:-------- |:------------- |
-| user\_id  | string | true     | A User ID     |
-| app\_name | string | true     | Your app name |
+| Nombre        | Tipo   | Requerido | Descripción      |
+|:------------- |:------ |:--------- |:---------------- |
+| usuario\_id | cadena | verdad    | Un ID de usuario |
+| app\_name   | cadena | verdad    | Nombre de tu app |
 
-#### Responses <a id="get-user-responses"></a>
+#### Respuestas <a id="get-user-responses"></a>
 
-| Status | Meaning                                                                    | Description  | Schema                                                                                       |
-|:------ |:-------------------------------------------------------------------------- |:------------ |:-------------------------------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [user\_response](https://audiusproject.github.io/api-docs/?javascript#schemauser_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                         |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                         |
+| Estado | Comenzando                                                                      | Descripción          | Esquema                                                                                          |
+|:------ |:------------------------------------------------------------------------------- |:-------------------- |:------------------------------------------------------------------------------------------------ |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | ninguna              | [usuario\_respuesta](https://audiusproject.github.io/api-docs/?javascript#schemauser_response) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                                                                          |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                                                                          |
 
-> Code Sample
+> Muestra de código
 
 ```javascript
 
@@ -156,13 +156,13 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/nl
 
 ```
 
-> Example Response
+> Ejemplo de respuesta
 
 ```json
 {
   "data": {
     "album_count": 0,
-    "bio": "Makin' moves & keeping you on your toes. linktr.ee/browniesandlemonade",
+    "bio": "Makin' moves & keeping you on your toes. inktr.ee/browniesandlemonade",
     "cover_photo": {
       "640x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/640x.jpg",
       "2000x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
@@ -186,15 +186,15 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/nl
 }
 ```
 
-### Get User's Favorite Tracks <a id="get-user-39-s-favorite-tracks"></a>
+### Obtener pistas favoritas del usuario <a id="get-user-39-s-favorite-tracks"></a>
 
-`GET /users/{user_id}/favorites`
+`GET /users/{user_id}/favoritos`
 
-_Fetch favorited tracks for a user_
+_Obtener las pistas favoritas para un usuario_
 
-#### Query Parameters <a id="get-user&apos;s-favorite-tracks-parameters"></a>
+#### Parámetros de consulta <a id="get-user&apos;s-favorite-tracks-parameters"></a>
 
-| Name        | Type   | Required | Description   |
+| Nombre      | Tipo   | Required | Description   |
 |:----------- |:------ |:-------- |:------------- |
 | user\_id  | string | true     | A User ID     |
 | app\_name | string | true     | Your app name |
@@ -259,23 +259,23 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/nl
 
 #### Query Parameters <a id="get-user&apos;s-reposts-parameters"></a>
 
-| Name        | Type   | Required | Description   |
-|:----------- |:------ |:-------- |:------------- |
-| user\_id  | string | true     | A User ID     |
-| limit       | string | false    | Limit         |
-| offset      | string | false    | Offset        |
-| app\_name | string | true     | Your app name |
+| Name        | Type   | Required | Description      |
+|:----------- |:------ |:-------- |:---------------- |
+| user\_id  | string | true     | A User ID        |
+| limit       | string | false    | Limit            |
+| offset      | string | false    | Offset           |
+| app\_name | cadena | verdad   | Nombre de tu app |
 
-#### Responses <a id="get-user&apos;s-reposts-responses"></a>
+#### Respuestas <a id="get-user&apos;s-reposts-responses"></a>
 
-| Status | Meaning                                                                    | Description  | Schema                                                                        |
-|:------ |:-------------------------------------------------------------------------- |:------------ |:----------------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [reposts](https://audiusproject.github.io/api-docs/?javascript#schemareposts) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                          |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                          |
+| Estado | Comenzando                                                                      | Descripción          | Esquema                                                                       |
+|:------ |:------------------------------------------------------------------------------- |:-------------------- |:----------------------------------------------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | Exitoso              | [reposts](https://audiusproject.github.io/api-docs/?javascript#schemareposts) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                                                       |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                                                       |
 
 
-> Code Sample
+> Muestra de código
 
 ```javascript
 
@@ -297,9 +297,9 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/st
 
 ```
 
-> Example Response
+> Ejemplo de respuesta
 > 
-> 200 Response
+> 200 Respuesta
 
 ```json
 {
@@ -313,20 +313,20 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/st
 }
 ```
 
-### Get User's Most Used Track Tags <a id="get-user-39-s-most-used-track-tags"></a>
+### Obtén las etiquetas de pista más utilizadas del usuario <a id="get-user-39-s-most-used-track-tags"></a>
 
 `GET /users/{user_id}/tags`
 
-_Fetch most used tags in a user's tracks_
+_Obtener etiquetas más usadas en las pistas del usuario_
 
-#### Query Parameters <a id="get-user&apos;s-most-used-track-tags-parameters"></a>
+#### Parámetros de consulta <a id="get-user&apos;s-most-used-track-tags-parameters"></a>
 
-| Name        | Type    | Required | Description                 |
-|:----------- |:------- |:-------- |:--------------------------- |
-| user\_id  | string  | true     | A User ID                   |
-| limit       | integer | false    | Limit on the number of tags |
-| app\_name | string  | true     | Your app name               |
-| user\_id  | string  | true     | none                        |
+| Nombre        | Tipo   | Requerido | Descripción                    |
+|:------------- |:------ |:--------- |:------------------------------ |
+| usuario\_id | cadena | verdad    | Un ID de usuario               |
+| límite        | entero | falso     | Limitar el número de etiquetas |
+| app\_name   | cadena | verdad    | Nombre de tu app               |
+| usuario\_id | cadena | verdad    | ninguna                        |
 
 #### Responses <a id="get-user&apos;s-most-used-track-tags-responses"></a>
 
@@ -386,15 +386,15 @@ _Fetch a list of tracks for a user_
 | sort        | string | false    | Sort mode     |
 | app\_name | string | true     | Your app name |
 
-#### Responses <a id="get-user&apos;s-tracks-responses"></a>
+#### Respuestas <a id="get-user&apos;s-tracks-responses"></a>
 
-| Status | Meaning                                                                    | Description  | Schema                                                                                           |
-|:------ |:-------------------------------------------------------------------------- |:------------ |:------------------------------------------------------------------------------------------------ |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [tracks\_response](https://audiusproject.github.io/api-docs/?javascript#schematracks_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                             |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                             |
+| Estado | Comenzando                                                                      | Descripción          | Esquema                                                                                           |
+|:------ |:------------------------------------------------------------------------------- |:-------------------- |:------------------------------------------------------------------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | ninguna              | [pistas\_respuesta](https://audiusproject.github.io/api-docs/?javascript#schematracks_response) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                                                                           |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                                                                           |
 
-> Code Sample
+> Muestra de código
 
 ```javascript
 
@@ -416,7 +416,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/nl
 
 ```
 
-> Example Response
+> Ejemplo de respuesta
 
 ```json
 {
@@ -465,27 +465,27 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/nl
 }
 ```
 
-## Playlists <a id="api-playlists"></a>
+## Lista de reproducción <a id="api-playlists"></a>
 
-### Search Playlists <a id="search-playlists"></a>
+### Buscar listas de reproducción <a id="search-playlists"></a>
 
-`GET /playlists/search`
+`Obtener /Listas de reproducción/buscar`
 
-_Search for a playlist_
+_Buscar una lista de reproducción_
 
-#### Query Parameters <a id="search-playlists-parameters"></a>
+#### Parámetros de consulta <a id="search-playlists-parameters"></a>
 
-| Name                 | Type   | Required | Description   |
-|:-------------------- |:------ |:-------- |:------------- |
-| query                | string | true     | Search Query  |
-| only\_downloadable | string | false    | none          |
-| app\_name          | string | true     | Your app name |
+| Nombre              | Tipo   | Requerido | Descripción      |
+|:------------------- |:------ |:--------- |:---------------- |
+| consulta            | cadena | verdad    | Búsqueda         |
+| sólo\_descargable | cadena | falso     | ninguna          |
+| app\_name         | cadena | verdad    | Nombre de tu app |
 
-#### Responses <a id="search-playlists-responses"></a>
+#### Respuestas <a id="search-playlists-responses"></a>
 
-| Status | Meaning                                                                    | Description  | Schema                                                                                                            |
+| Estado | Comenzando                                                                 | Descripción  | Esquema                                                                                                           |
 |:------ |:-------------------------------------------------------------------------- |:------------ |:----------------------------------------------------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist\_search\_result](https://audiusproject.github.io/api-docs/?javascript#schemaplaylist_search_result) |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist\_search\_result](https://audiusproject.github.io/api-docs/?javascript#schemaplaylist_search_result) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                                              |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                                              |
 
@@ -600,7 +600,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/playlist
 
 ```
 
-> Example Response
+> Ejemplo de respuesta
 
 ```json
 {
