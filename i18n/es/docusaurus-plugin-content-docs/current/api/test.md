@@ -170,7 +170,7 @@ func main() {
 
 <h3 id="get-the-user's-id-by-associated-wallet-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                                              |
+| Status | Significado                                                                | Description  | Schema                                                              |
 | ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [associated_wallets_response](#schemaassociated_wallets_response) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                |
@@ -339,7 +339,7 @@ func main() {
 
 <h3 id="get-the-user's-associated-wallets-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                                                      |
+| Status | Significado                                                                | Description  | Schema                                                                      |
 | ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [user_associated_wallet_response](#schemauser_associated_wallet_response) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                        |
@@ -531,7 +531,7 @@ func main() {
 
 <h3 id="search-users-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                            |
+| Status | Significado                                                                | Description  | Schema                            |
 | ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [user_search](#schemauser_search) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                              |
@@ -717,7 +717,7 @@ func main() {
 
 <h3 id="get-user-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                |
+| Status | Significado                                                                | Description  | Schema                                |
 | ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [user_response](#schemauser_response) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                  |
@@ -895,7 +895,7 @@ func main() {
 
 <h3 id="the-users's-id-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                  |
+| Status | Significado                                                                | Description  | Schema                                  |
 | ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [get_challenges](#schemaget_challenges) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                    |
@@ -1075,7 +1075,7 @@ func main() {
 
 <h3 id="get-user's-favorite-tracks-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                          |
+| Status | Significado                                                                | Description  | Schema                                          |
 | ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [favorites_response](#schemafavorites_response) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                            |
@@ -1247,7 +1247,7 @@ func main() {
 
 <h3 id="get-user's-reposts-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                    |
+| Status | Significado                                                                | Description  | Schema                    |
 | ------ | -------------------------------------------------------------------------- | ------------ | ------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [reposts](#schemareposts) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                      |
@@ -1420,7 +1420,7 @@ func main() {
 
 <h3 id="get-user's-most-used-track-tags-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                |
+| Status | Significado                                                                | Description  | Schema                                |
 | ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [tags_response](#schematags_response) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                  |
@@ -1628,7 +1628,7 @@ func main() {
 
 <h3 id="get-user's-tracks-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                    |
+| Status | Significado                                                                | Description  | Schema                                    |
 | ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [tracks_response](#schematracks_response) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                      |
@@ -1835,7 +1835,7 @@ func main() {
 
 <h3 id="search-playlists-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                                    |
+| Status | Significado                                                                | Description  | Schema                                                    |
 | ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist_search_result](#schemaplaylist_search_result) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                      |
@@ -2040,7 +2040,7 @@ func main() {
 
 <h3 id="trending-playlists-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                                              |
+| Status | Significado                                                                | Description  | Schema                                                              |
 | ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [trending_playlists_response](#schematrending_playlists_response) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                |
@@ -2239,7 +2239,7 @@ func main() {
 
 <h3 id="get-playlist-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                        |
+| Status | Significado                                                                | Description  | Schema                                        |
 | ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist_response](#schemaplaylist_response) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                          |
@@ -2444,7 +2444,7 @@ func main() {
 
 <h3 id="get-playlist-tracks-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                                        |
+| Status | Significado                                                                | Description  | Schema                                                        |
 | ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist_tracks_response](#schemaplaylist_tracks_response) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                          |
@@ -2660,7 +2660,7 @@ func main() {
 
 <h3 id="get-track-by-handle-and-slug-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                  |
+| Status | Significado                                                                | Description  | Schema                                  |
 | ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [track_response](#schematrack_response) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                    |
@@ -2879,7 +2879,7 @@ func main() {
 
 <h3 id="recommended-tracks-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                    |
+| Status | Significado                                                                | Description  | Schema                                    |
 | ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [tracks_response](#schematracks_response) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                      |
@@ -3088,7 +3088,7 @@ func main() {
 
 <h3 id="search-tracks-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                              |
+| Status | Significado                                                                | Description  | Schema                              |
 | ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [track_search](#schematrack_search) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                |
@@ -3307,7 +3307,7 @@ func main() {
 
 <h3 id="trending-tracks-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                    |
+| Status | Significado                                                                | Description  | Schema                                    |
 | ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [tracks_response](#schematracks_response) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                      |
@@ -3510,7 +3510,7 @@ func main() {
 
 <h3 id="get-track-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                  |
+| Status | Significado                                                                | Description  | Schema                                  |
 | ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [track_response](#schematrack_response) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                    |
@@ -3647,7 +3647,7 @@ This endpoint accepts the Range header for streaming. https://developer.mozilla.
 
 <h3 id="stream-track-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description           | Schema |
+| Status | Significado                                                                | Description           | Schema |
 | ------ | -------------------------------------------------------------------------- | --------------------- | ------ |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success               | None   |
 | 216    | Unknown                                                                    | Partial content       | None   |
@@ -3825,7 +3825,7 @@ func main() {
 
 <h3 id="get_get_undisbursed_challenges-responses">Responses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                                  |
+| Status | Significado                                                                | Description  | Schema                                                  |
 | ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [undisbursed_challenges](#schemaundisbursed_challenges) |
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                    |
@@ -4000,7 +4000,7 @@ func main() {
 
 <h3 id="get_attest-responses">Responses</h3>
 
-| Status | Meaning                                                 | Description | Schema                                            |
+| Status | Significado                                             | Description | Schema                                            |
 | ------ | ------------------------------------------------------- | ----------- | ------------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Success     | [attestation_reponse](#schemaattestation_reponse) |
 
@@ -4171,7 +4171,7 @@ func main() {
 
 <h3 id="get_trailing_app_name_metrics-responses">Responses</h3>
 
-| Status | Meaning                                                 | Description | Schema                                                            |
+| Status | Significado                                             | Description | Schema                                                            |
 | ------ | ------------------------------------------------------- | ----------- | ----------------------------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Success     | [app_name_trailing_response](#schemaapp_name_trailing_response) |
 
@@ -4340,7 +4340,7 @@ This endpoint allows you to lookup and access API resources when you only know t
 
 <h3 id="resolve-responses">Responses</h3>
 
-| Status | Meaning                                                    | Description       | Schema |
+| Status | Significado                                                | Description       | Schema |
 | ------ | ---------------------------------------------------------- | ----------------- | ------ |
 | 302    | [Found](https://tools.ietf.org/html/rfc7231#section-6.4.3) | Internal redirect | None   |
 
