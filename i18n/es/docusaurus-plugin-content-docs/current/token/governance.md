@@ -1,43 +1,43 @@
-# Governance
+# Gobernanza
 
-## How Audius Governance Work
+## Cómo funciona la Gobernanza de Audius
 
-Governance is the process by which AUDIO token holders enact change to Audius through on-chain proposals.
+La Gobernanza es el proceso mediante el cual los titulares de fichas AUDIO realizan cambios en Audius a través de propuestas en cadena.
 
-It allows the community to directly shape future iterations of the platform and is the core principle driving Audius’s decentralized infrastructure.
-
-
-In this post, we’ll cover how governance works in Audius, and what you can do as an AUDIO holder to get involved.
+Permite a la comunidad dar forma directa a las futuras iteraciones de la plataforma y es el principio básico que impulsa la infraestructura descentralizada de Audius.
 
 
-### **Governance Portal**
-
-The single source of truth for Audius governance can be found in the protocol dashboard under the [Governance tab](https://dashboard.audius.org/governance).
+En esta publicación, cubriremos cómo funciona la gobernanza en Audius, y lo que puedes hacer como titular de AUDIO para participar.
 
 
-Here you can see a list of all Active and Resolved proposals in chronological order along with whether they have passed or failed.
+### **Portal de gobernanza**
+
+La única fuente de verdad para la gobernanza de Audius se puede encontrar en el panel de control de protocolos en la pestaña [Gobernanza](https://dashboard.audius.org/governance).
 
 
-Every governance proposal comes with a breakdown of the following parameters:
+Aquí puede ver una lista de todas las propuestas activas y resueltas en orden cronológico junto con si han pasado o han fracasado.
 
 
-* _Proposer_ - The address responsible for submitting the proposal
-* _Description_ - A quick synthesis of what the governance proposal entails
-* _For_ - The amount of votes in favor of the proposal
-* _Against_ - The amount of votes against the proposal
-
-**All proposals are subject to 5% of staked $AUDIO quorum and 50% majority.**
+Cada propuesta de gobernanza incluye un desglose de los siguientes parámetros:
 
 
-This means that for a proposal to pass, at least 5% of all staked $AUDIO must vote on the proposal and more than 50% of the votes must be ‘For’ the proposal.
+* _Proponedor_ - La dirección responsable del envío de la propuesta
+* _Descripción_ - Una síntesis rápida de lo que la propuesta de gobernanza implica
+* _Por_ - La cantidad de votos a favor de la propuesta
+* _Contra_ - La cantidad de votos en contra de la propuesta
+
+**Todas las propuestas están sujetas al 5% del quórum $AUDIO en stake y a la mayoría del 50%.**
 
 
-Today, only those running a node may make a proposal on-chain. In future, the set of permitted proposers could be expanded in any way the community sees fit.
+Esto significa que para que una propuesta se apruebe, por lo menos el 5% de todos los $AUDIO en stake deben votar en la propuesta y más del 50% de los votos deben ser "a favor" de la propuesta.
 
 
-### **Governance Process**
+Hoy en día, sólo quienes tienen un nodo pueden hacer una propuesta en cadena. En el futuro, el conjunto de proponentes permitidos podría ampliarse de cualquier forma que la comunidad considere oportuna.
 
-Effective governance is much more than voting on proposals on-chain, and something that we want to make even more accessible at Audius.
+
+### **Proceso de gobernanza**
+
+La gobernanza efectiva es mucho más que la votación de propuestas en cadena y algo que queremos hacer aún más accesible en Audius.
 
 
 Here’s a breakdown of Audius’s evolving governance ecosystem, including the tools, processes and logistics behind AUDIO voting.
