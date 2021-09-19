@@ -1,80 +1,80 @@
 ---
-sidebar_label: Setup Instructions
+sidebar_label: Instrucciones de configuración
 sidebar_position: 3
 ---
 
-# Setup Instructions
+# Instrucciones de configuración
 
-This guide describes how to run Audius services on a single node Kubernetes cluster. Notes about multi node clusters are given as relevant.
+Esta guía describe cómo ejecutar los servicios de Audius en un clúster Kubernetes de un solo nodo. Las notas sobre clusters multi nodos son proporcionadas como relevantes.
 
-Join the node operator discord channel on the [Audius discord server](https://discord.com/invite/audius)
+Únete al canal de discord de operadores de nodo en el [servidor de discord de audio](https://discord.com/invite/audius)
 
-## 0. Clone the audius-k8s-manifests repository
+## 0. Clonar el repositorio audio-k8 manifests
 [**https://github.com/AudiusProject/audius-k8s-manifests**](https://github.com/AudiusProject/audius-k8s-manifests)\*\*\*\*
 
 ```text
 git clone git@github.com:AudiusProject/audius-k8s-manifests.git
 ```
 
-## 1. Cluster Setup
+## 1. Configurar Clúster
 
-Initialize a machine running Ubuntu 16.04 LTS or higher, with at least 8 vCPUs and 16 GB of RAM.
+Inicializar una máquina con Ubuntu 16.04 LTS o superior, con al menos 8 vCPUs y 16 GB de RAM.
 
-A convenience script is also included to do a "one click" kubeadm node setup. You can run
+También se incluye un script de conveniencia para hacer una configuración de nodo kubeadm "un clic". Usted puede ejecutar
 
 ```text
 yes | sh setup.sh
 ```
 
-However, if the node setup is not successful and kubectl is not available, it's advised to follow the installation steps by hand [here](https://github.com/AudiusProject/audius-k8s-manifests/blob/master/cluster-setup.md).
+Sin embargo, si la configuración del nodo no es exitosa y kubectl no está disponible, se aconseja seguir los pasos de instalación manual [aquí](https://github.com/AudiusProject/audius-k8s-manifests/blob/master/cluster-setup.md).
 
 ## 2. Audius CLI Setup
 
-You can skip this section if installing for the first time.
+Puede omitir esta sección si instala por primera vez.
 
-You can install `audius-cli` with
+Puedes instalar `audius-cli` con
 
 ```text
 sh install_audius_cli.sh
 ```
 
-You can then view all commands available via `audius-cli` by simply running:
+A continuación, puede ver todos los comandos disponibles a través de `audius-cli` simplemente ejecutando:
 
 ```text
 audius-cli -h
 ```
 
-## 3. Storage
+## 3. Almacenamiento
 
-Provision a shared host directory for persistent storage,
+Proporcionar un directorio de host compartido para almacenamiento persistente,
 
 ```text
 mkdir -p /var/k8s
 ```
 
-If sudo was required, change ownership with,
+Si sudo fue requerido, cambie la propiedad con,
 
 ```text
 sudo chown <user>:<group> /var/k8s
 ```
 
-typically this will be,
+normalmente esto será,
 
 ```text
 sudo chown -R ubuntu:ubuntu /var/k8s
 ```
 
-**Note:** Storage will persist on the host even after deleting `pv, pvc` objects.
+**Nota:** El almacenamiento persistirá en el host incluso después de eliminar objetos `pv, pvc`.
 
-To nuke all data and start clean,
+Para nuclear todos los datos y comenzar limpio,
 
 ```text
 rm -rf /var/k8s/*
 ```
 
-## 4. Service Setup
+## 4. Configuración de servicio
 
-See below for a guide to deploying [Creator Node](https://github.com/AudiusProject/audius-k8s-manifests#creator-node-1) and [Discovery Provider](https://github.com/AudiusProject/audius-k8s-manifests#discovery-provider-1) via `audius-cli`. After you finish setting up the service, please continue with the Logger section.
+Mira abajo una guía para desplegar [Nodo de creador](https://github.com/AudiusProject/audius-k8s-manifests#creator-node-1) y [Proveedor de descubrimiento](https://github.com/AudiusProject/audius-k8s-manifests#discovery-provider-1) a través de `audius-cli`. Después de terminar de configurar el servicio, por favor continúe con la sección de Logger.
 
 **Note:** "Creator Node" and "Discovery Provider" have recently been renamed to "Content Node" and "Discovery Node" respectively. However for consistency within the code and this README, we will continue to use the terms "Creator Node" and "Discovery Node".
 
