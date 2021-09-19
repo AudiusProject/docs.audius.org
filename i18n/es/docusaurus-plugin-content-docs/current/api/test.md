@@ -4774,7 +4774,7 @@ Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recib
 
 | Nombre | Tipo                          | Requerido | Restricciones | Descripción |
 | ------ | ----------------------------- | --------- | ------------- | ----------- |
-| datos  | [[favorite](#schemafavorite)] | falso     | ninguna       | ninguna     |
+| datos  | [[favorito](#schemafavorite)] | falso     | ninguna       | ninguna     |
 
 <a id="schemafavorite"></a>
 <a id="schema_favorite"></a>
@@ -4818,7 +4818,7 @@ Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recib
 
 | Nombre | Tipo     | Requerido | Restricciones | Descripción |
 | ------ | -------- | --------- | ------------- | ----------- |
-| data   | [string] | falso     | ninguna       | ninguna     |
+| datos  | [string] | falso     | ninguna       | ninguna     |
 
 <a id="schemauser_search"></a>
 <a id="schema_user_search"></a>
@@ -4859,9 +4859,9 @@ Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recib
 
 ### Propiedades
 
-| Nombre | Tipo                  | Requerido | Restricciones | Descripción |
-| ------ | --------------------- | --------- | ------------- | ----------- |
-| data   | [[user](#schemauser)] | falso     | ninguna       | ninguna     |
+| Nombre | Tipo                     | Requerido | Restricciones | Descripción |
+| ------ | ------------------------ | --------- | ------------- | ----------- |
+| datos  | [[usuario](#schemauser)] | falso     | ninguna       | ninguna     |
 
 <a id="schemaassociated_wallets_response"></a>
 <a id="schema_associated_wallets_response"></a>
@@ -4885,9 +4885,9 @@ Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recib
 
 ### Propiedades
 
-| Nombre | Tipo                                            | Requerido | Restricciones | Descripción |
-| ------ | ----------------------------------------------- | --------- | ------------- | ----------- |
-| data   | [associated_wallets](#schemaassociated_wallets) | falso     | ninguna       | ninguna     |
+| Nombre | Tipo                                           | Requerido | Restricciones | Descripción |
+| ------ | ---------------------------------------------- | --------- | ------------- | ----------- |
+| datos  | [monedero_asociado](#schemaassociated_wallets) | falso     | ninguna       | ninguna     |
 
 <a id="schemaassociated_wallets"></a>
 <a id="schema_associated_wallets"></a>
@@ -4909,10 +4909,10 @@ Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recib
 
 ### Propiedades
 
-| Nombre      | Tipo     | Requerido | Restricciones | Descripción |
-| ----------- | -------- | --------- | ------------- | ----------- |
-| wallets     | [string] | verdad    | ninguna       | ninguna     |
-| sol_wallets | [string] | verdad    | ninguna       | ninguna     |
+| Nombre        | Tipo     | Requerido | Restricciones | Descripción |
+| ------------- | -------- | --------- | ------------- | ----------- |
+| billeteras    | [string] | verdad    | ninguna       | ninguna     |
+| monederos sol | [string] | verdad    | ninguna       | ninguna     |
 
 <a id="schemauser_associated_wallet_response"></a>
 <a id="schema_user_associated_wallet_response"></a>
@@ -4933,7 +4933,7 @@ Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recib
 
 | Nombre | Tipo                                               | Requerido | Restricciones | Descripción |
 | ------ | -------------------------------------------------- | --------- | ------------- | ----------- |
-| data   | [id de usuario codificado](#schemaencoded_user_id) | falso     | ninguna       | ninguna     |
+| datos  | [id de usuario codificado](#schemaencoded_user_id) | falso     | ninguna       | ninguna     |
 
 <a id="schemaencoded_user_id"></a>
 <a id="schema_encoded_user_id"></a>
@@ -4984,7 +4984,7 @@ Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recib
 
 | Nombre | Tipo                                              | Requerido | Restricciones | Descripción |
 | ------ | ------------------------------------------------- | --------- | ------------- | ----------- |
-| data   | [[challenge_response](#schemachallenge_response)] | falso     | ninguna       | ninguna     |
+| datos  | [[challenge_response](#schemachallenge_response)] | falso     | ninguna       | ninguna     |
 
 <a id="schemachallenge_response"></a>
 <a id="schema_challenge_response"></a>
@@ -5010,18 +5010,18 @@ Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recib
 
 ### Propiedades
 
-| Nombre               | Tipo    | Requerido | Restricciones | Descripción |
-| -------------------- | ------- | --------- | ------------- | ----------- |
-| challenge_id         | cadena  | verdad    | ninguna       | ninguna     |
-| usuario_id           | cadena  | verdad    | ninguna       | ninguna     |
-| specifier            | cadena  | falso     | ninguna       | ninguna     |
-| is_complete          | boolean | verdad    | ninguna       | ninguna     |
-| is_active            | boolean | verdad    | ninguna       | ninguna     |
-| is_disbursed         | boolean | verdad    | ninguna       | ninguna     |
-| current_step_count | entero  | falso     | ninguna       | ninguna     |
-| max_steps            | entero  | falso     | ninguna       | ninguna     |
-| reto_tipo            | cadena  | verdad    | ninguna       | ninguna     |
-| metadata             | object  | verdad    | ninguna       | ninguna     |
+| Nombre                 | Tipo    | Requerido | Restricciones | Descripción |
+| ---------------------- | ------- | --------- | ------------- | ----------- |
+| challenge_id           | cadena  | verdad    | ninguna       | ninguna     |
+| usuario_id             | cadena  | verdad    | ninguna       | ninguna     |
+| especificador          | cadena  | falso     | ninguna       | ninguna     |
+| está_completado        | boolean | verdad    | ninguna       | ninguna     |
+| está_activo            | boolean | verdad    | ninguna       | ninguna     |
+| es_desembolsado        | boolean | verdad    | ninguna       | ninguna     |
+| contador_paso_actual | entero  | falso     | ninguna       | ninguna     |
+| max_pasos              | entero  | falso     | ninguna       | ninguna     |
+| reto_tipo              | cadena  | verdad    | ninguna       | ninguna     |
+| metadatos              | objeto  | verdad    | ninguna       | ninguna     |
 
 <a id="schemaplaylist_response"></a>
 <a id="schema_playlist_response"></a>
@@ -5076,9 +5076,9 @@ Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recib
 
 ### Propiedades
 
-| Nombre | Tipo                          | Requerido | Restricciones | Descripción |
-| ------ | ----------------------------- | --------- | ------------- | ----------- |
-| data   | [[playlist](#schemaplaylist)] | falso     | ninguna       | ninguna     |
+| Nombre | Tipo                                       | Requerido | Restricciones | Descripción |
+| ------ | ------------------------------------------ | --------- | ------------- | ----------- |
+| datos  | [[lista de reproducción](#schemaplaylist)] | falso     | ninguna       | ninguna     |
 
 <a id="schemaplaylist"></a>
 <a id="schema_playlist"></a>
@@ -5129,17 +5129,17 @@ Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recib
 
 ### Propiedades
 
-| Nombre             | Tipo                                        | Requerido | Restricciones | Descripción |
-| ------------------ | ------------------------------------------- | --------- | ------------- | ----------- |
-| artwork            | [playlist_artwork](#schemaplaylist_artwork) | falso     | ninguna       | ninguna     |
-| descripción        | cadena                                      | falso     | ninguna       | ninguna     |
-| id                 | cadena                                      | verdad    | ninguna       | ninguna     |
-| is_album           | boolean                                     | verdad    | ninguna       | ninguna     |
-| playlist_name      | cadena                                      | verdad    | ninguna       | ninguna     |
-| repost_count       | entero                                      | verdad    | ninguna       | ninguna     |
-| favorite_count     | entero                                      | verdad    | ninguna       | ninguna     |
-| total_play_count | entero                                      | verdad    | ninguna       | ninguna     |
-| user               | [user](#schemauser)                         | verdad    | ninguna       | ninguna     |
+| Nombre                  | Tipo                                        | Requerido | Restricciones | Descripción |
+| ----------------------- | ------------------------------------------- | --------- | ------------- | ----------- |
+| obra de arte            | [playlist_artwork](#schemaplaylist_artwork) | falso     | ninguna       | ninguna     |
+| descripción             | cadena                                      | falso     | ninguna       | ninguna     |
+| id                      | cadena                                      | verdad    | ninguna       | ninguna     |
+| es_álbum                | boolean                                     | verdad    | ninguna       | ninguna     |
+| playlist_name           | cadena                                      | verdad    | ninguna       | ninguna     |
+| contador_repost_count | entero                                      | verdad    | ninguna       | ninguna     |
+| contador_favoritos      | entero                                      | verdad    | ninguna       | ninguna     |
+| contador_total_jugar  | entero                                      | verdad    | ninguna       | ninguna     |
+| usuario                 | [usuario](#schemauser)                      | verdad    | ninguna       | ninguna     |
 
 <a id="schemaplaylist_artwork"></a>
 <a id="schema_playlist_artwork"></a>
@@ -5160,8 +5160,8 @@ Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recib
 
 | Nombre    | Tipo   | Requerido | Restricciones | Descripción |
 | --------- | ------ | --------- | ------------- | ----------- |
-| 150x150   | cadena | falso     | ninguna       | ninguna     |
-| 480x480   | cadena | falso     | ninguna       | ninguna     |
+| 150 x 150 | cadena | falso     | ninguna       | ninguna     |
+| 480 x 480 | cadena | falso     | ninguna       | ninguna     |
 | 1000x1000 | cadena | falso     | ninguna       | ninguna     |
 
 <a id="schemaplaylist_tracks_response"></a>
@@ -5232,7 +5232,7 @@ Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recib
 
 | Nombre | Tipo                    | Requerido | Restricciones | Descripción |
 | ------ | ----------------------- | --------- | ------------- | ----------- |
-| data   | [[Track](#schematrack)] | falso     | ninguna       | ninguna     |
+| datos  | [[Pista](#schematrack)] | falso     | ninguna       | ninguna     |
 
 <a id="schemaplaylist_search_result"></a>
 <a id="schema_playlist_search_result"></a>
@@ -5287,9 +5287,9 @@ Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recib
 
 ### Propiedades
 
-| Nombre | Tipo                          | Requerido | Restricciones | Descripción |
-| ------ | ----------------------------- | --------- | ------------- | ----------- |
-| data   | [[playlist](#schemaplaylist)] | falso     | ninguna       | ninguna     |
+| Nombre | Tipo                                       | Requerido | Restricciones | Descripción |
+| ------ | ------------------------------------------ | --------- | ------------- | ----------- |
+| datos  | [[lista de reproducción](#schemaplaylist)] | falso     | ninguna       | ninguna     |
 
 <a id="schematrending_playlists_response"></a>
 <a id="schema_trending_playlists_response"></a>
@@ -5344,9 +5344,9 @@ Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recib
 
 ### Propiedades
 
-| Nombre | Tipo                          | Requerido | Restricciones | Descripción |
-| ------ | ----------------------------- | --------- | ------------- | ----------- |
-| data   | [[playlist](#schemaplaylist)] | falso     | ninguna       | ninguna     |
+| Nombre | Tipo                                       | Requerido | Restricciones | Descripción |
+| ------ | ------------------------------------------ | --------- | ------------- | ----------- |
+| datos  | [[lista de reproducción](#schemaplaylist)] | falso     | ninguna       | ninguna     |
 
 <a id="schematrack_response"></a>
 <a id="schema_track_response"></a>
@@ -5414,7 +5414,7 @@ Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recib
 
 | Nombre | Tipo                  | Requerido | Restricciones | Descripción |
 | ------ | --------------------- | --------- | ------------- | ----------- |
-| data   | [Track](#schematrack) | falso     | ninguna       | ninguna     |
+| datos  | [Pista](#schematrack) | falso     | ninguna       | ninguna     |
 
 <a id="schematrack_search"></a>
 <a id="schema_track_search"></a>
@@ -5484,7 +5484,7 @@ Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recib
 
 | Nombre | Tipo                    | Requerido | Restricciones | Descripción |
 | ------ | ----------------------- | --------- | ------------- | ----------- |
-| data   | [[Track](#schematrack)] | falso     | ninguna       | ninguna     |
+| datos  | [[Pista](#schematrack)] | falso     | ninguna       | ninguna     |
 
 <a id="schemaattestation_reponse"></a>
 <a id="schema_attestation_reponse"></a>
@@ -5506,7 +5506,7 @@ Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recib
 
 | Nombre | Tipo                              | Requerido | Restricciones | Descripción |
 | ------ | --------------------------------- | --------- | ------------- | ----------- |
-| data   | [attestation](#schemaattestation) | falso     | ninguna       | ninguna     |
+| datos  | [certificado](#schemaattestation) | falso     | ninguna       | ninguna     |
 
 <a id="schemaattestation"></a>
 <a id="schema_attestation"></a>
@@ -5524,10 +5524,10 @@ Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recib
 
 ### Propiedades
 
-| Nombre       | Tipo   | Requerido | Restricciones | Descripción |
-| ------------ | ------ | --------- | ------------- | ----------- |
-| owner_wallet | cadena | verdad    | ninguna       | ninguna     |
-| attestation  | cadena | verdad    | ninguna       | ninguna     |
+| Nombre              | Tipo   | Requerido | Restricciones | Descripción |
+| ------------------- | ------ | --------- | ------------- | ----------- |
+| propietario_cartera | cadena | verdad    | ninguna       | ninguna     |
+| certificado         | cadena | verdad    | ninguna       | ninguna     |
 
 <a id="schemaundisbursed_challenges"></a>
 <a id="schema_undisbursed_challenges"></a>
