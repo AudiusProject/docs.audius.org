@@ -2808,17 +2808,17 @@ func main() {
 
 <h3 id="recommended-tracks-parameters">Parámetros de consulta</h3>
 
-| Nombre         | Type   | Required | Description                                                        |
-| -------------- | ------ | -------- | ------------------------------------------------------------------ |
-| genre          | string | false    | Recommended trending tracks for a specified genre                  |
-| limit          | string | false    | Number of recommended tracks to fetch                              |
-| exclusion_list | string | false    | List of track ids to exclude                                       |
-| time           | string | false    | Trending tracks over a specified time range (week, month, allTime) |
-| version        | string | true     | none                                                               |
+| Nombre             | Tipo   | Requerido | Descripción                                                                  |
+| ------------------ | ------ | --------- | ---------------------------------------------------------------------------- |
+| género             | cadena | falso     | Tracks de tendencia recomendados para un género especificado                 |
+| límite             | cadena | falso     | Número de pistas recomendadas a buscar                                       |
+| lista de exclusión | cadena | falso     | Lista de identificadores de pista a excluir                                  |
+| tiempo             | cadena | falso     | Pistas populares en un rango de tiempo especificado \(semana, mes, allTime) |
+| versiones          | cadena | verdad    | ninguna                                                                      |
 
-> Example Response
+> Ejemplo de respuesta
 
-> 200 Response
+> 200 Respuesta
 
 ```json
 {
@@ -2877,19 +2877,19 @@ func main() {
 }
 ```
 
-<h3 id="recommended-tracks-responses">Responses</h3>
+<h3 id="recommended-tracks-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description  | Schema                                    |
-| ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [tracks_response](#schematracks_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                      |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                      |
+| Estado | Significado                                                                     | Descripción          | Esquema                                   |
+| ------ | ------------------------------------------------------------------------------- | -------------------- | ----------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | Exitoso              | [tracks_response](#schematracks_response) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                   |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                   |
 
-## Search Tracks
+## Buscar pistas
 
 <a id="opIdSearch Tracks"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/tracks/search?query=baauer b2b 
@@ -3026,18 +3026,18 @@ func main() {
 
 ```
 
-`GET /tracks/search`
+`Obtener /pistas/búsqueda`
 
-*Search for a track*
+*Buscar un track*
 
-<h3 id="search-tracks-parameters">Query Parameters</h3>
+<h3 id="search-tracks-parameters">Parámetros de consulta</h3>
 
-| Name              | Type   | Required | Description                     |
-| ----------------- | ------ | -------- | ------------------------------- |
-| query             | string | true     | Search Query                    |
-| only_downloadable | string | false    | Return only downloadable tracks |
+| Nombre           | Tipo   | Requerido | Descripción                       |
+| ---------------- | ------ | --------- | --------------------------------- |
+| consulta         | cadena | verdad    | Búsqueda                          |
+| sólo_descargable | cadena | falso     | Devolver sólo pistas descargables |
 
-> Example Response
+> Ejemplo de respuesta
 
 ```json
 {
@@ -3086,19 +3086,19 @@ func main() {
 }
 ```
 
-<h3 id="search-tracks-responses">Responses</h3>
+<h3 id="search-tracks-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description  | Schema                              |
-| ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [track_search](#schematrack_search) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                |
+| Estado | Significado                                                                     | Descripción          | Esquema                                     |
+| ------ | ------------------------------------------------------------------------------- | -------------------- | ------------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | ninguna              | [búsqueda_seguimiento](#schematrack_search) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                     |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                     |
 
-## Trending Tracks
+## Pistas populares
 
 <a id="opIdTrending Tracks"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/tracks/trending/string 
@@ -3234,19 +3234,19 @@ func main() {
 
 `GET /tracks/trending/{version}`
 
-*Gets the top 100 trending (most popular) tracks on Audius*
+*Obtiene las 100 pistas más populares \(más popular\) en Audius*
 
-<h3 id="trending-tracks-parameters">Query Parameters</h3>
+<h3 id="trending-tracks-parameters">Parámetros de consulta</h3>
 
-| Name    | Type   | Required | Description                                                        |
-| ------- | ------ | -------- | ------------------------------------------------------------------ |
-| genre   | string | false    | Trending tracks for a specified genre                              |
-| time    | string | false    | Trending tracks over a specified time range (week, month, allTime) |
-| version | string | true     | none                                                               |
+| Nombre    | Tipo   | Requerido | Descripción                                                                  |
+| --------- | ------ | --------- | ---------------------------------------------------------------------------- |
+| género    | cadena | falso     | Pistas populares para un género especificado                                 |
+| tiempo    | cadena | falso     | Pistas populares en un rango de tiempo especificado \(semana, mes, allTime) |
+| versiones | cadena | verdad    | ninguna                                                                      |
 
-> Example Response
+> Ejemplo de respuesta
 
-> 200 Response
+> 200 Respuesta
 
 ```json
 {
@@ -3305,19 +3305,19 @@ func main() {
 }
 ```
 
-<h3 id="trending-tracks-responses">Responses</h3>
+<h3 id="trending-tracks-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description  | Schema                                    |
-| ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [tracks_response](#schematracks_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                      |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                      |
+| Estado | Significado                                                                     | Descripción          | Esquema                                   |
+| ------ | ------------------------------------------------------------------------------- | -------------------- | ----------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | Exitoso              | [tracks_response](#schematracks_response) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                   |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                   |
 
-## Get Track
+## Obtener pista
 
 <a id="opIdGet Track"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/tracks/D7KyD 
@@ -3455,13 +3455,13 @@ func main() {
 
 *Fetch a track*
 
-<h3 id="get-track-parameters">Query Parameters</h3>
+<h3 id="get-track-parameters">Parámetros de consulta</h3>
 
-| Name     | Type   | Required | Description |
-| -------- | ------ | -------- | ----------- |
-| track_id | string | true     | A Track ID  |
+| Nombre   | Tipo   | Requerido | Descripción    |
+| -------- | ------ | --------- | -------------- |
+| track_id | cadena | verdad    | Un ID de pista |
 
-> Example Response
+> Ejemplo de respuesta
 
 ```json
 {
@@ -3508,19 +3508,19 @@ func main() {
 }
 ```
 
-<h3 id="get-track-responses">Responses</h3>
+<h3 id="get-track-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description  | Schema                                  |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [track_response](#schematrack_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                    |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                    |
+| Estado | Significado                                                                     | Descripción          | Esquema                                 |
+| ------ | ------------------------------------------------------------------------------- | -------------------- | --------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | ninguna              | [track_response](#schematrack_response) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                 |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                 |
 
-## Stream Track
+## Pista de streaming
 
 <a id="opIdStream Track"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/tracks/D7KyD/stream
@@ -3635,36 +3635,36 @@ func main() {
 
 `GET /tracks/{track_id}/stream`
 
-*Get the track's streamable mp3 file*
+*Obtener el archivo mp3 streamable de la pista*
 
-This endpoint accepts the Range header for streaming. https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests
+Este extremo acepta la cabecera de Rango para streaming. https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests
 
-<h3 id="stream-track-parameters">Query Parameters</h3>
+<h3 id="stream-track-parameters">Parámetros de consulta</h3>
 
-| Name     | Type   | Required | Description |
-| -------- | ------ | -------- | ----------- |
-| track_id | string | true     | A Track ID  |
+| Nombre   | Tipo   | Requerido | Descripción    |
+| -------- | ------ | --------- | -------------- |
+| track_id | cadena | verdad    | Un ID de pista |
 
-<h3 id="stream-track-responses">Responses</h3>
+<h3 id="stream-track-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description           | Schema |
-| ------ | -------------------------------------------------------------------------- | --------------------- | ------ |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success               | None   |
-| 216    | Unknown                                                                    | Partial content       | None   |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request           | None   |
-| 416    | [Range Not Satisfiable](https://tools.ietf.org/html/rfc7233#section-4.4)   | Content range invalid | None   |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error          | None   |
+| Estado | Significado                                                                     | Descripción                  | Esquema |
+| ------ | ------------------------------------------------------------------------------- | ---------------------------- | ------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | Exitoso                      | Ninguna |
+| 216    | Desconocido                                                                     | Contenido parcial            | Ninguna |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta         | Ninguna |
+| 416    | [Rango no satisfactorio](https://tools.ietf.org/html/rfc7233#section-4.4)       | Rango de contenido no válido | Ninguna |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor           | Ninguna |
 
-<h1 id="api-challenges">challenges</h1>
+<h1 id="api-challenges">desafíos</h1>
 
 ## get_get_undisbursed_challenges
 
 <a id="opIdget_get_undisbursed_challenges"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
-curl AUDIUS_API_HOST/v1/challenges/undisbursed 
+curl AUDIUS_API_HOST/v1/challenges/undisburted 
 
 
 ```
@@ -3797,17 +3797,17 @@ func main() {
 
 `GET /challenges/undisbursed`
 
-<h3 id="get_get_undisbursed_challenges-parameters">Query Parameters</h3>
+<h3 id="get_get_undisbursed_challenges-parameters">Parámetros de consulta</h3>
 
-| Name                  | Type   | Required | Description                                                       |
-| --------------------- | ------ | -------- | ----------------------------------------------------------------- |
-| limit                 | string | false    | The maximum number of response challenges                         |
-| offset                | string | false    | The number of challenges to intially skip in the query            |
-| completed_blocknumber | string | false    | Starting blocknumber to retrieve completed undisbursed challenges |
+| Nombre                       | Tipo   | Requerido | Descripción                                                                    |
+| ---------------------------- | ------ | --------- | ------------------------------------------------------------------------------ |
+| límite                       | cadena | falso     | El número máximo de retos de respuesta                                         |
+| offset                       | cadena | falso     | El número de desafíos a omitir inicialmente en la consulta                     |
+| número de bloqueo completado | cadena | falso     | Iniciando blocknumber para recuperar los desafíos no desembolsados completados |
 
-> Example Response
+> Ejemplo de respuesta
 
-> 200 Response
+> 200 Respuesta
 
 ```json
 {
@@ -3823,19 +3823,19 @@ func main() {
 }
 ```
 
-<h3 id="get_get_undisbursed_challenges-responses">Responses</h3>
+<h3 id="get_get_undisbursed_challenges-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description  | Schema                                                  |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [undisbursed_challenges](#schemaundisbursed_challenges) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                    |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                    |
+| Estado | Significado                                                                     | Descripción          | Esquema                                                |
+| ------ | ------------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------ |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | Exitoso              | [desafíos_sin deshacer](#schemaundisbursed_challenges) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                                |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                                |
 
 ## get_attest
 
 <a id="opIdget_attest"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/challenges/string/attest?user_id=string&oracle=string&specifier=string 
@@ -3976,18 +3976,18 @@ func main() {
 
 `GET /challenges/{challenge_id}/attest`
 
-<h3 id="get_attest-parameters">Query Parameters</h3>
+<h3 id="get_attest-parameters">Parámetros de consulta</h3>
 
-| Name         | Type   | Required | Description |
-| ------------ | ------ | -------- | ----------- |
-| user_id      | string | true     | none        |
-| oracle       | string | true     | none        |
-| specifier    | string | true     | none        |
-| challenge_id | string | true     | none        |
+| Nombre        | Tipo   | Requerido | Descripción |
+| ------------- | ------ | --------- | ----------- |
+| usuario_id    | cadena | verdad    | ninguna     |
+| oráculo       | cadena | verdad    | ninguna     |
+| especificador | cadena | verdad    | ninguna     |
+| challenge_id  | cadena | verdad    | ninguna     |
 
-> Example Response
+> Ejemplo de respuesta
 
-> 200 Response
+> 200 Respuesta
 
 ```json
 {
@@ -3998,19 +3998,19 @@ func main() {
 }
 ```
 
-<h3 id="get_attest-responses">Responses</h3>
+<h3 id="get_attest-responses">Respuestas</h3>
 
-| Status | Significado                                             | Description | Schema                                            |
-| ------ | ------------------------------------------------------- | ----------- | ------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Success     | [attestation_reponse](#schemaattestation_reponse) |
+| Estado | Significado                                             | Descripción | Esquema                                                 |
+| ------ | ------------------------------------------------------- | ----------- | ------------------------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Exitoso     | [respuesta de verificación](#schemaattestation_reponse) |
 
-<h1 id="api-metrics">metrics</h1>
+<h1 id="api-metrics">métricas</h1>
 
 ## get_trailing_app_name_metrics
 
 <a id="opIdget_trailing_app_name_metrics"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/metrics/app_name/trailing/string 
@@ -4146,17 +4146,17 @@ func main() {
 
 `GET /metrics/app_name/trailing/{time_range}`
 
-*Gets trailing app name metrics from matview*
+*Obtiene métricas del nombre de la aplicación final desde matview*
 
-<h3 id="get_trailing_app_name_metrics-parameters">Query Parameters</h3>
+<h3 id="get_trailing_app_name_metrics-parameters">Parámetros de consulta</h3>
 
-| Name       | Type   | Required | Description |
-| ---------- | ------ | -------- | ----------- |
-| time_range | string | true     | none        |
+| Nombre              | Tipo   | Requerido | Descripción |
+| ------------------- | ------ | --------- | ----------- |
+| intervalo de tiempo | cadena | verdad    | ninguna     |
 
-> Example Response
+> Ejemplo de respuesta
 
-> 200 Response
+> 200 Respuesta
 
 ```json
 {
@@ -4169,19 +4169,19 @@ func main() {
 }
 ```
 
-<h3 id="get_trailing_app_name_metrics-responses">Responses</h3>
+<h3 id="get_trailing_app_name_metrics-responses">Respuestas</h3>
 
-| Status | Significado                                             | Description | Schema                                                            |
-| ------ | ------------------------------------------------------- | ----------- | ----------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Success     | [app_name_trailing_response](#schemaapp_name_trailing_response) |
+| Estado | Significado                                             | Descripción | Esquema                                                              |
+| ------ | ------------------------------------------------------- | ----------- | -------------------------------------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Exitoso     | [app_nombre_respuesta_trailing](#schemaapp_name_trailing_response) |
 
-<h1 id="api-resolve">resolve</h1>
+<h1 id="api-resolve">resolver</h1>
 
-## Resolve
+## Resolver
 
 <a id="opIdResolve"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/resolve?url=https://audius.co/camouflybeats/hypermantra-86216 
@@ -4320,41 +4320,41 @@ func main() {
 
 `GET /resolve`
 
-*Resolves and redirects a provided Audius app URL to the API resource URL it represents*
+*Resuelve y redirige una URL de la aplicación de Audius a la URL del recurso API que representa*
 
-This endpoint allows you to lookup and access API resources when you only know the audius.co URL. Tracks, Playlists, and Users are supported.
+Este endpoint le permite buscar y acceder a los recursos API cuando sólo conoce la URL de audius.co. Se admiten pistas, listas de reproducción y usuarios.
 
-<h3 id="resolve-parameters">Query Parameters</h3>
+<h3 id="resolve-parameters">Parámetros de consulta</h3>
 
-| Name | Type   | Required | Description                                                                           |
-| ---- | ------ | -------- | ------------------------------------------------------------------------------------- |
-| url  | string | true     | URL to resolve. Either fully formed URL (https://audius.co) or just the absolute path |
+| Nombre | Tipo   | Requerido | Descripción                                                                         |
+| ------ | ------ | --------- | ----------------------------------------------------------------------------------- |
+| url    | cadena | verdad    | URL a resolver. URL completa \(https://audius.co\) o simplemente la ruta absoluta |
 
-> Example Response
+> Ejemplo de respuesta
 
-> Internal redirect
+> Redirección interna
 
 ```
 {"HTTP/1.1 302 Found Location":"/v1/tracks/V4W8r"}
 ```
 
-<h3 id="resolve-responses">Responses</h3>
+<h3 id="resolve-responses">Respuestas</h3>
 
-| Status | Significado                                                | Description       | Schema |
-| ------ | ---------------------------------------------------------- | ----------------- | ------ |
-| 302    | [Found](https://tools.ietf.org/html/rfc7231#section-6.4.3) | Internal redirect | None   |
+| Estado | Significado                                                     | Descripción         | Esquema |
+| ------ | --------------------------------------------------------------- | ------------------- | ------- |
+| 302    | [Encontrado](https://tools.ietf.org/html/rfc7231#section-6.4.3) | Redirección interna | Ninguna |
 
-<h3 id="resolve-responseschema">Response Schema</h3>
+<h3 id="resolve-responseschema">Esquema de respuesta</h3>
 
-# Schemas
+# Esquemas
 
-The following are examples of response formats you can expect to receive from the API.
+Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recibir de la API.
 
 <a id="schemauser_response"></a>
 <a id="schema_user_response"></a>
 <a id="tocSuser_response"></a>
 <a id="tocsuser_response"></a>
-<h2 id="tocS_user_response">user_response</h2>
+<h2 id="tocS_user_response">usuario_respuesta</h2>
 
 ```json
 {
@@ -4385,17 +4385,17 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name | Type                | Required | Restrictions | Description |
-| ---- | ------------------- | -------- | ------------ | ----------- |
-| data | [user](#schemauser) | false    | none         | none        |
+| Nombre | Tipo                    | Requerido | Restricciones | Descripción |
+| ------ | ----------------------- | --------- | ------------- | ----------- |
+| datos  | [usuarios](#schemauser) | falso     | ninguna       | ninguna     |
 
 <a id="schemauser"></a>
 <a id="schema_user"></a>
 <a id="tocSuser"></a>
 <a id="tocsuser"></a>
-<h2 id="tocS_user">user</h2>
+<h2 id="tocS_user">usuario</h2>
 
 ```json
 {
@@ -4424,30 +4424,30 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name            | Type                                      | Required | Restrictions | Description |
-| --------------- | ----------------------------------------- | -------- | ------------ | ----------- |
-| album_count     | integer                                   | true     | none         | none        |
-| bio             | string                                    | false    | none         | none        |
-| cover_photo     | [cover_photo](#schemacover_photo)         | false    | none         | none        |
-| followee_count  | integer                                   | true     | none         | none        |
-| follower_count  | integer                                   | true     | none         | none        |
-| handle          | string                                    | true     | none         | none        |
-| id              | string                                    | true     | none         | none        |
-| is_verified     | boolean                                   | true     | none         | none        |
-| location        | string                                    | false    | none         | none        |
-| name            | string                                    | true     | none         | none        |
-| playlist_count  | integer                                   | true     | none         | none        |
-| profile_picture | [profile_picture](#schemaprofile_picture) | false    | none         | none        |
-| repost_count    | integer                                   | true     | none         | none        |
-| track_count     | integer                                   | true     | none         | none        |
+| Nombre                  | Tipo                                    | Requerido | Restricciones | Descripción |
+| ----------------------- | --------------------------------------- | --------- | ------------- | ----------- |
+| contador de álbumes     | entero                                  | verdad    | ninguna       | ninguna     |
+| biografía               | cadena                                  | falso     | ninguna       | ninguna     |
+| foto de portada         | [foto de portada](#schemacover_photo)   | falso     | ninguna       | ninguna     |
+| contador_followeeks     | entero                                  | verdad    | ninguna       | ninguna     |
+| cuenta_seguidor         | entero                                  | verdad    | ninguna       | ninguna     |
+| manejo                  | cadena                                  | verdad    | ninguna       | ninguna     |
+| id                      | cadena                                  | verdad    | ninguna       | ninguna     |
+| es verificado           | boolean                                 | verdad    | ninguna       | ninguna     |
+| ubicación               | cadena                                  | falso     | ninguna       | ninguna     |
+| nombre                  | cadena                                  | verdad    | ninguna       | ninguna     |
+| contador de listas      | entero                                  | verdad    | ninguna       | ninguna     |
+| imagen_perfil           | [imagen_perfil](#schemaprofile_picture) | falso     | ninguna       | ninguna     |
+| contador_repost_count | entero                                  | verdad    | ninguna       | ninguna     |
+| track_count             | entero                                  | verdad    | ninguna       | ninguna     |
 
 <a id="schemacover_photo"></a>
 <a id="schema_cover_photo"></a>
 <a id="tocScover_photo"></a>
 <a id="tocscover_photo"></a>
-<h2 id="tocS_cover_photo">cover_photo</h2>
+<h2 id="tocS_cover_photo">foto de portada</h2>
 
 ```json
 {
@@ -4457,18 +4457,18 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name  | Type   | Required | Restrictions | Description |
-| ----- | ------ | -------- | ------------ | ----------- |
-| 640x  | string | false    | none         | none        |
-| 2000x | string | false    | none         | none        |
+| Nombre | Tipo   | Requerido | Restricciones | Descripción |
+| ------ | ------ | --------- | ------------- | ----------- |
+| 640x   | cadena | falso     | ninguna       | ninguna     |
+| 2000x  | cadena | falso     | ninguna       | ninguna     |
 
 <a id="schemaprofile_picture"></a>
 <a id="schema_profile_picture"></a>
 <a id="tocSprofile_picture"></a>
 <a id="tocsprofile_picture"></a>
-<h2 id="tocS_profile_picture">profile_picture</h2>
+<h2 id="tocS_profile_picture">imagen_perfil</h2>
 
 ```json
 {
@@ -4479,13 +4479,13 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name      | Type   | Required | Restrictions | Description |
-| --------- | ------ | -------- | ------------ | ----------- |
-| 150x150   | string | false    | none         | none        |
-| 480x480   | string | false    | none         | none        |
-| 1000x1000 | string | false    | none         | none        |
+| Nombre    | Tipo   | Requerido | Restricciones | Descripción |
+| --------- | ------ | --------- | ------------- | ----------- |
+| 150 x 150 | cadena | falso     | ninguna       | ninguna     |
+| 480 x 480 | cadena | falso     | ninguna       | ninguna     |
+| 1000x1000 | cadena | falso     | ninguna       | ninguna     |
 
 <a id="schematracks_response"></a>
 <a id="schema_tracks_response"></a>
@@ -4551,17 +4551,17 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name | Type                    | Required | Restrictions | Description |
-| ---- | ----------------------- | -------- | ------------ | ----------- |
-| data | [[Track](#schematrack)] | false    | none         | none        |
+| Nombre | Tipo                    | Requerido | Restricciones | Descripción |
+| ------ | ----------------------- | --------- | ------------- | ----------- |
+| datos  | [[Pista](#schematrack)] | falso     | ninguna       | ninguna     |
 
 <a id="schematrack"></a>
 <a id="schema_Track"></a>
 <a id="tocStrack"></a>
 <a id="tocstrack"></a>
-<h2 id="tocS_Track">Track</h2>
+<h2 id="tocS_Track">Pista</h2>
 
 ```json
 {
@@ -4617,26 +4617,26 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name           | Type                                  | Required | Restrictions | Description |
-| -------------- | ------------------------------------- | -------- | ------------ | ----------- |
-| artwork        | [track_artwork](#schematrack_artwork) | false    | none         | none        |
-| description    | string                                | false    | none         | none        |
-| genre          | string                                | false    | none         | none        |
-| id             | string                                | true     | none         | none        |
-| mood           | string                                | false    | none         | none        |
-| release_date   | string                                | false    | none         | none        |
-| remix_of       | [remix_parent](#schemaremix_parent)   | false    | none         | none        |
-| repost_count   | integer                               | true     | none         | none        |
-| favorite_count | integer                               | true     | none         | none        |
-| tags           | string                                | false    | none         | none        |
-| title          | string                                | true     | none         | none        |
-| user           | [user](#schemauser)                   | true     | none         | none        |
-| duration       | integer                               | true     | none         | none        |
-| downloadable   | boolean                               | false    | none         | none        |
-| play_count     | integer                               | true     | none         | none        |
-| permalink      | string                                | false    | none         | none        |
+| Nombre                  | Estilo                                | Requerido | Restricciones | Descripción |
+| ----------------------- | ------------------------------------- | --------- | ------------- | ----------- |
+| obra de arte            | [track_artwork](#schematrack_artwork) | falso     | ninguna       | ninguna     |
+| descripción             | cadena                                | falso     | ninguna       | ninguna     |
+| género                  | cadena                                | falso     | ninguna       | ninguna     |
+| id                      | cadena                                | verdad    | ninguna       | ninguna     |
+| humor                   | cadena                                | falso     | ninguna       | ninguna     |
+| fecha de lanzamiento    | cadena                                | falso     | ninguna       | ninguna     |
+| remix_de                | [remix_parent](#schemaremix_parent)   | falso     | ninguna       | ninguna     |
+| contador_repost_count | entero                                | verdad    | ninguna       | ninguna     |
+| contador_favoritos      | entero                                | verdad    | ninguna       | ninguna     |
+| etiquetas               | cadena                                | falso     | ninguna       | ninguna     |
+| título                  | cadena                                | verdad    | ninguna       | ninguna     |
+| usuario                 | [usuario](#schemauser)                | verdad    | ninguna       | ninguna     |
+| duración                | entero                                | verdad    | ninguna       | ninguna     |
+| descargable             | boolean                               | falso     | ninguna       | ninguna     |
+| contar_jugar            | entero                                | verdad    | ninguna       | ninguna     |
+| permalink               | cadena                                | falso     | ninguna       | ninguna     |
 
 <a id="schematrack_artwork"></a>
 <a id="schema_track_artwork"></a>
@@ -4653,13 +4653,13 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name      | Type   | Required | Restrictions | Description |
-| --------- | ------ | -------- | ------------ | ----------- |
-| 150x150   | string | false    | none         | none        |
-| 480x480   | string | false    | none         | none        |
-| 1000x1000 | string | false    | none         | none        |
+| Nombre    | Tipo   | Requerido | Restricciones | Descripción |
+| --------- | ------ | --------- | ------------- | ----------- |
+| 150 x 150 | cadena | falso     | ninguna       | ninguna     |
+| 480 x 480 | cadena | falso     | ninguna       | ninguna     |
+| 1000x1000 | cadena | falso     | ninguna       | ninguna     |
 
 <a id="schemaremix_parent"></a>
 <a id="schema_remix_parent"></a>
@@ -4678,11 +4678,11 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name   | Type                                    | Required | Restrictions | Description |
-| ------ | --------------------------------------- | -------- | ------------ | ----------- |
-| tracks | [[track_element](#schematrack_element)] | false    | none         | none        |
+| Nombre | Tipo                                    | Requerido | Restricciones | Descripción |
+| ------ | --------------------------------------- | --------- | ------------- | ----------- |
+| pistas | [[track_element](#schematrack_element)] | falso     | ninguna       | ninguna     |
 
 <a id="schematrack_element"></a>
 <a id="schema_track_element"></a>
@@ -4697,11 +4697,11 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name              | Type   | Required | Restrictions | Description |
-| ----------------- | ------ | -------- | ------------ | ----------- |
-| parent_track_id | string | true     | none         | none        |
+| Nombre            | Tipo   | Requerido | Restricciones | Descripción |
+| ----------------- | ------ | --------- | ------------- | ----------- |
+| parent_track_id | cadena | verdad    | ninguna       | ninguna     |
 
 <a id="schemareposts"></a>
 <a id="schema_reposts"></a>
@@ -4722,17 +4722,17 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name | Type                          | Required | Restrictions | Description |
-| ---- | ----------------------------- | -------- | ------------ | ----------- |
-| data | [[activity](#schemaactivity)] | false    | none         | none        |
+| Nombre | Tipo                           | Requerido | Restricciones | Descripción |
+| ------ | ------------------------------ | --------- | ------------- | ----------- |
+| datos  | [[actividad](#schemaactivity)] | falso     | ninguna       | ninguna     |
 
 <a id="schemaactivity"></a>
 <a id="schema_activity"></a>
 <a id="tocSactivity"></a>
 <a id="tocsactivity"></a>
-<h2 id="tocS_activity">activity</h2>
+<h2 id="tocS_activity">actividad</h2>
 
 ```json
 {
@@ -4743,19 +4743,19 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name      | Type   | Required | Restrictions | Description |
-| --------- | ------ | -------- | ------------ | ----------- |
-| timestamp | string | false    | none         | none        |
-| item_type | object | false    | none         | none        |
-| item      | object | false    | none         | none        |
+| Nombre          | Tipo   | Requerido | Restricciones | Descripción |
+| --------------- | ------ | --------- | ------------- | ----------- |
+| marca de tiempo | cadena | falso     | ninguna       | ninguna     |
+| tipo_objeto     | objeto | falso     | ninguna       | ninguna     |
+| objeto          | objeto | falso     | ninguna       | ninguna     |
 
 <a id="schemafavorites_response"></a>
 <a id="schema_favorites_response"></a>
 <a id="tocSfavorites_response"></a>
 <a id="tocsfavorites_response"></a>
-<h2 id="tocS_favorites_response">favorites_response</h2>
+<h2 id="tocS_favorites_response">favoritos_respuesta</h2>
 
 ```json
 {
@@ -4770,17 +4770,17 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name | Type                          | Required | Restrictions | Description |
-| ---- | ----------------------------- | -------- | ------------ | ----------- |
-| data | [[favorite](#schemafavorite)] | false    | none         | none        |
+| Nombre | Tipo                          | Requerido | Restricciones | Descripción |
+| ------ | ----------------------------- | --------- | ------------- | ----------- |
+| datos  | [[favorite](#schemafavorite)] | falso     | ninguna       | ninguna     |
 
 <a id="schemafavorite"></a>
 <a id="schema_favorite"></a>
 <a id="tocSfavorite"></a>
 <a id="tocsfavorite"></a>
-<h2 id="tocS_favorite">favorite</h2>
+<h2 id="tocS_favorite">favorito</h2>
 
 ```json
 {
@@ -4791,19 +4791,19 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name               | Type   | Required | Restrictions | Description |
-| ------------------ | ------ | -------- | ------------ | ----------- |
-| favorite_item_id | string | true     | none         | none        |
-| favorite_type      | string | true     | none         | none        |
-| user_id            | string | true     | none         | none        |
+| Nombre                   | Tipo   | Requerido | Restricciones | Descripción |
+| ------------------------ | ------ | --------- | ------------- | ----------- |
+| id del elemento favorito | cadena | verdad    | ninguna       | ninguna     |
+| favorito_tipo            | cadena | verdad    | ninguna       | ninguna     |
+| usuario_id               | cadena | verdad    | ninguna       | ninguna     |
 
 <a id="schematags_response"></a>
 <a id="schema_tags_response"></a>
 <a id="tocStags_response"></a>
 <a id="tocstags_response"></a>
-<h2 id="tocS_tags_response">tags_response</h2>
+<h2 id="tocS_tags_response">etiquetas_respuesta</h2>
 
 ```json
 {
@@ -4814,17 +4814,17 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name | Type     | Required | Restrictions | Description |
-| ---- | -------- | -------- | ------------ | ----------- |
-| data | [string] | false    | none         | none        |
+| Nombre | Tipo     | Requerido | Restricciones | Descripción |
+| ------ | -------- | --------- | ------------- | ----------- |
+| data   | [string] | falso     | ninguna       | ninguna     |
 
 <a id="schemauser_search"></a>
 <a id="schema_user_search"></a>
 <a id="tocSuser_search"></a>
 <a id="tocsuser_search"></a>
-<h2 id="tocS_user_search">user_search</h2>
+<h2 id="tocS_user_search">usuario_búsqueda</h2>
 
 ```json
 {
@@ -4857,11 +4857,11 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name | Type                  | Required | Restrictions | Description |
-| ---- | --------------------- | -------- | ------------ | ----------- |
-| data | [[user](#schemauser)] | false    | none         | none        |
+| Nombre | Tipo                  | Requerido | Restricciones | Descripción |
+| ------ | --------------------- | --------- | ------------- | ----------- |
+| data   | [[user](#schemauser)] | falso     | ninguna       | ninguna     |
 
 <a id="schemaassociated_wallets_response"></a>
 <a id="schema_associated_wallets_response"></a>
@@ -4883,17 +4883,17 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name | Type                                            | Required | Restrictions | Description |
-| ---- | ----------------------------------------------- | -------- | ------------ | ----------- |
-| data | [associated_wallets](#schemaassociated_wallets) | false    | none         | none        |
+| Nombre | Tipo                                            | Requerido | Restricciones | Descripción |
+| ------ | ----------------------------------------------- | --------- | ------------- | ----------- |
+| data   | [associated_wallets](#schemaassociated_wallets) | falso     | ninguna       | ninguna     |
 
 <a id="schemaassociated_wallets"></a>
 <a id="schema_associated_wallets"></a>
 <a id="tocSassociated_wallets"></a>
 <a id="tocsassociated_wallets"></a>
-<h2 id="tocS_associated_wallets">associated_wallets</h2>
+<h2 id="tocS_associated_wallets">monedero_asociado</h2>
 
 ```json
 {
@@ -4907,18 +4907,18 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name        | Type     | Required | Restrictions | Description |
-| ----------- | -------- | -------- | ------------ | ----------- |
-| wallets     | [string] | true     | none         | none        |
-| sol_wallets | [string] | true     | none         | none        |
+| Nombre      | Tipo     | Requerido | Restricciones | Descripción |
+| ----------- | -------- | --------- | ------------- | ----------- |
+| wallets     | [string] | verdad    | ninguna       | ninguna     |
+| sol_wallets | [string] | verdad    | ninguna       | ninguna     |
 
 <a id="schemauser_associated_wallet_response"></a>
 <a id="schema_user_associated_wallet_response"></a>
 <a id="tocSuser_associated_wallet_response"></a>
 <a id="tocsuser_associated_wallet_response"></a>
-<h2 id="tocS_user_associated_wallet_response">user_associated_wallet_response</h2>
+<h2 id="tocS_user_associated_wallet_response">respuesta_monedero_asociado</h2>
 
 ```json
 {
@@ -4929,17 +4929,17 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name | Type                                        | Required | Restrictions | Description |
-| ---- | ------------------------------------------- | -------- | ------------ | ----------- |
-| data | [encoded_user_id](#schemaencoded_user_id) | false    | none         | none        |
+| Nombre | Tipo                                               | Requerido | Restricciones | Descripción |
+| ------ | -------------------------------------------------- | --------- | ------------- | ----------- |
+| data   | [id de usuario codificado](#schemaencoded_user_id) | falso     | ninguna       | ninguna     |
 
 <a id="schemaencoded_user_id"></a>
 <a id="schema_encoded_user_id"></a>
 <a id="tocSencoded_user_id"></a>
 <a id="tocsencoded_user_id"></a>
-<h2 id="tocS_encoded_user_id">encoded_user_id</h2>
+<h2 id="tocS_encoded_user_id">id de usuario codificado</h2>
 
 ```json
 {
@@ -4948,11 +4948,11 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name    | Type   | Required | Restrictions | Description |
-| ------- | ------ | -------- | ------------ | ----------- |
-| user_id | string | false    | none         | none        |
+| Nombre     | Tipo   | Requerido | Restricciones | Descripción |
+| ---------- | ------ | --------- | ------------- | ----------- |
+| usuario_id | cadena | falso     | ninguna       | ninguna     |
 
 <a id="schemaget_challenges"></a>
 <a id="schema_get_challenges"></a>
@@ -4980,11 +4980,11 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name | Type                                              | Required | Restrictions | Description |
-| ---- | ------------------------------------------------- | -------- | ------------ | ----------- |
-| data | [[challenge_response](#schemachallenge_response)] | false    | none         | none        |
+| Nombre | Tipo                                              | Requerido | Restricciones | Descripción |
+| ------ | ------------------------------------------------- | --------- | ------------- | ----------- |
+| data   | [[challenge_response](#schemachallenge_response)] | falso     | ninguna       | ninguna     |
 
 <a id="schemachallenge_response"></a>
 <a id="schema_challenge_response"></a>
@@ -5008,26 +5008,26 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name                 | Type    | Required | Restrictions | Description |
-| -------------------- | ------- | -------- | ------------ | ----------- |
-| challenge_id         | string  | true     | none         | none        |
-| user_id              | string  | true     | none         | none        |
-| specifier            | string  | false    | none         | none        |
-| is_complete          | boolean | true     | none         | none        |
-| is_active            | boolean | true     | none         | none        |
-| is_disbursed         | boolean | true     | none         | none        |
-| current_step_count | integer | false    | none         | none        |
-| max_steps            | integer | false    | none         | none        |
-| challenge_type       | string  | true     | none         | none        |
-| metadata             | object  | true     | none         | none        |
+| Nombre               | Tipo    | Requerido | Restricciones | Descripción |
+| -------------------- | ------- | --------- | ------------- | ----------- |
+| challenge_id         | cadena  | verdad    | ninguna       | ninguna     |
+| usuario_id           | cadena  | verdad    | ninguna       | ninguna     |
+| specifier            | cadena  | falso     | ninguna       | ninguna     |
+| is_complete          | boolean | verdad    | ninguna       | ninguna     |
+| is_active            | boolean | verdad    | ninguna       | ninguna     |
+| is_disbursed         | boolean | verdad    | ninguna       | ninguna     |
+| current_step_count | entero  | falso     | ninguna       | ninguna     |
+| max_steps            | entero  | falso     | ninguna       | ninguna     |
+| reto_tipo            | cadena  | verdad    | ninguna       | ninguna     |
+| metadata             | object  | verdad    | ninguna       | ninguna     |
 
 <a id="schemaplaylist_response"></a>
 <a id="schema_playlist_response"></a>
 <a id="tocSplaylist_response"></a>
 <a id="tocsplaylist_response"></a>
-<h2 id="tocS_playlist_response">playlist_response</h2>
+<h2 id="tocS_playlist_response">playlist_respuesta</h2>
 
 ```json
 {
@@ -5074,17 +5074,17 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name | Type                          | Required | Restrictions | Description |
-| ---- | ----------------------------- | -------- | ------------ | ----------- |
-| data | [[playlist](#schemaplaylist)] | false    | none         | none        |
+| Nombre | Tipo                          | Requerido | Restricciones | Descripción |
+| ------ | ----------------------------- | --------- | ------------- | ----------- |
+| data   | [[playlist](#schemaplaylist)] | falso     | ninguna       | ninguna     |
 
 <a id="schemaplaylist"></a>
 <a id="schema_playlist"></a>
 <a id="tocSplaylist"></a>
 <a id="tocsplaylist"></a>
-<h2 id="tocS_playlist">playlist</h2>
+<h2 id="tocS_playlist">lista de reproducción</h2>
 
 ```json
 {
@@ -5127,19 +5127,19 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name               | Type                                        | Required | Restrictions | Description |
-| ------------------ | ------------------------------------------- | -------- | ------------ | ----------- |
-| artwork            | [playlist_artwork](#schemaplaylist_artwork) | false    | none         | none        |
-| description        | string                                      | false    | none         | none        |
-| id                 | string                                      | true     | none         | none        |
-| is_album           | boolean                                     | true     | none         | none        |
-| playlist_name      | string                                      | true     | none         | none        |
-| repost_count       | integer                                     | true     | none         | none        |
-| favorite_count     | integer                                     | true     | none         | none        |
-| total_play_count | integer                                     | true     | none         | none        |
-| user               | [user](#schemauser)                         | true     | none         | none        |
+| Nombre             | Tipo                                        | Requerido | Restricciones | Descripción |
+| ------------------ | ------------------------------------------- | --------- | ------------- | ----------- |
+| artwork            | [playlist_artwork](#schemaplaylist_artwork) | falso     | ninguna       | ninguna     |
+| descripción        | cadena                                      | falso     | ninguna       | ninguna     |
+| id                 | cadena                                      | verdad    | ninguna       | ninguna     |
+| is_album           | boolean                                     | verdad    | ninguna       | ninguna     |
+| playlist_name      | cadena                                      | verdad    | ninguna       | ninguna     |
+| repost_count       | entero                                      | verdad    | ninguna       | ninguna     |
+| favorite_count     | entero                                      | verdad    | ninguna       | ninguna     |
+| total_play_count | entero                                      | verdad    | ninguna       | ninguna     |
+| user               | [user](#schemauser)                         | verdad    | ninguna       | ninguna     |
 
 <a id="schemaplaylist_artwork"></a>
 <a id="schema_playlist_artwork"></a>
@@ -5156,19 +5156,19 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name      | Type   | Required | Restrictions | Description |
-| --------- | ------ | -------- | ------------ | ----------- |
-| 150x150   | string | false    | none         | none        |
-| 480x480   | string | false    | none         | none        |
-| 1000x1000 | string | false    | none         | none        |
+| Nombre    | Tipo   | Requerido | Restricciones | Descripción |
+| --------- | ------ | --------- | ------------- | ----------- |
+| 150x150   | cadena | falso     | ninguna       | ninguna     |
+| 480x480   | cadena | falso     | ninguna       | ninguna     |
+| 1000x1000 | cadena | falso     | ninguna       | ninguna     |
 
 <a id="schemaplaylist_tracks_response"></a>
 <a id="schema_playlist_tracks_response"></a>
 <a id="tocSplaylist_tracks_response"></a>
 <a id="tocsplaylist_tracks_response"></a>
-<h2 id="tocS_playlist_tracks_response">playlist_tracks_response</h2>
+<h2 id="tocS_playlist_tracks_response">playlist_pistas_respuesta_</h2>
 
 ```json
 {
@@ -5228,17 +5228,17 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name | Type                    | Required | Restrictions | Description |
-| ---- | ----------------------- | -------- | ------------ | ----------- |
-| data | [[Track](#schematrack)] | false    | none         | none        |
+| Nombre | Tipo                    | Requerido | Restricciones | Descripción |
+| ------ | ----------------------- | --------- | ------------- | ----------- |
+| data   | [[Track](#schematrack)] | falso     | ninguna       | ninguna     |
 
 <a id="schemaplaylist_search_result"></a>
 <a id="schema_playlist_search_result"></a>
 <a id="tocSplaylist_search_result"></a>
 <a id="tocsplaylist_search_result"></a>
-<h2 id="tocS_playlist_search_result">playlist_search_result</h2>
+<h2 id="tocS_playlist_search_result">playlist_resultado_búsqueda</h2>
 
 ```json
 {
@@ -5285,17 +5285,17 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name | Type                          | Required | Restrictions | Description |
-| ---- | ----------------------------- | -------- | ------------ | ----------- |
-| data | [[playlist](#schemaplaylist)] | false    | none         | none        |
+| Nombre | Tipo                          | Requerido | Restricciones | Descripción |
+| ------ | ----------------------------- | --------- | ------------- | ----------- |
+| data   | [[playlist](#schemaplaylist)] | falso     | ninguna       | ninguna     |
 
 <a id="schematrending_playlists_response"></a>
 <a id="schema_trending_playlists_response"></a>
 <a id="tocStrending_playlists_response"></a>
 <a id="tocstrending_playlists_response"></a>
-<h2 id="tocS_trending_playlists_response">trending_playlists_response</h2>
+<h2 id="tocS_trending_playlists_response">respuesta de las listas de reproducción</h2>
 
 ```json
 {
@@ -5342,11 +5342,11 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name | Type                          | Required | Restrictions | Description |
-| ---- | ----------------------------- | -------- | ------------ | ----------- |
-| data | [[playlist](#schemaplaylist)] | false    | none         | none        |
+| Nombre | Tipo                          | Requerido | Restricciones | Descripción |
+| ------ | ----------------------------- | --------- | ------------- | ----------- |
+| data   | [[playlist](#schemaplaylist)] | falso     | ninguna       | ninguna     |
 
 <a id="schematrack_response"></a>
 <a id="schema_track_response"></a>
@@ -5410,17 +5410,17 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name | Type                  | Required | Restrictions | Description |
-| ---- | --------------------- | -------- | ------------ | ----------- |
-| data | [Track](#schematrack) | false    | none         | none        |
+| Nombre | Tipo                  | Requerido | Restricciones | Descripción |
+| ------ | --------------------- | --------- | ------------- | ----------- |
+| data   | [Track](#schematrack) | falso     | ninguna       | ninguna     |
 
 <a id="schematrack_search"></a>
 <a id="schema_track_search"></a>
 <a id="tocStrack_search"></a>
 <a id="tocstrack_search"></a>
-<h2 id="tocS_track_search">track_search</h2>
+<h2 id="tocS_track_search">búsqueda_seguimiento</h2>
 
 ```json
 {
@@ -5480,17 +5480,17 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name | Type                    | Required | Restrictions | Description |
-| ---- | ----------------------- | -------- | ------------ | ----------- |
-| data | [[Track](#schematrack)] | false    | none         | none        |
+| Nombre | Tipo                    | Requerido | Restricciones | Descripción |
+| ------ | ----------------------- | --------- | ------------- | ----------- |
+| data   | [[Track](#schematrack)] | falso     | ninguna       | ninguna     |
 
 <a id="schemaattestation_reponse"></a>
 <a id="schema_attestation_reponse"></a>
 <a id="tocSattestation_reponse"></a>
 <a id="tocsattestation_reponse"></a>
-<h2 id="tocS_attestation_reponse">attestation_reponse</h2>
+<h2 id="tocS_attestation_reponse">respuesta de verificación</h2>
 
 ```json
 {
@@ -5502,17 +5502,17 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name | Type                              | Required | Restrictions | Description |
-| ---- | --------------------------------- | -------- | ------------ | ----------- |
-| data | [attestation](#schemaattestation) | false    | none         | none        |
+| Nombre | Tipo                              | Requerido | Restricciones | Descripción |
+| ------ | --------------------------------- | --------- | ------------- | ----------- |
+| data   | [attestation](#schemaattestation) | falso     | ninguna       | ninguna     |
 
 <a id="schemaattestation"></a>
 <a id="schema_attestation"></a>
 <a id="tocSattestation"></a>
 <a id="tocsattestation"></a>
-<h2 id="tocS_attestation">attestation</h2>
+<h2 id="tocS_attestation">certificado</h2>
 
 ```json
 {
@@ -5522,18 +5522,18 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name         | Type   | Required | Restrictions | Description |
-| ------------ | ------ | -------- | ------------ | ----------- |
-| owner_wallet | string | true     | none         | none        |
-| attestation  | string | true     | none         | none        |
+| Nombre       | Tipo   | Requerido | Restricciones | Descripción |
+| ------------ | ------ | --------- | ------------- | ----------- |
+| owner_wallet | cadena | verdad    | ninguna       | ninguna     |
+| attestation  | cadena | verdad    | ninguna       | ninguna     |
 
 <a id="schemaundisbursed_challenges"></a>
 <a id="schema_undisbursed_challenges"></a>
 <a id="tocSundisbursed_challenges"></a>
 <a id="tocsundisbursed_challenges"></a>
-<h2 id="tocS_undisbursed_challenges">undisbursed_challenges</h2>
+<h2 id="tocS_undisbursed_challenges">desafíos_sin deshacer</h2>
 
 ```json
 {
@@ -5550,17 +5550,17 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name | Type                                                    | Required | Restrictions | Description |
-| ---- | ------------------------------------------------------- | -------- | ------------ | ----------- |
-| data | [[undisbursed_challenge](#schemaundisbursed_challenge)] | false    | none         | none        |
+| Nombre | Tipo                                                    | Requerido | Restricciones | Descripción |
+| ------ | ------------------------------------------------------- | --------- | ------------- | ----------- |
+| datos  | [[undisbursed_challenge](#schemaundisbursed_challenge)] | falso     | ninguna       | ninguna     |
 
 <a id="schemaundisbursed_challenge"></a>
 <a id="schema_undisbursed_challenge"></a>
 <a id="tocSundisbursed_challenge"></a>
 <a id="tocsundisbursed_challenge"></a>
-<h2 id="tocS_undisbursed_challenge">undisbursed_challenge</h2>
+<h2 id="tocS_undisbursed_challenge">desafíos_sin deshacer</h2>
 
 ```json
 {
@@ -5573,21 +5573,21 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name                  | Type    | Required | Restrictions | Description |
-| --------------------- | ------- | -------- | ------------ | ----------- |
-| challenge_id          | string  | true     | none         | none        |
-| user_id               | string  | true     | none         | none        |
-| specifier             | string  | true     | none         | none        |
-| amount                | string  | true     | none         | none        |
-| completed_blocknumber | integer | true     | none         | none        |
+| Nombre                       | Tipo   | Requerido | Restricciones | Descripción |
+| ---------------------------- | ------ | --------- | ------------- | ----------- |
+| challenge_id                 | cadena | verdad    | ninguna       | ninguna     |
+| usuario_id                   | cadena | verdad    | ninguna       | ninguna     |
+| especificador                | cadena | verdad    | ninguna       | ninguna     |
+| monto                        | cadena | verdad    | ninguna       | ninguna     |
+| número de bloqueo completado | entero | verdad    | ninguna       | ninguna     |
 
 <a id="schemaapp_name_trailing_response"></a>
 <a id="schema_app_name_trailing_response"></a>
 <a id="tocSapp_name_trailing_response"></a>
 <a id="tocsapp_name_trailing_response"></a>
-<h2 id="tocS_app_name_trailing_response">app_name_trailing_response</h2>
+<h2 id="tocS_app_name_trailing_response">app_nombre_respuesta_trailing</h2>
 
 ```json
 {
@@ -5601,17 +5601,17 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name | Type                                                            | Required | Restrictions | Description |
-| ---- | --------------------------------------------------------------- | -------- | ------------ | ----------- |
-| data | [[app_name_trailing_metric](#schemaapp_name_trailing_metric)] | false    | none         | none        |
+| Nombre | Tipo                                                                   | Requerido | Restricciones | Descripción |
+| ------ | ---------------------------------------------------------------------- | --------- | ------------- | ----------- |
+| datos  | [[app\_name\_trailing\_metric](#schemaapp_name_trailing_metric)] | falso     | ninguna       | ninguna     |
 
 <a id="schemaapp_name_trailing_metric"></a>
 <a id="schema_app_name_trailing_metric"></a>
 <a id="tocSapp_name_trailing_metric"></a>
 <a id="tocsapp_name_trailing_metric"></a>
-<h2 id="tocS_app_name_trailing_metric">app_name_trailing_metric</h2>
+<h2 id="tocS_app_name_trailing_metric">métrica del nombre de la aplicación</h2>
 
 ```json
 {
@@ -5621,10 +5621,10 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propiedades
 
-| Name  | Type    | Required | Restrictions | Description |
-| ----- | ------- | -------- | ------------ | ----------- |
-| count | integer | false    | none         | none        |
-| name  | string  | false    | none         | none        |
+| Nombre   | Tipo   | Requerido | Restricciones | Descripción |
+| -------- | ------ | --------- | ------------- | ----------- |
+| contador | entero | falso     | ninguna       | ninguna     |
+| nombre   | cadena | falso     | ninguna       | ninguna     |
 
