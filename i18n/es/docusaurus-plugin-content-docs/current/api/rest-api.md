@@ -255,7 +255,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/nl
 
 ### Obtener reposts de usuario <a id="get-user-39-s-reposts"></a>
 
-`COMPRAR /usuarios/{user_id}/reposts`
+`Obtener /usuarios/{user_id}/reposts`
 
 #### Parámetros de consulta <a id="get-user&apos;s-reposts-parameters"></a>
 
@@ -1016,32 +1016,32 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/tracks/D
 }
 ```
 
-### Stream Track <a id="stream-track"></a>
+### Pista de streaming <a id="stream-track"></a>
 
 `GET /tracks/{track_id}/stream`
 
-_Get the track's streamable mp3 file_
+_Obtener el archivo mp3 streamable de la pista_
 
-This endpoint accepts the Range header for streaming. https://developer.mozilla.org/en-US/docs/Web/HTTP/Range\_requests
+Este extremo acepta la cabecera de Rango para streaming. https://developer.mozilla.org/es-US/docs/Web/HTTP/Range\_requests
 
-#### Query Parameters <a id="stream-track-parameters"></a>
+#### Parámetros de consulta <a id="stream-track-parameters"></a>
 
-| Name        | Type   | Required | Description   |
-|:----------- |:------ |:-------- |:------------- |
-| track\_id | string | true     | A Track ID    |
-| app\_name | string | true     | Your app name |
+| Nombre      | Tipo   | Requerido | Descripción      |
+|:----------- |:------ |:--------- |:---------------- |
+| track\_id | cadena | verdad    | Un ID de pista   |
+| app\_name | cadena | verdad    | Nombre de tu app |
 
-#### Responses <a id="stream-track-responses"></a>
+#### Respuestas <a id="stream-track-responses"></a>
 
-| Status | Significado                                                                | Description           | Schema |
-|:------ |:-------------------------------------------------------------------------- |:--------------------- |:------ |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success               | None   |
-| 216    | Unknown                                                                    | Partial content       | None   |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request           | None   |
-| 416    | [Range Not Satisfiable](https://tools.ietf.org/html/rfc7233#section-4.4)   | Content range invalid | None   |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error          | None   |
+| Estado | Significado                                                                     | Descripción                  | Esquema |
+|:------ |:------------------------------------------------------------------------------- |:---------------------------- |:------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | Exitoso                      | Ninguna |
+| 216    | Desconocido                                                                     | Contenido parcial            | Ninguna |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta         | Ninguna |
+| 416    | [Rango no satisfactorio](https://tools.ietf.org/html/rfc7233#section-4.4)       | Rango de contenido no válido | Ninguna |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor           | Ninguna |
 
-> Code Sample
+> Muestra de código
 
 ```javascript
 
@@ -1058,13 +1058,13 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/tracks/D
 
 ```
 
-## Metrics <a id="api-metrics"></a>
+## Métricas <a id="api-metrics"></a>
 
 ### get\_trailing\_app\_name\_metrics <a id="get_trailing_app_name_metrics"></a>
 
 `GET /metrics/app_name/trailing/{time_range}`
 
-_Gets trailing app name metrics from matview_
+_Obtiene métricas del nombre de la aplicación final desde matview_
 
 #### Parámetros de consulta <a id="get_trailing_app_name_metrics-parameters"></a>
 
@@ -1143,13 +1143,13 @@ Este endpoint le permite buscar y acceder a los recursos API cuando sólo conoce
 {"HTTP/1.1 302 Localización encontrada":"/v1/tracks/V4W8r"}
 ```
 
-#### Responses <a id="resolve-responses"></a>
+#### Respuestas <a id="resolve-responses"></a>
 
-| Status | Significado                                                | Description       | Schema |
-|:------ |:---------------------------------------------------------- |:----------------- |:------ |
-| 302    | [Found](https://tools.ietf.org/html/rfc7231#section-6.4.3) | Internal redirect | None   |
+| Estado | Significado                                                     | Descripción         | Esquema |
+|:------ |:--------------------------------------------------------------- |:------------------- |:------- |
+| 302    | [Encontrado](https://tools.ietf.org/html/rfc7231#section-6.4.3) | Redirección interna | Ninguna |
 
-#### Response Schema <a id="resolve-responseschema"></a>
+#### Esquema de respuesta <a id="resolve-responseschema"></a>
 
 ```javascript
 
@@ -1172,11 +1172,11 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/resolve?
 ```
 
 
-## Schemas <a id="schemas"></a>
+## Esquemas <a id="schemas"></a>
 
-The following are examples of response formats you can expect to receive from the API.
+Los siguientes son ejemplos de formatos de respuesta que se pueden esperar recibir de la API.
 
-### user\_response <a id="tocS_user_response"></a>
+### usuario/_respuesta <a id="tocS_user_response"></a>
 
 ```json
 {
@@ -1207,13 +1207,13 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties"></a>
+#### Propiedades <a id="properties"></a>
 
-| Name | Type                                                                    | Required | Restrictions | Description |
-|:---- |:----------------------------------------------------------------------- |:-------- |:------------ |:----------- |
-| data | [user](https://audiusproject.github.io/api-docs/?javascript#schemauser) | false    | none         | none        |
+| Nombre | Tipo                                                                        | Requerido | Restricciones | Descripción |
+|:------ |:--------------------------------------------------------------------------- |:--------- |:------------- |:----------- |
+| datos  | [usuarios](https://audiusproject.github.io/api-docs/?javascript#schemauser) | falso     | ninguna       | ninguna     |
 
-### user <a id="tocS_user"></a>
+### usuarios <a id="tocS_user"></a>
 
 ```json
 {
@@ -1242,26 +1242,26 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-2"></a>
+#### Propiedades <a id="properties-2"></a>
 
-| Name               | Type                                                                                           | Required | Restrictions | Description |
-|:------------------ |:---------------------------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
-| album\_count     | integer                                                                                        | true     | none         | none        |
-| bio                | string                                                                                         | false    | none         | none        |
-| cover\_photo     | [cover\_photo](https://audiusproject.github.io/api-docs/?javascript#schemacover_photo)       | false    | none         | none        |
-| followee\_count  | integer                                                                                        | verdad   | ninguna      | ninguna     |
-| contador\_número | entero                                                                                         | verdad   | ninguna      | ninguna     |
-| manejo             | cadena                                                                                         | verdad   | ninguna      | ninguna     |
-| id                 | cadena                                                                                         | verdad   | ninguna      | ninguna     |
-| está\_verificado | boolean                                                                                        | verdad   | ninguna      | ninguna     |
-| ubicación          | cadena                                                                                         | falso    | ninguna      | ninguna     |
-| nombre             | cadena                                                                                         | verdad   | ninguna      | ninguna     |
-| playlist\_count  | entero                                                                                         | verdad   | ninguna      | ninguna     |
-| perfil\_imagen   | [perfil\_imagen](https://audiusproject.github.io/api-docs/?javascript#schemaprofile_picture) | falso    | ninguna      | ninguna     |
-| repost\_count    | entero                                                                                         | verdad   | ninguna      | ninguna     |
-| pistas\_cuenta   | entero                                                                                         | true     | none         | none        |
+| Nombre             | Tipo                                                                                           | Requerido | Restricciones | Descripción |
+|:------------------ |:---------------------------------------------------------------------------------------------- |:--------- |:------------- |:----------- |
+| álbum\_conteo    | entero                                                                                         | verdad    | ninguna       | ninguna     |
+| biografía          | cadena                                                                                         | falso     | ninguna       | ninguna     |
+| foto\_cubierta   | [foto\_cubierta](https://audiusproject.github.io/api-docs/?javascript#schemacover_photo)     | falso     | ninguna       | ninguna     |
+| followes\_count  | entero                                                                                         | verdad    | ninguna       | ninguna     |
+| contador\_número | entero                                                                                         | verdad    | ninguna       | ninguna     |
+| manejo             | cadena                                                                                         | verdad    | ninguna       | ninguna     |
+| id                 | cadena                                                                                         | verdad    | ninguna       | ninguna     |
+| está\_verificado | boolean                                                                                        | verdad    | ninguna       | ninguna     |
+| ubicación          | cadena                                                                                         | falso     | ninguna       | ninguna     |
+| nombre             | cadena                                                                                         | verdad    | ninguna       | ninguna     |
+| playlist\_count  | entero                                                                                         | verdad    | ninguna       | ninguna     |
+| perfil\_imagen   | [perfil\_imagen](https://audiusproject.github.io/api-docs/?javascript#schemaprofile_picture) | falso     | ninguna       | ninguna     |
+| repost\_count    | entero                                                                                         | verdad    | ninguna       | ninguna     |
+| pistas\_cuenta   | entero                                                                                         | verdad    | ninguna       | ninguna     |
 
-### cover\_photo <a id="tocS_cover_photo"></a>
+### foto\_cubierta <a id="tocS_cover_photo"></a>
 
 ```json
 {
@@ -1271,14 +1271,14 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-3"></a>
+#### Propiedades <a id="properties-3"></a>
 
-| Name  | Type   | Required | Restrictions | Description |
-|:----- |:------ |:-------- |:------------ |:----------- |
-| 640x  | string | false    | none         | none        |
-| 2000x | string | false    | none         | none        |
+| Nombre | Tipo   | Requerido | Restricciones | Descripción |
+|:------ |:------ |:--------- |:------------- |:----------- |
+| 640x   | cadena | falso     | ninguna       | ninguna     |
+| 2000x  | cadena | falso     | ninguna       | ninguna     |
 
-### profile\_picture <a id="tocS_profile_picture"></a>
+### perfil\_imagen <a id="tocS_profile_picture"></a>
 
 ```json
 {
@@ -1289,15 +1289,15 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-4"></a>
+#### Propiedades <a id="properties-4"></a>
 
-| Name      | Type   | Required | Restrictions | Description |
-|:--------- |:------ |:-------- |:------------ |:----------- |
-| 150x150   | string | false    | none         | none        |
-| 480x480   | string | false    | none         | none        |
-| 1000x1000 | string | false    | none         | none        |
+| Nombre    | Tipo   | Requerido | Restricciones | Descripción |
+|:--------- |:------ |:--------- |:------------- |:----------- |
+| 150 x 150 | cadena | falso     | ninguna       | ninguna     |
+| 480 x 480 | cadena | falso     | ninguna       | ninguna     |
+| 1000x1000 | cadena | falso     | ninguna       | ninguna     |
 
-### tracks\_response <a id="tocS_tracks_response"></a>
+### pistas\_respuesta <a id="tocS_tracks_response"></a>
 
 ```json
 {
@@ -1356,11 +1356,11 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-5"></a>
+#### Propiedades <a id="properties-5"></a>
 
-| Name  | Type                                                                            | Required | Restricciones | Descripción |
-|:----- |:------------------------------------------------------------------------------- |:-------- |:------------- |:----------- |
-| datos | \[[Pista](https://audiusproject.github.io/api-docs/?javascript#schematrack)\] | falso    | ninguna       | ninguna     |
+| Nombre | Tipo                                                                            | Requerido | Restricciones | Descripción |
+|:------ |:------------------------------------------------------------------------------- |:--------- |:------------- |:----------- |
+| datos  | \[[Pista](https://audiusproject.github.io/api-docs/?javascript#schematrack)\] | falso     | ninguna       | ninguna     |
 
 ### Pista <a id="tocS_Track"></a>
 
@@ -1419,23 +1419,23 @@ The following are examples of response formats you can expect to receive from th
 
 #### Propiedades <a id="properties-6"></a>
 
-| Nombre            | Tipo                                                                                          | Requerido | Restricciones | Descripción |
-|:----------------- |:--------------------------------------------------------------------------------------------- |:--------- |:------------- |:----------- |
-| obra de arte      | [seguir\_artwork](https://audiusproject.github.io/api-docs/?javascript#schematrack_artwork) | falso     | ninguna       | ninguna     |
-| descripción       | cadena                                                                                        | falso     | ninguna       | ninguna     |
-| género            | cadena                                                                                        | falso     | ninguna       | ninguna     |
-| id                | cadena                                                                                        | verdad    | ninguna       | ninguna     |
-| humor             | cadena                                                                                        | falso     | ninguna       | ninguna     |
-| lanzar\_fecha   | cadena                                                                                        | falso     | ninguna       | ninguna     |
-| remix\_de       | [remix\_padre](https://audiusproject.github.io/api-docs/?javascript#schemaremix_parent)     | falso     | ninguna       | ninguna     |
-| repost\_count   | integer                                                                                       | true      | none          | none        |
-| favorite\_count | integer                                                                                       | true      | none          | none        |
-| tags              | string                                                                                        | false     | none          | none        |
-| title             | string                                                                                        | true      | none          | none        |
-| user              | [user](https://audiusproject.github.io/api-docs/?javascript#schemauser)                       | true      | none          | none        |
-| duration          | integer                                                                                       | true      | none          | none        |
-| downloadable      | boolean                                                                                       | false     | none          | none        |
-| play\_count     | integer                                                                                       | true      | none          | none        |
+| Nombre                | Tipo                                                                                          | Requerido | Restricciones | Descripción |
+|:--------------------- |:--------------------------------------------------------------------------------------------- |:--------- |:------------- |:----------- |
+| obra de arte          | [seguir\_artwork](https://audiusproject.github.io/api-docs/?javascript#schematrack_artwork) | falso     | ninguna       | ninguna     |
+| descripción           | cadena                                                                                        | falso     | ninguna       | ninguna     |
+| género                | cadena                                                                                        | falso     | ninguna       | ninguna     |
+| id                    | cadena                                                                                        | verdad    | ninguna       | ninguna     |
+| humor                 | cadena                                                                                        | falso     | ninguna       | ninguna     |
+| lanzar\_fecha       | cadena                                                                                        | falso     | ninguna       | ninguna     |
+| remix\_de           | [remix\_parent](https://audiusproject.github.io/api-docs/?javascript#schemaremix_parent)    | falso     | ninguna       | ninguna     |
+| repost\_count       | entero                                                                                        | verdad    | ninguna       | ninguna     |
+| contador de favoritos | entero                                                                                        | verdad    | ninguna       | ninguna     |
+| etiquetas             | cadena                                                                                        | falso     | ninguna       | ninguna     |
+| título                | cadena                                                                                        | verdad    | ninguna       | ninguna     |
+| usuarios              | [usuarios](https://audiusproject.github.io/api-docs/?javascript#schemauser)                   | verdad    | ninguna       | ninguna     |
+| duración              | entero                                                                                        | verdad    | ninguna       | ninguna     |
+| descargable           | boolean                                                                                       | falso     | ninguna       | ninguna     |
+| play\_count         | entero                                                                                        | verdad    | ninguna       | ninguna     |
 
 ### track\_artwork <a id="tocS_track_artwork"></a>
 
@@ -1448,15 +1448,15 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-7"></a>
+#### Propiedades <a id="properties-7"></a>
 
-| Name      | Type   | Required | Restrictions | Description |
-|:--------- |:------ |:-------- |:------------ |:----------- |
-| 150x150   | string | falso    | ninguna      | ninguna     |
-| 480 x 480 | cadena | falso    | ninguna      | ninguna     |
-| 1000x1000 | cadena | falso    | ninguna      | ninguna     |
+| Nombre    | Tipo   | Requerido | Restricciones | Descripción |
+|:--------- |:------ |:--------- |:------------- |:----------- |
+| 150 x 150 | cadena | falso     | ninguna       | ninguna     |
+| 480 x 480 | cadena | falso     | ninguna       | ninguna     |
+| 1000x1000 | cadena | falso     | ninguna       | ninguna     |
 
-### remix\_padre <a id="tocS_remix_parent"></a>
+### remix\_parent <a id="tocS_remix_parent"></a>
 
 ```json
 {
@@ -1509,9 +1509,9 @@ The following are examples of response formats you can expect to receive from th
 
 | Nombre | Tipo                                                                               | Requerido | Restricciones | Descripción |
 |:------ |:---------------------------------------------------------------------------------- |:--------- |:------------- |:----------- |
-| datos  | \[[pista](https://audiusproject.github.io/api-docs/?javascript#schemaactivity)\] | falso     | none          | none        |
+| datos  | \[[pista](https://audiusproject.github.io/api-docs/?javascript#schemaactivity)\] | falso     | ninguna       | ninguna     |
 
-### activity <a id="tocS_activity"></a>
+### actividad <a id="tocS_activity"></a>
 
 ```json
 {
@@ -1522,15 +1522,15 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-11"></a>
+#### Propiedades <a id="properties-11"></a>
 
-| Name         | Type   | Required | Restrictions | Description |
-|:------------ |:------ |:-------- |:------------ |:----------- |
-| timestamp    | string | false    | none         | none        |
-| item\_type | object | false    | none         | none        |
-| item         | object | false    | none         | none        |
+| Nombre           | Tipo   | Requerido | Restricciones | Descripción |
+|:---------------- |:------ |:--------- |:------------- |:----------- |
+| marca de tiempo  | cadena | falso     | ninguna       | ninguna     |
+| elemento\_tipo | objeto | falso     | ninguna       | ninguna     |
+| objeto           | objeto | falso     | ninguna       | ninguna     |
 
-### favorites\_response <a id="tocS_favorites_response"></a>
+### favoritos\_respuesta <a id="tocS_favorites_response"></a>
 
 ```json
 {
@@ -1545,13 +1545,13 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-12"></a>
+#### Propiedades <a id="properties-12"></a>
 
-| Name | Type                                                                                  | Required | Restrictions | Description |
-|:---- |:------------------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
-| data | \[[favorite](https://audiusproject.github.io/api-docs/?javascript#schemafavorite)\] | false    | none         | none        |
+| Nombre | Tipo                                                                                  | Requerido | Restricciones | Descripción |
+|:------ |:------------------------------------------------------------------------------------- |:--------- |:------------- |:----------- |
+| datos  | \[[favorito](https://audiusproject.github.io/api-docs/?javascript#schemafavorite)\] | falso     | ninguna       | ninguna     |
 
-### favorite <a id="tocS_favorite"></a>
+### favorito <a id="tocS_favorite"></a>
 
 ```json
 {
@@ -1562,15 +1562,15 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-13"></a>
+#### Propiedades <a id="properties-13"></a>
 
-| Name                   | Type   | Required | Restrictions | Description |
-|:---------------------- |:------ |:-------- |:------------ |:----------- |
-| favorite\_item\_id | string | true     | none         | ninguna     |
-| favorite\_type       | string | true     | none         | none        |
-| user\_id             | string | true     | none         | none        |
+| Nombre                     | Tipo   | Requerido | Restricciones | Descripción |
+|:-------------------------- |:------ |:--------- |:------------- |:----------- |
+| favorito\_elemento\_id | cadena | verdad    | ninguna       | ninguna     |
+| favorito\_tipo           | cadena | verdad    | ninguna       | ninguna     |
+| usuario\_id              | cadena | verdad    | ninguna       | ninguna     |
 
-### tags\_response <a id="tocS_tags_response"></a>
+### etiquetas\_respuesta <a id="tocS_tags_response"></a>
 
 ```json
 {
@@ -1581,13 +1581,13 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-14"></a>
+#### Propiedades <a id="properties-14"></a>
 
-| Name | Type         | Required | Restrictions | Description |
-|:---- |:------------ |:-------- |:------------ |:----------- |
-| data | \[string\] | false    | none         | none        |
+| Nombre | Tipo         | Requerido | Restricciones | Descripción |
+|:------ |:------------ |:--------- |:------------- |:----------- |
+| datos  | \[cadena\] | falso     | ninguna       | ninguna     |
 
-### user\_search <a id="tocS_user_search"></a>
+### usuario\_búsqueda <a id="tocS_user_search"></a>
 
 ```json
 {
@@ -1617,16 +1617,18 @@ The following are examples of response formats you can expect to receive from th
     }
   ]
 }
+  ]
+} zz
 
 ```
 
-#### Properties <a id="properties-15"></a>
+#### Propiedades <a id="properties-15"></a>
 
-| Name | Type                                                                          | Required | Restrictions | Description |
-|:---- |:----------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
-| data | \[[user](https://audiusproject.github.io/api-docs/?javascript#schemauser)\] | false    | none         | none        |
+| Nombre | Tipo                                                                             | Requerido | Restricciones | Descripción |
+|:------ |:-------------------------------------------------------------------------------- |:--------- |:------------- |:----------- |
+| datos  | \[[usuario](https://audiusproject.github.io/api-docs/?javascript#schemauser)\] | falso     | ninguna       | ninguna     |
 
-### playlist\_response <a id="tocS_playlist_response"></a>
+### playlist\_respuesta <a id="tocS_playlist_response"></a>
 
 ```json
 {
@@ -1673,13 +1675,13 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-16"></a>
+#### Propiedades <a id="properties-16"></a>
 
-| Name | Type                                                                                  | Required | Restrictions | Description |
-|:---- |:------------------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
-| data | \[[playlist](https://audiusproject.github.io/api-docs/?javascript#schemaplaylist)\] | false    | none         | none        |
+| Nombre | Tipo                                                                                               | Requerido | Restricciones | Descripción |
+|:------ |:-------------------------------------------------------------------------------------------------- |:--------- |:------------- |:----------- |
+| datos  | \[[lista de reproducción](https://audiusproject.github.io/api-docs/?javascript#schemaplaylist)\] | falso     | ninguna       | ninguna     |
 
-### playlist <a id="tocS_playlist"></a>
+### lista de reproducción <a id="tocS_playlist"></a>
 
 ```json
 {
@@ -1722,19 +1724,19 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-17"></a>
+#### Propiedades <a id="properties-17"></a>
 
-| Name                   | Type                                                                                               | Required | Restrictions | Description |
-|:---------------------- |:-------------------------------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
-| artwork                | [playlist\_artwork](https://audiusproject.github.io/api-docs/?javascript#schemaplaylist_artwork) | false    | none         | none        |
-| description            | string                                                                                             | false    | none         | none        |
-| id                     | string                                                                                             | true     | none         | none        |
-| is\_album            | boolean                                                                                            | true     | none         | none        |
-| playlist\_name       | string                                                                                             | true     | none         | none        |
-| repost\_count        | integer                                                                                            | true     | none         | none        |
-| favorite\_count      | integer                                                                                            | true     | none         | none        |
-| total\_play\_count | integer                                                                                            | true     | none         | none        |
-| user                   | [user](https://audiusproject.github.io/api-docs/?javascript#schemauser)                            | true     | none         | none        |
+| Nombre                  | Tipo                                                                                               | Requerido | Restricciones | Descripción |
+|:----------------------- |:-------------------------------------------------------------------------------------------------- |:--------- |:------------- |:----------- |
+| obra de arte            | [playlist\_artwork](https://audiusproject.github.io/api-docs/?javascript#schemaplaylist_artwork) | falso     | ninguna       | ninguna     |
+| descripción             | cadena                                                                                             | falso     | ninguna       | ninguna     |
+| id                      | cadena                                                                                             | verdad    | ninguna       | ninguna     |
+| es\_álbum             | boolean                                                                                            | verdad    | ninguna       | ninguna     |
+| playlist\_name        | cadena                                                                                             | verdad    | ninguna       | ninguna     |
+| repost\_count         | entero                                                                                             | verdad    | ninguna       | ninguna     |
+| contador de favoritos   | entero                                                                                             | verdad    | ninguna       | ninguna     |
+| total\_play\_contar | entero                                                                                             | verdad    | ninguna       | ninguna     |
+| usuario                 | [usuario](https://audiusproject.github.io/api-docs/?javascript#schemauser)                         | verdad    | ninguna       | ninguna     |
 
 ### playlist\_artwork <a id="tocS_playlist_artwork"></a>
 
@@ -1747,15 +1749,15 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-18"></a>
+#### Propiedades <a id="properties-18"></a>
 
-| Name      | Type   | Required | Restrictions | Description |
-|:--------- |:------ |:-------- |:------------ |:----------- |
-| 150x150   | string | false    | none         | none        |
-| 480x480   | string | false    | none         | none        |
-| 1000x1000 | string | false    | none         | none        |
+| Nombre    | Tipo   | Requerido | Restricciones | Descripción |
+|:--------- |:------ |:--------- |:------------- |:----------- |
+| 150 x 150 | cadena | falso     | ninguna       | ninguna     |
+| 480 x 480 | cadena | falso     | ninguna       | ninguna     |
+| 1000x1000 | cadena | falso     | ninguna       | ninguna     |
 
-### playlist\_tracks\_response <a id="tocS_playlist_tracks_response"></a>
+### playlist\_pistas\_respuesta <a id="tocS_playlist_tracks_response"></a>
 
 ```json
 {
@@ -1814,11 +1816,11 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-19"></a>
+#### Propiedades <a id="properties-19"></a>
 
-| Name | Type                                                                            | Required | Restrictions | Description |
-|:---- |:------------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
-| data | \[[Track](https://audiusproject.github.io/api-docs/?javascript#schematrack)\] | false    | none         | none        |
+| Nombre | Tipo                                                                            | Requerido | Restricciones | Descripción |
+|:------ |:------------------------------------------------------------------------------- |:--------- |:------------- |:----------- |
+| datos  | \[[Pista](https://audiusproject.github.io/api-docs/?javascript#schematrack)\] | falso     | ninguna       | ninguna     |
 
 ### playlist\_search\_result <a id="tocS_playlist_search_result"></a>
 
@@ -1867,13 +1869,13 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-20"></a>
+#### Propiedades <a id="properties-20"></a>
 
-| Name | Type                                                                                  | Required | Restrictions | Description |
-|:---- |:------------------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
-| data | \[[playlist](https://audiusproject.github.io/api-docs/?javascript#schemaplaylist)\] | false    | none         | none        |
+| Nombre | Tipo                                                                                               | Requerido | Restricciones | Descripción |
+|:------ |:-------------------------------------------------------------------------------------------------- |:--------- |:------------- |:----------- |
+| datos  | \[[lista de reproducción](https://audiusproject.github.io/api-docs/?javascript#schemaplaylist)\] | falso     | ninguna       | ninguna     |
 
-### track\_response <a id="tocS_track_response"></a>
+### pistas\_respuesta <a id="tocS_track_response"></a>
 
 ```json
 {
@@ -1930,13 +1932,13 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-21"></a>
+#### Propiedades <a id="properties-21"></a>
 
-| Name | Type                                                                      | Required | Restrictions | Description |
-|:---- |:------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
-| data | [Track](https://audiusproject.github.io/api-docs/?javascript#schematrack) | false    | none         | none        |
+| Nombre | Tipo                                                                      | Requerido | Restricciones | Descripción |
+|:------ |:------------------------------------------------------------------------- |:--------- |:------------- |:----------- |
+| datos  | [Pista](https://audiusproject.github.io/api-docs/?javascript#schematrack) | falso     | ninguna       | ninguna     |
 
-### track\_search <a id="tocS_track_search"></a>
+### track\_buscar <a id="tocS_track_search"></a>
 
 ```json
 {
@@ -1995,11 +1997,11 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-22"></a>
+#### Propiedades <a id="properties-22"></a>
 
-| Name | Type                                                                            | Required | Restrictions | Description |
-|:---- |:------------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
-| data | \[[Track](https://audiusproject.github.io/api-docs/?javascript#schematrack)\] | false    | none         | none        |
+| Nombre | Estilo                                                                          | Requerido | Restricciones | Descripción |
+|:------ |:------------------------------------------------------------------------------- |:--------- |:------------- |:----------- |
+| datos  | \[[Pista](https://audiusproject.github.io/api-docs/?javascript#schematrack)\] | falso     | ninguna       | ninguna     |
 
 ### app\_name\_trailing\_response <a id="tocS_app_name_trailing_response"></a>
 
@@ -2015,11 +2017,11 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-23"></a>
+#### Propiedades <a id="properties-23"></a>
 
-| Name | Type                                                                                                                           | Required | Restrictions | Description |
-|:---- |:------------------------------------------------------------------------------------------------------------------------------ |:-------- |:------------ |:----------- |
-| data | \[[app\_name\_trailing\_metric](https://audiusproject.github.io/api-docs/?javascript#schemaapp_name_trailing_metric)\] | false    | none         | none        |
+| Nombre | Tipo                                                                                                                           | Requerido | Restricciones | Descripción |
+|:------ |:------------------------------------------------------------------------------------------------------------------------------ |:--------- |:------------- |:----------- |
+| datos  | \[[app\_name\_trailing\_metric](https://audiusproject.github.io/api-docs/?javascript#schemaapp_name_trailing_metric)\] | falso     | ninguna       | ninguna     |
 
 ### app\_name\_trailing\_metric <a id="tocS_app_name_trailing_metric"></a>
 
@@ -2031,9 +2033,9 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-24"></a>
+#### Propiedades <a id="properties-24"></a>
 
-| Name  | Type    | Required | Restrictions | Description |
-|:----- |:------- |:-------- |:------------ |:----------- |
-| count | integer | false    | none         | none        |
-| name  | string  | false    | none         | none        |
+| Nombre   | Tipo   | Requerido | Restricciones | Descripción |
+|:-------- |:------ |:--------- |:------------- |:----------- |
+| contador | entero | falso     | ninguna       | ninguna     |
+| nombre   | cadena | falso     | ninguna       | ninguna     |
