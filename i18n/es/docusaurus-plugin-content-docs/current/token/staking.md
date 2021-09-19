@@ -5,93 +5,93 @@ sidebar_position: 2
 
 # Staking
 
-### What is Staking?
+### ¿Qué es el Staking?
 
-Built as a decentralized protocol on Ethereum, all the content, information and data on Audius is stored and indexed by a growing network of third-party node operators, rather than by the Audius team.
+Construido como un protocolo descentralizado en Ethereum, todo el contenido, La información y los datos de Audius son almacenados e indexados por una red creciente de operadores de nodos de terceros, en lugar de por el equipo de Audius.
 
-To ensure this content can be trusted and maintained, node operators are required to provide collateral or ‘stake’ as a bond to service the protocol. This stake, denominated in $AUDIO, ensures that node operators have tokens at risk that can be slashed, or taken, in the event of malicious or poor behavior.
+Para asegurar que este contenido puede ser confiado y mantenido, los operadores de nodos están obligados a proporcionar garantía o “participación” como un vínculo para prestar servicio al protocolo. Este Stake, denominado en $AUDIO, asegura que los operadores de nodos tengan tokens en riesgo que pueden ser barridos, o tomados, en caso de comportamiento malintencionado o deficiente.
 
-By using $AUDIO tokens as collateral, anyone with the proper hardware requirements can join as a node operator in a completely permissionless fashion. The more $AUDIO staked to the protocol, the more secure the network becomes and the less vulnerable it is to outside attacks.
+Utilizando tokens de $AUDIO como garantía, cualquiera con los requisitos de hardware adecuados puede unirse como operador de nodos de una manera completamente inpermisiva. Cuantos más $AUDIO se pongan en stake en el protocolo, más segura será la red y menos vulnerable será a los ataques externos.
 
-As a reward for servicing the network, node operators stand to earn $AUDIO through the automatic on-chain issuance, or the ongoing creation of new tokens distributed to value-added actors.
+Como recompensa por el servicio de la red, los operadores de nodos ganarán $AUDIO a través de la emisión automática en cadena, o la creación en curso de nuevos tokens distribuidos a actores con valor agregado.
 
-Those who stake more $AUDIO stand to earn a larger portion of issuance in exchange for securing the network.
+Quienes obtengan más $AUDIO ganarán una porción mayor de emisión a cambio de asegurar la red.
 
-### How Audius Works
+### Cómo funciona Audius
 
-On Audius, content is routed to two different types of nodes:
+En Audius, el contenido se dirige a dos tipos diferentes de nodos:
 
-* _Content Nodes_ - To store and relay audio content \(tracks, mixes, etc.\) streamed on Audius
-* _Discovery Nodes_ - To index and hash data like user profiles, playlists and followers.
+* _Nodos de contenido_ - Para almacenar y transmitir contenido de audio \(canciones, mezclas, etc.\) streaming en Audius
+* _Nodos de descubrimiento_ - Para indexar y hash datos como perfiles de usuario, listas de reproducción y seguidores.
 
-As an artist, uploading to Audius feels no different than uploading to a platform like Soundcloud. But, what happens behind the scenes is what makes Audius so unique.
+Como artista, subir a Audius no tiene nada que ver con subirlo a una plataforma como Soundcloud. Pero lo que sucede detrás de las escenas es lo que hace que Audius sea tan único.
 
-When an artist uploads a track to Audius:
+Cuando un artista sube una canción en Audius:
 
-1. That content is uploaded to a Content Node.
-2. The data gets transcoded and returns a reference code used to identify the track
-3. The data linked by the reference code is replicated to two other Content Nodes on the network.
-4. An onchain transaction is published signifying that the track exists on Audius and that the metadata is attached to the profile that uploaded the track.
-5. The transaction is picked up and indexed by a Discovery Node
-6. The client returns that the track was successfully published when it shows up on the Discovery Node, marking the upload complete!
+1. Ese contenido se sube a un nodo de contenido.
+2. Los datos se transcodifican y devuelven un código de referencia utilizado para identificar la canción
+3. Los datos enlazados por el código de referencia se replican a otros dos nodos de contenido en la red.
+4. Se publica una transacción onchain que significa que la canción existe en Audius y que los metadatos se adjuntan al perfil que ha subido la pista.
+5. La transacción es recogida e indexada por un nodo de descubrimiento
+6. El cliente devuelve que la canción fue publicada con éxito cuando se muestra en el Nodo de Descubrimiento, marcando la carga completa!
 
-Super simple right! Well, this is where staking comes into play.
+¡Muy simple verdad! Pues bien, aquí es donde entra en juego el stake.
 
-On other platforms, a similar process is operated by the parent company, effectively making them the true owner of the content. Should that company cease to exist, so does all the content stored in its database. With Audius, the track is maintained by the network and controlled by third-party and decentralized node operators. **Audius is not dependent on one company to keep running**.
+En otras plataformas, un proceso similar es operado por la empresa matriz, convirtiéndolos efectivamente en el verdadero propietario del contenido. En caso de que la empresa deje de existir, también lo hace todo el contenido almacenado en su base de datos. Con Audius, la pista es mantenida por la red y controlada por operadores de terceros y nodos descentralizados. **Audius no depende de una empresa para seguir funcionando**.
 
-**By staking $AUDIO, you’re helping to protect and power the protocol.**
+**Al hacer staking de $AUDIO, estás ayudando a proteger y impulsar el protocolo.**
 
-This design allows Audius to operate on the back of a global network of third-party node operators, rather than solely by the Audius team.
+Este diseño permite a Audius operar en la parte posterior de una red global de operadores de nodos de terceros, en lugar de hacerlo exclusivamente por parte del equipo de Audius.
 
-The decision to use two node types allows Audius to scale in correlation to different metrics, meaning that if the number of listeners were to spike relative to the Audius catalog, Discovery Nodes could pick up the weight while the Content Nodes continue to run as normal. Similarly, the network could choose to adjust incentives depending on where bandwidth is needed to meet demand at any given time.
+La decisión de utilizar dos tipos de nodos permite a Audius escalar en correlación con diferentes métricas, lo que significa que si el número de oyentes aumentaran en relación con el catálogo de Audius, Los nodos de descubrimiento podrían cobrar el peso mientras que los nodos de contenido siguen funcionando de forma normal. De la misma manera, la red podría elegir ajustar los incentivos dependiendo de dónde se necesite el ancho de banda para satisfacer la demanda en cualquier momento dado.
 
-Talk about a platform adapting to the needs of its users!
+¡Habla sobre una plataforma que se adapte a las necesidades de sus usuarios!
 
-### **Staking on Audius**
+### **Staking en Audius**
 
-To stake on Audius, node operators can set up content and/or discovery nodes using [these resources](https://github.com/AudiusProject/audius-protocol/wiki/Staking-Resources).
+Para hacer stake en Audio, los operadores de nodos pueden configurar contenido y/o nodos de descubrimiento usando [estos recursos](https://github.com/AudiusProject/audius-protocol/wiki/Staking-Resources).
 
 https://twitter.com/Figment\_io/status/1324763638729740288?s=20
 
-A list of all active node operators can be found under the [Services tab](https://dashboard.audius.org/services) in the Audius protocol dashboard.
+Puede encontrar una lista de todos los operadores de nodos activos en la pestaña [Servicios](https://dashboard.audius.org/services) en el panel de control del protocolo de Audius.
 
-$AUDIO holders can delegate a minimum of 100 tokens to any of these node operators by connecting to either MetaMask or using a Gnosis Safe. More details on delegation will be released soon!
+Los poseedores de $AUDIO pueden delegar un mínimo de 100 tokens a cualquiera de estos operadores de nodos conectándose a MetaMask o usando una Gnosis Safe. Más detalles sobre la delegación serán publicados pronto!
 
-Node operators can choose to run either a Content Node, a Discovery Node or a combination of both. The amount of $AUDIO staked to a given Operator can be thought of as their economic bandwidth to run one or a combination of services on the network.
+Los operadores de nodos pueden elegir ejecutar un Nodo de Contenido, un Nodo de Descubrimiento o una combinación de ambos. La cantidad de $AUDIO en stake a un operador determinado puede ser considerada como su ancho de banda económico para ejecutar una o una combinación de servicios en la red.
 
-All node operators are required to post a **minimum self-bond of 200,000 $AUDIO tokens per node**. While both Content and Discovery Nodes utilize the same machine, Content Nodes require more storage and therefore cost slightly more to operate.
+Todos los operadores de nodos están obligados a publicar un **auto-enlace mínimo de 200.000 $AUDIO tokens por nodo**. Mientras tanto los nodos de contenido y descubrimiento utilizan la misma máquina, los nodos de contenido requieren más almacenamiento y, por lo tanto, cuestan un poco más para operar.
 
-To this effect, the staking parameters of each node is as follows:
+A tal efecto, los parámetros de stake de cada nodo son los siguientes:
 
-_Discovery Node_
+_Nodo de descubrimiento_
 
-* Minimum Bond (Stake): 200,000 AUDIO
-* Maximum Bond (Stake): 7,000,000 AUDIO
+* Vínculo mínimo (Stake): 200.000 AUDIO
+* Vínculo Máximo (Stake): 7,000.000 AUDIO
 
-_Content Node_
+_Nodo de contenido_
 
-* Minimum Bond (Stake): 200,000 AUDIO
-* Maximum Bond (Stake): 10,000,0000 AUDIO
+* Vínculo mínimo (Stake): 200.000 AUDIO
+* Vínculo Máximo (Stake): 10,000.0000 AUDIO
 
-The minimum stake ensures sufficient skin in the game, while the maximum prevents the protocol from becoming too centralized. Content nodes have slightly higher minimum requirements, which is why they are able to accept more stake than discovery nodes.
+El Stake mínimo asegura suficiente piel en el juego, mientras que el máximo impide que el protocolo se vuelva demasiado centralizado. Los nodos de contenido tienen requisitos mínimos ligeramente superiores, por lo que son capaces de aceptar más participación que los nodos de descubrimiento.
 
-Each Operator is given a unique profile, allowing users to identify their address, timeline of votes, and the different nodes they maintain. Other key parameters include:
+Cada operador recibe un perfil único, que permite a los usuarios identificar su dirección, cronología de votos, y los diferentes nodos que mantenen. Otros parámetros clave incluyen:
 
-* _Staked $AUDIO_ - The total amount of $AUDIO staked across all the operator’s nodes, measured as a combination of tokens staked or delegated to a given address.
-* _Deployer Cut_ - The percentage of staking rewards that delegates pay to node operators for staking $AUDIO on their node. This is configurable by the node operator.
-* _Services_ - The number of unique nodes run by a given operator.
-* _Delegators_ - The total number of unique addresses delegating tokens to the Operator.
+* _$AUDIO en Stake_ - La cantidad total de $AUDIO en stake en todos los nodos del operador, medido como una combinación de tokens en stake o delegadas a una determinada dirección.
+* _Corte del desplegador_ - El porcentaje de las recompensas de stake que los delegados pagan a los operadores de nodos por hacer staking $AUDIO en su nodo. Esto es configurable por el operador de nodos.
+* _Servicios_ - El número de nodos únicos ejecutados por un operador determinado.
+* _Delegadores_ - El número total de direcciones únicas delegando tokens al Operador.
 
-Node operators can also populate their information via [3Box](https://3box.io/), displaying a profile image, title and website link to allow delegates to more easily distinguish themselves from others on the network.
+Los operadores de nodos también pueden llenar su información a través de [3Box](https://3box.io/), mostrando una imagen de perfil, título y enlace al sitio web para permitir a los delegados distinguirse más fácilmente de los demás de la red.
 
-Audius features a 7 day cooldown period to undelegate or unstake in order to provide adequate time for nodes to be slashed in the event of malicious behavior. During the genesis staking period, nodes operated by the Audius foundation will have their Deployer Cut set to 100%, with all proceeds being routed to a community treasury to be governed by $AUDIO tokenholders. These nodes will be retired in the near future.
+Audius presenta un período de tiempo de reutilización de 7 días para remover la delegación o el stake con el fin de proporcionar un tiempo adecuado para que los nodos sean barridos en caso de comportamiento malicioso. Durante el período de stake, los nodos operados por la Fundación Audius tendrán su Corte de Desplegador fijado a 100%, con todos los ingresos siendo enrutados a una tesorería comunitaria para ser gobernados por $AUDIO tokenholders. Estos nodos se retirarán en un futuro cercano.
 
-### **$AUDIO Staking Rewards**
+### **Recompensas por Staking de $AUDIO**
 
-Audius features a 7% automatic annual issuance rate distributed on-chain and on a weekly basis. $AUDIO rewards are distributed directly on-chain to node operators, with the on-chain system deducting their Delegator Cut and routing the remaining rewards to those who delegated their tokens.
+Audius ofrece una tasa de emisión automática del 7% anual distribuida en cadena y semanalmente. Las Recompensas de $AUDIO se distribuyen directamente en cadena a los operadores de nodos, con el sistema en cadena deduciendo su corte de delegado y dirigiendo las recompensas restantes a los que delegaron sus fichas.
 
-Service providers are expected to run one transaction per week to distribute issuance for the network, where tokens can be claimed in real time by individual node operators.
+Se espera que los proveedores de servicios ejecuten una transacción por semana para distribuir emisión para la red, donde las fichas pueden ser reclamadas en tiempo real por los operadores individuales de nodos.
 
-In the near future, $AUDIO issuance will begin to be computed from the call of the reward function. Moving forward, anyone in the network can call the reward function, with tokens being distributed on a weekly cadence and claimable at any time.
+En un futuro cercano, la emisión de $AUDIO comenzará a ser calculada a partir de la llamada de la función de recompensa. En el futuro, cualquiera que esté en la red puede llamar a la función de recompensa, con los tokens distribuidos en una cadencia semanal y cobrable en cualquier momento.
 
-The rate, duration and parameters of $AUDIO staking are controlled entirely by governance.
+La tasa, la duración y los parámetros del stake de $AUDIO están controlados completamente por la gobernanza.
