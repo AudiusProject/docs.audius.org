@@ -849,9 +849,9 @@ _Obtiene las 100 pistas más populares \(más popular\) en Audius_
 
 #### Respuestas <a id="trending-tracks-responses"></a>
 
-| Estado | Significado                                                                     | Description          | Schema                                                                                            |
+| Estado | Significado                                                                     | Descripción          | Esquema                                                                                           |
 |:------ |:------------------------------------------------------------------------------- |:-------------------- |:------------------------------------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | ninguna              | [pistas\_respuesta](https://audiusproject.github.io/api-docs/?javascript#schematracks_response) |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | ninguna              | [pistas\_respuesta](https://audiusproject.github.io/api-docs/?javascript#schematracks_response) |
 | 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                                                                           |
 | 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                                                                           |
 
