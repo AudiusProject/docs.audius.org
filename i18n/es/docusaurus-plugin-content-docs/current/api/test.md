@@ -1,12 +1,12 @@
 
 
-<h1 id="api-users">users</h1>
+<h1 id="api-users">usuarios</h1>
 
-## Get the User's id by associated wallet
+## Obtener el id del usuario por billetera asociada
 
 <a id="opIdGet the User's id by associated wallet"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/associated_wallets?id=string 
@@ -145,15 +145,15 @@ func main() {
 
 `GET /users/associated_wallets`
 
-<h3 id="get-the-user's-id-by-associated-wallet-parameters">Query Parameters</h3>
+<h3 id="get-the-user's-id-by-associated-wallet-parameters">Parámetros de consulta</h3>
 
-| Name | Type   | Required | Description     |
-| ---- | ------ | -------- | --------------- |
-| id   | string | true     | Encoded User ID |
+| Nombre | Tipo   | Requerido | Descripción              |
+| ------ | ------ | --------- | ------------------------ |
+| id     | cadena | verdad    | ID de usuario codificado |
 
-> Example Response
+> Ejemplo de respuesta
 
-> 200 Response
+> 200 Respuesta
 
 ```json
 {
@@ -168,19 +168,19 @@ func main() {
 }
 ```
 
-<h3 id="get-the-user's-id-by-associated-wallet-responses">Responses</h3>
+<h3 id="get-the-user's-id-by-associated-wallet-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description  | Schema                                                              |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [associated_wallets_response](#schemaassociated_wallets_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                |
+| Estado | Significado                                                                     | Descripción          | Esquema                                                             |
+| ------ | ------------------------------------------------------------------------------- | -------------------- | ------------------------------------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | Exitoso              | [associated_wallets_response](#schemaassociated_wallets_response) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                                             |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                                             |
 
-## Get the User's associated wallets
+## Obtener las billeteras asociadas del usuario
 
 <a id="opIdGet the User's associated wallets"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/id?associated_wallet=string 
@@ -319,15 +319,15 @@ func main() {
 
 `GET /users/id`
 
-<h3 id="get-the-user's-associated-wallets-parameters">Query Parameters</h3>
+<h3 id="get-the-user's-associated-wallets-parameters">Parámetros de consulta</h3>
 
-| Name              | Type   | Required | Description    |
-| ----------------- | ------ | -------- | -------------- |
-| associated_wallet | string | true     | Wallet address |
+| Nombre            | Tipo   | Requerido | Descripción            |
+| ----------------- | ------ | --------- | ---------------------- |
+| monedero_asociado | cadena | verdad    | Dirección del monedero |
 
-> Example Response
+> Ejemplo de respuesta
 
-> 200 Response
+> 200 Respuesta
 
 ```json
 {
@@ -337,19 +337,19 @@ func main() {
 }
 ```
 
-<h3 id="get-the-user's-associated-wallets-responses">Responses</h3>
+<h3 id="get-the-user's-associated-wallets-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description  | Schema                                                                      |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [user_associated_wallet_response](#schemauser_associated_wallet_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                        |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                        |
+| Estado | Significado                                                                     | Descripción          | Esquema                                                                 |
+| ------ | ------------------------------------------------------------------------------- | -------------------- | ----------------------------------------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | Exitoso              | [respuesta_monedero_asociado](#schemauser_associated_wallet_response) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                                                 |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                                                 |
 
-## Search Users
+## Buscar usuarios
 
 <a id="opIdSearch Users"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/search?query=Brownies 
@@ -486,18 +486,18 @@ func main() {
 
 ```
 
-`GET /users/search`
+`Obtener /usuarios/buscar`
 
-*Seach for a user*
+*Buscar un usuario*
 
-<h3 id="search-users-parameters">Query Parameters</h3>
+<h3 id="search-users-parameters">Parámetros de consulta</h3>
 
-| Name              | Type   | Required | Description  |
-| ----------------- | ------ | -------- | ------------ |
-| query             | string | true     | Search query |
-| only_downloadable | string | false    | none         |
+| Nombre           | Tipo   | Requerido | Descripción     |
+| ---------------- | ------ | --------- | --------------- |
+| consulta         | cadena | verdad    | Buscar consulta |
+| sólo_descargable | cadena | falso     | ninguna         |
 
-> Example Response
+> Ejemplo de respuesta
 
 ```json
 {
@@ -529,19 +529,19 @@ func main() {
 }
 ```
 
-<h3 id="search-users-responses">Responses</h3>
+<h3 id="search-users-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description  | Schema                            |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [user_search](#schemauser_search) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                              |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                              |
+| Estado | Significado                                                                     | Descripción          | Esquema                                |
+| ------ | ------------------------------------------------------------------------------- | -------------------- | -------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | ninguna              | [usuario_búsqueda](#schemauser_search) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                |
 
-## Get User
+## Obtener usuario
 
 <a id="opIdGet User"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/nlGNe 
@@ -677,15 +677,15 @@ func main() {
 
 `GET /users/{user_id}`
 
-*Fetch a single user*
+*Obtener un único usuario*
 
-<h3 id="get-user-parameters">Query Parameters</h3>
+<h3 id="get-user-parameters">Parámetros de consulta</h3>
 
-| Name    | Type   | Required | Description |
-| ------- | ------ | -------- | ----------- |
-| user_id | string | true     | A User ID   |
+| Nombre     | Tipo   | Requerido | Descripción      |
+| ---------- | ------ | --------- | ---------------- |
+| usuario_id | cadena | verdad    | Un ID de usuario |
 
-> Example Response
+> Ejemplo de respuesta
 
 ```json
 {
@@ -715,19 +715,19 @@ func main() {
 }
 ```
 
-<h3 id="get-user-responses">Responses</h3>
+<h3 id="get-user-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description  | Schema                                |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [user_response](#schemauser_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                  |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                  |
+| Estado | Significado                                                                     | Descripción          | Esquema                                   |
+| ------ | ------------------------------------------------------------------------------- | -------------------- | ----------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | ninguna              | [usuario_respuesta](#schemauser_response) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                   |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                   |
 
-## The users's ID
+## ID de los usuarios
 
 <a id="opIdThe users's ID"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/string/challenges 
@@ -863,16 +863,16 @@ func main() {
 
 `GET /users/{user_id}/challenges`
 
-<h3 id="the-users's-id-parameters">Query Parameters</h3>
+<h3 id="the-users's-id-parameters">Parámetros de consulta</h3>
 
-| Name            | Type   | Required | Description                                                |
-| --------------- | ------ | -------- | ---------------------------------------------------------- |
-| show_historical | string | false    | Whether to show challenges that are inactive but completed |
-| user_id         | string | true     | none                                                       |
+| Nombre            | Tipo   | Requerido | Descripción                                            |
+| ----------------- | ------ | --------- | ------------------------------------------------------ |
+| mostrar_histórico | cadena | falso     | Si se muestran los desafíos inactivos pero completados |
+| usuario_id        | cadena | verdad    | ninguna                                                |
 
-> Example Response
+> Ejemplo de respuesta
 
-> 200 Response
+> 200 Respuesta
 
 ```json
 {
@@ -893,19 +893,19 @@ func main() {
 }
 ```
 
-<h3 id="the-users's-id-responses">Responses</h3>
+<h3 id="the-users's-id-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description  | Schema                                  |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [get_challenges](#schemaget_challenges) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                    |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                    |
+| Estado | Significado                                                                     | Descripción          | Esquema                                 |
+| ------ | ------------------------------------------------------------------------------- | -------------------- | --------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | Exitoso              | [get_challenges](#schemaget_challenges) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                 |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                 |
 
-## Get User's Favorite Tracks
+## Obtener pistas favoritas del usuario
 
 <a id="opIdGet User's Favorite Tracks"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/nlGNe/favorites 
@@ -1039,17 +1039,17 @@ func main() {
 
 ```
 
-`GET /users/{user_id}/favorites`
+`GET /users/{user_id}/favoritos`
 
-*Fetch favorited tracks for a user*
+*Obtener las pistas favoritas para un usuario*
 
-<h3 id="get-user's-favorite-tracks-parameters">Query Parameters</h3>
+<h3 id="get-user's-favorite-tracks-parameters">Parámetros de consulta</h3>
 
-| Name    | Type   | Required | Description |
-| ------- | ------ | -------- | ----------- |
-| user_id | string | true     | A User ID   |
+| Nombre     | Tipo   | Requerido | Descripción      |
+| ---------- | ------ | --------- | ---------------- |
+| usuario_id | cadena | verdad    | Un ID de usuario |
 
-> Example Response
+> Ejemplo de respuesta
 
 ```json
 {
@@ -1073,19 +1073,19 @@ func main() {
 }
 ```
 
-<h3 id="get-user's-favorite-tracks-responses">Responses</h3>
+<h3 id="get-user's-favorite-tracks-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description  | Schema                                          |
-| ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [favorites_response](#schemafavorites_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                            |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                            |
+| Estado | Significado                                                                     | Descripción          | Esquema                                          |
+| ------ | ------------------------------------------------------------------------------- | -------------------- | ------------------------------------------------ |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | ninguna              | [favoritos_respuesta](#schemafavorites_response) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                          |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                          |
 
-## Get User's Reposts
+## Obtener reposts de usuario
 
 <a id="opIdGet User's Reposts"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/string/reposts 
@@ -1219,19 +1219,19 @@ func main() {
 
 ```
 
-`GET /users/{user_id}/reposts`
+`Obtener /usuarios/{user_id}/reposts`
 
-<h3 id="get-user's-reposts-parameters">Query Parameters</h3>
+<h3 id="get-user's-reposts-parameters">Parámetros de consulta</h3>
 
-| Name    | Type   | Required | Description |
-| ------- | ------ | -------- | ----------- |
-| user_id | string | true     | A User ID   |
-| limit   | string | false    | Limit       |
-| offset  | string | false    | Offset      |
+| Nombre     | Tipo   | Requerido | Descripción      |
+| ---------- | ------ | --------- | ---------------- |
+| usuario_id | cadena | verdad    | Un ID de usuario |
+| límite     | cadena | falso     | Límite           |
+| offset     | cadena | falso     | Offset           |
 
-> Example Response
+> Ejemplo de respuesta
 
-> 200 Response
+> 200 Respuesta
 
 ```json
 {
@@ -1245,19 +1245,19 @@ func main() {
 }
 ```
 
-<h3 id="get-user's-reposts-responses">Responses</h3>
+<h3 id="get-user's-reposts-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description  | Schema                    |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [reposts](#schemareposts) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                      |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                      |
+| Estado | Significado                                                                     | Descripción          | Esquema                   |
+| ------ | ------------------------------------------------------------------------------- | -------------------- | ------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | Exitoso              | [reposts](#schemareposts) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                   |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                   |
 
-## Get User's Most Used Track Tags
+## Obtén las etiquetas de pista más utilizadas del usuario
 
 <a id="opIdGet User's Most Used Track Tags"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/string/tags?user_id=string 
@@ -1396,19 +1396,19 @@ func main() {
 
 `GET /users/{user_id}/tags`
 
-*Fetch most used tags in a user's tracks*
+*Obtener etiquetas más usadas en las pistas del usuario*
 
-<h3 id="get-user's-most-used-track-tags-parameters">Query Parameters</h3>
+<h3 id="get-user's-most-used-track-tags-parameters">Parámetros de consulta</h3>
 
-| Name    | Type    | Required | Description                 |
-| ------- | ------- | -------- | --------------------------- |
-| user_id | string  | true     | A User ID                   |
-| limit   | integer | false    | Limit on the number of tags |
-| user_id | string  | true     | none                        |
+| Nombre     | Tipo   | Requerido | Descripción                    |
+| ---------- | ------ | --------- | ------------------------------ |
+| usuario_id | cadena | verdad    | Un ID de usuario               |
+| límite     | entero | falso     | Limitar el número de etiquetas |
+| usuario_id | cadena | verdad    | ninguna                        |
 
-> Example Response
+> Ejemplo de respuesta
 
-> 200 Response
+> 200 Respuesta
 
 ```json
 {
@@ -1418,19 +1418,19 @@ func main() {
 }
 ```
 
-<h3 id="get-user's-most-used-track-tags-responses">Responses</h3>
+<h3 id="get-user's-most-used-track-tags-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description  | Schema                                |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [tags_response](#schematags_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                  |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                  |
+| Estado | Significado                                                                     | Descripción          | Esquema                                     |
+| ------ | ------------------------------------------------------------------------------- | -------------------- | ------------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | Exitoso              | [etiquetas_respuesta](#schematags_response) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                     |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                     |
 
-## Get User's Tracks
+## Obtener pistas de usuario
 
 <a id="opIdGet User's Tracks"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/nlGNe/tracks 
@@ -1566,18 +1566,18 @@ func main() {
 
 `GET /users/{user_id}/tracks`
 
-*Fetch a list of tracks for a user*
+*Obtener una lista de pistas para un usuario*
 
-<h3 id="get-user's-tracks-parameters">Query Parameters</h3>
+<h3 id="get-user's-tracks-parameters">Parámetros de consulta</h3>
 
-| Name    | Type   | Required | Description |
-| ------- | ------ | -------- | ----------- |
-| user_id | string | true     | A User ID   |
-| limit   | string | false    | Limit       |
-| offset  | string | false    | Offset      |
-| sort    | string | false    | Sort mode   |
+| Nombre     | Tipo   | Requerido | Descripción      |
+| ---------- | ------ | --------- | ---------------- |
+| usuario_id | cadena | verdad    | Un ID de usuario |
+| límite     | cadena | falso     | Límite           |
+| offset     | cadena | falso     | Offset           |
+| ordenar    | cadena | falso     | Ordenar modo     |
 
-> Example Response
+> Ejemplo de respuesta
 
 ```json
 {
@@ -1626,21 +1626,21 @@ func main() {
 }
 ```
 
-<h3 id="get-user's-tracks-responses">Responses</h3>
+<h3 id="get-user's-tracks-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description  | Schema                                    |
-| ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [tracks_response](#schematracks_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                      |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                      |
+| Estado | Significado                                                                     | Descripción          | Esquema                                   |
+| ------ | ------------------------------------------------------------------------------- | -------------------- | ----------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | ninguna              | [tracks_response](#schematracks_response) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                   |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                   |
 
-<h1 id="api-playlists">playlists</h1>
+<h1 id="api-playlists">lista de reproducción</h1>
 
-## Search Playlists
+## Buscar listas de reproducción
 
 <a id="opIdSearch Playlists"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/playlists/search?query=Hot & New 
@@ -1777,18 +1777,18 @@ func main() {
 
 ```
 
-`GET /playlists/search`
+`Obtener /Listas de reproducción/buscar`
 
-*Search for a playlist*
+*Buscar una lista de reproducción*
 
-<h3 id="search-playlists-parameters">Query Parameters</h3>
+<h3 id="search-playlists-parameters">Parámetros de consulta</h3>
 
-| Name              | Type   | Required | Description  |
-| ----------------- | ------ | -------- | ------------ |
-| query             | string | true     | Search Query |
-| only_downloadable | string | false    | none         |
+| Nombre           | Tipo   | Requerido | Descripción |
+| ---------------- | ------ | --------- | ----------- |
+| consulta         | cadena | verdad    | Búsqueda    |
+| sólo_descargable | cadena | falso     | ninguna     |
 
-> Example Response
+> Ejemplo de respuesta
 
 ```json
 {
@@ -1833,19 +1833,19 @@ func main() {
 }
 ```
 
-<h3 id="search-playlists-responses">Responses</h3>
+<h3 id="search-playlists-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description  | Schema                                                    |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist_search_result](#schemaplaylist_search_result) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                      |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                      |
+| Estado | Significado                                                                     | Descripción          | Esquema                                                        |
+| ------ | ------------------------------------------------------------------------------- | -------------------- | -------------------------------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | ninguna              | [playlist_resultado_búsqueda](#schemaplaylist_search_result) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                                        |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                                        |
 
-## Trending Playlists
+## Listas de reproducción populares
 
 <a id="opIdTrending Playlists"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/playlists/trending/string 
@@ -1981,18 +1981,18 @@ func main() {
 
 `GET /playlists/trending/{version}`
 
-*Gets top trending playlists for time period on Audius*
+*Obtiene las listas de reproducción que más tienden a aparecer en el período de tiempo en Audius*
 
-<h3 id="trending-playlists-parameters">Query Parameters</h3>
+<h3 id="trending-playlists-parameters">Parámetros de consulta</h3>
 
-| Name    | Type   | Required | Description         |
-| ------- | ------ | -------- | ------------------- |
-| time    | string | false    | time range to query |
-| version | string | true     | none                |
+| Nombre    | Tipo   | Requerido | Descripción                     |
+| --------- | ------ | --------- | ------------------------------- |
+| tiempo    | cadena | falso     | intervalo de tiempo a consultar |
+| versiones | cadena | verdad    | ninguna                         |
 
-> Example Response
+> Ejemplo de respuesta
 
-> 200 Response
+> 200 Respuesta
 
 ```json
 {
@@ -2038,19 +2038,19 @@ func main() {
 }
 ```
 
-<h3 id="trending-playlists-responses">Responses</h3>
+<h3 id="trending-playlists-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description  | Schema                                                              |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [trending_playlists_response](#schematrending_playlists_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                |
+| Estado | Significado                                                                     | Descripción          | Esquema                                                                       |
+| ------ | ------------------------------------------------------------------------------- | -------------------- | ----------------------------------------------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | Exitoso              | [respuesta de las listas de reproducción](#schematrending_playlists_response) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                                                       |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                                                       |
 
-## Get Playlist
+## Obtener playlist
 
 <a id="opIdGet Playlist"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/playlists/DOPRl 
@@ -2184,17 +2184,17 @@ func main() {
 
 ```
 
-`GET /playlists/{playlist_id}`
+`OBTENER /playlists/{playlist_id}`
 
-*Fetch a playlist*
+*Buscar una lista*
 
-<h3 id="get-playlist-parameters">Query Parameters</h3>
+<h3 id="get-playlist-parameters">Parámetros de consulta</h3>
 
-| Name        | Type   | Required | Description   |
-| ----------- | ------ | -------- | ------------- |
-| playlist_id | string | true     | A Playlist ID |
+| Nombre      | Tipo   | Requerido | Descripción                    |
+| ----------- | ------ | --------- | ------------------------------ |
+| playlist_id | cadena | verdad    | Un ID de lista de reproducción |
 
-> Example Response
+> Ejemplo de respuesta
 
 ```json
 {
@@ -2237,19 +2237,19 @@ func main() {
 }
 ```
 
-<h3 id="get-playlist-responses">Responses</h3>
+<h3 id="get-playlist-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description  | Schema                                        |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist_response](#schemaplaylist_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                          |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                          |
+| Estado | Significado                                                                     | Descripción          | Esquema                                        |
+| ------ | ------------------------------------------------------------------------------- | -------------------- | ---------------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | ninguna              | [playlist_respuesta](#schemaplaylist_response) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                        |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                        |
 
-## Get Playlist Tracks
+## Obtener pistas de lista de reproducción
 
 <a id="opIdGet Playlist Tracks"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/playlists/DOPRl/tracks 
@@ -2383,17 +2383,17 @@ func main() {
 
 ```
 
-`GET /playlists/{playlist_id}/tracks`
+`OBTENER /listas de reproducción/{playlist_id}/pistas`
 
-*Fetch tracks within a playlist*
+*Obtener pistas dentro de una lista de reproducción*
 
-<h3 id="get-playlist-tracks-parameters">Query Parameters</h3>
+<h3 id="get-playlist-tracks-parameters">Parámetros de consulta</h3>
 
-| Name        | Type   | Required | Description   |
-| ----------- | ------ | -------- | ------------- |
-| playlist_id | string | true     | A Playlist ID |
+| Nombre      | Tipo   | Requerido | Descripción                    |
+| ----------- | ------ | --------- | ------------------------------ |
+| playlist_id | cadena | verdad    | Un ID de lista de reproducción |
 
-> Example Response
+> Ejemplo de respuesta
 
 ```json
 {
@@ -2442,21 +2442,21 @@ func main() {
 }
 ```
 
-<h3 id="get-playlist-tracks-responses">Responses</h3>
+<h3 id="get-playlist-tracks-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description  | Schema                                                        |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist_tracks_response](#schemaplaylist_tracks_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                          |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                          |
+| Estado | Significado                                                                     | Descripción          | Esquema                                                         |
+| ------ | ------------------------------------------------------------------------------- | -------------------- | --------------------------------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | ninguna              | [playlist_pistas_respuesta_](#schemaplaylist_tracks_response) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                                         |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                                         |
 
-<h1 id="api-tracks">tracks</h1>
+<h1 id="api-tracks">pistas</h1>
 
-## Get Track By Handle and Slug
+## Obtener pistas de forma manual y Slug
 
 <a id="opIdGet Track By Handle and Slug"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/tracks 
@@ -2590,18 +2590,18 @@ func main() {
 
 ```
 
-`GET /tracks`
+`Obtener /tracks`
 
-<h3 id="get-track-by-handle-and-slug-parameters">Query Parameters</h3>
+<h3 id="get-track-by-handle-and-slug-parameters">Parámetros de consulta</h3>
 
-| Name   | Type   | Required | Description      |
-| ------ | ------ | -------- | ---------------- |
-| handle | string | false    | A User's handle  |
-| slug   | string | false    | The track's slug |
+| Nombre | Tipo   | Requerido | Descripción          |
+| ------ | ------ | --------- | -------------------- |
+| manejo | cadena | falso     | Manejo de un usuario |
+| slug   | cadena | falso     | Slug de la pista     |
 
-> Example Response
+> Ejemplo de respuesta
 
-> 200 Response
+> 200 Respuesta
 
 ```json
 {
@@ -2658,19 +2658,19 @@ func main() {
 }
 ```
 
-<h3 id="get-track-by-handle-and-slug-responses">Responses</h3>
+<h3 id="get-track-by-handle-and-slug-responses">Respuestas</h3>
 
-| Status | Significado                                                                | Description  | Schema                                  |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [track_response](#schematrack_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                    |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                    |
+| Estado | Significado                                                                     | Descripción          | Esquema                                 |
+| ------ | ------------------------------------------------------------------------------- | -------------------- | --------------------------------------- |
+| 200    | [Ok](https://tools.ietf.org/html/rfc7231#section-6.3.1)                         | Exitoso              | [track_response](#schematrack_response) |
+| 400    | [Solicitud incorrecta](https://tools.ietf.org/html/rfc7231#section-6.5.1)       | Solicitud incorrecta | Ninguna                                 |
+| 500    | [Error interno del servidor](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Error del servidor   | Ninguna                                 |
 
-## Recommended Tracks
+## Pistas Recomendadas
 
 <a id="opIdRecommended Tracks"></a>
 
-> Code Sample
+> Muestra de código
 
 ```shell
 curl AUDIUS_API_HOST/v1/tracks/recommended/string 
@@ -2806,9 +2806,9 @@ func main() {
 
 `GET /tracks/recommended/{version}`
 
-<h3 id="recommended-tracks-parameters">Query Parameters</h3>
+<h3 id="recommended-tracks-parameters">Parámetros de consulta</h3>
 
-| Name           | Type   | Required | Description                                                        |
+| Nombre         | Type   | Required | Description                                                        |
 | -------------- | ------ | -------- | ------------------------------------------------------------------ |
 | genre          | string | false    | Recommended trending tracks for a specified genre                  |
 | limit          | string | false    | Number of recommended tracks to fetch                              |
