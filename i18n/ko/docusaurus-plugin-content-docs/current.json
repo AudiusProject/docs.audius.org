@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "Siguiente",
+    "message": "Next",
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.Protocol": {
@@ -12,7 +12,7 @@
     "description": "The label for category Token in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Running A Node": {
-    "message": "Ejecutando un nodo",
+    "message": "Running A Node",
     "description": "The label for category Running A Node in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.API": {

@@ -1,10 +1,10 @@
 {
   "🗺 Overview": {
-    "message": "🗺 Overview",
+    "message": "🗺 Vista general",
     "description": "overview"
   },
   "Get an overview of what Audius is, how it works, and how you can contribute": {
-    "message": "Get an overview of what Audius is, how it works, and how you can contribute",
+    "message": "Obtén una visión general de lo que es Audius, cómo funciona y cómo puedes colaborar",
     "description": "get-an-overview"
   },
   "🎶 API": {
@@ -12,7 +12,7 @@
     "description": "api-reference"
   },
   "Query, stream, and search Arists, Tracks, and Playlists from your own app, game, or project": {
-    "message": "Query, stream, and search Arists, Tracks, and Playlists from your own app, game, or project",
+    "message": "Consulta, transmite y busca Artistas, Canciones y Playlists desde tu propia aplicación, juego o proyecto",
     "description": "rest-api"
   },
   "🎧 $AUDIO": {
@@ -20,31 +20,31 @@
     "description": "audio"
   },
   "Learn about the $AUDIO Token and how it keeps the network secure & operational": {
-    "message": "Learn about the $AUDIO Token and how it keeps the network secure & operational",
+    "message": "Aprende sobre el token $AUDIO y cómo mantiene la red segura y operativa",
     "description": "learn-about-the-token"
   },
   "🔓 Staking The Network": {
-    "message": "🔓 Staking The Network",
+    "message": "🔓 Staking La Red",
     "description": "staking"
   },
   "Stake & delegate the $AUDIO token, earn rewards, and participate in Governance": {
-    "message": "Stake & delegate the $AUDIO token, earn rewards, and participate in Governance",
+    "message": "Haz Stake y delega el token $AUDIO, gana recompensas y participa en la gobernanza",
     "description": "staking-and-delegating"
   },
   "🛠 Run A Node": {
-    "message": "🛠 Run A Node",
+    "message": "🛠 Ejecuta Un Nodo",
     "description": "run-validator"
   },
   "Get up and running and serve traffic for the Audius network": {
-    "message": "Get up and running and serve traffic for the Audius network",
+    "message": "Ejecute y sirva tráfico para la red de Audius",
     "description": "serve-traffic"
   },
   "⚖️ Governance": {
-    "message": "⚖️ Governance",
+    "message": "⚖️ Gobernanza",
     "description": "governance"
   },
   "Voice your vote. Learn how on-chain governance works and how to get involved": {
-    "message": "Voice your vote. Learn how on-chain governance works and how to get involved"
+    "message": "Exprese su voto. Conozca cómo funciona la gobernanza on-chain y cómo participar"
   },
   "theme.NotFound.title": {
     "message": "Página No Encontrada",
@@ -63,15 +63,15 @@
     "description": "The ARIA label for close button of announcement bar"
   },
   "theme.blog.archive.title": {
-    "message": "Archive",
+    "message": "Archivo",
     "description": "The page & hero title of the blog archive page"
   },
   "theme.blog.archive.description": {
-    "message": "Archive",
+    "message": "Archivo",
     "description": "The page & hero description of the blog archive page"
   },
   "theme.blog.paginator.navAriaLabel": {
-    "message": "Navegación por la página de la lista de blogs ",
+    "message": "Navegación por la página de la lista de blogs",
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
@@ -90,18 +90,6 @@
     "message": "Leer Más",
     "description": "The label used in blog post item excerpts to link to full blog posts"
   },
-  "theme.blog.post.paginator.navAriaLabel": {
-    "message": "Navegación de la página de publicaciones del blog ",
-    "description": "The ARIA label for the blog posts pagination"
-  },
-  "theme.blog.post.paginator.newerPost": {
-    "message": "Publicación más reciente",
-    "description": "The blog post button label to navigate to the newer/previous post"
-  },
-  "theme.blog.post.paginator.olderPost": {
-    "message": "Publicación más antigua",
-    "description": "The blog post button label to navigate to the older/next post"
-  },
   "theme.blog.sidebar.navAriaLabel": {
     "message": "Navegación de publicaciones recientes",
     "description": "The ARIA label for recent posts in the blog sidebar"
@@ -119,7 +107,7 @@
     "description": "The label of the link targeting the tag list page"
   },
   "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "Copiar código al portapaples",
+    "message": "Copiar código al portapapeles",
     "description": "The ARIA label for copy code blocks button"
   },
   "theme.CodeBlock.copied": {
@@ -129,6 +117,26 @@
   "theme.CodeBlock.copy": {
     "message": "Copiar",
     "description": "The copy button label on code blocks"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "Navegación de la página de publicaciones del blog",
+    "description": "The ARIA label for the blog posts pagination"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "Publicación más reciente",
+    "description": "The blog post button label to navigate to the newer/previous post"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "Publicación más antigua",
+    "description": "The blog post button label to navigate to the older/next post"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "Expandir barra lateral",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "Expandir barra lateral",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.docs.paginator.navAriaLabel": {
     "message": "Navegación de páginas de documentos",
@@ -141,22 +149,6 @@
   "theme.docs.paginator.next": {
     "message": "Siguiente",
     "description": "The label used to navigate to the next doc"
-  },
-  "theme.docs.sidebar.expandButtonTitle": {
-    "message": "Expandir barra lateral",
-    "description": "The ARIA label and title attribute for expand button of doc sidebar"
-  },
-  "theme.docs.sidebar.expandButtonAriaLabel": {
-    "message": "Expandir barra lateral",
-    "description": "The ARIA label and title attribute for expand button of doc sidebar"
-  },
-  "theme.docs.tagDocListPageTitle.nDocsTagged": {
-    "message": "One doc tagged|{count} docs tagged",
-    "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
-  },
-  "theme.docs.tagDocListPageTitle": {
-    "message": "{nDocsTagged} with \"{tagName}\"",
-    "description": "The title of the page for a docs tag"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
     "message": "Colapsar barra lateral",
@@ -182,6 +174,14 @@
     "message": "última versión",
     "description": "The label used for the latest version suggestion link label"
   },
+  "theme.docs.tagDocListPageTitle.nDocsTagged": {
+    "message": "Un documento etiquetado|{count} documentos etiquetados",
+    "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
+  },
+  "theme.docs.tagDocListPageTitle": {
+    "message": "{nDocsTagged} etiquetados con \"{tagName}\"",
+    "description": "The title of the page for a docs tag"
+  },
   "theme.common.editThisPage": {
     "message": "Editar esta página",
     "description": "The link label to edit the current page"
@@ -203,16 +203,16 @@
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
   "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
-    "message": "← Back to main menu",
+    "message": "← Volver al menú principal",
     "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Versiones",
+    "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.common.skipToMainContent": {
     "message": "Saltar al contenido principal",
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
-  },
-  "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "Versions",
-    "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
     "message": "En esta página",
@@ -261,5 +261,9 @@
   "theme.tags.tagsPageTitle": {
     "message": "Etiquetas",
     "description": "The title of the tag list page"
+  },
+  "Query, stream, and search Artists, Tracks, and Playlists from your own app, game, or project": {
+    "message": "Consulta, transmite y busca Artistas, Canciones y Playlists desde tu propia aplicación, juego o proyecto",
+    "description": "rest-api"
   }
 }
