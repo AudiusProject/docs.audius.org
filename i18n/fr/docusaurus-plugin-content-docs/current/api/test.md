@@ -2,11 +2,11 @@
 
 <h1 id="api-users">users</h1>
 
-## Get the User's id by associated wallet
+## Obtenir l'identifiant de l'utilisateur par portefeuille associé
 
 <a id="opIdGet the User's id by associated wallet"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/associated_wallets?id=string 
@@ -145,7 +145,7 @@ func main() {
 
 `GET /users/associated_wallets`
 
-<h3 id="get-the-user's-id-by-associated-wallet-parameters">Query Parameters</h3>
+<h3 id="get-the-user's-id-by-associated-wallet-parameters">Paramètres de requête</h3>
 
 | Name | Type   | Required | Description     |
 | ---- | ------ | -------- | --------------- |
@@ -168,7 +168,7 @@ func main() {
 }
 ```
 
-<h3 id="get-the-user's-id-by-associated-wallet-responses">Responses</h3>
+<h3 id="get-the-user's-id-by-associated-wallet-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description  | Schema                                                              |
 | ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------------- |
@@ -176,11 +176,11 @@ func main() {
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                |
 
-## Get the User's associated wallets
+## Obtenir l'identifiant de l'utilisateur par portefeuille associé
 
 <a id="opIdGet the User's associated wallets"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/id?associated_wallet=string 
@@ -319,7 +319,7 @@ func main() {
 
 `GET /users/id`
 
-<h3 id="get-the-user's-associated-wallets-parameters">Query Parameters</h3>
+<h3 id="get-the-user's-associated-wallets-parameters">Paramètres de requête</h3>
 
 | Name              | Type   | Required | Description    |
 | ----------------- | ------ | -------- | -------------- |
@@ -337,7 +337,7 @@ func main() {
 }
 ```
 
-<h3 id="get-the-user's-associated-wallets-responses">Responses</h3>
+<h3 id="get-the-user's-associated-wallets-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description  | Schema                                                                      |
 | ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------------------------------------------- |
@@ -345,11 +345,11 @@ func main() {
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                        |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                        |
 
-## Search Users
+## Recherche d'utilisateurs
 
 <a id="opIdSearch Users"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/search?query=Brownies 
@@ -488,7 +488,7 @@ func main() {
 
 `GET /users/search`
 
-*Seach for a user*
+*Recherche d'un utilisateur*
 
 <h3 id="search-users-parameters">Query Parameters</h3>
 
@@ -497,7 +497,7 @@ func main() {
 | query             | string | true     | Search query |
 | only_downloadable | string | false    | none         |
 
-> Example Response
+> Exemple de réponse
 
 ```json
 {
@@ -529,7 +529,7 @@ func main() {
 }
 ```
 
-<h3 id="search-users-responses">Responses</h3>
+<h3 id="search-users-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description  | Schema                            |
 | ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------- |
@@ -537,11 +537,11 @@ func main() {
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                              |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                              |
 
-## Get User
+## Accéder à un utilisateur
 
 <a id="opIdGet User"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/nlGNe 
