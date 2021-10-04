@@ -677,15 +677,15 @@ func main() {
 
 `GET /users/{user_id}`
 
-*Fetch a single user*
+*Récupérer un seul utilisateur*
 
-<h3 id="get-user-parameters">Query Parameters</h3>
+<h3 id="get-user-parameters">Paramètres de requête</h3>
 
 | Name    | Type   | Required | Description |
 | ------- | ------ | -------- | ----------- |
 | user_id | string | true     | A User ID   |
 
-> Example Response
+> Exemple de réponse
 
 ```json
 {
@@ -715,7 +715,7 @@ func main() {
 }
 ```
 
-<h3 id="get-user-responses">Responses</h3>
+<h3 id="get-user-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description  | Schema                                |
 | ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------- |
@@ -723,11 +723,11 @@ func main() {
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                  |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                  |
 
-## The users's ID
+## ID de l'utilisateur
 
 <a id="opIdThe users's ID"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/string/challenges 
@@ -863,16 +863,16 @@ func main() {
 
 `GET /users/{user_id}/challenges`
 
-<h3 id="the-users's-id-parameters">Query Parameters</h3>
+<h3 id="the-users's-id-parameters">Paramètres de requête</h3>
 
 | Name            | Type   | Required | Description                                                |
 | --------------- | ------ | -------- | ---------------------------------------------------------- |
 | show_historical | string | false    | Whether to show challenges that are inactive but completed |
 | user_id         | string | true     | none                                                       |
 
-> Example Response
+> Exemple de réponse
 
-> 200 Response
+> 200 réponses
 
 ```json
 {
@@ -893,7 +893,7 @@ func main() {
 }
 ```
 
-<h3 id="the-users's-id-responses">Responses</h3>
+<h3 id="the-users's-id-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description  | Schema                                  |
 | ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------- |
@@ -905,7 +905,7 @@ func main() {
 
 <a id="opIdGet User's Favorite Tracks"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/nlGNe/favorites 
@@ -1043,7 +1043,7 @@ func main() {
 
 *Fetch favorited tracks for a user*
 
-<h3 id="get-user's-favorite-tracks-parameters">Query Parameters</h3>
+<h3 id="get-user's-favorite-tracks-parameters">Paramètres de requête</h3>
 
 | Name    | Type   | Required | Description |
 | ------- | ------ | -------- | ----------- |
@@ -1073,7 +1073,7 @@ func main() {
 }
 ```
 
-<h3 id="get-user's-favorite-tracks-responses">Responses</h3>
+<h3 id="get-user's-favorite-tracks-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description  | Schema                                          |
 | ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------------- |
@@ -1081,11 +1081,11 @@ func main() {
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                            |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                            |
 
-## Get User's Reposts
+## Obtenir les publications de l'utilisateur
 
 <a id="opIdGet User's Reposts"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/string/reposts 
@@ -1221,7 +1221,7 @@ func main() {
 
 `GET /users/{user_id}/reposts`
 
-<h3 id="get-user's-reposts-parameters">Query Parameters</h3>
+<h3 id="get-user's-reposts-parameters">Paramètres de requête</h3>
 
 | Name    | Type   | Required | Description |
 | ------- | ------ | -------- | ----------- |
@@ -1229,9 +1229,9 @@ func main() {
 | limit   | string | false    | Limit       |
 | offset  | string | false    | Offset      |
 
-> Example Response
+> Exemple de réponse
 
-> 200 Response
+> 200 réponses
 
 ```json
 {
@@ -1245,7 +1245,7 @@ func main() {
 }
 ```
 
-<h3 id="get-user's-reposts-responses">Responses</h3>
+<h3 id="get-user's-reposts-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description  | Schema                    |
 | ------ | -------------------------------------------------------------------------- | ------------ | ------------------------- |
@@ -1253,11 +1253,11 @@ func main() {
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                      |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                      |
 
-## Get User's Most Used Track Tags
+## Obtenez les marqueurs de suivi les plus utilisés par les utilisateurs
 
 <a id="opIdGet User's Most Used Track Tags"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/string/tags?user_id=string 
@@ -1396,9 +1396,9 @@ func main() {
 
 `GET /users/{user_id}/tags`
 
-*Fetch most used tags in a user's tracks*
+*Récupérer les marqueurs les plus utilisés dans les pistes d'un utilisateur*
 
-<h3 id="get-user's-most-used-track-tags-parameters">Query Parameters</h3>
+<h3 id="get-user's-most-used-track-tags-parameters">Paramètres de requête</h3>
 
 | Name    | Type    | Required | Description                 |
 | ------- | ------- | -------- | --------------------------- |
@@ -1406,9 +1406,9 @@ func main() {
 | limit   | integer | false    | Limit on the number of tags |
 | user_id | string  | true     | none                        |
 
-> Example Response
+> Exemple de réponse
 
-> 200 Response
+> 200 réponses
 
 ```json
 {
@@ -1418,7 +1418,7 @@ func main() {
 }
 ```
 
-<h3 id="get-user's-most-used-track-tags-responses">Responses</h3>
+<h3 id="get-user's-most-used-track-tags-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description  | Schema                                |
 | ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------- |
@@ -1426,11 +1426,11 @@ func main() {
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                  |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                  |
 
-## Get User's Tracks
+## Obtenir les pistes de l'utilisateur
 
 <a id="opIdGet User's Tracks"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/nlGNe/tracks 
@@ -1566,9 +1566,9 @@ func main() {
 
 `GET /users/{user_id}/tracks`
 
-*Fetch a list of tracks for a user*
+*Récupérer une liste de titres pour un utilisateur*
 
-<h3 id="get-user's-tracks-parameters">Query Parameters</h3>
+<h3 id="get-user's-tracks-parameters">Paramètres de requête</h3>
 
 | Name    | Type   | Required | Description |
 | ------- | ------ | -------- | ----------- |
@@ -1577,7 +1577,7 @@ func main() {
 | offset  | string | false    | Offset      |
 | sort    | string | false    | Sort mode   |
 
-> Example Response
+> Exemple de réponse
 
 ```json
 {
@@ -1626,7 +1626,7 @@ func main() {
 }
 ```
 
-<h3 id="get-user's-tracks-responses">Responses</h3>
+<h3 id="get-user's-tracks-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description  | Schema                                    |
 | ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------- |
@@ -1636,11 +1636,11 @@ func main() {
 
 <h1 id="api-playlists">playlists</h1>
 
-## Search Playlists
+## Recherche de playlist
 
 <a id="opIdSearch Playlists"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/playlists/search?query=Hot & New 
@@ -1779,16 +1779,16 @@ func main() {
 
 `GET /playlists/search`
 
-*Search for a playlist*
+*Rechercher une playlist*
 
-<h3 id="search-playlists-parameters">Query Parameters</h3>
+<h3 id="search-playlists-parameters">Paramètres de requête</h3>
 
 | Name              | Type   | Required | Description  |
 | ----------------- | ------ | -------- | ------------ |
 | query             | string | true     | Search Query |
 | only_downloadable | string | false    | none         |
 
-> Example Response
+> Exemple de réponse
 
 ```json
 {
@@ -1833,7 +1833,7 @@ func main() {
 }
 ```
 
-<h3 id="search-playlists-responses">Responses</h3>
+<h3 id="search-playlists-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description  | Schema                                                    |
 | ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------------------------- |
@@ -1841,11 +1841,11 @@ func main() {
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                      |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                      |
 
-## Trending Playlists
+## Playlists populaires
 
 <a id="opIdTrending Playlists"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/playlists/trending/string 
@@ -1981,18 +1981,18 @@ func main() {
 
 `GET /playlists/trending/{version}`
 
-*Gets top trending playlists for time period on Audius*
+*Obtenez les playlists les plus populaires pour une période donnée sur Audius*
 
-<h3 id="trending-playlists-parameters">Query Parameters</h3>
+<h3 id="trending-playlists-parameters">Paramètres de requête</h3>
 
 | Name    | Type   | Required | Description         |
 | ------- | ------ | -------- | ------------------- |
 | time    | string | false    | time range to query |
 | version | string | true     | none                |
 
-> Example Response
+> Exemple de réponse
 
-> 200 Response
+> 200 réponses
 
 ```json
 {
@@ -2038,7 +2038,7 @@ func main() {
 }
 ```
 
-<h3 id="trending-playlists-responses">Responses</h3>
+<h3 id="trending-playlists-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description  | Schema                                                              |
 | ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------------- |
@@ -2046,11 +2046,11 @@ func main() {
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                |
 
-## Get Playlist
+## Récupérer la playlist
 
 <a id="opIdGet Playlist"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/playlists/DOPRl 
@@ -2186,15 +2186,15 @@ func main() {
 
 `GET /playlists/{playlist_id}`
 
-*Fetch a playlist*
+*Récupérer une playlist*
 
-<h3 id="get-playlist-parameters">Query Parameters</h3>
+<h3 id="get-playlist-parameters">Paramètres de requête</h3>
 
 | Name        | Type   | Required | Description   |
 | ----------- | ------ | -------- | ------------- |
 | playlist_id | string | true     | A Playlist ID |
 
-> Example Response
+> Exemple de réponse
 
 ```json
 {
@@ -2237,7 +2237,7 @@ func main() {
 }
 ```
 
-<h3 id="get-playlist-responses">Responses</h3>
+<h3 id="get-playlist-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description  | Schema                                        |
 | ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------------- |
@@ -2245,11 +2245,11 @@ func main() {
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                          |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                          |
 
-## Get Playlist Tracks
+## Obtenir les pistes de la liste de lecture
 
 <a id="opIdGet Playlist Tracks"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/playlists/DOPRl/tracks 
@@ -2385,15 +2385,15 @@ func main() {
 
 `GET /playlists/{playlist_id}/tracks`
 
-*Fetch tracks within a playlist*
+*Récupérer ls titres dans une playlist*
 
-<h3 id="get-playlist-tracks-parameters">Query Parameters</h3>
+<h3 id="get-playlist-tracks-parameters">Paramètres de requête</h3>
 
 | Name        | Type   | Required | Description   |
 | ----------- | ------ | -------- | ------------- |
 | playlist_id | string | true     | A Playlist ID |
 
-> Example Response
+> Exemple de réponse
 
 ```json
 {
@@ -2442,7 +2442,7 @@ func main() {
 }
 ```
 
-<h3 id="get-playlist-tracks-responses">Responses</h3>
+<h3 id="get-playlist-tracks-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description  | Schema                                                        |
 | ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------- |
@@ -2452,11 +2452,11 @@ func main() {
 
 <h1 id="api-tracks">tracks</h1>
 
-## Get Track By Handle and Slug
+## Obtenir la piste By Handle and Slug
 
 <a id="opIdGet Track By Handle and Slug"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/tracks 
@@ -2592,16 +2592,16 @@ func main() {
 
 `GET /tracks`
 
-<h3 id="get-track-by-handle-and-slug-parameters">Query Parameters</h3>
+<h3 id="get-track-by-handle-and-slug-parameters">Paramètres de requête</h3>
 
 | Name   | Type   | Required | Description      |
 | ------ | ------ | -------- | ---------------- |
 | handle | string | false    | A User's handle  |
 | slug   | string | false    | The track's slug |
 
-> Example Response
+> Exemple de réponse
 
-> 200 Response
+> 200 réponses
 
 ```json
 {
@@ -2658,7 +2658,7 @@ func main() {
 }
 ```
 
-<h3 id="get-track-by-handle-and-slug-responses">Responses</h3>
+<h3 id="get-track-by-handle-and-slug-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description  | Schema                                  |
 | ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------- |
@@ -2666,11 +2666,11 @@ func main() {
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                    |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                    |
 
-## Recommended Tracks
+## Pistes recommandées
 
 <a id="opIdRecommended Tracks"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/tracks/recommended/string 
@@ -2806,7 +2806,7 @@ func main() {
 
 `GET /tracks/recommended/{version}`
 
-<h3 id="recommended-tracks-parameters">Query Parameters</h3>
+<h3 id="recommended-tracks-parameters">Paramètres de requête</h3>
 
 | Name           | Type   | Required | Description                                                        |
 | -------------- | ------ | -------- | ------------------------------------------------------------------ |
@@ -2816,9 +2816,9 @@ func main() {
 | time           | string | false    | Trending tracks over a specified time range (week, month, allTime) |
 | version        | string | true     | none                                                               |
 
-> Example Response
+> Exemple de réponse
 
-> 200 Response
+> 200 réponses
 
 ```json
 {
@@ -2877,7 +2877,7 @@ func main() {
 }
 ```
 
-<h3 id="recommended-tracks-responses">Responses</h3>
+<h3 id="recommended-tracks-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description  | Schema                                    |
 | ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------- |
@@ -2885,11 +2885,11 @@ func main() {
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                      |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                      |
 
-## Search Tracks
+## Recherche de pistes
 
 <a id="opIdSearch Tracks"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/tracks/search?query=baauer b2b 
@@ -3030,14 +3030,14 @@ func main() {
 
 *Search for a track*
 
-<h3 id="search-tracks-parameters">Query Parameters</h3>
+<h3 id="search-tracks-parameters">Paramètres de requête</h3>
 
 | Name              | Type   | Required | Description                     |
 | ----------------- | ------ | -------- | ------------------------------- |
 | query             | string | true     | Search Query                    |
 | only_downloadable | string | false    | Return only downloadable tracks |
 
-> Example Response
+> Exemple de réponse
 
 ```json
 {
@@ -3086,7 +3086,7 @@ func main() {
 }
 ```
 
-<h3 id="search-tracks-responses">Responses</h3>
+<h3 id="search-tracks-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description  | Schema                              |
 | ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------- |
@@ -3094,11 +3094,11 @@ func main() {
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                |
 
-## Trending Tracks
+## Pistes populaires
 
 <a id="opIdTrending Tracks"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/tracks/trending/string 
@@ -3234,9 +3234,9 @@ func main() {
 
 `GET /tracks/trending/{version}`
 
-*Gets the top 100 trending (most popular) tracks on Audius*
+*Obtenez les 100 pistes les plus populaires sur Audius*
 
-<h3 id="trending-tracks-parameters">Query Parameters</h3>
+<h3 id="trending-tracks-parameters">Paramètres de requête</h3>
 
 | Name    | Type   | Required | Description                                                        |
 | ------- | ------ | -------- | ------------------------------------------------------------------ |
@@ -3244,9 +3244,9 @@ func main() {
 | time    | string | false    | Trending tracks over a specified time range (week, month, allTime) |
 | version | string | true     | none                                                               |
 
-> Example Response
+> Exemple de réponse
 
-> 200 Response
+> 200 réponses
 
 ```json
 {
@@ -3305,7 +3305,7 @@ func main() {
 }
 ```
 
-<h3 id="trending-tracks-responses">Responses</h3>
+<h3 id="trending-tracks-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description  | Schema                                    |
 | ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------- |
@@ -3313,11 +3313,11 @@ func main() {
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                      |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                      |
 
-## Get Track
+## Obtenir une piste
 
 <a id="opIdGet Track"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/tracks/D7KyD 
@@ -3453,15 +3453,15 @@ func main() {
 
 `GET /tracks/{track_id}`
 
-*Fetch a track*
+*Récupérer une piste*
 
-<h3 id="get-track-parameters">Query Parameters</h3>
+<h3 id="get-track-parameters">Paramètres de requête</h3>
 
 | Name     | Type   | Required | Description |
 | -------- | ------ | -------- | ----------- |
 | track_id | string | true     | A Track ID  |
 
-> Example Response
+> Exemple de réponse
 
 ```json
 {
@@ -3508,7 +3508,7 @@ func main() {
 }
 ```
 
-<h3 id="get-track-responses">Responses</h3>
+<h3 id="get-track-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description  | Schema                                  |
 | ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------- |
@@ -3516,11 +3516,11 @@ func main() {
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                    |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                    |
 
-## Stream Track
+## Piste de streaming
 
 <a id="opIdStream Track"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/tracks/D7KyD/stream
@@ -3635,17 +3635,17 @@ func main() {
 
 `GET /tracks/{track_id}/stream`
 
-*Get the track's streamable mp3 file*
+*Obtenir le fichier mp3 de la piste en streaming*
 
-This endpoint accepts the Range header for streaming. https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests
+Ce endpoint accepte l'en-tête Range pour le streaming. https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests
 
-<h3 id="stream-track-parameters">Query Parameters</h3>
+<h3 id="stream-track-parameters">Paramètres de requête</h3>
 
 | Name     | Type   | Required | Description |
 | -------- | ------ | -------- | ----------- |
 | track_id | string | true     | A Track ID  |
 
-<h3 id="stream-track-responses">Responses</h3>
+<h3 id="stream-track-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description           | Schema |
 | ------ | -------------------------------------------------------------------------- | --------------------- | ------ |
@@ -3661,7 +3661,7 @@ This endpoint accepts the Range header for streaming. https://developer.mozilla.
 
 <a id="opIdget_get_undisbursed_challenges"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/challenges/undisbursed 
@@ -3797,7 +3797,7 @@ func main() {
 
 `GET /challenges/undisbursed`
 
-<h3 id="get_get_undisbursed_challenges-parameters">Query Parameters</h3>
+<h3 id="get_get_undisbursed_challenges-parameters">Paramètres de requête</h3>
 
 | Name                  | Type   | Required | Description                                                       |
 | --------------------- | ------ | -------- | ----------------------------------------------------------------- |
@@ -3805,9 +3805,9 @@ func main() {
 | offset                | string | false    | The number of challenges to intially skip in the query            |
 | completed_blocknumber | string | false    | Starting blocknumber to retrieve completed undisbursed challenges |
 
-> Example Response
+> Exemple de réponse
 
-> 200 Response
+> 200 réponses
 
 ```json
 {
@@ -3823,7 +3823,7 @@ func main() {
 }
 ```
 
-<h3 id="get_get_undisbursed_challenges-responses">Responses</h3>
+<h3 id="get_get_undisbursed_challenges-responses">Réponses</h3>
 
 | Status | Meaning                                                                    | Description  | Schema                                                  |
 | ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------- |
@@ -3835,7 +3835,7 @@ func main() {
 
 <a id="opIdget_attest"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/challenges/string/attest?user_id=string&oracle=string&specifier=string 
@@ -3976,7 +3976,7 @@ func main() {
 
 `GET /challenges/{challenge_id}/attest`
 
-<h3 id="get_attest-parameters">Query Parameters</h3>
+<h3 id="get_attest-parameters">Paramètres de requête</h3>
 
 | Name         | Type   | Required | Description |
 | ------------ | ------ | -------- | ----------- |
@@ -3985,9 +3985,9 @@ func main() {
 | specifier    | string | true     | none        |
 | challenge_id | string | true     | none        |
 
-> Example Response
+> Exemple de réponse
 
-> 200 Response
+> 200 réponses
 
 ```json
 {
@@ -3998,19 +3998,19 @@ func main() {
 }
 ```
 
-<h3 id="get_attest-responses">Responses</h3>
+<h3 id="get_attest-responses">Réponses</h3>
 
 | Status | Meaning                                                 | Description | Schema                                            |
 | ------ | ------------------------------------------------------- | ----------- | ------------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Success     | [attestation_reponse](#schemaattestation_reponse) |
 
-<h1 id="api-metrics">metrics</h1>
+<h1 id="api-metrics">métriques</h1>
 
 ## get_trailing_app_name_metrics
 
 <a id="opIdget_trailing_app_name_metrics"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/metrics/app_name/trailing/string 
@@ -4146,17 +4146,17 @@ func main() {
 
 `GET /metrics/app_name/trailing/{time_range}`
 
-*Gets trailing app name metrics from matview*
+*Récupère les métriques de nom de l'application depuis matview*
 
-<h3 id="get_trailing_app_name_metrics-parameters">Query Parameters</h3>
+<h3 id="get_trailing_app_name_metrics-parameters">Paramètres de requête</h3>
 
 | Name       | Type   | Required | Description |
 | ---------- | ------ | -------- | ----------- |
 | time_range | string | true     | none        |
 
-> Example Response
+> Exemple de réponse
 
-> 200 Response
+> 200 réponses
 
 ```json
 {
@@ -4169,19 +4169,19 @@ func main() {
 }
 ```
 
-<h3 id="get_trailing_app_name_metrics-responses">Responses</h3>
+<h3 id="get_trailing_app_name_metrics-responses">Réponses</h3>
 
 | Status | Meaning                                                 | Description | Schema                                                            |
 | ------ | ------------------------------------------------------- | ----------- | ----------------------------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Success     | [app_name_trailing_response](#schemaapp_name_trailing_response) |
 
-<h1 id="api-resolve">resolve</h1>
+<h1 id="api-resolve">résoudre</h1>
 
-## Resolve
+## Résoudre
 
 <a id="opIdResolve"></a>
 
-> Code Sample
+> Exemple de code
 
 ```shell
 curl AUDIUS_API_HOST/v1/resolve?url=https://audius.co/camouflybeats/hypermantra-86216 
@@ -4320,35 +4320,35 @@ func main() {
 
 `GET /resolve`
 
-*Resolves and redirects a provided Audius app URL to the API resource URL it represents*
+*Résout et redirige l'URL de l'application Audius fournie vers l'URL de la ressource API qu'elle représente*
 
-This endpoint allows you to lookup and access API resources when you only know the audius.co URL. Tracks, Playlists, and Users are supported.
+Ce endpoint vous permet de rechercher et d'accéder aux ressources de l'API lorsque vous ne connaissez que l'URL audius.co. Les pistes, les listes de lecture et les utilisateurs sont pris en charge.
 
-<h3 id="resolve-parameters">Query Parameters</h3>
+<h3 id="resolve-parameters">Paramètres de requête</h3>
 
 | Name | Type   | Required | Description                                                                           |
 | ---- | ------ | -------- | ------------------------------------------------------------------------------------- |
 | url  | string | true     | URL to resolve. Either fully formed URL (https://audius.co) or just the absolute path |
 
-> Example Response
+> Exemple de réponse
 
-> Internal redirect
+> Redirection interne
 
 ```
 {"HTTP/1.1 302 Found Location":"/v1/tracks/V4W8r"}
 ```
 
-<h3 id="resolve-responses">Responses</h3>
+<h3 id="resolve-responses">Réponses</h3>
 
 | Status | Meaning                                                    | Description       | Schema |
 | ------ | ---------------------------------------------------------- | ----------------- | ------ |
 | 302    | [Found](https://tools.ietf.org/html/rfc7231#section-6.4.3) | Internal redirect | None   |
 
-<h3 id="resolve-responseschema">Response Schema</h3>
+<h3 id="resolve-responseschema">Schéma de réponse</h3>
 
-# Schemas
+# Schémas
 
-The following are examples of response formats you can expect to receive from the API.
+Voici des exemples de formats de réponse que vous pouvez vous attendre à recevoir de l'API.
 
 <a id="schemauser_response"></a>
 <a id="schema_user_response"></a>
@@ -4385,7 +4385,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propriétés
 
 | Name | Type                | Required | Restrictions | Description |
 | ---- | ------------------- | -------- | ------------ | ----------- |
@@ -4395,7 +4395,7 @@ The following are examples of response formats you can expect to receive from th
 <a id="schema_user"></a>
 <a id="tocSuser"></a>
 <a id="tocsuser"></a>
-<h2 id="tocS_user">user</h2>
+<h2 id="tocS_user">utilisateur</h2>
 
 ```json
 {
@@ -4424,7 +4424,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propriétés
 
 | Name            | Type                                      | Required | Restrictions | Description |
 | --------------- | ----------------------------------------- | -------- | ------------ | ----------- |
@@ -4457,7 +4457,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propriétés
 
 | Name  | Type   | Required | Restrictions | Description |
 | ----- | ------ | -------- | ------------ | ----------- |
@@ -4479,7 +4479,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propriétés
 
 | Name      | Type   | Required | Restrictions | Description |
 | --------- | ------ | -------- | ------------ | ----------- |
@@ -4551,7 +4551,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propriétés
 
 | Name | Type                    | Required | Restrictions | Description |
 | ---- | ----------------------- | -------- | ------------ | ----------- |
@@ -4561,7 +4561,7 @@ The following are examples of response formats you can expect to receive from th
 <a id="schema_Track"></a>
 <a id="tocStrack"></a>
 <a id="tocstrack"></a>
-<h2 id="tocS_Track">Track</h2>
+<h2 id="tocS_Track">Pistes</h2>
 
 ```json
 {
@@ -4617,7 +4617,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propriétés
 
 | Name           | Type                                  | Required | Restrictions | Description |
 | -------------- | ------------------------------------- | -------- | ------------ | ----------- |
@@ -4653,7 +4653,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propriétés
 
 | Name      | Type   | Required | Restrictions | Description |
 | --------- | ------ | -------- | ------------ | ----------- |
@@ -4678,7 +4678,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### Propriétés
 
 | Name   | Type                                    | Required | Restrictions | Description |
 | ------ | --------------------------------------- | -------- | ------------ | ----------- |
