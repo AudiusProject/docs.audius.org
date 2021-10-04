@@ -9,7 +9,7 @@ description: >-
 
 ## Selecting a Host <a id="selecting-a-host"></a>
 
-Audius is a decentralized music streaming service. To use the API, you first select an API endpoint from the list of endpoints returned by:
+Audius est un service de streaming de musique décentralisé. To use the API, you first select an API endpoint from the list of endpoints returned by:
 
 [https://api.audius.co](https://api.audius.co/)
 
