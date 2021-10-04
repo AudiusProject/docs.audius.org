@@ -4,47 +4,47 @@ sidebar_label: Overview sidebar_position: 1
 
 # Overview
 
-Audius is a decentralized, community-owned and artist-controlled music-sharing protocol. Audius provides a blockchain-based alternative to existing streaming platforms to help artists publish and monetize their work and distribute it directly to fans.
+Audius est un protocole de partage de musique décentralisé, détenu par la communauté et contrôlé par les artistes. Audius offre une alternative basée sur la blockchain aux plateformes de streaming existantes pour aider les artistes à publier et monétiser leur travail et à le distribuer directement aux fans.
 
-The mission of the project is to give everyone the freedom to share, monetize, and listen to any audio.
+La mission du projet est de donner à chacun la liberté de partager, de monétiser et d'écouter n'importe quel fichier audio.
 
-The Audius Protocol [repository](https://github.com/AudiusProject/audius-protocol) is a mono-repository that has all the pieces that make and support the protocol including smart contracts, services, and other supporting libraries.
+Le dépôt [Audius Protocol](https://github.com/AudiusProject/audius-protocol) est un dépôt mono-référentiel qui a toutes les pièces qui font et supportent le protocole, y compris les contrats intelligents, , et d'autres bibliothèques de support.
 
-If you are interested in operating a service, see the [`running a node`](../token/running-a-node/introduction.md) section. If you're interested in contributing to the Audius protocol, explore the code below!
+Si vous êtes intéressé par le fonctionnement d'un service, consultez la section [`exécutant un noeud`](../token/running-a-node/introduction.md). Si vous êtes intéressé à contribuer au protocole Audius, explorez le code ci-dessous!
 
 ![](/img/architecture.png)
 
-Audius consists of three demographics of users: Artists (content creators), Fans (content consumers), and Service Providers. Some users check fall into all three demographics!
+Audius se compose de trois types d'utilisateurs : Les artistes (créateurs de contenu), les fans (consommateurs de contenu) et les fournisseurs de services. Certains utilisateurs vérifient les trois catégories d'utilisateurs !
 
-* **Artists** upload tracks, create albums, and share content to their following
-* **Fans** stream tracks, create playlists, subscribe to & follow artists, and re-share content to their following
-* **Service Providers** serve app traffic, stream songs, and help secure the network
+* **Les artistes** téléchargent des titres, créent des albums et partagent du contenu avec leurs fans
+* **Les fans** écoutent des titres, créent des listes de lecture, s'abonnent à des artistes et les suivent, et partagent du contenu avec leurs amis
+* **Les prestataires de service** servent le trafic d'applications, diffusent des chansons et aident à sécuriser le réseau
 
-Service providers can provide one or more of the following services by staking $AUDIO tokens and registering their service:
+Les prestataires de services peuvent fournir un ou plusieurs des services suivants en échangeant des jetons $AUDIO et en enregistrant leur service :
 
-* Discovery node \(host an endpoint with SSL support and register endpoint with stake\)
-* Content node \(host an endpoint with SSL support and register endpoint with stake\)
+* Noeud d'exploration \(hébergez un endpoint avec le support SSL et enregistrez le point de terminaison avec stake\)
+* Noeud de contenu \(hébergez un endpoint avec le support SSL et enregistrez le point de terminaison avec stake\)
 
-In the above diagram, creators can either run a content node themselves or use one of the network-registered content nodes.
+Dans le schéma ci-dessus, les créateurs peuvent soit gérer eux-mêmes un nœud de contenu, soit utiliser l'un des nœuds de contenu enregistrés sur le réseau.
 
-For more details on the Audius architecture, see the [Audius protocol whitepaper](whitepaper.md).
+Pour plus de détails sur l'architecture Audius, voir le [ White Paper sur le protocole Audius](whitepaper.md).
 
-## Audius Services
+## Services d'Audius
 
-| Service                                                                                             | Description                                                                                                        |
-|:--------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------------------------------ |
-| [`Content-Node`](https://github.com/AudiusProject/audius-protocol/tree/master/creator-node)         | Maintains the availability of users' content on IPFS including user metadata, images, and audio content            |
-| [`Discovery-Node`](https://github.com/AudiusProject/audius-protocol/tree/master/discovery-provider) | Indexes and stores the contents of the Audius contracts on the Ethereum blockchain for clients to query via an API |
-| [`Identity-Service`](https://github.com/AudiusProject/audius-protocol/tree/master/identity-service) | Stores encrypted auth ciphertexts, does Twitter OAuth and relays transactions (pays gas) on behalf of users        |
+| Service                                                                                               | Description                                                                                                                                 |
+|:----------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`Nœud de contenu`](https://github.com/AudiusProject/audius-protocol/tree/master/creator-node)        | Maintenir la disponibilité du contenu des utilisateurs sur IPFS, y compris les métadonnées des utilisateurs, les images et le contenu audio |
+| [`Noeud-Découverte`](https://github.com/AudiusProject/audius-protocol/tree/master/discovery-provider) | Indexe et stocke le contenu des contrats Audius sur la blockchain Ethereum pour que les clients puissent les interroger via une API         |
+| [`Identité-Service`](https://github.com/AudiusProject/audius-protocol/tree/master/identity-service)   | Stocke les cryptogrammes d'authentification, effectue Twitter OAuth et relaie les transactions (paie le gas) au nom des utilisateurs        |
 
-## Audius Smart Contracts & Libs
+## Contrats Intelligents Audius & Libs
 
-| Lib                                                                                           | Description                                                                                                                                              |
-|:--------------------------------------------------------------------------------------------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`libs`](https://github.com/AudiusProject/audius-protocol/tree/master/libs)                   | An easy interface to the distributed web and Audius services: Identity Service, Discovery Node \(discovery provider\), Content Node \(creator node\) |
-| [`contracts`](https://github.com/AudiusProject/audius-protocol/tree/master/contracts)         | The smart contracts being developed for the Audius streaming protocol                                                                                    |
-| [`eth-contracts`](https://github.com/AudiusProject/audius-protocol/tree/master/eth-contracts) | The Ethereum smart contracts being developed for the Audius streaming protocol                                                                           |
+| Lib                                                                                           | Description                                                                                                                                                          |
+|:--------------------------------------------------------------------------------------------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`libs`](https://github.com/AudiusProject/audius-protocol/tree/master/libs)                   | Une interface simple vers le web décentralisé et les services Audius : Identity Service, Discovery Node (fournisseur de découverte), Content Node (nœud de création) |
+| [`contracts`](https://github.com/AudiusProject/audius-protocol/tree/master/contracts)         | Les smart contract / contrats intelligent, en cours de développement pour le protocole de streaming Audius                                                           |
+| [`eth-contracts`](https://github.com/AudiusProject/audius-protocol/tree/master/eth-contracts) | Les smart contract/ contrats intelligents Ethereum développés pour le protocole de streaming Audius                                                                  |
 
-## Service Provider Quickstart
+## Démarrage rapide pour les fournisseurs de services
 
-If you're a service provider, a quickstart guide to running services on Audius can be found [here](../token/running-a-node/introduction.md)
+Si vous êtes un fournisseur de services, un guide de démarrage rapide pour exécuter les services sur l'Audius peut être trouvé [ici](../token/running-a-node/introduction.md)
