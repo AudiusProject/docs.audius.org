@@ -9,17 +9,17 @@ description: >-
 
 ## Selecting a Host <a id="selecting-a-host"></a>
 
-Audius est un service de streaming de musique décentralisé. To use the API, you first select an API endpoint from the list of endpoints returned by:
+Audius est un service de streaming de musique décentralisé. Pour utiliser l'API, vous devez d'abord sélectionner un point de terminaison de l'API dans la liste des points de terminaison renvoyés par :
 
 [https://api.audius.co](https://api.audius.co/)
 
-Once you've selected a host, all API requests can be sent directly to it. We recommend selecting a host each time your application starts up as availability may change over time.
+Une fois que vous avez sélectionné un hôte, toutes les demandes d'API peuvent lui être envoyées directement. Nous vous recommandons de sélectionner un hôte chaque fois que votre application démarre, car la disponibilité peut changer au fil du temps.
 
-For the following documention, we've selected one for you:
+Pour la documentation suivante, nous en avons sélectionné une pour vous :
 
 `https://discoveryprovider.audius1.prod-us-west-2.staked.cloud`
 
-> Code Sample
+> Exemple de Code
 
 ```javascript
 
@@ -31,19 +31,19 @@ const host = await fetch('https://api.audius.co')
 
 ```
 
-## Specifying App Name <a id="specifying-app-name"></a>
+## Spécifier le nom de l'application <a id="specifying-app-name"></a>
 
-If you're integrating the Audius API into an app in production, we ask that you include an `&app_name=<YOUR-UNIQUE-APP-NAME>` param with each query. Your unique app name is entirely up to you!
+Si vous intégrez l'API Audius dans une application en développement, nous vous demandons d'inclure un paramètre &app_name=<YOUR-UNIQUE-APP-NAME> (&app_name=<Votre nom d'application unique>) dans chaque requête. Le nom de votre application unique ne dépend que de vous !
 
-## Users <a id="api-users"></a>
+## Utilisateurs <a id="api-users"></a>
 
-### Search Users <a id="search-users"></a>
+### Recherche d'utilisateurs <a id="search-users"></a>
 
 `GET /users/search`
 
-_Seach for a user_
+_Recherche d'un utilisateur_
 
-#### Query Parameters <a id="search-users-parameters"></a>
+#### Get /users/search <a id="search-users-parameters"></a>
 
 | Name                 | Type   | Required | Description   |
 |:-------------------- |:------ |:-------- |:------------- |
@@ -59,7 +59,7 @@ _Seach for a user_
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                     |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                     |
 
-> Code Sample
+> Exemple de code
 
 ```javascript
 
@@ -81,7 +81,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/se
 
 ```
 
-> Example Response
+> Exemple de réponse
 
 ```json
 {
@@ -113,7 +113,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/se
 }
 ```
 
-### Get User <a id="get-user"></a>
+### Accéder à un utilisateur <a id="get-user"></a>
 
 `GET /users/{user_id}`
 
