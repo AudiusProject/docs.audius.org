@@ -5,25 +5,25 @@ sidebar_position: 2
 
 # Hedgehog
 
-Build DApps Like Apps
+Construire des DApps comme des applications
 
 [Github](https://github.com/AudiusProject/hedgehog) 👈
 
-Hedgehog is an open-source, client-side Ethereum wallet that uses a username and password. It aims to lower the barrier of entry to crypto projects for non tech-savvy users.
+Hedgehog est un portefeuille Ethereum open-source côté client, qui utilise un nom d'utilisateur et un mot de passe. Il vise à réduire la barrière d'entrée aux projets de crypto-monnaies pour les utilisateurs qui ne sont pas familiers avec la technologie. Il vise à réduire la barrière d'entrée aux projets de crypto-monnaies pour les utilisateurs qui ne sont pas familiers avec la technologie.
 
-Allow users to interact with your DApp just like they would any other website, no extensions required, without centralizing control of keys.
+Permettre aux utilisateurs d'interagir avec votre DApp comme ils le feraient avec n'importe quel autre site web, sans extension, sans centralisation du contrôle des clés.
 
-**Hedgehog** is alternative to Metamask that manages a user's private key and wallet on the browser. It exposes a simple API to allow you to create an authentication scheme to let users sign up and login to their wallet across multiple browsers and devices.
+Hedgehog est une alternative à Metamask qui gère la clé privée et le portefeuille d'un utilisateur sur le navigateur. Il expose une Api simple qui vous permet de créer un schéma d'authentification pour que les utilisateurs puissent s'inscrire et se connecter à leur portefeuille sur plusieurs navigateurs et appareils.
 
-### Not All Transactions Are Created Equal
+### Toutes les transactions ne sont pas égales
 
-Current Ethereum wallets treat every transaction as if it were moving your life’s savings. Hedgehog was built for use-cases involving low-to-no financial value.
+Les portefeuilles Ethereum actuels traitent chaque transaction comme s'il s'agissait de transférer les économies de toute une vie. Hedgehog a été construit pour des cas d'utilisation impliquant une valeur financière faible à nulle.
 
-> Note: The primary improvement to end-user experience is gained by hiding wallet complexity and not forcing users to confirm transactions - the opposite of what you’d want when moving significant money around.
+> Remarque : la principale amélioration de l'expérience de l'utilisateur final est gagnée en masquant la complexité du portefeuille et en n'obligeant pas les utilisateurs à confirmer les transactions - le contraire de ce que vous souhaitez lorsque vous déplacez des sommes importantes.
 
-#### No More Popups 🦊
+#### Plus de popups 🦊
 
-Decentralized apps today require lots of technical knowledge to configure and use, limiting your user base and reducing the potential for growth.
+Aujourd'hui, les applications décentralisées nécessitent de nombreuses connaissances techniques pour être configurées et utilisées, ce qui limite votre base d'utilisateurs et réduit votre potentiel de croissance.
 
 ### Installation
 
@@ -31,7 +31,7 @@ Decentralized apps today require lots of technical knowledge to configure and us
 npm i --save @audius/hedgehog
 ```
 
-### Docs & Examples
+### Documentations et exemples
 
 Check out our full technical [docs](http://audiusproject.github.io/hedgehog-docs) and [api how-to](http://audiusproject.github.io/hedgehog-docs#how-to).
 
