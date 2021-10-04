@@ -4697,7 +4697,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name              | Type   | Required | Restrictions | Description |
 | ----------------- | ------ | -------- | ------------ | ----------- |
@@ -4722,7 +4722,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name | Type                          | Required | Restrictions | Description |
 | ---- | ----------------------------- | -------- | ------------ | ----------- |
@@ -4732,7 +4732,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 <a id="schema_activity"></a>
 <a id="tocSactivity"></a>
 <a id="tocsactivity"></a>
-<h2 id="tocS_activity">activity</h2>
+<h2 id="tocS_activity">activité</h2>
 
 ```json
 {
@@ -4743,7 +4743,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name      | Type   | Required | Restrictions | Description |
 | --------- | ------ | -------- | ------------ | ----------- |
@@ -4770,7 +4770,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name | Type                          | Required | Restrictions | Description |
 | ---- | ----------------------------- | -------- | ------------ | ----------- |
@@ -4780,7 +4780,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 <a id="schema_favorite"></a>
 <a id="tocSfavorite"></a>
 <a id="tocsfavorite"></a>
-<h2 id="tocS_favorite">favorite</h2>
+<h2 id="tocS_favorite">favoris</h2>
 
 ```json
 {
@@ -4791,7 +4791,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name               | Type   | Required | Restrictions | Description |
 | ------------------ | ------ | -------- | ------------ | ----------- |
@@ -4814,7 +4814,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name | Type     | Required | Restrictions | Description |
 | ---- | -------- | -------- | ------------ | ----------- |
@@ -4857,7 +4857,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name | Type                  | Required | Restrictions | Description |
 | ---- | --------------------- | -------- | ------------ | ----------- |
@@ -4883,7 +4883,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name | Type                                            | Required | Restrictions | Description |
 | ---- | ----------------------------------------------- | -------- | ------------ | ----------- |
@@ -4907,7 +4907,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name        | Type     | Required | Restrictions | Description |
 | ----------- | -------- | -------- | ------------ | ----------- |
@@ -4929,7 +4929,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name | Type                                        | Required | Restrictions | Description |
 | ---- | ------------------------------------------- | -------- | ------------ | ----------- |
@@ -4948,7 +4948,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name    | Type   | Required | Restrictions | Description |
 | ------- | ------ | -------- | ------------ | ----------- |
@@ -4980,7 +4980,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name | Type                                              | Required | Restrictions | Description |
 | ---- | ------------------------------------------------- | -------- | ------------ | ----------- |
@@ -5008,7 +5008,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name                 | Type    | Required | Restrictions | Description |
 | -------------------- | ------- | -------- | ------------ | ----------- |
@@ -5074,7 +5074,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name | Type                          | Required | Restrictions | Description |
 | ---- | ----------------------------- | -------- | ------------ | ----------- |
@@ -5084,7 +5084,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 <a id="schema_playlist"></a>
 <a id="tocSplaylist"></a>
 <a id="tocsplaylist"></a>
-<h2 id="tocS_playlist">playlist</h2>
+<h2 id="tocS_playlist">playlists</h2>
 
 ```json
 {
@@ -5127,7 +5127,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name               | Type                                        | Required | Restrictions | Description |
 | ------------------ | ------------------------------------------- | -------- | ------------ | ----------- |
@@ -5156,7 +5156,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name      | Type   | Required | Restrictions | Description |
 | --------- | ------ | -------- | ------------ | ----------- |
@@ -5228,7 +5228,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name | Type                    | Required | Restrictions | Description |
 | ---- | ----------------------- | -------- | ------------ | ----------- |
@@ -5285,7 +5285,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name | Type                          | Required | Restrictions | Description |
 | ---- | ----------------------------- | -------- | ------------ | ----------- |
@@ -5342,7 +5342,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name | Type                          | Required | Restrictions | Description |
 | ---- | ----------------------------- | -------- | ------------ | ----------- |
@@ -5410,7 +5410,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name | Type                  | Required | Restrictions | Description |
 | ---- | --------------------- | -------- | ------------ | ----------- |
@@ -5480,7 +5480,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name | Type                    | Required | Restrictions | Description |
 | ---- | ----------------------- | -------- | ------------ | ----------- |
@@ -5502,7 +5502,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name | Type                              | Required | Restrictions | Description |
 | ---- | --------------------------------- | -------- | ------------ | ----------- |
@@ -5522,7 +5522,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name         | Type   | Required | Restrictions | Description |
 | ------------ | ------ | -------- | ------------ | ----------- |
@@ -5550,7 +5550,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name | Type                                                    | Required | Restrictions | Description |
 | ---- | ------------------------------------------------------- | -------- | ------------ | ----------- |
@@ -5573,7 +5573,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name                  | Type    | Required | Restrictions | Description |
 | --------------------- | ------- | -------- | ------------ | ----------- |
@@ -5601,7 +5601,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name | Type                                                            | Required | Restrictions | Description |
 | ---- | --------------------------------------------------------------- | -------- | ------------ | ----------- |
@@ -5621,7 +5621,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```
 
-### Properties
+### Propriétés
 
 | Name  | Type    | Required | Restrictions | Description |
 | ----- | ------- | -------- | ------------ | ----------- |
