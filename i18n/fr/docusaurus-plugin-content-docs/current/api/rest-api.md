@@ -1079,7 +1079,7 @@ _Récupère les métriques de nom de l'application depuis matview_
 |:------ |:------------------------------------------------------- |:----------- |:---------------------------------------------------------------------------------------------------------------------------- |
 | 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Success     | [app\_name\_trailing\_response](https://audiusproject.github.io/api-docs/?javascript#schemaapp_name_trailing_response) |
 
-> Code Sample
+> Exemple de code
 
 ```javascript
 
@@ -1101,7 +1101,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/metrics/
 
 ```
 
-> Example Response
+> Exemple de réponse
 > 
 > 200 Response
 
@@ -1120,24 +1120,24 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/metrics/
 
 ### Resolve <a id="resolve"></a>
 
-> Code Sample
+> Exemple de code
 
 `GET /resolve`
 
 _Resolves and redirects a provided Audius app URL to the API resource URL it represents_
 
-This endpoint allows you to lookup and access API resources when you only know the audius.co URL. Tracks, Playlists, and Users are supported.
+Ce endpoint vous permet de rechercher et d'accéder aux ressources de l'API lorsque vous ne connaissez que l'URL audius.co. Les pistes, les listes de lecture et les utilisateurs sont pris en charge.
 
-#### Query Parameters <a id="resolve-parameters"></a>
+#### Paramètres de requête <a id="resolve-parameters"></a>
 
 | Name        | Type   | Required | Description                                                                               |
 |:----------- |:------ |:-------- |:----------------------------------------------------------------------------------------- |
 | url         | string | true     | URL to resolve. Either fully formed URL \(https://audius.co\) or just the absolute path |
 | app\_name | string | true     | Your app name                                                                             |
 
-> Example Response
+> Exemple de réponse
 > 
-> Internal redirect
+> Redirection interne
 
 ```text
 {"HTTP/1.1 302 Found Location":"/v1/tracks/V4W8r"}
@@ -1149,7 +1149,7 @@ This endpoint allows you to lookup and access API resources when you only know t
 |:------ |:---------------------------------------------------------- |:----------------- |:------ |
 | 302    | [Found](https://tools.ietf.org/html/rfc7231#section-6.4.3) | Internal redirect | None   |
 
-#### Response Schema <a id="resolve-responseschema"></a>
+#### Schéma de réponse <a id="resolve-responseschema"></a>
 
 ```javascript
 
@@ -1174,7 +1174,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/resolve?
 
 ## Schemas <a id="schemas"></a>
 
-The following are examples of response formats you can expect to receive from the API.
+Voici des exemples de formats de réponse que vous pouvez vous attendre à recevoir de l'API.
 
 ### user\_response <a id="tocS_user_response"></a>
 
@@ -1207,7 +1207,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties"></a>
+#### Propriétés <a id="properties"></a>
 
 | Name | Type                                                                    | Required | Restrictions | Description |
 |:---- |:----------------------------------------------------------------------- |:-------- |:------------ |:----------- |
@@ -1242,7 +1242,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-2"></a>
+#### Propriétés <a id="properties-2"></a>
 
 | Name               | Type                                                                                             | Required | Restrictions | Description |
 |:------------------ |:------------------------------------------------------------------------------------------------ |:-------- |:------------ |:----------- |
@@ -1271,7 +1271,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-3"></a>
+#### Propriétés <a id="properties-3"></a>
 
 | Name  | Type   | Required | Restrictions | Description |
 |:----- |:------ |:-------- |:------------ |:----------- |
@@ -1289,7 +1289,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-4"></a>
+#### Propriétés <a id="properties-4"></a>
 
 | Name      | Type   | Required | Restrictions | Description |
 |:--------- |:------ |:-------- |:------------ |:----------- |
@@ -1356,7 +1356,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-5"></a>
+#### Propriétés <a id="properties-5"></a>
 
 | Name | Type                                                                            | Required | Restrictions | Description |
 |:---- |:------------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
@@ -1417,7 +1417,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-6"></a>
+#### Propriétés <a id="properties-6"></a>
 
 | Name              | Type                                                                                         | Required | Restrictions | Description |
 |:----------------- |:-------------------------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
@@ -1448,7 +1448,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-7"></a>
+#### Propriétés <a id="properties-7"></a>
 
 | Name      | Type   | Required | Restrictions | Description |
 |:--------- |:------ |:-------- |:------------ |:----------- |
@@ -1469,7 +1469,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-8"></a>
+#### Propriétés <a id="properties-8"></a>
 
 | Name   | Type                                                                                               | Required | Restrictions | Description |
 |:------ |:-------------------------------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
@@ -1484,13 +1484,13 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-9"></a>
+#### Propriétés <a id="properties-9"></a>
 
 | Name                  | Type   | Required | Restrictions | Description |
 |:--------------------- |:------ |:-------- |:------------ |:----------- |
 | parent\_track\_id | string | true     | none         | none        |
 
-### reposts <a id="tocS_reposts"></a>
+### repostes <a id="tocS_reposts"></a>
 
 ```json
 {
@@ -1505,13 +1505,13 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-10"></a>
+#### Propriétés <a id="properties-10"></a>
 
 | Name | Type                                                                                  | Required | Restrictions | Description |
 |:---- |:------------------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
 | data | \[[activity](https://audiusproject.github.io/api-docs/?javascript#schemaactivity)\] | false    | none         | none        |
 
-### activity <a id="tocS_activity"></a>
+### activité <a id="tocS_activity"></a>
 
 ```json
 {
@@ -1522,7 +1522,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-11"></a>
+#### Propriétés <a id="properties-11"></a>
 
 | Name         | Type   | Required | Restrictions | Description |
 |:------------ |:------ |:-------- |:------------ |:----------- |
@@ -1545,13 +1545,13 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-12"></a>
+#### Propriétés <a id="properties-12"></a>
 
 | Name | Type                                                                                  | Required | Restrictions | Description |
 |:---- |:------------------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
 | data | \[[favorite](https://audiusproject.github.io/api-docs/?javascript#schemafavorite)\] | false    | none         | none        |
 
-### favorite <a id="tocS_favorite"></a>
+### favoris <a id="tocS_favorite"></a>
 
 ```json
 {
@@ -1562,7 +1562,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-13"></a>
+#### Propriétés <a id="properties-13"></a>
 
 | Name                   | Type   | Required | Restrictions | Description |
 |:---------------------- |:------ |:-------- |:------------ |:----------- |
@@ -1581,7 +1581,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-14"></a>
+#### Propriétés <a id="properties-14"></a>
 
 | Name | Type         | Required | Restrictions | Description |
 |:---- |:------------ |:-------- |:------------ |:----------- |
@@ -1620,7 +1620,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-15"></a>
+#### Propriétés <a id="properties-15"></a>
 
 | Name | Type                                                                          | Required | Restrictions | Description |
 |:---- |:----------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
@@ -1673,13 +1673,13 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-16"></a>
+#### Propriétés <a id="properties-16"></a>
 
 | Name | Type                                                                                  | Required | Restrictions | Description |
 |:---- |:------------------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
 | data | \[[playlist](https://audiusproject.github.io/api-docs/?javascript#schemaplaylist)\] | false    | none         | none        |
 
-### playlist <a id="tocS_playlist"></a>
+### playlists <a id="tocS_playlist"></a>
 
 ```json
 {
@@ -1722,7 +1722,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-17"></a>
+#### Propriétés <a id="properties-17"></a>
 
 | Name                   | Type                                                                                               | Required | Restrictions | Description |
 |:---------------------- |:-------------------------------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
@@ -1747,7 +1747,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-18"></a>
+#### Propriétés <a id="properties-18"></a>
 
 | Name      | Type   | Required | Restrictions | Description |
 |:--------- |:------ |:-------- |:------------ |:----------- |
@@ -1814,7 +1814,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-19"></a>
+#### Propriétés <a id="properties-19"></a>
 
 | Name | Type                                                                            | Required | Restrictions | Description |
 |:---- |:------------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
@@ -1867,7 +1867,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-20"></a>
+#### Propriétés <a id="properties-20"></a>
 
 | Name | Type                                                                                  | Required | Restrictions | Description |
 |:---- |:------------------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
@@ -1930,7 +1930,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-21"></a>
+#### Propriétés <a id="properties-21"></a>
 
 | Name | Type                                                                      | Required | Restrictions | Description |
 |:---- |:------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
@@ -1995,7 +1995,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-22"></a>
+#### Propriétés <a id="properties-22"></a>
 
 | Name | Type                                                                            | Required | Restrictions | Description |
 |:---- |:------------------------------------------------------------------------------- |:-------- |:------------ |:----------- |
@@ -2015,7 +2015,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-23"></a>
+#### Propriétés <a id="properties-23"></a>
 
 | Name | Type                                                                                                                           | Required | Restrictions | Description |
 |:---- |:------------------------------------------------------------------------------------------------------------------------------ |:-------- |:------------ |:----------- |
@@ -2031,7 +2031,7 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-#### Properties <a id="properties-24"></a>
+#### Propriétés <a id="properties-24"></a>
 
 | Name  | Type    | Required | Restrictions | Description |
 |:----- |:------- |:-------- |:------------ |:----------- |
