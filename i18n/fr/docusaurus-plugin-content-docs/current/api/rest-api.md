@@ -119,14 +119,14 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/se
 
 _Récupérer un seul utilisateur_
 
-#### Query Parameters <a id="get-user-parameters"></a>
+#### Paramètres de requête <a id="get-user-parameters"></a>
 
 | Name        | Type   | Required | Description   |
 |:----------- |:------ |:-------- |:------------- |
 | user\_id  | string | true     | A User ID     |
 | app\_name | string | true     | Your app name |
 
-#### Responses <a id="get-user-responses"></a>
+#### Réponses <a id="get-user-responses"></a>
 
 | Status | Meaning                                                                    | Description  | Schema                                                                                       |
 |:------ |:-------------------------------------------------------------------------- |:------------ |:-------------------------------------------------------------------------------------------- |
@@ -134,7 +134,7 @@ _Récupérer un seul utilisateur_
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                         |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                         |
 
-> Code Sample
+> Exemple de code
 
 ```javascript
 
@@ -156,7 +156,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/nl
 
 ```
 
-> Example Response
+> Exemple de réponse
 
 ```json
 {
@@ -186,13 +186,13 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/nl
 }
 ```
 
-### Get User's Favorite Tracks <a id="get-user-39-s-favorite-tracks"></a>
+### Obtenez les titres préférés des utilisateurs <a id="get-user-39-s-favorite-tracks"></a>
 
 `GET /users/{user_id}/favorites`
 
-_Fetch favorited tracks for a user_
+_Récupérer les titres favoris d'un utilisateur_
 
-#### Query Parameters <a id="get-user&apos;s-favorite-tracks-parameters"></a>
+#### Paramètres de requête <a id="get-user&apos;s-favorite-tracks-parameters"></a>
 
 | Name        | Type   | Required | Description   |
 |:----------- |:------ |:-------- |:------------- |
@@ -207,7 +207,7 @@ _Fetch favorited tracks for a user_
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                                   |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                                   |
 
-> Code Sample
+> Exemple de code
 
 ```javascript
 
@@ -229,7 +229,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/nl
 
 ```
 
-> Example Response
+> Exemple de réponse
 
 ```json
 {
@@ -253,7 +253,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/nl
 }
 ```
 
-### Get User's Reposts <a id="get-user-39-s-reposts"></a>
+### Obtenir les publications de l'utilisateur <a id="get-user-39-s-reposts"></a>
 
 `GET /users/{user_id}/reposts`
 
@@ -275,7 +275,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/nl
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                          |
 
 
-> Code Sample
+> Exemple de code
 
 ```javascript
 
@@ -297,9 +297,9 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/st
 
 ```
 
-> Example Response
+> Exemple de réponse
 > 
-> 200 Response
+> 200 réponses
 
 ```json
 {
@@ -313,13 +313,13 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/st
 }
 ```
 
-### Get User's Most Used Track Tags <a id="get-user-39-s-most-used-track-tags"></a>
+### Obtenez les marqueurs de suivi les plus utilisés par les utilisateurs <a id="get-user-39-s-most-used-track-tags"></a>
 
 `GET /users/{user_id}/tags`
 
-_Fetch most used tags in a user's tracks_
+_Récupérer les marqueurs les plus utilisés dans les pistes d'un utilisateur_
 
-#### Query Parameters <a id="get-user&apos;s-most-used-track-tags-parameters"></a>
+#### Paramètres de requête <a id="get-user&apos;s-most-used-track-tags-parameters"></a>
 
 | Name        | Type    | Required | Description                 |
 |:----------- |:------- |:-------- |:--------------------------- |
@@ -328,7 +328,7 @@ _Fetch most used tags in a user's tracks_
 | app\_name | string  | true     | Your app name               |
 | user\_id  | string  | true     | none                        |
 
-#### Responses <a id="get-user&apos;s-most-used-track-tags-responses"></a>
+#### Réponses <a id="get-user&apos;s-most-used-track-tags-responses"></a>
 
 | Status | Meaning                                                                    | Description  | Schema                                                                                       |
 |:------ |:-------------------------------------------------------------------------- |:------------ |:-------------------------------------------------------------------------------------------- |
@@ -336,7 +336,7 @@ _Fetch most used tags in a user's tracks_
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                         |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                         |
 
-> Code Sample
+> Exemple de code
 
 ```javascript
 
@@ -358,9 +358,9 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/st
 
 ```
 
-> Example Response
+> Exemple de réponse
 > 
-> 200 Response
+> 200 réponse
 
 ```json
 {
@@ -370,13 +370,13 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/st
 }
 ```
 
-### Get User's Tracks <a id="get-user-39-s-tracks"></a>
+### Obtenir les pistes de l'utilisateur <a id="get-user-39-s-tracks"></a>
 
 `GET /users/{user_id}/tracks`
 
-_Fetch a list of tracks for a user_
+_Récupérer une liste de titres pour un utilisateur_
 
-#### Query Parameters <a id="get-user&apos;s-tracks-parameters"></a>
+#### Paramètres de requête <a id="get-user&apos;s-tracks-parameters"></a>
 
 | Name        | Type   | Required | Description   |
 |:----------- |:------ |:-------- |:------------- |
@@ -394,7 +394,7 @@ _Fetch a list of tracks for a user_
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                             |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                             |
 
-> Code Sample
+> Exemple de code
 
 ```javascript
 
@@ -416,7 +416,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/nl
 
 ```
 
-> Example Response
+> Exemple de réponse
 
 ```json
 {
@@ -467,13 +467,13 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/nl
 
 ## Playlists <a id="api-playlists"></a>
 
-### Search Playlists <a id="search-playlists"></a>
+### Recherche de playlist <a id="search-playlists"></a>
 
 `GET /playlists/search`
 
 _Search for a playlist_
 
-#### Query Parameters <a id="search-playlists-parameters"></a>
+#### Paramètres de requête <a id="search-playlists-parameters"></a>
 
 | Name                 | Type   | Required | Description   |
 |:-------------------- |:------ |:-------- |:------------- |
@@ -481,7 +481,7 @@ _Search for a playlist_
 | only\_downloadable | string | false    | none          |
 | app\_name          | string | true     | Your app name |
 
-#### Responses <a id="search-playlists-responses"></a>
+#### Réponses <a id="search-playlists-responses"></a>
 
 | Status | Meaning                                                                    | Description  | Schema                                                                                                            |
 |:------ |:-------------------------------------------------------------------------- |:------------ |:----------------------------------------------------------------------------------------------------------------- |
@@ -489,7 +489,7 @@ _Search for a playlist_
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                                              |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                                              |
 
-> Code Sample
+> Exemple de code
 
 ```javascript
 
@@ -511,7 +511,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/playlist
 
 ```
 
-> Example Response
+> Exemple de réponse
 
 ```json
 {
@@ -556,20 +556,20 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/playlist
 }
 ```
 
-### Get Playlist <a id="get-playlist"></a>
+### Obtenez la playlist <a id="get-playlist"></a>
 
 `GET /playlists/{playlist_id}`
 
-_Fetch a playlist_
+_Récupérer une playlist_
 
-#### Query Parameters <a id="get-playlist-parameters"></a>
+#### Paramètres de requête <a id="get-playlist-parameters"></a>
 
 | Name           | Type   | Required | Description   |
 |:-------------- |:------ |:-------- |:------------- |
 | playlist\_id | string | true     | A Playlist ID |
 | app\_name    | string | true     | Your app name |
 
-#### Responses <a id="get-playlist-responses"></a>
+#### Réponses <a id="get-playlist-responses"></a>
 
 | Status | Meaning                                                                    | Description  | Schema                                                                                               |
 |:------ |:-------------------------------------------------------------------------- |:------------ |:---------------------------------------------------------------------------------------------------- |
@@ -578,7 +578,7 @@ _Fetch a playlist_
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                                 |
 
 
-> Code Sample
+> Exemple de code
 
 ```javascript
 
@@ -600,7 +600,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/playlist
 
 ```
 
-> Example Response
+> Exemple de réponse
 
 ```json
 {
@@ -643,20 +643,20 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/playlist
 }
 ```
 
-### Get Playlist Tracks <a id="get-playlist-tracks"></a>
+### Obtenir les titres de la playlist <a id="get-playlist-tracks"></a>
 
 `GET /playlists/{playlist_id}/tracks`
 
-_Fetch tracks within a playlist_
+_Récupérer ls titres dans une playlist_
 
-#### Query Parameters <a id="get-playlist-tracks-parameters"></a>
+#### Paramètres de requête <a id="get-playlist-tracks-parameters"></a>
 
 | Name           | Type   | Required | Description   |
 |:-------------- |:------ |:-------- |:------------- |
 | playlist\_id | string | true     | A Playlist ID |
 | app\_name    | string | true     | Your app name |
 
-#### Responses <a id="get-playlist-tracks-responses"></a>
+#### Réponses <a id="get-playlist-tracks-responses"></a>
 
 | Status | Meaning                                                                    | Description  | Schema                                                                                                                |
 |:------ |:-------------------------------------------------------------------------- |:------------ |:--------------------------------------------------------------------------------------------------------------------- |
@@ -665,7 +665,7 @@ _Fetch tracks within a playlist_
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                                                  |
 
 
-> Code Sample
+> Exemple de code
 
 ```javascript
 
@@ -687,7 +687,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/playlist
 
 ```
 
-> Example Response
+> Exemple de réponse
 
 ```json
 {
@@ -736,15 +736,15 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/playlist
 }
 ```
 
-## Tracks <a id="api-tracks"></a>
+## Pistes <a id="api-tracks"></a>
 
-### Search Tracks <a id="search-tracks"></a>
+### Recherche de pistes <a id="search-tracks"></a>
 
 `GET /tracks/search`
 
-_Search for a track_
+_Recherche d'une piste_
 
-#### Query Parameters <a id="search-tracks-parameters"></a>
+#### Paramètres de requête <a id="search-tracks-parameters"></a>
 
 | Name                 | Type   | Required | Description                     |
 |:-------------------- |:------ |:-------- |:------------------------------- |
@@ -752,7 +752,7 @@ _Search for a track_
 | only\_downloadable | string | false    | Return only downloadable tracks |
 | app\_name          | string | true     | Your app name                   |
 
-#### Responses <a id="search-tracks-responses"></a>
+#### Réponses <a id="search-tracks-responses"></a>
 
 | Status | Meaning                                                                    | Description  | Schema                                                                                     |
 |:------ |:-------------------------------------------------------------------------- |:------------ |:------------------------------------------------------------------------------------------ |
@@ -762,7 +762,7 @@ _Search for a track_
 
 
 
-> Code Sample
+> Exemple de code
 
 ```javascript
 
@@ -784,7 +784,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/tracks/s
 
 ```
 
-> Example Response
+> Exemple de réponse
 
 ```json
 {
@@ -833,13 +833,13 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/tracks/s
 }
 ```
 
-### Trending Tracks <a id="trending-tracks"></a>
+### Pistes populaires <a id="trending-tracks"></a>
 
 `GET /tracks/trending`
 
-_Gets the top 100 trending \(most popular\) tracks on Audius_
+_Obtenez les 100 titres les plus populaires sur Audius_
 
-#### Query Parameters <a id="trending-tracks-parameters"></a>
+#### Paramètres de requête <a id="trending-tracks-parameters"></a>
 
 | Name        | Type   | Required | Description                                                            |
 |:----------- |:------ |:-------- |:---------------------------------------------------------------------- |
@@ -855,7 +855,7 @@ _Gets the top 100 trending \(most popular\) tracks on Audius_
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                             |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                             |
 
-> Code Sample
+> Exemple de code
 
 ```javascript
 
@@ -877,7 +877,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/tracks/t
 
 ```
 
-> Example Response
+> Exemple de réponse
 
 ```json
 {
@@ -926,20 +926,20 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/tracks/t
 }
 ```
 
-### Get Track <a id="get-track"></a>
+### Obtenir une piste <a id="get-track"></a>
 
 `GET /tracks/{track_id}`
 
-_Fetch a track_
+_Récupérer une piste_
 
-#### Query Parameters <a id="get-track-parameters"></a>
+#### Paramètres de requête <a id="get-track-parameters"></a>
 
 | Name        | Type   | Required | Description   |
 |:----------- |:------ |:-------- |:------------- |
 | track\_id | string | true     | A Track ID    |
 | app\_name | string | true     | Your app name |
 
-#### Responses <a id="get-track-responses"></a>
+#### Réponses <a id="get-track-responses"></a>
 
 | Status | Meaning                                                                    | Description  | Schema                                                                                         |
 |:------ |:-------------------------------------------------------------------------- |:------------ |:---------------------------------------------------------------------------------------------- |
@@ -947,7 +947,7 @@ _Fetch a track_
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                                           |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                                           |
 
-> Code Sample
+> Exemple de code
 
 ```javascript
 
@@ -969,7 +969,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/tracks/D
 
 ```
 
-> Example Response
+> Exemple de réponse
 
 ```json
 {
@@ -1016,13 +1016,13 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/tracks/D
 }
 ```
 
-### Stream Track <a id="stream-track"></a>
+### Piste de Stream <a id="stream-track"></a>
 
 `GET /tracks/{track_id}/stream`
 
-_Get the track's streamable mp3 file_
+_Obtenir le fichier mp3 de la piste en streaming_
 
-This endpoint accepts the Range header for streaming. https://developer.mozilla.org/en-US/docs/Web/HTTP/Range\_requests
+Ce endpoint accepte l'en-tête Range pour le streaming. https://developer.mozilla.org/en-US/docs/Web/HTTP/Range\_requests
 
 #### Query Parameters <a id="stream-track-parameters"></a>
 
@@ -1041,7 +1041,7 @@ This endpoint accepts the Range header for streaming. https://developer.mozilla.
 | 416    | [Range Not Satisfiable](https://tools.ietf.org/html/rfc7233#section-4.4)   | Content range invalid | None   |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error          | None   |
 
-> Code Sample
+> Exemple de code
 
 ```javascript
 
@@ -1064,16 +1064,16 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/tracks/D
 
 `GET /metrics/app_name/trailing/{time_range}`
 
-_Gets trailing app name metrics from matview_
+_Récupère les métriques de nom de l'application depuis matview_
 
-#### Query Parameters <a id="get_trailing_app_name_metrics-parameters"></a>
+#### Paramètres de requête <a id="get_trailing_app_name_metrics-parameters"></a>
 
 | Name          | Type   | Required | Description   |
 |:------------- |:------ |:-------- |:------------- |
 | app\_name   | string | true     | Your app name |
 | time\_range | string | true     | none          |
 
-#### Responses <a id="get_trailing_app_name_metrics-responses"></a>
+#### Réponses <a id="get_trailing_app_name_metrics-responses"></a>
 
 | Status | Meaning                                                 | Description | Schema                                                                                                                       |
 |:------ |:------------------------------------------------------- |:----------- |:---------------------------------------------------------------------------------------------------------------------------- |
