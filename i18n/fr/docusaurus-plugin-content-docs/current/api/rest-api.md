@@ -117,7 +117,7 @@ fetch('https://discoveryprovider.audius1.prod-us-west-2.staked.cloud/v1/users/se
 
 `GET /users/{user_id}`
 
-_Fetch a single user_
+_Récupérer un seul utilisateur_
 
 #### Query Parameters <a id="get-user-parameters"></a>
 
