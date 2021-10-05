@@ -1,5 +1,5 @@
 ---
-sidebar_label: Hardware Requirements
+sidebar_label: Exigences matérielles
 sidebar_position: 2
 ---
 
@@ -12,14 +12,14 @@ Les ressources minimales requises par nœud enregistré sont les suivantes:
 **Nœud de découverte**
 
 * 8 vCPU
-* 16 GB of RAM
-* 250 GB SSD
+* 16 Go de RAM
+* 250 Go de SSD
 
 **Nœud de contenu**
 
 * 8 vCPU
-* 16 GB of RAM
-* 2000 GB SSD
+* 16 Go de RAM
+* 2000 Go de SSD
 
 
 
