@@ -1,5 +1,5 @@
 ---
-sidebar_label: Setup Instructions
+sidebar_label: Instructions d'installation
 sidebar_position: 3
 ---
 
@@ -30,7 +30,7 @@ git clone git@github.com:AudiusProject/audius-k8s-manifests.git
 
 Initialiser une machine exécutant Ubuntu 16.04 LTS ou plus, avec au moins 8 vCPU et 16 Go de RAM.
 
-Un script de facilitation est également inclus pour faire une configuration de nœud kubeadm en un clic. Vous pouvez exécuter. You can run
+Un script de facilitation est également inclus pour faire une configuration de nœud kubeadm en un clic. Vous pouvez exécuter. Vous pouvez exécuter
 
 
 
