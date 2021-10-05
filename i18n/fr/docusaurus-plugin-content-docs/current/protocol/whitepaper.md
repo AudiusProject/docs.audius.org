@@ -1,5 +1,5 @@
 - - -
-sidebar_label: Whitepaper sidebar_position: 2
+sidebar_label: Livre blanc sidebar_position: 2
 - - -
 
 # Livre blanc
