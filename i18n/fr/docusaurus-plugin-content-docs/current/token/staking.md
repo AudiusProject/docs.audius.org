@@ -9,57 +9,57 @@ sidebar_position: 2
 
 Construit comme un protocole décentralisé sur Ethereum, tout le contenu, les informations et les données sur Audius sont stockés et indexés par un réseau croissant d'opérateurs de nœuds tiers, plutôt que par l'équipe Audius.
 
-To ensure this content can be trusted and maintained, node operators are required to provide collateral or ‘stake’ as a bond to service the protocol. This stake, denominated in $AUDIO, ensures that node operators have tokens at risk that can be slashed, or taken, in the event of malicious or poor behavior.
+Pour garantir la fiabilité et la maintenance de ce contenu, les opérateurs de nœuds sont tenus de fournir une garantie ou une " sake " comme caution pour le service du protocole. Cette mise, exprimée en $AUDIO, garantit que les opérateurs de nœuds disposent de jetons à risque qui peuvent être supprimés, ou pris, en cas de comportement malveillant ou médiocre.
 
-By using $AUDIO tokens as collateral, anyone with the proper hardware requirements can join as a node operator in a completely permissionless fashion. The more $AUDIO staked to the protocol, the more secure the network becomes and the less vulnerable it is to outside attacks.
+En utilisant des jetons $AUDIO comme collatéral, toute personne disposant du matériel adéquat peut devenir opérateur de nœud sans aucune autorisation. Plus le nombre de $AUDIO mis en jeu dans le protocole est élevé, plus le réseau est sécurisé et moins il est vulnérable aux attaques extérieures.
 
-As a reward for servicing the network, node operators stand to earn $AUDIO through the automatic on-chain issuance, or the ongoing creation of new tokens distributed to value-added actors.
+En récompense des services rendus au réseau, les opérateurs de nœuds peuvent gagner des $AUDIO grâce à l'émission automatique sur la chaîne, ou à la création continue de nouveaux jetons distribués aux acteurs à valeur ajoutée.
 
-Those who stake more $AUDIO stand to earn a larger portion of issuance in exchange for securing the network.
+Ceux qui misent plus d' $AUDIO ont la possibilité de gagner une plus grande partie de l'émission en échange de la sécurisation du réseau.
 
-### How Audius Works
+### Comment fonctionne Audius
 
-On Audius, content is routed to two different types of nodes:
+Sur Audius, le contenu est acheminé vers deux types de nœuds différents :
 
-* _Content Nodes_ - To store and relay audio content \(tracks, mixes, etc.\) streamed on Audius
-* _Discovery Nodes_ - To index and hash data like user profiles, playlists and followers.
+* _Content Nodes_ - Pour stocker et relayer le contenu audio (pistes, mixages, etc.) diffusé sur Audius
+* _Discovery Nodes_ - Pour indexer et trier les données telles que les profils d'utilisateurs, les listes de lecture et les abonnés.
 
-As an artist, uploading to Audius feels no different than uploading to a platform like Soundcloud. But, what happens behind the scenes is what makes Audius so unique.
+En tant qu'artiste, le téléchargement sur Audius n'est pas différent du téléchargement sur une plateforme comme Soundcloud. Mais ce qui se passe dans les coulisses, c'est ce qui rend l'Audius si unique.
 
-When an artist uploads a track to Audius:
+Quand un artiste télécharge une piste sur Audius :
 
-1. That content is uploaded to a Content Node.
-2. The data gets transcoded and returns a reference code used to identify the track
-3. The data linked by the reference code is replicated to two other Content Nodes on the network.
-4. An onchain transaction is published signifying that the track exists on Audius and that the metadata is attached to the profile that uploaded the track.
-5. The transaction is picked up and indexed by a Discovery Node
-6. The client returns that the track was successfully published when it shows up on the Discovery Node, marking the upload complete!
+1. Ce contenu est téléchargé vers Content Node.
+2. Les données sont transcodées et renvoient un code de référence utilisé pour identifier la piste.
+3. Les données liées par le code de référence sont répliquées vers deux autres nœuds de contenu du réseau.
+4. Une transaction onchain est publiée, signifiant que la piste existe sur Audius et que les métadonnées sont attachées au profil qui a téléchargé la piste.
+5. La transaction est récupérée et indexée vers Discovery Node
+6. Le client indique que la piste a été publiée avec succès lorsqu'elle apparaît sur le nœud Discovery Node, marquant ainsi la fin du téléchargement !
 
-Super simple right! Well, this is where staking comes into play.
+Super simple right! C'est là que le Stacking entre en jeu.
 
-On other platforms, a similar process is operated by the parent company, effectively making them the true owner of the content. Should that company cease to exist, so does all the content stored in its database. With Audius, the track is maintained by the network and controlled by third-party and decentralized node operators. **Audius is not dependent on one company to keep running**.
+Sur d'autres plateformes, un processus similaire est mis en œuvre par la société mère, ce qui en fait le véritable propriétaire du contenu. Si cette société cesse d'exister, il en va de même pour tout le contenu stocké dans sa base de données. Avec Audius, la piste est maintenue par le réseau et contrôlée par des opérateurs de nœuds tiers et décentralisés. **Audius ne dépend pas d'une entreprise pour continuer à fonctionner.**.
 
-**By staking $AUDIO, you’re helping to protect and power the protocol.**
+**Avec le stacking de $AUDIO, vous contribuez à protéger et à renforcer le protocole.**
 
-This design allows Audius to operate on the back of a global network of third-party node operators, rather than solely by the Audius team.
+Cette conception permet à Audius de fonctionner en s'appuyant sur un réseau mondial d'opérateurs de nœuds tiers, plutôt que sur la seule équipe d'Audius.
 
-The decision to use two node types allows Audius to scale in correlation to different metrics, meaning that if the number of listeners were to spike relative to the Audius catalog, Discovery Nodes could pick up the weight while the Content Nodes continue to run as normal. Similarly, the network could choose to adjust incentives depending on where bandwidth is needed to meet demand at any given time.
+La décision d'utiliser deux types de nœuds permet à Audius d'évoluer en fonction de différentes mesures, ce qui signifie que si le nombre d'auditeurs devait connaître un pic par rapport au catalogue Audius, les nœuds Discovery Node pourraient prendre le relais tandis que les nœuds de contenu Content Node continueraient à fonctionner normalement. De même, le réseau pourrait choisir d'ajuster les incitations en fonction de l'endroit où la bande passante est nécessaire pour répondre à la demande à un moment donné.
 
-Talk about a platform adapting to the needs of its users!
+Une plateforme qui s'adapte aux besoins de ses utilisateurs !
 
-### **Staking on Audius**
+### **Staking sur Audius**
 
-To stake on Audius, node operators can set up content and/or discovery nodes using [these resources](https://github.com/AudiusProject/audius-protocol/wiki/Staking-Resources).
+Pour miser sur Audius, les opérateurs de nœuds peuvent mettre en place des nœuds de contenu Content Node et/ou Discovery Node en utilisant ces ressources.
 
 https://twitter.com/Figment\_io/status/1324763638729740288?s=20
 
-A list of all active node operators can be found under the [Services tab](https://dashboard.audius.org/services) in the Audius protocol dashboard.
+Une liste de tous les opérateurs de nœuds actifs se trouve sous l'onglet [Service du tableau](https://dashboard.audius.org/services) du protocole Audius.
 
-$AUDIO holders can delegate a minimum of 100 tokens to any of these node operators by connecting to either MetaMask or using a Gnosis Safe. More details on delegation will be released soon!
+Les détenteurs de $AUDIO peuvent déléguer un minimum de 100 jetons à l'un de ces opérateurs de nœuds en se connectant à MetaMask ou en utilisant un coffre-fort Gnosis. Plus de détails sur la délégation seront bientôt publiés !
 
-Node operators can choose to run either a Content Node, a Discovery Node or a combination of both. The amount of $AUDIO staked to a given Operator can be thought of as their economic bandwidth to run one or a combination of services on the network.
+Les opérateurs de nœuds peuvent choisir d'exploiter un Content Node, un Discovery Node ou une combinaison des deux. La quantité de $AUDIO mise en jeu pour un opérateur donné peut être considérée comme sa bande passante économique pour faire fonctionner un ou une combinaison de services sur le réseau.
 
-All node operators are required to post a **minimum self-bond of 200,000 $AUDIO tokens per node**. While both Content and Discovery Nodes utilize the same machine, Content Nodes require more storage and therefore cost slightly more to operate.
+All node operators are required to post a **minimum self-bond of 200,000 $AUDIO tokens per node**. Alors que les Content Node et Discovery Node utilisent la même machine, les Content Node nécessitent plus de stockage et coûtent donc un peu plus cher à exploiter.
 
 To this effect, the staking parameters of each node is as follows:
 
