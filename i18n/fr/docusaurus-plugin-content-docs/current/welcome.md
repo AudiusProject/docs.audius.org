@@ -1,6 +1,6 @@
 ---
-description: Welcome to the Audius technical documents.
-sidebar_label: Welcome
+description: Bienvenue dans la documentation technique d'Audius .
+sidebar_label: Bienvenue
 sidebar_position: 1
 ---
 
