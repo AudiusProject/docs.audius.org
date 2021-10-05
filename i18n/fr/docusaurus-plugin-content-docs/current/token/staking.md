@@ -73,7 +73,7 @@ _Content Node_
 * Minimum Bond (Stake): 200,000 AUDIO
 * Maximum Bond (Stake): 10,000,0000 AUDIO
 
-The minimum stake ensures sufficient skin in the game, while the maximum prevents the protocol from becoming too centralized. Content nodes have slightly higher minimum requirements, which is why they are able to accept more stake than discovery nodes.
+Le stacking minimale garantit une participation suffisante au jeu, tandis que le maximum empêche le protocole de devenir trop centralisé. Les nœuds de contenu ont des exigences minimales légèrement plus élevées, c'est pourquoi ils sont en mesure d'accepter plus de stacking que les nœuds de découverte.
 
 Each Operator is given a unique profile, allowing users to identify their address, timeline of votes, and the different nodes they maintain. Other key parameters include:
 
