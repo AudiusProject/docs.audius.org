@@ -35,7 +35,7 @@ Quand un artiste télécharge une piste sur Audius :
 5. La transaction est récupérée et indexée vers Discovery Node
 6. Le client indique que la piste a été publiée avec succès lorsqu'elle apparaît sur le nœud Discovery Node, marquant ainsi la fin du téléchargement !
 
-Super simple right! C'est là que le Stacking entre en jeu.
+C'est très simple ! C'est là que le Stacking entre en jeu.
 
 Sur d'autres plateformes, un processus similaire est mis en œuvre par la société mère, ce qui en fait le véritable propriétaire du contenu. Si cette société cesse d'exister, il en va de même pour tout le contenu stocké dans sa base de données. Avec Audius, la piste est maintenue par le réseau et contrôlée par des opérateurs de nœuds tiers et décentralisés. **Audius ne dépend pas d'une entreprise pour continuer à fonctionner.**.
 
@@ -59,9 +59,9 @@ Les détenteurs de $AUDIO peuvent déléguer un minimum de 100 jetons à l'un de
 
 Les opérateurs de nœuds peuvent choisir d'exploiter un Content Node, un Discovery Node ou une combinaison des deux. La quantité de $AUDIO mise en jeu pour un opérateur donné peut être considérée comme sa bande passante économique pour faire fonctionner un ou une combinaison de services sur le réseau.
 
-All node operators are required to post a **minimum self-bond of 200,000 $AUDIO tokens per node**. Alors que les Content Node et Discovery Node utilisent la même machine, les Content Node nécessitent plus de stockage et coûtent donc un peu plus cher à exploiter.
+Tous les opérateurs de nœuds sont tenus de déposer **une caution personnelle minimale de 200 000 jetons AUDIO par nœud**. Alors que les Content Node et Discovery Node utilisent la même machine, les Content Node nécessitent plus de stockage et coûtent donc un peu plus cher à exploiter.
 
-To this effect, the staking parameters of each node is as follows:
+À cet effet, les paramètres de jalonnement de chaque nœud sont les suivants :
 
 _Discovery Node_
 
