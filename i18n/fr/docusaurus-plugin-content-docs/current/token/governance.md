@@ -1,134 +1,134 @@
-# Governance
+# Gouvernance
 
-## How Audius Governance Work
+## Comment fonctionne la gouvernance Audius
 
-Governance is the process by which AUDIO token holders enact change to Audius through on-chain proposals.
+La gouvernance est le processus par lequel les détenteurs de jetons AUDIO promulguent des changements à l'Audius par le biais de propositions sur la chaîne.
 
-It allows the community to directly shape future iterations of the platform and is the core principle driving Audius’s decentralized infrastructure.
-
-
-In this post, we’ll cover how governance works in Audius, and what you can do as an AUDIO holder to get involved.
+Il permet à la communauté de façonner directement les futures itérations de la plate-forme et constitue le principe fondamental qui motive l’infrastructure décentralisée d’Audius.
 
 
-### **Governance Portal**
-
-The single source of truth for Audius governance can be found in the protocol dashboard under the [Governance tab](https://dashboard.audius.org/governance).
+Dans ce poste, nous vous expliquerons comment fonctionne la gouvernance dans Audius et ce que vous pouvez faire en tant que détenteur d’AUDIO pour vous impliquer.
 
 
-Here you can see a list of all Active and Resolved proposals in chronological order along with whether they have passed or failed.
+### **Portail de Gouvernance**
+
+La source unique de vérité pour la gouvernance d'Audius se trouve dans le tableau de bord du protocole sous l'onglet [Gouvernance](https://dashboard.audius.org/governance).
 
 
-Every governance proposal comes with a breakdown of the following parameters:
+Vous y trouverez une liste de toutes les propositions actives et résolues, classées par ordre chronologique et indiquant si elles ont été acceptées ou rejetées.
 
 
-* _Proposer_ - The address responsible for submitting the proposal
-* _Description_ - A quick synthesis of what the governance proposal entails
-* _For_ - The amount of votes in favor of the proposal
-* _Against_ - The amount of votes against the proposal
+Chaque proposition de gouvernance est accompagnée d'une répartition des paramètres suivants :
 
-**All proposals are subject to 5% of staked $AUDIO quorum and 50% majority.**
+
+* _Proposer_ - L'adresse responsable de la soumission de la proposition
+* _Description_ - Une synthèse rapide de ce que la proposition de gouvernance implique
+* _Pour_ - Le nombre de votes en faveur de la proposition
+* _Contre_ - Le nombre de votes contre la proposition
+
+**Toutes les propositions sont soumises à 5% du quorum de $AUDIO et à une majorité de 50%.**
 
 
 This means that for a proposal to pass, at least 5% of all staked $AUDIO must vote on the proposal and more than 50% of the votes must be ‘For’ the proposal.
 
 
-Today, only those running a node may make a proposal on-chain. In future, the set of permitted proposers could be expanded in any way the community sees fit.
+Aujourd'hui, seuls ceux qui exécutent un nœud peuvent faire une proposition en chaîne. À l'avenir, l'ensemble des proposants autorisés pourrait être élargi de la manière dont la communauté le jugera bon.
 
 
-### **Governance Process**
+### **Processus de gouvernance**
 
-Effective governance is much more than voting on proposals on-chain, and something that we want to make even more accessible at Audius.
-
-
-Here’s a breakdown of Audius’s evolving governance ecosystem, including the tools, processes and logistics behind AUDIO voting.
+Une gouvernance efficace est bien plus que le vote de propositions sur la chaîne, et c'est quelque chose que nous voulons rendre encore plus accessible chez Audius.
 
 
-_Discord feedback &gt; Forum post &gt; Submit to Governance Portal &gt; On-chain Vote &gt; Execute_
+Voici un aperçu de l'écosystème de gouvernance évolutif d'Audius, y compris les outils, les processus et la logistique qui sous-tendent le vote AUDIO.
 
 
-Please note that some users may be more inclined than others to facilitate the duration of this process, and we recommend anyone interested in shaping Audius to contribute in whatever ways possible, even if that means just starting a conversation around a topic on Discord!
+_Commentaires sur Discord > Message sur le forum > Soumettre au portail de gouvernance > Vote en chaîne / On-chain > Exécuter_
 
 
-#### **Governance Discord**
-
-In the [AUDIOphile Discord](https://discord.gg/ah5CcqW), you’ll notice a channel called \#governance. This is where early iterations and ideas for proposals can be submitted for community feedback.
+Veuillez noter que certains utilisateurs peuvent être plus enclins que d'autres à faciliter la durée de ce processus, et nous recommandons à toute personne intéressée par l'évolution d'Audius de contribuer de toutes les manières possibles, même si cela signifie simplement entamer une conversation autour d'un sujet sur Discord !
 
 
-Getting feedback on a proposal in Discord is not required, but a great way to get a general feeling of whether or not a topic is worth fleshing out in detail prior to submitting on the forum for a more formal discussion.
+#### **Gouvernance dans Discord**
+
+Dans la [Discord AUDIOphile](https://discord.gg/ah5CcqW), tu remarqueras un canal appelé \#governance. C'est ici que les premières propositions et les premières idées peuvent être soumises aux commentaires de la communauté.
 
 
-Governance topics can be seen as a means of signalling, where proposers receive very high level feedback from other community members to see whether or not their ideas will be received well in principle.
+Il n'est pas nécessaire d'obtenir un retour sur une proposition dans Discord, mais c'est un excellent moyen de savoir si un sujet mérite ou non d'être approfondi avant de le soumettre sur le forum pour une discussion plus formelle.
+
+
+Les sujets de gouvernance peuvent être considérés comme un moyen de signalisation, où les proposants reçoivent un feedback de très haut niveau de la part des autres membres de la communauté pour voir si leurs idées seront bien reçues en principe.
 
 
 #### **Audius Forum**
 
-The Audius [governance forum](https://gov.audius.org/) is the primary place to discuss in-depth details around proposals.
+Le forum Audius [gouvernance](https://gov.audius.org/) est l'endroit principal pour discuter des détails approfondis autour des propositions.
 
 
-All proposals are recommended to cover the following topics:
+Il est recommandé que toutes les propositions couvrent les sujets suivants :
 
 
-* _Title_ - What is this proposal about?
-* _Summary_ - What is a brief explanation / EIL5 of this proposal?
-* _Abstract_ - What will be done if this proposal is implemented? What additional context and information can you offer?
-* _Motivation_ - What is the reasoning behind why this proposal and its benefit to Audius?
-* _Specification_ - What does voting For or Against this proposal mean?
-* _Poll_ - Would you vote For or Against this proposal?
+* _Titre_ - De quoi traite cette proposition ?
+* _Résumé_ - Qu'est-ce qu'une brève explication / EIL5 de cette proposition ?
+* _Résumé_ - Que se passera-t-il si cette proposition est mise en œuvre ? Quel contexte et quelles informations supplémentaires pouvez-vous offrir ?
+* _Motivation_ - Quel est le raisonnement qui motive cette proposition et son intérêt pour Audius ?
+* _Spécification_ - Que signifie voter pour ou contre cette proposition ?
+* _Sondage_ - Voteriez-vous pour ou contre cette proposition ?
 
-While in its infancy, the Audius governance forum is the best place to formalize thoughts before putting it to an on-chain vote.
+Bien qu'il n'en soit qu'à ses débuts, le forum de gouvernance d'Audius est le meilleur endroit pour concrétiser des idées avant de les soumettre à un vote sur la chaîne.
 
-On-chain votes require a lot of signal and coordination, so the governance forum offers a nice way to finalize the finer details of a proposal prior to tossing it on-chain for a community vote.
-
-
-#### **Governance Portal**
-
-After receiving feedback, node operators can submit that proposal on-chain through the Governance portal.
-
-Please note that proposition power is correlated to the amount of AUDIO staked or delegated for network security, meaning node operators are the primary candidates for on-chain proposals.
-
-A list of all on-chain proposals can be found [here](https://dashboard.audius.org/#/governance).
+Les votes sur la chaîne nécessitent beaucoup de signaux et de coordination. Le forum de gouvernance offre donc un bon moyen de finaliser les détails les plus fins d'une proposition avant de la lancer sur la chaîne pour un vote de la communauté.
 
 
-The details of the proposal should map to the specifications outlined in the forum post, including details and implementations around any technical changes required for the proposal to be implemented.
+#### **Portail de Gouvernance**
+
+Après avoir reçu des commentaires, les opérateurs de nœuds peuvent soumettre cette proposition sur la chaîne via le portail de gouvernance.
+
+Veuillez noter que le pouvoir de proposition est corrélé à la quantité d'AUDIO misée ou déléguée pour la sécurité du réseau, ce qui signifie que les opérateurs de nœuds sont les principaux candidats pour les propositions sur la chaîne.
+
+Une liste de toutes les propositions on-chain peut être trouvée [ici](https://dashboard.audius.org/#/governance).
 
 
-#### **On-chain Voting**
+Les détails de la proposition doivent correspondre aux spécifications décrites dans le message du forum, y compris les détails et la mise en œuvre de tout changement technique nécessaire à la mise en œuvre de la proposition.
 
-Using Figment’s [most recent governance proposal](https://dashboard.audius.org/#/governance/proposal/9) as an example, you can see that different node operators and delegators voted in favor of extending the voting time from 48 to 72 hours.
+
+#### **Vote sur la chaîne**
+
+En prenant comme exemple la proposition de gouvernance la plus récente , vous pouvez constater que différents opérateurs de nœuds et délégués ont voté en faveur de l'extension de la durée du vote de 48 à 72 heures.
 
 
 ![](https://assets.website-files.com/6024b69839b1b7fd3787991c/607d16049feb3a126f852b57_H6OK09A-2szawbI66mlGi7489J5aj-x604boPIeDUs6zhfZB7Fs77rIsaskaMGslMNWdGrTfm2ZM_sLalkwBvLCn-I0aUm7g9aSIYr11qC0b2t5WHELcyUtSlK21OaD5UgB9mnRN.png)
 
 
-Given that the total number of votes \(1 AUDIO, 1 vote\) was above the quorum requirement of ~11M $AUDIO and the 50% majority \(100% voted in favor\) the proposal passed!
+Étant donné que le nombre total de votes \(1 AUDIO, 1 vote\) était supérieur au quorum requis de ~11M $AUDIO et la majorité de 50% \(100% ont voté en faveur\) la proposition a été adoptée !
 
 
-In doing so, the changes [from this proposal](https://etherscan.io/tx/0xd4e14895b2a22b48469a43923ab7b30bee75f9a688941933430b3dae9510b8a6) were [executed through the governance contract](https://etherscan.io/tx/0x4396652fb9c1116cec5900f412608dfba7a3ec1b9967f4109a8ec3e09d3a75af), changing the voting window from 48 hours to 72 hours!
+Ce faisant, les modifications de cette proposition ont été exécutées par le biais du contrat de gouvernance, faisant passer la fenêtre de vote de 48 heures à 72 heures !
 
 
-#### **Community Multisig**
+#### **Multisig communautaire**
 
-Once a vote has been passed, the governance contract executes the proposal.
-
-
-However, Audius also features a community multisig as a veto of last resort, referenced in the whitepaper in the “short-circuiting” subsection of the governance section.
+Une fois le vote passé, le contrat de gouvernance exécute la proposition.
 
 
-This means that a set of 9 Audius community members have the ability to stop a malicious proposal from passing. In the event the multisig is used, 6 of the 9 signers must sign a transaction to nullify the proposal.
+Cependant, Audius présente également un multisig communautaire comme veto de dernier recours, mentionné dans le livre blanc de la section « court-circuitant » de la gouvernance.
 
 
-As Audius continues to mature, the community can at any time vote to remove this veto ability from the system as well.
+Cela signifie qu'un ensemble de 9 membres de la communauté Audius ont la possibilité d'empêcher une proposition malveillante de passer. Dans le cas où le multisig est utilisé, 6 des 9 signataires doivent signer une transaction pour annuler la proposition.
 
 
-More details on the signers of this multisig as well as the intent for its use will be shared in a future blog post.
+Comme Audius continue de mûrir, la communauté peut à tout moment voter pour supprimer ce droit de veto du système également.
 
 
-### **Evolving Governance**
-
-Audius governance is an evolving process geared at giving all $AUDIO holders a voice of future iterations of the platform.
+Plus de détails sur les signataires de ce multisig ainsi que sur l'intention de son utilisation seront partagés dans un prochain billet de blog.
 
 
-The process detailed above is likely to change in line with new tools, product upgrades and onramps to allow for all token users to easily review and participate in governance decisions, regardless of their technical knowledge.
+### **Gouvernance évolutive**
+
+La gouvernance Audius est un processus évolutif visant à donner à tous les détenteurs de $AUDIO une voix sur les futures itérations de la plateforme.
 
 
-We’re excited to share more details around governance in the near future and look forward to building out the community-owned streaming protocol that is Audius!
+Le processus décrit ci-dessus est susceptible d'évoluer en fonction des nouveaux outils, des mises à niveau de produits et des mises en service, afin de permettre à tous les utilisateurs de jetons d'examiner et de participer facilement aux décisions de gouvernance, quelles que soient leurs connaissances techniques.
+
+
+Nous sommes impatients de partager plus de détails sur la gouvernance dans un avenir proche et de développer le protocole de streaming communautaire qu'est Audius !
