@@ -3,7 +3,7 @@ sidebar_label: Setup Instructions
 sidebar_position: 3
 ---
 
-# Setup Instructions
+# Instructions d'installation
 
 This guide describes how to run Audius services on a single node Kubernetes cluster. Notes about multi node clusters are given as relevant.
 
