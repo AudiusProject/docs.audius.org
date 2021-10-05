@@ -1,7 +1,7 @@
 ---
 sidebar_label: '$AUDIO'
 sidebar_position: 1
-description: '$AUDIO — the Audius platform token underpinning value-added actions in Audius'
+description: '$AUDIO - le jeton de la plate-forme Audius qui sous-tend les actions à valeur ajoutée dans Audius'
 ---
 
 # $AUDIO
