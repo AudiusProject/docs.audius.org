@@ -111,27 +111,27 @@ rm -rf /var/k8s/*
 
 ## 4. Configuration du service
 
-See below for a guide to deploying [Creator Node](https://github.com/AudiusProject/audius-k8s-manifests#creator-node-1) and [Discovery Provider](https://github.com/AudiusProject/audius-k8s-manifests#discovery-provider-1) via `audius-cli`. After you finish setting up the service, please continue with the Logger section.
+Voir ci-dessous un guide de déploiement du [Creator Node](https://github.com/AudiusProject/audius-k8s-manifests#creator-node-1) et [Discovery Provider](https://github.com/AudiusProject/audius-k8s-manifests#discovery-provider-1) via `audius-cli`. Après avoir terminé la configuration du service, veuillez continuer avec la section Logger.
 
-**Note:** "Creator Node" and "Discovery Provider" have recently been renamed to "Content Node" and "Discovery Node" respectively. However for consistency within the code and this README, we will continue to use the terms "Creator Node" and "Discovery Node".
+**Remarque** "Creator Node" et "Discovery Provider" ont récemment été renommés respectivement par "Content Node" et "Discovery Node". Cependant, pour des raisons de cohérence dans le code et dans ce README, nous continuerons à utiliser les termes "Creator Node" et "Discovery Node".
 
 
 
 ### Creator Node
 
-An Audius Creator Node maintains the availability of creators' content on IPFS.
+Un Creator Node Audius maintient la disponibilité du contenu des créateurs sur IPFS.
 
-The information stored includes Audius user metadata, images, and audio content. The content is backed by a local directory.
+Les informations stockées comprennent les métadonnées des utilisateurs d'Audius, les images et le contenu audio. Le contenu est soutenu par un répertoire local.
 
-**Note:** In the future, the service will be extended to handle proxy re-encryption requests from end-user clients and support other storage backends.
+**Remarque**à l'avenir, le service sera étendu pour traiter les demandes de ré encryptage par proxy des clients utilisateurs et prendre en charge d'autres backends de stockage.
 
 
 
-#### Run
+#### Exécuter
 
-Use `audius-cli` to update required variables. The full list of variables and explanations can be found on the wiki [here](https://github.com/AudiusProject/audius-protocol/wiki/Content-Node:-Configuration-Details#required-environment-variables).
+Utilisez `audius-cli` pour mettre à jour les variables requises. La liste complète des variables et des explications peut être trouvée sur le wiki [ici](https://github.com/AudiusProject/audius-protocol/wiki/Content-Node:-Configuration-Details#required-environment-variables).
 
-Some variables must be set, you can do this with the following commands:
+Certaines variables doivent être définies, vous pouvez le faire avec les commandes suivantes :
 
 
 
@@ -154,9 +154,9 @@ value : <your service url>
 ```
 
 
-**Note:** if you haven't registered the service yet, please enter the url you plan to register for `creatorNodeEndpoint`.
+**Remarque:** si vous n'avez pas encore enregistré le service, veuillez entrer l'url que vous prévoyez d'enregistrer pour `creatorNodeEndpoint`.
 
-Then run the launch command via `audius-cli`
+Ensuite, exécutez la commande de lancement via `audius-cli`
 
 
 
@@ -165,7 +165,7 @@ audius-cli launch creator-node --configure-ipfs
 ```
 
 
-Verify that the service is healthy by running,
+Vérifiez que le service est correct en l'exécutant,
 
 
 
@@ -176,11 +176,11 @@ audius-cli health-check creator-node
 
 
 
-#### Upgrade
+#### Mise à jour
 
-If you do not have `audius-cli`, instructions on how to install are available in [the section above](https://github.com/AudiusProject/audius-k8s-manifests#2-audius-cli-setup).
+Si vous n'avez `audius-cli`, les instructions pour l'installer sont disponibles dans [la section ci-dessus](https://github.com/AudiusProject/audius-k8s-manifests#2-audius-cli-setup).
 
-To upgrade your service using `audius-cli`, you will need to pull the latest manifest code. You can do this with `audius-cli`
+Pour mettre à jour votre service en utilisant `audius-cli`, vous devrez récupérer le dernier code manifeste. Vous pouvez le faire avec `audius-cli`
 
 
 
@@ -189,7 +189,7 @@ audius-cli upgrade
 ```
 
 
-Verify that the service is healthy by running,
+Vérifiez que le service est correct en l'exécutant,
 
 
 
@@ -198,7 +198,7 @@ audius-cli health-check creator-node
 ```
 
 
-**Old Upgrade flow with kubectl:** To upgrade your service using `kubectl`, you will need to pull the latest `k8s-manifests` code. To do this, run the following,
+**Ancien flux de mise à niveau avec kubectl:** Pour mettre à niveau votre service en utilisant `kubectl`, vous aurez besoin de récupérer le dernier `k8s-manifests` code. Pour cela, exécutez ce qui suit,
 
 
 
@@ -209,7 +209,7 @@ git stash apply
 ```
 
 
-Ensure that your configs are present in `audius/creator-node/creator-node-cm.yaml`, then do the following,
+Assurez-vous que vos configurations sont présentes dans `audius/creator-node/creator-node-cm.yaml`, puis faites ce qui suit,
 
 
 
@@ -220,7 +220,7 @@ k apply -f audius/creator-node/creator-node-deploy-backend.yaml
 ```
 
 
-You can verify your upgrade with the `\health_check` endpoint.
+Vous pouvez vérifier votre mise à jour avec le endpoint. `\health_check`.
 
 
 
