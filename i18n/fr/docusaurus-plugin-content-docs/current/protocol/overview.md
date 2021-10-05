@@ -1,8 +1,8 @@
 - - -
-sidebar_label: Overview sidebar_position: 1
+sidebar_label: Aperçu sidebar_position: 1
 - - -
 
-# Overview
+# Aperçu
 
 Audius est un protocole de partage de musique décentralisé, détenu par la communauté et contrôlé par les artistes. Audius offre une alternative basée sur la blockchain aux plateformes de streaming existantes pour aider les artistes à publier et monétiser leur travail et à le distribuer directement aux fans.
 
