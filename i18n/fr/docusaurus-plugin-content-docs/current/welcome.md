@@ -4,31 +4,31 @@ sidebar_label: Welcome
 sidebar_position: 1
 ---
 
-# 🎶 Welcome 🎶
+# 🎶 Bienvenue 🎶
 
-Welcome to the Audius technical documentation!
-
-
-## What is Audius?
-
-[Audius](https://audius.co) is a digital streaming service that connects fans directly with artists and exclusive new music.
-
-It does this by being fully decentralized: Audius is owned and run by a vibrant, open-source community of artists, fans, and developers all around the world. Audius gives artists the power to share never-before-heard music and monetize streams directly. Developers can build their own apps on top of Audius, giving them access to one of the most unique audio catalogs in existence.
-
-Under the hood, Audius is both a protocol & platform built on top of the blockchain (several, in fact) and community run nodes. Audius open source, open data & access, and open ownership.
+Bienvenue dans la documentation technique d'Audius !
 
 
-## Why Audius?
+## Qu'est-ce qu'Audius ?
 
-Music creation and distribution have been dramatically changed by technology in the last two decades. Creating music no longer requires a team of producers and audio engineers. Anyone in their bedroom can start with inexpensive software. Similarly, distributing music no longer requires factories that produce physical records and retail relationships for getting those records into stores; music platforms have enabled artists to distribute their own music.
+[Audius](https://audius.co) est un service de streaming numérique qui met les fans en contact direct avec les artistes et les nouvelles musiques exclusives.
 
-Though redundant in the age of digital distribution, the network of intermediaries and middlemen that formed in the early days of recorded music still persists, thriving on the back of artists and curators while the mechanics of value transfer and accrual are still largely obfuscated.
+Pour ce faire, il est entièrement décentralisé : Audius est détenu et géré par une communauté dynamique et ouverte d'artistes, de fans et de développeurs du monde entier. Audius donne aux artistes le pouvoir de partager de la musique inédite et de monétiser directement les flux. Les développeurs peuvent créer leurs propres applications à partir d'Audius, ce qui leur donne accès à l'un des catalogues audio les plus uniques qui soient.
 
-Audius is the most direct to consumer alternative to existing digital streaming platforms, giving Artists and Fans direct access to one another and ownership & equity in the network they (and you!) are helping to create.
+Sous le capot, Audius est à la fois un protocole &amp ; une plateforme construite sur la blockchain (plusieurs, en fait) et des nœuds gérés par la communauté. Audius open source, données ouvertes & accès et propriété ouverte.
+
+
+## Pourquoi Audius?
+
+La création et la distribution de musique ont été radicalement modifiées par la technologie au cours des deux dernières décennies. La création musicale ne nécessite plus une équipe de producteurs et d'ingénieurs du son. N'importe qui dans sa chambre peut commencer avec un logiciel peu coûteux. De même, la distribution de la musique ne nécessite plus d'usines qui produisent des disques physiques et de relations avec les détaillants pour mettre ces disques dans les magasins ; les plateformes musicales ont permis aux artistes de distribuer leur propre musique.
+
+Bien que redondant à l'ère de la distribution numérique, le réseau d'intermédiaires et de médiateurs qui s'est formé aux premiers jours de la musique enregistrée persiste, prospérant sur le dos des artistes et des conservateurs alors que les mécanismes de transfert et d'accumulation de la valeur sont encore largement obscurcis.
+
+Audius est l'alternative la plus directe au consommateur par rapport aux plateformes de streaming numérique existantes, donnant aux artistes et aux fans un accès direct les uns aux autres et la propriété et l'équité du réseau qu'ils (et vous !) contribuent à créer.
 
 
 ## Documentation
 
-This documentation site guides you through how to familiarize yourself with Audius concepts, how to participate in the protocol & community from a technical perspective, and how to interact with and use the $AUDIO token.
+Ce site de documentation vous explique comment vous familiariser avec les concepts d'Audius, comment participer à la communauté du protocole &amp ; d'un point de vue technique, et comment interagir avec le jeton $AUDIO et l'utiliser.
 
-If you've found yourself here and are confused, check out the reference music player implementation at [audius.co](https://audius.co) and join our [Discord](https://discord.com/invite/audius).
+Si vous vous êtes retrouvé ici et que vous ne savez pas quoi faire, consultez l'implémentation du lecteur de musique de référence sur [audius.co](https://audius.co) et rejoignez notre [Discord](https://discord.com/invite/audius).
