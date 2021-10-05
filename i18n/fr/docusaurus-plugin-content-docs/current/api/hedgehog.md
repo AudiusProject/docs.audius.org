@@ -85,4 +85,4 @@ if (hedgehog.isLoggedIn()) {
 Après avoir créé ou récupéré le portefeuille d'un utilisateur, vous pouvez soit **approvisionner directement leur portefeuille** pour payer des frais de transaction ou **relayer leurs transactions via un relais EIP-712**.
 
 
-### Plonger plus en profondeur dans la docs 👉 [ Plonger plus en profondeur dans la documentation ](https://audiusproject.github.io/hedgehog-docs/#installation) 👈
+### 👉 [ Plonger plus en profondeur dans la documentation ](https://audiusproject.github.io/hedgehog-docs/#installation) 👈
