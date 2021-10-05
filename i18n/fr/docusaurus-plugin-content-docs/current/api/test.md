@@ -1,6 +1,6 @@
 
 
-<h1 id="api-users">users</h1>
+<h1 id="api-users">utilisateurs</h1>
 
 ## Obtenir l'identifiant de l'utilisateur par portefeuille associé
 
@@ -151,9 +151,9 @@ func main() {
 | ---- | ------ | -------- | --------------- |
 | id   | string | true     | Encoded User ID |
 
-> Example Response
+> Exemple de réponse
 
-> 200 Response
+> 200 réponses
 
 ```json
 {
@@ -325,9 +325,9 @@ func main() {
 | ----------------- | ------ | -------- | -------------- |
 | associated_wallet | string | true     | Wallet address |
 
-> Example Response
+> Exemple de réponse
 
-> 200 Response
+> 200 réponses
 
 ```json
 {
@@ -490,7 +490,7 @@ func main() {
 
 *Recherche d'un utilisateur*
 
-<h3 id="search-users-parameters">Query Parameters</h3>
+<h3 id="search-users-parameters">Paramètres de requête</h3>
 
 | Name              | Type   | Required | Description  |
 | ----------------- | ------ | -------- | ------------ |
@@ -901,7 +901,7 @@ func main() {
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                    |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                    |
 
-## Get User's Favorite Tracks
+## Obtenez les titres préférés des utilisateurs
 
 <a id="opIdGet User's Favorite Tracks"></a>
 
@@ -1041,7 +1041,7 @@ func main() {
 
 `GET /users/{user_id}/favorites`
 
-*Fetch favorited tracks for a user*
+*Récupérer les titres favoris d'un utilisateur*
 
 <h3 id="get-user's-favorite-tracks-parameters">Paramètres de requête</h3>
 
@@ -1049,7 +1049,7 @@ func main() {
 | ------- | ------ | -------- | ----------- |
 | user_id | string | true     | A User ID   |
 
-> Example Response
+> Exemple de réponse
 
 ```json
 {
@@ -2450,7 +2450,7 @@ func main() {
 | 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                          |
 | 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                          |
 
-<h1 id="api-tracks">tracks</h1>
+<h1 id="api-tracks">pistes</h1>
 
 ## Obtenir la piste By Handle and Slug
 
@@ -3028,7 +3028,7 @@ func main() {
 
 `GET /tracks/search`
 
-*Search for a track*
+*Recherche d'une piste*
 
 <h3 id="search-tracks-parameters">Paramètres de requête</h3>
 
@@ -3657,7 +3657,7 @@ Ce endpoint accepte l'en-tête Range pour le streaming. https://developer.mozill
 
 <h1 id="api-challenges">challenges</h1>
 
-## get_get_undisbursed_challenges
+## get_undisbursed_challenges
 
 <a id="opIdget_get_undisbursed_challenges"></a>
 
@@ -4707,7 +4707,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 <a id="schema_reposts"></a>
 <a id="tocSreposts"></a>
 <a id="tocsreposts"></a>
-<h2 id="tocS_reposts">reposts</h2>
+<h2 id="tocS_reposts">repostes</h2>
 
 ```json
 {
