@@ -6,17 +6,17 @@ description: '$AUDIO — the Audius platform token underpinning value-added 
 
 # $AUDIO
 
-#### How it Works
+#### Comment ça marche
 
-Audius platform tokens \(AUDIO\) have three prongs of functionality within the Audius protocol ecosystem:
+Les jetons de plateforme audio \\(AUDIO\\) ont trois pôles de fonctionnalités dans l'écosystème du protocole Audius :
 
-* Security
-* Feature Access
-* Governance
+* Sécurité
+* Accès aux fonctionnalités
+* Gouvernance
 
-AUDIO is staked as collateral for a value-added service such as operating a node or participating in governance. In exchange, stakers earn ongoing issuance, governance weight, and access to exclusive features. In the future, AUDIO will govern a global fee pool from value transfers in the network.Offering a native token to align all actors creates a parallel incentive unique to web3, and one which allows our early adopters to share in the upside of Audius as we continue to grow.The Audius community looks to ensure that AUDIO tokens are always being funneled to the most value-added actors. This is done through ongoing issuance using onchain metrics as a measurement to better route distribution to active participants, rather than simply to those staking the most AUDIO.Here’s how this pans out in practice.
+L'AUDIO est mis en stacking comme garantie d'un service à valeur ajoutée tel que l'exploitation d'un nœud ou la participation à la gouvernance. En échange, les stakers gagnent une émission continue, un poids dans la gouvernance et un accès à des fonctionnalités exclusives. In the future, AUDIO will govern a global fee pool from value transfers in the network.Offering a native token to align all actors creates a parallel incentive unique to web3, and one which allows our early adopters to share in the upside of Audius as we continue to grow.The Audius community looks to ensure that AUDIO tokens are always being funneled to the most value-added actors. Cela se fait par le biais d'une émission continue utilisant les métriques onchain comme mesure pour mieux diriger la distribution vers les participants actifs, plutôt que simplement vers ceux qui misent le plus AUDIO.Voici comment cela se passe en pratique.
 
-**SECURITY**
+**SECURITÉ**
 
 AUDIO is staked by node operators to secure the network. The larger the stake, the higher the probability of their node being used by fans and artists. Audius is entirely hosted and operated by the community, creating a permissionless ecosystem of node operators securing content for the world’s unstoppable streaming protocol.
 
