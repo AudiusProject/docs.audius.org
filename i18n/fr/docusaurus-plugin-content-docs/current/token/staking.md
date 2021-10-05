@@ -75,23 +75,23 @@ _Content Node_
 
 Le stacking minimale garantit une participation suffisante au jeu, tandis que le maximum empêche le protocole de devenir trop centralisé. Les nœuds de contenu ont des exigences minimales légèrement plus élevées, c'est pourquoi ils sont en mesure d'accepter plus de stacking que les nœuds de découverte.
 
-Each Operator is given a unique profile, allowing users to identify their address, timeline of votes, and the different nodes they maintain. Other key parameters include:
+Chaque opérateur se voit attribuer un profil unique, permettant aux utilisateurs d'identifier son adresse, la chronologie de ses votes et les différents nœuds qu'il entretient. Les autres paramètres clés incluent :
 
-* _Staked $AUDIO_ - The total amount of $AUDIO staked across all the operator’s nodes, measured as a combination of tokens staked or delegated to a given address.
-* _Deployer Cut_ - The percentage of staking rewards that delegates pay to node operators for staking $AUDIO on their node. This is configurable by the node operator.
-* _Services_ - The number of unique nodes run by a given operator.
-* _Delegators_ - The total number of unique addresses delegating tokens to the Operator.
+* _Prise $AUDIO_ - Le montant total de $AUDIO misé sur tous les nœuds de l'opérateur, mesuré comme une combinaison de jetons misés ou délégués à une adresse donnée.
+* _Deployer Cut_ - Le pourcentage des récompenses de stacking que les délégués paient aux opérateurs de nœuds pour jalonner $AUDIO sur leur nœud. Ceci est configurable par l'opérateur du nœud.
+* _Services_ - Le nombre de noeuds uniques exécutés par un opérateur donné.
+* _Délégateurs_ - Le nombre total d'adresses uniques déléguant des jetons à l'Opérateur.
 
-Node operators can also populate their information via [3Box](https://3box.io/), displaying a profile image, title and website link to allow delegates to more easily distinguish themselves from others on the network.
+Les opérateurs de nœuds peuvent également remplir leurs informations via [3Box](https://3box.io/), affichant une image de profil, titre et lien vers le site Web pour permettre aux délégués de se distinguer plus facilement des autres sur le réseau.
 
-Audius features a 7 day cooldown period to undelegate or unstake in order to provide adequate time for nodes to be slashed in the event of malicious behavior. During the genesis staking period, nodes operated by the Audius foundation will have their Deployer Cut set to 100%, with all proceeds being routed to a community treasury to be governed by $AUDIO tokenholders. These nodes will be retired in the near future.
+Audius dispose d'une période de récupération de 7 jours pour le déblocage ou l'enlèvement d'un nœud, afin de laisser suffisamment de temps pour que les nœuds soient enlevés en cas de comportement malveillant. Pendant la période de jalonnement de la genèse, les nœuds exploités par la fondation Audius verront leur coupe de déploiement fixée à 100 %, et tous les revenus seront acheminés vers une trésorerie communautaire qui sera régie par les détenteurs de jetons $AUDIO. Ces nœuds seront retirés dans un avenir proche.
 
-### **$AUDIO Staking Rewards**
+### **$AUDIO Récompenses de Staking**
 
-Audius features a 7% automatic annual issuance rate distributed on-chain and on a weekly basis. $AUDIO rewards are distributed directly on-chain to node operators, with the on-chain system deducting their Delegator Cut and routing the remaining rewards to those who delegated their tokens.
+Audius propose un taux d'émission annuel automatique de 7% distribué sur la chaîne et sur une base hebdomadaire. Les récompenses $AUDIO sont distribuées directement sur la chaîne aux opérateurs de nœuds, le système sur la chaîne déduisant leur coupe de délégué et acheminant les récompenses restantes à ceux qui ont délégué leurs jetons.
 
-Service providers are expected to run one transaction per week to distribute issuance for the network, where tokens can be claimed in real time by individual node operators.
+Il est prévu que les fournisseurs de services effectuent une transaction par semaine pour distribuer l'émission pour le réseau, où les jetons peuvent être réclamés en temps réel par les opérateurs de nœuds individuels.
 
-In the near future, $AUDIO issuance will begin to be computed from the call of the reward function. Moving forward, anyone in the network can call the reward function, with tokens being distributed on a weekly cadence and claimable at any time.
+Dans un avenir proche, l'émission de $AUDIO commencera à être calculée à partir de l'appel de la fonction de récompense. À l'avenir, n'importe quel membre du réseau pourra appeler la fonction de récompense, les jetons étant distribués chaque semaine et pouvant être réclamés à tout moment.
 
-The rate, duration and parameters of $AUDIO staking are controlled entirely by governance.
+Le taux, la durée et les paramètres du jalonnement de $AUDIO sont entièrement contrôlés par la gouvernance.
