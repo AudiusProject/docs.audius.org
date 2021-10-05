@@ -226,15 +226,15 @@ Vous pouvez vérifier votre mise à jour avec le endpoint. `\health_check`.
 
 ### Discovery Provider
 
-An Audius Discovery Provider indexes the contents of the Audius contracts on the Ethereum blockchain for clients to query.
+Un Discovery Provider Audius indexe le contenu des contrats Audius sur la blockchain Ethereum pour que les clients puissent les interroger.
 
-The indexed content includes user, track, and album/playlist information along with social features. The data is stored for quick access, updated on a regular interval, and made available for clients via a RESTful API.
+Le contenu indexé comprend des informations sur l'utilisateur, la piste et l'album/la liste de lecture ainsi que des fonctionnalités sociales. Les données sont stockées pour un accès rapide, mises à jour à intervalles réguliers et mises à la disposition des clients via une RESTful API.
 
 
 
-#### Run
+#### Exécuter
 
-Some variables must be set, you can do this with the following commands:
+Certaines variables doivent être définies, vous pouvez le faire avec les commandes suivantes :
 
 
 
@@ -249,7 +249,7 @@ value : <delegate_private_key>
 ```
 
 
-If you are using an external managed Postgres database \(version 11.1+\), replace the db url with,
+Si vous utilisez une base de données Postgres gérée en externe \(version 11.1+), remplacez l'url de la base de données par
 
 
 
@@ -264,11 +264,11 @@ value : <audius_db_url_read_replica>
 ```
 
 
-**Note:** If there's no read replica, enter the primary db url for both env vars.
+**Remarque:** S'il n'y a pas de réplique en lecture, entrez l'url de la base de données primaire pour les deux variables d'environnement.
 
-The below is only if using a managed posgres database:
+Les indications ci-dessous ne sont valables que si vous utilisez une base de données posgres gérée :
 
-You will have to replace the db seed job in `audius/discovery-provider/discovery-provider-db-seed-job.yaml` as well. Examples are provided. In the managed postgres database and set the `temp_file_limit` flag to `2147483647` and run the following SQL command on the destination db.
+Vous devrez également remplacer la tâche db seed dans `audius/discovery-provider/discovery-provider-provider-db-seed-job.yaml`. Des exemples sont fournis. Dans la base de données postgres gérée, définissez l'indicateur temp_file_limit à 2147483647 et exécutez la commande SQL suivante sur la base de données de destination.
 
 
 
@@ -277,11 +277,11 @@ CREATE EXTENSION pg_trgm;
 ```
 
 
-Make sure that your service exposes all the required environment variables. See wiki [here](https://github.com/AudiusProject/audius-protocol/wiki/Discovery-Node:-Configuration-Details#required-environment-variables) for full list of env vars and descriptions.
+Assurez-vous que votre service expose toutes les variables d'environnement requises. Voir le wiki [ici ](https://github.com/AudiusProject/audius-protocol/wiki/Discovery-Node:-Configuration-Details#required-environment-variables) pour la liste complète des variables d'environnement et leurs descriptions.
 
 
 
-#### Launch
+#### Lancement
 
 
 
@@ -290,7 +290,7 @@ audius-cli launch discovery-provider --seed-job --configure-ipfs
 ```
 
 
-Verify that the service is healthy by running,
+Vérifiez que le service est correct en l'exécutant,
 
 
 
@@ -301,11 +301,11 @@ audius-cli health-check discovery-provider
 
 
 
-#### Upgrade
+#### Mise à jour
 
-If you do not have `audius-cli`, instructions on how to install are available in [the section above](https://github.com/AudiusProject/audius-k8s-manifests#2-audius-cli-setup).
+Si vous n'avez `audius-cli`, les instructions pour l'installer sont disponibles dans [la section ci-dessus](https://github.com/AudiusProject/audius-k8s-manifests#2-audius-cli-setup).
 
-To upgrade your service using `audius-cli`, you will need to pull the latest manifest code. You can do this with `audius-cli`
+Pour mettre à jour votre service en utilisant `audius-cli`, vous devrez récupérer le dernier code manifeste. Vous pouvez le faire avec `audius-cli`
 
 
 
@@ -314,7 +314,7 @@ audius-cli upgrade
 ```
 
 
-Verify that the service is healthy by running,
+Vérifiez que le service est correct en l'exécutant,
 
 
 
@@ -323,7 +323,7 @@ audius-cli health-check discovery-provider
 ```
 
 
-**Old Upgrade flow with kubectl:** To upgrade your service using kubectl, you will need to pull the latest `k8s-manifests` code. To do this, run the following,
+**Ancien flux de mise à niveau avec kubectl:** Pour mettre à niveau votre service en utilisant kubectl, vous aurez besoin de récupérer le dernier `k8s-manifests` code. Pour cela, exécutez ce qui suit,
 
 
 
@@ -334,7 +334,7 @@ git stash apply
 ```
 
 
-Ensure that your configs are present in `audius/discovery-provider/discovery-provider-cm.yaml`, then do the following,
+Assurez-vous que vos configurations sont présentes dans `audius/creator-node/discovery-provider-cm.yaml`, puis faites ce qui suit,
 
 
 
@@ -344,24 +344,24 @@ k apply -f audius/discovery-provider/discovery-provider-deploy.yaml
 ```
 
 
-You can verify your upgrade with the `\health_check` endpoint.
+Vous pouvez vérifier votre mise à jour avec le endpoint. `\health_check`.
 
 
 
-#### Next
+#### Suivant
 
-Once you've finished setting up the Discovery Provider, continue to the [Logger](https://github.com/AudiusProject/audius-k8s-manifests#logger) section.
+Une fois que vous avez terminé la configuration du Discovery Provider, continuez vers la section [Logger](https://github.com/AudiusProject/audius-k8s-manifests#logger).
 
 
 
 
 ## 5. Logger
 
-In order to assist with any debugging. We provide a logging service that you may publish to.
+Afin d'aider au débogage. Nous proposons un service de journalisation que vous pouvez publier.
 
-**Run**
+**Exécuter**
 
-First, obtain the service provider secrets from your contact at Audius. This contains the required token\(s\) for logging to function. And apply the secret with
+Tout d'abord, obtenez les secrets des fournisseurs de services auprès de votre interlocuteur chez Audius. Ceci contient le Token requis \(s\) pour que la connexion fonctionne. Et appliquer le secret avec
 
 
 
@@ -370,9 +370,9 @@ kubectl apply -f <secret_from_audius>.yaml
 ```
 
 
-Next, update the logger tags in the fluentd daemonset with your name, so we can identify you and your service uniquely here: [https://github.com/AudiusProject/audius-k8s-manifests/blob/master/audius/logger/logger.yaml\#L207](https://github.com/AudiusProject/audius-k8s-manifests/blob/master/audius/logger/logger.yaml#L207). This allows our logging service to filter logs by service provider and by service provider and service. `SP_NAME` refers to your organization's name and `SP_NAME_TYPE_ID` refers to your organization's name plus the type of service you're running, plus an id to distinguish multiple services of the same type.
+Ensuite, mettez à jour les balises de journalisation dans le daemonset fluentd avec votre nom, afin que nous puissions vous identifier vous et votre service de façon unique ici : [https://github.com/AudiusProject/audius-k8s-manifests/blob/master/audius/logger/logger.yaml\#L207](https://github.com/AudiusProject/audius-k8s-manifests/blob/master/audius/logger/logger.yaml#L207). Cela permet à notre service de journalisation de filtrer les logs par fournisseur de service et par fournisseur de service et service. `SP_NAME` fait référence au nom de votre organisation et `SP_NAME_TYPE_ID` fait référence au nom de votre organisation plus au type de service que vous utilisez, plus un id pour distinguer plusieurs services du même type.
 
-For example, if your name is `Awesome Operator` and you're running a content node, set the tags as:
+Par exemple, si votre nom est `Génial Opérateur` et que vous exécutez un noeud de contenu, définissez les balises comme :
 
 
 
@@ -384,7 +384,7 @@ env:
 ```
 
 
-The number at the end of the last tag \(`Awesome-Operator-Content-1`\) is used if you have more than one content node or discovery node, so you can identify each service uniquely. For example, if you run two content nodes, on your second content node, you can set the tags as:
+Le nombre à la fin du dernier tag \(`Awesome-Operator-Content-1`\) est utilisé si vous avez plus d'un content node u ou un discovery node, afin que vous puissiez identifier chaque service de manière unique. Par exemple, si vous exécutez deux content nodes, sur votre deuxième nœud de contenu, vous pouvez définir les balises comme suit :
 
 
 
@@ -396,7 +396,7 @@ env:
 ```
 
 
-Once you've updated the tags, apply the fluentd logger stack with the command:
+Une fois que vous avez mis à jour les tags, appliquez la pile de journalisation avec la commande :
 
 
 
@@ -405,9 +405,9 @@ kubectl apply -f audius/logger/logger.yaml
 ```
 
 
-**Upgrade**
+**Mise à jour**
 
-There are two commands to upgrade the logging stack.
+Il y a deux commandes pour mettre à jour la pile de logging.
 
 
 
@@ -421,9 +421,9 @@ kubectl -n kube-system delete pod $(kubectl -n kube-system get pods | grep "flue
 
 
 
-## 6. Security & Infrastructure configuration
+## 6. Sécurité & Configuration de l'infrastructure
 
-1.\) In order for clients to talk to your service, you'll need to expose two ports: the web server port and the IPFS swarm port. In order to find these ports, run `kubectl get svc`. The web server port is mapped to 4000 for creator node and 5000 for discovery provider. The IPFS swarm port is mapped to 4001
+1.\) Pour que les clients puissent parler à votre service, vous devrez exposer deux ports : le port du serveur web et le port de l'essaim IPFS. Pour trouver ces ports, exécutez `kubectl get svc`. Le port du serveur web est mappé à 4000 pour le noeud créateur et 5000 pour le fournisseur de découverte. Le port de l'essaim IPFS est mappé à 4001
 
 
 
@@ -441,11 +441,11 @@ In this case, the web server port is 31744 and the IPFS port is 30480.
 ```
 
 
-2.\) Once you expose these ports, you should be able to publicly hit the health check via the public IP of your instance or load balancer. The next step is to register a DNS record. It's recommended that you map the web server port the DNS and have a domain or subdomain for each service you're running. Also make sure traffic is not allowed without HTTPS. All non HTTPS traffic should redirect to the HTTPS port.
+2.\) Une fois ces ports exposés, vous devriez être en mesure de lancer publiquement le contrôle de qualité via l'IP publique de votre instance ou de votre équilibreur de charge. L'étape suivante consiste à enregistrer un enregistrement DNS. Il est recommandé de mapper le port du serveur web sur le DNS et d'avoir un domaine ou un sous-domaine pour chaque service que vous exécutez. Assurez-vous également que le trafic n'est pas autorisé sans HTTPS. Tout le trafic non HTTPS doit être redirigé vers le port HTTPS.
 
-3.\) Now we will configure IPFS.
+3.\) Nous allons maintenant configurer IPFS.
 
-IPFS has some trouble identifying the public host and port inside kubernetes, this can be fixed with `audius-cli`
+IPFS a quelques difficultés à identifier l'hôte public et le port dans kubernetes, cela peut être corrigé avec `audius-cli`
 
 
 
@@ -454,21 +454,21 @@ audius-cli configure-ipfs <hostname>
 ```
 
 
-Example: `audius-cli configure-ipfs 108.174.10.10`
+Exemple : `audius-cli configure-ipfs 108.174.10.10`
 
-4.\) Set load balancer timeouts. Minimum timeouts are 1 hour \(3600 seconds\) for Creator Node requests and 1 minutes \(60 seconds\) for Discovery Provider requests. Track uploads especially for larger files can take several minutes to complete.
+4.\) Définir le délai d'attente de l'équilibreur de charge. Les délais minimum sont 1 heure \(3600 secondes\) pour les requêtes de Creator Node et 1 minutes \(60 secondes\) pour les requêtes de Discovery Provider. Le téléchargement de pistes, en particulier pour les gros fichiers, peut prendre plusieurs minutes.
 
-5.\) In addition to configuring your security groups to restrict access to just the web server and IPFS swarm port \(4001\), it's recommended that your server or load balancer is protected from DoS attacks. Services like Cloudfront and Cloudflare offer free or low cost services to do this. It would also be possible to use iptables to configure protection as laid out here [https://javapipe.com/blog/iptables-ddos-protection/](https://javapipe.com/blog/iptables-ddos-protection/). Please make sure proxies don't override the timeouts from Step 4.
+5.\) En plus de configurer vos groupes de sécurité pour restreindre l'accès au seul serveur web et au port d'essaim IPFS \(4001\\), Il est recommandé que votre serveur ou votre répartiteur de charge soit protégé contre les attaques DoS. Des services tels que Cloudfront et Cloudflare offrent des services gratuits ou peu coûteux pour ce faire. Il serait également possible d'utiliser iptables pour configurer la protection comme indiqué ici [https://javapipe.com/blog/iptables-ddos-protection/](https://javapipe.com/blog/iptables-ddos-protection/). Veuillez vous assurer que les proxies ne remplacent pas les délais de l'étape 4.
 
 
 
-## 7. Pre-registration checks
+## 7. Contrôles de pré-inscription
 
-Before registering a service to the dashboard we need to make sure the service is properly configured. Follow the checks below for the type of service you're configuring. Failure to verify that all of these work properly could cause user actions to fail and may lead to slashing actions.
+Avant d'enregistrer un service dans le tableau de bord, nous devons nous assurer que le service est correctement configuré. Suivez les contrôles ci-dessous pour le type de service que vous configurez. Si l'on ne vérifie pas que tous ces éléments fonctionnent correctement, les actions de l'utilisateur risquent d'échouer et de donner lieu à des actions de slashing.
 
-The `sp-actions/` folder contains scripts that test the health of services. Run the corresponding checks for your service type below to verify your service is correctly sete up. Be sure to run `npm install` in `sp-actions/` to install all depdencies.
+Le dossier `sp-actions/` contient des scripts qui testent la qualité des services. Effectuez les vérifications correspondantes de votre type de service ci-dessous pour vérifier que votre service est correctement configuré. Assurez-vous d'exécuter `npm install` dans `sp-actions/` pour installer toutes les dépendances.
 
-For more information about `sp-actions/` see the README in the [sp-actions/ folder](https://github.com/AudiusProject/audius-k8s-manifests/tree/master/sp-utilities)
+Pour plus d'informations sur `sp-actions/` voir README dans le dossier [sp-actions/](https://github.com/AudiusProject/audius-k8s-manifests/tree/master/sp-utilities)
 
 **Creator Node**
 
@@ -489,7 +489,7 @@ All checks passed!
 ```
 
 
-If you see the message "Error running script" this script did not finish successfully. If you see "All checks passed!" this script finished successfully.
+Si vous voyez le message "Erreur lors de l'exécution du script" ce script ne s'est pas terminé. Si vous voyez "Toutes les vérifications sont réussies!" ce script s'est terminé avec succès.
 
 **Discovery Provider**
 
@@ -502,18 +502,18 @@ All checks passed!
 ```
 
 
-If you see the message "Error running script" this script did not finish successfully. If you see "All checks passed!" this script finished successfully.
+Si vous voyez le message "Erreur lors de l'exécution du script" ce script ne s'est pas terminé. Si vous voyez "Toutes les vérifications sont réussies!" ce script s'est terminé avec succès.
 
 
 
-## 8. Register the service on the dashboard
+## 8. Enregistrez le service sur le tableau de bord
 
-Since you've completed all the steps thus far, you're about ready to register!
+Puisque vous avez accompli toutes les étapes jusqu'à présent, vous êtes prêt à vous inscrire !
 
-You can register via the dashboard on [https://dashboard.audius.org](https://dashboard.audius.org/)
+Vous pouvez vous inscrire via le tableau de bord sur [https://dashboard.audius.org](https://dashboard.audius.org/)
 
 
 
-## 9. Script to Initiate Rounds and Process Claims \(Optional\)
+## 9. Script pour initier les cycles et traiter les réclamations \(Optional\)
 
-If you would like to automatically run claim operations whenever a new round is initiated, a script is included for your convenience in the sp-utilities/claim folder. Further instructions are provided in the sp-utilities README.
+Si vous souhaitez exécuter automatiquement les opérations de réclamation à chaque fois qu'un nouveau tour est lancé, un script est inclus pour votre commodité dans le dossier sp-utilities/claim. Des instructions supplémentaires sont fournies dans le README de sp-utilities.
