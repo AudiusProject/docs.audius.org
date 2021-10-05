@@ -15,7 +15,7 @@ Le protocole Audius est alimenté par deux services hors chaîne, le Discovery N
 * Sert le trafic de l'API
 * Suivi des mesures d'utilisation
 
-**Content Node**
+**Discovery Node**
 
 * Héberge les contenus audio et image
 * Synchronise le contenu entre les nœuds pour garantir la cohérence et la haute disponibilité des données (en utilisant IPFS et le protocole de stockage Audius sous le capot)
