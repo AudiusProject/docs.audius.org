@@ -7,7 +7,7 @@ description: >-
 
 # REST API
 
-## Selecting a Host <a id="selecting-a-host"></a>
+## Sélection d'un hôte <a id="selecting-a-host"></a>
 
 Audius est un service de streaming de musique décentralisé. Pour utiliser l'API, vous devez d'abord sélectionner un point de terminaison de l'API dans la liste des points de terminaison renvoyés par :
 
@@ -51,7 +51,7 @@ _Recherche d'un utilisateur_
 | only\_downloadable | string | false    | none          |
 | app\_name          | string | true     | Your app name |
 
-#### Responses <a id="search-users-responses"></a>
+#### Réponses <a id="search-users-responses"></a>
 
 | Status | Meaning                                                                    | Description  | Schema                                                                                   |
 |:------ |:-------------------------------------------------------------------------- |:------------ |:---------------------------------------------------------------------------------------- |
