@@ -5,17 +5,17 @@ sidebar_position: 1
 
 # Introduction
 
-This section describes how to run an Audius node.
+Cette section décrit comment faire fonctionner un nœud Audius.
 
-The Audius protocol is powered by two off-chain services, the Discovery Node and the Content Node.
+Le protocole Audius est alimenté par deux services hors chaîne, le Discovery Node et le Content Node.
 
 **Discovery Node**
 
-* Indexes blockchains used by the Audius protocol \(Main-net Ethereum, POA, and Solana\)
-* Serves API traffic
-* Tracks usage metrics
+* Index des blockchains utilisées par le protocole Audius \(Main-net Ethereum, POA, et Solana\)
+* Sert le trafic de l'API
+* Suivi des mesures d'utilisation
 
 **Content Node**
 
-* Hosts audio and image content
-* Syncs content across nodes to ensure data is consistent and highly available \(using IPFS and the Audius Storage Protocol under the hood\)
+* Héberge les contenus audio et image
+* Synchronise le contenu entre les nœuds pour garantir la cohérence et la haute disponibilité des données (en utilisant IPFS et le protocole de stockage Audius sous le capot)
