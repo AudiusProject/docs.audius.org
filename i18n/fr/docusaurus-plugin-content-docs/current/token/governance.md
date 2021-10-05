@@ -29,7 +29,7 @@ Chaque proposition de gouvernance est accompagnée d'une répartition des param�
 **Toutes les propositions sont soumises à 5% du quorum de $AUDIO et à une majorité de 50%.**
 
 
-This means that for a proposal to pass, at least 5% of all staked $AUDIO must vote on the proposal and more than 50% of the votes must be ‘For’ the proposal.
+Cela signifie que pour qu'une proposition soit adoptée, au moins 5% de tous les $AUDIO misés doivent voter sur la proposition et plus de 50% des votes doivent être "Pour" la proposition.
 
 
 Aujourd'hui, seuls ceux qui exécutent un nœud peuvent faire une proposition en chaîne. À l'avenir, l'ensemble des proposants autorisés pourrait être élargi de la manière dont la communauté le jugera bon.
