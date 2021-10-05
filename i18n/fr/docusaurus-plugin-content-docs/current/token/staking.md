@@ -5,9 +5,9 @@ sidebar_position: 2
 
 # Staking
 
-### What is Staking?
+### Qu'est-ce que le Stacking?
 
-Built as a decentralized protocol on Ethereum, all the content, information and data on Audius is stored and indexed by a growing network of third-party node operators, rather than by the Audius team.
+Construit comme un protocole décentralisé sur Ethereum, tout le contenu, les informations et les données sur Audius sont stockés et indexés par un réseau croissant d'opérateurs de nœuds tiers, plutôt que par l'équipe Audius.
 
 To ensure this content can be trusted and maintained, node operators are required to provide collateral or ‘stake’ as a bond to service the protocol. This stake, denominated in $AUDIO, ensures that node operators have tokens at risk that can be slashed, or taken, in the event of malicious or poor behavior.
 
