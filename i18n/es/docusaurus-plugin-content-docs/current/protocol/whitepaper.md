@@ -1,6 +1,7 @@
-- - -
-sidebar_label: Whitepaper sidebar_position: 2
-- - -
+---
+sidebar_label: Whitepaper
+sidebar_position: 2
+---
 
 # Whitepaper
 

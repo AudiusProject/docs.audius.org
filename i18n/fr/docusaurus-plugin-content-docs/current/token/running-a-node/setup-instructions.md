@@ -7,9 +7,7 @@ sidebar_position: 3
 
 Ce guide décrit comment exécuter les services Audius sur un groupe Kubernetes à un seul nœud. Des notes sur les cluster multi-nœuds sont données si nécessaire.
 
-Rejoignez le canal discord de l'opérateur du nœud sur le serveur discord
-
- d'Audius</p> 
+Rejoignez le canal discord de l'opérateur du nœud sur le serveur discord [d'Audius](https://discord.com/invite/audius)
 
 
 

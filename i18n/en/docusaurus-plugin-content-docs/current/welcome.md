@@ -15,7 +15,7 @@ Welcome to the Audius technical documentation!
 
 It does this by being fully decentralized: Audius is owned and run by a vibrant, open-source community of artists, fans, and developers all around the world. Audius gives artists the power to share never-before-heard music and monetize streams directly. Developers can build their own apps on top of Audius, giving them access to one of the most unique audio catalogs in existence.
 
-Under the hood, Audius is both a protocol & platform built on top of the blockchain (several, in fact) and community run nodes. Audius open source, open data & access, and open ownership.
+Under the hood, Audius is both a protocol & platform built on top of the blockchain (several, in fact) and community run nodes. Audius is open source, open data & access, and open ownership.
 
 
 ## Why Audius?

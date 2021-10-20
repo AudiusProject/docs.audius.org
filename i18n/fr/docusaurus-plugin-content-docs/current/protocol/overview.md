@@ -1,6 +1,7 @@
-- - -
-sidebar_label: Aperçu sidebar_position: 1
-- - -
+---
+sidebar_label: Aperçu
+sidebar_position: 1
+---
 
 # Aperçu
 
