@@ -13,6 +13,13 @@ npm start
 npm run build
 ```
 
+## Publish
+
+```
+npm run build
+wrangler publish
+```
+
 
 ## Translate
 
