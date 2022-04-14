@@ -51,7 +51,7 @@ Une plateforme qui s'adapte aux besoins de ses utilisateurs !
 
 Pour miser sur Audius, les opérateurs de nœuds peuvent mettre en place des nœuds de contenu Content Node et/ou Discovery Node en utilisant ces ressources.
 
-https://twitter.com/Figment\_io/status/1324763638729740288?s=20
+https://twitter.com/Figment_io/status/1324763638729740288?s=20
 
 Une liste de tous les opérateurs de nœuds actifs se trouve sous l'onglet [Service du tableau](https://dashboard.audius.org/services) du protocole Audius.
 
