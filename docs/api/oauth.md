@@ -1,6 +1,6 @@
 ---
 sidebar_label: Log in with Audius
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Log in with Audius
@@ -122,8 +122,7 @@ enables the Log in with Audius functionality.
     verified: boolean; // whether the user has the Audius "verified" checkmark
 
     /** URLs for the user's profile picture, if any.
-     * In the vast majority of cases, three sizes will be available - 150x150, 480x480, and 1000x1000.
-    * In rare cases, only an unknown size `misc` will be available.
+    * If the user has a profile picture, three sizes will be available: 150x150, 480x480, and 1000x1000.
     * If the user has no profile picture, this field will be empty.
     */
     profilePicture: {"150x150": string, "480x480": string, "1000x1000": string } | { misc: string } | undefined | null
@@ -214,7 +213,7 @@ The log in button will be rendered with an id of `audius-login-button`. You can 
 
 Example:
 
-```HTML
+```html
 <!-- In your HTML -->
 <!-- Surround your element that will be replaced with the Log in with Audius button with a parent, e.g.: -->
 <div id="parent">
@@ -222,25 +221,26 @@ Example:
   <!-- You probably want a better loading indicator than this :P -->
   <div id="loading">Loading...</div>
 </div>
-
 ```
 
-```JS
+```javascript
 // In your JS
-const observer = new MutationObserver(function(mutations_list) {
-	mutations_list.forEach(function(mutation) {
-		mutation.addedNodes.forEach(function(added_node) {
-			if (added_node.id == 'audius-login-button') {
+const observer = new MutationObserver(function (mutations_list) {
+  mutations_list.forEach(function (mutation) {
+    mutation.addedNodes.forEach(function (added_node) {
+      if (added_node.id == "audius-login-button") {
         // Login button has rendered
-        document.querySelector('#loading').remove()
+        document.querySelector("#loading").remove();
         observer.disconnect();
-			}
-		});
-	});
+      }
+    });
+  });
 });
 
-observer.observe(document.querySelector("#parent"), { subtree: false, childList: true });
-
+observer.observe(document.querySelector("#parent"), {
+  subtree: false,
+  childList: true,
+});
 ```
 
 <br />
@@ -326,8 +326,11 @@ You must open this page with the required URL parameters, described below.
 
 **Example**
 
-```HTML
-<a href="https://audius.co/oauth/auth?scope=read&app_name=My%20Demo%20App&redirect_uri=https://mydemoapp.com/oauth/receive-token&state=a4e0761e-8c21-4e20-819d-5a4daeab4ea9">Click me to log in with Audius!</a>
+```html
+<a
+  href="https://audius.co/oauth/auth?scope=read&app_name=My%20Demo%20App&redirect_uri=https://mydemoapp.com/oauth/receive-token&state=a4e0761e-8c21-4e20-819d-5a4daeab4ea9"
+  >Click me to log in with Audius!</a
+>
 ```
 
 ### 1.5 Remember to handle early exiting (i.e. failure) of the authentication flow
@@ -412,8 +415,7 @@ We recommend selecting a host each time your application starts up as availabili
   verified: boolean, // whether the user has the Audius "verified" checkmark
 
   /** URLs for the user's profile picture, if any.
-   * In the vast majority of cases, three sizes will be available - 150x150, 480x480, and 1000x1000.
-  * In rare cases, only an unknown size `misc` will be available.
+  * If the user has a profile picture, three sizes will be available: 150x150, 480x480, and 1000x1000.
   * If the user has no profile picture, this field will be empty.
   */
   profilePicture: {"150x150": string, "480x480": string, "1000x1000": string } | { misc: string } | undefined | null

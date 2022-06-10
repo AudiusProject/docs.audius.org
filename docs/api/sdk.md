@@ -51,14 +51,14 @@ In a browser environment, you must install [web3.js](https://github.com/ChainSaf
 
 In-browser example:
 
-```HTML
+```html
 <!-- Include this BEFORE the Audius SDK script -->
 <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 ```
 
 Node.js example:
 
-```JS
+```javascript
 // Make sure to run `npm install web3`
 const Web3 = require("web3");
 
@@ -73,7 +73,7 @@ To initialize the SDK, simply call the SDK constructor and pass in the name of y
 
 Example code:
 
-```HTML
+```html
 <script>
   var sdk;
   async function init() {
@@ -96,7 +96,7 @@ Example code:
 
 Example code:
 
-```Javascript
+```javascript
 // audiusSdk.js
 import { sdk } from "@audius/sdk";
 
@@ -125,7 +125,7 @@ initAudiusSdk();
 export { audiusSdk, waitForSdk };
 ```
 
-```Javascript
+```javascript
 // anotherFile.js
 import { audiusSdk, waitForSdk } from "./audiusSdk";
 
