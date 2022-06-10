@@ -87,6 +87,7 @@ const Main = () => {
                     <p>
                       <Translate description="sdk">
                         Easily build upon and interact with the Audius network
+                        using the Audius Javascript SDK
                       </Translate>
                     </p>
                   </div>
