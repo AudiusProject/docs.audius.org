@@ -32,9 +32,9 @@ audius-cli set-config --required discovery-provider
 ```
 
 #### Creator Node
-There are four required creator node environment variables, available in the creator node section [here](README.md#creator-node).
+There are four required creator node environment variables, available in the creator node section [here](setup.md#creator-node).
 
-The full list of variables and explanations can be found on the wiki [here](https://github.com/AudiusProject/audius-protocol/wiki/Content-Node:-Configuration-Details#required-environment-variables). Generally node operators will not need to modify any other environment variables
+The full list of variables and explanations can be found [here](https://github.com/AudiusProject/audius-protocol/blob/master/creator-node/src/config.js). Generally node operators will not need to modify any other environment variables.
 
 ##### External Creator Node Postgres
 If you set an external Postgres url during setup you can skip this section.
@@ -47,9 +47,9 @@ value : <db url>
 ```
 
 #### Discovery Provider
-There are two required discovery provider environment variables, available in the discovery provider section [here](README.md#discovery-provider).
+There are two required discovery provider environment variables, available in the discovery provider section [here](setup.md#discovery-provider).
 
-The full list of variables and explanations can be found on the wiki [here](https://github.com/AudiusProject/audius-protocol/wiki/Discovery-Node:-Configuration-Details#required-environment-variables). Generally node operators will not need to modify any other environment variables
+The full list of variables and explanations can be found [here](https://github.com/AudiusProject/audius-protocol/blob/master/discovery-provider/default_config.ini). Generally node operators will not need to modify any other environment variables.
 
 
 ##### External Discovery Provider Postgres Instance
