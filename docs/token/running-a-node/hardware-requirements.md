@@ -12,14 +12,14 @@ The minimum resource requirements per registered node are as follows.
 **Discovery Node**
 
 * 8 vCPU
-* 16 GB of RAM
-* 250 GB SSD
+* 16 GiB of RAM
+* 256 GiB SSD
 
 **Content Node**
 
 * 8 vCPU
-* 16 GB of RAM
-* 2000 GB SSD
+* 16 GiB of RAM
+* 2000 GiB (2 TiB) SSD
 
 
 
