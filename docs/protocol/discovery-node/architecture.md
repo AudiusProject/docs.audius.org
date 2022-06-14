@@ -11,7 +11,7 @@ The discovery node uses PostgreSQL. Our Postgres database is managed through [SQ
 
 ## Flask
 
-The discovery node web server serves as the entrypoint for reading data through the audius protocol. All queries are returned as JSON objects parsed from SQLAlchemy query resultsn, and can be found in [src/queries](https://github.com/AudiusProject/audius-protocol/tree/master/discovery-provider/src/queries). Some examples of queries include user-specific feeds, track data, playlist data, etc.  
+The discovery node web server serves as the entrypoint for reading data through the audius protocol. All queries are returned as JSON objects parsed from SQLAlchemy query resultsn, and can be found in [src/queries](https://github.com/AudiusProject/audius-protocol/tree/master/discovery-provider/src/queries). Some examples of queries include user-specific feeds, track data, playlist data, etc.
 
 ## Celery
 
@@ -34,7 +34,7 @@ What happens when 'index_blocks' is actually executed? The celery task does the 
 
     In each block, check if any transactions relevant to the audius smart contracts are present. If present, we retrieve specific event information from the associated transaction hash - examples include creator and track metadata. To do so, the discovery node *must* be aware of both the contract ABIs as well as each contract's address - these are shipped with each discovery node image. 
 
-3. Given operations from audius contracts in a given block, the task updates the corresponding table in the database. Certain index operations require a metadata fetch from decentralized storage (IPFS - InterPlanetary File System). Metadata formats can be found [here](https://github.com/AudiusProject/audius-protocol/blob/master/discovery-provider/src/tasks/metadata.py). 
+3. Given operations from audius contracts in a given block, the task updates the corresponding table in the database. Certain index operations require a metadata fetch from decentralized storage (Audius Storage Protocol). Metadata formats can be found [here](https://github.com/AudiusProject/audius-protocol/blob/master/discovery-provider/src/tasks/metadata.py).
 
 *Why index blocks instead of using event filters?*
 
