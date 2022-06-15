@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Audius Network Monitoring
 
-**Network Monitoring** (*formerly known as [KPI Dashboard](https://kpi.audius.co/)*) refers to network-wide metrics we collect from a discovery node and aggregate to assess the health of the entire network.
+**Network Monitoring** refers to network-wide metrics we collect from a discovery node and aggregate to assess the health of the entire network.
 
 Note - This is different from node-level metrics which are scraped by prometheus from the content and discovery nodes through a special `/prometheus_metrics` route.
 
@@ -27,8 +27,8 @@ Metrics are collected and calculated on a nightly basis.
 
 ### Prereqs
 
-- docker installed
-- direct access to a Discovery Node postgres DB
+- Docker installed
+- Direct access to a Discovery Node postgres DB
 - Secrets file, with the correct permission, formatted like so
     
     ```json
