@@ -9,7 +9,7 @@ sidebar_position: 1
 
 Note - This is different from node-level metrics which are scraped by prometheus from the content and discovery nodes through a special `/prometheus_metrics` route.
 
-Here are some metrics that we intend to:
+Here are some metrics that we intend to collect:
 
 - The number of CID on each CN that have been replicated at least once
 - The number of CID on each CN that have ***NOT*** been replicated at least once
@@ -29,7 +29,7 @@ Metrics are collected and calculated on a nightly basis.
 
 - Docker installed
 - Direct access to a Discovery Node postgres DB
-- Secrets file, with the correct permission, formatted like so
+- Secrets file, with the correct permissions, formatted like so
     
     ```json
     {
@@ -38,6 +38,9 @@ Metrics are collected and calculated on a nightly basis.
     }
     ```
     
+### Env Variables
+
+
 
 ### Running services
 
@@ -68,9 +71,9 @@ Currently, we compute three metrics
 
 What we are planning to add
 
-- The number of CID on each CN that have been replicated at least once
-- The number of CID on each CN that have ***NOT*** been replicated at least once
-- CID replication across the CNs
+- The number of CID on each Content Node that have been replicated at least once
+- The number of CID on each Content Node that have ***NOT*** been replicated at least once
+- CID replication across the Content Nodes
 - CID replication factor
 
 ---
