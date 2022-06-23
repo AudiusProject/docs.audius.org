@@ -12,7 +12,7 @@ pagination_next: null
 
 ### getFavorites
 
-**getFavorites**(`requestParameters`, `initOverrides?`): `Promise`<[`ActivityFull`](../interfaces/full.ActivityFull.md)[]\>
+**getFavorites**(`requestParameters`): `Promise`<[`ActivityFull`](../interfaces/full.ActivityFull.md)[]\>
 
 Gets a user\'s favorite tracks
 Fetch favorited tracks for a user
@@ -20,19 +20,18 @@ Fetch favorited tracks for a user
 Example:
 
 ```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
 
-**`throws`** Error
+const favorites = await audiusSdk.users.getFavorites({
+    id: "eAZl3"
+})
+
+```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetFavoritesRequest`](../interfaces/full.GetFavoritesRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -42,26 +41,15 @@ ___
 
 ### getFollowers
 
-**getFollowers**(`requestParameters`, `initOverrides?`): `Promise`<[`UserFull`](../interfaces/full.UserFull.md)[]\>
+**getFollowers**(`requestParameters`): `Promise`<[`UserFull`](../interfaces/full.UserFull.md)[]\>
 
 All users that follow the provided user
-
-Example:
-
-```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
-
-**`throws`** Error
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetFollowersRequest`](../interfaces/full.GetFollowersRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -71,26 +59,15 @@ ___
 
 ### getFollowings
 
-**getFollowings**(`requestParameters`, `initOverrides?`): `Promise`<[`UserFull`](../interfaces/full.UserFull.md)[]\>
+**getFollowings**(`requestParameters`): `Promise`<[`UserFull`](../interfaces/full.UserFull.md)[]\>
 
 All users that the provided user follows
-
-Example:
-
-```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
-
-**`throws`** Error
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetFollowingsRequest`](../interfaces/full.GetFollowingsRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -100,26 +77,15 @@ ___
 
 ### getRelatedUsers
 
-**getRelatedUsers**(`requestParameters`, `initOverrides?`): `Promise`<[`UserFull`](../interfaces/full.UserFull.md)[]\>
+**getRelatedUsers**(`requestParameters`): `Promise`<[`UserFull`](../interfaces/full.UserFull.md)[]\>
 
 Gets a list of users that might be of interest to followers of this user.
-
-Example:
-
-```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
-
-**`throws`** Error
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetRelatedUsersRequest`](../interfaces/full.GetRelatedUsersRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -129,26 +95,25 @@ ___
 
 ### getReposts
 
-**getReposts**(`requestParameters`, `initOverrides?`): `Promise`<[`ActivityFull`](../interfaces/full.ActivityFull.md)[]\>
+**getReposts**(`requestParameters`): `Promise`<[`ActivityFull`](../interfaces/full.ActivityFull.md)[]\>
 
 Gets the given user\'s reposts
 
 Example:
 
 ```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
 
-**`throws`** Error
+const reposts = await audiusSdk.users.getReposts({
+    id: "eAZl3"
+})
+
+```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetRepostsRequest`](../interfaces/full.GetRepostsRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -158,26 +123,15 @@ ___
 
 ### getRepostsByHandle
 
-**getRepostsByHandle**(`requestParameters`, `initOverrides?`): `Promise`<[`ActivityFull`](../interfaces/full.ActivityFull.md)[]\>
+**getRepostsByHandle**(`requestParameters`): `Promise`<[`ActivityFull`](../interfaces/full.ActivityFull.md)[]\>
 
 Gets the user\'s reposts by the user handle
-
-Example:
-
-```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
-
-**`throws`** Error
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetRepostsByHandleRequest`](../interfaces/full.GetRepostsByHandleRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -187,26 +141,15 @@ ___
 
 ### getSupporter
 
-**getSupporter**(`requestParameters`, `initOverrides?`): `Promise`<[`FullSupporter`](../interfaces/full.FullSupporter.md)\>
+**getSupporter**(`requestParameters`): `Promise`<[`FullSupporter`](../interfaces/full.FullSupporter.md)\>
 
 Gets the specified supporter of the given user
-
-Example:
-
-```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
-
-**`throws`** Error
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetSupporterRequest`](../interfaces/full.GetSupporterRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -216,26 +159,25 @@ ___
 
 ### getSupporters
 
-**getSupporters**(`requestParameters`, `initOverrides?`): `Promise`<[`FullSupporter`](../interfaces/full.FullSupporter.md)[]\>
+**getSupporters**(`requestParameters`): `Promise`<[`FullSupporter`](../interfaces/full.FullSupporter.md)[]\>
 
 Gets the supporters of the given user
 
 Example:
 
 ```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
 
-**`throws`** Error
+const supporters = await audiusSdk.users.getSupporters({
+    id: "eAZl3"
+})
+
+```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetSupportersRequest`](../interfaces/full.GetSupportersRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -245,26 +187,15 @@ ___
 
 ### getSupporting
 
-**getSupporting**(`requestParameters`, `initOverrides?`): `Promise`<[`FullSupporting`](../interfaces/full.FullSupporting.md)\>
+**getSupporting**(`requestParameters`): `Promise`<[`FullSupporting`](../interfaces/full.FullSupporting.md)\>
 
 Gets the support from the given user to the supported user
-
-Example:
-
-```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
-
-**`throws`** Error
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetSupportingRequest`](../interfaces/full.GetSupportingRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -274,26 +205,25 @@ ___
 
 ### getSupportings
 
-**getSupportings**(`requestParameters`, `initOverrides?`): `Promise`<[`FullSupporting`](../interfaces/full.FullSupporting.md)\>
+**getSupportings**(`requestParameters`): `Promise`<[`FullSupporting`](../interfaces/full.FullSupporting.md)\>
 
 Gets the users that the given user supports
 
 Example:
 
 ```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
 
-**`throws`** Error
+const supportings = await audiusSdk.users.getSupportings({
+    id: "eAZl3"
+})
+
+```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetSupportingsRequest`](../interfaces/full.GetSupportingsRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -303,26 +233,15 @@ ___
 
 ### getTopUsers
 
-**getTopUsers**(`requestParameters?`, `initOverrides?`): `Promise`<[`UserFull`](../interfaces/full.UserFull.md)[]\>
+**getTopUsers**(`requestParameters?`): `Promise`<[`UserFull`](../interfaces/full.UserFull.md)[]\>
 
 Get the Top Users having at least one track by follower count
-
-Example:
-
-```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
-
-**`throws`** Error
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetTopUsersRequest`](../interfaces/full.GetTopUsersRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -332,26 +251,15 @@ ___
 
 ### getTopUsersInGenre
 
-**getTopUsersInGenre**(`requestParameters?`, `initOverrides?`): `Promise`<[`UserFull`](../interfaces/full.UserFull.md)[]\>
+**getTopUsersInGenre**(`requestParameters?`): `Promise`<[`UserFull`](../interfaces/full.UserFull.md)[]\>
 
 Get the Top Users for a Given Genre
-
-Example:
-
-```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
-
-**`throws`** Error
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetTopUsersInGenreRequest`](../interfaces/full.GetTopUsersInGenreRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -361,26 +269,25 @@ ___
 
 ### getTracksByUser
 
-**getTracksByUser**(`requestParameters`, `initOverrides?`): `Promise`<[`TrackFull`](../interfaces/full.TrackFull.md)[]\>
+**getTracksByUser**(`requestParameters`): `Promise`<[`TrackFull`](../interfaces/full.TrackFull.md)[]\>
 
 Gets the tracks created by a user using their user ID
 
 Example:
 
 ```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
 
-**`throws`** Error
+const tracks = await audiusSdk.users.getTracksByUser({
+    id: "eAZl3"
+})
+
+```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetTracksByUserRequest`](../interfaces/full.GetTracksByUserRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -390,26 +297,15 @@ ___
 
 ### getTracksByUserHandle
 
-**getTracksByUserHandle**(`requestParameters`, `initOverrides?`): `Promise`<[`TrackFull`](../interfaces/full.TrackFull.md)[]\>
+**getTracksByUserHandle**(`requestParameters`): `Promise`<[`TrackFull`](../interfaces/full.TrackFull.md)[]\>
 
 Gets the tracks created by a user using the user\'s handle
-
-Example:
-
-```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
-
-**`throws`** Error
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetTracksByUserHandleRequest`](../interfaces/full.GetTracksByUserHandleRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -419,26 +315,25 @@ ___
 
 ### getUser
 
-**getUser**(`requestParameters`, `initOverrides?`): `Promise`<[`UserFull`](../interfaces/full.UserFull.md)[]\>
+**getUser**(`requestParameters`): `Promise`<[`UserFull`](../interfaces/full.UserFull.md)[]\>
 
 Gets a single user by their user ID
 
 Example:
 
 ```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
 
-**`throws`** Error
+const user = await audiusSdk.users.getUser({
+    id: "eAZl3"
+})
+
+```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetUserRequest`](../interfaces/full.GetUserRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -448,26 +343,15 @@ ___
 
 ### getUserByHandle
 
-**getUserByHandle**(`requestParameters`, `initOverrides?`): `Promise`<[`UserFull`](../interfaces/full.UserFull.md)[]\>
+**getUserByHandle**(`requestParameters`): `Promise`<[`UserFull`](../interfaces/full.UserFull.md)[]\>
 
 Gets a single user by their handle
-
-Example:
-
-```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
-
-**`throws`** Error
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetUserByHandleRequest`](../interfaces/full.GetUserByHandleRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -477,26 +361,15 @@ ___
 
 ### getUsersTrackHistory
 
-**getUsersTrackHistory**(`requestParameters`, `initOverrides?`): `Promise`<[`ActivityFull`](../interfaces/full.ActivityFull.md)[]\>
+**getUsersTrackHistory**(`requestParameters`): `Promise`<[`ActivityFull`](../interfaces/full.ActivityFull.md)[]\>
 
 Get the tracks the user recently listened to.
-
-Example:
-
-```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
-
-**`throws`** Error
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetUsersTrackHistoryRequest`](../interfaces/full.GetUsersTrackHistoryRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 

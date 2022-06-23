@@ -11,26 +11,23 @@ pagination_next: null
 
 ### getBulkTracks
 
-**getBulkTracks**(`requestParameters?`, `initOverrides?`): `Promise`<[`Track`](../interfaces/Track.md)[]\>
+**getBulkTracks**(`requestParameters?`): `Promise`<[`Track`](../interfaces/Track.md)[]\>
 
 Gets a list of tracks using their IDs or permalinks
 
 Example:
 
 ```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
 
-**`throws`** Error
+const tracks = await audiusSdk.tracks.getBulkTracks();
+
+```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetBulkTracksRequest`](../interfaces/GetBulkTracksRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -44,26 +41,25 @@ ___
 
 ### getTrack
 
-**getTrack**(`requestParameters`, `initOverrides?`): `Promise`<[`Track`](../interfaces/Track.md)\>
+**getTrack**(`requestParameters`): `Promise`<[`Track`](../interfaces/Track.md)\>
 
 Gets a track by ID
 
 Example:
 
 ```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
 
-**`throws`** Error
+const track = await audiusSdk.tracks.getTrack({
+    trackId: "D7KyD",
+});
+
+```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetTrackRequest`](../interfaces/GetTrackRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -77,26 +73,23 @@ ___
 
 ### getTrendingTracks
 
-**getTrendingTracks**(`requestParameters?`, `initOverrides?`): `Promise`<[`Track`](../interfaces/Track.md)[]\>
+**getTrendingTracks**(`requestParameters?`): `Promise`<[`Track`](../interfaces/Track.md)[]\>
 
 Gets the top 100 trending (most popular) tracks on Audius
 
 Example:
 
 ```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
 
-**`throws`** Error
+const tracks = await audiusSdk.tracks.getTrendingTracks();
+
+```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetTrendingTracksRequest`](../interfaces/GetTrendingTracksRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -110,26 +103,25 @@ ___
 
 ### searchTracks
 
-**searchTracks**(`requestParameters`, `initOverrides?`): `Promise`<[`Track`](../interfaces/Track.md)[]\>
+**searchTracks**(`requestParameters`): `Promise`<[`Track`](../interfaces/Track.md)[]\>
 
 Search for a track or tracks
 
 Example:
 
 ```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
 
-**`throws`** Error
+const searchResult = await audiusSdk.tracks.searchTracks({
+    query: "skrillex",
+});
+
+```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`SearchTracksRequest`](../interfaces/SearchTracksRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -148,12 +140,15 @@ ___
 Get the url of the track's streamable mp3 file
 
 Example:
+
 ```typescript
+
 const url = await audiusSdk.tracks.streamTrack({
-  trackId: "PjdWN",
+    trackId: "PjdWN",
 });
 const audio = new Audio(url);
 audio.play();
+
 ```
 
 #### Parameters

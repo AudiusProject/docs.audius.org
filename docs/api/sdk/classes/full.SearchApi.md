@@ -12,26 +12,15 @@ pagination_next: null
 
 ### search
 
-**search**(`requestParameters`, `initOverrides?`): `Promise`<[`SearchModel`](../interfaces/full.SearchModel.md)\>
+**search**(`requestParameters`): `Promise`<[`SearchModel`](../interfaces/full.SearchModel.md)\>
 
 Get Users/Tracks/Playlists/Albums that best match the search query
-
-Example:
-
-```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
-
-**`throws`** Error
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`SearchRequest`](../interfaces/full.SearchRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -41,27 +30,16 @@ ___
 
 ### searchAutocomplete
 
-**searchAutocomplete**(`requestParameters`, `initOverrides?`): `Promise`<[`SearchModel`](../interfaces/full.SearchModel.md)\>
+**searchAutocomplete**(`requestParameters`): `Promise`<[`SearchModel`](../interfaces/full.SearchModel.md)\>
 
 Same as search but optimized for quicker response at the cost of some entity information.
 Get Users/Tracks/Playlists/Albums that best match the search query
-
-Example:
-
-```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
-
-**`throws`** Error
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`SearchAutocompleteRequest`](../interfaces/full.SearchAutocompleteRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 

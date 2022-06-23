@@ -12,26 +12,25 @@ pagination_next: null
 
 ### getPlaylist
 
-**getPlaylist**(`requestParameters`, `initOverrides?`): `Promise`<[`PlaylistFull`](../interfaces/full.PlaylistFull.md)[]\>
+**getPlaylist**(`requestParameters`): `Promise`<[`PlaylistFull`](../interfaces/full.PlaylistFull.md)[]\>
 
 Get a playlist by ID
 
 Example:
 
 ```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
 
-**`throws`** Error
+const playlist = await audiusSdk.playlists.getPlaylists({
+    playlistId: "AxRP0",
+});
+
+```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetPlaylistRequest`](../interfaces/full.GetPlaylistRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -41,26 +40,23 @@ ___
 
 ### getTrendingPlaylists
 
-**getTrendingPlaylists**(`requestParameters?`, `initOverrides?`): `Promise`<[`PlaylistFull`](../interfaces/full.PlaylistFull.md)[]\>
+**getTrendingPlaylists**(`requestParameters?`): `Promise`<[`PlaylistFull`](../interfaces/full.PlaylistFull.md)[]\>
 
 Returns trending playlists for a time period
 
 Example:
 
 ```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
 
-**`throws`** Error
+const playlists = await audiusSdk.playlists.getTrendingPlaylists();
+
+```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetTrendingPlaylistsRequest`](../interfaces/full.GetTrendingPlaylistsRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -70,26 +66,15 @@ ___
 
 ### getTrendingPlaylistsWithVersion
 
-**getTrendingPlaylistsWithVersion**(`requestParameters`, `initOverrides?`): `Promise`<[`PlaylistFull`](../interfaces/full.PlaylistFull.md)[]\>
+**getTrendingPlaylistsWithVersion**(`requestParameters`): `Promise`<[`PlaylistFull`](../interfaces/full.PlaylistFull.md)[]\>
 
 Returns trending playlists for a time period based on the given trending version
-
-Example:
-
-```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
-
-**`throws`** Error
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetTrendingPlaylistsWithVersionRequest`](../interfaces/full.GetTrendingPlaylistsWithVersionRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -99,26 +84,15 @@ ___
 
 ### getUsersFromPlaylistFavorites
 
-**getUsersFromPlaylistFavorites**(`requestParameters`, `initOverrides?`): `Promise`<[`UserFull`](../interfaces/full.UserFull.md)[]\>
+**getUsersFromPlaylistFavorites**(`requestParameters`): `Promise`<[`UserFull`](../interfaces/full.UserFull.md)[]\>
 
 Get users that favorited a playlist
-
-Example:
-
-```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
-
-**`throws`** Error
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetUsersFromPlaylistFavoritesRequest`](../interfaces/full.GetUsersFromPlaylistFavoritesRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -128,26 +102,15 @@ ___
 
 ### getUsersFromPlaylistReposts
 
-**getUsersFromPlaylistReposts**(`requestParameters`, `initOverrides?`): `Promise`<[`UserFull`](../interfaces/full.UserFull.md)[]\>
+**getUsersFromPlaylistReposts**(`requestParameters`): `Promise`<[`UserFull`](../interfaces/full.UserFull.md)[]\>
 
 Get users that reposted a playlist
-
-Example:
-
-```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
-
-**`throws`** Error
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetUsersFromPlaylistRepostsRequest`](../interfaces/full.GetUsersFromPlaylistRepostsRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 

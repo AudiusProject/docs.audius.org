@@ -12,26 +12,15 @@ pagination_next: null
 
 ### getTips
 
-**getTips**(`requestParameters?`, `initOverrides?`): `Promise`<[`FullTip`](../interfaces/full.FullTip.md)[]\>
+**getTips**(`requestParameters?`): `Promise`<[`FullTip`](../interfaces/full.FullTip.md)[]\>
 
 Gets the most recent tips on the network
-
-Example:
-
-```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
-
-**`throws`** Error
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetTipsRequest`](../interfaces/full.GetTipsRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 

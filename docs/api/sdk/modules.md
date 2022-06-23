@@ -142,6 +142,5 @@ The Audius SDK
 | `playlists` | [`Playlists`](classes/PlaylistsApi.md) |
 | `resolve` | [`Resolve`](classes/ResolveApi.md) |
 | `tips` | [`Tips`](classes/TipsApi.md) |
-| `tracks` | { `getTrack`: (`requestParameters`: [`GetTrackRequest`](interfaces/GetTrackRequest.md), `initOverrides?`: `RequestInit`) => `Promise`<[`Track`](interfaces/Track.md)\> = tracks.getTrack } |
-| `tracks.getTrack` | (`requestParameters`: [`GetTrackRequest`](interfaces/GetTrackRequest.md), `initOverrides?`: `RequestInit`) => `Promise`<[`Track`](interfaces/Track.md)\> |
+| `tracks` | [`Tracks`](classes/TracksApi.md) |
 | `users` | [`Users`](classes/UsersApi.md) |

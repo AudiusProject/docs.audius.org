@@ -13,6 +13,7 @@ import {
   Reflection,
 } from "typedoc";
 import * as templates from "./templates";
+import * as examples from "./examples";
 
 export class AudiusThemeRenderContext extends DefaultThemeRenderContext {
   constructor(theme: DefaultTheme, options: Options) {
@@ -51,10 +52,19 @@ export function load(app: Application) {
     const reflections = event.project.getReflectionsByKind(
       ReflectionKind.Class
     ) as DeclarationReflection[];
+
+    // For each of the classes
     reflections.forEach((r: DeclarationReflection) => {
+      // Remove the Hierarchy display
       delete r.typeHierarchy;
+
+      // Map the names
       r.name = r.name.replace("Api", "");
+
+      // Hide the Kind display
       r.kindString = "";
+
+      // Delete everything but methods
       r.groups = r.groups?.filter((g) => {
         const kindsToDelete = [
           ReflectionKind.Property,
@@ -64,15 +74,21 @@ export function load(app: Application) {
         return result;
       });
 
-      // TODO: Delete "inherited from" on TracksApi and ResolveApi
+      //   TODO: Delete "inherited from" on TracksApi and ResolveApi
       r.children?.forEach((c) => {
         if (c.kind === ReflectionKind.Method) {
-          delete c.parent;
+          // Find the corresponding example in the `examples` directory
+          const example = (examples as any)[r.name.toLowerCase()]?.[c.name];
+
+          // Add the example to the comment
+          if (c.signatures?.[0].comment && example) {
+            c.signatures[0].comment.text = `Example:\n\n\`\`\`typescript\n${example}\n\`\`\``;
+          }
         }
       });
 
-      // TODO: Finish up sidebar structure
-      // TODO: add examples
+      // TODO: fix escaping of single quotes (user methods)
+      // TODO: Expand parameters
     });
   };
 

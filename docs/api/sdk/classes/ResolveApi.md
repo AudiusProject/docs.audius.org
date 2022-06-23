@@ -7,16 +7,23 @@ pagination_prev: null
 pagination_next: null
 ---
 
-This class extends from the generated ResolveApi to
-implement the custom logic for the `resolve` endpoint
-
 ## Methods
 
 ### resolve
 
 **resolve**<`T`\>(`requestParameters`): `Promise`<`T`\>
 
-Resolves and redirects a provided Audius app URL to the API resource URL it represents
+Resolves a provided Audius app URL to the API resource it represents
+
+Example:
+
+```typescript
+
+const track = await audiusSdk.resolve.resolve<Track>({
+  url: "https://audius.co/camouflybeats/hypermantra-86216",
+});
+
+```
 
 #### Type parameters
 

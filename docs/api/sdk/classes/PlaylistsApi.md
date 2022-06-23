@@ -11,26 +11,25 @@ pagination_next: null
 
 ### getPlaylist
 
-**getPlaylist**(`requestParameters`, `initOverrides?`): `Promise`<[`Playlist`](../interfaces/Playlist.md)[]\>
+**getPlaylist**(`requestParameters`): `Promise`<[`Playlist`](../interfaces/Playlist.md)[]\>
 
 Get a playlist by ID
 
 Example:
 
 ```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
 
-**`throws`** Error
+const playlist = await audiusSdk.playlists.getPlaylists({
+    playlistId: "AxRP0",
+});
+
+```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetPlaylistRequest`](../interfaces/GetPlaylistRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -40,26 +39,25 @@ ___
 
 ### getPlaylistTracks
 
-**getPlaylistTracks**(`requestParameters`, `initOverrides?`): `Promise`<[`Track`](../interfaces/Track.md)[]\>
+**getPlaylistTracks**(`requestParameters`): `Promise`<[`Track`](../interfaces/Track.md)[]\>
 
 Fetch tracks within a playlist.
 
 Example:
 
 ```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
 
-**`throws`** Error
+const tracks = await audiusSdk.playlists.getPlaylistTracks({
+    playlistId: "AxRP0",
+});
+
+```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetPlaylistTracksRequest`](../interfaces/GetPlaylistTracksRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -69,26 +67,23 @@ ___
 
 ### getTrendingPlaylists
 
-**getTrendingPlaylists**(`requestParameters?`, `initOverrides?`): `Promise`<[`Playlist`](../interfaces/Playlist.md)[]\>
+**getTrendingPlaylists**(`requestParameters?`): `Promise`<[`Playlist`](../interfaces/Playlist.md)[]\>
 
 Gets trending playlists for a time period
 
 Example:
 
 ```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
 
-**`throws`** Error
+const playlists = await audiusSdk.playlists.getTrendingPlaylists();
+
+```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`GetTrendingPlaylistsRequest`](../interfaces/GetTrendingPlaylistsRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 
@@ -98,26 +93,25 @@ ___
 
 ### searchPlaylists
 
-**searchPlaylists**(`requestParameters`, `initOverrides?`): `Promise`<[`Playlist`](../interfaces/Playlist.md)[]\>
+**searchPlaylists**(`requestParameters`): `Promise`<[`Playlist`](../interfaces/Playlist.md)[]\>
 
 Search for a playlist
 
 Example:
 
 ```typescript
-const track = await audiusSdk.tracks.getTrack({
-  trackId: "D7KyD",
-});
-```
 
-**`throws`** Error
+const playlists = await audiusSdk.playlists.searchPlaylists({
+    query: 'lo-fi',
+});
+
+```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `requestParameters` | [`SearchPlaylistsRequest`](../interfaces/SearchPlaylistsRequest.md) |
-| `initOverrides?` | `RequestInit` |
 
 #### Returns
 

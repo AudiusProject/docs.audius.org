@@ -13,7 +13,8 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "prepare:translations": "sh scripts/prepare-translations.sh"
+    "prepare:translations": "sh scripts/prepare-translations.sh",
+    "link-typedoc-plugin": "ln -s $(pwd)/typedoc-plugin-audius-theme $(pwd)/node_modules/typedoc-plugin-audius-theme"
   },
   "dependencies": {
     "@audius/sdk": "0.0.4",
