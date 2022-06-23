@@ -22,6 +22,7 @@ const Main = () => {
     if (initialThemeIsDark) {
       if (isDarkTheme) {
         // switch to dark
+
         applyTheme(dark);
       } else {
         // switch to light
