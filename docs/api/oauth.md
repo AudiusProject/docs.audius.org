@@ -22,7 +22,7 @@ sidebar_position: 4
 
 Follow the instructions [here](./sdk.md#installation) to install and initialize the Javascript SDK.
 
-If you are not able to use the Javascript SDK (for example, if you are developing a mobile app), skip to [Manual implementation](#manual-implementation).
+If you are not able to use the Javascript SDK (for example, if you are developing a mobile app), skip to [Manual Implementation](#manual-implementation).
 
 #### 1. Initialize the SDK `oauth` feature
 
@@ -69,7 +69,7 @@ audiusSdk.oauth.renderButton(document.getElementById("audiusLogInButton"), {
 
 `renderButton` replaces the element passed in the first parameter with the Log In with Audius button.
 
-The second parameter passed to `renderButton` is an optional object containing customization settings for the button. You can use [this playground](https://9ncjui.csb.app/) to see how these customizations affect the button appearance and determine what config works best for your app!
+The second parameter passed to `renderButton` is an optional object with customization settings for the button. You can use [this playground](https://9ncjui.csb.app/) to see how these customizations affect the button appearance and determine what config works best for your app!
 
 If you don't want to use `renderButton`, you can implement a login button yourself and invoke the login popup with `audiusSdk.oauth.login()`.
 
@@ -164,7 +164,7 @@ Create a "Log In with Audius" button on your app. If using HTML (or HTML-like ma
 
 Clicking your log in button should begin the authentication flow by directing the user to the Log In with Audius prompt page.
 
-On a native app, the log in button should open a secure web browser within the app (for instance ASWebAuthenticationSession or SFSafariViewController on iOS apps, and “Custom Tabs” on Android mobile apps) that loads the Audius login page. A web app, meanwhile, should open the Audius login page in a popup or simply redirect to it.
+On a native app, the log in button should open a secure web browser within the app that loads the Audius login page. A web app, meanwhile, should open the Audius login page in a popup or simply redirect to it.
 
 The Log In with Audius prompt page is located at the following URL:
 
@@ -201,8 +201,6 @@ You must open this page with the required URL parameters, described below.
 
 If the user exits the authentication flow before completing it--e.g. by closing the window--your app should detect this and have the UI respond accordingly.
 
-<br />
-
 #### 2. Process and verify the response
 
 ##### **If you used a redirect URI**:
@@ -219,8 +217,6 @@ where `{JWT}` is a [JSON web token](https://jwt.io/introduction) containing the 
 > `https://mydemoapp.com/oauth/receive-token?state=a4e0761e-8c21-4e20-819d-5a4daeab4ea9&token={JWT}`
 
 See "**Handling the response**" below for what to do next.
-
-<br />
 
 ##### **If you used `redirectURI=postmessage`**:
 
@@ -239,8 +235,6 @@ For instance, if your app opened the login page using the following URL: `https:
 where `<JWT>` is a [JSON web token](https://jwt.io/introduction) containing the user's encoded profile information and a signature.
 
 Quick reminder - make sure that your `postMessage` event listener validates that the origin of the incoming event is `https://audius.co`!
-
-<br />
 
 #### **Handling the response**
 
