@@ -22,6 +22,7 @@ const Main = () => {
     if (initialThemeIsDark) {
       if (isDarkTheme) {
         // switch to dark
+
         applyTheme(dark);
       } else {
         // switch to light
@@ -76,7 +77,7 @@ const Main = () => {
               </Link>
             </div>
             <div className={clsx("col col--4", styles.feature)}>
-              <Link className="navbar__link" to="api/sdk">
+              <Link className="navbar__link" to="api/sdk/index">
                 <div className="card">
                   <div className="card__header">
                     <h3>
