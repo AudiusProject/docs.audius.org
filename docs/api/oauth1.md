@@ -10,13 +10,25 @@ sidebar_position: 4
 <em>Log In with Audius dialog</em>
 </center>
 
-## Demos and example code
-
-- Demo with React - [Demo app](https://j2jx6f.csb.app/) | [Code](https://codesandbox.io/s/log-in-with-audius-demo-j2jx6f?file=/src/App.js)
-- Demo with vanilla JS - [Demo app](https://xkogl3.csb.app/) | [Code](https://codesandbox.io/s/log-in-with-audius-demo-vanilla-js-xkogl3?file=/index.html)
-- [Log In button generator](https://9ncjui.csb.app/)
+Log In with Audius lets you retrieve and verify a user's Audius profile information without making the user give you their Audius password.
 
 ## Quickstart
+
+```html title="index.html"
+<div id="audiusLogInButton"></div>
+```
+
+```js title="script.js"
+const audiusSdk = window.audiusSdk({ appName: "Name of your app goes here" });
+
+audiusSdk.oauth.init((res) => {
+  console.log("Log in success!", res);
+});
+
+audiusSdk.oauth.renderButton(document.getElementById("audiusLogInButton"));
+```
+
+## Full Reference
 
 #### 0. Install the SDK
 
@@ -117,9 +129,11 @@ See below for full code examples.
 
 Once you know your user's Audius user id, you can retrieve their Audius information at any time using our SDK or web APIs. However, the one piece of profile information that is not available outside of the Log In with Audius response is the user's email address. If you do not initially store the user's email address, you can only re-retrieve the email through having the user re-complete the Log In with Audius flow.
 
-## Overview
+## Demos and example code
 
-Log In with Audius lets you retrieve and verify a user's Audius profile information without making the user give you their Audius password.
+- Demo with React - [Demo app](https://j2jx6f.csb.app/) | [Code](https://codesandbox.io/s/log-in-with-audius-demo-j2jx6f?file=/src/App.js)
+- Demo with vanilla JS - [Demo app](https://xkogl3.csb.app/) | [Code](https://codesandbox.io/s/log-in-with-audius-demo-vanilla-js-xkogl3?file=/index.html)
+- [Log In button generator](https://9ncjui.csb.app/)
 
 ## Example use cases
 

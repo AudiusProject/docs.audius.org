@@ -39,7 +39,7 @@ module.exports = {
         },
         {
           type: "doc",
-          id: "api/oauth",
+          id: "api/oauth1",
         },
         {
           type: "category",
