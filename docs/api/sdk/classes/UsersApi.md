@@ -13,7 +13,7 @@ pagination_next: null
 
 **getConnectedWallets**(`requestParameters`): `Promise`<[`ConnectedWallets`](../interfaces/ConnectedWallets.md)\>
 
-Get the User\'s ERC and SPL connected wallets
+Get the User's ERC and SPL connected wallets
 
 Example:
 
@@ -41,7 +41,7 @@ ___
 
 **getFavorites**(`requestParameters`): `Promise`<[`Favorite`](../interfaces/Favorite.md)[]\>
 
-Gets a user\'s favorite tracks
+Gets a user's favorite tracks
 
 Example:
 
@@ -69,7 +69,7 @@ ___
 
 **getReposts**(`requestParameters`): `Promise`<[`Activity`](../interfaces/Activity.md)[]\>
 
-Gets the given user\'s reposts
+Gets the given user's reposts
 
 Example:
 
@@ -154,7 +154,7 @@ ___
 **getTopTrackTags**(`requestParameters`): `Promise`<`string`[]\>
 
 Gets the most used track tags by a user.
-Fetch most used tags in a user\'s tracks
+Fetch most used tags in a user's tracks
 
 Example:
 

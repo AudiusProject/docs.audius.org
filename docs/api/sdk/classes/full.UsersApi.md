@@ -1,12 +1,11 @@
 ---
 id: "full.UsersApi"
 title: "Users"
+sidebar_position: 0
 custom_edit_url: null
 pagination_prev: null
 pagination_next: null
 ---
-
-[full](../namespaces/full.md).Users
 
 ## Methods
 
@@ -14,7 +13,7 @@ pagination_next: null
 
 **getFavorites**(`requestParameters`): `Promise`<[`ActivityFull`](../interfaces/full.ActivityFull.md)[]\>
 
-Gets a user\'s favorite tracks
+Gets a user's favorite tracks
 Fetch favorited tracks for a user
 
 Example:
@@ -97,7 +96,7 @@ ___
 
 **getReposts**(`requestParameters`): `Promise`<[`ActivityFull`](../interfaces/full.ActivityFull.md)[]\>
 
-Gets the given user\'s reposts
+Gets the given user's reposts
 
 Example:
 
@@ -125,7 +124,7 @@ ___
 
 **getRepostsByHandle**(`requestParameters`): `Promise`<[`ActivityFull`](../interfaces/full.ActivityFull.md)[]\>
 
-Gets the user\'s reposts by the user handle
+Gets the user's reposts by the user handle
 
 #### Parameters
 
@@ -299,7 +298,7 @@ ___
 
 **getTracksByUserHandle**(`requestParameters`): `Promise`<[`TrackFull`](../interfaces/full.TrackFull.md)[]\>
 
-Gets the tracks created by a user using the user\'s handle
+Gets the tracks created by a user using the user's handle
 
 #### Parameters
 

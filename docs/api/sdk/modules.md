@@ -140,7 +140,7 @@ The Audius SDK
 | `full.users` | [`Users`](classes/full.UsersApi.md) |
 | `oauth` | `undefined` \| `Oauth` |
 | `playlists` | [`Playlists`](classes/PlaylistsApi.md) |
-| `resolve` | [`Resolve`](classes/ResolveApi.md) |
+| `resolve` | <T\>(`requestParameters`: [`ResolveRequest`](interfaces/ResolveRequest.md)) => `Promise`<`T`\> |
 | `tips` | [`Tips`](classes/TipsApi.md) |
 | `tracks` | [`Tracks`](classes/TracksApi.md) |
 | `users` | [`Users`](classes/UsersApi.md) |

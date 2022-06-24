@@ -19,7 +19,7 @@ Example:
 
 ```typescript
 
-const track = await audiusSdk.resolve.resolve<Track>({
+const track = await audiusSdk.resolve<Track>({
   url: "https://audius.co/camouflybeats/hypermantra-86216",
 });
 

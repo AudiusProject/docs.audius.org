@@ -1,12 +1,11 @@
 ---
 id: "full.PlaylistsApi"
 title: "Playlists"
+sidebar_position: 0
 custom_edit_url: null
 pagination_prev: null
 pagination_next: null
 ---
-
-[full](../namespaces/full.md).Playlists
 
 ## Methods
 
@@ -20,7 +19,7 @@ Example:
 
 ```typescript
 
-const playlist = await audiusSdk.playlists.getPlaylists({
+const playlist = await audiusSdk.playlists.getPlaylist({
     playlistId: "AxRP0",
 });
 
