@@ -100,7 +100,7 @@ const Main = () => {
                   <div className="card__header">
                     <h3>
                       <Translate description="oauth-reference">
-                        🔑 Log in with Audius
+                        🔑 Log In with Audius
                       </Translate>
                     </h3>
                   </div>
