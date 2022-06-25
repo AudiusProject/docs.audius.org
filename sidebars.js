@@ -95,7 +95,7 @@ module.exports = {
         },
         {
           type: "doc",
-          id: "api/oauth2",
+          id: "api/log-in-with-audius",
         },
       ],
     },
