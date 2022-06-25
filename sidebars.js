@@ -38,10 +38,6 @@ module.exports = {
           id: "api/hedgehog",
         },
         {
-          type: "doc",
-          id: "api/oauth1",
-        },
-        {
           type: "category",
           label: "Audius SDK",
           items: [
@@ -64,6 +60,10 @@ module.exports = {
             {
               type: "doc",
               id: "api/sdk/classes/ResolveApi",
+            },
+            {
+              type: "doc",
+              id: "api/sdk/oauth",
             },
             {
               type: "category",
@@ -92,6 +92,10 @@ module.exports = {
               ],
             },
           ],
+        },
+        {
+          type: "doc",
+          id: "api/oauth2",
         },
       ],
     },
