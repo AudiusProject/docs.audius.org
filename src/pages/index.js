@@ -96,7 +96,7 @@ const Main = () => {
               </Link>
             </div>
             <div className={clsx("col col--4", styles.feature)}>
-              <Link className="navbar__link" to="api/oauth">
+              <Link className="navbar__link" to="api/log-in-with-audius">
                 <div className="card">
                   <div className="card__header">
                     <h3>

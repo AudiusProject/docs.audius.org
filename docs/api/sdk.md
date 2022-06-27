@@ -73,7 +73,7 @@ const tracks = await audiusSdk.discoveryNode.getTracks();
 
 In your terminal, run:
 
-```bash"
+```bash
 npm install @audius/sdk
 ```
 
@@ -81,7 +81,7 @@ npm install @audius/sdk
 
 In your terminal, run:
 
-```bash"
+```bash
 npm install web3
 ```
 
