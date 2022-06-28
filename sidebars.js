@@ -63,7 +63,7 @@ module.exports = {
             },
             {
               type: "doc",
-              id: "api/sdk/oauth",
+              id: "api/sdk-oauth-methods",
             },
             {
               type: "category",
