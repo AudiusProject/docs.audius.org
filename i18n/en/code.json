@@ -281,5 +281,13 @@
   "Authenticate users using their Audius profile": {
     "message": "Authenticate users using their Audius profile",
     "description": "oauth"
+  },
+  "Easily build upon and interact with the Audius network using the Audius Javascript SDK": {
+    "message": "Easily build upon and interact with the Audius network using the Audius Javascript SDK",
+    "description": "sdk"
+  },
+  "🔑 Log In with Audius": {
+    "message": "🔑 Log In with Audius",
+    "description": "oauth-reference"
   }
 }
