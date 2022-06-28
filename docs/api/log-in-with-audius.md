@@ -68,7 +68,7 @@ const audiusSdk = sdk({ appName: "Name of your app goes here" });
 ```
 
 :::tip
-See complete instructions [here](/api/sdk/index#installation) to install and initialize the Javascript SDK.
+See complete instructions [here](sdk/index#installation) to install and initialize the Javascript SDK.
 :::
 
 ### 1. Initialize the SDK `oauth` feature
@@ -114,7 +114,7 @@ audiusSdk.oauth.renderButton(document.getElementById("audiusLogInButton"), {
 <div id="audiusLogInButton"></div>
 ```
 
-[`renderButton`](/api/sdk/oauth#oauthrenderbuttonelement-customizations) replaces the element passed in the first parameter with the Log In with Audius button.
+[`renderButton`](sdk-oauth-methods#oauthrenderbuttonelement-customizations) replaces the element passed in the first parameter with the Log In with Audius button.
 
 The second parameter passed to `renderButton` is an optional object with customization settings for the button.
 
@@ -122,7 +122,7 @@ The second parameter passed to `renderButton` is an optional object with customi
 You can use [this playground](https://9ncjui.csb.app/) to see how these customizations affect the button appearance and determine what config works best for your app!
 :::
 
-If you don't want to use `renderButton`, you can implement a login button yourself and invoke the login popup with [`audiusSdk.oauth.login()`](/api/sdk/oauth#oauthlogin).
+If you don't want to use `renderButton`, you can implement a login button yourself and invoke the login popup with [`audiusSdk.oauth.login()`](sdk-oauth-methods#oauthlogin).
 
 ### 3. Optional: Show loader until the button is ready
 
@@ -161,7 +161,7 @@ The log in button will be rendered with an id of `audius-login-button`. As shown
 
 [See examples](#examples)
 
-[Read full SDK `oauth` docs](/api/sdk/oauth)
+[Read full SDK `oauth` docs](sdk-oauth-methods)
 
 :::note
 
