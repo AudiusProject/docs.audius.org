@@ -18,4 +18,4 @@ The Audius protocol is powered by two off-chain services, the Discovery Node and
 **Content Node**
 
 * Hosts audio and image content
-* Syncs content across nodes to ensure data is consistent and highly available \(using IPFS and the Audius Storage Protocol under the hood\)
+* Syncs content across nodes to ensure data is consistent and highly available \(using the Audius Storage Protocol under the hood\)

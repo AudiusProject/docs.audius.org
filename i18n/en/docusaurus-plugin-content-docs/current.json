@@ -18,5 +18,41 @@
   "sidebar.tutorialSidebar.category.API": {
     "message": "API",
     "description": "The label for category API in sidebar tutorialSidebar"
+  },
+  "sidebar.sidebar.category.Protocol": {
+    "message": "Protocol",
+    "description": "The label for category Protocol in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Discovery Node": {
+    "message": "Discovery Node",
+    "description": "The label for category Discovery Node in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Token": {
+    "message": "Token",
+    "description": "The label for category Token in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Running A Node": {
+    "message": "Running A Node",
+    "description": "The label for category Running A Node in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.API": {
+    "message": "API",
+    "description": "The label for category API in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Audius SDK": {
+    "message": "Audius SDK",
+    "description": "The label for category Audius SDK in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Full Reference": {
+    "message": "Full Reference",
+    "description": "The label for category Full Reference in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Interfaces": {
+    "message": "Interfaces",
+    "description": "The label for category Interfaces in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Enums": {
+    "message": "Enums",
+    "description": "The label for category Enums in sidebar sidebar"
   }
 }
