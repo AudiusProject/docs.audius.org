@@ -15,7 +15,7 @@ Please join the node operator discord channel on the [Audius discord server](htt
 
 On a VM that meets the minimum requirements from above run:
 
-```sh
+```bash
 bash <(curl https://raw.githubusercontent.com/AudiusProject/audius-docker-compose/main/install.sh)
 ```
 

@@ -8,7 +8,7 @@ pagination_prev: null
 pagination_next: null
 ---
 
-# Audius Javascript SDK
+# Audius JavaScript SDK
 
 ## Overview
 

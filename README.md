@@ -3,6 +3,8 @@
 ## Dev
 
 ```
+npm install
+npm run init-sdk-docgen
 npm start
 ```
 

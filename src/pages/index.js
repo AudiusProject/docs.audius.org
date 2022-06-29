@@ -4,7 +4,7 @@ import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import Translate from "@docusaurus/Translate";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import useThemeContext from "@theme/hooks/useThemeContext";
+import { useColorMode } from '@docusaurus/theme-common'
 import styles from "./index.module.css";
 import { theme as dark } from "../theme/dark";
 import { theme as light } from "../theme/light";
@@ -16,7 +16,8 @@ const applyTheme = (themeObject) => {
 };
 
 const Main = () => {
-  const { isDarkTheme, setLightTheme, setDarkTheme } = useThemeContext();
+  const { colorMode } = useColorMode();
+  const isDarkTheme = colorMode === 'dark'
   const [initialThemeIsDark, setInitialThemeIsDark] = useState(null);
   useEffect(() => {
     if (initialThemeIsDark) {
@@ -58,7 +59,7 @@ const Main = () => {
               </Link>
             </div>
             <div className={clsx("col col--4", styles.feature)}>
-              <Link className="navbar__link" to="api/rest-api">
+              <Link className="navbar__link" to="developers/rest-api">
                 <div className="card">
                   <div className="card__header">
                     <h3>
@@ -77,7 +78,7 @@ const Main = () => {
               </Link>
             </div>
             <div className={clsx("col col--4", styles.feature)}>
-              <Link className="navbar__link" to="api/sdk/index">
+              <Link className="navbar__link" to="developers/sdk">
                 <div className="card">
                   <div className="card__header">
                     <h3>
@@ -88,7 +89,7 @@ const Main = () => {
                     <p>
                       <Translate description="sdk">
                         Easily build upon and interact with the Audius network
-                        using the Audius Javascript SDK
+                        using the Audius JavaScript SDK
                       </Translate>
                     </p>
                   </div>
@@ -96,7 +97,7 @@ const Main = () => {
               </Link>
             </div>
             <div className={clsx("col col--4", styles.feature)}>
-              <Link className="navbar__link" to="api/log-in-with-audius">
+              <Link className="navbar__link" to="developers/log-in-with-audius">
                 <div className="card">
                   <div className="card__header">
                     <h3>

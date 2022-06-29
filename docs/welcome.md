@@ -4,10 +4,11 @@ sidebar_label: Welcome
 sidebar_position: 1
 ---
 
-# 🎶 Welcome 🎶
+# Welcome
+
+![](/img/dev.jpg)
 
 Welcome to the Audius technical documentation!
-
 
 ## What is Audius?
 
