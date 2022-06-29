@@ -88,7 +88,7 @@ const Main = () => {
                   <div className="card__body">
                     <p>
                       <Translate description="sdk">
-                        Easily build upon and interact with the Audius network
+                        Easily build on and interact with the Audius protocol
                         using the Audius JavaScript SDK
                       </Translate>
                     </p>

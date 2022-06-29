@@ -18,7 +18,7 @@
     "init-sdk-docgen": "cd $(pwd)/node_modules/@audius/sdk && npm i && cd ../../../ && npm run link-typedoc-plugin"
   },
   "dependencies": {
-    "@audius/sdk": "0.0.7",
+    "@audius/sdk": "0.0.9",
     "@docusaurus/core": "2.0.0-beta.20",
     "@docusaurus/preset-classic": "2.0.0-beta.20",
     "@docusaurus/theme-search-algolia": "2.0.0-beta.20",
