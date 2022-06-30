@@ -5,17 +5,6 @@ sidebar_position: 4
 
 # Advanced Setup
 
-## Table of Contents
-- [Advanced Setup](#advanced-setup)
-  - [Table of Contents](#table-of-contents)
-  - [Launching a new node from scratch](#launching-a-new-node-from-scratch)
-    - [Setting environment variables](#setting-environment-variables)
-      - [Creator Node](#creator-node)
-        - [External Creator Node Postgres](#external-creator-node-postgres)
-      - [Discovery Provider](#discovery-provider)
-        - [External Discovery Provider Postgres Instance](#external-discovery-provider-postgres-instance)
-    - [Launch](#launch)
-  - [Migration from Kubernetes](#migration-from-kubernetes)
 ## Launching a new node from scratch
 
 ### Setting environment variables
@@ -40,6 +29,7 @@ The full list of variables and explanations can be found [here](https://github.c
 If you set an external Postgres url during setup you can skip this section.
 
 If you did not set an external Postgres url during setup and you want to add one now, replace the db url by running:
+
 ```sh
 audius-cli set-config creator-node
 key   : dbUrl

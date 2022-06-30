@@ -54,5 +54,21 @@
   "sidebar.sidebar.category.Enums": {
     "message": "Enums",
     "description": "The label for category Enums in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Developers": {
+    "message": "Developers",
+    "description": "The label for category Developers in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.JavaScript SDK": {
+    "message": "JavaScript SDK",
+    "description": "The label for category JavaScript SDK in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.content-node": {
+    "message": "content-node",
+    "description": "The label for category content-node in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Content Node": {
+    "message": "Content Node",
+    "description": "The label for category Content Node in sidebar sidebar"
   }
 }

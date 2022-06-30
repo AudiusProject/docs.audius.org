@@ -4,23 +4,22 @@ import {
   EventCallback,
   ReflectionKind,
   DeclarationReflection,
+  Reflection,
+  Converter,
+  Context
 } from "typedoc";
 import * as examples from "./examples";
 
 export function load(app: Application) {
   const onRenderBegin: EventCallback = (event: RendererEvent) => {
-    const reflections = event.project.getReflectionsByKind(
+    // For each of the classes
+    const classes = event.project.getReflectionsByKind(
       ReflectionKind.Class
     ) as DeclarationReflection[];
 
-    // For each of the classes
-    reflections.forEach((r: DeclarationReflection) => {
+    classes.forEach((r: DeclarationReflection) => {
       // Remove the Hierarchy display
       delete r.typeHierarchy;
-
-      if (r.name === "TracksApi") {
-        console.log(r.inheritedFrom);
-      }
 
       // Update the name
       r.name = r.name.replace("Api", "");
@@ -59,5 +58,19 @@ export function load(app: Application) {
     });
   };
 
+  const onConverterEnd: EventCallback = (context: Context) => {
+    const reflections = context.project.getReflectionsByKind(
+      ReflectionKind.All
+    ) as DeclarationReflection[];
+
+    reflections.forEach((r: Reflection) => {
+      // Remove full namespace entirely
+      if (r.getFullName().startsWith('full.')) {
+        context.project.removeReflection(r)
+      }
+    });
+  };
+
   app.renderer.on(RendererEvent.BEGIN, onRenderBegin);
+  app.converter.on(Converter.EVENT_END, onConverterEnd);
 }

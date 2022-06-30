@@ -24,7 +24,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
             path: "docs",
             routeBasePath: "/",
             sidebarPath: require.resolve("./sidebars.js"),
-            // editUrl: 'https://github.com/AudiusProject/docs.audius.org/',
+            editUrl: 'https://github.com/AudiusProject/docs.audius.org/',
           },
           theme: {
             customCss: require.resolve("./src/css/custom.css"),
@@ -39,17 +39,14 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
         // Plugin / TypeDoc options
         {
           plugin: ["typedoc-plugin-audius-theme"],
-          out: "./api/sdk",
+          out: "./developers/sdk",
           entryPoints: ["./node_modules/@audius/sdk/src/sdk/index.ts"],
           tsconfig: "./node_modules/@audius/sdk/tsconfig.json",
           excludeInternal: true,
           cleanOutputDir: true,
           disableSources: true,
           hideMembersSymbol: true,
-          frontmatter: {
-            pagination_prev: null,
-            pagination_next: null,
-          },
+          watch: process.env.TYPEDOC_WATCH
         },
       ],
     ],
@@ -93,18 +90,18 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
               position: "left",
             },
             {
-              to: "protocol/overview",
               label: "Protocol",
+              to: "/category/protocol",
               position: "left",
             },
             {
-              to: "api/rest-api",
-              label: "API",
-              position: "left",
-            },
-            {
-              to: "token/audio",
               label: "Token",
+              to: "/category/token",
+              position: "left",
+            },
+            {
+              label: "Developers",
+              to: "/category/developers",
               position: "left",
             },
             {
@@ -144,8 +141,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
                   to: "protocol/overview",
                 },
                 {
-                  label: "API",
-                  to: "api/rest-api",
+                  label: "Developers",
+                  to: "/category/developers",
                 },
               ],
             },

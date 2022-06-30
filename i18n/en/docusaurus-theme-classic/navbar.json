@@ -26,5 +26,9 @@
   "item.label.Welcome": {
     "message": "Welcome",
     "description": "Navbar item with label Welcome"
+  },
+  "item.label.Developers": {
+    "message": "Developers",
+    "description": "Navbar item with label Developers"
   }
 }

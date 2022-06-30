@@ -150,15 +150,12 @@ var examples = /*#__PURE__*/Object.freeze({
 
 function load(app) {
     const onRenderBegin = (event) => {
-        const reflections = event.project.getReflectionsByKind(typedoc.ReflectionKind.Class);
         // For each of the classes
-        reflections.forEach((r) => {
+        const classes = event.project.getReflectionsByKind(typedoc.ReflectionKind.Class);
+        classes.forEach((r) => {
             var _a, _b;
             // Remove the Hierarchy display
             delete r.typeHierarchy;
-            if (r.name === "TracksApi") {
-                console.log(r.inheritedFrom);
-            }
             // Update the name
             r.name = r.name.replace("Api", "");
             // Hide the Kind display
@@ -191,7 +188,17 @@ function load(app) {
             });
         });
     };
+    const onConverterEnd = (context) => {
+        const reflections = context.project.getReflectionsByKind(typedoc.ReflectionKind.All);
+        reflections.forEach((r) => {
+            // Remove full namespace entirely
+            if (r.getFullName().startsWith('full.')) {
+                context.project.removeReflection(r);
+            }
+        });
+    };
     app.renderer.on(typedoc.RendererEvent.BEGIN, onRenderBegin);
+    app.converter.on(typedoc.Converter.EVENT_END, onConverterEnd);
 }
 
 exports.load = load;

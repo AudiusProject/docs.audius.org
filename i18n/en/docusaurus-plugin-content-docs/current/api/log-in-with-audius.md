@@ -205,7 +205,7 @@ The JWT payload contains the following information about the user:
 
 ## Manual Implementation
 
-If you are not able to use the Audius Javascript SDK, you may implement Log In with Audius manually by following the steps below.
+If you are not able to use the Audius JavaScript SDK, you may implement Log In with Audius manually by following the steps below.
 
 ### 1. Open the Log In with Audius prompt page
 
