@@ -3,8 +3,6 @@ id: "full.RelatedArtistResponse"
 title: "Interface: RelatedArtistResponse"
 sidebar_label: "RelatedArtistResponse"
 custom_edit_url: null
-pagination_prev: null
-pagination_next: null
 ---
 
 [full](../namespaces/full.md).RelatedArtistResponse

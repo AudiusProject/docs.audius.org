@@ -45,7 +45,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
           excludeInternal: true,
           cleanOutputDir: true,
           disableSources: true,
-          hideMembersSymbol: true
+          hideMembersSymbol: true,
+          watch: process.env.TYPEDOC_WATCH
         },
       ],
     ],

@@ -4,8 +4,6 @@ title: "@audius/sdk"
 sidebar_label: "Exports"
 sidebar_position: 0.5
 custom_edit_url: null
-pagination_prev: null
-pagination_next: null
 ---
 
 ## Namespaces
@@ -131,13 +129,13 @@ The Audius SDK
 
 | Name | Type |
 | :------ | :------ |
-| `full` | { `playlists`: [`Playlists`](classes/full.PlaylistsApi.md) ; `reactions`: [`Reactions`](classes/full.ReactionsApi.md) ; `search`: [`Search`](classes/full.SearchApi.md) ; `tips`: [`Tips`](classes/full.TipsApi.md) ; `tracks`: [`Tracks`](classes/full.TracksApi.md) ; `users`: [`Users`](classes/full.UsersApi.md)  } |
-| `full.playlists` | [`Playlists`](classes/full.PlaylistsApi.md) |
-| `full.reactions` | [`Reactions`](classes/full.ReactionsApi.md) |
-| `full.search` | [`Search`](classes/full.SearchApi.md) |
-| `full.tips` | [`Tips`](classes/full.TipsApi.md) |
-| `full.tracks` | [`Tracks`](classes/full.TracksApi.md) |
-| `full.users` | [`Users`](classes/full.UsersApi.md) |
+| `full` | { `playlists`: `PlaylistsApi` ; `reactions`: `ReactionsApi` ; `search`: `SearchApi` ; `tips`: `TipsApi` ; `tracks`: `TracksApi` ; `users`: `UsersApi`  } |
+| `full.playlists` | `PlaylistsApi` |
+| `full.reactions` | `ReactionsApi` |
+| `full.search` | `SearchApi` |
+| `full.tips` | `TipsApi` |
+| `full.tracks` | `TracksApi` |
+| `full.users` | `UsersApi` |
 | `oauth` | `undefined` \| `Oauth` |
 | `playlists` | [`Playlists`](classes/PlaylistsApi.md) |
 | `resolve` | <T\>(`requestParameters`: [`ResolveRequest`](interfaces/ResolveRequest.md)) => `Promise`<`T`\> |

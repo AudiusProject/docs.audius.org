@@ -4,155 +4,966 @@ title: "Namespace: full"
 sidebar_label: "full"
 sidebar_position: 0
 custom_edit_url: null
-pagination_prev: null
-pagination_next: null
 ---
 
 ## Enumerations
 
-- [GetRecommendedTracksTimeEnum](../enums/full.GetRecommendedTracksTimeEnum.md)
-- [GetRecommendedTracksWithVersionTimeEnum](../enums/full.GetRecommendedTracksWithVersionTimeEnum.md)
-- [GetTipsCurrentUserFollowsEnum](../enums/full.GetTipsCurrentUserFollowsEnum.md)
-- [GetTipsUniqueByEnum](../enums/full.GetTipsUniqueByEnum.md)
-- [GetTracksByUserHandleSortEnum](../enums/full.GetTracksByUserHandleSortEnum.md)
-- [GetTracksByUserSortEnum](../enums/full.GetTracksByUserSortEnum.md)
-- [GetTrendingPlaylistsTimeEnum](../enums/full.GetTrendingPlaylistsTimeEnum.md)
-- [GetTrendingPlaylistsWithVersionTimeEnum](../enums/full.GetTrendingPlaylistsWithVersionTimeEnum.md)
-- [GetTrendingTracksTimeEnum](../enums/full.GetTrendingTracksTimeEnum.md)
-- [GetTrendingTracksWithVersionTimeEnum](../enums/full.GetTrendingTracksWithVersionTimeEnum.md)
-- [GetUnderTheRadarTracksFilterEnum](../enums/full.GetUnderTheRadarTracksFilterEnum.md)
-- [SearchAutocompleteKindEnum](../enums/full.SearchAutocompleteKindEnum.md)
-- [SearchKindEnum](../enums/full.SearchKindEnum.md)
+### GetRecommendedTracksTimeEnum
+
+ **GetRecommendedTracksTimeEnum**: `Object`
+
+**`export`**
+
+___
+
+### GetRecommendedTracksWithVersionTimeEnum
+
+ **GetRecommendedTracksWithVersionTimeEnum**: `Object`
+
+**`export`**
+
+___
+
+### GetTipsCurrentUserFollowsEnum
+
+ **GetTipsCurrentUserFollowsEnum**: `Object`
+
+**`export`**
+
+___
+
+### GetTipsUniqueByEnum
+
+ **GetTipsUniqueByEnum**: `Object`
+
+**`export`**
+
+___
+
+### GetTracksByUserHandleSortEnum
+
+ **GetTracksByUserHandleSortEnum**: `Object`
+
+**`export`**
+
+___
+
+### GetTracksByUserSortEnum
+
+ **GetTracksByUserSortEnum**: `Object`
+
+**`export`**
+
+___
+
+### GetTrendingPlaylistsTimeEnum
+
+ **GetTrendingPlaylistsTimeEnum**: `Object`
+
+**`export`**
+
+___
+
+### GetTrendingPlaylistsWithVersionTimeEnum
+
+ **GetTrendingPlaylistsWithVersionTimeEnum**: `Object`
+
+**`export`**
+
+___
+
+### GetTrendingTracksTimeEnum
+
+ **GetTrendingTracksTimeEnum**: `Object`
+
+**`export`**
+
+___
+
+### GetTrendingTracksWithVersionTimeEnum
+
+ **GetTrendingTracksWithVersionTimeEnum**: `Object`
+
+**`export`**
+
+___
+
+### GetUnderTheRadarTracksFilterEnum
+
+ **GetUnderTheRadarTracksFilterEnum**: `Object`
+
+**`export`**
+
+___
+
+### SearchAutocompleteKindEnum
+
+ **SearchAutocompleteKindEnum**: `Object`
+
+**`export`**
+
+___
+
+### SearchKindEnum
+
+ **SearchKindEnum**: `Object`
+
+**`export`**
 
 ## Classes
 
-- [Configuration](../classes/full.Configuration.md)
-- [Playlists](../classes/full.PlaylistsApi.md)
-- [Reactions](../classes/full.ReactionsApi.md)
-- [Search](../classes/full.SearchApi.md)
-- [Tips](../classes/full.TipsApi.md)
-- [Tracks](../classes/full.TracksApi.md)
-- [Users](../classes/full.UsersApi.md)
+### Configuration
+
+ **Configuration**: `Object`
+
+___
+
+### PlaylistsApi
+
+ **PlaylistsApi**: `Object`
+
+___
+
+### ReactionsApi
+
+ **ReactionsApi**: `Object`
+
+___
+
+### SearchApi
+
+ **SearchApi**: `Object`
+
+___
+
+### TipsApi
+
+ **TipsApi**: `Object`
+
+___
+
+### TracksApi
+
+ **TracksApi**: `Object`
+
+___
+
+### UsersApi
+
+ **UsersApi**: `Object`
 
 ## Interfaces
 
-- [ActivityFull](../interfaces/full.ActivityFull.md)
-- [BulkGetReactionsRequest](../interfaces/full.BulkGetReactionsRequest.md)
-- [ConfigurationParameters](../interfaces/full.ConfigurationParameters.md)
-- [CoverPhoto](../interfaces/full.CoverPhoto.md)
-- [DownloadMetadata](../interfaces/full.DownloadMetadata.md)
-- [Favorite](../interfaces/full.Favorite.md)
-- [FavoritesResponseFull](../interfaces/full.FavoritesResponseFull.md)
-- [FieldVisibility](../interfaces/full.FieldVisibility.md)
-- [FollowersResponse](../interfaces/full.FollowersResponse.md)
-- [FollowingResponse](../interfaces/full.FollowingResponse.md)
-- [FullGetSupporter](../interfaces/full.FullGetSupporter.md)
-- [FullGetSupporters](../interfaces/full.FullGetSupporters.md)
-- [FullGetSupporting](../interfaces/full.FullGetSupporting.md)
-- [FullPlaylistResponse](../interfaces/full.FullPlaylistResponse.md)
-- [FullRemix](../interfaces/full.FullRemix.md)
-- [FullRemixParent](../interfaces/full.FullRemixParent.md)
-- [FullReposts](../interfaces/full.FullReposts.md)
-- [FullSupporter](../interfaces/full.FullSupporter.md)
-- [FullSupporting](../interfaces/full.FullSupporting.md)
-- [FullTip](../interfaces/full.FullTip.md)
-- [FullTrackResponse](../interfaces/full.FullTrackResponse.md)
-- [FullTracks](../interfaces/full.FullTracks.md)
-- [FullTracksResponse](../interfaces/full.FullTracksResponse.md)
-- [FullTrendingPlaylistsResponse](../interfaces/full.FullTrendingPlaylistsResponse.md)
-- [FullUserResponse](../interfaces/full.FullUserResponse.md)
-- [GetBulkTracksRequest](../interfaces/full.GetBulkTracksRequest.md)
-- [GetFavoritesRequest](../interfaces/full.GetFavoritesRequest.md)
-- [GetFollowersRequest](../interfaces/full.GetFollowersRequest.md)
-- [GetFollowingsRequest](../interfaces/full.GetFollowingsRequest.md)
-- [GetMostLovedTracksRequest](../interfaces/full.GetMostLovedTracksRequest.md)
-- [GetPlaylistRequest](../interfaces/full.GetPlaylistRequest.md)
-- [GetRecommendedTracksRequest](../interfaces/full.GetRecommendedTracksRequest.md)
-- [GetRecommendedTracksWithVersionRequest](../interfaces/full.GetRecommendedTracksWithVersionRequest.md)
-- [GetRelatedUsersRequest](../interfaces/full.GetRelatedUsersRequest.md)
-- [GetRemixableTracksRequest](../interfaces/full.GetRemixableTracksRequest.md)
-- [GetRepostsByHandleRequest](../interfaces/full.GetRepostsByHandleRequest.md)
-- [GetRepostsRequest](../interfaces/full.GetRepostsRequest.md)
-- [GetSupporterRequest](../interfaces/full.GetSupporterRequest.md)
-- [GetSupportersRequest](../interfaces/full.GetSupportersRequest.md)
-- [GetSupportingRequest](../interfaces/full.GetSupportingRequest.md)
-- [GetSupportingsRequest](../interfaces/full.GetSupportingsRequest.md)
-- [GetTipsRequest](../interfaces/full.GetTipsRequest.md)
-- [GetTipsResponse](../interfaces/full.GetTipsResponse.md)
-- [GetTopUsersInGenreRequest](../interfaces/full.GetTopUsersInGenreRequest.md)
-- [GetTopUsersRequest](../interfaces/full.GetTopUsersRequest.md)
-- [GetTrackRemixParentsRequest](../interfaces/full.GetTrackRemixParentsRequest.md)
-- [GetTrackRemixesRequest](../interfaces/full.GetTrackRemixesRequest.md)
-- [GetTrackRequest](../interfaces/full.GetTrackRequest.md)
-- [GetTrackStemsRequest](../interfaces/full.GetTrackStemsRequest.md)
-- [GetTracksByUserHandleRequest](../interfaces/full.GetTracksByUserHandleRequest.md)
-- [GetTracksByUserRequest](../interfaces/full.GetTracksByUserRequest.md)
-- [GetTrendingPlaylistsRequest](../interfaces/full.GetTrendingPlaylistsRequest.md)
-- [GetTrendingPlaylistsWithVersionRequest](../interfaces/full.GetTrendingPlaylistsWithVersionRequest.md)
-- [GetTrendingTrackIDsRequest](../interfaces/full.GetTrendingTrackIDsRequest.md)
-- [GetTrendingTracksIDsWithVersionRequest](../interfaces/full.GetTrendingTracksIDsWithVersionRequest.md)
-- [GetTrendingTracksRequest](../interfaces/full.GetTrendingTracksRequest.md)
-- [GetTrendingTracksWithVersionRequest](../interfaces/full.GetTrendingTracksWithVersionRequest.md)
-- [GetUnderTheRadarTracksRequest](../interfaces/full.GetUnderTheRadarTracksRequest.md)
-- [GetUndergroundTrendingTracksRequest](../interfaces/full.GetUndergroundTrendingTracksRequest.md)
-- [GetUndergroundTrendingTracksWithVersionRequest](../interfaces/full.GetUndergroundTrendingTracksWithVersionRequest.md)
-- [GetUserByHandleRequest](../interfaces/full.GetUserByHandleRequest.md)
-- [GetUserRequest](../interfaces/full.GetUserRequest.md)
-- [GetUsersFromFavoritesRequest](../interfaces/full.GetUsersFromFavoritesRequest.md)
-- [GetUsersFromPlaylistFavoritesRequest](../interfaces/full.GetUsersFromPlaylistFavoritesRequest.md)
-- [GetUsersFromPlaylistRepostsRequest](../interfaces/full.GetUsersFromPlaylistRepostsRequest.md)
-- [GetUsersFromRepostsRequest](../interfaces/full.GetUsersFromRepostsRequest.md)
-- [GetUsersTrackHistoryRequest](../interfaces/full.GetUsersTrackHistoryRequest.md)
-- [HistoryResponseFull](../interfaces/full.HistoryResponseFull.md)
-- [PlaylistAddedTimestamp](../interfaces/full.PlaylistAddedTimestamp.md)
-- [PlaylistArtwork](../interfaces/full.PlaylistArtwork.md)
-- [PlaylistFull](../interfaces/full.PlaylistFull.md)
-- [PlaylistLibrary](../interfaces/full.PlaylistLibrary.md)
-- [ProfilePicture](../interfaces/full.ProfilePicture.md)
-- [RelatedArtistResponse](../interfaces/full.RelatedArtistResponse.md)
-- [RemixesResponse](../interfaces/full.RemixesResponse.md)
-- [RemixesResponseFull](../interfaces/full.RemixesResponseFull.md)
-- [RemixingResponse](../interfaces/full.RemixingResponse.md)
-- [Repost](../interfaces/full.Repost.md)
-- [SearchAutocompleteRequest](../interfaces/full.SearchAutocompleteRequest.md)
-- [SearchAutocompleteResponse](../interfaces/full.SearchAutocompleteResponse.md)
-- [SearchFullResponse](../interfaces/full.SearchFullResponse.md)
-- [SearchModel](../interfaces/full.SearchModel.md)
-- [SearchRequest](../interfaces/full.SearchRequest.md)
-- [StemFull](../interfaces/full.StemFull.md)
-- [StemParent](../interfaces/full.StemParent.md)
-- [StemsResponse](../interfaces/full.StemsResponse.md)
-- [SupporterReference](../interfaces/full.SupporterReference.md)
-- [TopGenreUsersResponse](../interfaces/full.TopGenreUsersResponse.md)
-- [TopUsersResponse](../interfaces/full.TopUsersResponse.md)
-- [TrackArtwork](../interfaces/full.TrackArtwork.md)
-- [TrackFavoritesResponseFull](../interfaces/full.TrackFavoritesResponseFull.md)
-- [TrackFull](../interfaces/full.TrackFull.md)
-- [TrackId](../interfaces/full.TrackId.md)
-- [TrackRepostsResponseFull](../interfaces/full.TrackRepostsResponseFull.md)
-- [TrackSegment](../interfaces/full.TrackSegment.md)
-- [TrendingIdsResponse](../interfaces/full.TrendingIdsResponse.md)
-- [TrendingTimesIds](../interfaces/full.TrendingTimesIds.md)
-- [UserFull](../interfaces/full.UserFull.md)
-- [VersionMetadata](../interfaces/full.VersionMetadata.md)
+### ActivityFull
+
+ **ActivityFull**: `Object`
+
+**`export`**
+
+**`interface`** ActivityFull
+
+___
+
+### BulkGetReactionsRequest
+
+ **BulkGetReactionsRequest**: `Object`
+
+___
+
+### ConfigurationParameters
+
+ **ConfigurationParameters**: `Object`
+
+___
+
+### CoverPhoto
+
+ **CoverPhoto**: `Object`
+
+**`export`**
+
+**`interface`** CoverPhoto
+
+___
+
+### DownloadMetadata
+
+ **DownloadMetadata**: `Object`
+
+**`export`**
+
+**`interface`** DownloadMetadata
+
+___
+
+### Favorite
+
+ **Favorite**: `Object`
+
+**`export`**
+
+**`interface`** Favorite
+
+___
+
+### FavoritesResponseFull
+
+ **FavoritesResponseFull**: `Object`
+
+**`export`**
+
+**`interface`** FavoritesResponseFull
+
+___
+
+### FieldVisibility
+
+ **FieldVisibility**: `Object`
+
+**`export`**
+
+**`interface`** FieldVisibility
+
+___
+
+### FollowersResponse
+
+ **FollowersResponse**: `Object`
+
+**`export`**
+
+**`interface`** FollowersResponse
+
+___
+
+### FollowingResponse
+
+ **FollowingResponse**: `Object`
+
+**`export`**
+
+**`interface`** FollowingResponse
+
+___
+
+### FullGetSupporter
+
+ **FullGetSupporter**: `Object`
+
+**`export`**
+
+**`interface`** FullGetSupporter
+
+___
+
+### FullGetSupporters
+
+ **FullGetSupporters**: `Object`
+
+**`export`**
+
+**`interface`** FullGetSupporters
+
+___
+
+### FullGetSupporting
+
+ **FullGetSupporting**: `Object`
+
+**`export`**
+
+**`interface`** FullGetSupporting
+
+___
+
+### FullPlaylistResponse
+
+ **FullPlaylistResponse**: `Object`
+
+**`export`**
+
+**`interface`** FullPlaylistResponse
+
+___
+
+### FullRemix
+
+ **FullRemix**: `Object`
+
+**`export`**
+
+**`interface`** FullRemix
+
+___
+
+### FullRemixParent
+
+ **FullRemixParent**: `Object`
+
+**`export`**
+
+**`interface`** FullRemixParent
+
+___
+
+### FullReposts
+
+ **FullReposts**: `Object`
+
+**`export`**
+
+**`interface`** FullReposts
+
+___
+
+### FullSupporter
+
+ **FullSupporter**: `Object`
+
+**`export`**
+
+**`interface`** FullSupporter
+
+___
+
+### FullSupporting
+
+ **FullSupporting**: `Object`
+
+**`export`**
+
+**`interface`** FullSupporting
+
+___
+
+### FullTip
+
+ **FullTip**: `Object`
+
+**`export`**
+
+**`interface`** FullTip
+
+___
+
+### FullTrackResponse
+
+ **FullTrackResponse**: `Object`
+
+**`export`**
+
+**`interface`** FullTrackResponse
+
+___
+
+### FullTracks
+
+ **FullTracks**: `Object`
+
+**`export`**
+
+**`interface`** FullTracks
+
+___
+
+### FullTracksResponse
+
+ **FullTracksResponse**: `Object`
+
+**`export`**
+
+**`interface`** FullTracksResponse
+
+___
+
+### FullTrendingPlaylistsResponse
+
+ **FullTrendingPlaylistsResponse**: `Object`
+
+**`export`**
+
+**`interface`** FullTrendingPlaylistsResponse
+
+___
+
+### FullUserResponse
+
+ **FullUserResponse**: `Object`
+
+**`export`**
+
+**`interface`** FullUserResponse
+
+___
+
+### GetBulkTracksRequest
+
+ **GetBulkTracksRequest**: `Object`
+
+___
+
+### GetFavoritesRequest
+
+ **GetFavoritesRequest**: `Object`
+
+___
+
+### GetFollowersRequest
+
+ **GetFollowersRequest**: `Object`
+
+___
+
+### GetFollowingsRequest
+
+ **GetFollowingsRequest**: `Object`
+
+___
+
+### GetMostLovedTracksRequest
+
+ **GetMostLovedTracksRequest**: `Object`
+
+___
+
+### GetPlaylistRequest
+
+ **GetPlaylistRequest**: `Object`
+
+___
+
+### GetRecommendedTracksRequest
+
+ **GetRecommendedTracksRequest**: `Object`
+
+___
+
+### GetRecommendedTracksWithVersionRequest
+
+ **GetRecommendedTracksWithVersionRequest**: `Object`
+
+___
+
+### GetRelatedUsersRequest
+
+ **GetRelatedUsersRequest**: `Object`
+
+___
+
+### GetRemixableTracksRequest
+
+ **GetRemixableTracksRequest**: `Object`
+
+___
+
+### GetRepostsByHandleRequest
+
+ **GetRepostsByHandleRequest**: `Object`
+
+___
+
+### GetRepostsRequest
+
+ **GetRepostsRequest**: `Object`
+
+___
+
+### GetSupporterRequest
+
+ **GetSupporterRequest**: `Object`
+
+___
+
+### GetSupportersRequest
+
+ **GetSupportersRequest**: `Object`
+
+___
+
+### GetSupportingRequest
+
+ **GetSupportingRequest**: `Object`
+
+___
+
+### GetSupportingsRequest
+
+ **GetSupportingsRequest**: `Object`
+
+___
+
+### GetTipsRequest
+
+ **GetTipsRequest**: `Object`
+
+___
+
+### GetTipsResponse
+
+ **GetTipsResponse**: `Object`
+
+**`export`**
+
+**`interface`** GetTipsResponse
+
+___
+
+### GetTopUsersInGenreRequest
+
+ **GetTopUsersInGenreRequest**: `Object`
+
+___
+
+### GetTopUsersRequest
+
+ **GetTopUsersRequest**: `Object`
+
+___
+
+### GetTrackRemixParentsRequest
+
+ **GetTrackRemixParentsRequest**: `Object`
+
+___
+
+### GetTrackRemixesRequest
+
+ **GetTrackRemixesRequest**: `Object`
+
+___
+
+### GetTrackRequest
+
+ **GetTrackRequest**: `Object`
+
+___
+
+### GetTrackStemsRequest
+
+ **GetTrackStemsRequest**: `Object`
+
+___
+
+### GetTracksByUserHandleRequest
+
+ **GetTracksByUserHandleRequest**: `Object`
+
+___
+
+### GetTracksByUserRequest
+
+ **GetTracksByUserRequest**: `Object`
+
+___
+
+### GetTrendingPlaylistsRequest
+
+ **GetTrendingPlaylistsRequest**: `Object`
+
+___
+
+### GetTrendingPlaylistsWithVersionRequest
+
+ **GetTrendingPlaylistsWithVersionRequest**: `Object`
+
+___
+
+### GetTrendingTrackIDsRequest
+
+ **GetTrendingTrackIDsRequest**: `Object`
+
+___
+
+### GetTrendingTracksIDsWithVersionRequest
+
+ **GetTrendingTracksIDsWithVersionRequest**: `Object`
+
+___
+
+### GetTrendingTracksRequest
+
+ **GetTrendingTracksRequest**: `Object`
+
+___
+
+### GetTrendingTracksWithVersionRequest
+
+ **GetTrendingTracksWithVersionRequest**: `Object`
+
+___
+
+### GetUnderTheRadarTracksRequest
+
+ **GetUnderTheRadarTracksRequest**: `Object`
+
+___
+
+### GetUndergroundTrendingTracksRequest
+
+ **GetUndergroundTrendingTracksRequest**: `Object`
+
+___
+
+### GetUndergroundTrendingTracksWithVersionRequest
+
+ **GetUndergroundTrendingTracksWithVersionRequest**: `Object`
+
+___
+
+### GetUserByHandleRequest
+
+ **GetUserByHandleRequest**: `Object`
+
+___
+
+### GetUserRequest
+
+ **GetUserRequest**: `Object`
+
+___
+
+### GetUsersFromFavoritesRequest
+
+ **GetUsersFromFavoritesRequest**: `Object`
+
+___
+
+### GetUsersFromPlaylistFavoritesRequest
+
+ **GetUsersFromPlaylistFavoritesRequest**: `Object`
+
+___
+
+### GetUsersFromPlaylistRepostsRequest
+
+ **GetUsersFromPlaylistRepostsRequest**: `Object`
+
+___
+
+### GetUsersFromRepostsRequest
+
+ **GetUsersFromRepostsRequest**: `Object`
+
+___
+
+### GetUsersTrackHistoryRequest
+
+ **GetUsersTrackHistoryRequest**: `Object`
+
+___
+
+### HistoryResponseFull
+
+ **HistoryResponseFull**: `Object`
+
+**`export`**
+
+**`interface`** HistoryResponseFull
+
+___
+
+### PlaylistAddedTimestamp
+
+ **PlaylistAddedTimestamp**: `Object`
+
+**`export`**
+
+**`interface`** PlaylistAddedTimestamp
+
+___
+
+### PlaylistArtwork
+
+ **PlaylistArtwork**: `Object`
+
+**`export`**
+
+**`interface`** PlaylistArtwork
+
+___
+
+### PlaylistFull
+
+ **PlaylistFull**: `Object`
+
+**`export`**
+
+**`interface`** PlaylistFull
+
+___
+
+### PlaylistLibrary
+
+ **PlaylistLibrary**: `Object`
+
+**`export`**
+
+**`interface`** PlaylistLibrary
+
+___
+
+### ProfilePicture
+
+ **ProfilePicture**: `Object`
+
+**`export`**
+
+**`interface`** ProfilePicture
+
+___
+
+### RelatedArtistResponse
+
+ **RelatedArtistResponse**: `Object`
+
+**`export`**
+
+**`interface`** RelatedArtistResponse
+
+___
+
+### RemixesResponse
+
+ **RemixesResponse**: `Object`
+
+**`export`**
+
+**`interface`** RemixesResponse
+
+___
+
+### RemixesResponseFull
+
+ **RemixesResponseFull**: `Object`
+
+**`export`**
+
+**`interface`** RemixesResponseFull
+
+___
+
+### RemixingResponse
+
+ **RemixingResponse**: `Object`
+
+**`export`**
+
+**`interface`** RemixingResponse
+
+___
+
+### Repost
+
+ **Repost**: `Object`
+
+**`export`**
+
+**`interface`** Repost
+
+___
+
+### SearchAutocompleteRequest
+
+ **SearchAutocompleteRequest**: `Object`
+
+___
+
+### SearchAutocompleteResponse
+
+ **SearchAutocompleteResponse**: `Object`
+
+**`export`**
+
+**`interface`** SearchAutocompleteResponse
+
+___
+
+### SearchFullResponse
+
+ **SearchFullResponse**: `Object`
+
+**`export`**
+
+**`interface`** SearchFullResponse
+
+___
+
+### SearchModel
+
+ **SearchModel**: `Object`
+
+**`export`**
+
+**`interface`** SearchModel
+
+___
+
+### SearchRequest
+
+ **SearchRequest**: `Object`
+
+___
+
+### StemFull
+
+ **StemFull**: `Object`
+
+**`export`**
+
+**`interface`** StemFull
+
+___
+
+### StemParent
+
+ **StemParent**: `Object`
+
+**`export`**
+
+**`interface`** StemParent
+
+___
+
+### StemsResponse
+
+ **StemsResponse**: `Object`
+
+**`export`**
+
+**`interface`** StemsResponse
+
+___
+
+### SupporterReference
+
+ **SupporterReference**: `Object`
+
+**`export`**
+
+**`interface`** SupporterReference
+
+___
+
+### TopGenreUsersResponse
+
+ **TopGenreUsersResponse**: `Object`
+
+**`export`**
+
+**`interface`** TopGenreUsersResponse
+
+___
+
+### TopUsersResponse
+
+ **TopUsersResponse**: `Object`
+
+**`export`**
+
+**`interface`** TopUsersResponse
+
+___
+
+### TrackArtwork
+
+ **TrackArtwork**: `Object`
+
+**`export`**
+
+**`interface`** TrackArtwork
+
+___
+
+### TrackFavoritesResponseFull
+
+ **TrackFavoritesResponseFull**: `Object`
+
+**`export`**
+
+**`interface`** TrackFavoritesResponseFull
+
+___
+
+### TrackFull
+
+ **TrackFull**: `Object`
+
+**`export`**
+
+**`interface`** TrackFull
+
+___
+
+### TrackId
+
+ **TrackId**: `Object`
+
+**`export`**
+
+**`interface`** TrackId
+
+___
+
+### TrackRepostsResponseFull
+
+ **TrackRepostsResponseFull**: `Object`
+
+**`export`**
+
+**`interface`** TrackRepostsResponseFull
+
+___
+
+### TrackSegment
+
+ **TrackSegment**: `Object`
+
+**`export`**
+
+**`interface`** TrackSegment
+
+___
+
+### TrendingIdsResponse
+
+ **TrendingIdsResponse**: `Object`
+
+**`export`**
+
+**`interface`** TrendingIdsResponse
+
+___
+
+### TrendingTimesIds
+
+ **TrendingTimesIds**: `Object`
+
+**`export`**
+
+**`interface`** TrendingTimesIds
+
+___
+
+### UserFull
+
+ **UserFull**: `Object`
+
+**`export`**
+
+**`interface`** UserFull
+
+___
+
+### VersionMetadata
+
+ **VersionMetadata**: `Object`
+
+**`export`**
+
+**`interface`** VersionMetadata
 
 ## Type Aliases
 
 ### FetchAPI
 
- **FetchAPI**: (`url`: `string`, `init?`: `RequestInit`) => `Promise`<`unknown`\>
-
-#### Type declaration
-
-(`url`, `init?`): `Promise`<`unknown`\>
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `url` | `string` |
-| `init?` | `RequestInit` |
-
-##### Returns
-
-`Promise`<`unknown`\>
+ **FetchAPI**: `Object`

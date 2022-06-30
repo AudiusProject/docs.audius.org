@@ -4,8 +4,6 @@ title: "Interface: GetTrendingTracksRequest"
 sidebar_label: "GetTrendingTracksRequest"
 sidebar_position: 0
 custom_edit_url: null
-pagination_prev: null
-pagination_next: null
 ---
 
 ## Properties

@@ -3,8 +3,6 @@ id: "full.TrackFull"
 title: "Interface: TrackFull"
 sidebar_label: "TrackFull"
 custom_edit_url: null
-pagination_prev: null
-pagination_next: null
 ---
 
 [full](../namespaces/full.md).TrackFull

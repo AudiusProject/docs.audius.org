@@ -3,8 +3,6 @@ id: "full.SearchFullResponse"
 title: "Interface: SearchFullResponse"
 sidebar_label: "SearchFullResponse"
 custom_edit_url: null
-pagination_prev: null
-pagination_next: null
 ---
 
 [full](../namespaces/full.md).SearchFullResponse

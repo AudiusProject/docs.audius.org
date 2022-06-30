@@ -344,5 +344,9 @@
   "theme.navbar.mobileLanguageDropdown.label": {
     "message": "Languages",
     "description": "The label for the mobile language switcher dropdown"
+  },
+  "Easily build on and interact with the Audius protocol using the Audius JavaScript SDK": {
+    "message": "Easily build on and interact with the Audius protocol using the Audius JavaScript SDK",
+    "description": "sdk"
   }
 }

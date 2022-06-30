@@ -3,8 +3,6 @@ id: "full.FullUserResponse"
 title: "Interface: FullUserResponse"
 sidebar_label: "FullUserResponse"
 custom_edit_url: null
-pagination_prev: null
-pagination_next: null
 ---
 
 [full](../namespaces/full.md).FullUserResponse

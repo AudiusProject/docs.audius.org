@@ -3,8 +3,6 @@ id: "full.GetTipsCurrentUserFollowsEnum"
 title: "Enumeration: GetTipsCurrentUserFollowsEnum"
 sidebar_label: "GetTipsCurrentUserFollowsEnum"
 custom_edit_url: null
-pagination_prev: null
-pagination_next: null
 ---
 
 [full](../namespaces/full.md).GetTipsCurrentUserFollowsEnum

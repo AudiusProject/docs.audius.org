@@ -3,8 +3,6 @@ id: "full.GetUsersFromPlaylistRepostsRequest"
 title: "Interface: GetUsersFromPlaylistRepostsRequest"
 sidebar_label: "GetUsersFromPlaylistRepostsRequest"
 custom_edit_url: null
-pagination_prev: null
-pagination_next: null
 ---
 
 [full](../namespaces/full.md).GetUsersFromPlaylistRepostsRequest

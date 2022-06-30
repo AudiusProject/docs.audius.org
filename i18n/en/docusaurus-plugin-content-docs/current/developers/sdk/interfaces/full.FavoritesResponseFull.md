@@ -3,8 +3,6 @@ id: "full.FavoritesResponseFull"
 title: "Interface: FavoritesResponseFull"
 sidebar_label: "FavoritesResponseFull"
 custom_edit_url: null
-pagination_prev: null
-pagination_next: null
 ---
 
 [full](../namespaces/full.md).FavoritesResponseFull

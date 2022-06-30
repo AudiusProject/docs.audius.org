@@ -11,7 +11,7 @@ custom_edit_url: null
 ## Overview
 
 The Audius JavaScript (TypeScript) SDK allows you to easily build on and interact with the Audius protocol.
-- ✍️ Log in with Audius
+- ✍️ Log In with Audius
 - 🎵 Fetch and stream tracks
 - 🔍 Search and display users, tracks, and playlists
 

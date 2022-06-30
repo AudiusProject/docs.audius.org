@@ -3,8 +3,6 @@ id: "full.GetTrendingPlaylistsWithVersionRequest"
 title: "Interface: GetTrendingPlaylistsWithVersionRequest"
 sidebar_label: "GetTrendingPlaylistsWithVersionRequest"
 custom_edit_url: null
-pagination_prev: null
-pagination_next: null
 ---
 
 [full](../namespaces/full.md).GetTrendingPlaylistsWithVersionRequest

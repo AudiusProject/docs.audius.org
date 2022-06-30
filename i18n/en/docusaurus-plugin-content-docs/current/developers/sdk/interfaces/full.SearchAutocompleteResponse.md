@@ -3,8 +3,6 @@ id: "full.SearchAutocompleteResponse"
 title: "Interface: SearchAutocompleteResponse"
 sidebar_label: "SearchAutocompleteResponse"
 custom_edit_url: null
-pagination_prev: null
-pagination_next: null
 ---
 
 [full](../namespaces/full.md).SearchAutocompleteResponse

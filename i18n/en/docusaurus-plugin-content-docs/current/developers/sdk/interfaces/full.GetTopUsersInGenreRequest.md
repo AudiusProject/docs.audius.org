@@ -3,8 +3,6 @@ id: "full.GetTopUsersInGenreRequest"
 title: "Interface: GetTopUsersInGenreRequest"
 sidebar_label: "GetTopUsersInGenreRequest"
 custom_edit_url: null
-pagination_prev: null
-pagination_next: null
 ---
 
 [full](../namespaces/full.md).GetTopUsersInGenreRequest

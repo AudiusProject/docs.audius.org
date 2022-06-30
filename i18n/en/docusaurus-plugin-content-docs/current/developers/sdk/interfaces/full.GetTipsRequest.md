@@ -3,8 +3,6 @@ id: "full.GetTipsRequest"
 title: "Interface: GetTipsRequest"
 sidebar_label: "GetTipsRequest"
 custom_edit_url: null
-pagination_prev: null
-pagination_next: null
 ---
 
 [full](../namespaces/full.md).GetTipsRequest

@@ -3,8 +3,6 @@ id: "full.Repost"
 title: "Interface: Repost"
 sidebar_label: "Repost"
 custom_edit_url: null
-pagination_prev: null
-pagination_next: null
 ---
 
 [full](../namespaces/full.md).Repost

@@ -8,6 +8,11 @@ npm run init-sdk-docgen
 npm start
 ```
 
+To see your changes real-time, run
+```
+npm run prepare:translations
+```
+
 
 ## Build
 

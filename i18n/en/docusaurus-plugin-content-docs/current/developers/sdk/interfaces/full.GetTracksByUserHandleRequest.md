@@ -3,8 +3,6 @@ id: "full.GetTracksByUserHandleRequest"
 title: "Interface: GetTracksByUserHandleRequest"
 sidebar_label: "GetTracksByUserHandleRequest"
 custom_edit_url: null
-pagination_prev: null
-pagination_next: null
 ---
 
 [full](../namespaces/full.md).GetTracksByUserHandleRequest

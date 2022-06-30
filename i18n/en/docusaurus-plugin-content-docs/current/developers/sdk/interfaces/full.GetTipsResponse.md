@@ -3,8 +3,6 @@ id: "full.GetTipsResponse"
 title: "Interface: GetTipsResponse"
 sidebar_label: "GetTipsResponse"
 custom_edit_url: null
-pagination_prev: null
-pagination_next: null
 ---
 
 [full](../namespaces/full.md).GetTipsResponse
