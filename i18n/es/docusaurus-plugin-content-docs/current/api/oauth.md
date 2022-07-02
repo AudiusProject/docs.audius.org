@@ -61,29 +61,29 @@ _Iniciar sesión con el diálogo de Audius_
 
 <br />
 
-## Workflow
+## Flujo trabajo
 
-The "Log in with Audius" flow looks like this:
+El flujo de "Iniciar sesión con audius" se ve así:
 
-1. You provide a button on your app or website to begin the authentication flow
-2. When the user clicks the button, it opens a popup containing an Audius login page that prompts the user to sign in with their Audius credentials (alternatively, your app/website can redirect to the Audius login page instead of using a popup)
-3. Once the user successfully signs in, Audius provides your app/website with the user profile using a JSON Web Token (JWT)
-4. Your app verifies and decodes the JWT
+1. Usted proporciona un botón en su aplicación o sitio web para iniciar el flujo de autenticación
+2. Cuando el usuario hace clic en el botón, abre una ventana emergente que contiene una página de inicio de sesión de Audius que solicita al usuario que inicie sesión con sus credenciales de Audius (alternativamente, tu aplicación/sitio web puede redirigir a la página de inicio de sesión de Audius en lugar de usar un popup)
+3. Una vez que el usuario se registra correctamente, Audius proporciona a tu app/website el perfil de usuario usando un JSON Web Token (JWT)
+4. Tu aplicación verifica y decodifica el JWT
 
-The JWT payload contains the following information about the user:
+El payload de JWT contiene la siguiente información sobre el usuario:
 
-- Unique identifier (Audius user id)
-- Email
-- Display name
-- Audius handle
-- Whether the user is a verified artist (i.e. has a purple checkmark)
-- Profile picture URL, if any
+- Identificador único (id de usuario de Audius)
+- Correo
+- Nombre mostrado
+- Usuario de Audius
+- Si el usuario es un artista verificado (es decir, tiene una verificación morada)
+- URL de la imagen de perfil, si hay alguna
 
 ### Demo
 
-Check out a quick demo of the Oauth flow [here](https://codesandbox.io/s/log-in-with-audius-demo-j2jx6f)!
+Echa un vistazo a una demostración rápida del flujo [aquí](https://codesandbox.io/s/log-in-with-audius-demo-j2jx6f)!
 
-### Quick links
+### Enlaces rápidos
 
 - Demo with React - [Demo app](https://j2jx6f.csb.app/) | [Code](https://codesandbox.io/s/log-in-with-audius-demo-j2jx6f?file=/src/App.js)
 - Demo with vanilla JS - [Demo app](https://xkogl3.csb.app/) | [Code](https://codesandbox.io/s/log-in-with-audius-demo-vanilla-js-xkogl3?file=/index.html)
