@@ -271,15 +271,15 @@
     "description": "sdk-reference"
   },
   "Easily build upon and interact with the Audius network": {
-    "message": "Easily build upon and interact with the Audius network",
+    "message": "Construye e interactúa fácilmente con la red de Audius",
     "description": "sdk"
   },
   "🔑 Log in with Audius": {
-    "message": "🔑 Log in with Audius",
+    "message": "🔑 Iniciar sesión con Audius",
     "description": "oauth-reference"
   },
   "Authenticate users using their Audius profile": {
-    "message": "Authenticate users using their Audius profile",
+    "message": "Autenticar usuarios usando su perfil de Audius",
     "description": "oauth"
   }
 }
