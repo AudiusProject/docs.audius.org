@@ -1,45 +1,45 @@
 ---
-sidebar_label: Log in with Audius
+sidebar_label: Iniciar sesión con Audius
 sidebar_position: 3
 ---
 
-# Log in with Audius
+# Iniciar sesión con Audius
 
-## Table of contents
+## Tabla de contenidos
 
 - [Vista general](#overview)
-  - [Authentication, not authorization](#authentication-not-authorization)
-- [Workflow](#workflow)
+  - [Autenticación, no autorización](#authentication-not-authorization)
+- [Flujo trabajo](#workflow)
   - [Demo](#demo)
-  - [Quick links](#quick-links)
-- [How to implement Log in with Audius with the Javascript SDK](#how-to-implement-log-in-with-audius-with-the-javascript-sdk)
-  - [1. Initialize the SDK `oauth` feature](#1-initialize-the-sdk-oauth-feature)
+  - [Enlaces rápidos](#quick-links)
+- [Cómo implementar Iniciar sesión con Audius con el SDK de Javascript](#how-to-implement-log-in-with-audius-with-the-javascript-sdk)
+  - [1. Inicializar la función SDK `oauth`](#1-initialize-the-sdk-oauth-feature)
     - [<ins>**oauth.init(loginSuccessCallback, errorCallback)**</ins>](#insoauthinitloginsuccesscallback-errorcallbackins)
-  - [2. Render the Log in with Audius button](#2-render-the-log-in-with-audius-button)
+  - [2. Procesar el inicio de sesión con el botón Audius](#2-render-the-log-in-with-audius-button)
     - [<ins>**oauth.renderButton(element, customizations)**</ins>](#insoauthrenderbuttonelement-customizationsins)
-    - [_💡 **Tip**: Detect when the button has rendered and show a loader until then_:](#-tip-detect-when-the-button-has-rendered-and-show-a-loader-until-then)
+    - [_💡 **Consejo**: Detectar cuando el botón se ha renderizado y mostrar un cargador hasta entonces_:](#-tip-detect-when-the-button-has-rendered-and-show-a-loader-until-then)
     - [<ins>**oauth.login()**</ins>](#insoauthloginins)
-  - [3. Done!](#3-done)
-  - [Addendum: A quick note on email](#addendum-a-quick-note-on-email)
-  - [Full code example using React and npm package](#full-code-example-using-react-and-npm-package)
-  - [Full code example using vanilla JS and SDK dist](#full-code-example-using-vanilla-js-and-sdk-dist)
-- [How to implement Log in with Audius manually](#how-to-implement-log-in-with-audius-manually)
-  - [1. Open the Log in with Audius prompt page](#1-open-the-log-in-with-audius-prompt-page)
-  - [1.5 Remember to handle early exiting (i.e. failure) of the authentication flow](#15-remember-to-handle-early-exiting-ie-failure-of-the-authentication-flow)
-  - [2. Process and verify the response](#2-process-and-verify-the-response)
-    - [**If you used a redirect URI**:](#if-you-used-a-redirect-uri)
-    - [**If you used `redirectURI=postmessage`**:](#if-you-used-redirecturipostmessage)
-    - [**Handling the response**](#handling-the-response)
-  - [3. Done!](#3-done-1)
-  - [Addendum: A quick note on email](#addendum-a-quick-note-on-email-1)
+  - [3. ¡Listo!](#3-done)
+  - [Agendo: Una nota rápida en el correo electrónico](#addendum-a-quick-note-on-email)
+  - [Ejemplo de código completo usando el paquete React y npm](#full-code-example-using-react-and-npm-package)
+  - [Ejemplo de código completo usando vainilla JS y dist SDK](#full-code-example-using-vanilla-js-and-sdk-dist)
+- [Cómo implementar Inicio de sesión con audio manualmente](#how-to-implement-log-in-with-audius-manually)
+  - [1. Abrir la página de inicio de sesión con Audius](#1-open-the-log-in-with-audius-prompt-page)
+  - [1.5 Recuerde manejar la salida anticipada (por ejemplo, fallida) del flujo de autenticación](#15-remember-to-handle-early-exiting-ie-failure-of-the-authentication-flow)
+  - [2. Procesar y verificar la respuesta](#2-process-and-verify-the-response)
+    - [**Si usaste una URI de redirección**:](#if-you-used-a-redirect-uri)
+    - [**Si has usado `redirectURI=postmessage`**:](#if-you-used-redirecturipostmessage)
+    - [**Manejando la respuesta**](#handling-the-response)
+  - [3. ¡Listo!](#3-done-1)
+  - [Agendo: Una nota rápida en el correo electrónico](#addendum-a-quick-note-on-email-1)
 
 ## Vista general
 
-Log in with Audius allows your app to retrieve and verify a user's Audius profile information without requiring the user to give you their Audius password.
+Iniciar sesión con Audius permite que tu aplicación recupere y verifique la información de perfil de un usuario sin requerir que el usuario le proporcione su contraseña de Audius.
 
-You can leverage this flow for a variety of use cases, for example:
+Puedes aprovechar este flujo para una variedad de casos de uso, por ejemplo:
 
-- Provide a secure and convenient way for users to sign up and/or log in to your app without having to set a password or fill in a profile form
+- Proporciona una forma segura y conveniente para que los usuarios se registren y/o inicien sesión en tu aplicación sin tener que establecer una contraseña o rellenar un formulario de perfil
 - Associate a user to their Audius account so that you can retrieve their Audius data (e.g. retrieve their tracks)
 - Confirm if a user is a "Verified" Audius artist
 
