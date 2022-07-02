@@ -7,12 +7,12 @@ description: >-
 
 # API REST
 
-The Audius REST API lets you query, stream, and search for tracks, users & playlists across the network.
+La API de Audius REST le permite consultar, transmitir y buscar canciones, usuarios & listas de reproducción a través de la red.
 
-Try it out!
+¡Pruébalo!
 
 ```bash
 curl https://discoveryprovider.audius.co/v1/tracks/trending?app_name=ExampleApp
 ```
 
-## [Full API Reference](https://audiusproject.github.io/api-docs/#audius-api-docs)  👈  
+## [Referencia API completa](https://audiusproject.github.io/api-docs/#audius-api-docs)👈  
