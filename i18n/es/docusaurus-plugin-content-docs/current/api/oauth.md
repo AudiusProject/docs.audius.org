@@ -40,24 +40,24 @@ Iniciar sesión con Audius permite que tu aplicación recupere y verifique la in
 Puedes aprovechar este flujo para una variedad de casos de uso, por ejemplo:
 
 - Proporciona una forma segura y conveniente para que los usuarios se registren y/o inicien sesión en tu aplicación sin tener que establecer una contraseña o rellenar un formulario de perfil
-- Associate a user to their Audius account so that you can retrieve their Audius data (e.g. retrieve their tracks)
-- Confirm if a user is a "Verified" Audius artist
+- Asocia un usuario a su cuenta de Audius para que puedas recuperar sus datos de Audius (por ejemplo, recuperar sus canciones)
+- Confirmar si un usuario es un artista de Audius "Verificado"
 
-However, note that this flow **CANNOT**:
+Sin embargo, tenga en cuenta que este flujo **NO PUEDE**:
 
-- Manage the user's login session on your app
-- Grant your app permission to perform actions on Audius on the user's behalf (see more below)  
+- Administrar la sesión de usuario en tu aplicación
+- Otorga permiso a tu aplicación para realizar acciones en el Audius en nombre del usuario (ver más abajo)  
   <br />
 
-### Authentication, not authorization
+### Autenticación, no autorización
 
-Please note that Log in With Audius is able to provide authentication, but not authorization (yet!). That is, this flow does not yet provide the ability to obtain permissions to perform actions on the user's behalf (for example, upload a track).
+Por favor, ten en cuenta que iniciar sesión con Audius es capaz de proporcionar autenticación, pero no autorización (¡aún!). Es decir, este flujo todavía no proporciona la capacidad de obtener permisos para realizar acciones en nombre del usuario (por ejemplo, subir una canción).
 
 <br />
 
-<img src="../../static/img/oauthpopup.png" height="488" width="252" alt="Log in with Audius popup" />
+<img src="../../static/img/oauthpopup.png" height="488" width="252" alt="Iniciar sesión con la ventana emergente de Audius" />
 
-_Log in with Audius dialog_
+_Iniciar sesión con el diálogo de Audius_
 
 <br />
 
@@ -163,7 +163,7 @@ replaces the element passed in the first parameter with the Log in with Audius b
 **Params**
 
 - element `HTMLElement` - HTML element to replace with the Log in with Audius button
-- customizations _optional_ `ButtonOptions` - optional object containing the customization settings for the button to be rendered. Here are the options available:
+- customizations _optional_ `ButtonOptions` - optional object containing the customization settings for the button to be rendered. Estas son las opciones disponibles:
 
   ```typescript
   // type ButtonOptions =
