@@ -127,12 +127,12 @@ export { audiusSdk, waitForSdk };
 
 ```Javascript
 // anotherFile.js
-import { audiusSdk, waitForSdk } from "./audiusSdk";
+importar { audiusSdk, waitForSdk } desde ". audiusSdk";
 
 const doStuff = async () => {
   await waitForSdk();
-  // Now you can call SDK methods, for example:
-  const tracks = await audiusSdk.discoveryNode.getTracks();
+  // Ahora puede llamar a métodos SDK, por ejemplo:
+  const tracks = await audiusSdk. iscoveryNode.getTracks();
   console.log("Got tracks!", tracks);
 }
 
