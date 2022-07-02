@@ -1,62 +1,62 @@
 ---
-sidebar_label: Audius SDK
+sidebar_label: SDK de Audius
 sidebar_position: 3
 ---
 
 # Audius Javascript SDK
 
-## Table of contents
+## Tabla de contenidos
 - [Vista general](#overview)
 - [Instalación](#installation)
-  - [In the browser/Vanilla JS](#in-the-browservanilla-js)
-  - [In Node.js](#in-nodejs)
-  - [Important: include Web3.js](#important-include-web3js)
-- [Initialization](#initialization)
-  - [In the browser/Vanilla JS](#in-the-browservanilla-js-1)
-  - [In Node.js](#in-nodejs-1)
+  - [En el navegador/Vanilla JS](#in-the-browservanilla-js)
+  - [En Node.js](#in-nodejs)
+  - [Importante: incluir Web3.js](#important-include-web3js)
+- [Inicialización](#initialization)
+  - [En el navegador/Vanilla JS](#in-the-browservanilla-js-1)
+  - [En Node.js](#in-nodejs-1)
 
 ## Vista general
 
-The Audius SDK allows you to easily build upon and interact with the Audius network. Currently, we only have a Typescript/Javascript SDK.
+El SDK de Audius le permite construir e interactuar fácilmente con la red de Audius. Actualmente, sólo tenemos un SDK de Typescript/Javascript.
 
-We're actively working on building out more SDK features and functionality - stay tuned!
+Estamos trabajando activamente en construir más características y funcionalidad de SDK - ¡mantente atento!
 
 <br />
 
 ## Instalación
 
-### In the browser/Vanilla JS
+### En el navegador/Vanilla JS
 
-To use the Audius SDK in the browser, simply add the following script tag to your HTML pages:
+Para utilizar el SDK de Audius en el navegador, simplemente añade la siguiente etiqueta de script a tus páginas HTML:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@audius/sdk@latest/dist/sdk.min.js"></script>
 ```
 
-The Audius SDK will then be assigned to `window.audiusSdk`.
+El SDK de Audius se asignará a `window.audiusSdk`.
 
-### In Node.js
+### En Node.js
 
-Install the SDK package using your preferred JS package manager.
+Instale el paquete SDK usando su gestor de paquetes JS preferido.
 
-Example:
+Ejemplo:
 
 ```bash
-npm install @audius/sdk
+npm instalar @audius/sdk
 ```
 
-### Important: include Web3.js
+### Importante: incluir Web3.js
 
-In a browser environment, you must install [web3.js](https://github.com/ChainSafe/web3.js) separately and ensure that it is present on the window object at `window.Web3`.
+En un entorno del navegador, debe instalar [web3. s](https://github.com/ChainSafe/web3.js) por separado y asegurarse de que esté presente en el objeto de ventana en `window.Web3`.
 
-In-browser example:
+Ejemplo en el navegador:
 
 ```HTML
 <!-- Include this BEFORE the Audius SDK script -->
 <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 ```
 
-Node.js example:
+Ejemplo Node.js:
 
 ```JS
 // Make sure to run `npm install web3`
@@ -65,13 +65,13 @@ const Web3 = require("web3");
 window.Web3 = Web3;
 ```
 
-## Initialization
+## Inicialización
 
-To initialize the SDK, simply call the SDK constructor and pass in the name of your app. Note that the constructor is asynchronous.
+Para inicializar el SDK, simplemente llame al constructor de SDK y pase el nombre de su aplicación. Tenga en cuenta que el constructor es asíncrono.
 
-### In the browser/Vanilla JS
+### En el navegador/Vanilla JS
 
-Example code:
+Código de ejemplo:
 
 ```HTML
 <script>
@@ -92,9 +92,9 @@ Example code:
 </script>
 ```
 
-### In Node.js
+### En Node.js
 
-Example code:
+Código de ejemplo:
 
 ```Javascript
 // audiusSdk.js
@@ -127,12 +127,12 @@ export { audiusSdk, waitForSdk };
 
 ```Javascript
 // anotherFile.js
-importar { audiusSdk, waitForSdk } desde ". audiusSdk";
+import { audiusSdk, waitForSdk } from "./audiusSdk";
 
 const doStuff = async () => {
   await waitForSdk();
-  // Ahora puede llamar a métodos SDK, por ejemplo:
-  const tracks = await audiusSdk. iscoveryNode.getTracks();
+  // Now you can call SDK methods, for example:
+  const tracks = await audiusSdk.discoveryNode.getTracks();
   console.log("Got tracks!", tracks);
 }
 
