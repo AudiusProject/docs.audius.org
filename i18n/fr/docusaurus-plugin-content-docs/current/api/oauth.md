@@ -45,36 +45,36 @@ Vous pouvez tirer parti de ce flux pour une variété de cas d'utilisation, par 
 
 Cependant, notez que ce flux **NE PEUT PAS**:
 
-- Manage the user's login session on your app
-- Grant your app permission to perform actions on Audius on the user's behalf (see more below)  
+- Gérer la session de connexion de l'utilisateur sur votre application
+- Donnez à votre application la permission d'effectuer des actions sur Audius au nom de l'utilisateur (voir plus bas).  
   <br />
 
-### Authentication, not authorization
+### Authentification, pas d'autorisation
 
-Please note that Log in With Audius is able to provide authentication, but not authorization (yet!). That is, this flow does not yet provide the ability to obtain permissions to perform actions on the user's behalf (for example, upload a track).
+Veuillez noter que la connexion avec Audius est en mesure de fournir une authentification, mais pas d'autorisation (encore!). C'est-à-dire que ce flux ne fournit pas encore la possibilité d'obtenir les autorisations pour effectuer des actions au nom de l'utilisateur (par exemple, télécharger une piste).
 
 <br />
 
 <img src="../../static/img/oauthpopup.png" height="488" width="252" alt="Log in with Audius popup" />
 
-_Log in with Audius dialog_
+_Se connecter avec Audius_
 
 <br />
 
 ## Workflow
 
-The "Log in with Audius" flow looks like this:
+Le flux "Log in with Audius" ressemble à ceci :
 
-1. You provide a button on your app or website to begin the authentication flow
-2. When the user clicks the button, it opens a popup containing an Audius login page that prompts the user to sign in with their Audius credentials (alternatively, your app/website can redirect to the Audius login page instead of using a popup)
-3. Once the user successfully signs in, Audius provides your app/website with the user profile using a JSON Web Token (JWT)
-4. Your app verifies and decodes the JWT
+1. Vous fournissez un bouton sur votre application ou votre site Web pour lancer le flux d'authentification.
+2. Lorsque l'utilisateur clique sur le bouton, il ouvre une popup contenant une page de connexion Audius qui invite l'utilisateur à se connecter avec ses identifiants Audius (alternativement, votre app/site web peut rediriger vers la page de connexion Audius au lieu d'utiliser une popup)
+3. Une fois que l'utilisateur se connecte avec succès, Audius fournit à votre application/site Web le profil de l'utilisateur à l'aide d'un jeton Web JSON (JWT)
+4. Votre application vérifie et décode le JWT
 
-The JWT payload contains the following information about the user:
+Le bloc JWT contient les informations suivantes à propos de l'utilisateur :
 
 - Unique identifier (Audius user id)
-- Email
-- Display name
+- E-mail
+- Nom affiché
 - Audius handle
 - Whether the user is a verified artist (i.e. has a purple checkmark)
 - Profile picture URL, if any
