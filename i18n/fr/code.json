@@ -1,10 +1,10 @@
 {
   "🗺 Overview": {
-    "message": "🗺 Overview",
+    "message": "🗺 Aperçu",
     "description": "overview"
   },
   "Get an overview of what Audius is, how it works, and how you can contribute": {
-    "message": "Get an overview of what Audius is, how it works, and how you can contribute",
+    "message": "Obtenez une vue d'ensemble de ce qu'est Audius, de son fonctionnement et de la façon dont vous pouvez y contribuer",
     "description": "get-an-overview"
   },
   "🎶 API": {
@@ -12,7 +12,7 @@
     "description": "api-reference"
   },
   "Query, stream, and search Arists, Tracks, and Playlists from your own app, game, or project": {
-    "message": "Query, stream, and search Arists, Tracks, and Playlists from your own app, game, or project",
+    "message": "Interrogez, diffusez et recherchez des listes d'enregistrements, des pistes et des listes de lecture à partir de votre propre application, jeu ou projet",
     "description": "rest-api"
   },
   "🎧 $AUDIO": {
@@ -20,11 +20,11 @@
     "description": "audio"
   },
   "Learn about the $AUDIO Token and how it keeps the network secure & operational": {
-    "message": "Learn about the $AUDIO Token and how it keeps the network secure & operational",
+    "message": "Découvrez le jeton $AUDIO et comment il assure la sécurité et le fonctionnement du réseau",
     "description": "learn-about-the-token"
   },
   "🔓 Staking The Network": {
-    "message": "🔓 Staking The Network",
+    "message": "🔓 Staking Le Réseau",
     "description": "staking"
   },
   "Stake & delegate the $AUDIO token, earn rewards, and participate in Governance": {
