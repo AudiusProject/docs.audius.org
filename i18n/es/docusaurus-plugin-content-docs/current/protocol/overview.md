@@ -1,7 +1,6 @@
----
-sidebar_label: Vista general
-sidebar_position: 1
----
+- - -
+sidebar_label: Vista general sidebar_position: 1
+- - -
 
 # Vista general
 

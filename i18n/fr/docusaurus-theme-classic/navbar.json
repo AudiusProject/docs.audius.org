@@ -1,6 +1,6 @@
 {
   "title": {
-    "message": "Audius Docs",
+    "message": "Documentation Audius",
     "description": "The title in the navbar"
   },
   "item.label.Protocol": {
@@ -12,7 +12,7 @@
     "description": "Navbar item with label API"
   },
   "item.label.Token": {
-    "message": "Token",
+    "message": "Jeton",
     "description": "Navbar item with label Token"
   },
   "item.label.Chat": {
@@ -24,7 +24,7 @@
     "description": "Navbar item with label GitHub"
   },
   "item.label.Welcome": {
-    "message": "Welcome",
+    "message": "Bienvenue",
     "description": "Navbar item with label Welcome"
   }
 }
