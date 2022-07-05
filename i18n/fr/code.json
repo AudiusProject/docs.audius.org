@@ -28,38 +28,38 @@
     "description": "staking"
   },
   "Stake & delegate the $AUDIO token, earn rewards, and participate in Governance": {
-    "message": "Stake & delegate the $AUDIO token, earn rewards, and participate in Governance",
+    "message": "Stade et délégation du token AUDIO, gagnez des récompenses et participez à la gouvernance.",
     "description": "staking-and-delegating"
   },
   "🛠 Run A Node": {
-    "message": "🛠 Run A Node",
+    "message": "🛠 Exécuter un noeud",
     "description": "run-validator"
   },
   "Get up and running and serve traffic for the Audius network": {
-    "message": "Get up and running and serve traffic for the Audius network",
+    "message": "Mettre en place et servir le trafic du réseau Audius",
     "description": "serve-traffic"
   },
   "⚖️ Governance": {
-    "message": "⚖️ Governance",
+    "message": "⚖️ Gouvernance",
     "description": "governance"
   },
   "Voice your vote. Learn how on-chain governance works and how to get involved": {
-    "message": "Voice your vote. Learn how on-chain governance works and how to get involved"
+    "message": "Exprimez votre vote. Découvrez comment fonctionne la gouvernance on-chaîne et comment vous impliquer"
   },
   "theme.NotFound.title": {
-    "message": "Page Not Found",
+    "message": "Page introuvable",
     "description": "The title of the 404 page"
   },
   "theme.NotFound.p1": {
-    "message": "We could not find what you were looking for.",
+    "message": "Nous n'avons pas pu trouver ce que vous cherchiez.",
     "description": "The first paragraph of the 404 page"
   },
   "theme.NotFound.p2": {
-    "message": "Please contact the owner of the site that linked you to the original URL and let them know their link is broken.",
+    "message": "Veuillez contacter le propriétaire du site qui vous a lié à l'URL d'origine et lui faire savoir que son lien est rompu.",
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Close",
+    "message": "Fermer",
     "description": "The ARIA label for close button of announcement bar"
   },
   "theme.blog.archive.title": {
@@ -71,139 +71,139 @@
     "description": "The page & hero description of the blog archive page"
   },
   "theme.blog.paginator.navAriaLabel": {
-    "message": "Blog list page navigation",
+    "message": "Navigation dans la liste des blogs",
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
-    "message": "Newer Entries",
+    "message": "Nouvelles entrées",
     "description": "The label used to navigate to the newer blog posts page (previous page)"
   },
   "theme.blog.paginator.olderEntries": {
-    "message": "Older Entries",
+    "message": "Anciennes entrées",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
   "theme.blog.post.readingTime.plurals": {
-    "message": "One min read|{readingTime} min read",
+    "message": "One min read|{readingTime} min read\n",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.post.readMore": {
-    "message": "Read More",
+    "message": "En savoir plus",
     "description": "The label used in blog post item excerpts to link to full blog posts"
   },
   "theme.blog.sidebar.navAriaLabel": {
-    "message": "Blog recent posts navigation",
+    "message": "Navigation des articles récents du blog",
     "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.blog.post.plurals": {
-    "message": "One post|{count} posts",
+    "message": "One post|{count} posts\n",
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.tagTitle": {
-    "message": "{nPosts} tagged with \"{tagName}\"",
+    "message": "{nPosts} tagged with \"{tagName}\"\n",
     "description": "The title of the page for a blog tag"
   },
   "theme.tags.tagsPageLink": {
-    "message": "View All Tags",
+    "message": "Voir tous les tags",
     "description": "The label of the link targeting the tag list page"
   },
   "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "Copy code to clipboard",
+    "message": "Copier le code dans le presse-papiers",
     "description": "The ARIA label for copy code blocks button"
   },
   "theme.CodeBlock.copied": {
-    "message": "Copied",
+    "message": "Copié",
     "description": "The copied button label on code blocks"
   },
   "theme.CodeBlock.copy": {
-    "message": "Copy",
+    "message": "Copie",
     "description": "The copy button label on code blocks"
   },
   "theme.blog.post.paginator.navAriaLabel": {
-    "message": "Blog post page navigation",
+    "message": "Navigation dans la liste des blogs",
     "description": "The ARIA label for the blog posts pagination"
   },
   "theme.blog.post.paginator.newerPost": {
-    "message": "Newer Post",
+    "message": "Nouvelle publication",
     "description": "The blog post button label to navigate to the newer/previous post"
   },
   "theme.blog.post.paginator.olderPost": {
-    "message": "Older Post",
+    "message": "Ancien Poste",
     "description": "The blog post button label to navigate to the older/next post"
   },
   "theme.docs.sidebar.expandButtonTitle": {
-    "message": "Expand sidebar",
+    "message": "Élargir la barre latérale",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonAriaLabel": {
-    "message": "Expand sidebar",
+    "message": "Élargir la barre latérale",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.docs.paginator.navAriaLabel": {
-    "message": "Docs pages navigation",
+    "message": "Navigation dans les pages des docs",
     "description": "The ARIA label for the docs pagination"
   },
   "theme.docs.paginator.previous": {
-    "message": "Previous",
+    "message": "Précédent",
     "description": "The label used to navigate to the previous doc"
   },
   "theme.docs.paginator.next": {
-    "message": "Next",
+    "message": "Suivant",
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "Collapse sidebar",
+    "message": "Réduire la barre latérale",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "Collapse sidebar",
+    "message": "Réduire la barre latérale",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
-    "message": "This is unreleased documentation for {siteTitle} {versionLabel} version.",
+    "message": "Il s'agit d'une documentation non publiée pour la version {siteTitle} {versionLabel}.",
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
   },
   "theme.docs.versions.unmaintainedVersionLabel": {
-    "message": "This is documentation for {siteTitle} {versionLabel}, which is no longer actively maintained.",
+    "message": "Il s'agit d'une documentation pour {siteTitle} {versionLabel}, qui n'est plus maintenu activement.",
     "description": "The label used to tell the user that he's browsing an unmaintained doc version"
   },
   "theme.docs.versions.latestVersionSuggestionLabel": {
-    "message": "For up-to-date documentation, see the {latestVersionLink} ({versionLabel}).",
+    "message": "Pour obtenir une documentation à jour, consultez le {latestVersionLink} ({versionLabel}).\nDemande De Contexte.",
     "description": "The label used to tell the user to check the latest version"
   },
   "theme.docs.versions.latestVersionLinkLabel": {
-    "message": "latest version",
+    "message": "dernière version",
     "description": "The label used for the latest version suggestion link label"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
-    "message": "One doc tagged|{count} docs tagged",
+    "message": "Un document étiqueté|{count} docs étiquetés\n",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.tagDocListPageTitle": {
-    "message": "{nDocsTagged} with \"{tagName}\"",
+    "message": "{nDocsTagged} avec \"{tagName}\"\n",
     "description": "The title of the page for a docs tag"
   },
   "theme.common.editThisPage": {
-    "message": "Edit this page",
+    "message": "Editer cette page",
     "description": "The link label to edit the current page"
   },
   "theme.common.headingLinkTitle": {
-    "message": "Direct link to heading",
+    "message": "Lien direct vers l'en-tête",
     "description": "Title for link to heading"
   },
   "theme.lastUpdated.atDate": {
-    "message": " on {date}",
+    "message": " la {date}",
     "description": "The words used to describe on which date a page has been last updated"
   },
   "theme.lastUpdated.byUser": {
-    "message": " by {user}",
+    "message": " par {user}",
     "description": "The words used to describe by who the page has been last updated"
   },
   "theme.lastUpdated.lastUpdatedAtBy": {
-    "message": "Last updated{atDate}{byUser}",
+    "message": "Dernière mise à jour{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
   "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
-    "message": "← Back to main menu",
+    "message": "<unk> Retour au menu principal",
     "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
   },
   "theme.navbar.mobileVersionsDropdown.label": {
@@ -211,59 +211,59 @@
     "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.common.skipToMainContent": {
-    "message": "Skip to main content",
+    "message": "Aller au contenu principal",
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
-    "message": "On this page",
+    "message": "Sur cette page",
     "description": "The label used by the button on the collapsible TOC component"
   },
   "theme.tags.tagsListLabel": {
-    "message": "Tags:",
+    "message": "Tags :",
     "description": "The label alongside a tag list"
   },
   "theme.SearchPage.documentsFound.plurals": {
-    "message": "One document found|{count} documents found",
+    "message": "Un document trouvé |{count} documents trouvés",
     "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.SearchPage.existingResultsTitle": {
-    "message": "Search results for \"{query}\"",
+    "message": "Résultats de la recherche pour{query}\"",
     "description": "The search page title for non-empty query"
   },
   "theme.SearchPage.emptyResultsTitle": {
-    "message": "Search the documentation",
+    "message": "Rechercher dans la documentation",
     "description": "The search page title for empty query"
   },
   "theme.SearchPage.inputPlaceholder": {
-    "message": "Type your search here",
+    "message": "Tapez votre recherche ici",
     "description": "The placeholder for search page input"
   },
   "theme.SearchPage.inputLabel": {
-    "message": "Search",
+    "message": "Rechercher",
     "description": "The ARIA label for search page input"
   },
   "theme.SearchPage.algoliaLabel": {
-    "message": "Search by Algolia",
+    "message": "Recherche par Algolia",
     "description": "The ARIA label for Algolia mention"
   },
   "theme.SearchPage.noResultsText": {
-    "message": "No results were found",
+    "message": "Aucun résultat n'a été trouvé",
     "description": "The paragraph for empty search result"
   },
   "theme.SearchPage.fetchingNewResults": {
-    "message": "Fetching new results...",
+    "message": "Récupération des nouveaux résultats...",
     "description": "The paragraph for fetching new search results"
   },
   "theme.SearchBar.label": {
-    "message": "Search",
+    "message": "Rechercher",
     "description": "The ARIA label and placeholder for search button"
   },
   "theme.tags.tagsPageTitle": {
-    "message": "Tags",
+    "message": "Tags ",
     "description": "The title of the tag list page"
   },
   "Query, stream, and search Artists, Tracks, and Playlists from your own app, game, or project": {
-    "message": "Query, stream, and search Artists, Tracks, and Playlists from your own app, game, or project",
+    "message": "Interrogez, diffusez et recherchez des artistes, des pistes et des listes de lecture à partir de votre propre application, jeu ou projet.",
     "description": "rest-api"
   },
   "🧳 SDK": {
@@ -271,15 +271,15 @@
     "description": "sdk-reference"
   },
   "Easily build upon and interact with the Audius network": {
-    "message": "Easily build upon and interact with the Audius network",
+    "message": "Développez et interagissez facilement avec le réseau Audius.",
     "description": "sdk"
   },
   "🔑 Log in with Audius": {
-    "message": "🔑 Log in with Audius",
+    "message": "🔑 Se connecter avec Audius",
     "description": "oauth-reference"
   },
   "Authenticate users using their Audius profile": {
-    "message": "Authenticate users using their Audius profile",
+    "message": "Authentifier les utilisateurs en utilisant leur profil Audius",
     "description": "oauth"
   }
 }
