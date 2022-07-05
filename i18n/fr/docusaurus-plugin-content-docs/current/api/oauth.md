@@ -76,22 +76,22 @@ Le bloc JWT contient les informations suivantes à propos de l'utilisateur :
 - E-mail
 - Nom affiché
 - Audius handle
-- Whether the user is a verified artist (i.e. has a purple checkmark)
+- Si l'utilisateur est un artiste vérifié (c'est-à-dire a une coche violette)
 - Profile picture URL, if any
 
-### Demo
+### Démo
 
-Check out a quick demo of the Oauth flow [here](https://codesandbox.io/s/log-in-with-audius-demo-j2jx6f)!
+Découvrez une démo rapide du flux Oauth [ici](https://codesandbox.io/s/log-in-with-audius-demo-j2jx6f)!
 
-### Quick links
+### Liens rapides
 
-- Demo with React - [Demo app](https://j2jx6f.csb.app/) | [Code](https://codesandbox.io/s/log-in-with-audius-demo-j2jx6f?file=/src/App.js)
-- Demo with vanilla JS - [Demo app](https://xkogl3.csb.app/) | [Code](https://codesandbox.io/s/log-in-with-audius-demo-vanilla-js-xkogl3?file=/index.html)
-- [Button configurator](https://9ncjui.csb.app/)
+- Démo avec React - [Application de démo](https://j2jx6f.csb.app/) | [Code](https://codesandbox.io/s/log-in-with-audius-demo-j2jx6f?file=/src/App.js)
+- Démo avec React - [Application de démo](https://xkogl3.csb.app/) | [Code](https://codesandbox.io/s/log-in-with-audius-demo-vanilla-js-xkogl3?file=/index.html)
+- [Configurateur de bouton](https://9ncjui.csb.app/)
 
 <br />
 
-## How to implement Log in with Audius with the Javascript SDK
+## Comment mettre en œuvre la connexion à Audius avec le SDK Javascript
 
 The easiest way to add Log in with Audius to your app is to use the Javascript SDK. If you are not able to use the Javascript SDK (for example, if you are developing a mobile app), skip to "How to implement Log in with Audius manually".
 
