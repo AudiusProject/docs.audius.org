@@ -1,5 +1,5 @@
 ---
-sidebar_label: Staking
+sidebar_label: Stakning
 sidebar_position: 2
 ---
 
