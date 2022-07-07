@@ -348,5 +348,8 @@
   "Easily build on and interact with the Audius protocol using the Audius JavaScript SDK": {
     "message": "Easily build on and interact with the Audius protocol using the Audius JavaScript SDK",
     "description": "sdk"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "See all {count} results"
   }
 }
