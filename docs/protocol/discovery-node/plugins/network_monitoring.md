@@ -27,7 +27,11 @@ Metrics are collected and calculated on a nightly basis.
 
 ### Setting Env Variables
 
+Network Monitoring is configured with a set of environment variables. Before running the service, these need to be configured appropriately.
+
 ```sh
+# audius-protocol/discovery-provider/plugins/network-monitoring/env.prod
+
 # Credentials for the network monitoring DB
 DB_HOST=network-monitoring-db
 DB_NAME=audius_network_monitoring
