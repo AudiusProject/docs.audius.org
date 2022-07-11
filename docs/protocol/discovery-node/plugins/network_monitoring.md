@@ -37,7 +37,7 @@ DB_HOST=network-monitoring-db
 DB_NAME=audius_network_monitoring
 DB_USERNAME=""
 DB_PASSWORD=""
-DB_PORT=5432
+DB_PORT=5444
 
 # Credentials for the discovery-provider DB
 FDB_HOST=""
