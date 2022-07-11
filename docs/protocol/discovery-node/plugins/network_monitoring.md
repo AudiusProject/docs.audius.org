@@ -95,6 +95,12 @@ Currently, we compute three metrics
     - The number of users with a specific content node as their primary
 - Fully Synced User Count
     - The number of users with a replica set that’s fully synced (all clock values are the same)
+- Partially Synced User Count
+    - The number of users with a replica set that's partially synced (only one secondary as the same clock value as the primary)
+- Unsynced User Count
+    - The number of users with neither secondary having the same clock value as their primary
+- Users with a Null Primary Clock 
+    - The number of users whose clock value on their primary is `null` (usually indicates a bug)
 
 What we are planning to add
 
