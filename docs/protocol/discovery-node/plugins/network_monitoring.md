@@ -25,21 +25,43 @@ Metrics are collected and calculated on a nightly basis.
 
 ## Installation
 
-### Prereqs
+### Setting Env Variables
 
-- Docker installed
-- Direct access to a Discovery Node postgres DB
-- Secrets file, with the correct permissions, formatted like so
-    
-    ```json
-    {
-    	"signatureSpID": 42,
-    	"signatureSPDelegatePrivateKey": "0x123123123123123"
-    }
-    ```
-    
-### Env Variables
+```sh
+# Credentials for the network monitoring DB
+DB_HOST=network-monitoring-db
+DB_NAME=audius_network_monitoring
+DB_USERNAME=""
+DB_PASSWORD=""
+DB_PORT=5432
 
+# Credentials for the discovery-provider DB
+FDB_HOST=""
+FDB_NAME=audius_discovery
+FDB_USERNAME=""
+FDB_PASSWORD=""
+FDB_PORT=5432
+
+# comma separated list of content nodes to ignore
+# e.g. https://cn1.com,https://cn2.com,https://cn3.com
+DEREGISTERED_CONTENT_NODES=""
+
+# Whether to see Sequelize logs
+SQL_LOGGING=false
+
+# URL for the prometheus push-gateway 
+# Unless using a custom gateway, don't change this
+PUSH_GATEWAY_URL="http://network-monitoring-push-gateway:9091"
+
+# The spid for the discovery provider
+SIGNATURE_SPID=
+
+# The delegate private key for the discovery provider
+SIGNATURE_SP_DELEGATE_PRIV_KEY="0x123456789"
+
+# (Optional) Slack webhook to post updates to a slack channel
+SLACK_URL=""
+```
 
 
 ### Running services
@@ -49,11 +71,16 @@ By default, this will run every service which includes
 - network monitoring CRON
 - postgres
 - prometheus push-gateway
-- prometheus
-- grafana
 
 ```bash
-docker-compose up
+# Clone the audius protocol repo
+git clone https://github.com/AudiusProject/audius-protocol.git
+
+# Navigate to network monitoring
+cd audius-protocol/discovery-provder/plugins/network-monitoring
+
+# Run services
+docker-compose up --build -d
 ```
 
 ---
