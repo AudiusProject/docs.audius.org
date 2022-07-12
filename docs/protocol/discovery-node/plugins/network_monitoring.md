@@ -10,7 +10,10 @@ sidebar_position: 1
 These metrics exposed on the route `{DISCOVERY_PROVIDER_HOSTNAME}:9091/metrics` and are updated on a nightly basis.
 
 :::info 
-    This is different from node-level metrics which are scraped by prometheus from the content and discovery nodes through a special `/prometheus_metrics` route.
+    This is different from node-level metrics 
+    which are scraped by prometheus from the 
+    content and discovery nodes through a 
+    special `/prometheus_metrics` route.
 :::
 
 ---
