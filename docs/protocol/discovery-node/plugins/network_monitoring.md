@@ -9,16 +9,6 @@ sidebar_position: 1
 
 Note - This is different from node-level metrics which are scraped by prometheus from the content and discovery nodes through a special `/prometheus_metrics` route.
 
-Here are some metrics that we intend to collect:
-
-- The number of CID on each CN that have been replicated at least once
-- The number of CID on each CN that have ***NOT*** been replicated at least once
-- [ex 1] **The number of users with a specific CN as their primary**
-- The number of users with a specific CN in their replica set
-- CID replication across the CNs
-- CID replication factor
-- The number of users with their data syncs across 0, 1, 2, or 3 CNs
-
 Metrics are collected and calculated on a nightly basis.
 
 ---
