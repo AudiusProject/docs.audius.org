@@ -7,10 +7,9 @@ sidebar_position: 1
 
 **Network Monitoring** refers to network-wide metrics we collect from a discovery node and aggregate to assess the health of the entire network.
 
+These metrics exposed on the route `{DISCOVERY_PROVIDER_HOSTNAME}:9091/metrics` and are updated on a nightly basis.
+
 Note - This is different from node-level metrics which are scraped by prometheus from the content and discovery nodes through a special `/prometheus_metrics` route.
-
-Metrics are collected and calculated on a nightly basis.
-
 ---
 
 ## Installation
