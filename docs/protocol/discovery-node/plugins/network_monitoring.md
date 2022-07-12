@@ -7,9 +7,18 @@ sidebar_position: 1
 
 **Network Monitoring** refers to network-wide metrics we collect from a discovery node and aggregate to assess the health of the entire network.
 
-These metrics exposed on the route `{DISCOVERY_PROVIDER_HOSTNAME}:9091/metrics` and are updated on a nightly basis.
+Some examples of network-wide metrics are
+* The number of CID on each CN that have been replicated at least once
+* The number of CID on each CN that have NOT been replicated at least once
+* The number of users with a specific CN as their primary
+* The number of users with a specific CN in their replica set
+* CID replication across the CNs
+* CID replication factor
+* The number of users with their data syncs across 0, 1, 2, or 3 CNs
 
-:::info 
+These metrics are exposed on the route `{HOSTNAME}:9091/metrics` and are updated on a nightly basis. When first starting up network monitoring, metrics are made available after the first job completes. Network monitoring jobs last around 2 hours on the production Audius network.
+
+:::caution 
     This is different from node-level metrics which are scraped by prometheus from the 
     content and discovery nodes through a special `/prometheus_metrics` route.
 :::
@@ -17,6 +26,8 @@ These metrics exposed on the route `{DISCOVERY_PROVIDER_HOSTNAME}:9091/metrics` 
 ---
 
 ## Installation
+
+Network Monitoring is intended to be run alongside a discovery node. Although it is possible to run network monitoring as a stand-alone service, this guide assumes direct access to a discovery node.
 
 ### Setting Env Variables
 
@@ -61,7 +72,7 @@ SLACK_URL=""
 ```
 
 
-### Running services
+### Running Services
 
 By default, this will run every service which includes
 
@@ -123,7 +134,7 @@ Data collected from both the discovery node and content nodes is aggregated and 
 
 At its core, Network Monitoring is a postgres database designed for [OLAP](https://en.wikipedia.org/wiki/Online_analytical_processing) style queries. The database contains snapshots of discovery node indexes and content node indexes, delimited by specific runs.
 
-:::info
+:::note
         Since Network Monitoring runs jobs nightly, one run corresponds to one day
 :::
 
