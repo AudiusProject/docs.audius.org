@@ -1,12 +1,12 @@
 
 
-<h1 id="api-users">users</h1>
+<h1 id="api-users">用户</h1>
 
-## Get the User's id by associated wallet
+## 通过关联钱包获取用户id
 
 <a id="opIdGet the User's id by associated wallet"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/associated_wallets?id=string 
@@ -22,7 +22,7 @@ GET AUDIUS_API_HOST/v1/users/associated_wallets?id=string HTTP/1.1
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/users/associated_wallets?id=string',
@@ -34,22 +34,22 @@ fetch('AUDIUS_API_HOST/v1/users/associated_wallets?id=string',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    控制台.log(body);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
-result = RestClient.get 'AUDIUS_API_HOST/v1/users/associated_wallets',
-  params: {
-  'id' => 'string'
+结果 = RestClient.get 'AUDIUS_API_HOST/v1/users/associated_wallets',
+  参数：{
+  ' id' => 'string'
 }, headers: headers
 
 p JSON.parse(result)
@@ -57,7 +57,7 @@ p JSON.parse(result)
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
@@ -66,25 +66,25 @@ r = requests.get('AUDIUS_API_HOST/v1/users/associated_wallets', params={
   'id': 'string'
 }, headers = headers)
 
-print(r.json())
+print(r.json( ))
 
 ```
 
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）；
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
+次尝试 {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/users/associated_wallets', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -93,7 +93,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -108,12 +108,12 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -143,44 +143,44 @@ func main() {
 
 ```
 
-`GET /users/associated_wallets`
+`获取 /users/associated_wallets`
 
-<h3 id="get-the-user's-id-by-associated-wallet-parameters">Query Parameters</h3>
+<h3 id="get-the-user's-id-by-associated-wallet-parameters">查询参数</h3>
 
-| Name | Type   | Required | Description     |
-| ---- | ------ | -------- | --------------- |
-| id   | string | true     | Encoded User ID |
+| 姓名 | 类型 | 必需的 | 描述       |
+| -- | -- | --- | -------- |
+| ID | 细绳 | 真的  | 编码的用户 ID |
 
-> Example Response
+> 示例响应
 
-> 200 Response
+> 200 响应
 
 ```json
 {
-  "data": {
-    "wallets": [
-      "string"
-    ],
-    "sol_wallets": [
-      "string"
+  “数据”：{
+    “钱包”：[
+      “字符串”
+    ]，
+    “sol_wallets”：[
+      “字符串”
     ]
   }
 }
 ```
 
-<h3 id="get-the-user's-id-by-associated-wallet-responses">Responses</h3>
+<h3 id="get-the-user's-id-by-associated-wallet-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                                              |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [associated_wallets_response](#schemaassociated_wallets_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                |
+| 地位  | 意义                                                           | 描述    | 架构                                           |
+| --- | ------------------------------------------------------------ | ----- | -------------------------------------------- |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 成功    | [关联钱包响应](#schemaassociated_wallets_response) |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求 | 没有任何                                         |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误 | 没有任何                                         |
 
-## Get the User's associated wallets
+## 获取用户的关联钱包
 
 <a id="opIdGet the User's associated wallets"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/id?associated_wallet=string 
@@ -196,7 +196,7 @@ GET AUDIUS_API_HOST/v1/users/id?associated_wallet=string HTTP/1.1
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/users/id?associated_wallet=string',
@@ -208,22 +208,22 @@ fetch('AUDIUS_API_HOST/v1/users/id?associated_wallet=string',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    控制台.log(body);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
-headers = {
+标头 = {
   'Accept' => 'application/json'
 }
 
-result = RestClient.get 'AUDIUS_API_HOST/v1/users/id',
-  params: {
-  'associated_wallet' => 'string'
+结果 = RestClient.get 'AUDIUS_API_HOST/v1/users/id'，
+  参数：{
+  ' associated_wallet' => 'string'
 }, headers: headers
 
 p JSON.parse(result)
@@ -231,7 +231,7 @@ p JSON.parse(result)
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
@@ -240,26 +240,26 @@ r = requests.get('AUDIUS_API_HOST/v1/users/id', params={
   'associated_wallet': 'string'
 }, headers = headers)
 
-print(r.json())
+print(r.json( ))
 
 ```
 
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）;
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/users/id', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/users/id', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -267,7 +267,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -282,12 +282,12 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -317,39 +317,39 @@ func main() {
 
 ```
 
-`GET /users/id`
+`获取 /users/id`
 
-<h3 id="get-the-user's-associated-wallets-parameters">Query Parameters</h3>
+<h3 id="get-the-user's-associated-wallets-parameters">查询参数</h3>
 
-| Name              | Type   | Required | Description    |
-| ----------------- | ------ | -------- | -------------- |
-| associated_wallet | string | true     | Wallet address |
+| 姓名   | 类型 | 必需的 | 描述   |
+| ---- | -- | --- | ---- |
+| 关联钱包 | 细绳 | 真的  | 钱包地址 |
 
-> Example Response
+> 示例响应
 
-> 200 Response
+> 200 响应
 
 ```json
 {
-  "data": {
-    "user_id": "string"
+  “数据”：{
+    “用户ID”：“字符串”
   }
 }
 ```
 
-<h3 id="get-the-user's-associated-wallets-responses">Responses</h3>
+<h3 id="get-the-user's-associated-wallets-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                                                      |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [user_associated_wallet_response](#schemauser_associated_wallet_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                        |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                        |
+| 地位  | 意义                                                           | 描述    | 架构                                                                          |
+| --- | ------------------------------------------------------------ | ----- | --------------------------------------------------------------------------- |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 成功    | [user_associated_wallet_response](#schemauser_associated_wallet_response) |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求 | 没有任何                                                                        |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误 | 没有任何                                                                        |
 
-## Search Users
+## 搜索用户
 
 <a id="opIdSearch Users"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/search?query=Brownies 
@@ -358,14 +358,14 @@ curl AUDIUS_API_HOST/v1/users/search?query=Brownies
 ```
 
 ```http
-GET AUDIUS_API_HOST/v1/users/search?query=Brownies HTTP/1.1
+GET AUDIUS_API_HOST/v1/users/search?query=布朗尼 HTTP/1.1
 
 ```
 
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/users/search?query=Brownies',
@@ -377,22 +377,22 @@ fetch('AUDIUS_API_HOST/v1/users/search?query=Brownies',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    控制台.log(body);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
-result = RestClient.get 'AUDIUS_API_HOST/v1/users/search',
-  params: {
-  'query' => 'string'
+result = RestClient.get 'AUDIUS_API_HOST/v1/users/search'，
+  参数：{
+  ' query' => 'string'
 }, headers: headers
 
 p JSON.parse(result)
@@ -400,7 +400,7 @@ p JSON.parse(result)
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
@@ -409,26 +409,26 @@ r = requests.get('AUDIUS_API_HOST/v1/users/search', params={
   'query': 'Brownies'
 }, headers = headers)
 
-print(r.json())
+print(r.json( ))
 
 ```
 
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）;
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/users/search', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/users/search', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -436,7 +436,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -451,12 +451,12 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -486,41 +486,41 @@ func main() {
 
 ```
 
-`GET /users/search`
+`获取/用户/搜索`
 
-*Seach for a user*
+*搜索用户*
 
-<h3 id="search-users-parameters">Query Parameters</h3>
+<h3 id="search-users-parameters">查询参数</h3>
 
-| Name              | Type   | Required | Description  |
-| ----------------- | ------ | -------- | ------------ |
-| query             | string | true     | Search query |
-| only_downloadable | string | false    | none         |
+| 姓名                | 类型 | 必需的 | 描述   |
+| ----------------- | -- | --- | ---- |
+| 询问                | 细绳 | 真的  | 搜索查询 |
+| only_downloadable | 细绳 | 错误的 | 没有任何 |
 
-> Example Response
+> 示例响应
 
 ```json
 {
   "data": [
     {
       "album_count": 0,
-      "bio": "Makin' moves & keeping you on your toes. linktr.ee/browniesandlemonade",
-      "cover_photo": {
-        "640x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/640x.jpg",
-        "2000x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
+      "bio": "Makin' 移动 & 让你保持警觉。 
+        
+
+        audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
       },
       "followee_count": 19,
       "follower_count": 11141,
       "handle": "TeamBandL",
       "id": "nlGNe",
-      "is_verified": true,
+      ": true,
       "location": "Los Angeles, CA",
       "name": "Brownies & Lemonade",
       "playlist_count": 2,
       "profile_picture": {
-        "150x150": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
+        "150x150": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
         "480x480": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/480x480.jpg",
-        "1000x1000": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
+        "1000x1000": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
       },
       "repost_count": 5,
       "track_count": 4
@@ -529,19 +529,19 @@ func main() {
 }
 ```
 
-<h3 id="search-users-responses">Responses</h3>
+<h3 id="search-users-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                            |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [user_search](#schemauser_search) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                              |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                              |
+| 地位  | 意义                                                           | 描述    | 架构                         |
+| --- | ------------------------------------------------------------ | ----- | -------------------------- |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 没有任何  | [用户搜索](#schemauser_search) |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求 | 没有任何                       |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误 | 没有任何                       |
 
-## Get User
+## 获取用户
 
 <a id="opIdGet User"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/nlGNe 
@@ -550,14 +550,14 @@ curl AUDIUS_API_HOST/v1/users/nlGNe
 ```
 
 ```http
-GET AUDIUS_API_HOST/v1/users/nlGNe HTTP/1.1
+获取 AUDIUS_API_HOST/v1/users/nlGNe HTTP/1.1
 
 ```
 
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/users/nlGNe',
@@ -569,14 +569,14 @@ fetch('AUDIUS_API_HOST/v1/users/nlGNe',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log(body );
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
   'Accept' => 'application/json'
@@ -584,14 +584,14 @@ headers = {
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/users/nlGNe',
   params: {
-  }, headers: headers
+  }, headers : 标题
 
 p JSON.parse(result)
 
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
@@ -605,19 +605,19 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）；
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/users/nlGNe', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/users/nlGNe', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -625,7 +625,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -640,8 +640,8 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -675,39 +675,39 @@ func main() {
 
 ```
 
-`GET /users/{user_id}`
+`获取/用户/{user_id}`
 
-*Fetch a single user*
+*获取单个用户*
 
-<h3 id="get-user-parameters">Query Parameters</h3>
+<h3 id="get-user-parameters">查询参数</h3>
 
-| Name    | Type   | Required | Description |
-| ------- | ------ | -------- | ----------- |
-| user_id | string | true     | A User ID   |
+| 姓名   | 类型 | 必需的 | 描述    |
+| ---- | -- | --- | ----- |
+| 用户身份 | 细绳 | 真的  | 用户 ID |
 
-> Example Response
+> 示例响应
 
 ```json
 {
   "data": {
     "album_count": 0,
-    "bio": "Makin' moves & keeping you on your toes. linktr.ee/browniesandlemonade",
-    "cover_photo": {
-      "640x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/640x.jpg",
-      "2000x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
+    "bio": "Makin' move & 让你保持警觉。 
+      
+
+      audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
     },
     "followee_count": 19,
     "follower_count": 11141,
     "handle": "TeamBandL",
     "id": "nlGNe",
-    "is_verified": true,
+    ": true,
     "location": "Los Angeles, CA",
     "name": "Brownies & Lemonade",
     "playlist_count": 2,
     "profile_picture": {
-      "150x150": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
+      "150x150": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
       "480x480": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/480x480.jpg",
-      "1000x1000": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
+      "1000x1000": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
     },
     "repost_count": 5,
     "track_count": 4
@@ -715,19 +715,19 @@ func main() {
 }
 ```
 
-<h3 id="get-user-responses">Responses</h3>
+<h3 id="get-user-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [user_response](#schemauser_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                  |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                  |
+| 地位  | 意义                                                           | 描述    | 架构                           |
+| --- | ------------------------------------------------------------ | ----- | ---------------------------- |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 没有任何  | [用户响应](#schemauser_response) |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求 | 没有任何                         |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误 | 没有任何                         |
 
-## The users's ID
+## 用户ID
 
 <a id="opIdThe users's ID"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/string/challenges 
@@ -736,14 +736,14 @@ curl AUDIUS_API_HOST/v1/users/string/challenges
 ```
 
 ```http
-GET AUDIUS_API_HOST/v1/users/string/challenges HTTP/1.1
+GET AUDIUS_API_HOST/v1/users/string/挑战 HTTP/1.1
 
 ```
 
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/users/string/challenges',
@@ -755,21 +755,21 @@ fetch('AUDIUS_API_HOST/v1/users/string/challenges',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log (正文);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
-  'Accept' => 'application/json'
+  ' => 'application/json'
 }
 
-result = RestClient.get 'AUDIUS_API_HOST/v1/users/string/challenges',
-  params: {
+result = RestClient.get 'AUDIUS_API_HOST/v1/users/string/challenges'，
+  参数： {
   }, headers: headers
 
 p JSON.parse(result)
@@ -777,7 +777,7 @@ p JSON.parse(result)
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
@@ -791,19 +791,19 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）;
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/users/string/challenges', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/users/string/challenges', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -811,7 +811,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -820,18 +820,18 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/users/string/challenges");
+URL obj = new URL("AUDIUS_API_HOST/v1/users/string/challenge");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -861,28 +861,28 @@ func main() {
 
 ```
 
-`GET /users/{user_id}/challenges`
+`获取/用户/{user_id}/挑战`
 
-<h3 id="the-users's-id-parameters">Query Parameters</h3>
+<h3 id="the-users's-id-parameters">查询参数</h3>
 
-| Name            | Type   | Required | Description                                                |
-| --------------- | ------ | -------- | ---------------------------------------------------------- |
-| show_historical | string | false    | Whether to show challenges that are inactive but completed |
-| user_id         | string | true     | none                                                       |
+| 姓名   | 类型 | 必需的 | 描述             |
+| ---- | -- | --- | -------------- |
+| 显示历史 | 细绳 | 错误的 | 是否显示未激活但已完成的挑战 |
+| 用户身份 | 细绳 | 真的  | 没有任何           |
 
-> Example Response
+> 示例响应
 
-> 200 Response
+> 200 响应
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "challenge_id": "string",
-      "user_id": "string",
-      "specifier": "string",
-      "is_complete": true,
-      "is_active": true,
+      “挑战ID”：“字符串”，
+      “用户ID”：“字符串”，
+      “说明符”：“字符串”，
+      “is_complete”：真，
+      “is_active”：真，
       "is_disbursed": true,
       "current_step_count": 0,
       "max_steps": 0,
@@ -893,19 +893,19 @@ func main() {
 }
 ```
 
-<h3 id="the-users's-id-responses">Responses</h3>
+<h3 id="the-users's-id-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                  |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [get_challenges](#schemaget_challenges) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                    |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                    |
+| 地位  | 意义                                                           | 描述    | 架构                            |
+| --- | ------------------------------------------------------------ | ----- | ----------------------------- |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 成功    | [获得挑战](#schemaget_challenges) |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求 | 没有任何                          |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误 | 没有任何                          |
 
-## Get User's Favorite Tracks
+## 获取用户最喜欢的曲目
 
 <a id="opIdGet User's Favorite Tracks"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/nlGNe/favorites 
@@ -921,7 +921,7 @@ GET AUDIUS_API_HOST/v1/users/nlGNe/favorites HTTP/1.1
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/users/nlGNe/favorites',
@@ -933,21 +933,21 @@ fetch('AUDIUS_API_HOST/v1/users/nlGNe/favorites',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log (正文);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/users/nlGNe/favorites',
-  params: {
+  参数： {
   }, headers: headers
 
 p JSON.parse(result)
@@ -955,7 +955,7 @@ p JSON.parse(result)
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
@@ -969,19 +969,19 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）；
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/users/nlGNe/favorites', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/users/nlGNe/favorites', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -989,7 +989,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -1004,12 +1004,12 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -1039,53 +1039,53 @@ func main() {
 
 ```
 
-`GET /users/{user_id}/favorites`
+`获取 /users/{user_id}/favorites`
 
-*Fetch favorited tracks for a user*
+*获取用户收藏的曲目*
 
-<h3 id="get-user's-favorite-tracks-parameters">Query Parameters</h3>
+<h3 id="get-user's-favorite-tracks-parameters">查询参数</h3>
 
-| Name    | Type   | Required | Description |
-| ------- | ------ | -------- | ----------- |
-| user_id | string | true     | A User ID   |
+| 姓名   | 类型 | 必需的 | 描述    |
+| ---- | -- | --- | ----- |
+| 用户身份 | 细绳 | 真的  | 用户 ID |
 
-> Example Response
+> 示例响应
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "favorite_item_id": "n3yVD",
-      "favorite_type": "SaveType.track",
-      "user_id": "nlGNe"
-    },
+      “favorite_item_id”：“n3yVD”，
+      “favorite_type”：“SaveType.track”，
+      “user_id”：“nlGNe”
+    }，
     {
-      "favorite_item_id": "nlv5l",
+      “favorite_item_id”：“nlv5l” ,
       "favorite_type": "SaveType.track",
       "user_id": "nlGNe"
     },
     {
       "favorite_item_id": "ezYKz",
       "favorite_type": "SaveType.track",
-      "user_id": "nlGNe"
+      "user_id": “nlGNe”
     }
   ]
 }
 ```
 
-<h3 id="get-user's-favorite-tracks-responses">Responses</h3>
+<h3 id="get-user's-favorite-tracks-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                          |
-| ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [favorites_response](#schemafavorites_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                            |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                            |
+| 地位  | 意义                                                           | 描述    | 架构                                 |
+| --- | ------------------------------------------------------------ | ----- | ---------------------------------- |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 没有任何  | [收藏夹响应](#schemafavorites_response) |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求 | 没有任何                               |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误 | 没有任何                               |
 
-## Get User's Reposts
+## 获取用户的转发
 
 <a id="opIdGet User's Reposts"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/string/reposts 
@@ -1101,7 +1101,7 @@ GET AUDIUS_API_HOST/v1/users/string/reposts HTTP/1.1
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/users/string/reposts',
@@ -1113,21 +1113,21 @@ fetch('AUDIUS_API_HOST/v1/users/string/reposts',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log (正文);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/users/string/reposts',
-  params: {
+  参数： {
   }, headers: headers
 
 p JSON.parse(result)
@@ -1135,7 +1135,7 @@ p JSON.parse(result)
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
@@ -1149,19 +1149,19 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）;
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/users/string/reposts', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/users/string/reposts', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -1169,7 +1169,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -1184,12 +1184,12 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -1219,45 +1219,45 @@ func main() {
 
 ```
 
-`GET /users/{user_id}/reposts`
+`获取 /users/{user_id}/reposts`
 
-<h3 id="get-user's-reposts-parameters">Query Parameters</h3>
+<h3 id="get-user's-reposts-parameters">查询参数</h3>
 
-| Name    | Type   | Required | Description |
-| ------- | ------ | -------- | ----------- |
-| user_id | string | true     | A User ID   |
-| limit   | string | false    | Limit       |
-| offset  | string | false    | Offset      |
+| 姓名   | 类型 | 必需的 | 描述    |
+| ---- | -- | --- | ----- |
+| 用户身份 | 细绳 | 真的  | 用户 ID |
+| 限制   | 细绳 | 错误的 | 限制    |
+| 抵消   | 细绳 | 错误的 | 抵消    |
 
-> Example Response
+> 示例响应
 
-> 200 Response
+> 200 响应
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "timestamp": "string",
-      "item_type": {},
-      "item": {}
+      “时间戳”：“字符串”，
+      “项目类型”：{}，
+      “项目”：{}
     }
   ]
 }
 ```
 
-<h3 id="get-user's-reposts-responses">Responses</h3>
+<h3 id="get-user's-reposts-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                    |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [reposts](#schemareposts) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                      |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                      |
+| 地位  | 意义                                                           | 描述    | 架构                   |
+| --- | ------------------------------------------------------------ | ----- | -------------------- |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 成功    | [转发](#schemareposts) |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求 | 没有任何                 |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误 | 没有任何                 |
 
-## Get User's Most Used Track Tags
+## 获取用户最常用的曲目标签
 
 <a id="opIdGet User's Most Used Track Tags"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/string/tags?user_id=string 
@@ -1273,7 +1273,7 @@ GET AUDIUS_API_HOST/v1/users/string/tags?user_id=string HTTP/1.1
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/users/string/tags?user_id=string',
@@ -1291,24 +1291,24 @@ fetch('AUDIUS_API_HOST/v1/users/string/tags?user_id=string',
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
-result = RestClient.get 'AUDIUS_API_HOST/v1/users/string/tags',
-  params: {
+result = RestClient.get 'AUDIUS_API_HOST/v1/users/string/tags'，
+  参数：{
   'user_id' => 'string'
-}, headers: headers
+}，标头：标头
 
 p JSON.parse(result)
 
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
@@ -1317,26 +1317,26 @@ r = requests.get('AUDIUS_API_HOST/v1/users/string/tags', params={
   'user_id': 'string'
 }, headers = headers)
 
-print(r.json())
+print(r. json())
 
 ```
 
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）；
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/users/string/tags', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/users/string/tags', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -1344,7 +1344,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -1359,12 +1359,12 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -1394,43 +1394,43 @@ func main() {
 
 ```
 
-`GET /users/{user_id}/tags`
+`获取 /users/{user_id}/标签`
 
-*Fetch most used tags in a user's tracks*
+*获取用户轨迹中最常用的标签*
 
-<h3 id="get-user's-most-used-track-tags-parameters">Query Parameters</h3>
+<h3 id="get-user's-most-used-track-tags-parameters">查询参数</h3>
 
-| Name    | Type    | Required | Description                 |
-| ------- | ------- | -------- | --------------------------- |
-| user_id | string  | true     | A User ID                   |
-| limit   | integer | false    | Limit on the number of tags |
-| user_id | string  | true     | none                        |
+| 姓名   | 类型 | 必需的 | 描述     |
+| ---- | -- | --- | ------ |
+| 用户身份 | 细绳 | 真的  | 用户 ID  |
+| 限制   | 整数 | 错误的 | 标签数量限制 |
+| 用户身份 | 细绳 | 真的  | 没有任何   |
 
-> Example Response
+> 示例响应
 
-> 200 Response
+> 200 响应
 
 ```json
 {
-  "data": [
-    "string"
+  “数据”：[
+    “字符串”
   ]
 }
 ```
 
-<h3 id="get-user's-most-used-track-tags-responses">Responses</h3>
+<h3 id="get-user's-most-used-track-tags-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [tags_response](#schematags_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                  |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                  |
+| 地位  | 意义                                                           | 描述    | 架构                           |
+| --- | ------------------------------------------------------------ | ----- | ---------------------------- |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 成功    | [标签响应](#schematags_response) |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求 | 没有任何                         |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误 | 没有任何                         |
 
-## Get User's Tracks
+## 获取用户的轨迹
 
 <a id="opIdGet User's Tracks"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/users/nlGNe/tracks 
@@ -1446,7 +1446,7 @@ GET AUDIUS_API_HOST/v1/users/nlGNe/tracks HTTP/1.1
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/users/nlGNe/tracks',
@@ -1458,21 +1458,21 @@ fetch('AUDIUS_API_HOST/v1/users/nlGNe/tracks',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log (正文);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/users/nlGNe/tracks',
-  params: {
+  参数： {
   }, headers: headers
 
 p JSON.parse(result)
@@ -1480,7 +1480,7 @@ p JSON.parse(result)
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
@@ -1494,19 +1494,19 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）;
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/users/nlGNe/tracks', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/users/nlGNe/tracks', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -1514,7 +1514,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -1529,12 +1529,12 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -1564,59 +1564,59 @@ func main() {
 
 ```
 
-`GET /users/{user_id}/tracks`
+`获取 /users/{user_id}/tracks`
 
-*Fetch a list of tracks for a user*
+*获取用户的曲目列表*
 
-<h3 id="get-user's-tracks-parameters">Query Parameters</h3>
+<h3 id="get-user's-tracks-parameters">查询参数</h3>
 
-| Name    | Type   | Required | Description |
-| ------- | ------ | -------- | ----------- |
-| user_id | string | true     | A User ID   |
-| limit   | string | false    | Limit       |
-| offset  | string | false    | Offset      |
-| sort    | string | false    | Sort mode   |
+| 姓名   | 类型 | 必需的 | 描述    |
+| ---- | -- | --- | ----- |
+| 用户身份 | 细绳 | 真的  | 用户 ID |
+| 限制   | 细绳 | 错误的 | 限制    |
+| 抵消   | 细绳 | 错误的 | 抵消    |
+| 种类   | 细绳 | 错误的 | 排序模式  |
 
-> Example Response
+> 示例响应
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "artwork": {
-        "150x150": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/150x150.jpg",
-        "480x480": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/480x480.jpg",
+      “艺术品”：{
+        “150x150”：“https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/150x150.jpg”，
+        “480x480”：“https:// creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/480x480.jpg",
         "1000x1000": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/1000x1000.jpg"
       },
-      "description": "@baauer b2b @partyfavormusic live set at Brownies & Lemonade Block Party LA at The Shrine on 7.3.19.",
-      "genre": "Electronic",
-      "id": "D7KyD",
-      "mood": "Fiery",
-      "release_date": "Mon Sep 23 2019 12:35:10 GMT-0700",
-      "repost_count": 47,
-      "favorite_count": 143,
-      "tags": "baauer,partyfavor,browniesandlemonade,live",
-      "title": "Paauer | Baauer B2B Party Favor | B&L Block Party LA (Live Set)",
+      "description": "@baauer b2b @partyfavormusic 于 19 年 3 月 7 日在 The Shrine 的 Brownies & Lemonade Block Party LA 现场演出。”，
+      “流派”：“电子”，
+      “id”：“D7KyD”，
+      “心情”：“火热”，
+      “release_date”：“2019 年 9 月 23 日星期一 12:35:10 GMT-0700”，
+      “repost_count”：
+      “favorite_count”：
+      “标签”：“baauer，partyfavor，browniesandlemonade，live”，
+      “ title": "Paauer | Baauer B2B Party Favor | B&L Block Party LA (Live Set)",
       "duration": 5265,
       "user": {
         "album_count": 0,
-        "bio": "Makin' moves & keeping you on your toes. linktr.ee/browniesandlemonade",
-        "cover_photo": {
-          "640x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/640x.jpg",
-          "2000x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
+        "bio": "Makin ' 移动 & 让你保持警觉。 
+          
+
+          audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
         },
         "followee_count": 19,
         "follower_count": 11141,
         "handle": "TeamBandL",
         "id": "nlGNe",
-        "is_verified": true,
+        ": true,
         "location": "Los Angeles, CA",
         "name": "Brownies & Lemonade",
         "playlist_count": 2,
         "profile_picture": {
-          "150x150": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
+          "150x150": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
           "480x480": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/480x480.jpg",
-          "1000x1000": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
+          "1000x1000": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
         },
         "repost_count": 5,
         "track_count": 4
@@ -1626,37 +1626,37 @@ func main() {
 }
 ```
 
-<h3 id="get-user's-tracks-responses">Responses</h3>
+<h3 id="get-user's-tracks-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                    |
-| ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [tracks_response](#schematracks_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                      |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                      |
+| 地位  | 意义                                                           | 描述    | 架构                             |
+| --- | ------------------------------------------------------------ | ----- | ------------------------------ |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 没有任何  | [轨道响应](#schematracks_response) |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求 | 没有任何                           |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误 | 没有任何                           |
 
-<h1 id="api-playlists">playlists</h1>
+<h1 id="api-playlists">播放列表</h1>
 
-## Search Playlists
+## 搜索播放列表
 
 <a id="opIdSearch Playlists"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
-curl AUDIUS_API_HOST/v1/playlists/search?query=Hot & New 
+curl AUDIUS_API_HOST/v1/playlists/search?query=Hot & 新 
 
 
 ```
 
 ```http
-GET AUDIUS_API_HOST/v1/playlists/search?query=Hot & New HTTP/1.1
+GET AUDIUS_API_HOST/v1/playlists/search?query=Hot & 新 HTTP/1.1
 
 ```
 
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/playlists/search?query=Hot & New',
@@ -1668,22 +1668,22 @@ fetch('AUDIUS_API_HOST/v1/playlists/search?query=Hot & New',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    控制台.log(正文);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/playlists/search',
-  params: {
-  'query' => 'string'
+  参数：{
+  ' query' => 'string'
 }, headers: headers
 
 p JSON.parse(result)
@@ -1691,35 +1691,35 @@ p JSON.parse(result)
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
 
 r = requests.get('AUDIUS_API_HOST/v1/playlists/search', params={
   'query': 'Hot & New'
-}, headers = headers)
+} , 标头 = 标头)
 
-print(r.json())
+打印(r.json())
 
 ```
 
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）;
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/playlists/search', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/playlists/search', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -1727,7 +1727,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -1742,8 +1742,8 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -1777,52 +1777,52 @@ func main() {
 
 ```
 
-`GET /playlists/search`
+`获取/播放列表/搜索`
 
-*Search for a playlist*
+*搜索播放列表*
 
-<h3 id="search-playlists-parameters">Query Parameters</h3>
+<h3 id="search-playlists-parameters">查询参数</h3>
 
-| Name              | Type   | Required | Description  |
-| ----------------- | ------ | -------- | ------------ |
-| query             | string | true     | Search Query |
-| only_downloadable | string | false    | none         |
+| 姓名                | 类型 | 必需的 | 描述   |
+| ----------------- | -- | --- | ---- |
+| 询问                | 细绳 | 真的  | 搜索查询 |
+| only_downloadable | 细绳 | 错误的 | 没有任何 |
 
-> Example Response
+> 示例响应
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "artwork": {
-        "150x150": "https://usermetadata.audius.co/ipfs/Qmc7RFzLGgW3DUTgKK49LzxEwe3Lmb47q85ZwJJRVYTXPr/150x150.jpg",
-        "480x480": "https://usermetadata.audius.co/ipfs/Qmc7RFzLGgW3DUTgKK49LzxEwe3Lmb47q85ZwJJRVYTXPr/480x480.jpg",
+      “艺术品”：{
+        “150x150”：“https://usermetadata.audius.co/ipfs/Qmc7RFzLGgW3DUTgKK49LzxEwe3Lmb47q85ZwJJRVYTXPr/150x150.jpg”，
+        “480x480”：“https:// usermetadata.audius.co/ipfs/Qmc7RFzLGgW3DUTgKK49LzxEwe3Lmb47q85ZwJJRVYTXPr/480x480.jpg",
         "1000x1000": "https://usermetadata.audius.co/ipfs/Qmc7RFzLGgW3DUTgKK49LzxEwe3Lmb47q85ZwJJRVYTXPr/1000x1000.jpg"
       },
-      "description": "All the latest hot new tracks on Audius! Enjoy the eclectic sounds that are created during the peak of this 2020 Summer.",
-      "id": "DOPRl",
-      "is_album": true,
-      "playlist_name": "Hot & New on Audius 🔥",
-      "repost_count": 46,
+      "description": "All the Audius 最新热门新歌！ 享受在 2020 年夏季高峰期间创造的不拘一格的声音。”，
+      “id”：“DOPRl”，
+      “is_album”：true，
+      “playlist_name”：“Hot & New on Audius 🔥”，
+      “repost_count ": 46,
       "favorite_count": 88,
       "user": {
         "album_count": 0,
-        "bio": "The official Audius account! Creating a decentralized and open-source streaming music platform controlled by artists, fans, & developers.",
+        "bio": "Audius 官方账号！ 创建一个由艺术家、粉丝、 & 个开发者控制的去中心化和开源的流媒体音乐平台。",
         "cover_photo": {
           "640x": "string",
           "2000x": "string"
         },
-        "followee_count": 69,
+        "followee_count ": 69,
         "follower_count": 6763,
         "handle": "Audius",
         "id": "eJ57D",
         "is_verified": true,
         "location": "SF & LA",
-        "name": "Audius",
+        "name ": "Audius",
         "playlist_count": 9,
         "profile_picture": {
           "150x150": "https://usermetadata.audius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f",
-          "480x480": "https://usermetadata.audius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f",
+          "480x480": "https:// usermetadata.audius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f",
           "1000x1000": "https://usermetadata.audius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f"
         },
         "repost_count": 200,
@@ -1833,19 +1833,19 @@ func main() {
 }
 ```
 
-<h3 id="search-playlists-responses">Responses</h3>
+<h3 id="search-playlists-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                                    |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist_search_result](#schemaplaylist_search_result) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                      |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                      |
+| 地位  | 意义                                                           | 描述    | 架构                                        |
+| --- | ------------------------------------------------------------ | ----- | ----------------------------------------- |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 没有任何  | [播放列表搜索结果](#schemaplaylist_search_result) |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求 | 没有任何                                      |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误 | 没有任何                                      |
 
-## Trending Playlists
+## 热门播放列表
 
 <a id="opIdTrending Playlists"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/playlists/trending/string 
@@ -1861,7 +1861,7 @@ GET AUDIUS_API_HOST/v1/playlists/trending/string HTTP/1.1
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/playlists/trending/string',
@@ -1873,21 +1873,21 @@ fetch('AUDIUS_API_HOST/v1/playlists/trending/string',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log (正文);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/playlists/trending/string',
-  params: {
+  参数： {
   }, headers: headers
 
 p JSON.parse(result)
@@ -1895,7 +1895,7 @@ p JSON.parse(result)
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
@@ -1909,19 +1909,19 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）；
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/playlists/trending/string', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/playlists/trending/string', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -1929,7 +1929,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -1944,12 +1944,12 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -1979,31 +1979,31 @@ func main() {
 
 ```
 
-`GET /playlists/trending/{version}`
+`获取/播放列表/趋势/{version}`
 
-*Gets top trending playlists for time period on Audius*
+*在 Audius 上获取时间段内最热门的播放列表*
 
-<h3 id="trending-playlists-parameters">Query Parameters</h3>
+<h3 id="trending-playlists-parameters">查询参数</h3>
 
-| Name    | Type   | Required | Description         |
-| ------- | ------ | -------- | ------------------- |
-| time    | string | false    | time range to query |
-| version | string | true     | none                |
+| 姓名 | 类型 | 必需的 | 描述     |
+| -- | -- | --- | ------ |
+| 时间 | 细绳 | 错误的 | 查询时间范围 |
+| 版本 | 细绳 | 真的  | 没有任何   |
 
-> Example Response
+> 示例响应
 
-> 200 Response
+> 200 响应
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "artwork": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
-      },
-      "description": "string",
+      “艺术品”：{
+        “150x150”：“字符串”，
+        “480x480”：“字符串”，
+        “1000x1000”：“字符串”
+      }，
+      “描述”：“ string",
       "id": "string",
       "is_album": true,
       "playlist_name": "string",
@@ -2017,7 +2017,7 @@ func main() {
           "640x": "string",
           "2000x": "string"
         },
-        "followee_count": 0,
+        "followee_count ": 0,
         "follower_count": 0,
         "handle": "string",
         "id": "string",
@@ -2030,7 +2030,7 @@ func main() {
           "480x480": "string",
           "1000x1000": "string"
         },
-        "repost_count": 0,
+        "repost_count" : 0,
         "track_count": 0
       }
     }
@@ -2038,19 +2038,19 @@ func main() {
 }
 ```
 
-<h3 id="trending-playlists-responses">Responses</h3>
+<h3 id="trending-playlists-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                                              |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [trending_playlists_response](#schematrending_playlists_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                |
+| 地位  | 意义                                                           | 描述    | 架构                                             |
+| --- | ------------------------------------------------------------ | ----- | ---------------------------------------------- |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 成功    | [趋势播放列表响应](#schematrending_playlists_response) |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求 | 没有任何                                           |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误 | 没有任何                                           |
 
-## Get Playlist
+## 获取播放列表
 
 <a id="opIdGet Playlist"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/playlists/DOPRl 
@@ -2066,7 +2066,7 @@ GET AUDIUS_API_HOST/v1/playlists/DOPRl HTTP/1.1
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/playlists/DOPRl',
@@ -2078,14 +2078,14 @@ fetch('AUDIUS_API_HOST/v1/playlists/DOPRl',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log(body );
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
   'Accept' => 'application/json'
@@ -2093,14 +2093,14 @@ headers = {
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/playlists/DOPRl',
   params: {
-  }, headers: headers
+  }, headers : 标题
 
 p JSON.parse(result)
 
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
@@ -2114,19 +2114,19 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）;
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/playlists/DOPRl', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/playlists/DOPRl', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -2134,7 +2134,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -2149,12 +2149,12 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -2184,50 +2184,50 @@ func main() {
 
 ```
 
-`GET /playlists/{playlist_id}`
+`获取/播放列表/{playlist_id}`
 
-*Fetch a playlist*
+*获取播放列表*
 
-<h3 id="get-playlist-parameters">Query Parameters</h3>
+<h3 id="get-playlist-parameters">查询参数</h3>
 
-| Name        | Type   | Required | Description   |
-| ----------- | ------ | -------- | ------------- |
-| playlist_id | string | true     | A Playlist ID |
+| 姓名          | 类型 | 必需的 | 描述      |
+| ----------- | -- | --- | ------- |
+| playlist_id | 细绳 | 真的  | 播放列表 ID |
 
-> Example Response
+> 示例响应
 
 ```json
 {
-  "data": {
-    "artwork": {
-      "150x150": "https://usermetadata.audius.co/ipfs/Qmc7RFzLGgW3DUTgKK49LzxEwe3Lmb47q85ZwJJRVYTXPr/150x150.jpg",
-      "480x480": "https://usermetadata.audius.co/ipfs/Qmc7RFzLGgW3DUTgKK49LzxEwe3Lmb47q85ZwJJRVYTXPr/480x480.jpg",
+  “数据”：{
+    “艺术作品”：{
+      “150x150”：“https://usermetadata.audius.co/ipfs/Qmc7RFzLGgW3DUTgKK49LzxEwe3Lmb47q85ZwJJRVYTXPr/150x150.jpg”，
+      “480x480”：“https://usermetadata. audius.co/ipfs/Qmc7RFzLGgW3DUTgKK49LzxEwe3Lmb47q85ZwJJRVYTXPr/480x480.jpg",
       "1000x1000": "https://usermetadata.audius.co/ipfs/Qmc7RFzLGgW3DUTgKK49LzxEwe3Lmb47q85ZwJJRVYTXPr/1000x1000.jpg"
     },
-    "description": "All the latest hot new tracks on Audius! Enjoy the eclectic sounds that are created during the peak of this 2020 Summer.",
-    "id": "DOPRl",
-    "is_album": true,
-    "playlist_name": "Hot & New on Audius 🔥",
-    "repost_count": 46,
+    "description": "All the latest hot Audius 上的新曲目！ 享受在 2020 年夏季高峰期间创造的不拘一格的声音。”，
+    “id”：“DOPRl”，
+    “is_album”：true，
+    “playlist_name”：“Hot & New on Audius 🔥”，
+    “repost_count ": 46,
     "favorite_count": 88,
     "user": {
       "album_count": 0,
-      "bio": "The official Audius account! Creating a decentralized and open-source streaming music platform controlled by artists, fans, & developers.",
+      "bio": "Audius 官方账号！ 创建一个由艺术家、粉丝、 & 个开发者控制的去中心化和开源的流媒体音乐平台。",
       "cover_photo": {
         "640x": "string",
         "2000x": "string"
       },
-      "followee_count": 69,
+      "followee_count ": 69,
       "follower_count": 6763,
       "handle": "Audius",
       "id": "eJ57D",
       "is_verified": true,
       "location": "SF & LA",
-      "name": "Audius",
+      "name ": "Audius",
       "playlist_count": 9,
       "profile_picture": {
         "150x150": "https://usermetadata.audius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f",
-        "480x480": "https://usermetadata.audius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f",
+        "480x480": "https:// usermetadata.audius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f",
         "1000x1000": "https://usermetadata.audius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f"
       },
       "repost_count": 200,
@@ -2237,19 +2237,19 @@ func main() {
 }
 ```
 
-<h3 id="get-playlist-responses">Responses</h3>
+<h3 id="get-playlist-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                        |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist_response](#schemaplaylist_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                          |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                          |
+| 地位  | 意义                                                           | 描述    | 架构                                 |
+| --- | ------------------------------------------------------------ | ----- | ---------------------------------- |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 没有任何  | [播放列表响应](#schemaplaylist_response) |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求 | 没有任何                               |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误 | 没有任何                               |
 
-## Get Playlist Tracks
+## 获取播放列表曲目
 
 <a id="opIdGet Playlist Tracks"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/playlists/DOPRl/tracks 
@@ -2265,7 +2265,7 @@ GET AUDIUS_API_HOST/v1/playlists/DOPRl/tracks HTTP/1.1
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/playlists/DOPRl/tracks',
@@ -2277,21 +2277,21 @@ fetch('AUDIUS_API_HOST/v1/playlists/DOPRl/tracks',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log (正文);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/playlists/DOPRl/tracks',
-  params: {
+  参数： {
   }, headers: headers
 
 p JSON.parse(result)
@@ -2299,7 +2299,7 @@ p JSON.parse(result)
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
@@ -2313,19 +2313,19 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）;
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/playlists/DOPRl/tracks', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/playlists/DOPRl/tracks', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -2333,7 +2333,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -2348,12 +2348,12 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -2383,56 +2383,56 @@ func main() {
 
 ```
 
-`GET /playlists/{playlist_id}/tracks`
+`获取 /播放列表/{playlist_id}/曲目`
 
-*Fetch tracks within a playlist*
+*获取播放列表中的曲目*
 
-<h3 id="get-playlist-tracks-parameters">Query Parameters</h3>
+<h3 id="get-playlist-tracks-parameters">查询参数</h3>
 
-| Name        | Type   | Required | Description   |
-| ----------- | ------ | -------- | ------------- |
-| playlist_id | string | true     | A Playlist ID |
+| 姓名          | 类型 | 必需的 | 描述      |
+| ----------- | -- | --- | ------- |
+| playlist_id | 细绳 | 真的  | 播放列表 ID |
 
-> Example Response
+> 示例响应
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "artwork": {
-        "150x150": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/150x150.jpg",
-        "480x480": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/480x480.jpg",
+      “艺术品”：{
+        “150x150”：“https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/150x150.jpg”，
+        “480x480”：“https:// creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/480x480.jpg",
         "1000x1000": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/1000x1000.jpg"
       },
-      "description": "@baauer b2b @partyfavormusic live set at Brownies & Lemonade Block Party LA at The Shrine on 7.3.19.",
-      "genre": "Electronic",
-      "id": "D7KyD",
-      "mood": "Fiery",
-      "release_date": "Mon Sep 23 2019 12:35:10 GMT-0700",
-      "repost_count": 47,
-      "favorite_count": 143,
-      "tags": "baauer,partyfavor,browniesandlemonade,live",
-      "title": "Paauer | Baauer B2B Party Favor | B&L Block Party LA (Live Set)",
+      "description": "@baauer b2b @partyfavormusic 于 19 年 3 月 7 日在 The Shrine 的 Brownies & Lemonade Block Party LA 现场演出。”，
+      “流派”：“电子”，
+      “id”：“D7KyD”，
+      “心情”：“火热”，
+      “release_date”：“2019 年 9 月 23 日星期一 12:35:10 GMT-0700”，
+      “repost_count”：
+      “favorite_count”：
+      “标签”：“baauer，partyfavor，browniesandlemonade，live”，
+      “ title": "Paauer | Baauer B2B Party Favor | B&L Block Party LA (Live Set)",
       "duration": 5265,
       "user": {
         "album_count": 0,
-        "bio": "Makin' moves & keeping you on your toes. linktr.ee/browniesandlemonade",
-        "cover_photo": {
-          "640x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/640x.jpg",
-          "2000x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
+        "bio": "Makin ' 移动 & 让你保持警觉。 
+          
+
+          audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
         },
         "followee_count": 19,
         "follower_count": 11141,
         "handle": "TeamBandL",
         "id": "nlGNe",
-        "is_verified": true,
+        ": true,
         "location": "Los Angeles, CA",
         "name": "Brownies & Lemonade",
         "playlist_count": 2,
         "profile_picture": {
-          "150x150": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
+          "150x150": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
           "480x480": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/480x480.jpg",
-          "1000x1000": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
+          "1000x1000": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
         },
         "repost_count": 5,
         "track_count": 4
@@ -2442,21 +2442,21 @@ func main() {
 }
 ```
 
-<h3 id="get-playlist-tracks-responses">Responses</h3>
+<h3 id="get-playlist-tracks-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                                        |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist_tracks_response](#schemaplaylist_tracks_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                          |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                          |
+| 地位  | 意义                                                           | 描述    | 架构                                                            |
+| --- | ------------------------------------------------------------ | ----- | ------------------------------------------------------------- |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 没有任何  | [playlist_tracks_response](#schemaplaylist_tracks_response) |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求 | 没有任何                                                          |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误 | 没有任何                                                          |
 
-<h1 id="api-tracks">tracks</h1>
+<h1 id="api-tracks">轨道</h1>
 
-## Get Track By Handle and Slug
+## 通过句柄和蛞蝓获取跟踪
 
 <a id="opIdGet Track By Handle and Slug"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/tracks 
@@ -2472,7 +2472,7 @@ GET AUDIUS_API_HOST/v1/tracks HTTP/1.1
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/tracks',
@@ -2490,23 +2490,23 @@ fetch('AUDIUS_API_HOST/v1/tracks',
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
-  'Accept' => 'application/json'
+  ' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/tracks',
   params: {
   }, headers: headers
 
-p JSON.parse(result)
+p JSON.parse(结果)
 
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
@@ -2520,19 +2520,19 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）;
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/tracks', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/tracks', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -2540,7 +2540,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -2555,12 +2555,12 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -2583,41 +2583,41 @@ func main() {
     req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/tracks", data)
     req.Header = headers
 
-    client := &http.Client{}
+    client := &http .Client{}
     resp, err := client.Do(req)
     // ...
 }
 
 ```
 
-`GET /tracks`
+`获取/曲目`
 
-<h3 id="get-track-by-handle-and-slug-parameters">Query Parameters</h3>
+<h3 id="get-track-by-handle-and-slug-parameters">查询参数</h3>
 
-| Name   | Type   | Required | Description      |
-| ------ | ------ | -------- | ---------------- |
-| handle | string | false    | A User's handle  |
-| slug   | string | false    | The track's slug |
+| 姓名 | 类型 | 必需的 | 描述      |
+| -- | -- | --- | ------- |
+| 处理 | 细绳 | 错误的 | 一个用户的句柄 |
+| 蛞蝓 | 细绳 | 错误的 | 赛道的蛞蝓   |
 
-> Example Response
+> 示例响应
 
-> 200 Response
+> 200 响应
 
 ```json
 {
-  "data": {
-    "artwork": {
-      "150x150": "string",
-      "480x480": "string",
-      "1000x1000": "string"
-    },
-    "description": "string",
-    "genre": "string",
-    "id": "string",
-    "mood": "string",
-    "release_date": "string",
-    "remix_of": {
-      "tracks": [
+  “数据”：{
+    “艺术品”：{
+      “150x150”：“字符串”，
+      “480x480”：“字符串”，
+      “1000x1000”：“字符串”
+    }，
+    “描述”：“字符串” ，
+    “流派”：“字符串”，
+    “id”：“字符串”，
+    “心情”：“字符串”，
+    “发布日期”：“字符串”，
+    “remix_of”：{
+      “曲目”：[
         {
           "parent_track_id": "string"
         }
@@ -2627,27 +2627,27 @@ func main() {
     "favorite_count": 0,
     "tags": "string",
     "title": "string",
-    "user": {
-      "album_count": 0,
-      "bio": "string",
-      "cover_photo": {
-        "640x": "string",
-        "2000x": "string"
-      },
-      "followee_count": 0,
+    "用户”：{
+      “album_count”：0、24“bio”：“string”、
+      “cover_photo”：{
+        “640x”：“string”、
+      “2000x”：“string”
+      }、
+        “
+      ” : 0,
       "follower_count": 0,
       "handle": "string",
       "id": "string",
       "is_verified": true,
       "location": "string",
-      "name": "string",
-      "playlist_count": 0,
-      "profile_picture": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
-      },
-      "repost_count": 0,
+      "name": "字符串”，
+      “播放列表计数”：
+      “profile_picture”：{
+        “150x150”：“字符串”，
+        “480x480”：“字符串”，
+        “1000x1000”：“字符串”
+      }，
+      “repost_count”： 0,
       "track_count": 0
     },
     "duration": 0,
@@ -2658,19 +2658,19 @@ func main() {
 }
 ```
 
-<h3 id="get-track-by-handle-and-slug-responses">Responses</h3>
+<h3 id="get-track-by-handle-and-slug-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                  |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [track_response](#schematrack_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                    |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                    |
+| 地位  | 意义                                                           | 描述    | 架构                            |
+| --- | ------------------------------------------------------------ | ----- | ----------------------------- |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 成功    | [跟踪响应](#schematrack_response) |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求 | 没有任何                          |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误 | 没有任何                          |
 
-## Recommended Tracks
+## 推荐曲目
 
 <a id="opIdRecommended Tracks"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/tracks/recommended/string 
@@ -2686,7 +2686,7 @@ GET AUDIUS_API_HOST/v1/tracks/recommended/string HTTP/1.1
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/tracks/recommended/string',
@@ -2698,21 +2698,21 @@ fetch('AUDIUS_API_HOST/v1/tracks/recommended/string',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log (正文);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/tracks/recommended/string',
-  params: {
+  参数： {
   }, headers: headers
 
 p JSON.parse(result)
@@ -2720,7 +2720,7 @@ p JSON.parse(result)
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
@@ -2734,19 +2734,19 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）;
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/tracks/recommended/string', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/tracks/recommended/string', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -2754,7 +2754,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -2769,8 +2769,8 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -2804,38 +2804,38 @@ func main() {
 
 ```
 
-`GET /tracks/recommended/{version}`
+`获取/曲目/推荐/{version}`
 
-<h3 id="recommended-tracks-parameters">Query Parameters</h3>
+<h3 id="recommended-tracks-parameters">查询参数</h3>
 
-| Name           | Type   | Required | Description                                                        |
-| -------------- | ------ | -------- | ------------------------------------------------------------------ |
-| genre          | string | false    | Recommended trending tracks for a specified genre                  |
-| limit          | string | false    | Number of recommended tracks to fetch                              |
-| exclusion_list | string | false    | List of track ids to exclude                                       |
-| time           | string | false    | Trending tracks over a specified time range (week, month, allTime) |
-| version        | string | true     | none                                                               |
+| 姓名   | 类型 | 必需的 | 描述                     |
+| ---- | -- | --- | ---------------------- |
+| 类型   | 细绳 | 错误的 | 指定流派的推荐热门曲目            |
+| 限制   | 细绳 | 错误的 | 要获取的推荐曲目数              |
+| 排除列表 | 细绳 | 错误的 | 要排除的轨道 ID 列表           |
+| 时间   | 细绳 | 错误的 | 指定时间范围（周、月、所有时间）内的趋势跟踪 |
+| 版本   | 细绳 | 真的  | 没有任何                   |
 
-> Example Response
+> 示例响应
 
-> 200 Response
+> 200 响应
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "artwork": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
-      },
-      "description": "string",
-      "genre": "string",
-      "id": "string",
-      "mood": "string",
-      "release_date": "string",
-      "remix_of": {
-        "tracks": [
+      “艺术品”：{
+        “150x150”：“字符串”，
+        “480x480”：“字符串”，
+        “1000x1000”：“字符串”
+      }，
+      “描述”：“字符串”，
+      “流派”：“字符串”，
+      “id”：“字符串”，
+      “心情”：“字符串”，
+      “发布日期”：“字符串”，
+      “remix_of”：{
+        “曲目”： [
           {
             "parent_track_id": "string"
           }
@@ -2845,27 +2845,27 @@ func main() {
       "favorite_count": 0,
       "tags": "string",
       "title": "string",
-      "user": {
-        "album_count": 0,
-        "bio": "string",
-        "cover_photo": {
-          "640x": "string",
-          "2000x": "string"
-        },
-        "followee_count": 0,
+      “用户”：{
+        “专辑计数”：0、25“简历”：“字符串”、
+        “封面照片”：{
+          “640x”：“字符串”、
+        “
+        ”：“字符串”
+          }、
+        “ followee_count": 0,
         "follower_count": 0,
         "handle": "string",
         "id": "string",
         "is_verified": true,
         "location": "string",
-        "name": "string",
+        "name" : "string",
         "playlist_count": 0,
         "profile_picture": {
           "150x150": "string",
           "480x480": "string",
           "1000x1000": "string"
         },
-        "repost_count": 0,
+        "repost_count ": 0,
         "track_count": 0
       },
       "duration": 0,
@@ -2877,19 +2877,19 @@ func main() {
 }
 ```
 
-<h3 id="recommended-tracks-responses">Responses</h3>
+<h3 id="recommended-tracks-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                    |
-| ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [tracks_response](#schematracks_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                      |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                      |
+| 地位  | 意义                                                           | 描述    | 架构                             |
+| --- | ------------------------------------------------------------ | ----- | ------------------------------ |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 成功    | [轨道响应](#schematracks_response) |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求 | 没有任何                           |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误 | 没有任何                           |
 
-## Search Tracks
+## 搜索曲目
 
 <a id="opIdSearch Tracks"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/tracks/search?query=baauer b2b 
@@ -2905,7 +2905,7 @@ GET AUDIUS_API_HOST/v1/tracks/search?query=baauer b2b HTTP/1.1
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/tracks/search?query=baauer b2b',
@@ -2923,8 +2923,8 @@ fetch('AUDIUS_API_HOST/v1/tracks/search?query=baauer b2b',
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
   'Accept' => 'application/json'
@@ -2932,7 +2932,7 @@ headers = {
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/tracks/search',
   params: {
-  'query' => 'string'
+  ' query' => 'string'
 }, headers: headers
 
 p JSON.parse(result)
@@ -2940,7 +2940,7 @@ p JSON.parse(result)
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
@@ -2949,26 +2949,26 @@ r = requests.get('AUDIUS_API_HOST/v1/tracks/search', params={
   'query': 'baauer b2b'
 }, headers = headers)
 
-print(r.json())
+print(r.json( ))
 
 ```
 
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）;
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/tracks/search', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/tracks/search', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -2976,7 +2976,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -2991,12 +2991,12 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -3026,57 +3026,57 @@ func main() {
 
 ```
 
-`GET /tracks/search`
+`获取/曲目/搜索`
 
-*Search for a track*
+*搜索曲目*
 
-<h3 id="search-tracks-parameters">Query Parameters</h3>
+<h3 id="search-tracks-parameters">查询参数</h3>
 
-| Name              | Type   | Required | Description                     |
-| ----------------- | ------ | -------- | ------------------------------- |
-| query             | string | true     | Search Query                    |
-| only_downloadable | string | false    | Return only downloadable tracks |
+| 姓名                | 类型 | 必需的 | 描述        |
+| ----------------- | -- | --- | --------- |
+| 询问                | 细绳 | 真的  | 搜索查询      |
+| only_downloadable | 细绳 | 错误的 | 仅返回可下载的曲目 |
 
-> Example Response
+> 示例响应
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "artwork": {
-        "150x150": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/150x150.jpg",
-        "480x480": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/480x480.jpg",
+      “艺术品”：{
+        “150x150”：“https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/150x150.jpg”，
+        “480x480”：“https:// creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/480x480.jpg",
         "1000x1000": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/1000x1000.jpg"
       },
-      "description": "@baauer b2b @partyfavormusic live set at Brownies & Lemonade Block Party LA at The Shrine on 7.3.19.",
-      "genre": "Electronic",
-      "id": "D7KyD",
-      "mood": "Fiery",
-      "release_date": "Mon Sep 23 2019 12:35:10 GMT-0700",
-      "repost_count": 47,
-      "favorite_count": 143,
-      "tags": "baauer,partyfavor,browniesandlemonade,live",
-      "title": "Paauer | Baauer B2B Party Favor | B&L Block Party LA (Live Set)",
+      "description": "@baauer b2b @partyfavormusic 于 19 年 3 月 7 日在 The Shrine 的 Brownies & Lemonade Block Party LA 现场演出。”，
+      “流派”：“电子”，
+      “id”：“D7KyD”，
+      “心情”：“火热”，
+      “release_date”：“2019 年 9 月 23 日星期一 12:35:10 GMT-0700”，
+      “repost_count”：
+      “favorite_count”：
+      “标签”：“baauer，partyfavor，browniesandlemonade，live”，
+      “ title": "Paauer | Baauer B2B Party Favor | B&L Block Party LA (Live Set)",
       "duration": 5265,
       "user": {
         "album_count": 0,
-        "bio": "Makin' moves & keeping you on your toes. linktr.ee/browniesandlemonade",
-        "cover_photo": {
-          "640x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/640x.jpg",
-          "2000x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
+        "bio": "Makin ' 移动 & 让你保持警觉。 
+          
+
+          audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
         },
         "followee_count": 19,
         "follower_count": 11141,
         "handle": "TeamBandL",
         "id": "nlGNe",
-        "is_verified": true,
+        ": true,
         "location": "Los Angeles, CA",
         "name": "Brownies & Lemonade",
         "playlist_count": 2,
         "profile_picture": {
-          "150x150": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
+          "150x150": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
           "480x480": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/480x480.jpg",
-          "1000x1000": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
+          "1000x1000": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
         },
         "repost_count": 5,
         "track_count": 4
@@ -3086,19 +3086,19 @@ func main() {
 }
 ```
 
-<h3 id="search-tracks-responses">Responses</h3>
+<h3 id="search-tracks-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                              |
-| ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [track_search](#schematrack_search) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                |
+| 地位  | 意义                                                           | 描述    | 架构                          |
+| --- | ------------------------------------------------------------ | ----- | --------------------------- |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 没有任何  | [跟踪搜索](#schematrack_search) |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求 | 没有任何                        |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误 | 没有任何                        |
 
-## Trending Tracks
+## 热门曲目
 
 <a id="opIdTrending Tracks"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/tracks/trending/string 
@@ -3114,7 +3114,7 @@ GET AUDIUS_API_HOST/v1/tracks/trending/string HTTP/1.1
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/tracks/trending/string',
@@ -3126,21 +3126,21 @@ fetch('AUDIUS_API_HOST/v1/tracks/trending/string',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log (正文);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/tracks/trending/string',
-  params: {
+  参数： {
   }, headers: headers
 
 p JSON.parse(result)
@@ -3148,7 +3148,7 @@ p JSON.parse(result)
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
@@ -3162,19 +3162,19 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）；
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/tracks/trending/string', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/tracks/trending/string', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -3182,7 +3182,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -3197,12 +3197,12 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -3232,38 +3232,38 @@ func main() {
 
 ```
 
-`GET /tracks/trending/{version}`
+`获取 /tracks/trending/{version}`
 
-*Gets the top 100 trending (most popular) tracks on Audius*
+*获取 Audius 上的前 100 首热门（最受欢迎）曲目*
 
-<h3 id="trending-tracks-parameters">Query Parameters</h3>
+<h3 id="trending-tracks-parameters">查询参数</h3>
 
-| Name    | Type   | Required | Description                                                        |
-| ------- | ------ | -------- | ------------------------------------------------------------------ |
-| genre   | string | false    | Trending tracks for a specified genre                              |
-| time    | string | false    | Trending tracks over a specified time range (week, month, allTime) |
-| version | string | true     | none                                                               |
+| 姓名 | 类型 | 必需的 | 描述                     |
+| -- | -- | --- | ---------------------- |
+| 类型 | 细绳 | 错误的 | 指定流派的热门曲目              |
+| 时间 | 细绳 | 错误的 | 指定时间范围（周、月、所有时间）内的趋势跟踪 |
+| 版本 | 细绳 | 真的  | 没有任何                   |
 
-> Example Response
+> 示例响应
 
-> 200 Response
+> 200 响应
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "artwork": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
-      },
-      "description": "string",
-      "genre": "string",
-      "id": "string",
-      "mood": "string",
-      "release_date": "string",
-      "remix_of": {
-        "tracks": [
+      “艺术品”：{
+        “150x150”：“字符串”，
+        “480x480”：“字符串”，
+        “1000x1000”：“字符串”
+      }，
+      “描述”：“字符串”，
+      “流派”：“字符串”，
+      “id”：“字符串”，
+      “心情”：“字符串”，
+      “发布日期”：“字符串”，
+      “remix_of”：{
+        “曲目”： [
           {
             "parent_track_id": "string"
           }
@@ -3273,27 +3273,27 @@ func main() {
       "favorite_count": 0,
       "tags": "string",
       "title": "string",
-      "user": {
-        "album_count": 0,
-        "bio": "string",
-        "cover_photo": {
-          "640x": "string",
-          "2000x": "string"
-        },
-        "followee_count": 0,
+      “用户”：{
+        “专辑计数”：0、25“简历”：“字符串”、
+        “封面照片”：{
+          “640x”：“字符串”、
+        “
+        ”：“字符串”
+          }、
+        “ followee_count": 0,
         "follower_count": 0,
         "handle": "string",
         "id": "string",
         "is_verified": true,
         "location": "string",
-        "name": "string",
+        "name" : "string",
         "playlist_count": 0,
         "profile_picture": {
           "150x150": "string",
           "480x480": "string",
           "1000x1000": "string"
         },
-        "repost_count": 0,
+        "repost_count ": 0,
         "track_count": 0
       },
       "duration": 0,
@@ -3305,19 +3305,19 @@ func main() {
 }
 ```
 
-<h3 id="trending-tracks-responses">Responses</h3>
+<h3 id="trending-tracks-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                    |
-| ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [tracks_response](#schematracks_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                      |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                      |
+| 地位  | 意义                                                           | 描述    | 架构                             |
+| --- | ------------------------------------------------------------ | ----- | ------------------------------ |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 成功    | [轨道响应](#schematracks_response) |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求 | 没有任何                           |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误 | 没有任何                           |
 
-## Get Track
+## 获取跟踪
 
 <a id="opIdGet Track"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/tracks/D7KyD 
@@ -3326,14 +3326,14 @@ curl AUDIUS_API_HOST/v1/tracks/D7KyD
 ```
 
 ```http
-GET AUDIUS_API_HOST/v1/tracks/D7KyD HTTP/1.1
+获取 AUDIUS_API_HOST/v1/tracks/D7KyD HTTP/1.1
 
 ```
 
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/tracks/D7KyD',
@@ -3345,14 +3345,14 @@ fetch('AUDIUS_API_HOST/v1/tracks/D7KyD',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log(body );
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
   'Accept' => 'application/json'
@@ -3360,14 +3360,14 @@ headers = {
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/tracks/D7KyD',
   params: {
-  }, headers: headers
+  }, headers : 标题
 
 p JSON.parse(result)
 
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
@@ -3381,19 +3381,19 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）；
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/tracks/D7KyD', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/tracks/D7KyD', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -3401,7 +3401,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -3416,12 +3416,12 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -3451,55 +3451,55 @@ func main() {
 
 ```
 
-`GET /tracks/{track_id}`
+`获取/轨道/{track_id}`
 
-*Fetch a track*
+*获取曲目*
 
-<h3 id="get-track-parameters">Query Parameters</h3>
+<h3 id="get-track-parameters">查询参数</h3>
 
-| Name     | Type   | Required | Description |
-| -------- | ------ | -------- | ----------- |
-| track_id | string | true     | A Track ID  |
+| 姓名       | 类型 | 必需的 | 描述    |
+| -------- | -- | --- | ----- |
+| track_id | 细绳 | 真的  | 曲目 ID |
 
-> Example Response
+> 示例响应
 
 ```json
 {
-  "data": {
-    "artwork": {
-      "150x150": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/150x150.jpg",
-      "480x480": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/480x480.jpg",
+  “数据”：{
+    “艺术品”：{
+      “150x150”：“https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/150x150.jpg”，
+      “480x480”：“https://creatornode. audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/480x480.jpg",
       "1000x1000": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/1000x1000.jpg"
     },
-    "description": "@baauer b2b @partyfavormusic live set at Brownies & Lemonade Block Party LA at The Shrine on 7.3.19.",
-    "genre": "Electronic",
-    "id": "D7KyD",
-    "mood": "Fiery",
-    "release_date": "Mon Sep 23 2019 12:35:10 GMT-0700",
+    "description": "@baauer b2b @ 19 年 3 月 19 日，在 Brownies & Lemonade Block Party LA 在 The Shrine 的partyfavormusic 现场演出。”，
+    个“流派”：“电子”，
+    “id”：“D7KyD”，
+    “心情”：“火热”，
+    “release_date” ": "Mon Sep 23 2019 12:35:10 GMT-0700",
     "repost_count": 47,
     "favorite_count": 143,
     "tags": "baauer,partyfavor,browniesandlemonade,live",
-    "title": "Paauer | Baauer B2B Party Favor | B&L Block Party LA (Live Set)",
+    "title" : "Paauer | Baauer B2B Party Favor | B&L Block Party LA (Live Set)",
     "duration": 5265,
     "user": {
       "album_count": 0,
-      "bio": "Makin' moves & keeping you on your toes. linktr.ee/browniesandlemonade",
-      "cover_photo": {
-        "640x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/640x.jpg",
-        "2000x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
+      "bio": "Makin' move & 让你保持警觉。 
+        
+
+        audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
       },
       "followee_count": 19,
       "follower_count": 11141,
       "handle": "TeamBandL",
       "id": "nlGNe",
-      "is_verified": true,
+      ": true,
       "location": "Los Angeles, CA",
       "name": "Brownies & Lemonade",
       "playlist_count": 2,
       "profile_picture": {
-        "150x150": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
+        "150x150": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
         "480x480": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/480x480.jpg",
-        "1000x1000": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
+        "1000x1000": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
       },
       "repost_count": 5,
       "track_count": 4
@@ -3508,19 +3508,19 @@ func main() {
 }
 ```
 
-<h3 id="get-track-responses">Responses</h3>
+<h3 id="get-track-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                  |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [track_response](#schematrack_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                    |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                    |
+| 地位  | 意义                                                           | 描述    | 架构                            |
+| --- | ------------------------------------------------------------ | ----- | ----------------------------- |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 没有任何  | [跟踪响应](#schematrack_response) |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求 | 没有任何                          |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误 | 没有任何                          |
 
-## Stream Track
+## 流轨道
 
 <a id="opIdStream Track"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/tracks/D7KyD/stream
@@ -3542,17 +3542,17 @@ fetch('AUDIUS_API_HOST/v1/tracks/D7KyD/stream',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log(正文);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要 'rest-client'
+需要 'json'
 
-result = RestClient.get 'AUDIUS_API_HOST/v1/tracks/D7KyD/stream',
-  params: {
+结果 = RestClient.get 'AUDIUS_API_HOST/v1/tracks/D7KyD/stream'，
+  参数： {
   }
 
 p JSON.parse(result)
@@ -3560,7 +3560,7 @@ p JSON.parse(result)
 ```
 
 ```python
-import requests
+导入请求
 
 r = requests.get('AUDIUS_API_HOST/v1/tracks/D7KyD/stream')
 
@@ -3571,15 +3571,15 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/tracks/D7KyD/stream', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/tracks/D7KyD/stream', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -3587,7 +3587,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -3602,12 +3602,12 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -3633,51 +3633,51 @@ func main() {
 
 ```
 
-`GET /tracks/{track_id}/stream`
+`获取 /tracks/{track_id}/stream`
 
-*Get the track's streamable mp3 file*
+*获取曲目的可流式 mp3 文件*
 
-This endpoint accepts the Range header for streaming. https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests
+此端点接受 Range 标头进行流式传输。 https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests
 
-<h3 id="stream-track-parameters">Query Parameters</h3>
+<h3 id="stream-track-parameters">查询参数</h3>
 
-| Name     | Type   | Required | Description |
-| -------- | ------ | -------- | ----------- |
-| track_id | string | true     | A Track ID  |
+| 姓名       | 类型 | 必需的 | 描述    |
+| -------- | -- | --- | ----- |
+| track_id | 细绳 | 真的  | 曲目 ID |
 
-<h3 id="stream-track-responses">Responses</h3>
+<h3 id="stream-track-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description           | Schema |
-| ------ | -------------------------------------------------------------------------- | --------------------- | ------ |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success               | None   |
-| 216    | Unknown                                                                    | Partial content       | None   |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request           | None   |
-| 416    | [Range Not Satisfiable](https://tools.ietf.org/html/rfc7233#section-4.4)   | Content range invalid | None   |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error          | None   |
+| 地位  | 意义                                                           | 描述     | 架构   |
+| --- | ------------------------------------------------------------ | ------ | ---- |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 成功     | 没有任何 |
+| 216 | 未知                                                           | 部分内容   | 没有任何 |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求  | 没有任何 |
+| 416 | [范围不满足](https://tools.ietf.org/html/rfc7233#section-4.4)     | 内容范围无效 | 没有任何 |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误  | 没有任何 |
 
-<h1 id="api-challenges">challenges</h1>
+<h1 id="api-challenges">挑战</h1>
 
 ## get_get_undisbursed_challenges
 
 <a id="opIdget_get_undisbursed_challenges"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
-curl AUDIUS_API_HOST/v1/challenges/undisbursed 
+curl AUDIUS_API_HOST/v1/挑战/未支付 
 
 
 ```
 
 ```http
-GET AUDIUS_API_HOST/v1/challenges/undisbursed HTTP/1.1
+获取 AUDIUS_API_HOST/v1/challenges/未支付的 HTTP/1.1
 
 ```
 
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/challenges/undisbursed',
@@ -3689,29 +3689,29 @@ fetch('AUDIUS_API_HOST/v1/challenges/undisbursed',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log(body );
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/challenges/undisbursed',
-  params: {
-  }, headers: headers
+  参数: {
+  }, headers : 标题
 
 p JSON.parse(result)
 
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
@@ -3725,19 +3725,19 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）;
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/challenges/undisbursed', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/challenges/undisbursed', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -3745,7 +3745,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -3760,12 +3760,12 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -3795,50 +3795,50 @@ func main() {
 
 ```
 
-`GET /challenges/undisbursed`
+`获取/挑战/未支付`
 
-<h3 id="get_get_undisbursed_challenges-parameters">Query Parameters</h3>
+<h3 id="get_get_undisbursed_challenges-parameters">查询参数</h3>
 
-| Name                  | Type   | Required | Description                                                       |
-| --------------------- | ------ | -------- | ----------------------------------------------------------------- |
-| limit                 | string | false    | The maximum number of response challenges                         |
-| offset                | string | false    | The number of challenges to intially skip in the query            |
-| completed_blocknumber | string | false    | Starting blocknumber to retrieve completed undisbursed challenges |
+| 姓名      | 类型 | 必需的 | 描述                |
+| ------- | -- | --- | ----------------- |
+| 限制      | 细绳 | 错误的 | 最大响应挑战数           |
+| 抵消      | 细绳 | 错误的 | 查询中最初跳过的挑战数       |
+| 完成的区块编号 | 细绳 | 错误的 | 起始区块号以检索已完成的未支付挑战 |
 
-> Example Response
+> 示例响应
 
-> 200 Response
+> 200 响应
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "challenge_id": "string",
-      "user_id": "string",
-      "specifier": "string",
-      "amount": "string",
-      "completed_blocknumber": 0
+      “挑战ID”：“字符串”，
+      “用户ID”：“字符串”，
+      “说明符”：“字符串”，
+      “数量”：“字符串”，
+      “完成的区块编号”： 0
     }
   ]
 }
 ```
 
-<h3 id="get_get_undisbursed_challenges-responses">Responses</h3>
+<h3 id="get_get_undisbursed_challenges-responses">回应</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                                  |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [undisbursed_challenges](#schemaundisbursed_challenges) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                    |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                    |
+| 地位  | 意义                                                           | 描述    | 架构                                      |
+| --- | ------------------------------------------------------------ | ----- | --------------------------------------- |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1)      | 成功    | [未支付的挑战](#schemaundisbursed_challenges) |
+| 400 | [错误的请求](https://tools.ietf.org/html/rfc7231#section-6.5.1)   | 错误的请求 | 没有任何                                    |
+| 500 | [内部服务器错误](https://tools.ietf.org/html/rfc7231#section-6.6.1) | 服务器错误 | 没有任何                                    |
 
-## get_attest
+## 获取证明
 
 <a id="opIdget_attest"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
-curl AUDIUS_API_HOST/v1/challenges/string/attest?user_id=string&oracle=string&specifier=string 
+curl AUDIUS_API_HOST/v1/challenges/string/attest?user_id=string&oracle=string&说明符=string 
 
 
 ```
@@ -3851,7 +3851,7 @@ GET AUDIUS_API_HOST/v1/challenges/string/attest?user_id=string&oracle=string&spe
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/challenges/string/attest?user_id=string&oracle=string&specifier=string',
@@ -3862,22 +3862,22 @@ fetch('AUDIUS_API_HOST/v1/challenges/string/attest?user_id=string&oracle=string&
 })
 .then(function(res) {
     return res.json();
-}).then(function(body) {
+}) .then(function(body) {
     console.log(body);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/challenges/string/attest',
-  params: {
+  参数：{
   'user_id' => 'string',
 'oracle' => 'string',
 'specifier' => 'string'
@@ -3888,7 +3888,7 @@ p JSON.parse(result)
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
@@ -3897,26 +3897,26 @@ r = requests.get('AUDIUS_API_HOST/v1/challenges/string/attest', params={
   'user_id': 'string',  'oracle': 'string',  'specifier': 'string'
 }, headers = headers)
 
-print(r.json())
+print(r. json())
 
 ```
 
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）；
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/challenges/string/attest', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/challenges/string/attest', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -3924,7 +3924,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -3939,12 +3939,12 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -3974,43 +3974,43 @@ func main() {
 
 ```
 
-`GET /challenges/{challenge_id}/attest`
+`获取/挑战/{challenge_id}/证明`
 
-<h3 id="get_attest-parameters">Query Parameters</h3>
+<h3 id="get_attest-parameters">查询参数</h3>
 
-| Name         | Type   | Required | Description |
-| ------------ | ------ | -------- | ----------- |
-| user_id      | string | true     | none        |
-| oracle       | string | true     | none        |
-| specifier    | string | true     | none        |
-| challenge_id | string | true     | none        |
+| 姓名   | 类型 | 必需的 | 描述   |
+| ---- | -- | --- | ---- |
+| 用户身份 | 细绳 | 真的  | 没有任何 |
+| 甲骨文  | 细绳 | 真的  | 没有任何 |
+| 说明符  | 细绳 | 真的  | 没有任何 |
+| 挑战ID | 细绳 | 真的  | 没有任何 |
 
-> Example Response
+> 示例响应
 
-> 200 Response
+> 200 响应
 
 ```json
 {
-  "data": {
-    "owner_wallet": "string",
-    "attestation": "string"
+  “数据”：{
+    “所有者钱包”：“字符串”，
+    “证明”：“字符串”
   }
 }
 ```
 
-<h3 id="get_attest-responses">Responses</h3>
+<h3 id="get_attest-responses">回应</h3>
 
-| Status | Meaning                                                 | Description | Schema                                            |
-| ------ | ------------------------------------------------------- | ----------- | ------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Success     | [attestation_reponse](#schemaattestation_reponse) |
+| 地位  | 意义                                                      | 描述 | 架构                                                |
+| --- | ------------------------------------------------------- | -- | ------------------------------------------------- |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | [attestation_reponse](#schemaattestation_reponse) |
 
-<h1 id="api-metrics">metrics</h1>
+<h1 id="api-metrics">指标</h1>
 
 ## get_trailing_app_name_metrics
 
 <a id="opIdget_trailing_app_name_metrics"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/metrics/app_name/trailing/string 
@@ -4026,7 +4026,7 @@ GET AUDIUS_API_HOST/v1/metrics/app_name/trailing/string HTTP/1.1
 ```javascript
 
 const headers = {
-  'Accept':'application/json'
+  '接受':'application/json'
 };
 
 fetch('AUDIUS_API_HOST/v1/metrics/app_name/trailing/string',
@@ -4038,55 +4038,55 @@ fetch('AUDIUS_API_HOST/v1/metrics/app_name/trailing/string',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    控制台.log(body);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/metrics/app_name/trailing/string',
-  params: {
-  }, headers: headers
+  参数: {
+  }，标头：标头
 
 p JSON.parse(result)
 
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'application/json'
 }
 
 r = requests.get('AUDIUS_API_HOST/v1/metrics/app_name/trailing/string', headers = headers)
 
-print(r.json())
+print(r.json( ))
 
 ```
 
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'application/json',
-);
+$headers = 数组（
+    '接受' => '应用程序/json',
+）;
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/metrics/app_name/trailing/string', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/metrics/app_name/trailing/string', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -4094,7 +4094,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -4109,12 +4109,12 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -4133,7 +4133,7 @@ func main() {
         "Accept": []string{"application/json"},
     }
 
-    data := bytes.NewBuffer([]byte{jsonReq})
+    数据 := bytes.NewBuffer([]byte{jsonReq})
     req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/metrics/app_name/trailing/string", data)
     req.Header = headers
 
@@ -4144,44 +4144,44 @@ func main() {
 
 ```
 
-`GET /metrics/app_name/trailing/{time_range}`
+`获取 /metrics/app_name/trailing/{time_range}`
 
-*Gets trailing app name metrics from matview*
+*从 matview 获取尾随应用名称指标*
 
-<h3 id="get_trailing_app_name_metrics-parameters">Query Parameters</h3>
+<h3 id="get_trailing_app_name_metrics-parameters">查询参数</h3>
 
-| Name       | Type   | Required | Description |
-| ---------- | ------ | -------- | ----------- |
-| time_range | string | true     | none        |
+| 姓名   | 类型 | 必需的 | 描述   |
+| ---- | -- | --- | ---- |
+| 时间范围 | 细绳 | 真的  | 没有任何 |
 
-> Example Response
+> 示例响应
 
-> 200 Response
+> 200 响应
 
 ```json
 {
-  "data": [
+  "数据": [
     {
-      "count": 0,
-      "name": "string"
+      "计数": 0,
+      "名称": "字符串"
     }
   ]
 }
 ```
 
-<h3 id="get_trailing_app_name_metrics-responses">Responses</h3>
+<h3 id="get_trailing_app_name_metrics-responses">回应</h3>
 
-| Status | Meaning                                                 | Description | Schema                                                            |
-| ------ | ------------------------------------------------------- | ----------- | ----------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Success     | [app_name_trailing_response](#schemaapp_name_trailing_response) |
+| 地位  | 意义                                                      | 描述 | 架构                                                                |
+| --- | ------------------------------------------------------- | -- | ----------------------------------------------------------------- |
+| 200 | [好的](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | [app_name_trailing_response](#schemaapp_name_trailing_response) |
 
-<h1 id="api-resolve">resolve</h1>
+<h1 id="api-resolve">解决</h1>
 
-## Resolve
+## 解决
 
 <a id="opIdResolve"></a>
 
-> Code Sample
+> 代码示例
 
 ```shell
 curl AUDIUS_API_HOST/v1/resolve?url=https://audius.co/camouflybeats/hypermantra-86216 
@@ -4197,7 +4197,7 @@ GET AUDIUS_API_HOST/v1/resolve?url=https://audius.co/camouflybeats/hypermantra-8
 ```javascript
 
 const headers = {
-  'Accept':'text/plain'
+  '接受':'text/plain'
 };
 
 fetch('AUDIUS_API_HOST/v1/resolve?url=https://audius.co/camouflybeats/hypermantra-86216',
@@ -4208,15 +4208,15 @@ fetch('AUDIUS_API_HOST/v1/resolve?url=https://audius.co/camouflybeats/hypermantr
 })
 .then(function(res) {
     return res.json();
-}).then(function(body) {
+}) .then(function(body) {
     console.log(body);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+需要'rest-client'
+需要'json'
 
 headers = {
   'Accept' => 'text/plain'
@@ -4225,42 +4225,42 @@ headers = {
 result = RestClient.get 'AUDIUS_API_HOST/v1/resolve',
   params: {
   'url' => 'string'
-}, headers: headers
+}，标头：标头
 
 p JSON.parse(result)
 
 ```
 
 ```python
-import requests
+导入请求
 headers = {
   'Accept': 'text/plain'
 }
 
 r = requests.get('AUDIUS_API_HOST/v1/resolve', params={
-  'url': 'https://audius.co/camouflybeats/hypermantra-86216'
-}, headers = headers)
+  'url': 'https://audius.co/ camouflybeats/hypermantra-86216'
+}，标题 = 标题）
 
-print(r.json())
+打印（r.json（））
 
 ```
 
 ```php
 <?php
 
-require 'vendor/autoload.php';
+需要'vendor/autoload.php'；
 
-$headers = array(
-    'Accept' => 'text/plain',
-);
+$headers = 数组（
+    '接受' => '文本/纯文本',
+）;
 
-$client = new \GuzzleHttp\Client();
+$client = 新 \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// 定义请求体数组。
+$request_body = 数组（）；
 
-try {
-    $response = $client->request('GET','AUDIUS_API_HOST/v1/resolve', array(
+次尝试 {
+    $response = $client->请求('GET','AUDIUS_API_HOST/v1/resolve', array(
         'headers' => $headers,
         'json' => $request_body,
        )
@@ -4268,7 +4268,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // 处理异常或 api 错误。
     print_r($e->getMessage());
  }
 
@@ -4283,12 +4283,12 @@ con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+字符串输入线；
+StringBuffer 响应 = new StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
-in.close();
+英寸关闭（）；
 System.out.println(response.toString());
 
 ```
@@ -4311,91 +4311,91 @@ func main() {
     req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/resolve", data)
     req.Header = headers
 
-    client := &http.Client{}
+    client := &http .Client{}
     resp, err := client.Do(req)
     // ...
 }
 
 ```
 
-`GET /resolve`
+`获取/解决`
 
-*Resolves and redirects a provided Audius app URL to the API resource URL it represents*
+*解析提供的 Audius 应用 URL 并将其重定向到它所代表的 API 资源 URL*
 
-This endpoint allows you to lookup and access API resources when you only know the audius.co URL. Tracks, Playlists, and Users are supported.
+当您只知道 audius.co URL 时，此端点允许您查找和访问 API 资源。 支持曲目、播放列表和用户。
 
-<h3 id="resolve-parameters">Query Parameters</h3>
+<h3 id="resolve-parameters">查询参数</h3>
 
-| Name | Type   | Required | Description                                                                           |
-| ---- | ------ | -------- | ------------------------------------------------------------------------------------- |
-| url  | string | true     | URL to resolve. Either fully formed URL (https://audius.co) or just the absolute path |
+| 姓名 | 类型 | 必需的 | 描述                                        |
+| -- | -- | --- | ----------------------------------------- |
+| 网址 | 细绳 | 真的  | 要解析的网址。 完整的 URL (https://audius.co) 或绝对路径 |
 
-> Example Response
+> 示例响应
 
-> Internal redirect
+> 内部重定向
 
 ```
-{"HTTP/1.1 302 Found Location":"/v1/tracks/V4W8r"}
+{"HTTP/1.1 302 找到位置":"/v1/tracks/V4W8r"}
 ```
 
-<h3 id="resolve-responses">Responses</h3>
+<h3 id="resolve-responses">回应</h3>
 
-| Status | Meaning                                                    | Description       | Schema |
-| ------ | ---------------------------------------------------------- | ----------------- | ------ |
-| 302    | [Found](https://tools.ietf.org/html/rfc7231#section-6.4.3) | Internal redirect | None   |
+| 地位  | 意义                                                      | 描述    | 架构   |
+| --- | ------------------------------------------------------- | ----- | ---- |
+| 302 | [成立](https://tools.ietf.org/html/rfc7231#section-6.4.3) | 内部重定向 | 没有任何 |
 
-<h3 id="resolve-responseschema">Response Schema</h3>
+<h3 id="resolve-responseschema">响应模式</h3>
 
-# Schemas
+# 模式
 
-The following are examples of response formats you can expect to receive from the API.
+以下是您可以期望从 API 接收的响应格式示例。
 
 <a id="schemauser_response"></a>
 <a id="schema_user_response"></a>
 <a id="tocSuser_response"></a>
 <a id="tocsuser_response"></a>
-<h2 id="tocS_user_response">user_response</h2>
+<h2 id="tocS_user_response">用户响应</h2>
 
 ```json
 {
-  "data": {
-    "album_count": 0,
-    "bio": "string",
-    "cover_photo": {
-      "640x": "string",
-      "2000x": "string"
-    },
+  “数据”：{
+    “专辑计数”：
+    “生物”：“字符串”、
+    “封面照片”：{
+      “640x”：“字符串”、
+      “2000x”：“字符串”
+    }、
     "followee_count": 0,
-    "follower_count": 0,
+    "followee_count": 0,
     "handle": "string",
     "id": "string",
     "is_verified": true,
     "location": "string",
-    "name": "string",
+    "name ": "string",
     "playlist_count": 0,
     "profile_picture": {
       "150x150": "string",
       "480x480": "string",
       "1000x1000": "string"
     },
-    "repost_count": 0,
+    " repost_count": 0,
     "track_count": 0
   }
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name | Type                | Required | Restrictions | Description |
-| ---- | ------------------- | -------- | ------------ | ----------- |
-| data | [user](#schemauser) | false    | none         | none        |
+| 姓名 | 类型                | 必需的 | 限制   | 描述   |
+| -- | ----------------- | --- | ---- | ---- |
+| 数据 | [用户](#schemauser) | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schemauser"></a>
 <a id="schema_user"></a>
 <a id="tocSuser"></a>
 <a id="tocsuser"></a>
-<h2 id="tocS_user">user</h2>
+<h2 id="tocS_user">用户</h2>
 
 ```json
 {
@@ -4419,50 +4419,50 @@ The following are examples of response formats you can expect to receive from th
     "1000x1000": "string"
   },
   "repost_count": 0,
-  "track_count": 0
+  “track_count”：0
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name            | Type                                      | Required | Restrictions | Description |
-| --------------- | ----------------------------------------- | -------- | ------------ | ----------- |
-| album_count     | integer                                   | true     | none         | none        |
-| bio             | string                                    | false    | none         | none        |
-| cover_photo     | [cover_photo](#schemacover_photo)         | false    | none         | none        |
-| followee_count  | integer                                   | true     | none         | none        |
-| follower_count  | integer                                   | true     | none         | none        |
-| handle          | string                                    | true     | none         | none        |
-| id              | string                                    | true     | none         | none        |
-| is_verified     | boolean                                   | true     | none         | none        |
-| location        | string                                    | false    | none         | none        |
-| name            | string                                    | true     | none         | none        |
-| playlist_count  | integer                                   | true     | none         | none        |
-| profile_picture | [profile_picture](#schemaprofile_picture) | false    | none         | none        |
-| repost_count    | integer                                   | true     | none         | none        |
-| track_count     | integer                                   | true     | none         | none        |
+| 姓名              | 类型                                        | 必需的 | 限制   | 描述   |
+| --------------- | ----------------------------------------- | --- | ---- | ---- |
+| 专辑计数            | 整数                                        | 真的  | 没有任何 | 没有任何 |
+| 生物              | 细绳                                        | 错误的 | 没有任何 | 没有任何 |
+| 封面照片            | [封面照片](#schemacover_photo)                | 错误的 | 没有任何 | 没有任何 |
+| followee_count  | 整数                                        | 真的  | 没有任何 | 没有任何 |
+| 追随者计数           | 整数                                        | 真的  | 没有任何 | 没有任何 |
+| 处理              | 细绳                                        | 真的  | 没有任何 | 没有任何 |
+| ID              | 细绳                                        | 真的  | 没有任何 | 没有任何 |
+| is_verified     | 布尔值                                       | 真的  | 没有任何 | 没有任何 |
+| 地点              | 细绳                                        | 错误的 | 没有任何 | 没有任何 |
+| 姓名              | 细绳                                        | 真的  | 没有任何 | 没有任何 |
+| 播放列表计数          | 整数                                        | 真的  | 没有任何 | 没有任何 |
+| profile_picture | [profile_picture](#schemaprofile_picture) | 错误的 | 没有任何 | 没有任何 |
+| repost_count    | 整数                                        | 真的  | 没有任何 | 没有任何 |
+| track_count     | 整数                                        | 真的  | 没有任何 | 没有任何 |
 
 <a id="schemacover_photo"></a>
 <a id="schema_cover_photo"></a>
 <a id="tocScover_photo"></a>
 <a id="tocscover_photo"></a>
-<h2 id="tocS_cover_photo">cover_photo</h2>
+<h2 id="tocS_cover_photo">封面照片</h2>
 
 ```json
 {
-  "640x": "string",
-  "2000x": "string"
+  “640x”：“字符串”，
+  “2000x”：“字符串”
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name  | Type   | Required | Restrictions | Description |
-| ----- | ------ | -------- | ------------ | ----------- |
-| 640x  | string | false    | none         | none        |
-| 2000x | string | false    | none         | none        |
+| 姓名     | 类型 | 必需的 | 限制   | 描述   |
+| ------ | -- | --- | ---- | ---- |
+| 640x   | 细绳 | 错误的 | 没有任何 | 没有任何 |
+| 2000 倍 | 细绳 | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schemaprofile_picture"></a>
 <a id="schema_profile_picture"></a>
@@ -4472,43 +4472,43 @@ The following are examples of response formats you can expect to receive from th
 
 ```json
 {
-  "150x150": "string",
-  "480x480": "string",
-  "1000x1000": "string"
+  “150x150”：“字符串”，
+  “480x480”：“字符串”，
+  “1000x1000”：“字符串”
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name      | Type   | Required | Restrictions | Description |
-| --------- | ------ | -------- | ------------ | ----------- |
-| 150x150   | string | false    | none         | none        |
-| 480x480   | string | false    | none         | none        |
-| 1000x1000 | string | false    | none         | none        |
+| 姓名        | 类型 | 必需的 | 限制   | 描述   |
+| --------- | -- | --- | ---- | ---- |
+| 150x150   | 细绳 | 错误的 | 没有任何 | 没有任何 |
+| 480x480   | 细绳 | 错误的 | 没有任何 | 没有任何 |
+| 1000x1000 | 细绳 | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schematracks_response"></a>
 <a id="schema_tracks_response"></a>
 <a id="tocStracks_response"></a>
 <a id="tocstracks_response"></a>
-<h2 id="tocS_tracks_response">tracks_response</h2>
+<h2 id="tocS_tracks_response">轨道响应</h2>
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "artwork": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
-      },
-      "description": "string",
-      "genre": "string",
-      "id": "string",
-      "mood": "string",
-      "release_date": "string",
-      "remix_of": {
-        "tracks": [
+      “艺术品”：{
+        “150x150”：“字符串”，
+        “480x480”：“字符串”，
+        “1000x1000”：“字符串”
+      }，
+      “描述”：“字符串”，
+      “流派”：“字符串”，
+      “id”：“字符串”，
+      “心情”：“字符串”，
+      “发布日期”：“字符串”，
+      “remix_of”：{
+        “曲目”： [
           {
             "parent_track_id": "string"
           }
@@ -4518,27 +4518,27 @@ The following are examples of response formats you can expect to receive from th
       "favorite_count": 0,
       "tags": "string",
       "title": "string",
-      "user": {
-        "album_count": 0,
-        "bio": "string",
-        "cover_photo": {
-          "640x": "string",
-          "2000x": "string"
-        },
-        "followee_count": 0,
+      “用户”：{
+        “专辑计数”：0、25“简历”：“字符串”、
+        “封面照片”：{
+          “640x”：“字符串”、
+        “
+        ”：“字符串”
+          }、
+        “ followee_count": 0,
         "follower_count": 0,
         "handle": "string",
         "id": "string",
         "is_verified": true,
         "location": "string",
-        "name": "string",
+        "name" : "string",
         "playlist_count": 0,
         "profile_picture": {
           "150x150": "string",
           "480x480": "string",
           "1000x1000": "string"
         },
-        "repost_count": 0,
+        "repost_count ": 0,
         "track_count": 0
       },
       "duration": 0,
@@ -4551,34 +4551,34 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### 特性
 
-| Name | Type                    | Required | Restrictions | Description |
-| ---- | ----------------------- | -------- | ------------ | ----------- |
-| data | [[Track](#schematrack)] | false    | none         | none        |
+| 姓名 | 类型                   | 必需的 | 限制   | 描述   |
+| -- | -------------------- | --- | ---- | ---- |
+| 数据 | [[曲目](#schematrack)] | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schematrack"></a>
 <a id="schema_Track"></a>
 <a id="tocStrack"></a>
 <a id="tocstrack"></a>
-<h2 id="tocS_Track">Track</h2>
+<h2 id="tocS_Track">追踪</h2>
 
 ```json
 {
-  "artwork": {
-    "150x150": "string",
-    "480x480": "string",
-    "1000x1000": "string"
-  },
-  "description": "string",
-  "genre": "string",
-  "id": "string",
-  "mood": "string",
-  "release_date": "string",
-  "remix_of": {
-    "tracks": [
+  “艺术品”：{
+    “150x150”：“字符串”，
+    “480x480”：“字符串”，
+    “1000x1000”：“字符串”
+  }，
+  “描述”：“字符串”，
+  “类型”： “字符串”，
+  “id”：“字符串”，
+  “心情”：“字符串”，
+  “发布日期”：“字符串”，
+  “remix_of”：{
+    “曲目”：[
       {
-        "parent_track_id": "string"
+        “parent_track_id”： "string"
       }
     ]
   },
@@ -4587,56 +4587,56 @@ The following are examples of response formats you can expect to receive from th
   "tags": "string",
   "title": "string",
   "user": {
-    "album_count": 0,
-    "bio": "string",
-    "cover_photo": {
-      "640x": "string",
-      "2000x": "string"
-    },
-    "followee_count": 0,
-    "follower_count": 0,
+    "专辑计数”：
+    “简历”：“字符串”、
+    “封面照片”：{
+      “640x”：“字符串”、
+      “2000x”：“字符串”
+    }、
+    “
+    ”：0、29“follower_count” ": 0,
     "handle": "string",
     "id": "string",
     "is_verified": true,
     "location": "string",
     "name": "string",
-    "playlist_count": 0,
+    "playlist_count ": 0,
     "profile_picture": {
       "150x150": "string",
       "480x480": "string",
       "1000x1000": "string"
     },
     "repost_count": 0,
-    "track_count": 0
+    "track_count" : 0
   },
-  "duration": 0,
-  "downloadable": true,
+  "持续时间": 0,
+  "可下载": true,
   "play_count": 0,
   "permalink": "string"
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name           | Type                                  | Required | Restrictions | Description |
-| -------------- | ------------------------------------- | -------- | ------------ | ----------- |
-| artwork        | [track_artwork](#schematrack_artwork) | false    | none         | none        |
-| description    | string                                | false    | none         | none        |
-| genre          | string                                | false    | none         | none        |
-| id             | string                                | true     | none         | none        |
-| mood           | string                                | false    | none         | none        |
-| release_date   | string                                | false    | none         | none        |
-| remix_of       | [remix_parent](#schemaremix_parent)   | false    | none         | none        |
-| repost_count   | integer                               | true     | none         | none        |
-| favorite_count | integer                               | true     | none         | none        |
-| tags           | string                                | false    | none         | none        |
-| title          | string                                | true     | none         | none        |
-| user           | [user](#schemauser)                   | true     | none         | none        |
-| duration       | integer                               | true     | none         | none        |
-| downloadable   | boolean                               | false    | none         | none        |
-| play_count     | integer                               | true     | none         | none        |
-| permalink      | string                                | false    | none         | none        |
+| 姓名           | 类型                                    | 必需的 | 限制   | 描述   |
+| ------------ | ------------------------------------- | --- | ---- | ---- |
+| 艺术品          | [track_artwork](#schematrack_artwork) | 错误的 | 没有任何 | 没有任何 |
+| 描述           | 细绳                                    | 错误的 | 没有任何 | 没有任何 |
+| 类型           | 细绳                                    | 错误的 | 没有任何 | 没有任何 |
+| ID           | 细绳                                    | 真的  | 没有任何 | 没有任何 |
+| 情绪           | 细绳                                    | 错误的 | 没有任何 | 没有任何 |
+| 发布日期         | 细绳                                    | 错误的 | 没有任何 | 没有任何 |
+| 混音           | [remix_parent](#schemaremix_parent)   | 错误的 | 没有任何 | 没有任何 |
+| repost_count | 整数                                    | 真的  | 没有任何 | 没有任何 |
+| 最喜欢的计数       | 整数                                    | 真的  | 没有任何 | 没有任何 |
+| 标签           | 细绳                                    | 错误的 | 没有任何 | 没有任何 |
+| 标题           | 细绳                                    | 真的  | 没有任何 | 没有任何 |
+| 用户           | [用户](#schemauser)                     | 真的  | 没有任何 | 没有任何 |
+| 期间           | 整数                                    | 真的  | 没有任何 | 没有任何 |
+| 可下载          | 布尔值                                   | 错误的 | 没有任何 | 没有任何 |
+| 播放计数         | 整数                                    | 真的  | 没有任何 | 没有任何 |
+| 永久链接         | 细绳                                    | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schematrack_artwork"></a>
 <a id="schema_track_artwork"></a>
@@ -4646,20 +4646,20 @@ The following are examples of response formats you can expect to receive from th
 
 ```json
 {
-  "150x150": "string",
-  "480x480": "string",
-  "1000x1000": "string"
+  “150x150”：“字符串”，
+  “480x480”：“字符串”，
+  “1000x1000”：“字符串”
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name      | Type   | Required | Restrictions | Description |
-| --------- | ------ | -------- | ------------ | ----------- |
-| 150x150   | string | false    | none         | none        |
-| 480x480   | string | false    | none         | none        |
-| 1000x1000 | string | false    | none         | none        |
+| 姓名        | 类型 | 必需的 | 限制   | 描述   |
+| --------- | -- | --- | ---- | ---- |
+| 150x150   | 细绳 | 错误的 | 没有任何 | 没有任何 |
+| 480x480   | 细绳 | 错误的 | 没有任何 | 没有任何 |
+| 1000x1000 | 细绳 | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schemaremix_parent"></a>
 <a id="schema_remix_parent"></a>
@@ -4669,118 +4669,118 @@ The following are examples of response formats you can expect to receive from th
 
 ```json
 {
-  "tracks": [
+  “轨道”：[
     {
-      "parent_track_id": "string"
+      “parent_track_id”：“字符串”
     }
   ]
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name   | Type                                    | Required | Restrictions | Description |
-| ------ | --------------------------------------- | -------- | ------------ | ----------- |
-| tracks | [[track_element](#schematrack_element)] | false    | none         | none        |
+| 姓名 | 类型                             | 必需的 | 限制   | 描述   |
+| -- | ------------------------------ | --- | ---- | ---- |
+| 轨道 | [[轨道元素](#schematrack_element)] | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schematrack_element"></a>
 <a id="schema_track_element"></a>
 <a id="tocStrack_element"></a>
 <a id="tocstrack_element"></a>
-<h2 id="tocS_track_element">track_element</h2>
+<h2 id="tocS_track_element">轨道元素</h2>
 
 ```json
 {
-  "parent_track_id": "string"
+  "parent_track_id": "字符串"
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name              | Type   | Required | Restrictions | Description |
-| ----------------- | ------ | -------- | ------------ | ----------- |
-| parent_track_id | string | true     | none         | none        |
+| 姓名                | 类型 | 必需的 | 限制   | 描述   |
+| ----------------- | -- | --- | ---- | ---- |
+| parent_track_id | 细绳 | 真的  | 没有任何 | 没有任何 |
 
 <a id="schemareposts"></a>
 <a id="schema_reposts"></a>
 <a id="tocSreposts"></a>
 <a id="tocsreposts"></a>
-<h2 id="tocS_reposts">reposts</h2>
+<h2 id="tocS_reposts">转发</h2>
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "timestamp": "string",
-      "item_type": {},
-      "item": {}
+      “时间戳”：“字符串”，
+      “项目类型”：{}，
+      “项目”：{}
     }
   ]
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name | Type                          | Required | Restrictions | Description |
-| ---- | ----------------------------- | -------- | ------------ | ----------- |
-| data | [[activity](#schemaactivity)] | false    | none         | none        |
+| 姓名 | 类型                      | 必需的 | 限制   | 描述   |
+| -- | ----------------------- | --- | ---- | ---- |
+| 数据 | [[活动](#schemaactivity)] | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schemaactivity"></a>
 <a id="schema_activity"></a>
 <a id="tocSactivity"></a>
 <a id="tocsactivity"></a>
-<h2 id="tocS_activity">activity</h2>
+<h2 id="tocS_activity">活动</h2>
 
 ```json
 {
-  "timestamp": "string",
-  "item_type": {},
-  "item": {}
+  “时间戳”：“字符串”，
+  “项目类型”：{}，
+  “项目”：{}
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name      | Type   | Required | Restrictions | Description |
-| --------- | ------ | -------- | ------------ | ----------- |
-| timestamp | string | false    | none         | none        |
-| item_type | object | false    | none         | none        |
-| item      | object | false    | none         | none        |
+| 姓名   | 类型 | 必需的 | 限制   | 描述   |
+| ---- | -- | --- | ---- | ---- |
+| 时间戳  | 细绳 | 错误的 | 没有任何 | 没有任何 |
+| 物品种类 | 目的 | 错误的 | 没有任何 | 没有任何 |
+| 物品   | 目的 | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schemafavorites_response"></a>
 <a id="schema_favorites_response"></a>
 <a id="tocSfavorites_response"></a>
 <a id="tocsfavorites_response"></a>
-<h2 id="tocS_favorites_response">favorites_response</h2>
+<h2 id="tocS_favorites_response">收藏夹响应</h2>
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "favorite_item_id": "string",
-      "favorite_type": "string",
-      "user_id": "string"
+      “favorite_item_id”：“string”，
+      “favorite_type”：“string”，
+      “user_id”：“string”
     }
   ]
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name | Type                          | Required | Restrictions | Description |
-| ---- | ----------------------------- | -------- | ------------ | ----------- |
-| data | [[favorite](#schemafavorite)] | false    | none         | none        |
+| 姓名 | 类型                      | 必需的 | 限制   | 描述   |
+| -- | ----------------------- | --- | ---- | ---- |
+| 数据 | [[喜欢](#schemafavorite)] | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schemafavorite"></a>
 <a id="schema_favorite"></a>
 <a id="tocSfavorite"></a>
 <a id="tocsfavorite"></a>
-<h2 id="tocS_favorite">favorite</h2>
+<h2 id="tocS_favorite">最喜欢的</h2>
 
 ```json
 {
@@ -4791,64 +4791,64 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### 特性
 
-| Name               | Type   | Required | Restrictions | Description |
-| ------------------ | ------ | -------- | ------------ | ----------- |
-| favorite_item_id | string | true     | none         | none        |
-| favorite_type      | string | true     | none         | none        |
-| user_id            | string | true     | none         | none        |
+| 姓名          | 类型 | 必需的 | 限制   | 描述   |
+| ----------- | -- | --- | ---- | ---- |
+| 最喜欢的item_id | 细绳 | 真的  | 没有任何 | 没有任何 |
+| 最喜欢的类型      | 细绳 | 真的  | 没有任何 | 没有任何 |
+| 用户身份        | 细绳 | 真的  | 没有任何 | 没有任何 |
 
 <a id="schematags_response"></a>
 <a id="schema_tags_response"></a>
 <a id="tocStags_response"></a>
 <a id="tocstags_response"></a>
-<h2 id="tocS_tags_response">tags_response</h2>
+<h2 id="tocS_tags_response">标签响应</h2>
 
 ```json
 {
-  "data": [
-    "string"
+  “数据”：[
+    “字符串”
   ]
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name | Type     | Required | Restrictions | Description |
-| ---- | -------- | -------- | ------------ | ----------- |
-| data | [string] | false    | none         | none        |
+| 姓名 | 类型       | 必需的 | 限制   | 描述   |
+| -- | -------- | --- | ---- | ---- |
+| 数据 | [string] | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schemauser_search"></a>
 <a id="schema_user_search"></a>
 <a id="tocSuser_search"></a>
 <a id="tocsuser_search"></a>
-<h2 id="tocS_user_search">user_search</h2>
+<h2 id="tocS_user_search">用户搜索</h2>
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "album_count": 0,
-      "bio": "string",
-      "cover_photo": {
-        "640x": "string",
-        "2000x": "string"
-      },
+      “专辑计数”：
+      “生物”：“字符串”，
+      “封面照片”：{
+        “640x”：“字符串”，
+        “2000x”：“字符串”
+      } ,
       "followee_count": 0,
-      "follower_count": 0,
+      "followee_count": 0,
       "handle": "string",
       "id": "string",
       "is_verified": true,
       "location": "string",
-      "name": "string",
-      "playlist_count": 0,
-      "profile_picture": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
-      },
+      “名称”：“字符串”，
+      “播放列表计数”：
+      “profile_picture”：{
+        “150x150”：“字符串”，
+        “480x480”：“字符串”，
+        “1000x1000”：“字符串”
+      }，
       "repost_count": 0,
       "track_count": 0
     }
@@ -4857,62 +4857,62 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### 特性
 
-| Name | Type                  | Required | Restrictions | Description |
-| ---- | --------------------- | -------- | ------------ | ----------- |
-| data | [[user](#schemauser)] | false    | none         | none        |
+| 姓名 | 类型                  | 必需的 | 限制   | 描述   |
+| -- | ------------------- | --- | ---- | ---- |
+| 数据 | [[用户](#schemauser)] | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schemaassociated_wallets_response"></a>
 <a id="schema_associated_wallets_response"></a>
 <a id="tocSassociated_wallets_response"></a>
 <a id="tocsassociated_wallets_response"></a>
-<h2 id="tocS_associated_wallets_response">associated_wallets_response</h2>
+<h2 id="tocS_associated_wallets_response">关联钱包响应</h2>
 
 ```json
 {
-  "data": {
-    "wallets": [
-      "string"
-    ],
-    "sol_wallets": [
-      "string"
+  “数据”：{
+    “钱包”：[
+      “字符串”
+    ]，
+    “sol_wallets”：[
+      “字符串”
     ]
   }
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name | Type                                            | Required | Restrictions | Description |
-| ---- | ----------------------------------------------- | -------- | ------------ | ----------- |
-| data | [associated_wallets](#schemaassociated_wallets) | false    | none         | none        |
+| 姓名 | 类型                                | 必需的 | 限制   | 描述   |
+| -- | --------------------------------- | --- | ---- | ---- |
+| 数据 | [关联钱包](#schemaassociated_wallets) | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schemaassociated_wallets"></a>
 <a id="schema_associated_wallets"></a>
 <a id="tocSassociated_wallets"></a>
 <a id="tocsassociated_wallets"></a>
-<h2 id="tocS_associated_wallets">associated_wallets</h2>
+<h2 id="tocS_associated_wallets">关联钱包</h2>
 
 ```json
 {
-  "wallets": [
-    "string"
-  ],
-  "sol_wallets": [
-    "string"
+  “钱包”：[
+    “字符串”
+  ]，
+  “sol_wallets”：[
+    “字符串”
   ]
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name        | Type     | Required | Restrictions | Description |
-| ----------- | -------- | -------- | ------------ | ----------- |
-| wallets     | [string] | true     | none         | none        |
-| sol_wallets | [string] | true     | none         | none        |
+| 姓名          | 类型       | 必需的 | 限制   | 描述   |
+| ----------- | -------- | --- | ---- | ---- |
+| 钱包          | [string] | 真的  | 没有任何 | 没有任何 |
+| sol_wallets | [string] | 真的  | 没有任何 | 没有任何 |
 
 <a id="schemauser_associated_wallet_response"></a>
 <a id="schema_user_associated_wallet_response"></a>
@@ -4922,53 +4922,53 @@ The following are examples of response formats you can expect to receive from th
 
 ```json
 {
-  "data": {
-    "user_id": "string"
+  “数据”：{
+    “用户ID”：“字符串”
   }
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name | Type                                        | Required | Restrictions | Description |
-| ---- | ------------------------------------------- | -------- | ------------ | ----------- |
-| data | [encoded_user_id](#schemaencoded_user_id) | false    | none         | none        |
+| 姓名 | 类型                                | 必需的 | 限制   | 描述   |
+| -- | --------------------------------- | --- | ---- | ---- |
+| 数据 | [编码的用户ID](#schemaencoded_user_id) | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schemaencoded_user_id"></a>
 <a id="schema_encoded_user_id"></a>
 <a id="tocSencoded_user_id"></a>
 <a id="tocsencoded_user_id"></a>
-<h2 id="tocS_encoded_user_id">encoded_user_id</h2>
+<h2 id="tocS_encoded_user_id">编码的用户ID</h2>
 
 ```json
 {
-  "user_id": "string"
+  "user_id": "字符串"
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name    | Type   | Required | Restrictions | Description |
-| ------- | ------ | -------- | ------------ | ----------- |
-| user_id | string | false    | none         | none        |
+| 姓名   | 类型 | 必需的 | 限制   | 描述   |
+| ---- | -- | --- | ---- | ---- |
+| 用户身份 | 细绳 | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schemaget_challenges"></a>
 <a id="schema_get_challenges"></a>
 <a id="tocSget_challenges"></a>
 <a id="tocsget_challenges"></a>
-<h2 id="tocS_get_challenges">get_challenges</h2>
+<h2 id="tocS_get_challenges">获得挑战</h2>
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "challenge_id": "string",
-      "user_id": "string",
-      "specifier": "string",
-      "is_complete": true,
-      "is_active": true,
+      “挑战ID”：“字符串”，
+      “用户ID”：“字符串”，
+      “说明符”：“字符串”，
+      “is_complete”：真，
+      “is_active”：真，
       "is_disbursed": true,
       "current_step_count": 0,
       "max_steps": 0,
@@ -4980,26 +4980,26 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### 特性
 
-| Name | Type                                              | Required | Restrictions | Description |
-| ---- | ------------------------------------------------- | -------- | ------------ | ----------- |
-| data | [[challenge_response](#schemachallenge_response)] | false    | none         | none        |
+| 姓名 | 类型                                  | 必需的 | 限制   | 描述   |
+| -- | ----------------------------------- | --- | ---- | ---- |
+| 数据 | [[挑战响应](#schemachallenge_response)] | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schemachallenge_response"></a>
 <a id="schema_challenge_response"></a>
 <a id="tocSchallenge_response"></a>
 <a id="tocschallenge_response"></a>
-<h2 id="tocS_challenge_response">challenge_response</h2>
+<h2 id="tocS_challenge_response">挑战响应</h2>
 
 ```json
 {
-  "challenge_id": "string",
-  "user_id": "string",
-  "specifier": "string",
-  "is_complete": true,
-  "is_active": true,
-  "is_disbursed": true,
+  “challenge_id”：“string”，
+  “user_id”：“string”，
+  “说明符”：“string”，
+  “is_complete”：true，
+  “is_active”：true，
+  “is_disbursed”：true，
   "current_step_count": 0,
   "max_steps": 0,
   "challenge_type": "string",
@@ -5008,37 +5008,37 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### 特性
 
-| Name                 | Type    | Required | Restrictions | Description |
-| -------------------- | ------- | -------- | ------------ | ----------- |
-| challenge_id         | string  | true     | none         | none        |
-| user_id              | string  | true     | none         | none        |
-| specifier            | string  | false    | none         | none        |
-| is_complete          | boolean | true     | none         | none        |
-| is_active            | boolean | true     | none         | none        |
-| is_disbursed         | boolean | true     | none         | none        |
-| current_step_count | integer | false    | none         | none        |
-| max_steps            | integer | false    | none         | none        |
-| challenge_type       | string  | true     | none         | none        |
-| metadata             | object  | true     | none         | none        |
+| 姓名                   | 类型  | 必需的 | 限制   | 描述   |
+| -------------------- | --- | --- | ---- | ---- |
+| 挑战ID                 | 细绳  | 真的  | 没有任何 | 没有任何 |
+| 用户身份                 | 细绳  | 真的  | 没有任何 | 没有任何 |
+| 说明符                  | 细绳  | 错误的 | 没有任何 | 没有任何 |
+| 已经完成                 | 布尔值 | 真的  | 没有任何 | 没有任何 |
+| 活跃                   | 布尔值 | 真的  | 没有任何 | 没有任何 |
+| is_disbursed         | 布尔值 | 真的  | 没有任何 | 没有任何 |
+| current_step_count | 整数  | 错误的 | 没有任何 | 没有任何 |
+| 最大步数                 | 整数  | 错误的 | 没有任何 | 没有任何 |
+| 挑战类型                 | 细绳  | 真的  | 没有任何 | 没有任何 |
+| 元数据                  | 目的  | 真的  | 没有任何 | 没有任何 |
 
 <a id="schemaplaylist_response"></a>
 <a id="schema_playlist_response"></a>
 <a id="tocSplaylist_response"></a>
 <a id="tocsplaylist_response"></a>
-<h2 id="tocS_playlist_response">playlist_response</h2>
+<h2 id="tocS_playlist_response">播放列表响应</h2>
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "artwork": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
-      },
-      "description": "string",
+      “艺术品”：{
+        “150x150”：“字符串”，
+        “480x480”：“字符串”，
+        “1000x1000”：“字符串”
+      }，
+      “描述”：“ string",
       "id": "string",
       "is_album": true,
       "playlist_name": "string",
@@ -5052,7 +5052,7 @@ The following are examples of response formats you can expect to receive from th
           "640x": "string",
           "2000x": "string"
         },
-        "followee_count": 0,
+        "followee_count ": 0,
         "follower_count": 0,
         "handle": "string",
         "id": "string",
@@ -5065,7 +5065,7 @@ The following are examples of response formats you can expect to receive from th
           "480x480": "string",
           "1000x1000": "string"
         },
-        "repost_count": 0,
+        "repost_count" : 0,
         "track_count": 0
       }
     }
@@ -5074,47 +5074,47 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### 特性
 
-| Name | Type                          | Required | Restrictions | Description |
-| ---- | ----------------------------- | -------- | ------------ | ----------- |
-| data | [[playlist](#schemaplaylist)] | false    | none         | none        |
+| 姓名 | 类型                        | 必需的 | 限制   | 描述   |
+| -- | ------------------------- | --- | ---- | ---- |
+| 数据 | [[播放列表](#schemaplaylist)] | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schemaplaylist"></a>
 <a id="schema_playlist"></a>
 <a id="tocSplaylist"></a>
 <a id="tocsplaylist"></a>
-<h2 id="tocS_playlist">playlist</h2>
+<h2 id="tocS_playlist">播放列表</h2>
 
 ```json
 {
-  "artwork": {
-    "150x150": "string",
-    "480x480": "string",
-    "1000x1000": "string"
-  },
-  "description": "string",
-  "id": "string",
+  “艺术品”：{
+    “150x150”：“字符串”，
+    “480x480”：“字符串”，
+    “1000x1000”：“字符串”
+  }，
+  “描述”：“字符串”，
+  “id”： "string",
   "is_album": true,
   "playlist_name": "string",
   "repost_count": 0,
   "favorite_count": 0,
   "total_play_count": 0,
   "user": {
-    "album_count": 0,
+    "album_count ": 0,
     "bio": "string",
     "cover_photo": {
       "640x": "string",
       "2000x": "string"
     },
     "followee_count": 0,
-    "follower_count": 0,
+    "follower_count" : 0,
     "handle": "string",
     "id": "string",
     "is_verified": true,
     "location": "string",
     "name": "string",
-    "playlist_count": 0,
+    "playlist_count" : 0,
     "profile_picture": {
       "150x150": "string",
       "480x480": "string",
@@ -5127,42 +5127,42 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### 特性
 
-| Name               | Type                                        | Required | Restrictions | Description |
-| ------------------ | ------------------------------------------- | -------- | ------------ | ----------- |
-| artwork            | [playlist_artwork](#schemaplaylist_artwork) | false    | none         | none        |
-| description        | string                                      | false    | none         | none        |
-| id                 | string                                      | true     | none         | none        |
-| is_album           | boolean                                     | true     | none         | none        |
-| playlist_name      | string                                      | true     | none         | none        |
-| repost_count       | integer                                     | true     | none         | none        |
-| favorite_count     | integer                                     | true     | none         | none        |
-| total_play_count | integer                                     | true     | none         | none        |
-| user               | [user](#schemauser)                         | true     | none         | none        |
+| 姓名                 | 类型                                  | 必需的 | 限制   | 描述   |
+| ------------------ | ----------------------------------- | --- | ---- | ---- |
+| 艺术品                | [播放列表_艺术品](#schemaplaylist_artwork) | 错误的 | 没有任何 | 没有任何 |
+| 描述                 | 细绳                                  | 错误的 | 没有任何 | 没有任何 |
+| ID                 | 细绳                                  | 真的  | 没有任何 | 没有任何 |
+| 是专辑                | 布尔值                                 | 真的  | 没有任何 | 没有任何 |
+| 播放列表名称             | 细绳                                  | 真的  | 没有任何 | 没有任何 |
+| repost_count       | 整数                                  | 真的  | 没有任何 | 没有任何 |
+| 最喜欢的计数             | 整数                                  | 真的  | 没有任何 | 没有任何 |
+| total_play_count | 整数                                  | 真的  | 没有任何 | 没有任何 |
+| 用户                 | [用户](#schemauser)                   | 真的  | 没有任何 | 没有任何 |
 
 <a id="schemaplaylist_artwork"></a>
 <a id="schema_playlist_artwork"></a>
 <a id="tocSplaylist_artwork"></a>
 <a id="tocsplaylist_artwork"></a>
-<h2 id="tocS_playlist_artwork">playlist_artwork</h2>
+<h2 id="tocS_playlist_artwork">播放列表_艺术品</h2>
 
 ```json
 {
-  "150x150": "string",
-  "480x480": "string",
-  "1000x1000": "string"
+  “150x150”：“字符串”，
+  “480x480”：“字符串”，
+  “1000x1000”：“字符串”
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name      | Type   | Required | Restrictions | Description |
-| --------- | ------ | -------- | ------------ | ----------- |
-| 150x150   | string | false    | none         | none        |
-| 480x480   | string | false    | none         | none        |
-| 1000x1000 | string | false    | none         | none        |
+| 姓名        | 类型 | 必需的 | 限制   | 描述   |
+| --------- | -- | --- | ---- | ---- |
+| 150x150   | 细绳 | 错误的 | 没有任何 | 没有任何 |
+| 480x480   | 细绳 | 错误的 | 没有任何 | 没有任何 |
+| 1000x1000 | 细绳 | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schemaplaylist_tracks_response"></a>
 <a id="schema_playlist_tracks_response"></a>
@@ -5172,20 +5172,20 @@ The following are examples of response formats you can expect to receive from th
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "artwork": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
-      },
-      "description": "string",
-      "genre": "string",
-      "id": "string",
-      "mood": "string",
-      "release_date": "string",
-      "remix_of": {
-        "tracks": [
+      “艺术品”：{
+        “150x150”：“字符串”，
+        “480x480”：“字符串”，
+        “1000x1000”：“字符串”
+      }，
+      “描述”：“字符串”，
+      “流派”：“字符串”，
+      “id”：“字符串”，
+      “心情”：“字符串”，
+      “发布日期”：“字符串”，
+      “remix_of”：{
+        “曲目”： [
           {
             "parent_track_id": "string"
           }
@@ -5195,27 +5195,27 @@ The following are examples of response formats you can expect to receive from th
       "favorite_count": 0,
       "tags": "string",
       "title": "string",
-      "user": {
-        "album_count": 0,
-        "bio": "string",
-        "cover_photo": {
-          "640x": "string",
-          "2000x": "string"
-        },
-        "followee_count": 0,
+      “用户”：{
+        “专辑计数”：0、25“简历”：“字符串”、
+        “封面照片”：{
+          “640x”：“字符串”、
+        “
+        ”：“字符串”
+          }、
+        “ followee_count": 0,
         "follower_count": 0,
         "handle": "string",
         "id": "string",
         "is_verified": true,
         "location": "string",
-        "name": "string",
+        "name" : "string",
         "playlist_count": 0,
         "profile_picture": {
           "150x150": "string",
           "480x480": "string",
           "1000x1000": "string"
         },
-        "repost_count": 0,
+        "repost_count ": 0,
         "track_count": 0
       },
       "duration": 0,
@@ -5228,28 +5228,28 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### 特性
 
-| Name | Type                    | Required | Restrictions | Description |
-| ---- | ----------------------- | -------- | ------------ | ----------- |
-| data | [[Track](#schematrack)] | false    | none         | none        |
+| 姓名 | 类型                   | 必需的 | 限制   | 描述   |
+| -- | -------------------- | --- | ---- | ---- |
+| 数据 | [[曲目](#schematrack)] | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schemaplaylist_search_result"></a>
 <a id="schema_playlist_search_result"></a>
 <a id="tocSplaylist_search_result"></a>
 <a id="tocsplaylist_search_result"></a>
-<h2 id="tocS_playlist_search_result">playlist_search_result</h2>
+<h2 id="tocS_playlist_search_result">播放列表搜索结果</h2>
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "artwork": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
-      },
-      "description": "string",
+      “艺术品”：{
+        “150x150”：“字符串”，
+        “480x480”：“字符串”，
+        “1000x1000”：“字符串”
+      }，
+      “描述”：“ string",
       "id": "string",
       "is_album": true,
       "playlist_name": "string",
@@ -5263,7 +5263,7 @@ The following are examples of response formats you can expect to receive from th
           "640x": "string",
           "2000x": "string"
         },
-        "followee_count": 0,
+        "followee_count ": 0,
         "follower_count": 0,
         "handle": "string",
         "id": "string",
@@ -5276,7 +5276,7 @@ The following are examples of response formats you can expect to receive from th
           "480x480": "string",
           "1000x1000": "string"
         },
-        "repost_count": 0,
+        "repost_count" : 0,
         "track_count": 0
       }
     }
@@ -5285,28 +5285,28 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### 特性
 
-| Name | Type                          | Required | Restrictions | Description |
-| ---- | ----------------------------- | -------- | ------------ | ----------- |
-| data | [[playlist](#schemaplaylist)] | false    | none         | none        |
+| 姓名 | 类型                        | 必需的 | 限制   | 描述   |
+| -- | ------------------------- | --- | ---- | ---- |
+| 数据 | [[播放列表](#schemaplaylist)] | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schematrending_playlists_response"></a>
 <a id="schema_trending_playlists_response"></a>
 <a id="tocStrending_playlists_response"></a>
 <a id="tocstrending_playlists_response"></a>
-<h2 id="tocS_trending_playlists_response">trending_playlists_response</h2>
+<h2 id="tocS_trending_playlists_response">趋势播放列表响应</h2>
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "artwork": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
-      },
-      "description": "string",
+      “艺术品”：{
+        “150x150”：“字符串”，
+        “480x480”：“字符串”，
+        “1000x1000”：“字符串”
+      }，
+      “描述”：“ string",
       "id": "string",
       "is_album": true,
       "playlist_name": "string",
@@ -5320,7 +5320,7 @@ The following are examples of response formats you can expect to receive from th
           "640x": "string",
           "2000x": "string"
         },
-        "followee_count": 0,
+        "followee_count ": 0,
         "follower_count": 0,
         "handle": "string",
         "id": "string",
@@ -5333,7 +5333,7 @@ The following are examples of response formats you can expect to receive from th
           "480x480": "string",
           "1000x1000": "string"
         },
-        "repost_count": 0,
+        "repost_count" : 0,
         "track_count": 0
       }
     }
@@ -5342,33 +5342,33 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### 特性
 
-| Name | Type                          | Required | Restrictions | Description |
-| ---- | ----------------------------- | -------- | ------------ | ----------- |
-| data | [[playlist](#schemaplaylist)] | false    | none         | none        |
+| 姓名 | 类型                        | 必需的 | 限制   | 描述   |
+| -- | ------------------------- | --- | ---- | ---- |
+| 数据 | [[播放列表](#schemaplaylist)] | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schematrack_response"></a>
 <a id="schema_track_response"></a>
 <a id="tocStrack_response"></a>
 <a id="tocstrack_response"></a>
-<h2 id="tocS_track_response">track_response</h2>
+<h2 id="tocS_track_response">跟踪响应</h2>
 
 ```json
 {
-  "data": {
-    "artwork": {
-      "150x150": "string",
-      "480x480": "string",
-      "1000x1000": "string"
-    },
-    "description": "string",
-    "genre": "string",
-    "id": "string",
-    "mood": "string",
-    "release_date": "string",
-    "remix_of": {
-      "tracks": [
+  “数据”：{
+    “艺术品”：{
+      “150x150”：“字符串”，
+      “480x480”：“字符串”，
+      “1000x1000”：“字符串”
+    }，
+    “描述”：“字符串” ，
+    “流派”：“字符串”，
+    “id”：“字符串”，
+    “心情”：“字符串”，
+    “发布日期”：“字符串”，
+    “remix_of”：{
+      “曲目”：[
         {
           "parent_track_id": "string"
         }
@@ -5378,27 +5378,27 @@ The following are examples of response formats you can expect to receive from th
     "favorite_count": 0,
     "tags": "string",
     "title": "string",
-    "user": {
-      "album_count": 0,
-      "bio": "string",
-      "cover_photo": {
-        "640x": "string",
-        "2000x": "string"
-      },
-      "followee_count": 0,
+    "用户”：{
+      “album_count”：0、24“bio”：“string”、
+      “cover_photo”：{
+        “640x”：“string”、
+      “2000x”：“string”
+      }、
+        “
+      ” : 0,
       "follower_count": 0,
       "handle": "string",
       "id": "string",
       "is_verified": true,
       "location": "string",
-      "name": "string",
-      "playlist_count": 0,
-      "profile_picture": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
-      },
-      "repost_count": 0,
+      "name": "字符串”，
+      “播放列表计数”：
+      “profile_picture”：{
+        “150x150”：“字符串”，
+        “480x480”：“字符串”，
+        “1000x1000”：“字符串”
+      }，
+      “repost_count”： 0,
       "track_count": 0
     },
     "duration": 0,
@@ -5410,34 +5410,34 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### 特性
 
-| Name | Type                  | Required | Restrictions | Description |
-| ---- | --------------------- | -------- | ------------ | ----------- |
-| data | [Track](#schematrack) | false    | none         | none        |
+| 姓名 | 类型                 | 必需的 | 限制   | 描述   |
+| -- | ------------------ | --- | ---- | ---- |
+| 数据 | [追踪](#schematrack) | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schematrack_search"></a>
 <a id="schema_track_search"></a>
 <a id="tocStrack_search"></a>
 <a id="tocstrack_search"></a>
-<h2 id="tocS_track_search">track_search</h2>
+<h2 id="tocS_track_search">跟踪搜索</h2>
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "artwork": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
-      },
-      "description": "string",
-      "genre": "string",
-      "id": "string",
-      "mood": "string",
-      "release_date": "string",
-      "remix_of": {
-        "tracks": [
+      “艺术品”：{
+        “150x150”：“字符串”，
+        “480x480”：“字符串”，
+        “1000x1000”：“字符串”
+      }，
+      “描述”：“字符串”，
+      “流派”：“字符串”，
+      “id”：“字符串”，
+      “心情”：“字符串”，
+      “发布日期”：“字符串”，
+      “remix_of”：{
+        “曲目”： [
           {
             "parent_track_id": "string"
           }
@@ -5447,27 +5447,27 @@ The following are examples of response formats you can expect to receive from th
       "favorite_count": 0,
       "tags": "string",
       "title": "string",
-      "user": {
-        "album_count": 0,
-        "bio": "string",
-        "cover_photo": {
-          "640x": "string",
-          "2000x": "string"
-        },
-        "followee_count": 0,
+      “用户”：{
+        “专辑计数”：0、25“简历”：“字符串”、
+        “封面照片”：{
+          “640x”：“字符串”、
+        “
+        ”：“字符串”
+          }、
+        “ followee_count": 0,
         "follower_count": 0,
         "handle": "string",
         "id": "string",
         "is_verified": true,
         "location": "string",
-        "name": "string",
+        "name" : "string",
         "playlist_count": 0,
         "profile_picture": {
           "150x150": "string",
           "480x480": "string",
           "1000x1000": "string"
         },
-        "repost_count": 0,
+        "repost_count ": 0,
         "track_count": 0
       },
       "duration": 0,
@@ -5480,11 +5480,11 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### 特性
 
-| Name | Type                    | Required | Restrictions | Description |
-| ---- | ----------------------- | -------- | ------------ | ----------- |
-| data | [[Track](#schematrack)] | false    | none         | none        |
+| 姓名 | 类型                   | 必需的 | 限制   | 描述   |
+| -- | -------------------- | --- | ---- | ---- |
+| 数据 | [[曲目](#schematrack)] | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schemaattestation_reponse"></a>
 <a id="schema_attestation_reponse"></a>
@@ -5494,25 +5494,25 @@ The following are examples of response formats you can expect to receive from th
 
 ```json
 {
-  "data": {
-    "owner_wallet": "string",
-    "attestation": "string"
+  “数据”：{
+    “所有者钱包”：“字符串”，
+    “证明”：“字符串”
   }
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name | Type                              | Required | Restrictions | Description |
-| ---- | --------------------------------- | -------- | ------------ | ----------- |
-| data | [attestation](#schemaattestation) | false    | none         | none        |
+| 姓名 | 类型                       | 必需的 | 限制   | 描述   |
+| -- | ------------------------ | --- | ---- | ---- |
+| 数据 | [证明](#schemaattestation) | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schemaattestation"></a>
 <a id="schema_attestation"></a>
 <a id="tocSattestation"></a>
 <a id="tocsattestation"></a>
-<h2 id="tocS_attestation">attestation</h2>
+<h2 id="tocS_attestation">证明</h2>
 
 ```json
 {
@@ -5522,45 +5522,45 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### 特性
 
-| Name         | Type   | Required | Restrictions | Description |
-| ------------ | ------ | -------- | ------------ | ----------- |
-| owner_wallet | string | true     | none         | none        |
-| attestation  | string | true     | none         | none        |
+| 姓名           | 类型 | 必需的 | 限制   | 描述   |
+| ------------ | -- | --- | ---- | ---- |
+| owner_wallet | 细绳 | 真的  | 没有任何 | 没有任何 |
+| 证明           | 细绳 | 真的  | 没有任何 | 没有任何 |
 
 <a id="schemaundisbursed_challenges"></a>
 <a id="schema_undisbursed_challenges"></a>
 <a id="tocSundisbursed_challenges"></a>
 <a id="tocsundisbursed_challenges"></a>
-<h2 id="tocS_undisbursed_challenges">undisbursed_challenges</h2>
+<h2 id="tocS_undisbursed_challenges">未支付的挑战</h2>
 
 ```json
 {
-  "data": [
+  “数据”：[
     {
-      "challenge_id": "string",
-      "user_id": "string",
-      "specifier": "string",
-      "amount": "string",
-      "completed_blocknumber": 0
+      “挑战ID”：“字符串”，
+      “用户ID”：“字符串”，
+      “说明符”：“字符串”，
+      “数量”：“字符串”，
+      “完成的区块编号”： 0
     }
   ]
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name | Type                                                    | Required | Restrictions | Description |
-| ---- | ------------------------------------------------------- | -------- | ------------ | ----------- |
-| data | [[undisbursed_challenge](#schemaundisbursed_challenge)] | false    | none         | none        |
+| 姓名 | 类型                                       | 必需的 | 限制   | 描述   |
+| -- | ---------------------------------------- | --- | ---- | ---- |
+| 数据 | [[未支付的挑战](#schemaundisbursed_challenge)] | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schemaundisbursed_challenge"></a>
 <a id="schema_undisbursed_challenge"></a>
 <a id="tocSundisbursed_challenge"></a>
 <a id="tocsundisbursed_challenge"></a>
-<h2 id="tocS_undisbursed_challenge">undisbursed_challenge</h2>
+<h2 id="tocS_undisbursed_challenge">未支付的挑战</h2>
 
 ```json
 {
@@ -5573,15 +5573,15 @@ The following are examples of response formats you can expect to receive from th
 
 ```
 
-### Properties
+### 特性
 
-| Name                  | Type    | Required | Restrictions | Description |
-| --------------------- | ------- | -------- | ------------ | ----------- |
-| challenge_id          | string  | true     | none         | none        |
-| user_id               | string  | true     | none         | none        |
-| specifier             | string  | true     | none         | none        |
-| amount                | string  | true     | none         | none        |
-| completed_blocknumber | integer | true     | none         | none        |
+| 姓名      | 类型 | 必需的 | 限制   | 描述   |
+| ------- | -- | --- | ---- | ---- |
+| 挑战ID    | 细绳 | 真的  | 没有任何 | 没有任何 |
+| 用户身份    | 细绳 | 真的  | 没有任何 | 没有任何 |
+| 说明符     | 细绳 | 真的  | 没有任何 | 没有任何 |
+| 数量      | 细绳 | 真的  | 没有任何 | 没有任何 |
+| 完成的区块编号 | 整数 | 真的  | 没有任何 | 没有任何 |
 
 <a id="schemaapp_name_trailing_response"></a>
 <a id="schema_app_name_trailing_response"></a>
@@ -5591,21 +5591,21 @@ The following are examples of response formats you can expect to receive from th
 
 ```json
 {
-  "data": [
+  "数据": [
     {
-      "count": 0,
-      "name": "string"
+      "计数": 0,
+      "名称": "字符串"
     }
   ]
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name | Type                                                            | Required | Restrictions | Description |
-| ---- | --------------------------------------------------------------- | -------- | ------------ | ----------- |
-| data | [[app_name_trailing_metric](#schemaapp_name_trailing_metric)] | false    | none         | none        |
+| 姓名 | 类型                                                              | 必需的 | 限制   | 描述   |
+| -- | --------------------------------------------------------------- | --- | ---- | ---- |
+| 数据 | [[app_name_trailing_metric](#schemaapp_name_trailing_metric)] | 错误的 | 没有任何 | 没有任何 |
 
 <a id="schemaapp_name_trailing_metric"></a>
 <a id="schema_app_name_trailing_metric"></a>
@@ -5615,16 +5615,16 @@ The following are examples of response formats you can expect to receive from th
 
 ```json
 {
-  "count": 0,
-  "name": "string"
+  "计数": 0,
+  "名称": "字符串"
 }
 
 ```
 
-### Properties
+### 特性
 
-| Name  | Type    | Required | Restrictions | Description |
-| ----- | ------- | -------- | ------------ | ----------- |
-| count | integer | false    | none         | none        |
-| name  | string  | false    | none         | none        |
+| 姓名 | 类型 | 必需的 | 限制   | 描述   |
+| -- | -- | --- | ---- | ---- |
+| 数数 | 整数 | 错误的 | 没有任何 | 没有任何 |
+| 姓名 | 细绳 | 错误的 | 没有任何 | 没有任何 |
 
