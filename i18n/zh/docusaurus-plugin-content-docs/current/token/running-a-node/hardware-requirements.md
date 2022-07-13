@@ -1,26 +1,26 @@
 ---
-sidebar_label: Hardware Requirements
+sidebar_label: 硬件要求
 sidebar_position: 2
 ---
 
-# Hardware Requirements
+# 硬件要求
 
-In order to maintain quality service across the Audius protocol, service hardware requirements are enforced by the on-chain governance protocol.
+为了在整个 Audius 协议中保持优质服务，服务硬件要求由链上治理协议强制执行。
 
-The minimum resource requirements per registered node are as follows.
+每个注册节点的最低资源要求如下。
 
-**Discovery Node**
+**发现节点**
 
-* 8 vCPU
-* 16 GB of RAM
-* 250 GB SSD
+* 8 个虚拟 CPU
+* 16 GB 内存
+* 250 GB 固态硬盘
 
-**Content Node**
+**内容节点**
 
-* 8 vCPU
-* 16 GB of RAM
-* 2000 GB SSD
+* 8 个虚拟 CPU
+* 16 GB 内存
+* 2000 GB 固态硬盘
 
 
 
-History of election of node requirements can be viewed on the public governance forum: [https://gov.audius.org/t/minimum-node-requirements/169](https://gov.audius.org/t/minimum-node-requirements/169)
+节点要求的选举历史可以在公共治理论坛上查看： [https://gov.audius.org/t/minimum-node-requirements/169](https://gov.audius.org/t/minimum-node-requirements/169)
