@@ -1,29 +1,29 @@
 ---
 sidebar_label: '$AUDIO'
 sidebar_position: 1
-description: '$AUDIO — the Audius platform token underpinning value-added actions in Audius'
+description: '$AUDIO— Audius 平台代币，支持 Audius 中的增值操作'
 ---
 
 # $AUDIO
 
-#### How it Works
+#### 这个怎么运作
 
-Audius platform tokens \(AUDIO\) have three prongs of functionality within the Audius protocol ecosystem:
+Audius 平台代币 \(AUDIO\) 在 Audius 协议生态系统中具有三个功能：
 
-* Security
-* Feature Access
-* Governance
+* 安全
+* 功能访问
+* 治理
 
-AUDIO is staked as collateral for a value-added service such as operating a node or participating in governance. In exchange, stakers earn ongoing issuance, governance weight, and access to exclusive features. In the future, AUDIO will govern a global fee pool from value transfers in the network.Offering a native token to align all actors creates a parallel incentive unique to web3, and one which allows our early adopters to share in the upside of Audius as we continue to grow.The Audius community looks to ensure that AUDIO tokens are always being funneled to the most value-added actors. This is done through ongoing issuance using onchain metrics as a measurement to better route distribution to active participants, rather than simply to those staking the most AUDIO.Here’s how this pans out in practice.
+AUDIO 被质押为增值服务的抵押品，例如运营节点或参与治理。 作为交换，质押者获得持续发行、治理权重和独家功能的访问权。 未来，AUDIO 将通过网络中的价值转移来管理全球费用池。提供原生代币来协调所有参与者创建了 web3 独有的并行激励，并且允许我们的早期采用者分享 Audius 的优势，因为我们继续增长。Audius 社区希望确保 AUDIO 代币始终流向最具附加值的参与者。 这是通过使用链上指标进行持续发行来完成的，以更好地向活跃的参与者分发路由，而不是简单地分发给那些持有最多 AUDIO 的人。这是实践中的结果。
 
-**SECURITY**
+**安全**
 
-AUDIO is staked by node operators to secure the network. The larger the stake, the higher the probability of their node being used by fans and artists. Audius is entirely hosted and operated by the community, creating a permissionless ecosystem of node operators securing content for the world’s unstoppable streaming protocol.
+AUDIO 由节点运营商质押以保护网络。 股份越大，他们的节点被粉丝和艺术家使用的概率就越高。 Audius 完全由社区托管和运营，创建了一个无需许可的节点运营商生态系统，为世界上不可阻挡的流媒体协议保护内容。
 
-**FEATURE ACCESS**
+**功能访问**
 
-AUDIO serves as collateral to unlock additional artist tooling. Early examples incubated by the community include artists tokens, badges, and earnings multipliers. In the future, fans may delegate AUDIO to specific artists and curators to share in their growth on the platform.
+AUDIO 用作解锁其他艺术家工具的抵押品。 社区孵化的早期例子包括艺术家代币、徽章和收益乘数。 未来，粉丝可以将 AUDIO 委托给特定的艺术家和策展人，以分享他们在平台上的成长。
 
-**GOVERNANCE**
+**治理**
 
-Any AUDIO staked within Audius is assigned governance weight, used to shape future iterations of the protocol. Every aspect of Audius is governable, starting with one token staked equal to one vote. We envision governance to focus on operator incentives at inception, with the ambition for even passive fans to voice their opinion over product updates and feature upgrades too.The choice to offer ongoing issuance **aligns power with those who are continually the most active on the platform**, a mechanism Audius believes better suits future users of the protocol.
+在 Audius 中质押的任何 AUDIO 都被分配了治理权重，用于塑造协议的未来迭代。 Audius 的每个方面都是可管理的，从一个代币质押等于一票开始。 我们设想治理从一开始就专注于运营商激励，即使是被动的粉丝也有雄心对产品更新和功能升级发表意见。选择提供持续发行 **的选择与那些一直在平台上最活跃的人保持一致如图**所示，Audius 认为更适合协议未来用户的机制。
