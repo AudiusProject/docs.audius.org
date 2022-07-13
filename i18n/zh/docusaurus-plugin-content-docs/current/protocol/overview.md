@@ -1,50 +1,50 @@
 - - -
-sidebar_label: Overview sidebar_position: 1
+sidebar_label：概述 sidebar_position：1
 - - -
 
-# Overview
+# 概述
 
-Audius is a decentralized, community-owned and artist-controlled music-sharing protocol. Audius provides a blockchain-based alternative to existing streaming platforms to help artists publish and monetize their work and distribute it directly to fans.
+Audius 是一个去中心化、社区拥有和艺术家控制的音乐共享协议。 Audius 为现有的流媒体平台提供了基于区块链的替代方案，以帮助艺术家发布他们的作品并从中获利，并将其直接分发给粉丝。
 
-The mission of the project is to give everyone the freedom to share, monetize, and listen to any audio.
+该项目的使命是让每个人都可以自由地分享、获利和收听任何音频。
 
-The Audius Protocol [repository](https://github.com/AudiusProject/audius-protocol) is a mono-repository that has all the pieces that make and support the protocol including smart contracts, services, and other supporting libraries.
+Audius 协议 [存储库](https://github.com/AudiusProject/audius-protocol) 是一个单一存储库，其中包含制作和支持协议的所有部分，包括智能合约、服务和其他支持库。
 
-If you are interested in operating a service, see the [`running a node`](../token/running-a-node/introduction.md) section. If you're interested in contributing to the Audius protocol, explore the code below!
+如果您对操作服务感兴趣，请参阅 [`运行节点`](../token/running-a-node/introduction.md) 部分。 如果您有兴趣为 Audius 协议做出贡献，请浏览下面的代码！
 
 ![](/img/architecture.png)
 
-Audius consists of three demographics of users: Artists (content creators), Fans (content consumers), and Service Providers. Some users check fall into all three demographics!
+Audius 由三种用户构成：艺术家（内容创作者）、粉丝（内容消费者）和服务提供商。 一些用户检查属于所有三个人口统计数据！
 
-* **Artists** upload tracks, create albums, and share content to their following
-* **Fans** stream tracks, create playlists, subscribe to & follow artists, and re-share content to their following
-* **Service Providers** serve app traffic, stream songs, and help secure the network
+* **位艺术家** 位上传曲目、创建专辑并将内容分享给他们的关注者
+* **位粉丝** 串流曲目、创建播放列表、订阅 & 关注的艺术家，并将内容重新分享给他们的关注者
+* **服务提供商** 提供应用流量、流式播放歌曲并帮助保护网络
 
-Service providers can provide one or more of the following services by staking $AUDIO tokens and registering their service:
+服务提供商可以通过质押 $AUDIO 个代币并注册其服务来提供以下一项或多项服务：
 
-* Discovery node \(host an endpoint with SSL support and register endpoint with stake\)
-* Content node \(host an endpoint with SSL support and register endpoint with stake\)
+* 发现节点\（托管具有 SSL 支持的端点并使用权益注册端点\）
+* 内容节点\（托管具有 SSL 支持的端点并使用权益注册端点\）
 
-In the above diagram, creators can either run a content node themselves or use one of the network-registered content nodes.
+在上图中，创建者可以自己运行内容节点，也可以使用网络注册的内容节点之一。
 
-For more details on the Audius architecture, see the [Audius protocol whitepaper](whitepaper.md).
+有关 Audius 架构的更多详细信息，请参阅 [Audius 协议白皮书](whitepaper.md)。
 
-## Audius Services
+## 音响服务
 
-| Service                                                                                             | Description                                                                                                        |
-|:--------------------------------------------------------------------------------------------------- |:------------------------------------------------------------------------------------------------------------------ |
-| [`Content-Node`](https://github.com/AudiusProject/audius-protocol/tree/master/creator-node)         | Maintains the availability of users' content on IPFS including user metadata, images, and audio content            |
-| [`Discovery-Node`](https://github.com/AudiusProject/audius-protocol/tree/master/discovery-provider) | Indexes and stores the contents of the Audius contracts on the Ethereum blockchain for clients to query via an API |
-| [`Identity-Service`](https://github.com/AudiusProject/audius-protocol/tree/master/identity-service) | Stores encrypted auth ciphertexts, does Twitter OAuth and relays transactions (pays gas) on behalf of users        |
+| 服务                                                                                        | 描述                                             |
+|:----------------------------------------------------------------------------------------- |:---------------------------------------------- |
+| [`内容节点`](https://github.com/AudiusProject/audius-protocol/tree/master/creator-node)       | 维护 IPFS 上用户内容的可用性，包括用户元数据、图像和音频内容              |
+| [`发现节点`](https://github.com/AudiusProject/audius-protocol/tree/master/discovery-provider) | 在以太坊区块链上索引和存储 Audius 合约的内容，供客户通过 API 查询        |
+| [`身份服务`](https://github.com/AudiusProject/audius-protocol/tree/master/identity-service)   | 存储加密的身份验证密文，执行 Twitter OAuth 并代表用户中继交易（支付 gas） |
 
-## Audius Smart Contracts & Libs
+## Audius 智能合约 & Libs
 
-| Lib                                                                                           | Description                                                                                                                                              |
-|:--------------------------------------------------------------------------------------------- |:-------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`libs`](https://github.com/AudiusProject/audius-protocol/tree/master/libs)                   | An easy interface to the distributed web and Audius services: Identity Service, Discovery Node \(discovery provider\), Content Node \(creator node\) |
-| [`contracts`](https://github.com/AudiusProject/audius-protocol/tree/master/contracts)         | The smart contracts being developed for the Audius streaming protocol                                                                                    |
-| [`eth-contracts`](https://github.com/AudiusProject/audius-protocol/tree/master/eth-contracts) | The Ethereum smart contracts being developed for the Audius streaming protocol                                                                           |
+| 库                                                                                     | 描述                                                            |
+|:------------------------------------------------------------------------------------- |:------------------------------------------------------------- |
+| [`库`](https://github.com/AudiusProject/audius-protocol/tree/master/libs)              | 分布式 Web 和 Audius 服务的简单接口：身份服务、发现节点\（发现提供者\）、内容节点\（创建者节点\） |
+| [`合同`](https://github.com/AudiusProject/audius-protocol/tree/master/contracts)        | 正在为 Audius 流协议开发的智能合约                                         |
+| [`eth合约`](https://github.com/AudiusProject/audius-protocol/tree/master/eth-contracts) | 正在为 Audius 流协议开发的以太坊智能合约                                      |
 
-## Service Provider Quickstart
+## 服务提供商快速入门
 
-If you're a service provider, a quickstart guide to running services on Audius can be found [here](../token/running-a-node/introduction.md)
+如果您是服务提供商，可以找到在 Audius 上运行服务的快速入门指南 [这里](../token/running-a-node/introduction.md)
