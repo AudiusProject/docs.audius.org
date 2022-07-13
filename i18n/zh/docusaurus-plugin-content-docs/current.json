@@ -1,18 +1,18 @@
 {
   "version.label": {
-    "message": "Next",
+    "message": "下一个",
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.Protocol": {
-    "message": "Protocol",
+    "message": "协议",
     "description": "The label for category Protocol in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Token": {
-    "message": "Token",
+    "message": "令牌",
     "description": "The label for category Token in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Running A Node": {
-    "message": "Running A Node",
+    "message": "运行节点",
     "description": "The label for category Running A Node in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.API": {
