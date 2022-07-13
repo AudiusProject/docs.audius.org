@@ -1,88 +1,88 @@
 ---
-sidebar_label: Hedgehog
+sidebar_label: 고슴도치
 sidebar_position: 2
 ---
 
-# Hedgehog
+# 고슴도치
 
-Build DApps Like Apps
+앱처럼 DApp 구축
 
-[Github](https://github.com/AudiusProject/hedgehog) 👈
+[깃허브](https://github.com/AudiusProject/hedgehog)👈
 
-Hedgehog is an open-source, client-side Ethereum wallet that uses a username and password. It aims to lower the barrier of entry to crypto projects for non tech-savvy users.
+Hedgehog는 사용자 이름과 비밀번호를 사용하는 오픈 소스 클라이언트 측 이더리움 지갑입니다. 기술에 익숙하지 않은 사용자를 위해 암호화 프로젝트에 대한 진입 장벽을 낮추는 것을 목표로 합니다.
 
-Allow users to interact with your DApp just like they would any other website, no extensions required, without centralizing control of keys.
+사용자가 키 제어를 중앙 집중화하지 않고도 확장이 필요 없는 다른 웹사이트와 마찬가지로 DApp과 상호 작용할 수 있습니다.
 
-**Hedgehog** is alternative to Metamask that manages a user's private key and wallet on the browser. It exposes a simple API to allow you to create an authentication scheme to let users sign up and login to their wallet across multiple browsers and devices.
+**Hedgehog** 은 브라우저에서 사용자의 개인 키와 지갑을 관리하는 Metamask의 대안입니다. 사용자가 여러 브라우저와 장치에서 지갑에 가입하고 로그인할 수 있도록 하는 인증 체계를 만들 수 있는 간단한 API를 제공합니다.
 
-### Not All Transactions Are Created Equal
+### 모든 트랜잭션이 동일하게 생성되는 것은 아닙니다.
 
-Current Ethereum wallets treat every transaction as if it were moving your life’s savings. Hedgehog was built for use-cases involving low-to-no financial value.
+현재 이더리움 지갑은 모든 거래를 마치 인생의 저축을 옮기는 것처럼 취급합니다. Hedgehog는 재정적 가치가 낮거나 없는 사용 사례를 위해 제작되었습니다.
 
-> Note: The primary improvement to end-user experience is gained by hiding wallet complexity and not forcing users to confirm transactions - the opposite of what you’d want when moving significant money around.
+> 참고: 최종 사용자 경험에 대한 주요 개선 사항은 지갑 복잡성을 숨기고 사용자에게 트랜잭션 확인을 강요하지 않음으로써 얻을 수 있습니다. 이는 상당한 돈을 이동할 때 원하는 것과 반대입니다.
 
-#### No More Popups 🦊
+#### 더 이상 팝업이 없습니다 🦊
 
-Decentralized apps today require lots of technical knowledge to configure and use, limiting your user base and reducing the potential for growth.
+오늘날의 분산형 앱은 구성 및 사용에 많은 기술 지식이 필요하므로 사용자 기반이 제한되고 성장 가능성이 줄어듭니다.
 
-### Installation
+### 설치
 
 ```bash
 npm i --save @audius/hedgehog
 ```
 
-### Docs & Examples
+### 문서 & 예제
 
-Check out our full technical [docs](http://audiusproject.github.io/hedgehog-docs) and [api how-to](http://audiusproject.github.io/hedgehog-docs#how-to).
+전체 기술 문서 [문서](http://audiusproject.github.io/hedgehog-docs) 및 [API 방법](http://audiusproject.github.io/hedgehog-docs#how-to)을 확인하세요.
 
-For a quick browser-side demo, [look no further](https://codesandbox.io/embed/pp9zzv2n00). For a full end-to-end auth demonstration, see our [demo repo](https://github.com/AudiusProject/audius-hedgehog-demo).
+빠른 브라우저 측 데모를 보려면 [은 더 이상](https://codesandbox.io/embed/pp9zzv2n00)을 찾지 마십시오. 완전한 종단 간 인증 데모는 [데모 리포지토리](https://github.com/AudiusProject/audius-hedgehog-demo)을 참조하십시오.
 
-### Why Use This?
+### 왜 이것을 사용합니까?
 
-#### Not All Transactions Are Created Equal
+#### 모든 트랜잭션이 동일하게 생성되는 것은 아닙니다.
 
-Currently available wallets treat every transaction as if it were moving around your life’s savings. Hedgehog was built for use-cases involving low-to-no financial value.
+현재 사용 가능한 지갑은 모든 거래를 마치 인생의 저축을 중심으로 움직이는 것처럼 취급합니다. Hedgehog는 재정적 가치가 낮거나 없는 사용 사례를 위해 제작되었습니다.
 
-**NOTE**: The primary improvement to end-user experience is by hiding wallet complexity and not forcing users to constantly confirm transactions - The opposite of what you’d want when moving significant money around.
+**참고**: 최종 사용자 경험의 주요 개선 사항은 지갑 복잡성을 숨기고 사용자가 지속적으로 거래를 확인하도록 강요하지 않는 것입니다. 이는 상당한 돈을 이동할 때 원하는 것과 반대입니다.
 
-#### Is Hedgehog Right for your DApp?
+#### Hedgehog가 DApp에 적합합니까?
 
-Hedgehog isn’t right for every DApp. Massive improvements in user experience are only possible through tradeoffs. As a general rule Hedgehog should not be used for apps involving significant sums of money. As a bridge, one could start users on Hedgehog and suggest migrating to a more secure wallet if their stored value increases beyond a certain threshold; the Hedgehog paradigm is interoperable with existing web3 providers too.
+고슴도치는 모든 DApp에 적합하지 않습니다. 사용자 경험의 대대적인 개선은 절충을 통해서만 가능합니다. 일반적으로 Hedgehog는 상당한 금액의 돈이 필요한 앱에 사용해서는 안 됩니다. 브리지로 사용자를 Hedgehog에서 시작하고 저장된 가치가 특정 임계값을 초과하면 더 안전한 지갑으로 마이그레이션하도록 제안할 수 있습니다. Hedgehog 패러다임은 기존 web3 공급자와도 상호 운용 가능합니다.
 
-_\[Good use cases\]_
+_\[좋은 사용 사례\]_
 
-* **Signing data**: If you’re building decentralized applications that rely on user signed data \(eg. via EIP-712-esque signing schemes\), Hedgehog could help simplify the experience if the stakes are low enough.
-* **Gaming DApp**: Nothing ruins fun as much as signing transactions. If you’re building a gaming DApp that doesn’t use significant financial assets, improving UX is key.
-* **Decentralized Music Player**: If you’re building consumer-facing DApps, Hedgehog will dramatically improve user experience and significantly increase your potential userbase.
+* **서명 데이터**: 사용자 서명 데이터에 의존하는 분산 애플리케이션을 구축하는 경우(예: EIP-712-esque 서명 체계를 통해), Hedgehog는 지분이 충분히 낮으면 경험을 단순화하는 데 도움이 될 수 있습니다.
+* **게임 DApp**: 거래에 서명하는 것만큼 재미를 망치는 것은 없습니다. 상당한 금융 자산을 사용하지 않는 게임 DApp을 구축하는 경우 UX 개선이 핵심입니다.
+* **분산형 뮤직 플레이어**: 소비자 지향 DApp을 구축하는 경우 Hedgehog는 사용자 경험을 극적으로 개선하고 잠재적 사용자 기반을 크게 증가시킵니다.
 
-_\[Bad use cases\]_
+_\[잘못된 사용 사례\]_
 
-If your DApp involves moving around significant sums of money, then the tradeoff in security is most likely not worth it. Hedgehog’s primary improvement to end-user experience is by hiding the wallet and not forcing users to confirm transactions - The opposite of what you’d want when moving money around. We absolutely don’t recommend using Hedgehog in situations like these:
+DApp에 상당한 금액의 자금 이동이 포함되는 경우 보안의 절충안은 그만한 가치가 없을 가능성이 큽니다. 최종 사용자 경험에 대한 Hedgehog의 주요 개선 사항은 지갑을 숨기고 사용자가 거래를 확인하도록 강요하지 않는 것입니다. 이는 돈을 이동할 때 원하는 것과 반대입니다. 다음과 같은 상황에서는 Hedgehog를 사용하지 않는 것이 좋습니다.
 
-* **Banking DApp**
-* **Decentralized Lending**
-* **Prediction Markets**
+* **뱅킹 디앱**
+* **분산 대출**
+* **예측 시장**
 
-### A Closer Look
+### 자세한 관찰
 
-Hedgehog is a package that lives in your front end application to create and manage a user's entropy \(from which a private key is derived\). Hedgehog relies on a username and password to create auth artifacts, so it's able to simulate a familiar authentication system that allows users to sign up or login from multiple browsers or devices and retrieve their entropy. Those artifacts, through hedgehog, are persisted to a backend of your choosing.
+Hedgehog는 사용자의 엔트로피(개인 키가 파생됨)를 만들고 관리하기 위해 프런트 엔드 애플리케이션에 있는 패키지입니다. Hedgehog는 인증 아티팩트를 생성하기 위해 사용자 이름과 암호에 의존하므로 사용자가 여러 브라우저 또는 장치에서 가입하거나 로그인하고 엔트로피를 검색할 수 있도록 하는 친숙한 인증 시스템을 시뮬레이션할 수 있습니다. 이러한 아티팩트는 고슴도치를 통해 선택한 백엔드에 유지됩니다.
 
-**NOTE**: A private key is only computed and available client side and is never transmitted or stored anywhere besides the user's browser.
+**참고**: 개인 키는 클라이언트 측에서만 계산되고 사용 가능하며 사용자의 브라우저 외에는 전송되거나 저장되지 않습니다.
 
 ```javascript
-// Provide getFn, setAuthFn, setUserFn as requests to your database/backend service (more details in docs).
+// getFn, setAuthFn, setUserFn을 데이터베이스/백엔드 서비스에 대한 요청으로 제공합니다(자세한 내용은 문서 참조).
 const hedgehog = new Hedgehog(getFn, setAuthFn, setUserFn)
-let wallet
+지갑
 if (hedgehog.isLoggedIn()) {
-  wallet = hedgehog.getWallet()
+  지갑 = hedgehog.getWallet()
 } else {
-  wallet = await hedgehog.login('username', 'password')
+  지갑 = hedgehog.login('사용자 이름', ' 대기) password')
   // or
-  wallet = await hedgehog.signUp('username', 'password')
+  지갑 = await hedgehog.signUp('username', 'password')
 }
 ```
 
-After creating or retrieving a user's wallet, you can either **fund their wallet directly** to pay transaction fees or **relay their transactions through a EIP-712 relayer**.
+사용자의 지갑을 생성하거나 검색한 후 **거래 수수료를 지불하기 위해 지갑에 직접 자금을 제공하거나**</strong>**  </p>
 
 
-### 👉 [Take a deeper dive into the docs](https://audiusproject.github.io/hedgehog-docs/#installation) 👈
+### 👉 [문서에 대해 자세히 알아보기](https://audiusproject.github.io/hedgehog-docs/#installation)👈
