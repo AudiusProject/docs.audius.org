@@ -1,97 +1,97 @@
 ---
-sidebar_label: Staking
+sidebar_label: 质押
 sidebar_position: 2
 ---
 
-# Staking
+# 质押
 
-### What is Staking?
+### 什么是质押？
 
-Built as a decentralized protocol on Ethereum, all the content, information and data on Audius is stored and indexed by a growing network of third-party node operators, rather than by the Audius team.
+作为以太坊上的去中心化协议，Audius 上的所有内容、信息和数据都由不断增长的第三方节点运营商网络存储和索引，而不是由 Audius 团队。
 
-To ensure this content can be trusted and maintained, node operators are required to provide collateral or ‘stake’ as a bond to service the protocol. This stake, denominated in $AUDIO, ensures that node operators have tokens at risk that can be slashed, or taken, in the event of malicious or poor behavior.
+为了确保这些内容可以被信任和维护，节点运营商需要提供抵押品或“股权”作为服务协议的纽带。 这种以 $AUDIO计价的股份确保节点运营商拥有处于风险中的代币，如果发生恶意或不良行为，这些代币可能会被削减或拿走。
 
-By using $AUDIO tokens as collateral, anyone with the proper hardware requirements can join as a node operator in a completely permissionless fashion. The more $AUDIO staked to the protocol, the more secure the network becomes and the less vulnerable it is to outside attacks.
+通过使用 $AUDIO 代币作为抵押品，任何具有适当硬件要求的人都可以以完全无需许可的方式作为节点运营商加入。 协议中质押的 $AUDIO 越多，网络就越安全，就越不容易受到外部攻击。
 
-As a reward for servicing the network, node operators stand to earn $AUDIO through the automatic on-chain issuance, or the ongoing creation of new tokens distributed to value-added actors.
+作为对网络服务的奖励，节点运营商将通过自动链上发行或持续创建分配给增值参与者的新代币来赚取 $AUDIO。
 
-Those who stake more $AUDIO stand to earn a larger portion of issuance in exchange for securing the network.
+那些持有更多 $AUDIO 的人将获得更大的发行份额，以换取网络安全。
 
-### How Audius Works
+### Audius 的工作原理
 
-On Audius, content is routed to two different types of nodes:
+在 Audius 上，内容被路由到两种不同类型的节点：
 
-* _Content Nodes_ - To store and relay audio content \(tracks, mixes, etc.\) streamed on Audius
-* _Discovery Nodes_ - To index and hash data like user profiles, playlists and followers.
+* _内容节点_ - 存储和中继在 Audius 上流式传输的音频内容\（曲目、混音等\）
+* _发现节点_ - 索引和散列数据，如用户配置文件、播放列表和关注者。
 
-As an artist, uploading to Audius feels no different than uploading to a platform like Soundcloud. But, what happens behind the scenes is what makes Audius so unique.
+作为一名艺术家，上传到 Audius 与上传到 Soundcloud 之类的平台没有什么不同。 但是，幕后发生的事情使 Audius 如此独特。
 
-When an artist uploads a track to Audius:
+当艺术家将曲目上传到 Audius 时：
 
-1. That content is uploaded to a Content Node.
-2. The data gets transcoded and returns a reference code used to identify the track
-3. The data linked by the reference code is replicated to two other Content Nodes on the network.
-4. An onchain transaction is published signifying that the track exists on Audius and that the metadata is attached to the profile that uploaded the track.
-5. The transaction is picked up and indexed by a Discovery Node
-6. The client returns that the track was successfully published when it shows up on the Discovery Node, marking the upload complete!
+1. 该内容被上传到内容节点。
+2. 数据被转码并返回用于识别轨道的参考代码
+3. 参考代码链接的数据被复制到网络上的另外两个内容节点。
+4. 发布了一个链上交易，表示该曲目存在于 Audius 上，并且元数据已附加到上传该曲目的配置文件中。
+5. 交易由发现节点拾取和索引
+6. 当它出现在发现节点上时，客户端返回该曲目已成功发布，标志着上传完成！
 
-Super simple right! Well, this is where staking comes into play.
+超级简单吧！ 好吧，这就是赌注发挥作用的地方。
 
-On other platforms, a similar process is operated by the parent company, effectively making them the true owner of the content. Should that company cease to exist, so does all the content stored in its database. With Audius, the track is maintained by the network and controlled by third-party and decentralized node operators. **Audius is not dependent on one company to keep running**.
+在其他平台上，母公司也有类似的流程，有效地使他们成为内容的真正所有者。 如果该公司不复存在，其数据库中存储的所有内容也将不复存在。 使用 Audius，轨道由网络维护并由第三方和去中心化节点运营商控制。 **Audius 不依赖一家公司来维持运营**。
 
-**By staking $AUDIO, you’re helping to protect and power the protocol.**
+**通过质押 $AUDIO，您正在帮助保护协议并为其提供动力。**
 
-This design allows Audius to operate on the back of a global network of third-party node operators, rather than solely by the Audius team.
+这种设计允许 Audius 在第三方节点运营商的全球网络的支持下运行，而不是仅由 Audius 团队运行。
 
-The decision to use two node types allows Audius to scale in correlation to different metrics, meaning that if the number of listeners were to spike relative to the Audius catalog, Discovery Nodes could pick up the weight while the Content Nodes continue to run as normal. Similarly, the network could choose to adjust incentives depending on where bandwidth is needed to meet demand at any given time.
+使用两种节点类型的决定使 Audius 可以根据不同的指标进行扩展，这意味着如果听众的数量相对于 Audius 目录激增，发现节点可以在内容节点继续正常运行的同时增加权重。 同样，网络可以选择根据在任何给定时间满足需求所需的带宽来调整激励措施。
 
-Talk about a platform adapting to the needs of its users!
+谈论一个适应用户需求的平台！
 
-### **Staking on Audius**
+### **在 Audius 上质押**
 
-To stake on Audius, node operators can set up content and/or discovery nodes using [these resources](https://github.com/AudiusProject/audius-protocol/wiki/Staking-Resources).
+为了质押 Audius，节点运营商可以使用 [这些资源](https://github.com/AudiusProject/audius-protocol/wiki/Staking-Resources)设置内容和/或发现节点。
 
 https://twitter.com/Figment_io/status/1324763638729740288?s=20
 
-A list of all active node operators can be found under the [Services tab](https://dashboard.audius.org/services) in the Audius protocol dashboard.
+在 Audius 协议仪表板的 [服务选项卡](https://dashboard.audius.org/services) 下可以找到所有活动节点运营商的列表。
 
-$AUDIO holders can delegate a minimum of 100 tokens to any of these node operators by connecting to either MetaMask or using a Gnosis Safe. More details on delegation will be released soon!
+$AUDIO 持有者可以通过连接到 MetaMask 或使用 Gnosis Safe 将至少 100 个代币委托给这些节点运营商中的任何一个。 更多关于代表团的细节将很快公布！
 
-Node operators can choose to run either a Content Node, a Discovery Node or a combination of both. The amount of $AUDIO staked to a given Operator can be thought of as their economic bandwidth to run one or a combination of services on the network.
+节点操作员可以选择运行内容节点、发现节点或两者的组合。 可以将向给定运营商质押的 $AUDIO 数量视为他们在网络上运行一项或多项服务的经济带宽。
 
-All node operators are required to post a **minimum self-bond of 200,000 $AUDIO tokens per node**. While both Content and Discovery Nodes utilize the same machine, Content Nodes require more storage and therefore cost slightly more to operate.
+所有节点运营商都必须为每个节点</strong>发布 200,000 $AUDIO 代币的 **最低自保证金。 虽然内容节点和发现节点都使用同一台机器，但内容节点需要更多存储空间，因此运行成本略高。 </p>
 
-To this effect, the staking parameters of each node is as follows:
+为此，每个节点的质押参数如下：
 
-_Discovery Node_
+_发现节点_
 
-* Minimum Bond (Stake): 200,000 AUDIO
-* Maximum Bond (Stake): 7,000,000 AUDIO
+* 最低保证金（股权）：200,000 AUDIO
+* 最大保证金（股权）：7,000,000 AUDIO
 
-_Content Node_
+_内容节点_
 
-* Minimum Bond (Stake): 200,000 AUDIO
-* Maximum Bond (Stake): 10,000,0000 AUDIO
+* 最低保证金（股权）：200,000 AUDIO
+* 最大保证金（股权）：10,000,0000 AUDIO
 
-The minimum stake ensures sufficient skin in the game, while the maximum prevents the protocol from becoming too centralized. Content nodes have slightly higher minimum requirements, which is why they are able to accept more stake than discovery nodes.
+最低赌注可确保游戏中有足够的皮肤，而最高赌注可防止协议变得过于中心化。 内容节点的最低要求略高，这就是为什么它们能够比发现节点接受更多的质押。
 
-Each Operator is given a unique profile, allowing users to identify their address, timeline of votes, and the different nodes they maintain. Other key parameters include:
+每个运营商都有一个独特的个人资料，允许用户识别他们的地址、投票时间表以及他们维护的不同节点。 其他关键参数包括：
 
-* _Staked $AUDIO_ - The total amount of $AUDIO staked across all the operator’s nodes, measured as a combination of tokens staked or delegated to a given address.
-* _Deployer Cut_ - The percentage of staking rewards that delegates pay to node operators for staking $AUDIO on their node. This is configurable by the node operator.
-* _Services_ - The number of unique nodes run by a given operator.
-* _Delegators_ - The total number of unique addresses delegating tokens to the Operator.
+* _质押 $AUDIO_ - 在所有运营商节点上质押的 $AUDIO 的总量，以质押或委托给给定地址的代币组合来衡量。
+* _Deployer Cut_ - 代表支付给节点运营商的 staking 奖励百分比，用于在他们的节点上 staking $AUDIO。 这可以由节点操作员配置。
+* _服务_ - 给定运营商运行的唯一节点数。
+* _Delegators_ - 将代币委托给 Operator 的唯一地址总数。
 
-Node operators can also populate their information via [3Box](https://3box.io/), displaying a profile image, title and website link to allow delegates to more easily distinguish themselves from others on the network.
+节点运营商还可以通过 [3Box](https://3box.io/)填充他们的信息，显示个人资料图片、标题和网站链接，以便代表们更容易地将自己与网络上的其他人区分开来。
 
-Audius features a 7 day cooldown period to undelegate or unstake in order to provide adequate time for nodes to be slashed in the event of malicious behavior. During the genesis staking period, nodes operated by the Audius foundation will have their Deployer Cut set to 100%, with all proceeds being routed to a community treasury to be governed by $AUDIO tokenholders. These nodes will be retired in the near future.
+Audius 具有 7 天的冷却期来取消委托或取消质押，以便在发生恶意行为时提供足够的时间来削减节点。 在创世质押期间，由 Audius 基金会运营的节点将其 Deployer Cut 设置为 100%，所有收益将被路由到由 $AUDIO 个代币持有者管理的社区金库。 这些节点将在不久的将来退役。
 
-### **$AUDIO Staking Rewards**
+### **$AUDIO 质押奖励**
 
-Audius features a 7% automatic annual issuance rate distributed on-chain and on a weekly basis. $AUDIO rewards are distributed directly on-chain to node operators, with the on-chain system deducting their Delegator Cut and routing the remaining rewards to those who delegated their tokens.
+Audius 以 7% 的自动年发行率在链上和每周分发。 $AUDIO 奖励直接在链上分配给节点运营商，链上系统会扣除他们的 Delegator Cut，并将剩余的奖励路由给委托代币的人。
 
-Service providers are expected to run one transaction per week to distribute issuance for the network, where tokens can be claimed in real time by individual node operators.
+服务提供商预计每周运行一笔交易以分发网络的发行，其中各个节点运营商可以实时索取代币。
 
-In the near future, $AUDIO issuance will begin to be computed from the call of the reward function. Moving forward, anyone in the network can call the reward function, with tokens being distributed on a weekly cadence and claimable at any time.
+在不久的将来，将从奖励函数的调用开始计算 $AUDIO 发行。 展望未来，网络中的任何人都可以调用奖励功能，代币每周分配一次，并可随时领取。
 
-The rate, duration and parameters of $AUDIO staking are controlled entirely by governance.
+$AUDIO 质押的速率、持续时间和参数完全由治理控制。
