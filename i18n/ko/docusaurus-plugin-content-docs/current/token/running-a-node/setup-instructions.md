@@ -1,381 +1,381 @@
 ---
-sidebar_label: Setup Instructions
-sidebar_position: 3
+sidebar_label: 설정 지침
+sidebar_position: 삼
 ---
 
-# Setup Instructions
+# 설정 지침
 
-This guide describes how to run Audius services on a single node Kubernetes cluster. Notes about multi node clusters are given as relevant.
+이 가이드에서는 단일 노드 Kubernetes 클러스터에서 Audius 서비스를 실행하는 방법을 설명합니다. 다중 노드 클러스터에 대한 참고 사항은 관련하여 제공됩니다.
 
-Join the node operator discord channel on the [Audius discord server](https://discord.com/invite/audius)
+[Audius 디스코드 서버](https://discord.com/invite/audius)의 노드 운영자 디스코드 채널에 가입하십시오.
 
-## 0. Clone the audius-k8s-manifests repository
+## 0. audius-k8s-manifests 저장소 복제
 [**https://github.com/AudiusProject/audius-k8s-manifests**](https://github.com/AudiusProject/audius-k8s-manifests)\*\*\*\*
 
 ```text
 git clone git@github.com:AudiusProject/audius-k8s-manifests.git
 ```
 
-## 1. Cluster Setup
+## 1. 클러스터 설정
 
-Initialize a machine running Ubuntu 16.04 LTS or higher, with at least 8 vCPUs and 16 GB of RAM.
+최소 8개의 vCPU와 16GB의 RAM으로 Ubuntu 16.04 LTS 이상을 실행하는 시스템을 초기화합니다.
 
-A convenience script is also included to do a "one click" kubeadm node setup. You can run
+"원 클릭" kubeadm 노드 설정을 수행하기 위한 편의 스크립트도 포함되어 있습니다. 당신은 실행할 수 있습니다
 
 ```text
-yes | sh setup.sh
+네 | sh 설정.sh
 ```
 
-However, if the node setup is not successful and kubectl is not available, it's advised to follow the installation steps by hand [here](https://github.com/AudiusProject/audius-k8s-manifests/blob/master/cluster-setup.md).
+그러나 노드 설정이 성공하지 못하고 kubectl을 사용할 수 없는 경우 [여기](https://github.com/AudiusProject/audius-k8s-manifests/blob/master/cluster-setup.md)에서 직접 설치 단계를 수행하는 것이 좋습니다.
 
-## 2. Audius CLI Setup
+## 2. 오디우스 CLI 설정
 
-You can skip this section if installing for the first time.
+처음 설치하는 경우 이 섹션을 건너뛸 수 있습니다.
 
-You can install `audius-cli` with
+다음을 사용하여 `개의 audius-cli` 을 설치할 수 있습니다.
 
 ```text
 sh install_audius_cli.sh
 ```
 
-You can then view all commands available via `audius-cli` by simply running:
+그런 다음 다음을 실행하여 `audius-cli` 을 통해 사용 가능한 모든 명령을 볼 수 있습니다.
 
 ```text
 audius-cli -h
 ```
 
-## 3. Storage
+## 삼. 저장
 
-Provision a shared host directory for persistent storage,
+영구 스토리지를 위한 공유 호스트 디렉토리 프로비저닝
 
 ```text
 mkdir -p /var/k8s
 ```
 
-If sudo was required, change ownership with,
+sudo가 필요한 경우 소유권을 다음으로 변경하십시오.
 
 ```text
 sudo chown <user>:<group> /var/k8s
 ```
 
-typically this will be,
+일반적으로 다음과 같습니다.
 
 ```text
-sudo chown -R ubuntu:ubuntu /var/k8s
+sudo chown -R 우분투: 우분투 /var/k8s
 ```
 
-**Note:** Storage will persist on the host even after deleting `pv, pvc` objects.
+**참고:** 스토리지는 `pv, pvc` 개체를 삭제한 후에도 호스트에 유지됩니다.
 
-To nuke all data and start clean,
+모든 데이터를 핵 제거하고 정리를 시작하려면
 
 ```text
 rm -rf /var/k8s/*
 ```
 
-## 4. Service Setup
+## 4. 서비스 설정
 
-See below for a guide to deploying [Creator Node](https://github.com/AudiusProject/audius-k8s-manifests#creator-node-1) and [Discovery Provider](https://github.com/AudiusProject/audius-k8s-manifests#discovery-provider-1) via `audius-cli`. After you finish setting up the service, please continue with the Logger section.
+`audius-cli`를 통한 [Creator Node](https://github.com/AudiusProject/audius-k8s-manifests#creator-node-1) 및 [Discovery Provider](https://github.com/AudiusProject/audius-k8s-manifests#discovery-provider-1) 배포에 대한 가이드는 아래를 참조하십시오. 서비스 설정을 마친 후 로거 섹션을 계속 진행하십시오.
 
-**Note:** "Creator Node" and "Discovery Provider" have recently been renamed to "Content Node" and "Discovery Node" respectively. However for consistency within the code and this README, we will continue to use the terms "Creator Node" and "Discovery Node".
+**참고:** "Creator Node" 및 "Discovery Provider"는 최근에 각각 "Content Node" 및 "Discovery Node"로 이름이 변경되었습니다. 그러나 코드와 이 README 내의 일관성을 위해 "Creator Node" 및 "Discovery Node"라는 용어를 계속 사용할 것입니다.
 
-### Creator Node
+### 생성자 노드
 
-An Audius Creator Node maintains the availability of creators' content on IPFS.
+Audius Creator Node는 IPFS에서 제작자 콘텐츠의 가용성을 유지합니다.
 
-The information stored includes Audius user metadata, images, and audio content. The content is backed by a local directory.
+저장된 정보에는 Audius 사용자 메타데이터, 이미지 및 오디오 콘텐츠가 포함됩니다. 컨텐츠는 로컬 디렉토리에 의해 지원됩니다.
 
-**Note:** In the future, the service will be extended to handle proxy re-encryption requests from end-user clients and support other storage backends.
+**참고:** 앞으로는 최종 사용자 클라이언트의 프록시 재암호화 요청을 처리하고 다른 스토리지 백엔드를 지원하도록 서비스가 확장될 것입니다.
 
-#### Run
+#### 운영
 
-Use `audius-cli` to update required variables. The full list of variables and explanations can be found on the wiki [here](https://github.com/AudiusProject/audius-protocol/wiki/Content-Node:-Configuration-Details#required-environment-variables).
+`audius-cli` 을 사용하여 필수 변수를 업데이트하십시오. 변수 및 설명의 전체 목록은 wiki [here](https://github.com/AudiusProject/audius-protocol/wiki/Content-Node:-Configuration-Details#required-environment-variables)에서 찾을 수 있습니다.
 
-Some variables must be set, you can do this with the following commands:
-
-```text
-audius-cli set-config creator-node backend
-key   : spOwnerWallet
-value : <address of wallet that contains audius tokens>
-
-audius-cli set-config creator-node backend
-key   : delegateOwnerWallet
-value : <address of wallet that contains no tokens but that is registered on chain>
-
-audius-cli set-config creator-node backend
-key   : delegatePrivateKey
-value : <private key>
-
-audius-cli set-config creator-node backend
-key   : creatorNodeEndpoint
-value : <your service url>
-```
-
-**Note:** if you haven't registered the service yet, please enter the url you plan to register for `creatorNodeEndpoint`.
-
-Then run the launch command via `audius-cli`
+일부 변수는 설정해야 합니다. 다음 명령으로 이를 수행할 수 있습니다.
 
 ```text
-audius-cli launch creator-node --configure-ipfs
+audius-cli set-config Creator-node 백엔드
+키 : spOwnerWallet
+값 : <address of wallet that contains audius tokens>
+
+audius-cli set-config Creator-node 백엔드
+키 : delegateOwnerWallet
+값 : <address of wallet that contains no tokens but that is registered on chain>
+
+audius-cli set-config Creator-node 백엔드
+키 : delegatePrivateKey
+값 : <private key>
+
+audius-cli set-config Creator-node 백엔드
+키 : CreatorNodeEndpoint
+값 : <your service url>
 ```
 
-Verify that the service is healthy by running,
+**참고:** 아직 서비스를 등록하지 않은 경우 등록하려는 url을 입력하십시오. `creatorNodeEndpoint`.
+
+그런 다음 `audius-cli`을 통해 실행 명령을 실행합니다.
 
 ```text
-audius-cli health-check creator-node
+audius-cli 시작 생성자 노드 --configure-ipfs
 ```
 
-#### Upgrade
-
-If you do not have `audius-cli`, instructions on how to install are available in [the section above](https://github.com/AudiusProject/audius-k8s-manifests#2-audius-cli-setup).
-
-To upgrade your service using `audius-cli`, you will need to pull the latest manifest code. You can do this with `audius-cli`
+다음을 실행하여 서비스가 정상인지 확인합니다.
 
 ```text
-audius-cli upgrade
+audius-cli 상태 확인 작성자 노드
 ```
 
-Verify that the service is healthy by running,
+#### 업그레이드
+
+`audius-cli`가 없는 경우 설치 방법에 대한 지침은 [위의 섹션](https://github.com/AudiusProject/audius-k8s-manifests#2-audius-cli-setup)에서 확인할 수 있습니다.
+
+`audius-cli`을 사용하여 서비스를 업그레이드하려면 최신 매니페스트 코드를 가져와야 합니다. `audius-cli`로 이 작업을 수행할 수 있습니다.
 
 ```text
-audius-cli health-check creator-node
+audius-cli 업그레이드
 ```
 
-**Old Upgrade flow with kubectl:** To upgrade your service using `kubectl`, you will need to pull the latest `k8s-manifests` code. To do this, run the following,
+다음을 실행하여 서비스가 정상인지 확인합니다.
 
 ```text
-git stash
-git pull
-git stash apply
+audius-cli 상태 확인 작성자 노드
 ```
 
-Ensure that your configs are present in `audius/creator-node/creator-node-cm.yaml`, then do the following,
-
-```text
-k apply -f audius/creator-node/creator-node-cm.yaml
-k apply -f audius/creator-node/creator-node-deploy-ipfs.yaml
-k apply -f audius/creator-node/creator-node-deploy-backend.yaml
-```
-
-You can verify your upgrade with the `\health_check` endpoint.
-
-### Discovery Provider
-
-An Audius Discovery Provider indexes the contents of the Audius contracts on the Ethereum blockchain for clients to query.
-
-The indexed content includes user, track, and album/playlist information along with social features. The data is stored for quick access, updated on a regular interval, and made available for clients via a RESTful API.
-
-#### Run
-
-Some variables must be set, you can do this with the following commands:
-
-```text
-audius-cli set-config discovery-provider backend
-key   : audius_delegate_owner_wallet
-value : <delegate_owner_wallet>
-
-audius-cli set-config discovery-provider backend
-key   : audius_delegate_private_key
-value : <delegate_private_key>
-```
-
-If you are using an external managed Postgres database \(version 11.1+\), replace the db url with,
-
-```text
-audius-cli set-config discovery-provider backend
-key   : audius_db_url
-value : <audius_db_url>
-
-audius-cli set-config discovery-provider backend
-key   : audius_db_url_read_replica
-value : <audius_db_url_read_replica>
-```
-
-**Note:** If there's no read replica, enter the primary db url for both env vars.
-
-The below is only if using a managed posgres database:
-
-You will have to replace the db seed job in `audius/discovery-provider/discovery-provider-db-seed-job.yaml` as well. Examples are provided. In the managed postgres database and set the `temp_file_limit` flag to `2147483647` and run the following SQL command on the destination db.
-
-```text
-CREATE EXTENSION pg_trgm;
-```
-
-Make sure that your service exposes all the required environment variables. See wiki [here](https://github.com/AudiusProject/audius-protocol/wiki/Discovery-Node:-Configuration-Details#required-environment-variables) for full list of env vars and descriptions.
-
-#### Launch
-
-```text
-audius-cli launch discovery-provider --seed-job --configure-ipfs
-```
-
-Verify that the service is healthy by running,
-
-```text
-audius-cli health-check discovery-provider
-```
-
-#### Upgrade
-
-If you do not have `audius-cli`, instructions on how to install are available in [the section above](https://github.com/AudiusProject/audius-k8s-manifests#2-audius-cli-setup).
-
-To upgrade your service using `audius-cli`, you will need to pull the latest manifest code. You can do this with `audius-cli`
-
-```text
-audius-cli upgrade
-```
-
-Verify that the service is healthy by running,
-
-```text
-audius-cli health-check discovery-provider
-```
-
-**Old Upgrade flow with kubectl:** To upgrade your service using kubectl, you will need to pull the latest `k8s-manifests` code. To do this, run the following,
+**kubectl을 사용한 이전 업그레이드 흐름:** `kubectl`을 사용하여 서비스를 업그레이드하려면 최신 `k8s-manifests` 코드를 가져와야 합니다. 이렇게 하려면 다음을 실행합니다.
 
 ```text
 git stash
 git pull
-git stash apply
+git stash 적용
 ```
 
-Ensure that your configs are present in `audius/discovery-provider/discovery-provider-cm.yaml`, then do the following,
+구성이 `audius/creator-node/creator-node-cm.yaml`에 있는지 확인하고 다음을 수행합니다.
 
 ```text
-k apply -f audius/discovery-provider/discovery-provider-cm.yaml
-k apply -f audius/discovery-provider/discovery-provider-deploy.yaml
+k 적용 -f audius/creator-node/creator-node-cm.yaml
+k 적용 -f audius/creator-node/creator-node-deploy-ipfs.yaml
+k 적용 -f audius/creator-node/creator- node-deploy-backend.yaml
 ```
 
-You can verify your upgrade with the `\health_check` endpoint.
+`\health_check` 엔드포인트로 업그레이드를 확인할 수 있습니다.
 
-#### Next
+### 디스커버리 제공자
 
-Once you've finished setting up the Discovery Provider, continue to the [Logger](https://github.com/AudiusProject/audius-k8s-manifests#logger) section.
+Audius Discovery Provider는 클라이언트가 쿼리할 수 있도록 이더리움 블록체인에서 Audius 계약의 내용을 인덱싱합니다.
 
+인덱싱된 콘텐츠에는 소셜 기능과 함께 사용자, 트랙 및 앨범/재생 목록 정보가 포함됩니다. 데이터는 빠른 액세스를 위해 저장되고 정기적으로 업데이트되며 RESTful API를 통해 클라이언트가 사용할 수 있습니다.
 
-## 5. Logger
+#### 운영
 
-In order to assist with any debugging. We provide a logging service that you may publish to.
-
-**Run**
-
-First, obtain the service provider secrets from your contact at Audius. This contains the required token\(s\) for logging to function. And apply the secret with
+일부 변수는 설정해야 합니다. 다음 명령으로 이를 수행할 수 있습니다.
 
 ```text
-kubectl apply -f <secret_from_audius>.yaml
+audius-cli set-config discovery-provider backend
+키: audius_delegate_owner_wallet
+값: <delegate_owner_wallet>
+
+audius-cli set-config discovery-provider backend
+키: audius_delegate_private_key
+값: <delegate_private_key>
 ```
 
-Next, update the logger tags in the fluentd daemonset with your name, so we can identify you and your service uniquely here: [https://github.com/AudiusProject/audius-k8s-manifests/blob/master/audius/logger/logger.yaml\#L207](https://github.com/AudiusProject/audius-k8s-manifests/blob/master/audius/logger/logger.yaml#L207). This allows our logging service to filter logs by service provider and by service provider and service. `SP_NAME` refers to your organization's name and `SP_NAME_TYPE_ID` refers to your organization's name plus the type of service you're running, plus an id to distinguish multiple services of the same type.
+외부 관리 Postgres 데이터베이스 \(버전 11.1+\)를 사용하는 경우 db url을 다음으로 바꾸십시오.
 
-For example, if your name is `Awesome Operator` and you're running a content node, set the tags as:
+```text
+audius-cli set-config discovery-provider backend
+키 : audius_db_url
+값 : <audius_db_url>
+
+audius-cli set-config discovery-provider 백엔드
+키 : audius_db_url_read_replica
+값 : <audius_db_url_read_replica>
+```
+
+**참고:** 읽기 전용 복제본이 없는 경우 두 환경 변수에 대한 기본 db URL을 입력합니다.
+
+아래는 관리형 posgres 데이터베이스를 사용하는 경우에만 해당됩니다.
+
+`audius/discovery-provider/discovery-provider-db-seed-job.yaml` 에서도 db seed 작업을 교체해야 합니다. 예제가 제공됩니다. 관리되는 postgres 데이터베이스에서 `temp_file_limit` 플래그를 `2147483647` 으로 설정하고 대상 db에서 다음 SQL 명령을 실행합니다.
+
+```text
+확장 생성 pg_trgm;
+```
+
+서비스가 모든 필수 환경 변수를 노출하는지 확인하십시오. env 변수 및 설명의 전체 목록은 wiki [here](https://github.com/AudiusProject/audius-protocol/wiki/Discovery-Node:-Configuration-Details#required-environment-variables) 을 참조하십시오.
+
+#### 시작하다
+
+```text
+audius-cli 시작 discovery-provider --seed-job --configure-ipfs
+```
+
+다음을 실행하여 서비스가 정상인지 확인합니다.
+
+```text
+audius-cli 상태 확인 검색 공급자
+```
+
+#### 업그레이드
+
+`audius-cli`가 없는 경우 설치 방법에 대한 지침은 [위의 섹션](https://github.com/AudiusProject/audius-k8s-manifests#2-audius-cli-setup)에서 확인할 수 있습니다.
+
+`audius-cli`을 사용하여 서비스를 업그레이드하려면 최신 매니페스트 코드를 가져와야 합니다. `audius-cli`로 이 작업을 수행할 수 있습니다.
+
+```text
+audius-cli 업그레이드
+```
+
+다음을 실행하여 서비스가 정상인지 확인합니다.
+
+```text
+audius-cli 상태 확인 검색 공급자
+```
+
+**kubectl을 사용한 이전 업그레이드 흐름:** kubectl을 사용하여 서비스를 업그레이드하려면 최신 `k8s-manifests` 코드를 가져와야 합니다. 이렇게 하려면 다음을 실행합니다.
+
+```text
+git stash
+git pull
+git stash 적용
+```
+
+구성이 `audius/discovery-provider/discovery-provider-cm.yaml`에 있는지 확인하고 다음을 수행합니다.
+
+```text
+k 적용 -f audius/discovery-provider/discovery-provider-cm.yaml
+k 적용 -f audius/discovery-provider/discovery-provider-deploy.yaml
+```
+
+`\health_check` 엔드포인트로 업그레이드를 확인할 수 있습니다.
+
+#### 다음
+
+검색 공급자 설정을 완료했으면 [로거](https://github.com/AudiusProject/audius-k8s-manifests#logger) 섹션으로 계속 진행합니다.
+
+
+## 5. 나무꾼
+
+디버깅을 지원하기 위해. 게시할 수 있는 로깅 서비스를 제공합니다.
+
+**운영**
+
+먼저 Audius 담당자로부터 서비스 제공자 비밀을 얻습니다. 여기에는 로깅이 작동하는 데 필요한 토큰이 포함됩니다. 그리고 다음과 같이 비밀을 적용하십시오.
+
+```text
+kubectl 적용 -f <secret_from_audius>.yaml
+```
+
+다음으로, fluentd 데몬셋의 로거 태그를 귀하의 이름으로 업데이트하면 귀하와 귀하의 서비스를 여기에서 고유하게 식별할 수 있습니다. [https://github.com/AudiusProject/audius-k8s-manifests/blob/master/audius/logger/ logger.yaml\#L207](https://github.com/AudiusProject/audius-k8s-manifests/blob/master/audius/logger/logger.yaml#L207). 이를 통해 로깅 서비스는 서비스 제공자, 서비스 제공자 및 서비스별로 로그를 필터링할 수 있습니다. `SP_NAME` 은 조직의 이름을 나타내고 `SP_NAME_TYPE_ID` 은 조직의 이름과 실행 중인 서비스 유형, 동일한 유형의 여러 서비스를 구분하기 위한 ID를 나타냅니다.
+
+예를 들어, 이름이 `Awesome Operator` 이고 콘텐츠 노드를 실행하는 경우 태그를 다음과 같이 설정합니다.
 
 ```text
 ...
-env:
-- name: LOGGLY_TAGS
-  value: external,Awesome-Operator,Awesome-Operator-Content-1
+환경:
+- 이름: LOGGLY_TAGS
+  값: 외부,Awesome-Operator,Awesome-Operator-Content-1
 ```
 
-The number at the end of the last tag \(`Awesome-Operator-Content-1`\) is used if you have more than one content node or discovery node, so you can identify each service uniquely. For example, if you run two content nodes, on your second content node, you can set the tags as:
+마지막 태그 \(`Awesome-Operator-Content-1`\) 끝에 있는 숫자는 콘텐츠 노드 또는 검색 노드가 두 개 이상인 경우 사용하므로 각 서비스를 고유하게 식별할 수 있습니다. 예를 들어 두 번째 콘텐츠 노드에서 두 개의 콘텐츠 노드를 실행하는 경우 태그를 다음과 같이 설정할 수 있습니다.
 
 ```text
 ...
-env:
-- name: LOGGLY_TAGS
-  value: external,Awesome-Operator,Awesome-Operator-Content-2
+환경:
+- 이름: LOGGLY_TAGS
+  값: 외부,Awesome-Operator,Awesome-Operator-Content-2
 ```
 
-Once you've updated the tags, apply the fluentd logger stack with the command:
+태그를 업데이트했으면 다음 명령을 사용하여 fluentd 로거 스택을 적용합니다.
+
+```text
+kubectl 적용 -f audius/logger/logger.yaml
+```
+
+**업그레이드**
+
+로깅 스택을 업그레이드하는 두 가지 명령이 있습니다.
 
 ```text
 kubectl apply -f audius/logger/logger.yaml
-```
 
-**Upgrade**
-
-There are two commands to upgrade the logging stack.
-
-```text
-kubectl apply -f audius/logger/logger.yaml
-
-kubectl -n kube-system delete pod $(kubectl -n kube-system get pods | grep "fluentd" | awk '{print $1}')
+kubectl -n kube-system 삭제 포드 $(kubectl -n kube-system get 포드 | grep "fluentd" | awk '{print $1}')
 ```
 
 
-## 6. Security & Infrastructure configuration
+## 6. 보안 & 인프라 구성
 
-1.\) In order for clients to talk to your service, you'll need to expose two ports: the web server port and the IPFS swarm port. In order to find these ports, run `kubectl get svc`. The web server port is mapped to 4000 for creator node and 5000 for discovery provider. The IPFS swarm port is mapped to 4001
+1.\) 클라이언트가 서비스와 통신하려면 웹 서버 포트와 IPFS 스웜 포트라는 두 개의 포트를 노출해야 합니다. 이러한 포트를 찾으려면 `kubectl get svc`을 실행하십시오. 웹 서버 포트는 작성자 노드의 경우 4000, 검색 공급자의 경우 5000으로 매핑됩니다. IPFS 스웜 포트는 4001에 매핑됩니다.
 
 ```text
 kubectl get svc
 
-NAME                             TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                                        AGE
-discovery-provider-backend-svc   NodePort    10.98.78.108    <none>        5000:31744/TCP                                 18h
-discovery-provider-cache-svc     ClusterIP   10.101.94.71    <none>        6379/TCP                                       18h
-discovery-provider-db-svc        ClusterIP   10.110.50.147   <none>        5432/TCP                                       18h
-discovery-provider-ipfs-svc      NodePort    10.106.89.157   <none>        4001:30480/TCP,5001:30499/TCP,8080:30508/TCP   18h
-kubernetes                       ClusterIP   10.96.0.1       <none>        443/TCP                                        7d5h
+이름 유형 CLUSTER-IP 외부 IP 포트(S) AGE
+discovery-provider-backend-svc NodePort 10.98.78.108    <none>        5000:31744/TCP 18h
+discovery-provider-cache-    <none>        .494.30111 .49 /TCP 18h
+discovery-provider-db-svc ClusterIP 10.110.50.147   <none>        5432/TCP 18h
+discovery-provider-ipfs-svc NodePort 10.106.89.157   <none>        4001:30480/TCP,54809 18h
+kubernetes ClusterIP 10.96.0.1       <none>        443/TCP 7d5h
 
-In this case, the web server port is 31744 and the IPFS port is 30480.
+이 경우 웹 서버 포트는 31744이고 IPFS 포트는 30480입니다.
 ```
 
-2.\) Once you expose these ports, you should be able to publicly hit the health check via the public IP of your instance or load balancer. The next step is to register a DNS record. It's recommended that you map the web server port the DNS and have a domain or subdomain for each service you're running. Also make sure traffic is not allowed without HTTPS. All non HTTPS traffic should redirect to the HTTPS port.
+2.\) 이러한 포트를 노출하면 인스턴스 또는 로드 밸런서의 공용 IP를 통해 공개적으로 상태 확인에 도달할 수 있어야 합니다. 다음 단계는 DNS 레코드를 등록하는 것입니다. 웹 서버 포트를 DNS에 매핑하고 실행 중인 각 서비스에 대한 도메인 또는 하위 도메인을 갖는 것이 좋습니다. 또한 HTTPS 없이 트래픽이 허용되지 않는지 확인하십시오. 모든 비 HTTPS 트래픽은 HTTPS 포트로 리디렉션되어야 합니다.
 
-3.\) Now we will configure IPFS.
+3.\) 이제 IPFS를 구성합니다.
 
-IPFS has some trouble identifying the public host and port inside kubernetes, this can be fixed with `audius-cli`
+IPFS는 kubernetes 내부의 공용 호스트와 포트를 식별하는 데 문제가 있습니다. 이는 `audius-cli`로 수정할 수 있습니다.
 
 ```text
-audius-cli configure-ipfs <hostname>
+audius-cli 구성-ipfs <hostname>
 ```
 
-Example: `audius-cli configure-ipfs 108.174.10.10`
+예: `audius-cli configure-ipfs 108.174.10.10`
 
-4.\) Set load balancer timeouts. Minimum timeouts are 1 hour \(3600 seconds\) for Creator Node requests and 1 minutes \(60 seconds\) for Discovery Provider requests. Track uploads especially for larger files can take several minutes to complete.
+4.\) 로드 밸런서 시간 초과를 설정합니다. 최소 시간 초과는 작성자 노드 요청의 경우 1시간(3600초)이고 검색 공급자 요청의 경우 1분(60초)입니다. 특히 대용량 파일의 업로드 추적은 완료하는 데 몇 분 정도 걸릴 수 있습니다.
 
-5.\) In addition to configuring your security groups to restrict access to just the web server and IPFS swarm port \(4001\), it's recommended that your server or load balancer is protected from DoS attacks. Services like Cloudfront and Cloudflare offer free or low cost services to do this. It would also be possible to use iptables to configure protection as laid out here [https://javapipe.com/blog/iptables-ddos-protection/](https://javapipe.com/blog/iptables-ddos-protection/). Please make sure proxies don't override the timeouts from Step 4.
+5.\) 웹 서버 및 IPFS 스웜 포트 \(4001\)에 대한 액세스만 제한하도록 보안 그룹을 구성하는 것 외에도 서버 또는 로드 밸런서를 DoS 공격으로부터 보호하는 것이 좋습니다. Cloudfront 및 Cloudflare와 같은 서비스는 이를 위해 무료 또는 저렴한 서비스를 제공합니다. 여기에 [https://javapipe.com/blog/iptables-ddos-protection/](https://javapipe.com/blog/iptables-ddos-protection/)에 설명된 대로 iptables를 사용하여 보호를 구성하는 것도 가능합니다. 프록시가 4단계의 시간 초과를 무시하지 않는지 확인하십시오.
 
-## 7. Pre-registration checks
+## 7. 사전 등록 확인
 
-Before registering a service to the dashboard we need to make sure the service is properly configured. Follow the checks below for the type of service you're configuring. Failure to verify that all of these work properly could cause user actions to fail and may lead to slashing actions.
+대시보드에 서비스를 등록하기 전에 서비스가 올바르게 구성되었는지 확인해야 합니다. 구성 중인 서비스 유형에 대해 아래 확인 사항을 따르세요. 이러한 모든 작업이 제대로 작동하는지 확인하지 못하면 사용자 작업이 실패하고 작업이 중단될 수 있습니다.
 
-The `sp-actions/` folder contains scripts that test the health of services. Run the corresponding checks for your service type below to verify your service is correctly sete up. Be sure to run `npm install` in `sp-actions/` to install all depdencies.
+`sp-actions/` 폴더에는 서비스 상태를 테스트하는 스크립트가 포함되어 있습니다. 아래에서 서비스 유형에 해당하는 검사를 실행하여 서비스가 올바르게 설정되었는지 확인하십시오. 모든 종속성을 설치하려면 `npm install` in `sp-actions/` 를 실행해야 합니다.
 
-For more information about `sp-actions/` see the README in the [sp-actions/ folder](https://github.com/AudiusProject/audius-k8s-manifests/tree/master/sp-utilities)
+`sp-actions/` 에 대한 자세한 내용은 [sp-actions/ 폴더](https://github.com/AudiusProject/audius-k8s-manifests/tree/master/sp-utilities)의 README를 참조하십시오.
 
-**Creator Node**
+**생성자 노드**
 
 ```text
 ➜ pwd
 /Audius/audius-k8s-manifests/sp-utilities/creator-node
 
-# entering creatorNodeEndpoint and delegatePrivateKey sends those values as env vars to the script without having to export to your terminal
-➜ creatorNodeEndpoint=https://creatornode.domain.co delegatePrivateKey=5e468bc1b395e2eb8f3c90ef897406087b0599d139f6ca0060ba85dcc0dce8dc node healthChecks.js
-Starting tests now. This may take a few minutes.
-✓ Health check passed
-✓ DB health check passed
-✓ Heartbeat duration health check passed
-! Non-heartbeat duration health check timed out at 180 seconds with error message: "Request failed with status code 504". This is not an issue.
-All checks passed!
+# CreatorNodeEndpoint 및 delegatePrivateKey를 입력하면 터미널
+로 내보낼 필요 없이 해당 값을 env vars로 스크립트에 보냅니다. ➜ CreatorNodeEndpoint=https://creatornode .domain.co delegatePrivateKey=5e468bc1b395e2eb8f3c90ef897406087b0599d139f6ca0060ba85dcc0dce8dc 노드 healthChecks.js
+지금 테스트 시작. 이 작업은 몇 분 정도 걸릴 수 있습니다.
+✓ 상태 점검 통과
+✓ DB 상태 점검 통과
+✓ 하트비트 지속 시간 상태 점검 통과
+! 하트비트가 아닌 기간 상태 확인이 180초에 시간 초과되었으며 오류 메시지: "요청이 상태 코드 504로 실패했습니다." 이것은 문제가 아닙니다.
+모든 검사를 통과했습니다!
 ```
 
-If you see the message "Error running script" this script did not finish successfully. If you see "All checks passed!" this script finished successfully.
+"Error running script" 메시지가 표시되면 이 스크립트가 성공적으로 완료되지 않은 것입니다. "모든 검사를 통과했습니다!"가 표시되는 경우 이 스크립트는 성공적으로 완료되었습니다.
 
-**Discovery Provider**
+**디스커버리 제공자**
 
 ```text
 ➜ discoveryProviderEndpoint=https://discoveryprovider.domain.co node healthChecks.js
-✓ Health check passed
-All checks passed!
+✓ 상태 확인 통과
+모든 확인 통과!
 ```
 
-If you see the message "Error running script" this script did not finish successfully. If you see "All checks passed!" this script finished successfully.
+"Error running script" 메시지가 표시되면 이 스크립트가 성공적으로 완료되지 않은 것입니다. "모든 검사를 통과했습니다!"가 표시되는 경우 이 스크립트는 성공적으로 완료되었습니다.
 
-## 8. Register the service on the dashboard
+## 8. 대시보드에 서비스 등록
 
-Since you've completed all the steps thus far, you're about ready to register!
+지금까지 모든 단계를 완료했으므로 등록할 준비가 된 것입니다!
 
-You can register via the dashboard on [https://dashboard.audius.org](https://dashboard.audius.org/)
+[https://dashboard.audius.org](https://dashboard.audius.org/)의 대시보드를 통해 등록할 수 있습니다.
 
-## 9. Script to Initiate Rounds and Process Claims \(Optional\)
+## 9. 라운드 시작 및 청구 처리 스크립트 \(선택 사항\)
 
-If you would like to automatically run claim operations whenever a new round is initiated, a script is included for your convenience in the sp-utilities/claim folder. Further instructions are provided in the sp-utilities README.
+새 라운드가 시작될 때마다 청구 작업을 자동으로 실행하려면 편의를 위해 sp-utilities/claim 폴더에 스크립트가 포함되어 있습니다. 추가 지침은 sp-utilities README에서 제공됩니다.
