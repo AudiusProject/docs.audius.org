@@ -1,34 +1,34 @@
 ---
-description: Welcome to the Audius technical documents.
-sidebar_label: Welcome
+description: 欢迎阅读 Audius 技术文档。
+sidebar_label: 欢迎
 sidebar_position: 1
 ---
 
-# 🎶 Welcome 🎶
+# 🎶欢迎🎶
 
-Welcome to the Audius technical documentation!
-
-
-## What is Audius?
-
-[Audius](https://audius.co) is a digital streaming service that connects fans directly with artists and exclusive new music.
-
-It does this by being fully decentralized: Audius is owned and run by a vibrant, open-source community of artists, fans, and developers all around the world. Audius gives artists the power to share never-before-heard music and monetize streams directly. Developers can build their own apps on top of Audius, giving them access to one of the most unique audio catalogs in existence.
-
-Under the hood, Audius is both a protocol & platform built on top of the blockchain (several, in fact) and community run nodes. Audius is open source, open data & access, and open ownership.
+欢迎使用 Audius 技术文档！
 
 
-## Why Audius?
+## 什么是奥迪斯？
 
-Music creation and distribution have been dramatically changed by technology in the last two decades. Creating music no longer requires a team of producers and audio engineers. Anyone in their bedroom can start with inexpensive software. Similarly, distributing music no longer requires factories that produce physical records and retail relationships for getting those records into stores; music platforms have enabled artists to distribute their own music.
+[Audius](https://audius.co) 是一种数字流媒体服务，可将粉丝与艺术家和独家新音乐直接联系起来。
 
-Though redundant in the age of digital distribution, the network of intermediaries and middlemen that formed in the early days of recorded music still persists, thriving on the back of artists and curators while the mechanics of value transfer and accrual are still largely obfuscated.
+它通过完全去中心化来做到这一点：Audius 由一个充满活力的开源社区拥有和运营，该社区由世界各地的艺术家、粉丝和开发人员组成。 Audius 使艺术家能够分享前所未有的音乐并直接通过流媒体获利。 开发人员可以在 Audius 之上构建自己的应用程序，让他们可以访问现有最独特的音频目录之一。
 
-Audius is the most direct to consumer alternative to existing digital streaming platforms, giving Artists and Fans direct access to one another and ownership & equity in the network they (and you!) are helping to create.
+在底层，Audius 既是建立在区块链（实际上是几个）之上的协议 & 平台，又是社区运行节点。 Audius 是开源的，开放数据 & 访问，开放所有权。
 
 
-## Documentation
+## 为什么是奥迪斯？
 
-This documentation site guides you through how to familiarize yourself with Audius concepts, how to participate in the protocol & community from a technical perspective, and how to interact with and use the $AUDIO token.
+在过去的二十年里，音乐创作和发行已经被技术所改变。 创作音乐不再需要制作人和音频工程师团队。 卧室里的任何人都可以从便宜的软件开始。 同样，发行音乐不再需要生产实体唱片的工厂和将这些唱片送入商店的零售关系；音乐平台使艺术家能够分发自己的音乐。
 
-If you've found yourself here and are confused, check out the reference music player implementation at [audius.co](https://audius.co) and join our [Discord](https://discord.com/invite/audius).
+尽管在数字发行时代是多余的，但在唱片音乐早期形成的中介和中间人网络仍然存在，在艺术家和策展人的支持下蓬勃发展，而价值转移和应计机制仍然在很大程度上被混淆。
+
+Audius 是现有数字流媒体平台的最直接面向消费者的替代品，让艺术家和粉丝可以直接访问彼此，并且在他们（和您！）正在帮助创建的网络中拥有 & 股权。
+
+
+## 文档
+
+该文档站点将指导您了解如何熟悉 Audius 概念，如何从技术角度参与协议 & 社区，以及如何与 $AUDIO 代币进行交互和使用。
+
+如果您发现自己在这里并且感到困惑，请查看 [](https://audius.co) 上的参考音乐播放器实现并加入我们的 [Discord](https://discord.com/invite/audius)。
