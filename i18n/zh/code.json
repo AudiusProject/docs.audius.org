@@ -1,10 +1,10 @@
 {
   "🗺 Overview": {
-    "message": "🗺 Overview",
+    "message": "🗺 概览",
     "description": "overview"
   },
   "Get an overview of what Audius is, how it works, and how you can contribute": {
-    "message": "Get an overview of what Audius is, how it works, and how you can contribute",
+    "message": "大致了解 Audius 是什么、它是如何工作的以及您可以如何做出贡献",
     "description": "get-an-overview"
   },
   "🎶 API": {
@@ -12,7 +12,7 @@
     "description": "api-reference"
   },
   "Query, stream, and search Arists, Tracks, and Playlists from your own app, game, or project": {
-    "message": "Query, stream, and search Arists, Tracks, and Playlists from your own app, game, or project",
+    "message": "从您自己的应用程序、游戏或项目中查询、流式传输和搜索艺术家、曲目和播放列表",
     "description": "rest-api"
   },
   "🎧 $AUDIO": {
@@ -20,250 +20,250 @@
     "description": "audio"
   },
   "Learn about the $AUDIO Token and how it keeps the network secure & operational": {
-    "message": "Learn about the $AUDIO Token and how it keeps the network secure & operational",
+    "message": "了解 $AUDIO 代币以及它如何保持网络安全和运营",
     "description": "learn-about-the-token"
   },
   "🔓 Staking The Network": {
-    "message": "🔓 Staking The Network",
+    "message": "🔓 质押网络",
     "description": "staking"
   },
   "Stake & delegate the $AUDIO token, earn rewards, and participate in Governance": {
-    "message": "Stake & delegate the $AUDIO token, earn rewards, and participate in Governance",
+    "message": "质押和委托 $AUDIO 代币，获得奖励，参与治理",
     "description": "staking-and-delegating"
   },
   "🛠 Run A Node": {
-    "message": "🛠 Run A Node",
+    "message": "🛠 运行一个节点",
     "description": "run-validator"
   },
   "Get up and running and serve traffic for the Audius network": {
-    "message": "Get up and running and serve traffic for the Audius network",
+    "message": "启动并运行 Audius 网络并为流量提供服务",
     "description": "serve-traffic"
   },
   "⚖️ Governance": {
-    "message": "⚖️ Governance",
+    "message": "⚖️ 治理",
     "description": "governance"
   },
   "Voice your vote. Learn how on-chain governance works and how to get involved": {
-    "message": "Voice your vote. Learn how on-chain governance works and how to get involved"
+    "message": "说出你的投票。了解链上治理的工作原理以及如何参与"
   },
   "theme.NotFound.title": {
-    "message": "Page Not Found",
+    "message": "网页未找到",
     "description": "The title of the 404 page"
   },
   "theme.NotFound.p1": {
-    "message": "We could not find what you were looking for.",
+    "message": "我们找不到您要找的东西。",
     "description": "The first paragraph of the 404 page"
   },
   "theme.NotFound.p2": {
-    "message": "Please contact the owner of the site that linked you to the original URL and let them know their link is broken.",
+    "message": "请联系将您链接到原始 URL 的网站的所有者，并让他们知道他们的链接已损坏。",
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Close",
+    "message": "关",
     "description": "The ARIA label for close button of announcement bar"
   },
   "theme.blog.archive.title": {
-    "message": "Archive",
+    "message": "档案",
     "description": "The page & hero title of the blog archive page"
   },
   "theme.blog.archive.description": {
-    "message": "Archive",
+    "message": "档案",
     "description": "The page & hero description of the blog archive page"
   },
   "theme.blog.paginator.navAriaLabel": {
-    "message": "Blog list page navigation",
+    "message": "博客列表页面导航",
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
-    "message": "Newer Entries",
+    "message": "较新的条目",
     "description": "The label used to navigate to the newer blog posts page (previous page)"
   },
   "theme.blog.paginator.olderEntries": {
-    "message": "Older Entries",
+    "message": "旧链接入口",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
   "theme.blog.post.readingTime.plurals": {
-    "message": "One min read|{readingTime} min read",
+    "message": "一分钟阅读|{readingTime} 分钟阅读",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.post.readMore": {
-    "message": "Read More",
+    "message": "阅读更多",
     "description": "The label used in blog post item excerpts to link to full blog posts"
   },
   "theme.blog.sidebar.navAriaLabel": {
-    "message": "Blog recent posts navigation",
+    "message": "博客最近的帖子导航",
     "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.blog.post.plurals": {
-    "message": "One post|{count} posts",
+    "message": "一篇文章|{count} 个帖子",
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.tagTitle": {
-    "message": "{nPosts} tagged with \"{tagName}\"",
+    "message": "{nPosts} 标记为“{tagName}”",
     "description": "The title of the page for a blog tag"
   },
   "theme.tags.tagsPageLink": {
-    "message": "View All Tags",
+    "message": "查看所有标签",
     "description": "The label of the link targeting the tag list page"
   },
   "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "Copy code to clipboard",
+    "message": "将代码复制到剪贴板",
     "description": "The ARIA label for copy code blocks button"
   },
   "theme.CodeBlock.copied": {
-    "message": "Copied",
+    "message": "已复制",
     "description": "The copied button label on code blocks"
   },
   "theme.CodeBlock.copy": {
-    "message": "Copy",
+    "message": "复制",
     "description": "The copy button label on code blocks"
   },
   "theme.blog.post.paginator.navAriaLabel": {
-    "message": "Blog post page navigation",
+    "message": "博客文章页面导航",
     "description": "The ARIA label for the blog posts pagination"
   },
   "theme.blog.post.paginator.newerPost": {
-    "message": "Newer Post",
+    "message": "较新的帖子",
     "description": "The blog post button label to navigate to the newer/previous post"
   },
   "theme.blog.post.paginator.olderPost": {
-    "message": "Older Post",
+    "message": "较早的帖子",
     "description": "The blog post button label to navigate to the older/next post"
   },
   "theme.docs.sidebar.expandButtonTitle": {
-    "message": "Expand sidebar",
+    "message": "展开侧边栏",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonAriaLabel": {
-    "message": "Expand sidebar",
+    "message": "展开侧边栏",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.docs.paginator.navAriaLabel": {
-    "message": "Docs pages navigation",
+    "message": "文档页面导航",
     "description": "The ARIA label for the docs pagination"
   },
   "theme.docs.paginator.previous": {
-    "message": "Previous",
+    "message": "以前的",
     "description": "The label used to navigate to the previous doc"
   },
   "theme.docs.paginator.next": {
-    "message": "Next",
+    "message": "下一个",
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "Collapse sidebar",
+    "message": "收起侧边栏",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "Collapse sidebar",
+    "message": "收起侧边栏",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
-    "message": "This is unreleased documentation for {siteTitle} {versionLabel} version.",
+    "message": "这是 {siteTitle} {versionLabel} 版本的未发布文档。",
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
   },
   "theme.docs.versions.unmaintainedVersionLabel": {
-    "message": "This is documentation for {siteTitle} {versionLabel}, which is no longer actively maintained.",
+    "message": "这是 {siteTitle} {versionLabel}的文档，不再积极维护。",
     "description": "The label used to tell the user that he's browsing an unmaintained doc version"
   },
   "theme.docs.versions.latestVersionSuggestionLabel": {
-    "message": "For up-to-date documentation, see the {latestVersionLink} ({versionLabel}).",
+    "message": "有关最新文档，请参阅 {latestVersionLink} ({versionLabel})。",
     "description": "The label used to tell the user to check the latest version"
   },
   "theme.docs.versions.latestVersionLinkLabel": {
-    "message": "latest version",
+    "message": "最新版本",
     "description": "The label used for the latest version suggestion link label"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
-    "message": "One doc tagged|{count} docs tagged",
+    "message": "一个文档标记|{count} 个文档已标记",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.tagDocListPageTitle": {
-    "message": "{nDocsTagged} with \"{tagName}\"",
+    "message": "{nDocsTagged} 与“{tagName}”",
     "description": "The title of the page for a docs tag"
   },
   "theme.common.editThisPage": {
-    "message": "Edit this page",
+    "message": "编辑这个页面",
     "description": "The link label to edit the current page"
   },
   "theme.common.headingLinkTitle": {
-    "message": "Direct link to heading",
+    "message": "直接链接到标题",
     "description": "Title for link to heading"
   },
   "theme.lastUpdated.atDate": {
-    "message": " on {date}",
+    "message": " {date}",
     "description": "The words used to describe on which date a page has been last updated"
   },
   "theme.lastUpdated.byUser": {
-    "message": " by {user}",
+    "message": " {user}",
     "description": "The words used to describe by who the page has been last updated"
   },
   "theme.lastUpdated.lastUpdatedAtBy": {
-    "message": "Last updated{atDate}{byUser}",
+    "message": "最后更新{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
   "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
-    "message": "← Back to main menu",
+    "message": "← 返回主菜单",
     "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
   },
   "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "Versions",
+    "message": "版本",
     "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.common.skipToMainContent": {
-    "message": "Skip to main content",
+    "message": "跳到主要内容",
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
-    "message": "On this page",
+    "message": "在本页面",
     "description": "The label used by the button on the collapsible TOC component"
   },
   "theme.tags.tagsListLabel": {
-    "message": "Tags:",
+    "message": "标签：",
     "description": "The label alongside a tag list"
   },
   "theme.SearchPage.documentsFound.plurals": {
-    "message": "One document found|{count} documents found",
+    "message": "找到一份文件|找到{count} 个文件",
     "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.SearchPage.existingResultsTitle": {
-    "message": "Search results for \"{query}\"",
+    "message": "“{query}”的搜索结果",
     "description": "The search page title for non-empty query"
   },
   "theme.SearchPage.emptyResultsTitle": {
-    "message": "Search the documentation",
+    "message": "搜索文档",
     "description": "The search page title for empty query"
   },
   "theme.SearchPage.inputPlaceholder": {
-    "message": "Type your search here",
+    "message": "在此处输入您的搜索",
     "description": "The placeholder for search page input"
   },
   "theme.SearchPage.inputLabel": {
-    "message": "Search",
+    "message": "搜索",
     "description": "The ARIA label for search page input"
   },
   "theme.SearchPage.algoliaLabel": {
-    "message": "Search by Algolia",
+    "message": "按阿尔及利亚搜索",
     "description": "The ARIA label for Algolia mention"
   },
   "theme.SearchPage.noResultsText": {
-    "message": "No results were found",
+    "message": "没有找到任何结果",
     "description": "The paragraph for empty search result"
   },
   "theme.SearchPage.fetchingNewResults": {
-    "message": "Fetching new results...",
+    "message": "正在获取新结果...",
     "description": "The paragraph for fetching new search results"
   },
   "theme.SearchBar.label": {
-    "message": "Search",
+    "message": "搜索",
     "description": "The ARIA label and placeholder for search button"
   },
   "theme.tags.tagsPageTitle": {
-    "message": "Tags",
+    "message": "标签",
     "description": "The title of the tag list page"
   },
   "Query, stream, and search Artists, Tracks, and Playlists from your own app, game, or project": {
-    "message": "Query, stream, and search Artists, Tracks, and Playlists from your own app, game, or project",
+    "message": "从您自己的应用程序、游戏或项目中查询、流式传输和搜索艺术家、曲目和播放列表",
     "description": "rest-api"
   },
   "🧳 SDK": {
@@ -271,15 +271,15 @@
     "description": "sdk-reference"
   },
   "Easily build upon and interact with the Audius network": {
-    "message": "Easily build upon and interact with the Audius network",
+    "message": "轻松构建 Audius 网络并与之交互",
     "description": "sdk"
   },
   "🔑 Log in with Audius": {
-    "message": "🔑 Log in with Audius",
+    "message": "🔑 使用 Audius 登录",
     "description": "oauth-reference"
   },
   "Authenticate users using their Audius profile": {
-    "message": "Authenticate users using their Audius profile",
+    "message": "使用他们的 Audius 配置文件对用户进行身份验证",
     "description": "oauth"
   }
 }
