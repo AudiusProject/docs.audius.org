@@ -1,134 +1,135 @@
-# Governance
+# 통치
 
-## How Audius Governance Work
+## Audius 거버넌스가 작동하는 방식
 
-Governance is the process by which AUDIO token holders enact change to Audius through on-chain proposals.
+거버넌스는 AUDIO 토큰 보유자가 온체인 제안을 통해 Audius에 변경 사항을 적용하는 프로세스입니다.
 
-It allows the community to directly shape future iterations of the platform and is the core principle driving Audius’s decentralized infrastructure.
-
-
-In this post, we’ll cover how governance works in Audius, and what you can do as an AUDIO holder to get involved.
+이를 통해 커뮤니티는 플랫폼의 향후 반복을 직접 형성할 수 있으며 Audius의 분산형 인프라를 구동하는 핵심 원칙입니다.
 
 
-### **Governance Portal**
-
-The single source of truth for Audius governance can be found in the protocol dashboard under the [Governance tab](https://dashboard.audius.org/governance).
+이 게시물에서는 Audius에서 거버넌스가 작동하는 방식과 AUDIO 보유자로서 참여하기 위해 무엇을 할 수 있는지 설명합니다.
 
 
-Here you can see a list of all Active and Resolved proposals in chronological order along with whether they have passed or failed.
+### **거버넌스 포털**
+
+Audius 거버넌스에 대한 단일 정보 소스는 [거버넌스 탭](https://dashboard.audius.org/governance)아래의 프로토콜 대시보드에서 찾을 수 있습니다.
 
 
-Every governance proposal comes with a breakdown of the following parameters:
+여기에서 통과 또는 실패 여부와 함께 모든 활성 및 해결된 제안 목록을 시간순으로 볼 수 있습니다.
 
 
-* _Proposer_ - The address responsible for submitting the proposal
-* _Description_ - A quick synthesis of what the governance proposal entails
-* _For_ - The amount of votes in favor of the proposal
-* _Against_ - The amount of votes against the proposal
-
-**All proposals are subject to 5% of staked $AUDIO quorum and 50% majority.**
+모든 거버넌스 제안에는 다음 매개변수에 대한 분석이 함께 제공됩니다.
 
 
-This means that for a proposal to pass, at least 5% of all staked $AUDIO must vote on the proposal and more than 50% of the votes must be ‘For’ the proposal.
+* _제안자_ - 제안서를 제출할 책임이 있는 주소
+* _설명_ - 거버넌스 제안이 수반하는 내용의 빠른 종합
+* _For_ - 제안에 찬성하는 투표 수
+* _반대_ - 제안에 대한 득표 수
+
+**모든 제안은 스테이킹된 $AUDIO 정족수의 5%와 과반수 50%의 적용을 받습니다.**
 
 
-Today, only those running a node may make a proposal on-chain. In future, the set of permitted proposers could be expanded in any way the community sees fit.
+즉, 제안이 통과하려면 스테이킹된 전체 $AUDIO 의 5% 이상이 제안에 투표해야 하고 투표의 50% 이상이 제안에 '찬성'해야 합니다.
 
 
-### **Governance Process**
-
-Effective governance is much more than voting on proposals on-chain, and something that we want to make even more accessible at Audius.
+오늘날에는 노드를 실행하는 사람들만 온체인에서 제안을 할 수 있습니다. 앞으로 허용된 제안자 집합은 커뮤니티가 적합하다고 생각하는 방식으로 확장될 수 있습니다.
 
 
-Here’s a breakdown of Audius’s evolving governance ecosystem, including the tools, processes and logistics behind AUDIO voting.
+### **거버넌스 프로세스**
+
+효과적인 거버넌스는 제안서에 투표하는 것 이상이며 Audius에서 더 쉽게 접근할 수 있도록 하고자 합니다.
 
 
-_Discord feedback &gt; Forum post &gt; Submit to Governance Portal &gt; On-chain Vote &gt; Execute_
+다음은 AUDIO 투표 이면의 도구, 프로세스 및 물류를 포함하여 Audius의 진화하는 거버넌스 생태계에 대한 분석입니다.
 
 
-Please note that some users may be more inclined than others to facilitate the duration of this process, and we recommend anyone interested in shaping Audius to contribute in whatever ways possible, even if that means just starting a conversation around a topic on Discord!
+_디스코드 피드백 &gt; 포럼 게시물 &gt; 거버넌스 포털에 제출 &gt; 온체인 투표 &gt; 실행_
 
 
-#### **Governance Discord**
-
-In the [AUDIOphile Discord](https://discord.gg/ah5CcqW), you’ll notice a channel called \#governance. This is where early iterations and ideas for proposals can be submitted for community feedback.
+일부 사용자는 이 프로세스의 지속 시간을 용이하게 하는 데 다른 사용자보다 더 의향이 있을 수 있다는 점에 유의하십시오. Audius가 Discord에서 주제에 대한 대화를 시작하는 것을 의미하더라도 가능한 모든 방법으로 기여하도록 만드는 데 관심이 있는 사람을 추천합니다!
 
 
-Getting feedback on a proposal in Discord is not required, but a great way to get a general feeling of whether or not a topic is worth fleshing out in detail prior to submitting on the forum for a more formal discussion.
+#### **거버넌스 불화**
+
+[AUDIOphile Discord](https://discord.gg/ah5CcqW)에서 \#governance 라는 채널을 볼 수 있습니다. 여기에서 커뮤니티 피드백을 위해 제안에 대한 초기 반복 및 아이디어를 제출할 수 있습니다.
 
 
-Governance topics can be seen as a means of signalling, where proposers receive very high level feedback from other community members to see whether or not their ideas will be received well in principle.
+Discord에서 제안서에 대한 피드백을 받는 것은 필수는 아니지만 보다 공식적인 토론을 위해 포럼에 제출하기 전에 주제가 세부적으로 구체화할 가치가 있는지 여부에 대한 일반적인 느낌을 얻을 수 있는 좋은 방법입니다.
 
 
-#### **Audius Forum**
-
-The Audius [governance forum](https://gov.audius.org/) is the primary place to discuss in-depth details around proposals.
+거버넌스 주제는 제안자가 다른 커뮤니티 구성원으로부터 매우 높은 수준의 피드백을 받아 아이디어가 원칙적으로 잘 수용되는지 여부를 확인하는 신호 수단으로 볼 수 있습니다.
 
 
-All proposals are recommended to cover the following topics:
+#### **오디우스 포럼**
+
+Audius [거버넌스 포럼](https://gov.audius.org/) 은 제안에 대한 심층적인 세부 사항을 논의하는 주요 장소입니다.
 
 
-* _Title_ - What is this proposal about?
-* _Summary_ - What is a brief explanation / EIL5 of this proposal?
-* _Abstract_ - What will be done if this proposal is implemented? What additional context and information can you offer?
-* _Motivation_ - What is the reasoning behind why this proposal and its benefit to Audius?
-* _Specification_ - What does voting For or Against this proposal mean?
-* _Poll_ - Would you vote For or Against this proposal?
-
-While in its infancy, the Audius governance forum is the best place to formalize thoughts before putting it to an on-chain vote.
-
-On-chain votes require a lot of signal and coordination, so the governance forum offers a nice way to finalize the finer details of a proposal prior to tossing it on-chain for a community vote.
+모든 제안은 다음 주제를 다루는 것이 좋습니다.
 
 
-#### **Governance Portal**
+* _제목_ - 이 제안은 무엇에 관한 것입니까?
+* _요약_ - 이 제안에 대한 간략한 설명/EIL5는 무엇입니까?
+* _초록_ - 이 제안이 실행된다면 어떻게 될까요? 어떤 추가 컨텍스트와 정보를 제공할 수 있습니까?
+* _동기_ - 왜 이 제안과 그것이 Audius에 미치는 이점에 대한 이유는 무엇입니까?
+* _사양_ - 이 제안에 대한 찬성 또는 반대 투표는 무엇을 의미합니까?
+* _투표_ - 이 제안에 대해 찬성 또는 반대 투표를 하시겠습니까?
 
-After receiving feedback, node operators can submit that proposal on-chain through the Governance portal.
+초기 단계에서 Audius 거버넌스 포럼은 온체인 투표에 참여하기 전에 생각을 공식화하기에 가장 좋은 장소입니다.
 
-Please note that proposition power is correlated to the amount of AUDIO staked or delegated for network security, meaning node operators are the primary candidates for on-chain proposals.
-
-A list of all on-chain proposals can be found [here](https://dashboard.audius.org/#/governance).
+온체인 투표에는 많은 신호와 조정이 필요하므로 거버넌스 포럼은 커뮤니티 투표를 위해 온체인에 던지기 전에 제안의 세부 사항을 마무리하는 좋은 방법을 제공합니다.
 
 
-The details of the proposal should map to the specifications outlined in the forum post, including details and implementations around any technical changes required for the proposal to be implemented.
+#### **거버넌스 포털**
+
+피드백을 받은 노드 운영자는 거버넌스 포털을 통해 온체인에서 해당 제안을 제출할 수 있습니다.
+
+제안 파워는 네트워크 보안을 위해 스테이킹되거나 위임된 AUDIO의 양과 상관 관계가 있습니다. 즉, 노드 운영자는 온체인 제안의 주요 후보입니다.
+
+모든 온체인 제안 목록은 [here](https://dashboard.audius.org/#/governance)에서 찾을 수 있습니다.
 
 
-#### **On-chain Voting**
+제안의 세부 정보는 제안을 구현하는 데 필요한 기술 변경 사항에 대한 세부 정보 및 구현을 포함하여 포럼 게시물에 요약된 사양에 매핑되어야 합니다.
 
-Using Figment’s [most recent governance proposal](https://dashboard.audius.org/#/governance/proposal/9) as an example, you can see that different node operators and delegators voted in favor of extending the voting time from 48 to 72 hours.
+
+#### **온체인 투표**
+
+Figment의 [가장 최근 거버넌스 제안](https://dashboard.audius.org/#/governance/proposal/9) 을 예로 사용하면 다른 노드 운영자와 위임자가 투표 시간을 48시간에서 72시간으로 연장하는 데 찬성 투표를 했음을 알 수 있습니다.
 
 
 ![](https://assets.website-files.com/6024b69839b1b7fd3787991c/607d16049feb3a126f852b57_H6OK09A-2szawbI66mlGi7489J5aj-x604boPIeDUs6zhfZB7Fs77rIsaskaMGslMNWdGrTfm2ZM_sLalkwBvLCn-I0aUm7g9aSIYr11qC0b2t5WHELcyUtSlK21OaD5UgB9mnRN.png)
 
 
-Given that the total number of votes \(1 AUDIO, 1 vote\) was above the quorum requirement of ~11M $AUDIO and the 50% majority \(100% voted in favor\) the proposal passed!
+총 투표 수 \(1 AUDIO, 1 투표\)가 ~11M $AUDIO 의 정족수 요구 사항을 초과했고 50% 과반수 \(100% 찬성\) 제안이 통과되었습니다!
 
 
-In doing so, the changes [from this proposal](https://etherscan.io/tx/0xd4e14895b2a22b48469a43923ab7b30bee75f9a688941933430b3dae9510b8a6) were [executed through the governance contract](https://etherscan.io/tx/0x4396652fb9c1116cec5900f412608dfba7a3ec1b9967f4109a8ec3e09d3a75af), changing the voting window from 48 hours to 72 hours!
+그렇게 함으로써 이 제안</a> 의 변경 사항 [은 거버넌스 계약](https://etherscan.io/tx/0xd4e14895b2a22b48469a43923ab7b30bee75f9a688941933430b3dae9510b8a6)을 통해
 
 
-#### **Community Multisig**
-
-Once a vote has been passed, the governance contract executes the proposal.
+실행되었으며 투표 기간이 48시간에서 72시간으로 변경되었습니다!  </p> 
 
 
-However, Audius also features a community multisig as a veto of last resort, referenced in the whitepaper in the “short-circuiting” subsection of the governance section.
 
 
-This means that a set of 9 Audius community members have the ability to stop a malicious proposal from passing. In the event the multisig is used, 6 of the 9 signers must sign a transaction to nullify the proposal.
+#### **커뮤니티 멀티시그**
+
+투표가 통과되면 거버넌스 계약이 제안을 실행합니다.  
+
+그러나 Audius는 거버넌스 섹션의 "단락" 하위 섹션에 있는 백서에 언급된 최후 수단의 거부권으로 커뮤니티 다중 서명을 특징으로 합니다.  
+
+이는 9명의 Audius 커뮤니티 구성원이 악의적인 제안이 전달되는 것을 막을 수 있음을 의미합니다. 다중서명이 사용되는 경우 9명의 서명자 중 6명은 제안을 무효화하기 위해 거래에 서명해야 합니다.   
+
+Audius가 계속 발전함에 따라 커뮤니티는 언제든지 시스템에서 이 거부권을 제거하기 위해 투표할 수 있습니다.  
+
+이 다중서명 서명자와 사용 의도에 대한 자세한 내용은 향후 블로그 게시물에서 공유할 예정입니다.  
 
 
-As Audius continues to mature, the community can at any time vote to remove this veto ability from the system as well.
 
 
-More details on the signers of this multisig as well as the intent for its use will be shared in a future blog post.
+### **진화하는 거버넌스**
 
+Audius 거버넌스는 모든 $AUDIO 소유자에게 플랫폼의 향후 반복에 대한 목소리를 제공하기 위해 설계된 진화하는 프로세스입니다.  
 
-### **Evolving Governance**
+위에 설명된 프로세스는 모든 토큰 사용자가 기술 지식에 관계없이 거버넌스 결정을 쉽게 검토하고 참여할 수 있도록 새로운 도구, 제품 업그레이드 및 진입로에 따라 변경될 수 있습니다.  
 
-Audius governance is an evolving process geared at giving all $AUDIO holders a voice of future iterations of the platform.
-
-
-The process detailed above is likely to change in line with new tools, product upgrades and onramps to allow for all token users to easily review and participate in governance decisions, regardless of their technical knowledge.
-
-
-We’re excited to share more details around governance in the near future and look forward to building out the community-owned streaming protocol that is Audius!
+가까운 시일 내에 거버넌스에 대한 자세한 내용을 공유하게 되어 기쁩니다. 커뮤니티 소유의 스트리밍 프로토콜인 Audius를 구축할 수 있기를 기대합니다!
