@@ -150,7 +150,7 @@ Metrics are simply SQL queries to the network monitoring database that are expos
 
 To use the metric `fullySyncedUserCount` metric as an example, in `queries.ts` , the SQL query for getting that metric look like this
 
-```tsx
+```tsx "title=queries.ts"
 export const getFullySyncedUsersCount = async (run_id: number): Promise<number> => {
     const usersResp: unknown[] = await sequelizeConn.query(`
         SELECT COUNT(*) as user_count
@@ -176,7 +176,7 @@ export const getFullySyncedUsersCount = async (run_id: number): Promise<number> 
 
 In `prometheus.ts` , the prometheus metric is a gauge that looks like this
 
-```tsx
+```tsx title="prometheus.ts"
 export const fullySyncedUsersCountGauge = new client.Gauge({
     name: 'full_synced_user_count',
     help: 'the number of users whose content nodes replicas are all in sync',
@@ -186,7 +186,7 @@ export const fullySyncedUsersCountGauge = new client.Gauge({
 
 Finally, in `metrics.ts` , the output of the metric is pushed to the prometheus gauge like so:
 
-```tsx
+```tsx title="metrics.ts"
 const fullySyncedUsersCount = await getFullySyncedUsersCount(run_id)
 
 fullySyncedUsersCountGauge.set({ run_id }, fullySyncedUsersCount)
