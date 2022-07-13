@@ -1,18 +1,18 @@
 {
   "version.label": {
-    "message": "Next",
+    "message": "다음",
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.Protocol": {
-    "message": "Protocol",
+    "message": "규약",
     "description": "The label for category Protocol in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Token": {
-    "message": "Token",
+    "message": "토큰",
     "description": "The label for category Token in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Running A Node": {
-    "message": "Running A Node",
+    "message": "노드 실행",
     "description": "The label for category Running A Node in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.API": {
