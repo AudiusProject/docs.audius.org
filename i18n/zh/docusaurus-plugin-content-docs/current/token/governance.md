@@ -1,134 +1,135 @@
-# Governance
+# 治理
 
-## How Audius Governance Work
+## Audius 治理如何运作
 
-Governance is the process by which AUDIO token holders enact change to Audius through on-chain proposals.
+治理是 AUDIO 代币持有者通过链上提案对 Audius 进行更改的过程。
 
-It allows the community to directly shape future iterations of the platform and is the core principle driving Audius’s decentralized infrastructure.
-
-
-In this post, we’ll cover how governance works in Audius, and what you can do as an AUDIO holder to get involved.
+它允许社区直接塑造平台的未来迭代，是推动 Audius 去中心化基础设施的核心原则。
 
 
-### **Governance Portal**
-
-The single source of truth for Audius governance can be found in the protocol dashboard under the [Governance tab](https://dashboard.audius.org/governance).
+在这篇文章中，我们将介绍 Audius 的治理方式，以及作为 AUDIO 持有者您可以做些什么来参与其中。
 
 
-Here you can see a list of all Active and Resolved proposals in chronological order along with whether they have passed or failed.
+### **治理门户**
+
+Audius 治理的单一事实来源可以在协议仪表板的 [治理选项卡](https://dashboard.audius.org/governance)下找到。
 
 
-Every governance proposal comes with a breakdown of the following parameters:
+在这里，您可以按时间顺序查看所有活动和已解决提案的列表，以及它们是通过还是失败。
 
 
-* _Proposer_ - The address responsible for submitting the proposal
-* _Description_ - A quick synthesis of what the governance proposal entails
-* _For_ - The amount of votes in favor of the proposal
-* _Against_ - The amount of votes against the proposal
-
-**All proposals are subject to 5% of staked $AUDIO quorum and 50% majority.**
+每个治理提案都附带以下参数的细分：
 
 
-This means that for a proposal to pass, at least 5% of all staked $AUDIO must vote on the proposal and more than 50% of the votes must be ‘For’ the proposal.
+* _Proposer_ - 负责提交提案的地址
+* _描述_ - 治理提案所需内容的快速综合
+* _For_ - 赞成提案的票数
+* _反对_ - 反对提案的票数
+
+**所有提案均受质押 $AUDIO 法定人数的 5% 和 50% 多数的约束。**
 
 
-Today, only those running a node may make a proposal on-chain. In future, the set of permitted proposers could be expanded in any way the community sees fit.
+这意味着要通过提案，至少有 5% 的质押 $AUDIO 必须对该提案进行投票，并且超过 50% 的投票必须是“赞成”该提案。
 
 
-### **Governance Process**
-
-Effective governance is much more than voting on proposals on-chain, and something that we want to make even more accessible at Audius.
+今天，只有那些运行节点的人才能在链上提出提案。 将来，允许的提议者集合可以以社区认为合适的任何方式进行扩展。
 
 
-Here’s a breakdown of Audius’s evolving governance ecosystem, including the tools, processes and logistics behind AUDIO voting.
+### **治理过程**
+
+有效的治理不仅仅是对链上提案进行投票，而且我们希望在 Audius 上更容易获得一些东西。
 
 
-_Discord feedback &gt; Forum post &gt; Submit to Governance Portal &gt; On-chain Vote &gt; Execute_
+以下是 Audius 不断发展的治理生态系统的细分，包括 AUDIO 投票背后的工具、流程和物流。
 
 
-Please note that some users may be more inclined than others to facilitate the duration of this process, and we recommend anyone interested in shaping Audius to contribute in whatever ways possible, even if that means just starting a conversation around a topic on Discord!
+_Discord 反馈 &gt; 论坛帖子 &gt; 提交到治理门户 &gt; 链上投票 &gt; 执行_
 
 
-#### **Governance Discord**
-
-In the [AUDIOphile Discord](https://discord.gg/ah5CcqW), you’ll notice a channel called \#governance. This is where early iterations and ideas for proposals can be submitted for community feedback.
+请注意，有些用户可能比其他用户更倾向于促进此过程的持续时间，我们建议任何有兴趣塑造 Audius 的人以任何可能的方式做出贡献，即使这意味着只是围绕 Discord 上的某个主题开始对话！
 
 
-Getting feedback on a proposal in Discord is not required, but a great way to get a general feeling of whether or not a topic is worth fleshing out in detail prior to submitting on the forum for a more formal discussion.
+#### **治理不和谐**
+
+在 [AUDIophile Discord](https://discord.gg/ah5CcqW)中，您会注意到一个名为 \#governance 的频道。 这是可以提交早期迭代和提案想法以获得社区反馈的地方。
 
 
-Governance topics can be seen as a means of signalling, where proposers receive very high level feedback from other community members to see whether or not their ideas will be received well in principle.
+在 Discord 中获得对提案的反馈不是必需的，但这是在提交到论坛进行更正式的讨论之前大致了解某个主题是否值得详细充实的好方法。
 
 
-#### **Audius Forum**
-
-The Audius [governance forum](https://gov.audius.org/) is the primary place to discuss in-depth details around proposals.
+治理主题可以被视为一种信号手段，提议者从其他社区成员那里收到非常高水平的反馈，以了解他们的想法在原则上是否会被很好地接受。
 
 
-All proposals are recommended to cover the following topics:
+#### **奥迪斯论坛**
+
+Audius [治理论坛](https://gov.audius.org/) 是围绕提案进行深入讨论的主要场所。
 
 
-* _Title_ - What is this proposal about?
-* _Summary_ - What is a brief explanation / EIL5 of this proposal?
-* _Abstract_ - What will be done if this proposal is implemented? What additional context and information can you offer?
-* _Motivation_ - What is the reasoning behind why this proposal and its benefit to Audius?
-* _Specification_ - What does voting For or Against this proposal mean?
-* _Poll_ - Would you vote For or Against this proposal?
-
-While in its infancy, the Audius governance forum is the best place to formalize thoughts before putting it to an on-chain vote.
-
-On-chain votes require a lot of signal and coordination, so the governance forum offers a nice way to finalize the finer details of a proposal prior to tossing it on-chain for a community vote.
+建议所有提案涵盖以下主题：
 
 
-#### **Governance Portal**
+* _标题_ - 这个提案是关于什么的？
+* _摘要_ - 该提案的简要解释/EIL5 是什么？
+* _摘要_ - 如果这个提议得到实施，将会做什么？ 您可以提供哪些额外的背景和信息？
+* _动机_ - 为什么这个提议及其对 Audius 的好处背后的原因是什么？
+* _规范_ - 投票赞成或反对该提案意味着什么？
+* _投票_ - 您会投票赞成还是反对该提案？
 
-After receiving feedback, node operators can submit that proposal on-chain through the Governance portal.
+Audius 治理论坛处于起步阶段，是在进行链上投票之前将想法正式化的最佳场所。
 
-Please note that proposition power is correlated to the amount of AUDIO staked or delegated for network security, meaning node operators are the primary candidates for on-chain proposals.
-
-A list of all on-chain proposals can be found [here](https://dashboard.audius.org/#/governance).
+链上投票需要大量的信号和协调，因此治理论坛提供了一种很好的方法，可以在将提案提交到链上进行社区投票之前最终确定提案的更详细的细节。
 
 
-The details of the proposal should map to the specifications outlined in the forum post, including details and implementations around any technical changes required for the proposal to be implemented.
+#### **治理门户**
+
+收到反馈后，节点运营商可以通过治理门户在链上提交该提案。
+
+请注意，提案权与为网络安全而质押或委托的 AUDIO 数量相关，这意味着节点运营商是链上提案的主要候选人。
+
+所有链上提案的列表可以在这里找到 [](https://dashboard.audius.org/#/governance)。
 
 
-#### **On-chain Voting**
+提案的详细信息应映射到论坛帖子中概述的规范，包括围绕提案实施所需的任何技术更改的详细信息和实施。
 
-Using Figment’s [most recent governance proposal](https://dashboard.audius.org/#/governance/proposal/9) as an example, you can see that different node operators and delegators voted in favor of extending the voting time from 48 to 72 hours.
+
+#### **链上投票**
+
+以 Figment 的 [最新治理提案](https://dashboard.audius.org/#/governance/proposal/9) 为例，您可以看到不同的节点运营商和委托人投票赞成将投票时间从 48 小时延长至 72 小时。
 
 
 ![](https://assets.website-files.com/6024b69839b1b7fd3787991c/607d16049feb3a126f852b57_H6OK09A-2szawbI66mlGi7489J5aj-x604boPIeDUs6zhfZB7Fs77rIsaskaMGslMNWdGrTfm2ZM_sLalkwBvLCn-I0aUm7g9aSIYr11qC0b2t5WHELcyUtSlK21OaD5UgB9mnRN.png)
 
 
-Given that the total number of votes \(1 AUDIO, 1 vote\) was above the quorum requirement of ~11M $AUDIO and the 50% majority \(100% voted in favor\) the proposal passed!
+鉴于总票数 \(1 AUDIO, 1 vote\) 高于约 11M $AUDIO 的法定人数要求，并且 50% 多数票 \(100% 投赞成票\) 提案通过！
 
 
-In doing so, the changes [from this proposal](https://etherscan.io/tx/0xd4e14895b2a22b48469a43923ab7b30bee75f9a688941933430b3dae9510b8a6) were [executed through the governance contract](https://etherscan.io/tx/0x4396652fb9c1116cec5900f412608dfba7a3ec1b9967f4109a8ec3e09d3a75af), changing the voting window from 48 hours to 72 hours!
+这样一来，该提案</a> 的更改 [是通过治理合约](https://etherscan.io/tx/0xd4e14895b2a22b48469a43923ab7b30bee75f9a688941933430b3dae9510b8a6)执行的
 
 
-#### **Community Multisig**
-
-Once a vote has been passed, the governance contract executes the proposal.
+，将投票窗口从 48 小时更改为 72 小时！  </p> 
 
 
-However, Audius also features a community multisig as a veto of last resort, referenced in the whitepaper in the “short-circuiting” subsection of the governance section.
 
 
-This means that a set of 9 Audius community members have the ability to stop a malicious proposal from passing. In the event the multisig is used, 6 of the 9 signers must sign a transaction to nullify the proposal.
+#### **社区多重签名**
+
+一旦投票通过，治理合约就会执行提案。  
+
+然而，Audius 还将社区多重签名作为最后的否决权，在白皮书中治理部分的“短路”小节中引用了这一点。  
+
+这意味着一组 9 名 Audius 社区成员有能力阻止恶意提案通过。 如果使用多重签名，则 9 个签名者中的 6 个必须签署交易才能使提案无效。   
+
+随着 Audius 的不断成熟，社区也可以随时投票从系统中删除这种否决权。  
+
+有关此多重签名的签名者及其使用意图的更多详细信息将在未来的博客文章中分享。  
 
 
-As Audius continues to mature, the community can at any time vote to remove this veto ability from the system as well.
 
 
-More details on the signers of this multisig as well as the intent for its use will be shared in a future blog post.
+### **不断发展的治理**
 
+Audius 治理是一个不断发展的过程，旨在为所有 $AUDIO 持有者提供平台未来迭代的声音。  
 
-### **Evolving Governance**
+上面详述的过程可能会随着新工具、产品升级和升级而改变，以允许所有代币用户轻松审查和参与治理决策，无论他们的技术知识如何。  
 
-Audius governance is an evolving process geared at giving all $AUDIO holders a voice of future iterations of the platform.
-
-
-The process detailed above is likely to change in line with new tools, product upgrades and onramps to allow for all token users to easily review and participate in governance decisions, regardless of their technical knowledge.
-
-
-We’re excited to share more details around governance in the near future and look forward to building out the community-owned streaming protocol that is Audius!
+我们很高兴在不久的将来分享有关治理的更多细节，并期待建立社区拥有的流媒体协议，即 Audius！
