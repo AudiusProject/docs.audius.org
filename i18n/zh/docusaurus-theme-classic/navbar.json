@@ -1,10 +1,10 @@
 {
   "title": {
-    "message": "Audius Docs",
+    "message": "Audius 文档",
     "description": "The title in the navbar"
   },
   "item.label.Protocol": {
-    "message": "Protocol",
+    "message": "协议",
     "description": "Navbar item with label Protocol"
   },
   "item.label.API": {
@@ -12,11 +12,11 @@
     "description": "Navbar item with label API"
   },
   "item.label.Token": {
-    "message": "Token",
+    "message": "令牌",
     "description": "Navbar item with label Token"
   },
   "item.label.Chat": {
-    "message": "Chat",
+    "message": "聊天",
     "description": "Navbar item with label Chat"
   },
   "item.label.GitHub": {
@@ -24,7 +24,7 @@
     "description": "Navbar item with label GitHub"
   },
   "item.label.Welcome": {
-    "message": "Welcome",
+    "message": "欢迎",
     "description": "Navbar item with label Welcome"
   }
 }
