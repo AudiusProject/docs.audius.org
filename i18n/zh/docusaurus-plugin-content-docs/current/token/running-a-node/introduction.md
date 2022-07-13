@@ -1,21 +1,21 @@
 ---
-sidebar_label: Introduction
+sidebar_label: 介绍
 sidebar_position: 1
 ---
 
-# Introduction
+# 介绍
 
-This section describes how to run an Audius node.
+本节介绍如何运行 Audius 节点。
 
-The Audius protocol is powered by two off-chain services, the Discovery Node and the Content Node.
+Audius 协议由两个链下服务提供支持，即发现节点和内容节点。
 
-**Discovery Node**
+**发现节点**
 
-* Indexes blockchains used by the Audius protocol \(Main-net Ethereum, POA, and Solana\)
-* Serves API traffic
-* Tracks usage metrics
+* Audius 协议使用的索引区块链\（主网 Ethereum、POA 和 Solana\）
+* 提供 API 流量
+* 跟踪使用指标
 
-**Content Node**
+**内容节点**
 
-* Hosts audio and image content
-* Syncs content across nodes to ensure data is consistent and highly available \(using IPFS and the Audius Storage Protocol under the hood\)
+* 托管音频和图像内容
+* 跨节点同步内容以确保数据一致且高度可用\（在后台使用 IPFS 和 Audius 存储协议\）
