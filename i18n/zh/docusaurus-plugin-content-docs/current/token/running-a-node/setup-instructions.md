@@ -1,381 +1,381 @@
 ---
-sidebar_label: Setup Instructions
+sidebar_label: 设置说明
 sidebar_position: 3
 ---
 
-# Setup Instructions
+# 设置说明
 
-This guide describes how to run Audius services on a single node Kubernetes cluster. Notes about multi node clusters are given as relevant.
+本指南介绍了如何在单节点 Kubernetes 集群上运行 Audius 服务。 给出了有关多节点集群的注意事项。
 
-Join the node operator discord channel on the [Audius discord server](https://discord.com/invite/audius)
+加入 [Audius discord server](https://discord.com/invite/audius)上的节点运营商 discord 频道
 
-## 0. Clone the audius-k8s-manifests repository
+## 0。 克隆 audius-k8s-manifests 存储库
 [**https://github.com/AudiusProject/audius-k8s-manifests**](https://github.com/AudiusProject/audius-k8s-manifests)\*\*\*\*
 
 ```text
 git clone git@github.com:AudiusProject/audius-k8s-manifests.git
 ```
 
-## 1. Cluster Setup
+## 1. 集群设置
 
-Initialize a machine running Ubuntu 16.04 LTS or higher, with at least 8 vCPUs and 16 GB of RAM.
+初始化运行 Ubuntu 16.04 LTS 或更高版本的机器，至少有 8 个 vCPU 和 16 GB RAM。
 
-A convenience script is also included to do a "one click" kubeadm node setup. You can run
+还包括一个方便的脚本来进行“一键式”kubeadm 节点设置。 你可以跑
 
 ```text
-yes | sh setup.sh
+是的 | sh setup.sh
 ```
 
-However, if the node setup is not successful and kubectl is not available, it's advised to follow the installation steps by hand [here](https://github.com/AudiusProject/audius-k8s-manifests/blob/master/cluster-setup.md).
+但是，如果节点设置不成功且 kubectl 不可用，则建议在此处手动执行安装步骤 [](https://github.com/AudiusProject/audius-k8s-manifests/blob/master/cluster-setup.md)。
 
-## 2. Audius CLI Setup
+## 2. Audius CLI 设置
 
-You can skip this section if installing for the first time.
+如果是第一次安装，您可以跳过此部分。
 
-You can install `audius-cli` with
+您可以安装 `audio-cli` 与
 
 ```text
 sh install_audius_cli.sh
 ```
 
-You can then view all commands available via `audius-cli` by simply running:
+然后，您只需运行以下命令即可查看通过 `audio-cli` 可用的所有命令：
 
 ```text
 audius-cli -h
 ```
 
-## 3. Storage
+## 3. 贮存
 
-Provision a shared host directory for persistent storage,
+为持久存储提供共享主机目录，
 
 ```text
 mkdir -p /var/k8s
 ```
 
-If sudo was required, change ownership with,
+如果需要 sudo，请更改所有权，
 
 ```text
 sudo chown <user>:<group> /var/k8s
 ```
 
-typically this will be,
+通常这将是，
 
 ```text
 sudo chown -R ubuntu:ubuntu /var/k8s
 ```
 
-**Note:** Storage will persist on the host even after deleting `pv, pvc` objects.
+**注意：** 存储即使在删除 `pv、pvc` 对象后仍会保留在主机上。
 
-To nuke all data and start clean,
+要核对所有数据并开始清理，
 
 ```text
 rm -rf /var/k8s/*
 ```
 
-## 4. Service Setup
+## 4. 服务设置
 
-See below for a guide to deploying [Creator Node](https://github.com/AudiusProject/audius-k8s-manifests#creator-node-1) and [Discovery Provider](https://github.com/AudiusProject/audius-k8s-manifests#discovery-provider-1) via `audius-cli`. After you finish setting up the service, please continue with the Logger section.
+有关通过 `audio-cli`部署 [Creator 节点](https://github.com/AudiusProject/audius-k8s-manifests#creator-node-1) 和 [Discovery Provider](https://github.com/AudiusProject/audius-k8s-manifests#discovery-provider-1) 的指南，请参见下文。 完成服务设置后，请继续 Logger 部分。
 
-**Note:** "Creator Node" and "Discovery Provider" have recently been renamed to "Content Node" and "Discovery Node" respectively. However for consistency within the code and this README, we will continue to use the terms "Creator Node" and "Discovery Node".
+**注：** “Creator Node”和“Discovery Provider”最近分别重命名为“Content Node”和“Discovery Node”。 然而，为了代码和本 README 的一致性，我们将继续使用术语“创建者节点”和“发现节点”。
 
-### Creator Node
+### 创建者节点
 
-An Audius Creator Node maintains the availability of creators' content on IPFS.
+Audius Creator 节点维护 IPFS 上创作者内容的可用性。
 
-The information stored includes Audius user metadata, images, and audio content. The content is backed by a local directory.
+存储的信息包括 Audius 用户元数据、图像和音频内容。 内容由本地目录支持。
 
-**Note:** In the future, the service will be extended to handle proxy re-encryption requests from end-user clients and support other storage backends.
+**注：** 未来，该服务将扩展为处理来自最终用户客户端的代理重加密请求，并支持其他存储后端。
 
-#### Run
+#### 跑
 
-Use `audius-cli` to update required variables. The full list of variables and explanations can be found on the wiki [here](https://github.com/AudiusProject/audius-protocol/wiki/Content-Node:-Configuration-Details#required-environment-variables).
+使用 `audio-cli` 更新所需的变量。 变量和解释的完整列表可以在 wiki [上找到](https://github.com/AudiusProject/audius-protocol/wiki/Content-Node:-Configuration-Details#required-environment-variables)。
 
-Some variables must be set, you can do this with the following commands:
-
-```text
-audius-cli set-config creator-node backend
-key   : spOwnerWallet
-value : <address of wallet that contains audius tokens>
-
-audius-cli set-config creator-node backend
-key   : delegateOwnerWallet
-value : <address of wallet that contains no tokens but that is registered on chain>
-
-audius-cli set-config creator-node backend
-key   : delegatePrivateKey
-value : <private key>
-
-audius-cli set-config creator-node backend
-key   : creatorNodeEndpoint
-value : <your service url>
-```
-
-**Note:** if you haven't registered the service yet, please enter the url you plan to register for `creatorNodeEndpoint`.
-
-Then run the launch command via `audius-cli`
+必须设置一些变量，您可以使用以下命令执行此操作：
 
 ```text
-audius-cli launch creator-node --configure-ipfs
+audius-cli set-config creator-node 后端
+键：spOwnerWallet
+值： <address of wallet that contains audius tokens>
+
+audius-cli set-config creator-node 后端
+键：delegateOwnerWallet
+值： <address of wallet that contains no tokens but that is registered on chain>
+
+audius-cli set-config creator-node 后端
+键：delegatePrivateKey
+值： <private key>
+
+audius-cli set-config creator-node 后端
+键：creatorNodeEndpoint
+值： <your service url>
 ```
 
-Verify that the service is healthy by running,
+**注意：** 如果您还没有注册服务，请输入您打算注册的url `creatorNodeEndpoint`。
+
+然后通过 `audius-cli`运行启动命令
 
 ```text
-audius-cli health-check creator-node
+audius-cli 启动 creator-node --configure-ipfs
 ```
 
-#### Upgrade
-
-If you do not have `audius-cli`, instructions on how to install are available in [the section above](https://github.com/AudiusProject/audius-k8s-manifests#2-audius-cli-setup).
-
-To upgrade your service using `audius-cli`, you will need to pull the latest manifest code. You can do this with `audius-cli`
+通过运行验证服务是否健康，
 
 ```text
-audius-cli upgrade
+audius-cli 健康检查创建者节点
 ```
 
-Verify that the service is healthy by running,
+#### 升级
+
+如果您没有 `audius-cli`，有关如何安装的说明可在 [上面的部分](https://github.com/AudiusProject/audius-k8s-manifests#2-audius-cli-setup)中找到。
+
+要使用 `audio-cli`升级您的服务，您需要提取最新的清单代码。 您可以使用 `audius-cli`执行此操作
 
 ```text
-audius-cli health-check creator-node
+audius-cli 升级
 ```
 
-**Old Upgrade flow with kubectl:** To upgrade your service using `kubectl`, you will need to pull the latest `k8s-manifests` code. To do this, run the following,
+通过运行验证服务是否健康，
 
 ```text
-git stash
-git pull
-git stash apply
+audius-cli 健康检查创建者节点
 ```
 
-Ensure that your configs are present in `audius/creator-node/creator-node-cm.yaml`, then do the following,
-
-```text
-k apply -f audius/creator-node/creator-node-cm.yaml
-k apply -f audius/creator-node/creator-node-deploy-ipfs.yaml
-k apply -f audius/creator-node/creator-node-deploy-backend.yaml
-```
-
-You can verify your upgrade with the `\health_check` endpoint.
-
-### Discovery Provider
-
-An Audius Discovery Provider indexes the contents of the Audius contracts on the Ethereum blockchain for clients to query.
-
-The indexed content includes user, track, and album/playlist information along with social features. The data is stored for quick access, updated on a regular interval, and made available for clients via a RESTful API.
-
-#### Run
-
-Some variables must be set, you can do this with the following commands:
-
-```text
-audius-cli set-config discovery-provider backend
-key   : audius_delegate_owner_wallet
-value : <delegate_owner_wallet>
-
-audius-cli set-config discovery-provider backend
-key   : audius_delegate_private_key
-value : <delegate_private_key>
-```
-
-If you are using an external managed Postgres database \(version 11.1+\), replace the db url with,
-
-```text
-audius-cli set-config discovery-provider backend
-key   : audius_db_url
-value : <audius_db_url>
-
-audius-cli set-config discovery-provider backend
-key   : audius_db_url_read_replica
-value : <audius_db_url_read_replica>
-```
-
-**Note:** If there's no read replica, enter the primary db url for both env vars.
-
-The below is only if using a managed posgres database:
-
-You will have to replace the db seed job in `audius/discovery-provider/discovery-provider-db-seed-job.yaml` as well. Examples are provided. In the managed postgres database and set the `temp_file_limit` flag to `2147483647` and run the following SQL command on the destination db.
-
-```text
-CREATE EXTENSION pg_trgm;
-```
-
-Make sure that your service exposes all the required environment variables. See wiki [here](https://github.com/AudiusProject/audius-protocol/wiki/Discovery-Node:-Configuration-Details#required-environment-variables) for full list of env vars and descriptions.
-
-#### Launch
-
-```text
-audius-cli launch discovery-provider --seed-job --configure-ipfs
-```
-
-Verify that the service is healthy by running,
-
-```text
-audius-cli health-check discovery-provider
-```
-
-#### Upgrade
-
-If you do not have `audius-cli`, instructions on how to install are available in [the section above](https://github.com/AudiusProject/audius-k8s-manifests#2-audius-cli-setup).
-
-To upgrade your service using `audius-cli`, you will need to pull the latest manifest code. You can do this with `audius-cli`
-
-```text
-audius-cli upgrade
-```
-
-Verify that the service is healthy by running,
-
-```text
-audius-cli health-check discovery-provider
-```
-
-**Old Upgrade flow with kubectl:** To upgrade your service using kubectl, you will need to pull the latest `k8s-manifests` code. To do this, run the following,
+**使用 kubectl 的旧升级流程：** 要使用 `kubectl`升级您的服务，您需要提取最新的 `k8s-manifests` 代码。 为此，请运行以下命令，
 
 ```text
 git stash
 git pull
-git stash apply
+git stash 应用
 ```
 
-Ensure that your configs are present in `audius/discovery-provider/discovery-provider-cm.yaml`, then do the following,
+确保您的配置存在于 `audio/creator-node/creator-node-cm.yaml`中，然后执行以下操作，
 
 ```text
-k apply -f audius/discovery-provider/discovery-provider-cm.yaml
-k apply -f audius/discovery-provider/discovery-provider-deploy.yaml
+k 应用 -f audius/creator-node/creator-node-cm.yaml
+k 应用 -f audius/creator-node/creator-node-deploy-ipfs.yaml
+k 应用 -f audius/creator-node/creator-节点部署后端.yaml
 ```
 
-You can verify your upgrade with the `\health_check` endpoint.
+您可以使用 `\health_check` 端点验证您的升级。
 
-#### Next
+### 发现提供者
 
-Once you've finished setting up the Discovery Provider, continue to the [Logger](https://github.com/AudiusProject/audius-k8s-manifests#logger) section.
+Audius Discovery Provider 为以太坊区块链上的 Audius 合约内容编制索引，以供客户查询。
 
+索引内容包括用户、曲目和专辑/播放列表信息以及社交特征。 存储数据以供快速访问，定期更新，并通过 RESTful API 提供给客户端。
 
-## 5. Logger
+#### 跑
 
-In order to assist with any debugging. We provide a logging service that you may publish to.
-
-**Run**
-
-First, obtain the service provider secrets from your contact at Audius. This contains the required token\(s\) for logging to function. And apply the secret with
+必须设置一些变量，您可以使用以下命令执行此操作：
 
 ```text
-kubectl apply -f <secret_from_audius>.yaml
+audius-cli set-config discovery-provider 后端
+密钥：audius_delegate_owner_wallet
+值： <delegate_owner_wallet>
+
+audius-cli set-config discovery-provider 后端
+密钥：audius_delegate_private_key
+值： <delegate_private_key>
 ```
 
-Next, update the logger tags in the fluentd daemonset with your name, so we can identify you and your service uniquely here: [https://github.com/AudiusProject/audius-k8s-manifests/blob/master/audius/logger/logger.yaml\#L207](https://github.com/AudiusProject/audius-k8s-manifests/blob/master/audius/logger/logger.yaml#L207). This allows our logging service to filter logs by service provider and by service provider and service. `SP_NAME` refers to your organization's name and `SP_NAME_TYPE_ID` refers to your organization's name plus the type of service you're running, plus an id to distinguish multiple services of the same type.
+如果您使用的是外部托管 Postgres 数据库\（版本 11.1+\），请将 db url 替换为，
 
-For example, if your name is `Awesome Operator` and you're running a content node, set the tags as:
+```text
+audius-cli set-config discovery-provider 后端
+键：audius_db_url
+值： <audius_db_url>
+
+audius-cli set-config discovery-provider 后端
+键：audius_db_url_read_replica
+值： <audius_db_url_read_replica>
+```
+
+**注意：** 如果没有只读副本，请输入两个环境变量的主数据库 URL。
+
+以下仅在使用托管 posgres 数据库时：
+
+您还必须替换 `/discovery-provider/discovery-provider-db-seed-job.yaml` 中的数据库种子作业。 提供了示例。 在托管的 postgres 数据库中，将 `temp_file_limit` 标志设置为 `2147483647` 并在目标数据库上运行以下 SQL 命令。
+
+```text
+创建扩展 pg_trgm;
+```
+
+确保您的服务公开所有必需的环境变量。 有关环境变量和描述的完整列表，请参见此处的 wiki [](https://github.com/AudiusProject/audius-protocol/wiki/Discovery-Node:-Configuration-Details#required-environment-variables)。
+
+#### 发射
+
+```text
+audius-cli 启动 discovery-provider --seed-job --configure-ipfs
+```
+
+通过运行验证服务是否健康，
+
+```text
+audius-cli 健康检查发现提供程序
+```
+
+#### 升级
+
+如果您没有 `audius-cli`，有关如何安装的说明可在 [上面的部分](https://github.com/AudiusProject/audius-k8s-manifests#2-audius-cli-setup)中找到。
+
+要使用 `audio-cli`升级您的服务，您需要提取最新的清单代码。 您可以使用 `audius-cli`执行此操作
+
+```text
+audius-cli 升级
+```
+
+通过运行验证服务是否健康，
+
+```text
+audius-cli 健康检查发现提供程序
+```
+
+**使用 kubectl 的旧升级流程：** 要使用 kubectl 升级您的服务，您需要提取最新的 `k8s-manifests` 代码。 为此，请运行以下命令，
+
+```text
+git stash
+git pull
+git stash 应用
+```
+
+确保您的配置存在于 `audius/discovery-provider/discovery-provider-cm.yaml`中，然后执行以下操作，
+
+```text
+k 应用-f audius/discovery-provider/discovery-provider-cm.yaml
+k 应用-f audius/discovery-provider/discovery-provider-deploy.yaml
+```
+
+您可以使用 `\health_check` 端点验证您的升级。
+
+#### 下一个
+
+一旦你完成了 Discovery Provider 的设置，继续 [Logger](https://github.com/AudiusProject/audius-k8s-manifests#logger) 部分。
+
+
+## 5. 记录器
+
+为了协助任何调试。 我们提供您可以发布到的日志记录服务。
+
+**跑**
+
+首先，从您在 Audius 的联系人获取服务提供商机密。 这包含日志功能所需的令牌\(s\)。 并应用秘密
+
+```text
+kubectl 应用 -f <secret_from_audius>.yaml
+```
+
+接下来，使用您的姓名更新 fluentd 守护程序集中的记录器标签，以便我们可以在这里唯一地识别您和您的服务： [https://github.com/AudiusProject/audius-k8s-manifests/blob/master/audius/logger/ logger.yaml\#L207](https://github.com/AudiusProject/audius-k8s-manifests/blob/master/audius/logger/logger.yaml#L207)。 这允许我们的日志服务按服务提供者以及服务提供者和服务过滤日志。 `SP_NAME` 指的是您的组织名称， `SP_NAME_TYPE_ID` 指的是您的组织名称加上您正在运行的服务的类型，再加上一个用于区分同一类型的多个服务的 id。
+
+例如，如果您的名字是 `Awesome Operator` 并且您正在运行内容节点，请将标签设置为：
 
 ```text
 ...
-env:
-- name: LOGGLY_TAGS
-  value: external,Awesome-Operator,Awesome-Operator-Content-1
+env：
+- 名称：LOGGLY_TAGS
+  值：外部，Awesome-Operator，Awesome-Operator-Content-1
 ```
 
-The number at the end of the last tag \(`Awesome-Operator-Content-1`\) is used if you have more than one content node or discovery node, so you can identify each service uniquely. For example, if you run two content nodes, on your second content node, you can set the tags as:
+如果您有多个内容节点或发现节点，则使用最后一个标记 \(`Awesome-Operator-Content-1`\) 末尾的数字，以便您可以唯一地标识每个服务。 例如，如果您运行两个内容节点，则在第二个内容节点上，您可以将标签设置为：
 
 ```text
 ...
-env:
-- name: LOGGLY_TAGS
-  value: external,Awesome-Operator,Awesome-Operator-Content-2
+env：
+- 名称：LOGGLY_TAGS
+  值：外部，Awesome-Operator，Awesome-Operator-Content-2
 ```
 
-Once you've updated the tags, apply the fluentd logger stack with the command:
+更新标签后，使用以下命令应用 fluentd 记录器堆栈：
 
 ```text
 kubectl apply -f audius/logger/logger.yaml
 ```
 
-**Upgrade**
+**升级**
 
-There are two commands to upgrade the logging stack.
+有两个命令可以升级日志堆栈。
 
 ```text
 kubectl apply -f audius/logger/logger.yaml
 
-kubectl -n kube-system delete pod $(kubectl -n kube-system get pods | grep "fluentd" | awk '{print $1}')
+kubectl -n kube-system 删除 pod $(kubectl -n kube-system get pods | grep "fluentd" | awk '{print $1}')
 ```
 
 
-## 6. Security & Infrastructure configuration
+## 6. 安全 & 基础设施配置
 
-1.\) In order for clients to talk to your service, you'll need to expose two ports: the web server port and the IPFS swarm port. In order to find these ports, run `kubectl get svc`. The web server port is mapped to 4000 for creator node and 5000 for discovery provider. The IPFS swarm port is mapped to 4001
+1.\) 为了让客户端与您的服务通信，您需要公开两个端口：Web 服务器端口和 IPFS 群端口。 为了找到这些端口，运行 `kubectl get svc`。 Web 服务器端口映射到创建者节点的 4000 和发现提供者的 5000。 IPFS swarm 端口映射到 4001
 
 ```text
 kubectl get svc
 
-NAME                             TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                                        AGE
-discovery-provider-backend-svc   NodePort    10.98.78.108    <none>        5000:31744/TCP                                 18h
-discovery-provider-cache-svc     ClusterIP   10.101.94.71    <none>        6379/TCP                                       18h
-discovery-provider-db-svc        ClusterIP   10.110.50.147   <none>        5432/TCP                                       18h
-discovery-provider-ipfs-svc      NodePort    10.106.89.157   <none>        4001:30480/TCP,5001:30499/TCP,8080:30508/TCP   18h
-kubernetes                       ClusterIP   10.96.0.1       <none>        443/TCP                                        7d5h
+NAME TYPE CLUSTER-IP EXTERNAL-IP PORT(S) AGE
+discovery-provider-backend-svc NodePort 10.98.78.108    <none>        5000:31744/TCP 18h
+discovery-provider-cache-svc ClusterIP 10.101.94.71    <none>        6379 /TCP 18h
+discovery-provider-db-svc ClusterIP 10.110.50.147   <none>        5432/TCP 18h
+discovery-provider-ipfs-svc NodePort 10.106.89.157   <none>        4001:30480/TCP,5001:30499/TCP,8080:30508/TCP 18h
+kubernetes ClusterIP 10.96.0.1       <none>        443/TCP 7d5h
 
-In this case, the web server port is 31744 and the IPFS port is 30480.
+本例中web服务器端口为31744，IPFS端口为30480。
 ```
 
-2.\) Once you expose these ports, you should be able to publicly hit the health check via the public IP of your instance or load balancer. The next step is to register a DNS record. It's recommended that you map the web server port the DNS and have a domain or subdomain for each service you're running. Also make sure traffic is not allowed without HTTPS. All non HTTPS traffic should redirect to the HTTPS port.
+2.\) 一旦你暴露了这些端口，你应该能够通过你的实例或负载均衡器的公共 IP 公开地点击健康检查。 下一步是注册 DNS 记录。 建议您将 Web 服务器端口映射到 DNS，并为您正在运行的每个服务设置一个域或子域。 还要确保在没有 HTTPS 的情况下不允许流量。 所有非 HTTPS 流量都应重定向到 HTTPS 端口。
 
-3.\) Now we will configure IPFS.
+3.\) 现在我们将配置 IPFS。
 
-IPFS has some trouble identifying the public host and port inside kubernetes, this can be fixed with `audius-cli`
+IPFS 在识别 kubernetes 中的公共主机和端口时遇到了一些问题，这可以用 `audius-cli`修复
 
 ```text
-audius-cli configure-ipfs <hostname>
+audius-cli 配置-ipfs <hostname>
 ```
 
-Example: `audius-cli configure-ipfs 108.174.10.10`
+示例： `audius-cli 配置-ipfs 108.174.10.10`
 
-4.\) Set load balancer timeouts. Minimum timeouts are 1 hour \(3600 seconds\) for Creator Node requests and 1 minutes \(60 seconds\) for Discovery Provider requests. Track uploads especially for larger files can take several minutes to complete.
+4.\) 设置负载均衡器超时。 Creator 节点请求的最短超时时间为 1 小时 \(3600 秒\)，发现提供程序请求的最短超时时间为 1 分钟 \(60 秒\)。 跟踪上传，尤其是较大文件的上传可能需要几分钟才能完成。
 
-5.\) In addition to configuring your security groups to restrict access to just the web server and IPFS swarm port \(4001\), it's recommended that your server or load balancer is protected from DoS attacks. Services like Cloudfront and Cloudflare offer free or low cost services to do this. It would also be possible to use iptables to configure protection as laid out here [https://javapipe.com/blog/iptables-ddos-protection/](https://javapipe.com/blog/iptables-ddos-protection/). Please make sure proxies don't override the timeouts from Step 4.
+5.\) 除了将您的安全组配置为仅限制对 Web 服务器和 IPFS 群端口 \(4001\) 的访问之外，建议您的服务器或负载均衡器受到 DoS 攻击的保护。 Cloudfront 和 Cloudflare 等服务提供免费或低成本的服务来做到这一点。 也可以使用 iptables 来配置保护，如下所示 [](https://javapipe.com/blog/iptables-ddos-protection/)。 请确保代理不会覆盖第 4 步中的超时。
 
-## 7. Pre-registration checks
+## 7. 注册前检查
 
-Before registering a service to the dashboard we need to make sure the service is properly configured. Follow the checks below for the type of service you're configuring. Failure to verify that all of these work properly could cause user actions to fail and may lead to slashing actions.
+在向仪表板注册服务之前，我们需要确保服务配置正确。 请按照以下检查您正在配置的服务类型。 未能验证所有这些工作是否正常可能会导致用户操作失败并可能导致削减操作。
 
-The `sp-actions/` folder contains scripts that test the health of services. Run the corresponding checks for your service type below to verify your service is correctly sete up. Be sure to run `npm install` in `sp-actions/` to install all depdencies.
+`sp-actions/` 文件夹包含测试服务运行状况的脚本。 在下面为您的服务类型运行相应的检查，以验证您的服务是否已正确设置。 确保运行 `npm install` in `sp-actions/` 以安装所有依赖项。
 
-For more information about `sp-actions/` see the README in the [sp-actions/ folder](https://github.com/AudiusProject/audius-k8s-manifests/tree/master/sp-utilities)
+有关 `sp-actions/` 的更多信息，请参阅 [sp-actions/ 文件夹中的自述文件](https://github.com/AudiusProject/audius-k8s-manifests/tree/master/sp-utilities)
 
-**Creator Node**
+**创建者节点**
 
 ```text
 ➜ pwd
 /Audius/audius-k8s-manifests/sp-utilities/creator-node
 
-# entering creatorNodeEndpoint and delegatePrivateKey sends those values as env vars to the script without having to export to your terminal
-➜ creatorNodeEndpoint=https://creatornode.domain.co delegatePrivateKey=5e468bc1b395e2eb8f3c90ef897406087b0599d139f6ca0060ba85dcc0dce8dc node healthChecks.js
-Starting tests now. This may take a few minutes.
-✓ Health check passed
-✓ DB health check passed
-✓ Heartbeat duration health check passed
-! Non-heartbeat duration health check timed out at 180 seconds with error message: "Request failed with status code 504". This is not an issue.
-All checks passed!
+# 输入 creatorNodeEndpoint 和 delegatePrivateKey 将这些值作为环境变量发送到脚本，而无需导出到终端
+➜ creatorNodeEndpoint=https://creatornode .domain.co delegatePrivateKey=5e468bc1b395e2eb8f3c90ef897406087b0599d139f6ca0060ba85dcc0dce8dc node healthChecks.js
+现在开始测试。 这可能需要几分钟的时间。
+✓ 健康检查通过
+✓ 数据库健康检查通过
+✓ 心跳持续时间健康检查通过
+！ 非心跳持续时间运行状况检查在 180 秒时超时，并显示错误消息：“请求失败，状态代码 504”。 这不是问题。
+所有检查都通过了！
 ```
 
-If you see the message "Error running script" this script did not finish successfully. If you see "All checks passed!" this script finished successfully.
+如果您看到消息“错误运行脚本”，此脚本未成功完成。 如果您看到“所有检查均已通过！”该脚本成功完成。
 
-**Discovery Provider**
+**发现提供者**
 
 ```text
 ➜ discoveryProviderEndpoint=https://discoveryprovider.domain.co node healthChecks.js
-✓ Health check passed
-All checks passed!
+✓ 健康检查通过
+所有检查通过！
 ```
 
-If you see the message "Error running script" this script did not finish successfully. If you see "All checks passed!" this script finished successfully.
+如果您看到消息“错误运行脚本”，此脚本未成功完成。 如果您看到“所有检查均已通过！”该脚本成功完成。
 
-## 8. Register the service on the dashboard
+## 8. 在仪表板上注册服务
 
-Since you've completed all the steps thus far, you're about ready to register!
+到目前为止，您已经完成了所有步骤，您就可以注册了！
 
-You can register via the dashboard on [https://dashboard.audius.org](https://dashboard.audius.org/)
+您可以通过 [https://dashboard.audius.org](https://dashboard.audius.org/)上的仪表板进行注册
 
-## 9. Script to Initiate Rounds and Process Claims \(Optional\)
+## 9. 启动轮次和处理索赔的脚本\（可选\）
 
-If you would like to automatically run claim operations whenever a new round is initiated, a script is included for your convenience in the sp-utilities/claim folder. Further instructions are provided in the sp-utilities README.
+如果您想在启动新一轮时自动运行索赔操作，为了方便您在 sp-utilities/claim 文件夹中包含一个脚本。 sp-utilities 自述文件中提供了进一步的说明。
