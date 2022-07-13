@@ -1,5 +1,5 @@
 ---
-sidebar_label: Log in with Audius
+sidebar_label: Connectez-vous avec Audius
 sidebar_position: 3
 ---
 
@@ -55,7 +55,7 @@ Veuillez noter que la connexion avec Audius est en mesure de fournir une authent
 
 <br />
 
-<img src="../../static/img/oauthpopup.png" height="488" width="252" alt="Log in with Audius popup" />
+<img src="../../static/img/oauthpopup.png" height="488" width="252" alt="Connectez-vous avec la fenêtre contextuelle Audius" />
 
 _Se connecter avec Audius_
 
@@ -72,12 +72,12 @@ Le flux "Log in with Audius" ressemble à ceci :
 
 Le bloc JWT contient les informations suivantes à propos de l'utilisateur :
 
-- Unique identifier (Audius user id)
+- Identifiant unique (ID utilisateur Audius)
 - E-mail
 - Nom affiché
-- Audius handle
+- Poignée Audius
 - Si l'utilisateur est un artiste vérifié (c'est-à-dire a une coche violette)
-- Profile picture URL, if any
+- URL de la photo de profil, le cas échéant
 
 ### Démo
 
@@ -93,103 +93,103 @@ Découvrez une démo rapide du flux Oauth [ici](https://codesandbox.io/s/log-in-
 
 ## Comment mettre en œuvre la connexion à Audius avec le SDK Javascript
 
-The easiest way to add Log in with Audius to your app is to use the Javascript SDK. If you are not able to use the Javascript SDK (for example, if you are developing a mobile app), skip to "How to implement Log in with Audius manually".
+Le moyen le plus simple d'ajouter la connexion avec Audius à votre application consiste à utiliser le SDK Javascript. Si vous ne parvenez pas à utiliser le SDK Javascript (par exemple, si vous développez une application mobile), passez à "Comment mettre en œuvre manuellement la connexion avec Audius".
 
-Prerequisites:
+Conditions préalables:
 
-- [Set up and initialize the Audius SDK on your app](./sdk.md#installation)
+- [Configurer et initialiser le SDK Audius sur votre application](./sdk.md#installation)
 
-### 1. Initialize the SDK `oauth` feature
+### 1. Initialiser la fonctionnalité SDK `oauth`
 
-First, you must call `oauth.init` and provide it with your app name, a login success callback, and an optional error callback:
+Tout d'abord, vous devez appeler `oauth.init` et lui fournir le nom de votre application, un rappel de réussite de connexion et un rappel d'erreur facultatif :
 
 #### <ins>**oauth.init(loginSuccessCallback, errorCallback)**</ins>
 
-enables the Log in with Audius functionality.
+active la fonctionnalité Se connecter avec Audius.
 
-**Params**
+**Paramètres**
 
-- loginSuccessCallback `(profile: UserProfile) => void` - function to be called when the user successfully authenticates with Audius. This function will be called with the user's profile information, which is an object with the following shape:
+- loginSuccessCallback `(profil : UserProfile) => void` - fonction à appeler lorsque l'utilisateur s'authentifie avec succès auprès d'Audius. Cette fonction sera appelée avec les informations de profil de l'utilisateur, qui est un objet ayant la forme suivante :
 
   ```typescript
   // type UserProfile =
   {
-    userId: number; // unique Audius user identifier
-    email: string;
-    name: string; // user's display name
-    handle: string;
-    verified: boolean; // whether the user has the Audius "verified" checkmark
+    userId : nombre ; // identifiant unique de l'utilisateur Audius
+    e-mail : chaîne ;
+    nom : chaîne ; // poignée du nom d'affichage de l'utilisateur
+     : chaîne ;
+    vérifié : booléen ; // si l'utilisateur a la coche Audius "vérifié"
 
-    /** URLs for the user's profile picture, if any.
-     * In the vast majority of cases, three sizes will be available - 150x150, 480x480, and 1000x1000.
-    * In rare cases, only an unknown size `misc` will be available.
-    * If the user has no profile picture, this field will be empty.
+    /** URL pour la photo de profil de l'utilisateur, le cas échéant.
+     * Dans la grande majorité des cas, trois tailles seront disponibles : 150 x 150, 480 x 480 et 1 000 x 1 000.
+    * Dans de rares cas, seule une taille inconnue "misc" sera disponible.
+    * Si l'utilisateur n'a pas de photo de profil, ce champ sera vide.
     */
-    profilePicture: {"150x150": string, "480x480": string, "1000x1000": string } | { misc: string } | undefined | null
-    sub: number; // alias for userId
-    iat: string; // timestamp for when auth was performed
-  }
+    profilePicture : {"150x150": chaîne, "480x480": chaîne, "1000x1000": chaîne } | { misc: string } | non défini | null
+    sub : nombre ; // alias pour userId
+    iat : chaîne ; // horodatage du moment où l'authentification a été effectuée
+}
   ```
 
-- errorSuccessCallback _optional_ `(errorMessage: string) => void` - function to be called when an error occurs during the authentication flow. This function will be called with a string describing the error.
+- errorSuccessCallback _optionnel_ `(errorMessage : string) => void` - fonction à appeler lorsqu'une erreur se produit pendant le flux d'authentification. Cette fonction sera appelée avec une chaîne décrivant l'erreur.
 
-**Returns**: Nothing
+**Renvoie**: Rien
 
-Example:
+Exemple:
 
 ```javascript
 audiusSdk.oauth.init(
   (res) => {
-    console.log("Log in success!", res);
+    console.log("Connexion réussie!", res);
   },
   (err) => {
-    console.log("Error :(", err);
+    console.log("Erreur :(", err );
   }
 );
 ```
 
 <br />
 
-### 2. Render the Log in with Audius button
+### 2. Afficher le bouton Se connecter avec Audius
 
-You can either use the `oauth.renderButton` method or implement a login button yourself and invoke the login popup with `oauth.login`.
+Vous pouvez soit utiliser la méthode `oauth.renderButton` soit implémenter vous-même un bouton de connexion et invoquer la fenêtre contextuelle de connexion avec `oauth.login`.
 
-**Using `oauth.renderButton` (recommended)**:
+**En utilisant `oauth.renderButton` (recommandé)** :
 
-#### <ins>**oauth.renderButton(element, customizations)**</ins>
+#### <ins>**oauth.renderButton(élément, personnalisations)**</ins>
 
-replaces the element passed in the first parameter with the Log in with Audius button
+remplace l'élément passé en premier paramètre par le bouton Se connecter avec Audius
 
-**Params**
+**Paramètres**
 
-- element `HTMLElement` - HTML element to replace with the Log in with Audius button
-- customizations _optional_ `ButtonOptions` - optional object containing the customization settings for the button to be rendered. Here are the options available:
+- element `HTMLElement` - Elément HTML à remplacer par le bouton Se connecter avec Audius
+- personnalisations _en option_ `ButtonOptions` - objet facultatif contenant les paramètres de personnalisation du bouton à rendre. Voici les options disponibles :
 
   ```typescript
   // type ButtonOptions =
   {
-    // Size of the button:
-    size?: 'small' | 'medium' | 'large'
+    // Taille du bouton :
+    taille ? : 'small' | 'moyen' | 'large'
 
-    // Corner style of the button:
-    corners?: 'default' | 'pill'
+    // Style de coin du bouton :
+    coins ? : 'default' | 'pill'
 
-    // Your own text for the button; default is "Log in with Audius":
+    // Votre propre texte pour le bouton ; la valeur par défaut est "Connexion avec Audius":
     customText?: string
 
-    // Whether to disable the button's "grow" animation on hover:
+    // Si l'animation "grow" du bouton doit être désactivée au survol :
     disableHoverGrow?: boolean
 
-    // Whether the button should take up the full width of its parent element:
-    fullWidth?: boolean
-  }
+    // Si le bouton doit occuper toute la largeur de son élément parent :
+    fullWidth? : booléen
+}
   ```
 
-  Use [this playground](https://9ncjui.csb.app/) to see how these customizations affect the button appearance and determine what config works best for your app.
+  Utilisez [ce terrain de jeu](https://9ncjui.csb.app/) pour voir comment ces personnalisations affectent l'apparence du bouton et déterminer quelle configuration fonctionne le mieux pour votre application.
 
-**Returns**: Nothing
+**Renvoie**: Rien
 
-Example:
+Exemple:
 
 ```javascript
 <!-- Javascript -->
@@ -205,32 +205,32 @@ audiusSdk.oauth.renderButton(document.getElementById('audiusLogInButton'), {
 
 <br />
 
-#### _💡 **Tip**: Detect when the button has rendered and show a loader until then_:
+#### _💡 **Astuce**: Détecter quand le bouton s'est rendu et afficher un loader jusque-là_:
 
-The button may take up to a couple of seconds to load. You may want to show a loading indicator until the button has loaded for an optimal user experience.
+Le chargement du bouton peut prendre jusqu'à quelques secondes. Vous pouvez afficher un indicateur de chargement jusqu'à ce que le bouton soit chargé pour une expérience utilisateur optimale.
 
-The log in button will be rendered with an id of `audius-login-button`. You can detect when the element has been added using a MutationObserver:
+Le bouton de connexion sera rendu avec un identifiant de `audius-login-button`. Vous pouvez détecter quand l'élément a été ajouté à l'aide d'un MutationObserver :
 
-Example:
+Exemple:
 
 ```HTML
-<!-- In your HTML -->
-<!-- Surround your element that will be replaced with the Log in with Audius button with a parent, e.g.: -->
+<!-- Dans votre HTML -->
+<!-- Entourez votre élément qui sera remplacé par le bouton Se connecter avec Audius d'un parent, par exemple : -->
 <div id="parent">
   <div id="audiusLogInButton"></div>
-  <!-- You probably want a better loading indicator than this :P -->
-  <div id="loading">Loading...</div>
+  <!-- Vous Je veux un meilleur indicateur de chargement que celui-ci :P -->
+  <div id="loading">Chargement...</div>
 </div>
 
 ```
 
 ```JS
-// In your JS
+// Dans votre JS
 const observer = new MutationObserver(function(mutations_list) {
     mutations_list.forEach(function(mutation) {
         mutation.addedNodes.forEach(function(added_node) {
-            if (added_node.id == 'audius-login-button') {
-        // Login button has rendered
+            if (added_node.id == 'audius- login-button') {
+        // Le bouton de connexion a rendu
         document.querySelector('#loading').remove()
         observer.disconnect();
             }
@@ -244,19 +244,19 @@ observer.observe(document.querySelector("#parent"), { subtree: false, childList:
 
 <br />
 
-**Using your own button and `oauth.login`**:
+**En utilisant votre propre bouton et `oauth.login`**:
 
 #### <ins>**oauth.login()**</ins>
 
-opens the Log in with Audius popup, which begins the authentication flow
+ouvre la fenêtre contextuelle Se connecter avec Audius, qui lance le processus d'authentification
 
-**Params**
+**Paramètres**
 
 None
 
-**Returns**: Nothing
+**Renvoie**: Rien
 
-Example:
+Exemple:
 
 ```javascript
 <!-- Javascript -->
@@ -265,175 +265,175 @@ function logInWithAudius() {
 }
 
 <!-- HTML -->
-<button onclick="logInWithAudius()">Log in with Audius!</button>
+<button onclick="logInWithAudius()">Connectez-vous avec Audius !</button>
 ```
 
 <br />
 
-### 3. Done!
+### 3. Fait!
 
-That's it! See below for full code examples.
+C'est ça! Voir ci-dessous pour des exemples de code complet.
 
-### Addendum: A quick note on email
+### Addendum : Une note rapide sur le courrier électronique
 
-Once you know your user's Audius user id, you can retrieve their Audius information at any time using our SDK or web APIs. However, the one piece of profile information that is not available outside of the Log in with Audius response is the user's email address. If you do not store the user's email address after you receive it in the Log in with Audius success response, you can only re-retrieve the email through having the user re-complete the Log in with Audius flow.
+Une fois que vous connaissez l'ID utilisateur Audius de votre utilisateur, vous pouvez récupérer ses informations Audius à tout moment à l'aide de notre SDK ou de nos API Web. Cependant, la seule information de profil qui n'est pas disponible en dehors de la réponse Se connecter avec Audius est l'adresse e-mail de l'utilisateur. Si vous ne stockez pas l'adresse e-mail de l'utilisateur après l'avoir reçue dans la réponse Connexion réussie avec Audius, vous ne pouvez récupérer l'e-mail qu'en demandant à l'utilisateur de compléter à nouveau le flux Se connecter avec Audius.
 
-### Full code example using React and npm package
+### Exemple de code complet utilisant React et le package npm
 
-[View sandbox here](https://codesandbox.io/s/log-in-with-audius-demo-j2jx6f)
+[Voir le bac à sable ici](https://codesandbox.io/s/log-in-with-audius-demo-j2jx6f)
 
-### Full code example using vanilla JS and SDK dist
+### Exemple de code complet utilisant vanilla JS et SDK dist
 
-[View sandbox here](https://codesandbox.io/s/log-in-with-audius-demo-vanilla-js-xkogl3?file=/index.html)
+[Voir le bac à sable ici](https://codesandbox.io/s/log-in-with-audius-demo-vanilla-js-xkogl3?file=/index.html)
 
 <br />
 <br />
 
-## How to implement Log in with Audius manually
+## Comment implémenter manuellement la connexion avec Audius
 
-If you are not able to use the Audius Javascript SDK, you may implement Log in with Audius manually by following the steps below.
+Si vous n'êtes pas en mesure d'utiliser le SDK Audius Javascript, vous pouvez implémenter la connexion avec Audius manuellement en suivant les étapes ci-dessous.
 
-### 1. Open the Log in with Audius prompt page
+### 1. Ouvrez la page d'invite Se connecter avec Audius
 
-Create a "Log in with Audius" button on your app. If using HTML (or HTML-like markup) and CSS, you may use [this playground](https://j2jx6f.csb.app/) to easily customize and generate code for an Audius-branded login button.
+Créez un bouton "Connexion avec Audius" sur votre application. Si vous utilisez HTML (ou un balisage de type HTML) et CSS, vous pouvez utiliser [ce terrain de jeu](https://j2jx6f.csb.app/) pour personnaliser et générer facilement du code pour un bouton de connexion de marque Audius.
 
-Clicking your log in button should begin the authentication flow by directing the user to the Log in with Audius prompt page.
+Le fait de cliquer sur votre bouton de connexion devrait lancer le flux d'authentification en dirigeant l'utilisateur vers la page d'invite Se connecter avec Audius.
 
-On a native app, the log in button should open a secure web browser within the app (for instance ASWebAuthenticationSession or SFSafariViewController on iOS apps, and “Custom Tabs” on Android mobile apps) that loads the Audius login page. A web app, meanwhile, should open the Audius login page in a popup or simply redirect to it.
+Sur une application native, le bouton de connexion doit ouvrir un navigateur Web sécurisé dans l'application (par exemple ASWebAuthenticationSession ou SFSafariViewController sur les applications iOS, et "Onglets personnalisés" sur les applications mobiles Android) qui charge la page de connexion Audius. Une application Web, quant à elle, devrait ouvrir la page de connexion Audius dans une fenêtre contextuelle ou simplement rediriger vers celle-ci.
 
-The Log in with Audius prompt page is located at the following URL:
+La page d'invite Se connecter avec Audius se trouve à l'URL suivante :
 
 `https://audius.co/oauth/auth?scope=read&app_name={YourAppName}&redirect_uri={YourRedirectURI}&origin={YourAppOrigin}&state={YourStateValue}&response_mode={query|fragment}`
 
-You must open this page with the required URL parameters, described below.
+Vous devez ouvrir cette page avec les paramètres d'URL requis, décrits ci-dessous.
 
-**Params**
+**Paramètres**
 
-- scope `"read"` - the scope of the authentication request. Only `"read"` is available (i.e. don't change this).
-- app_name `string` - the name of your app. This will be displayed to the user in the log in prompt page.
-- redirect_uri `string` - the location that the Audius login page should redirect to once the user successfully authenticates. Custom URL schemes are allowed and supported. You can use the special value `postmessage` here if you would like the login page to send the response back to its opener using `window.postMessage` instead of using a redirect. Otherwise, the following validation rules apply:
+- scope `"read"` - la portée de la demande d'authentification. Seul `"lire"` est disponible (c'est-à-dire ne le changez pas).
+- app_name `chaîne` - le nom de votre application. Cela sera affiché à l'utilisateur dans la page d'invite de connexion.
+- redirect_uri `string` - l'emplacement vers lequel la page de connexion Audius doit être redirigée une fois que l'utilisateur s'est authentifié avec succès. Les schémas d'URL personnalisés sont autorisés et pris en charge. Vous pouvez utiliser la valeur spéciale `postmessage` ici si vous souhaitez que la page de connexion renvoie la réponse à son ouvreur en utilisant `window.postMessage` au lieu d'utiliser une redirection. Sinon, les règles de validation suivantes s'appliquent :
 
-  - Hosts cannot be raw IP addresses UNLESS they are localhost IP addresses
-  - Cannot contain the fragment component (`#`)
-  - Cannot contain the `userinfo` component
-  - Cannot contain a path traversal (contain `/..` or `\..`)
-  - Must contain valid characters and URI format
+  - Les hôtes ne peuvent pas être des adresses IP brutes SAUF si ce sont des adresses IP d'hôte local
+  - Ne peut pas contenir le composant fragment (`#`)
+  - Ne peut pas contenir le composant `userinfo`
+  - Ne peut pas contenir de traversée de chemin (contient `/..` ou `\..`)
+  - Doit contenir des caractères et un format d'URI valides
 
-- origin _optional_ `string` only applicable and required if `redirect_uri` is set to `postmessage`. If so, this value should be set to the [origin](https://developer.mozilla.org/en-US/docs/Web/API/URL/origin) of the window that opened the Log in with Audius popup.
-- state _optional but highly recommended_ - `string` any string. When the user is redirected back to your app, the exact `state` value you provide here will be included in the redirect (in the `state` URI fragment parameter). **This field should be leveraged as a CSRF protection mechanism** (read more [here](https://auth0.com/docs/secure/attack-protection/state-parameters) or [here](https://security.stackexchange.com/questions/20187/oauth2-cross-site-request-forgery-and-state-parameter)), and may also be used as a way to persist any useful data for your app between where the `state` value is generated and where the redirect goes.
-- `response_mode` _optional, not recommended when possible_ - `"fragment" | "query"` specifies whether the auth flow response parameters will be encoded in the query string or the fragment component of the redirect_uri when redirecting back to your app. Default behavior is equivalent to "fragment". We recommend NOT changing this if possible.
+- origin _facultatif_ `chaîne` uniquement applicable et requis si `redirect_uri` est défini sur `postmessage`. Si tel est le cas, cette valeur doit être définie sur l'origine [](https://developer.mozilla.org/en-US/docs/Web/API/URL/origin) de la fenêtre qui a ouvert la fenêtre contextuelle Se connecter avec Audius.
+- état _facultatif mais fortement recommandé_ - `chaîne` n'importe quelle chaîne. Lorsque l'utilisateur est redirigé vers votre application, la valeur exacte `état` que vous fournissez ici sera incluse dans la redirection (dans le paramètre de fragment URI `état`). **Ce champ doit être exploité comme un mécanisme de protection CSRF** (en savoir plus [ici](https://auth0.com/docs/secure/attack-protection/state-parameters) ou [ici](https://security.stackexchange.com/questions/20187/oauth2-cross-site-request-forgery-and-state-parameter)), et peut également être utilisé comme un moyen de conserver toutes les données utiles pour votre application entre l'endroit où la valeur `état` est générée et où va la redirection.
+- `response_mode` _facultatif, déconseillé si possible_ - `"fragment" | "query"` spécifie si les paramètres de réponse du flux d'authentification seront encodés dans la chaîne de requête ou dans le composant de fragment de redirect_uri lors de la redirection vers votre application. Le comportement par défaut est équivalent à "fragmenter". Nous vous recommandons de NE PAS changer cela si possible.
 
-**Example**
+**Exemple**
 
 ```HTML
-<a href="https://audius.co/oauth/auth?scope=read&app_name=My%20Demo%20App&redirect_uri=https://mydemoapp.com/oauth/receive-token&state=a4e0761e-8c21-4e20-819d-5a4daeab4ea9">Click me to log in with Audius!</a>
+<a href="https://audius.co/oauth/auth?scope=read&app_name=My%20Demo%20App&redirect_uri=https://mydemoapp.com/oauth/receive-token&state=a4e0761e-8c21-4e20-819d-5a4daeab4ea9">Cliquez sur moi pour vous connecter avec Audius !</a>
 ```
 
-### 1.5 Remember to handle early exiting (i.e. failure) of the authentication flow
+### 1.5 N'oubliez pas de gérer la sortie précoce (c'est-à-dire l'échec) du flux d'authentification
 
-If the user exits the authentication flow before completing it--e.g. by closing the window--your app should detect this and have the UI respond accordingly.
+Si l'utilisateur quitte le flux d'authentification avant de l'avoir terminé, par exemple en fermant la fenêtre, votre application doit le détecter et faire en sorte que l'interface utilisateur réponde en conséquence.
 
 <br />
 
-### 2. Process and verify the response
+### 2. Traiter et vérifier la réponse
 
-#### **If you used a redirect URI**:
+#### **Si vous avez utilisé un URI de redirection**:
 
-When the user has successfully authenticated, the Log in with Audius page will redirect to the redirect URI that you specified, **with 1) the JWT containing the user profile, and 2) the original state value you provided (if any) included in the URI fragment** (or query string, if `response_mode` was set to `query`). To illustrate, going off the example above where we opened the login page with the following URL: `https://audius.co/oauth/auth?scope=read&app_name=My%20Demo%20App&redirect_uri=https://mydemoapp.com/oauth/receive-token&state=a4e0761e-8c21-4e20-819d-5a4daeab4ea9`
+Lorsque l'utilisateur s'est authentifié avec succès, la page Se connecter avec Audius sera redirigée vers l'URI de redirection que vous avez spécifié, **avec 1) le JWT contenant le profil de l'utilisateur et 2) la valeur d'état d'origine que vous avez fournie (le cas échéant) incluse dans le Fragment d'URI** (ou chaîne de requête, si `response_mode` a été défini sur `query`). Pour illustrer, en partant de l'exemple ci-dessus où nous avons ouvert la page de connexion avec l'URL suivante : `https://audius.co/oauth/auth?scope=read&app_name=My%20Demo%20App&redirect_uri=https:/ /mydemoapp.com/oauth/receive-token&état=a4e0761e-8c21-4e20-819d-5a4daeab4ea9`
 
-...when the user successsfully authenticates, the login page would redirect to...: `https://mydemoapp.com/oauth/receive-token#state=a4e0761e-8c21-4e20-819d-5a4daeab4ea9&token={JWT}` where `{JWT}` is a [JSON web token](https://jwt.io/introduction) containing the user's encoded profile information and a signature.
+... lorsque l'utilisateur s'authentifie avec succès, la page de connexion redirige vers... : `https://mydemoapp.com/oauth/receive-token#state=a4e0761e-8c21-4e20-819d-5a4daeab4ea9&token={JWT}` où `{JWT}` est un jeton Web [JSON](https://jwt.io/introduction) contenant les informations de profil codées de l'utilisateur et une signature.
 
-> If you specified `response_mode=query` when opening the login page, the login page would instead redirect to...:
+> Si vous avez spécifié `response_mode=query` lors de l'ouverture de la page de connexion, la page de connexion serait plutôt redirigée vers... :
 > 
 > `https://mydemoapp.com/oauth/receive-token?state=a4e0761e-8c21-4e20-819d-5a4daeab4ea9&token={JWT}`
 
-See "**Handling the response**" below for what to do next.
+Voir "**Traitement de la réponse**" ci-dessous pour savoir quoi faire ensuite.
 
 <br />
 
-#### **If you used `redirectURI=postmessage`**:
+#### **Si vous avez utilisé `redirectURI=postmessage`**:
 
-When the user has successfully authenticated, the Log in with Audius page will send a message via `window.postMessage` to the window that opened it. The message will contain a JWT containing the user profile as well as whatever `state` value you originally specified in the corresponding URL param, if any. For instance, if your app opened the login page using the following URL: `https://audius.co/oauth/auth?scope=read&app_name=My%20Demo%20App&redirect_uri=https://mydemoapp.com/oauth/receive-token&state=a4e0761e-8c21-4e20-819d-5a4daeab4ea9`
+Lorsque l'utilisateur s'est authentifié avec succès, la page Se connecter avec Audius enverra un message via `window.postMessage` à la fenêtre qui l'a ouverte. Le message contiendra un JWT contenant le profil utilisateur ainsi que la valeur `état` que vous avez initialement spécifiée dans le paramètre d'URL correspondant, le cas échéant. Par exemple, si votre application a ouvert la page de connexion à l'aide de l'URL suivante : `https://audius.co/oauth/auth?scope=read&app_name=My%20Demo%20App&redirect_uri=https://mydemoapp.com/ oauth/receive-token&état=a4e0761e-8c21-4e20-819d-5a4daeab4ea9`
 
-... the message would look like this:
+... le message ressemblerait à ceci :
 
 ```
 {
-  token: <JWT>,
-  state: 'a4e0761e-8c21-4e20-819d-5a4daeab4ea9'
+  jeton : <JWT>,
+  état : 'a4e0761e-8c21-4e20-819d-5a4daeab4ea9'
 }
 ```
 
-where `<JWT>` is a [JSON web token](https://jwt.io/introduction) containing the user's encoded profile information and a signature.
+où `<JWT>` est un jeton Web [JSON](https://jwt.io/introduction) contenant les informations de profil codées de l'utilisateur et une signature.
 
-Quick reminder - make sure that your `postMessage` event listener validates that the origin of the incoming event is `https://audius.co`!
+Rappel rapide - assurez-vous que votre écouteur d'événement `postMessage` valide que l'origine de l'événement entrant est `https://audius.co`!
 
 <br />
 
-#### **Handling the response**
+#### **Gérer la réponse**
 
-Extract the JWT (`token`) from the URI fragment or query string (if you used a redirect) or the event message (if you used `postmessage`).
+Extrayez le JWT (`token`) du fragment d'URI ou de la chaîne de requête (si vous avez utilisé une redirection) ou du message d'événement (si vous avez utilisé `postmessage`).
 
-Once you have the token, you must send it to the following Audius API endpoint in order to verify that a) the signature was signed by the Audius user who completed the authentication, and b) the content of the token hasn't been tampered with. Upon verifying the validity of the JWT, the endpoint will return the authenticated user's decoded profile information.
+Une fois que vous avez le jeton, vous devez l'envoyer au point de terminaison suivant de l'API Audius afin de vérifier que a) la signature a été signée par l'utilisateur Audius qui a terminé l'authentification, et b) le contenu du jeton n'a pas été falsifié . Lors de la vérification de la validité du JWT, le point de terminaison renverra les informations de profil décodées de l'utilisateur authentifié.
 
 <ins>GET `/v1/users/verify_token?token=[JWT]`</ins>
 
-**Params**
+**Paramètres**
 
-- token `string` - the JWT from the authentication flow that you would like to verify
+- jeton `chaîne` - le JWT du flux d'authentification que vous souhaitez vérifier
 
-**Sending the request**
+**Envoi de la demande**
 
 Pour utiliser l'API, vous devez d'abord sélectionner un point de terminaison de l'API dans la liste des points de terminaison renvoyés par :
 
-`GET https://api.audius.co`
+`OBTENIR https://api.audius.co`
 
-Une fois que vous avez sélectionné un hôte, toutes les demandes d'API peuvent lui être envoyées directement. For instance, if you picked this host: `https://audius-dp.singapore.creatorseed.com`, you would issue the verify token request to `https://audius-dp.singapore.creatorseed.com/v1/users/verify_token?token=<JWT>`, where `<JWT>` is replaced with the JWT you retrieved in the auth flow.
+Une fois que vous avez sélectionné un hôte, toutes les demandes d'API peuvent lui être envoyées directement. Par exemple, si vous avez choisi cet hôte : `https://audius-dp.singapore.creatorseed.com`, vous enverriez la demande de jeton de vérification à `https://audius-dp.singapore.creatorseed.com/v1 /users/verify_token?token=<JWT>`, où `<JWT>` est remplacé par le JWT que vous avez récupéré dans le flux d'authentification.
 
 Nous vous recommandons de sélectionner un hôte chaque fois que votre application démarre, car la disponibilité peut changer au fil du temps.
 
-**Success response**
+**Réponse réussie**
 
-- Code: 200 OK
-- Content: The decoded JWT payload, which contains the user's profile information:
+- Code : 200OK
+- Contenu : la charge utile JWT décodée, qui contient les informations de profil de l'utilisateur :
 
 ```typescript
 {
-  userId: number, // unique Audius user identifier
-  email: string,
-  name: string, // user's display name
-  handle: string,
-  verified: boolean, // whether the user has the Audius "verified" checkmark
+  userId : nombre, // identifiant unique de l'utilisateur Audius
+  e-mail : chaîne,
+  nom : chaîne, // nom d'affichage de l'utilisateur
+   handle : chaîne,
+  vérifié : booléen, // si l'utilisateur a la coche Audius « vérifié »
 
-  /** URLs for the user's profile picture, if any.
-   * In the vast majority of cases, three sizes will be available - 150x150, 480x480, and 1000x1000.
-  * In rare cases, only an unknown size `misc` will be available.
-  * If the user has no profile picture, this field will be empty.
+  /** URL de la photo de profil de l'utilisateur, le cas échéant.
+   * Dans la grande majorité des cas, trois tailles seront disponibles : 150 x 150, 480 x 480 et 1 000 x 1 000.
+  * Dans de rares cas, seule une taille inconnue "misc" sera disponible.
+  * Si l'utilisateur n'a pas de photo de profil, ce champ sera vide.
   */
-  profilePicture: {"150x150": string, "480x480": string, "1000x1000": string } | { misc: string } | undefined | null
-  sub: number, // alias for userId
-  iat: string, // timestamp for when auth was performed
+  profilePicture : {"150x150": chaîne, "480x480": chaîne, "1000x1000": chaîne } | { misc: string } | non défini | null
+  sub : nombre, // alias pour userId
+  iat : chaîne, // horodatage du moment où l'authentification a été effectuée
 }
 ```
 
-**Error responses**
+**Réponses d'erreur**
 
-<ins>Invalid signature</ins>:
+<ins>Signature invalide</ins>:
 
-- Code: `404` Not Found
-- Content: Error message describing the issue that occurred, e.g. "The JWT signature is invalid - wallet could not be recovered."
+- Code : `404` Introuvable
+- Contenu : message d'erreur décrivant le problème qui s'est produit, par exemple "La signature JWT n'est pas valide - le portefeuille n'a pas pu être récupéré."
 
-<ins>Problem with `token` input</ins>:
+<ins>Problème avec l'entrée `token`</ins> :
 
-- Code: `400` Bad Request
-- Content: Error message, e.g. "the JWT signature could not be decoded."
+- Code : `400` Mauvaise requête
+- Contenu : message d'erreur, par exemple "la signature JWT n'a pas pu être décodée".
 
 <br />
 
-### 3. Done!
+### 3. Fait!
 
-Once you've verified the JWT, the authentication flow is complete and you now have your user's Audius profile information.
+Une fois que vous avez vérifié le JWT, le flux d'authentification est terminé et vous disposez maintenant des informations de profil Audius de votre utilisateur.
 
-### Addendum: A quick note on email
+### Addendum : Une note rapide sur le courrier électronique
 
-Once you know your user's Audius user id, you can retrieve their Audius information at any time using our SDK or web APIs. However, the one piece of profile information that is not available outside of the Log in with Audius response is the user's email address. If you do not store the user's email address after you receive it in the Log in with Audius success response, you can only re-retrieve the email through having the user re-complete the Log in with Audius flow.
+Une fois que vous connaissez l'ID utilisateur Audius de votre utilisateur, vous pouvez récupérer ses informations Audius à tout moment à l'aide de notre SDK ou de nos API Web. Cependant, la seule information de profil qui n'est pas disponible en dehors de la réponse Se connecter avec Audius est l'adresse e-mail de l'utilisateur. Si vous ne stockez pas l'adresse e-mail de l'utilisateur après l'avoir reçue dans la réponse Connexion réussie avec Audius, vous ne pouvez récupérer l'e-mail qu'en demandant à l'utilisateur de compléter à nouveau le flux Se connecter avec Audius.
