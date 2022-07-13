@@ -70,5 +70,9 @@
   "sidebar.sidebar.category.Content Node": {
     "message": "Content Node",
     "description": "The label for category Content Node in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Plugins": {
+    "message": "Plugins",
+    "description": "The label for category Plugins in sidebar sidebar"
   }
 }
