@@ -1,10 +1,10 @@
 {
   "🗺 Overview": {
-    "message": "🗺 Overview",
+    "message": "🗺 개요",
     "description": "overview"
   },
   "Get an overview of what Audius is, how it works, and how you can contribute": {
-    "message": "Get an overview of what Audius is, how it works, and how you can contribute",
+    "message": "Audius가 무엇인지, 어떻게 작동하는지, 어떻게 기여할 수 있는지에 대한 개요를 확인하세요.",
     "description": "get-an-overview"
   },
   "🎶 API": {
@@ -12,7 +12,7 @@
     "description": "api-reference"
   },
   "Query, stream, and search Arists, Tracks, and Playlists from your own app, game, or project": {
-    "message": "Query, stream, and search Arists, Tracks, and Playlists from your own app, game, or project",
+    "message": "자신의 앱, 게임 또는 프로젝트에서 아티스트, 트랙 및 재생 목록을 쿼리, 스트리밍 및 검색합니다.",
     "description": "rest-api"
   },
   "🎧 $AUDIO": {
@@ -20,250 +20,250 @@
     "description": "audio"
   },
   "Learn about the $AUDIO Token and how it keeps the network secure & operational": {
-    "message": "Learn about the $AUDIO Token and how it keeps the network secure & operational",
+    "message": "$AUDIO 토큰과 네트워크 보안 및 운영 유지 방법에 대해 알아보십시오.",
     "description": "learn-about-the-token"
   },
   "🔓 Staking The Network": {
-    "message": "🔓 Staking The Network",
+    "message": "🔓 네트워크 스테이킹",
     "description": "staking"
   },
   "Stake & delegate the $AUDIO token, earn rewards, and participate in Governance": {
-    "message": "Stake & delegate the $AUDIO token, earn rewards, and participate in Governance",
+    "message": "$AUDIO 토큰을 스테이킹 및 위임하고, 보상을 획득하고, 거버넌스에 참여하십시오.",
     "description": "staking-and-delegating"
   },
   "🛠 Run A Node": {
-    "message": "🛠 Run A Node",
+    "message": "🛠 노드 실행",
     "description": "run-validator"
   },
   "Get up and running and serve traffic for the Audius network": {
-    "message": "Get up and running and serve traffic for the Audius network",
+    "message": "Audius 네트워크의 시작 및 실행 및 트래픽 제공",
     "description": "serve-traffic"
   },
   "⚖️ Governance": {
-    "message": "⚖️ Governance",
+    "message": "⚖️ 거버넌스",
     "description": "governance"
   },
   "Voice your vote. Learn how on-chain governance works and how to get involved": {
-    "message": "Voice your vote. Learn how on-chain governance works and how to get involved"
+    "message": "투표를 하십시오. 온체인 거버넌스의 작동 방식과 참여 방법 알아보기"
   },
   "theme.NotFound.title": {
-    "message": "Page Not Found",
+    "message": "페이지를 찾을 수 없음",
     "description": "The title of the 404 page"
   },
   "theme.NotFound.p1": {
-    "message": "We could not find what you were looking for.",
+    "message": "당신이 찾고 있는 것을 찾을 수 없습니다.",
     "description": "The first paragraph of the 404 page"
   },
   "theme.NotFound.p2": {
-    "message": "Please contact the owner of the site that linked you to the original URL and let them know their link is broken.",
+    "message": "귀하를 원래 URL에 연결한 사이트의 소유자에게 연락하여 링크가 손상되었음을 알리십시오.",
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Close",
+    "message": "닫다",
     "description": "The ARIA label for close button of announcement bar"
   },
   "theme.blog.archive.title": {
-    "message": "Archive",
+    "message": "보관소",
     "description": "The page & hero title of the blog archive page"
   },
   "theme.blog.archive.description": {
-    "message": "Archive",
+    "message": "보관소",
     "description": "The page & hero description of the blog archive page"
   },
   "theme.blog.paginator.navAriaLabel": {
-    "message": "Blog list page navigation",
+    "message": "블로그 목록 페이지 탐색",
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
-    "message": "Newer Entries",
+    "message": "최신 항목",
     "description": "The label used to navigate to the newer blog posts page (previous page)"
   },
   "theme.blog.paginator.olderEntries": {
-    "message": "Older Entries",
+    "message": "이전 항목",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
   "theme.blog.post.readingTime.plurals": {
-    "message": "One min read|{readingTime} min read",
+    "message": "1분 읽기|{readingTime} 분 읽기",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.post.readMore": {
-    "message": "Read More",
+    "message": "더 읽어보기",
     "description": "The label used in blog post item excerpts to link to full blog posts"
   },
   "theme.blog.sidebar.navAriaLabel": {
-    "message": "Blog recent posts navigation",
+    "message": "블로그 최근 게시물 탐색",
     "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.blog.post.plurals": {
-    "message": "One post|{count} posts",
+    "message": "하나의 게시물| 게시물{count} 개",
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.tagTitle": {
-    "message": "{nPosts} tagged with \"{tagName}\"",
+    "message": "{nPosts} 태그 \"{tagName}\"",
     "description": "The title of the page for a blog tag"
   },
   "theme.tags.tagsPageLink": {
-    "message": "View All Tags",
+    "message": "모든 태그 보기",
     "description": "The label of the link targeting the tag list page"
   },
   "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "Copy code to clipboard",
+    "message": "클립보드에 코드 복사",
     "description": "The ARIA label for copy code blocks button"
   },
   "theme.CodeBlock.copied": {
-    "message": "Copied",
+    "message": "복사됨",
     "description": "The copied button label on code blocks"
   },
   "theme.CodeBlock.copy": {
-    "message": "Copy",
+    "message": "복사",
     "description": "The copy button label on code blocks"
   },
   "theme.blog.post.paginator.navAriaLabel": {
-    "message": "Blog post page navigation",
+    "message": "블로그 게시물 페이지 탐색",
     "description": "The ARIA label for the blog posts pagination"
   },
   "theme.blog.post.paginator.newerPost": {
-    "message": "Newer Post",
+    "message": "최신 게시물",
     "description": "The blog post button label to navigate to the newer/previous post"
   },
   "theme.blog.post.paginator.olderPost": {
-    "message": "Older Post",
+    "message": "이전 게시물",
     "description": "The blog post button label to navigate to the older/next post"
   },
   "theme.docs.sidebar.expandButtonTitle": {
-    "message": "Expand sidebar",
+    "message": "사이드바 펼치기",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonAriaLabel": {
-    "message": "Expand sidebar",
+    "message": "사이드바 펼치기",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.docs.paginator.navAriaLabel": {
-    "message": "Docs pages navigation",
+    "message": "문서 페이지 탐색",
     "description": "The ARIA label for the docs pagination"
   },
   "theme.docs.paginator.previous": {
-    "message": "Previous",
+    "message": "이전의",
     "description": "The label used to navigate to the previous doc"
   },
   "theme.docs.paginator.next": {
-    "message": "Next",
+    "message": "다음",
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "Collapse sidebar",
+    "message": "사이드바 접기",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "Collapse sidebar",
+    "message": "사이드바 접기",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
-    "message": "This is unreleased documentation for {siteTitle} {versionLabel} version.",
+    "message": "이것은 {siteTitle} {versionLabel} 버전에 대한 미공개 문서입니다.",
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
   },
   "theme.docs.versions.unmaintainedVersionLabel": {
-    "message": "This is documentation for {siteTitle} {versionLabel}, which is no longer actively maintained.",
+    "message": "이것은 더 이상 적극적으로 유지 관리되지 않는 {siteTitle} {versionLabel}에 대한 문서입니다.",
     "description": "The label used to tell the user that he's browsing an unmaintained doc version"
   },
   "theme.docs.versions.latestVersionSuggestionLabel": {
-    "message": "For up-to-date documentation, see the {latestVersionLink} ({versionLabel}).",
+    "message": "최신 문서는 {latestVersionLink} ({versionLabel})을 참조하십시오.",
     "description": "The label used to tell the user to check the latest version"
   },
   "theme.docs.versions.latestVersionLinkLabel": {
-    "message": "latest version",
+    "message": "최신 버전",
     "description": "The label used for the latest version suggestion link label"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
-    "message": "One doc tagged|{count} docs tagged",
+    "message": "태그가 지정된 문서 1개| 태그된 문서{count} 개",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.tagDocListPageTitle": {
-    "message": "{nDocsTagged} with \"{tagName}\"",
+    "message": "\"{tagName}\"이 있는 {nDocsTagged}",
     "description": "The title of the page for a docs tag"
   },
   "theme.common.editThisPage": {
-    "message": "Edit this page",
+    "message": "이 페이지 수정",
     "description": "The link label to edit the current page"
   },
   "theme.common.headingLinkTitle": {
-    "message": "Direct link to heading",
+    "message": "제목 바로가기",
     "description": "Title for link to heading"
   },
   "theme.lastUpdated.atDate": {
-    "message": " on {date}",
+    "message": " {date}에",
     "description": "The words used to describe on which date a page has been last updated"
   },
   "theme.lastUpdated.byUser": {
-    "message": " by {user}",
+    "message": " {user}으로",
     "description": "The words used to describe by who the page has been last updated"
   },
   "theme.lastUpdated.lastUpdatedAtBy": {
-    "message": "Last updated{atDate}{byUser}",
+    "message": "마지막 업데이트{atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
   "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
-    "message": "← Back to main menu",
+    "message": "← 메인 메뉴로 돌아가기",
     "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
   },
   "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "Versions",
+    "message": "버전",
     "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.common.skipToMainContent": {
-    "message": "Skip to main content",
+    "message": "주요 콘텐츠로 건너뛰기",
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
-    "message": "On this page",
+    "message": "이 페이지에서",
     "description": "The label used by the button on the collapsible TOC component"
   },
   "theme.tags.tagsListLabel": {
-    "message": "Tags:",
+    "message": "태그:",
     "description": "The label alongside a tag list"
   },
   "theme.SearchPage.documentsFound.plurals": {
-    "message": "One document found|{count} documents found",
+    "message": "문서 1개 발견|{count} 개의 문서를 찾았습니다.",
     "description": "Pluralized label for \"{count} documents found\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.SearchPage.existingResultsTitle": {
-    "message": "Search results for \"{query}\"",
+    "message": "\"{query}\"에 대한 검색 결과",
     "description": "The search page title for non-empty query"
   },
   "theme.SearchPage.emptyResultsTitle": {
-    "message": "Search the documentation",
+    "message": "문서 검색",
     "description": "The search page title for empty query"
   },
   "theme.SearchPage.inputPlaceholder": {
-    "message": "Type your search here",
+    "message": "여기에 검색어를 입력하세요",
     "description": "The placeholder for search page input"
   },
   "theme.SearchPage.inputLabel": {
-    "message": "Search",
+    "message": "검색",
     "description": "The ARIA label for search page input"
   },
   "theme.SearchPage.algoliaLabel": {
-    "message": "Search by Algolia",
+    "message": "Algolia로 검색",
     "description": "The ARIA label for Algolia mention"
   },
   "theme.SearchPage.noResultsText": {
-    "message": "No results were found",
+    "message": "검색된 결과가 없습니다",
     "description": "The paragraph for empty search result"
   },
   "theme.SearchPage.fetchingNewResults": {
-    "message": "Fetching new results...",
+    "message": "새 결과를 가져오는 중...",
     "description": "The paragraph for fetching new search results"
   },
   "theme.SearchBar.label": {
-    "message": "Search",
+    "message": "검색",
     "description": "The ARIA label and placeholder for search button"
   },
   "theme.tags.tagsPageTitle": {
-    "message": "Tags",
+    "message": "태그",
     "description": "The title of the tag list page"
   },
   "Query, stream, and search Artists, Tracks, and Playlists from your own app, game, or project": {
-    "message": "Query, stream, and search Artists, Tracks, and Playlists from your own app, game, or project",
+    "message": "자신의 앱, 게임 또는 프로젝트에서 아티스트, 트랙 및 재생 목록을 쿼리, 스트리밍 및 검색합니다.",
     "description": "rest-api"
   },
   "🧳 SDK": {
@@ -271,15 +271,15 @@
     "description": "sdk-reference"
   },
   "Easily build upon and interact with the Audius network": {
-    "message": "Easily build upon and interact with the Audius network",
+    "message": "Audius 네트워크를 기반으로 쉽게 구축하고 상호 작용",
     "description": "sdk"
   },
   "🔑 Log in with Audius": {
-    "message": "🔑 Log in with Audius",
+    "message": "🔑 Audius로 로그인",
     "description": "oauth-reference"
   },
   "Authenticate users using their Audius profile": {
-    "message": "Authenticate users using their Audius profile",
+    "message": "Audius 프로필을 사용하여 사용자 인증",
     "description": "oauth"
   }
 }
