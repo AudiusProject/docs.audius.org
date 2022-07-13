@@ -1,21 +1,21 @@
 ---
-sidebar_label: Introduction
+sidebar_label: 소개
 sidebar_position: 1
 ---
 
-# Introduction
+# 소개
 
-This section describes how to run an Audius node.
+이 섹션에서는 Audius 노드를 실행하는 방법을 설명합니다.
 
-The Audius protocol is powered by two off-chain services, the Discovery Node and the Content Node.
+Audius 프로토콜은 Discovery Node와 Content Node의 두 가지 오프체인 서비스에 의해 구동됩니다.
 
-**Discovery Node**
+**디스커버리 노드**
 
-* Indexes blockchains used by the Audius protocol \(Main-net Ethereum, POA, and Solana\)
-* Serves API traffic
-* Tracks usage metrics
+* Audius 프로토콜 \(Main-net Ethereum, POA 및 Solana\)에서 사용하는 블록체인을 인덱싱합니다.
+* API 트래픽 제공
+* 사용 메트릭 추적
 
-**Content Node**
+**콘텐츠 노드**
 
-* Hosts audio and image content
-* Syncs content across nodes to ensure data is consistent and highly available \(using IPFS and the Audius Storage Protocol under the hood\)
+* 오디오 및 이미지 콘텐츠 호스팅
+* 노드 간에 콘텐츠를 동기화하여 데이터의 일관성과 고가용성을 보장합니다. \(IPFS 및 Audius Storage Protocol을 사용하여\)
