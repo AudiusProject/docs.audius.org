@@ -1,128 +1,128 @@
 ---
-sidebar_label: Audius SDK
+sidebar_label: 音频 SDK
 sidebar_position: 3
 ---
 
 # Audius Javascript SDK
 
-## Table of contents
-- [Overview](#overview)
-- [Installation](#installation)
-  - [In the browser/Vanilla JS](#in-the-browservanilla-js)
-  - [In Node.js](#in-nodejs)
-  - [Important: include Web3.js](#important-include-web3js)
-- [Initialization](#initialization)
-  - [In the browser/Vanilla JS](#in-the-browservanilla-js-1)
-  - [In Node.js](#in-nodejs-1)
+## 目录
+- [概述](#overview)
+- [安装](#installation)
+  - [在浏览器/Vanilla JS](#in-the-browservanilla-js)
+  - [在 Node.js 中](#in-nodejs)
+  - [重要：包括 Web3.js](#important-include-web3js)
+- [初始化](#initialization)
+  - [在浏览器/Vanilla JS](#in-the-browservanilla-js-1)
+  - [在 Node.js 中](#in-nodejs-1)
 
-## Overview
+## 概述
 
-The Audius SDK allows you to easily build upon and interact with the Audius network. Currently, we only have a Typescript/Javascript SDK.
+Audius SDK 可让您轻松构建 Audius 网络并与之交互。 目前，我们只有一个 Typescript/Javascript SDK。
 
-We're actively working on building out more SDK features and functionality - stay tuned!
+我们正在积极构建更多 SDK 特性和功能 - 请继续关注！
 
 <br />
 
-## Installation
+## 安装
 
-### In the browser/Vanilla JS
+### 在浏览器/Vanilla JS
 
-To use the Audius SDK in the browser, simply add the following script tag to your HTML pages:
+要在浏览器中使用 Audius SDK，只需将以下脚本标签添加到您的 HTML 页面：
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@audius/sdk@latest/dist/sdk.min.js"></script>
 ```
 
-The Audius SDK will then be assigned to `window.audiusSdk`.
+然后将 Audius SDK 分配给 `window.audiusSdk`。
 
-### In Node.js
+### 在 Node.js 中
 
-Install the SDK package using your preferred JS package manager.
+使用您喜欢的 JS 包管理器安装 SDK 包。
 
-Example:
+例子：
 
 ```bash
 npm install @audius/sdk
 ```
 
-### Important: include Web3.js
+### 重要：包括 Web3.js
 
-In a browser environment, you must install [web3.js](https://github.com/ChainSafe/web3.js) separately and ensure that it is present on the window object at `window.Web3`.
+在浏览器环境中，您必须单独安装 [web3.js](https://github.com/ChainSafe/web3.js) 并确保它存在于 `window.Web3`的窗口对象上。
 
-In-browser example:
+浏览器内示例：
 
 ```HTML
-<!-- Include this BEFORE the Audius SDK script -->
+<!-- 在 Audius SDK 脚本之前包含这个 -->
 <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 ```
 
-Node.js example:
+Node.js 示例：
 
 ```JS
-// Make sure to run `npm install web3`
+// 确保运行 `npm install web3`
 const Web3 = require("web3");
 
-window.Web3 = Web3;
+窗口.Web3 = Web3;
 ```
 
-## Initialization
+## 初始化
 
-To initialize the SDK, simply call the SDK constructor and pass in the name of your app. Note that the constructor is asynchronous.
+要初始化 SDK，只需调用 SDK 构造函数并传入您的应用程序名称即可。 请注意，构造函数是异步的。
 
-### In the browser/Vanilla JS
+### 在浏览器/Vanilla JS
 
-Example code:
+示例代码：
 
 ```HTML
 <script>
-  var sdk;
+  变量 SDK；
   async function init() {
-    // This is how you initialize the SDK:
+    // 这就是初始化 SDK 的方式：
     sdk = await window.audiusSdk({ appName: "<Name of your app here>" });
   }
 
-  async function doStuff() {
-    await init();
-    // Now you can call SDK methods, for example:
-    const tracks = await sdk.discoveryNode.getTracks()
-    console.log("Got tracks!", tracks)
+  异步函数 doStuff() {
+    等待 init();
+    // 现在可以调用 SDK 方法了，例如：
+    const tracking = await sdk.discoveryNode.getTracks()
+    console.log("Got track!", tracking)
   }
 
   doStuff()
 </script>
 ```
 
-### In Node.js
+### 在 Node.js 中
 
-Example code:
+示例代码：
 
 ```Javascript
 // audiusSdk.js
 import { sdk } from "@audius/sdk";
 
-let audiusSdk = null;
+让audiusSdk = null;
 
 const initAudiusSdk = async () => {
-  // This is how you initialize the SDK:
+  // 这就是初始化 SDK 的方式：
   const instance = await sdk({ appName: "<Name of your app here>" });
 
-  // For convenience, you can dispatch an event to broadcast that the SDK is ready
+  // 为方便起见，您可以发送一个事件来广播 SDK 准备就绪
   const event = new CustomEvent("SDK_READY");
-  window.dispatchEvent(event);
-  audiusSdk = instance;
+  window.dispatchEvent(事件);
+  audiusSdk = 实例；
 };
 
-// Convenient function to help determine if the SDK is ready
+// 方便的函数来帮助确定 SDK 是否准备就绪
 const waitForSdk = () => {
   return new Promise((resolve) => {
     if (audiusSdk) resolve();
-    window.addEventListener("SDK_READY", resolve);
+    window.addEventListener("SDK_READY" , 解决);
   });
 }
 
 initAudiusSdk();
 
-export { audiusSdk, waitForSdk };
+出口 { audiusSdk, waitForSdk };
 ```
 
 ```Javascript
@@ -130,10 +130,10 @@ export { audiusSdk, waitForSdk };
 import { audiusSdk, waitForSdk } from "./audiusSdk";
 
 const doStuff = async () => {
-  await waitForSdk();
-  // Now you can call SDK methods, for example:
-  const tracks = await audiusSdk.discoveryNode.getTracks();
-  console.log("Got tracks!", tracks);
+  等待 waitForSdk();
+  // 现在可以调用 SDK 方法了，例如：
+  const tracking = await audiusSdk.discoveryNode.getTracks();
+  console.log("得到了曲目！", tracking);
 }
 
 doStuff();
