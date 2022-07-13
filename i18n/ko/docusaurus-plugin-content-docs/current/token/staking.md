@@ -1,97 +1,101 @@
 ---
-sidebar_label: Staking
+sidebar_label: 스테이킹
 sidebar_position: 2
 ---
 
-# Staking
+# 스테이킹
 
-### What is Staking?
+### 스테이킹이란?
 
-Built as a decentralized protocol on Ethereum, all the content, information and data on Audius is stored and indexed by a growing network of third-party node operators, rather than by the Audius team.
+이더리움에서 분산형 프로토콜로 구축된 Audius의 모든 콘텐츠, 정보 및 데이터는 Audius 팀이 아니라 성장하는 제3자 노드 운영자 네트워크에 의해 저장되고 인덱싱됩니다.
 
-To ensure this content can be trusted and maintained, node operators are required to provide collateral or ‘stake’ as a bond to service the protocol. This stake, denominated in $AUDIO, ensures that node operators have tokens at risk that can be slashed, or taken, in the event of malicious or poor behavior.
+이 콘텐츠를 신뢰하고 유지 관리할 수 있도록 노드 운영자는 프로토콜 서비스를 위한 담보 또는 '지분'을 보증으로 제공해야 합니다. $AUDIO으로 표시된 이 지분은 노드 운영자가 악의적이거나 잘못된 행동의 경우에 삭감되거나 취해질 수 있는 위험에 처한 토큰을 갖도록 합니다.
 
-By using $AUDIO tokens as collateral, anyone with the proper hardware requirements can join as a node operator in a completely permissionless fashion. The more $AUDIO staked to the protocol, the more secure the network becomes and the less vulnerable it is to outside attacks.
+$AUDIO 개의 토큰을 담보로 사용하여 적절한 하드웨어 요구 사항을 가진 사람은 누구나 완전히 무허가 방식으로 노드 운영자로 참여할 수 있습니다. 프로토콜에 $AUDIO 이 많을수록 네트워크가 더 안전해지고 외부 공격에 덜 취약해집니다.
 
-As a reward for servicing the network, node operators stand to earn $AUDIO through the automatic on-chain issuance, or the ongoing creation of new tokens distributed to value-added actors.
+네트워크 서비스에 대한 보상으로 노드 운영자는 자동 온체인 발행 또는 부가가치 행위자에게 배포되는 새로운 토큰의 지속적인 생성을 통해 $AUDIO 을 얻습니다.
 
-Those who stake more $AUDIO stand to earn a larger portion of issuance in exchange for securing the network.
+$AUDIO 을 더 많이 스테이킹하는 사람들은 네트워크를 확보하는 대가로 더 많은 발행량을 얻게 됩니다.
 
-### How Audius Works
+### Audius의 작동 방식
 
-On Audius, content is routed to two different types of nodes:
+Audius에서 콘텐츠는 두 가지 유형의 노드로 라우팅됩니다.
 
-* _Content Nodes_ - To store and relay audio content \(tracks, mixes, etc.\) streamed on Audius
-* _Discovery Nodes_ - To index and hash data like user profiles, playlists and followers.
+* _콘텐츠 노드_ - Audius에서 스트리밍된 오디오 콘텐츠(트랙, 믹스 등)를 저장하고 중계합니다.
+* _디스커버리 노드_ - 사용자 프로필, 재생 목록 및 팔로워와 같은 데이터를 인덱싱하고 해시합니다.
 
-As an artist, uploading to Audius feels no different than uploading to a platform like Soundcloud. But, what happens behind the scenes is what makes Audius so unique.
+아티스트로서 Audius에 업로드하는 것은 Soundcloud와 같은 플랫폼에 업로드하는 것과 다르지 않습니다. 그러나 무대 뒤에서 일어나는 일은 Audius를 매우 독특하게 만드는 것입니다.
 
-When an artist uploads a track to Audius:
+아티스트가 Audius에 트랙을 업로드할 때:
 
-1. That content is uploaded to a Content Node.
-2. The data gets transcoded and returns a reference code used to identify the track
-3. The data linked by the reference code is replicated to two other Content Nodes on the network.
-4. An onchain transaction is published signifying that the track exists on Audius and that the metadata is attached to the profile that uploaded the track.
-5. The transaction is picked up and indexed by a Discovery Node
-6. The client returns that the track was successfully published when it shows up on the Discovery Node, marking the upload complete!
+1. 해당 콘텐츠는 콘텐츠 노드에 업로드됩니다.
+2. 데이터가 트랜스코딩되고 트랙을 식별하는 데 사용되는 참조 코드를 반환합니다.
+3. 참조 코드로 연결된 데이터는 네트워크의 다른 두 콘텐츠 노드에 복제됩니다.
+4. 트랙이 Audius에 있고 메타데이터가 트랙을 업로드한 프로필에 첨부되었음을 나타내는 온체인 트랜잭션이 게시됩니다.
+5. 트랜잭션은 디스커버리 노드에 의해 선택되고 인덱싱됩니다.
+6. 클라이언트는 트랙이 디스커버리 노드에 표시되면 업로드가 완료된 것으로 표시될 때 성공적으로 게시되었음을 반환합니다!
 
-Super simple right! Well, this is where staking comes into play.
+매우 간단합니다. 자, 여기서 스테이킹이 시작됩니다.
 
-On other platforms, a similar process is operated by the parent company, effectively making them the true owner of the content. Should that company cease to exist, so does all the content stored in its database. With Audius, the track is maintained by the network and controlled by third-party and decentralized node operators. **Audius is not dependent on one company to keep running**.
+다른 플랫폼에서는 유사한 프로세스가 모회사에 의해 운영되어 효과적으로 콘텐츠의 진정한 소유자가 됩니다. 그 회사가 사라지면 데이터베이스에 저장된 모든 콘텐츠도 사라집니다. Audius를 사용하면 트랙이 네트워크에서 유지 관리되고 타사 및 분산 노드 운영자가 제어합니다. **오디우스는**회사에 의존하지 않고 계속 운영됩니다.
 
-**By staking $AUDIO, you’re helping to protect and power the protocol.**
+**$AUDIO을 스테이킹하면 프로토콜을 보호하고 강화하는 데 도움이 됩니다.**
 
-This design allows Audius to operate on the back of a global network of third-party node operators, rather than solely by the Audius team.
+이 설계를 통해 Audius는 Audius 팀 단독이 아닌 타사 노드 운영자의 글로벌 네트워크 뒤에서 작동할 수 있습니다.
 
-The decision to use two node types allows Audius to scale in correlation to different metrics, meaning that if the number of listeners were to spike relative to the Audius catalog, Discovery Nodes could pick up the weight while the Content Nodes continue to run as normal. Similarly, the network could choose to adjust incentives depending on where bandwidth is needed to meet demand at any given time.
+두 가지 노드 유형을 사용하기로 결정하면 Audius가 서로 다른 메트릭과 상관 관계를 확장할 수 있습니다. 즉, Audius 카탈로그에 비해 리스너 수가 급증하면 콘텐츠 노드가 계속 정상적으로 실행되는 동안 디스커버리 노드가 가중치를 받을 수 있습니다. 마찬가지로 네트워크는 주어진 시간에 수요를 충족하기 위해 대역폭이 필요한 위치에 따라 인센티브를 조정하도록 선택할 수 있습니다.
 
-Talk about a platform adapting to the needs of its users!
+사용자의 요구에 적응하는 플랫폼에 대해 이야기하십시오!
 
-### **Staking on Audius**
+### **Audius에 스테이킹**
 
-To stake on Audius, node operators can set up content and/or discovery nodes using [these resources](https://github.com/AudiusProject/audius-protocol/wiki/Staking-Resources).
+Audius에 스테이킹하기 위해 노드 운영자는 이러한 리소스</a>
+
+을 사용하여 콘텐츠 및/또는 검색 노드를 설정할 수 있습니다.</p> 
 
 https://twitter.com/Figment_io/status/1324763638729740288?s=20
 
-A list of all active node operators can be found under the [Services tab](https://dashboard.audius.org/services) in the Audius protocol dashboard.
+모든 활성 노드 운영자 목록은 Audius 프로토콜 대시보드의 [서비스 탭](https://dashboard.audius.org/services) 에서 찾을 수 있습니다.
 
-$AUDIO holders can delegate a minimum of 100 tokens to any of these node operators by connecting to either MetaMask or using a Gnosis Safe. More details on delegation will be released soon!
+$AUDIO 명의 보유자는 MetaMask에 연결하거나 Gnosis Safe를 사용하여 이러한 노드 운영자에게 최소 100개의 토큰을 위임할 수 있습니다. 위임에 대한 자세한 내용은 곧 공개됩니다!
 
-Node operators can choose to run either a Content Node, a Discovery Node or a combination of both. The amount of $AUDIO staked to a given Operator can be thought of as their economic bandwidth to run one or a combination of services on the network.
+노드 운영자는 콘텐츠 노드, 검색 노드 또는 이 둘의 조합을 실행하도록 선택할 수 있습니다. 주어진 오퍼레이터에게 스테이킹된 $AUDIO 의 양은 네트워크에서 서비스 중 하나 또는 조합을 실행하기 위한 경제적 대역폭으로 생각할 수 있습니다.
 
-All node operators are required to post a **minimum self-bond of 200,000 $AUDIO tokens per node**. While both Content and Discovery Nodes utilize the same machine, Content Nodes require more storage and therefore cost slightly more to operate.
+모든 노드 운영자는 노드</strong>당 $AUDIO 토큰의 **최소 자체 결합을 게시해야 합니다. 콘텐츠 노드와 디스커버리 노드는 모두 동일한 시스템을 사용하지만 콘텐츠 노드에는 더 많은 스토리지가 필요하므로 운영 비용이 약간 더 듭니다. </p> 
 
-To this effect, the staking parameters of each node is as follows:
+이를 위해 각 노드의 스테이킹 매개변수는 다음과 같습니다.
 
-_Discovery Node_
+_디스커버리 노드_
 
-* Minimum Bond (Stake): 200,000 AUDIO
-* Maximum Bond (Stake): 7,000,000 AUDIO
+* 최소 보증금(Stake): 200,000 AUDIO
+* 최대 본드(지분): 7,000,000 AUDIO
 
-_Content Node_
+_콘텐츠 노드_
 
-* Minimum Bond (Stake): 200,000 AUDIO
-* Maximum Bond (Stake): 10,000,0000 AUDIO
+* 최소 보증금(Stake): 200,000 AUDIO
+* 최대 채권(지분): 10,000,0000 AUDIO
 
-The minimum stake ensures sufficient skin in the game, while the maximum prevents the protocol from becoming too centralized. Content nodes have slightly higher minimum requirements, which is why they are able to accept more stake than discovery nodes.
+최소 지분은 게임에서 충분한 스킨을 보장하는 반면 최대 지분은 프로토콜이 너무 중앙 집중화되는 것을 방지합니다. 콘텐츠 노드는 최소 요구 사항이 약간 더 높기 때문에 검색 노드보다 더 많은 지분을 수용할 수 있습니다.
 
-Each Operator is given a unique profile, allowing users to identify their address, timeline of votes, and the different nodes they maintain. Other key parameters include:
+각 운영자에게는 고유한 프로필이 제공되어 사용자가 자신의 주소, 투표 일정 및 유지 관리하는 다양한 노드를 식별할 수 있습니다. 기타 주요 매개변수는 다음과 같습니다.
 
-* _Staked $AUDIO_ - The total amount of $AUDIO staked across all the operator’s nodes, measured as a combination of tokens staked or delegated to a given address.
-* _Deployer Cut_ - The percentage of staking rewards that delegates pay to node operators for staking $AUDIO on their node. This is configurable by the node operator.
-* _Services_ - The number of unique nodes run by a given operator.
-* _Delegators_ - The total number of unique addresses delegating tokens to the Operator.
+* _스테이킹 $AUDIO_ - 주어진 주소에 스테이킹되거나 위임된 토큰의 조합으로 측정된 모든 운영자 노드에 스테이킹된 총 $AUDIO 입니다.
+* _Deployer Cut_ - $AUDIO 가 노드 운영자에게 노드 운영자에게 지불하는 스테이킹 보상의 비율입니다. 이것은 노드 운영자가 구성할 수 있습니다.
+* _서비스_ - 주어진 운영자가 실행하는 고유한 노드의 수입니다.
+* _위임자_ - 토큰을 운영자에게 위임하는 고유 주소의 총 수.
 
-Node operators can also populate their information via [3Box](https://3box.io/), displaying a profile image, title and website link to allow delegates to more easily distinguish themselves from others on the network.
+노드 운영자는 또한 [3Box](https://3box.io/)을 통해 자신의 정보를 채울 수 있으며, 프로필 이미지, 제목 및 웹사이트 링크를 표시하여 대리인이 네트워크의 다른 사람과 더 쉽게 구별할 수 있도록 합니다.
 
-Audius features a 7 day cooldown period to undelegate or unstake in order to provide adequate time for nodes to be slashed in the event of malicious behavior. During the genesis staking period, nodes operated by the Audius foundation will have their Deployer Cut set to 100%, with all proceeds being routed to a community treasury to be governed by $AUDIO tokenholders. These nodes will be retired in the near future.
+Audius는 악의적인 행동이 발생할 경우 노드가 삭감될 적절한 시간을 제공하기 위해 위임을 취소하거나 지분을 취소할 수 있는 7일의 휴지 기간을 제공합니다. 제네시스 스테이킹 기간 동안 Audius 재단이 운영하는 노드는 Deployer Cut이 100%로 설정되며 모든 수익금은 $AUDIO 토큰 소유자가 관리하는 커뮤니티 재무로 라우팅됩니다. 이러한 노드는 가까운 시일 내에 폐기됩니다.
 
-### **$AUDIO Staking Rewards**
 
-Audius features a 7% automatic annual issuance rate distributed on-chain and on a weekly basis. $AUDIO rewards are distributed directly on-chain to node operators, with the on-chain system deducting their Delegator Cut and routing the remaining rewards to those who delegated their tokens.
 
-Service providers are expected to run one transaction per week to distribute issuance for the network, where tokens can be claimed in real time by individual node operators.
+### **$AUDIO 스테이킹 보상**
 
-In the near future, $AUDIO issuance will begin to be computed from the call of the reward function. Moving forward, anyone in the network can call the reward function, with tokens being distributed on a weekly cadence and claimable at any time.
+Audius는 7%의 자동 연간 발행 비율을 온체인으로 매주 배포합니다. $AUDIO 개의 보상은 온체인에서 노드 운영자에게 직접 분배되며, 온체인 시스템은 위임자 컷을 차감하고 나머지 보상을 토큰을 위임한 사람들에게 라우팅합니다.
 
-The rate, duration and parameters of $AUDIO staking are controlled entirely by governance.
+서비스 제공자는 네트워크에 대한 발행을 분배하기 위해 매주 하나의 트랜잭션을 실행할 것으로 예상되며, 여기서 토큰은 개별 노드 운영자에 의해 실시간으로 청구될 수 있습니다.
+
+가까운 장래에 보상 함수의 호출로부터 $AUDIO 개의 발행이 계산되기 시작할 것입니다. 앞으로 네트워크의 모든 사람이 보상 기능을 호출할 수 있으며 토큰은 주간 주기에 따라 배포되고 언제든지 청구할 수 있습니다.
+
+$AUDIO 스테이킹의 비율, 기간 및 매개변수는 전적으로 거버넌스에 의해 제어됩니다.
