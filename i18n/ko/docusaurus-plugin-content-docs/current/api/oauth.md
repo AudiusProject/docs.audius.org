@@ -1,198 +1,223 @@
 ---
-sidebar_label: Log in with Audius
-sidebar_position: 3
+sidebar_label: 오디우스로 로그인
+sidebar_position: 삼
 ---
 
-# Log in with Audius
+# 오디우스로 로그인
 
-## Table of contents
+## 목차
 
-- [Overview](#overview)
-  - [Authentication, not authorization](#authentication-not-authorization)
-- [Workflow](#workflow)
-  - [Demo](#demo)
-  - [Quick links](#quick-links)
-- [How to implement Log in with Audius with the Javascript SDK](#how-to-implement-log-in-with-audius-with-the-javascript-sdk)
-  - [1. Initialize the SDK `oauth` feature](#1-initialize-the-sdk-oauth-feature)
+- [개요](#overview)
+  - [인증이 아닌 인증](#authentication-not-authorization)
+- [워크플로](#workflow)
+  - [데모](#demo)
+  - [빠른 링크](#quick-links)
+- [Javascript SDK로 Audius로 로그인을 구현하는 방법](#how-to-implement-log-in-with-audius-with-the-javascript-sdk)
+  - [1. SDK `oauth` 기능 초기화](#1-initialize-the-sdk-oauth-feature)
     - [<ins>**oauth.init(loginSuccessCallback, errorCallback)**</ins>](#insoauthinitloginsuccesscallback-errorcallbackins)
-  - [2. Render the Log in with Audius button](#2-render-the-log-in-with-audius-button)
-    - [<ins>**oauth.renderButton(element, customizations)**</ins>](#insoauthrenderbuttonelement-customizationsins)
-    - [_💡 **Tip**: Detect when the button has rendered and show a loader until then_:](#-tip-detect-when-the-button-has-rendered-and-show-a-loader-until-then)
+  - [2. Audius로 로그인 버튼 렌더링](#2-render-the-log-in-with-audius-button)
+    - [<ins>**oauth.renderButton(요소, 사용자 정의)**</ins>](#insoauthrenderbuttonelement-customizationsins)
+    - [_💡 **팁**: 버튼이 렌더링될 때 감지하고 그때까지 로더를 표시합니다._:](#-tip-detect-when-the-button-has-rendered-and-show-a-loader-until-then)
     - [<ins>**oauth.login()**</ins>](#insoauthloginins)
-  - [3. Done!](#3-done)
-  - [Addendum: A quick note on email](#addendum-a-quick-note-on-email)
-  - [Full code example using React and npm package](#full-code-example-using-react-and-npm-package)
-  - [Full code example using vanilla JS and SDK dist](#full-code-example-using-vanilla-js-and-sdk-dist)
-- [How to implement Log in with Audius manually](#how-to-implement-log-in-with-audius-manually)
-  - [1. Open the Log in with Audius prompt page](#1-open-the-log-in-with-audius-prompt-page)
-  - [1.5 Remember to handle early exiting (i.e. failure) of the authentication flow](#15-remember-to-handle-early-exiting-ie-failure-of-the-authentication-flow)
-  - [2. Process and verify the response](#2-process-and-verify-the-response)
-    - [**If you used a redirect URI**:](#if-you-used-a-redirect-uri)
-    - [**If you used `redirectURI=postmessage`**:](#if-you-used-redirecturipostmessage)
-    - [**Handling the response**](#handling-the-response)
-  - [3. Done!](#3-done-1)
-  - [Addendum: A quick note on email](#addendum-a-quick-note-on-email-1)
+  - [삼. 완료!](#3-done)
+  - [부록: 이메일에 대한 간단한 메모](#addendum-a-quick-note-on-email)
+  - [React 및 npm 패키지를 사용한 전체 코드 예제](#full-code-example-using-react-and-npm-package)
+  - [바닐라 JS 및 SDK dist를 사용하는 전체 코드 예제](#full-code-example-using-vanilla-js-and-sdk-dist)
+- [Audius로 수동으로 로그인을 구현하는 방법](#how-to-implement-log-in-with-audius-manually)
+  - [1. Audius로 로그인 프롬프트 페이지를 엽니다.](#1-open-the-log-in-with-audius-prompt-page)
+  - [1.5 인증 흐름의 조기 종료(즉, 실패)를 처리하는 것을 기억하십시오.](#15-remember-to-handle-early-exiting-ie-failure-of-the-authentication-flow)
+  - [2. 응답 처리 및 확인](#2-process-and-verify-the-response)
+    - [**리디렉션 URI**을 사용한 경우:](#if-you-used-a-redirect-uri)
+    - [** `redirectURI=postmessage`**을 사용한 경우:](#if-you-used-redirecturipostmessage)
+    - [**응답 처리**](#handling-the-response)
+  - [삼. 완료!](#3-done-1)
+  - [부록: 이메일에 대한 간단한 메모](#addendum-a-quick-note-on-email-1)
 
-## Overview
+## 개요
 
-Log in with Audius allows your app to retrieve and verify a user's Audius profile information without requiring the user to give you their Audius password.
+Audius로 로그인하면 사용자에게 Audius 암호를 제공하지 않고도 앱에서 사용자의 Audius 프로필 정보를 검색하고 확인할 수 있습니다.
 
-You can leverage this flow for a variety of use cases, for example:
+다음과 같은 다양한 사용 사례에 이 흐름을 활용할 수 있습니다.
 
-- Provide a secure and convenient way for users to sign up and/or log in to your app without having to set a password or fill in a profile form
-- Associate a user to their Audius account so that you can retrieve their Audius data (e.g. retrieve their tracks)
-- Confirm if a user is a "Verified" Audius artist
+- 사용자가 비밀번호를 설정하거나 프로필 양식을 작성하지 않고도 앱에 가입 및/또는 로그인할 수 있는 안전하고 편리한 방법을 제공합니다.
+- Audius 데이터를 검색할 수 있도록 사용자를 Audius 계정에 연결합니다(예: 트랙 검색).
+- 사용자가 "인증된" Audius 아티스트인지 확인
 
-However, note that this flow **CANNOT**:
+그러나 이 흐름 **은**이 될 수 없습니다.
 
-- Manage the user's login session on your app
-- Grant your app permission to perform actions on Audius on the user's behalf (see more below)  
+- 앱에서 사용자의 로그인 세션 관리
+- 사용자를 대신하여 Audius에서 작업을 수행할 수 있는 권한을 앱에 부여합니다(자세한 내용은 아래 참조).  
   <br />
 
-### Authentication, not authorization
+### 인증이 아닌 인증
 
-Please note that Log in With Audius is able to provide authentication, but not authorization (yet!). That is, this flow does not yet provide the ability to obtain permissions to perform actions on the user's behalf (for example, upload a track).
-
-<br />
-
-<img src="../../static/img/oauthpopup.png" height="488" width="252" alt="Log in with Audius popup" />
-
-_Log in with Audius dialog_
+Audius로 로그인은 인증을 제공할 수 있지만 승인은 제공할 수 없습니다(아직!). 즉, 이 흐름은 아직 사용자를 대신하여 작업(예: 트랙 업로드)을 수행할 수 있는 권한을 얻는 기능을 제공하지 않습니다.
 
 <br />
 
-## Workflow
+<img src="../../static/img/oauthpopup.png" height="488" width="252" alt="Audius 팝업으로 로그인" />
 
-The "Log in with Audius" flow looks like this:
-
-1. You provide a button on your app or website to begin the authentication flow
-2. When the user clicks the button, it opens a popup containing an Audius login page that prompts the user to sign in with their Audius credentials (alternatively, your app/website can redirect to the Audius login page instead of using a popup)
-3. Once the user successfully signs in, Audius provides your app/website with the user profile using a JSON Web Token (JWT)
-4. Your app verifies and decodes the JWT
-
-The JWT payload contains the following information about the user:
-
-- Unique identifier (Audius user id)
-- Email
-- Display name
-- Audius handle
-- Whether the user is a verified artist (i.e. has a purple checkmark)
-- Profile picture URL, if any
-
-### Demo
-
-Check out a quick demo of the Oauth flow [here](https://codesandbox.io/s/log-in-with-audius-demo-j2jx6f)!
-
-### Quick links
-
-- Demo with React - [Demo app](https://j2jx6f.csb.app/) | [Code](https://codesandbox.io/s/log-in-with-audius-demo-j2jx6f?file=/src/App.js)
-- Demo with vanilla JS - [Demo app](https://xkogl3.csb.app/) | [Code](https://codesandbox.io/s/log-in-with-audius-demo-vanilla-js-xkogl3?file=/index.html)
-- [Button configurator](https://9ncjui.csb.app/)
+_Audius 대화 상자로 로그인_
 
 <br />
 
-## How to implement Log in with Audius with the Javascript SDK
+## 워크플로
 
-The easiest way to add Log in with Audius to your app is to use the Javascript SDK. If you are not able to use the Javascript SDK (for example, if you are developing a mobile app), skip to "How to implement Log in with Audius manually".
+"Audius로 로그인" 흐름은 다음과 같습니다.
 
-Prerequisites:
+1. 인증 흐름을 시작하기 위해 앱 또는 웹사이트에 버튼을 제공합니다.
+2. 사용자가 버튼을 클릭하면 Audius 자격 증명으로 로그인하라는 Audius 로그인 페이지가 포함된 팝업이 열립니다(또는 앱/웹사이트에서 팝업을 사용하는 대신 Audius 로그인 페이지로 리디렉션할 수 있음).
+3. 사용자가 성공적으로 로그인하면 Audius는 JWT(JSON Web Token)를 사용하여 앱/웹사이트에 사용자 프로필을 제공합니다.
+4. 앱이 JWT를 확인하고 디코딩합니다.
 
-- [Set up and initialize the Audius SDK on your app](./sdk.md#installation)
+JWT 페이로드에는 사용자에 대한 다음 정보가 포함됩니다.
 
-### 1. Initialize the SDK `oauth` feature
+- 고유 식별자(Audius 사용자 ID)
+- 이메일
+- 이름 표시하기
+- 오디우스 핸들
+- 사용자가 인증된 아티스트인지 여부(예: 보라색 체크 표시 있음)
+- 프로필 사진 URL(있는 경우)
 
-First, you must call `oauth.init` and provide it with your app name, a login success callback, and an optional error callback:
+### 데모
+
+여기</a>에서 Oauth 흐름
+
+의 빠른 데모를 확인하십시오!</p> 
+
+
+
+### 빠른 링크
+
+- React를 사용한 데모 - [데모 앱](https://j2jx6f.csb.app/) | [코드](https://codesandbox.io/s/log-in-with-audius-demo-j2jx6f?file=/src/App.js)
+- 바닐라 JS가 포함된 데모 - [데모 앱](https://xkogl3.csb.app/) | [코드](https://codesandbox.io/s/log-in-with-audius-demo-vanilla-js-xkogl3?file=/index.html)
+- [버튼 구성자](https://9ncjui.csb.app/)
+
+<br />
+
+
+
+## Javascript SDK로 Audius로 로그인을 구현하는 방법
+
+Audius로 로그인을 앱에 추가하는 가장 쉬운 방법은 Javascript SDK를 사용하는 것입니다. Javascript SDK를 사용할 수 없는 경우(예: 모바일 앱을 개발 중인 경우) "수동으로 로 로그인을 구현하는 방법"으로 건너뛰십시오.
+
+전제 조건:
+
+- [앱에서 Audius SDK 설정 및 초기화](./sdk.md#installation)
+
+
+
+### 1. SDK `oauth` 기능 초기화
+
+먼저 `oauth.init` 을 호출하고 앱 이름, 로그인 성공 콜백 및 선택적 오류 콜백을 제공해야 합니다.
+
+
 
 #### <ins>**oauth.init(loginSuccessCallback, errorCallback)**</ins>
 
-enables the Log in with Audius functionality.
+Audius로 로그인 기능을 활성화합니다.
 
-**Params**
+**매개변수**
 
-- loginSuccessCallback `(profile: UserProfile) => void` - function to be called when the user successfully authenticates with Audius. This function will be called with the user's profile information, which is an object with the following shape:
+- loginSuccessCallback `(프로필: UserProfile) => void` - 사용자가 Audius에 성공적으로 인증할 때 호출되는 함수입니다. 이 함수는 다음과 같은 형태의 객체인 사용자의 프로필 정보로 호출됩니다. 
+  
+  
 
   ```typescript
-  // type UserProfile =
+  // Type UserProfile =
   {
-    userId: number; // unique Audius user identifier
-    email: string;
-    name: string; // user's display name
-    handle: string;
-    verified: boolean; // whether the user has the Audius "verified" checkmark
+    userId: number; // 고유한 Audius 사용자 식별자
+    이메일: 문자열;
+    이름: 문자열; // 사용자의 표시 이름
+    핸들: 문자열;
+    확인됨: 부울; // 사용자에게 Audius "확인된" 체크 표시가 있는지 여부
 
-    /** URLs for the user's profile picture, if any.
-     * In the vast majority of cases, three sizes will be available - 150x150, 480x480, and 1000x1000.
-    * In rare cases, only an unknown size `misc` will be available.
-    * If the user has no profile picture, this field will be empty.
+    /** 사용자 프로필 사진의 URL(있는 경우).
+     * 대부분의 경우 150x150, 480x480 및 1000x1000의 세 가지 크기를 사용할 수 있습니다.
+    * 드문 경우지만 알 수 없는 크기의 '기타'만 사용할 수 있습니다.
+    * 프로필 사진이 없는 사용자의 경우 이 필드는 비어 있습니다.
     */
-    profilePicture: {"150x150": string, "480x480": string, "1000x1000": string } | { misc: string } | undefined | null
-    sub: number; // alias for userId
-    iat: string; // timestamp for when auth was performed
-  }
+    profilePicture: {"150x150": 문자열, "480x480": 문자열, "1000x1000": 문자열 } | { misc: string } | 정의되지 않은 | null
+    하위: 숫자; // userId
+    의 별칭 iat: string; // 인증이 수행된 시간에 대한 타임스탬프
+}
   ```
 
-- errorSuccessCallback _optional_ `(errorMessage: string) => void` - function to be called when an error occurs during the authentication flow. This function will be called with a string describing the error.
 
-**Returns**: Nothing
+- errorSuccessCallback _선택 사항_ `(errorMessage: string) => void` - 인증 흐름 중에 오류가 발생할 때 호출되는 함수입니다. 이 함수는 오류를 설명하는 문자열과 함께 호출됩니다.
 
-Example:
+**반환**: 없음
+
+예시:
+
+
 
 ```javascript
 audiusSdk.oauth.init(
   (res) => {
-    console.log("Log in success!", res);
+    console.log("로그인 성공!", res);
   },
   (err) => {
-    console.log("Error :(", err);
+    console.log("오류:(", err )
   }
 );
 ```
 
+
 <br />
 
-### 2. Render the Log in with Audius button
 
-You can either use the `oauth.renderButton` method or implement a login button yourself and invoke the login popup with `oauth.login`.
 
-**Using `oauth.renderButton` (recommended)**:
+### 2. Audius로 로그인 버튼 렌더링
 
-#### <ins>**oauth.renderButton(element, customizations)**</ins>
+`oauth.renderButton` 메소드를 사용하거나 로그인 버튼을 직접 구현하고 `oauth.login`으로 로그인 팝업을 호출할 수 있습니다.
 
-replaces the element passed in the first parameter with the Log in with Audius button
+** `oauth.renderButton 사용` (권장)**:
 
-**Params**
 
-- element `HTMLElement` - HTML element to replace with the Log in with Audius button
-- customizations _optional_ `ButtonOptions` - optional object containing the customization settings for the button to be rendered. Here are the options available:
+
+#### <ins>**oauth.renderButton(요소, 사용자 정의)**</ins>
+
+첫 번째 매개변수에 전달된 요소를 Audius로 로그인 버튼으로 바꿉니다.
+
+**매개변수**
+
+- 요소 `HTMLElement` - Audius로 로그인 버튼으로 대체할 HTML 요소
+- 사용자 정의 _선택 사항_ `ButtonOptions` - 렌더링할 버튼에 대한 사용자 지정 설정을 포함하는 선택적 개체입니다. 사용 가능한 옵션은 다음과 같습니다. 
+  
+  
 
   ```typescript
   // type ButtonOptions =
   {
-    // Size of the button:
-    size?: 'small' | 'medium' | 'large'
+    // 버튼의 크기:
+    size?: '작은' | '중간' | 'large'
 
-    // Corner style of the button:
-    corners?: 'default' | 'pill'
+    // 버튼의 모서리 스타일: 모서리
+    개?: 'default' | 'pill'
 
-    // Your own text for the button; default is "Log in with Audius":
+    // 버튼에 대한 자신의 텍스트; 기본값은 "Log in with Audius"입니다.
     customText?: string
 
-    // Whether to disable the button's "grow" animation on hover:
+    // 마우스 오버 시 버튼의 "성장" 애니메이션을 비활성화할지 여부:
     disableHoverGrow?: boolean
 
-    // Whether the button should take up the full width of its parent element:
-    fullWidth?: boolean
-  }
+    // 버튼이 상위 요소의 전체 너비를 차지해야 하는지 여부 :
+    fullWidth?: 부울
+}
   ```
 
-  Use [this playground](https://9ncjui.csb.app/) to see how these customizations affect the button appearance and determine what config works best for your app.
 
-**Returns**: Nothing
+[이 플레이그라운드](https://9ncjui.csb.app/) 을 사용하여 이러한 사용자 정의가 버튼 모양에 어떤 영향을 미치는지 확인하고 앱에 가장 적합한 구성을 결정하십시오.
 
-Example:
+**반환**: 없음
+
+예시:
+
+
 
 ```javascript
-<!-- Javascript -->
+<!-- 자바스크립트 -->
 audiusSdk.oauth.renderButton(document.getElementById('audiusLogInButton'), {
   size: 'large',
   corners: 'pill',
@@ -203,34 +228,42 @@ audiusSdk.oauth.renderButton(document.getElementById('audiusLogInButton'), {
 <div id="audiusLogInButton"></div>
 ```
 
+
 <br />
 
-#### _💡 **Tip**: Detect when the button has rendered and show a loader until then_:
 
-The button may take up to a couple of seconds to load. You may want to show a loading indicator until the button has loaded for an optimal user experience.
 
-The log in button will be rendered with an id of `audius-login-button`. You can detect when the element has been added using a MutationObserver:
+#### _💡 **팁**: 버튼이 렌더링될 때 감지하고 그때까지 로더를 표시합니다._:
 
-Example:
+버튼을 로드하는 데 몇 초 정도 걸릴 수 있습니다. 최적의 사용자 경험을 위해 버튼이 로드될 때까지 로드 표시기를 표시할 수 있습니다.
+
+로그인 버튼은 `audius-login-button`의 ID로 렌더링됩니다. MutationObserver를 사용하여 요소가 추가된 시점을 감지할 수 있습니다.
+
+예시:
+
+
 
 ```HTML
-<!-- In your HTML -->
-<!-- Surround your element that will be replaced with the Log in with Audius button with a parent, e.g.: -->
+<!-- HTML에서 -->
+<!-- Audius로 로그인 버튼으로 대체될 요소를 부모로 묶습니다. 예: -->
 <div id="parent">
   <div id="audiusLogInButton"></div>
-  <!-- You probably want a better loading indicator than this :P -->
-  <div id="loading">Loading...</div>
+  <!-- 아마도 이보다 더 나은 로딩 표시기를 원합니다 :P -->
+  <div id="loading">로딩 중...</div>
 </div>
 
 ```
 
+
+
+
 ```JS
-// In your JS
-const observer = new MutationObserver(function(mutations_list) {
+// JS
+const 관찰자 = new MutationObserver(function(mutations_list) {
     mutations_list.forEach(function(mutation) {
         mutation.addedNodes.forEach(function(added_node) {
-            if (added_node.id == 'audius-login-button') {
-        // Login button has rendered
+            if (added_node.id == 'audius- login-button') {
+        // 로그인 버튼이 렌더링됨
         document.querySelector('#loading').remove()
         observer.disconnect();
             }
@@ -238,202 +271,246 @@ const observer = new MutationObserver(function(mutations_list) {
     });
 });
 
-observer.observe(document.querySelector("#parent"), { subtree: false, childList: true });
+관찰자.관찰(document.querySelector("#부모"), { subtree: false, childList: true });
 
 ```
 
+
 <br />
 
-**Using your own button and `oauth.login`**:
+**자신의 버튼 사용 및 `oauth.login`**:
+
+
 
 #### <ins>**oauth.login()**</ins>
 
-opens the Log in with Audius popup, which begins the authentication flow
+인증 흐름을 시작하는 Audius로 로그인 팝업을 엽니다.
 
-**Params**
+**매개변수**
 
-None
+없음
 
-**Returns**: Nothing
+**반환**: 없음
 
-Example:
+예시:
+
+
 
 ```javascript
-<!-- Javascript -->
+<!-- 자바스크립트 -->
 function logInWithAudius() {
   audiusSdk.oauth.login()
 }
 
 <!-- HTML -->
-<button onclick="logInWithAudius()">Log in with Audius!</button>
+<button onclick="logInWithAudius()">Audius로 로그인!</button>
 ```
 
-<br />
-
-### 3. Done!
-
-That's it! See below for full code examples.
-
-### Addendum: A quick note on email
-
-Once you know your user's Audius user id, you can retrieve their Audius information at any time using our SDK or web APIs. However, the one piece of profile information that is not available outside of the Log in with Audius response is the user's email address. If you do not store the user's email address after you receive it in the Log in with Audius success response, you can only re-retrieve the email through having the user re-complete the Log in with Audius flow.
-
-### Full code example using React and npm package
-
-[View sandbox here](https://codesandbox.io/s/log-in-with-audius-demo-j2jx6f)
-
-### Full code example using vanilla JS and SDK dist
-
-[View sandbox here](https://codesandbox.io/s/log-in-with-audius-demo-vanilla-js-xkogl3?file=/index.html)
 
 <br />
+
+
+
+### 삼. 완료!
+
+그게 다야! 전체 코드 예제는 아래를 참조하세요.
+
+
+
+### 부록: 이메일에 대한 간단한 메모
+
+사용자의 Audius 사용자 ID를 알게 되면 SDK 또는 웹 API를 사용하여 언제든지 Audius 정보를 검색할 수 있습니다. 그러나 Audius로 로그인 응답 외부에서 사용할 수 없는 프로필 정보 중 하나는 사용자의 이메일 주소입니다. Audius로 로그인 성공 응답을 받은 후 사용자의 이메일 주소를 저장하지 않으면 사용자가 Audius로 로그인 흐름을 다시 완료하도록 해야만 이메일을 다시 검색할 수 있습니다.
+
+
+
+### React 및 npm 패키지를 사용한 전체 코드 예제
+
+[여기에서 샌드박스 보기](https://codesandbox.io/s/log-in-with-audius-demo-j2jx6f)
+
+
+
+### 바닐라 JS 및 SDK dist를 사용하는 전체 코드 예제
+
+[여기에서 샌드박스 보기](https://codesandbox.io/s/log-in-with-audius-demo-vanilla-js-xkogl3?file=/index.html)
+
 <br />
 
-## How to implement Log in with Audius manually
+<br />
 
-If you are not able to use the Audius Javascript SDK, you may implement Log in with Audius manually by following the steps below.
 
-### 1. Open the Log in with Audius prompt page
 
-Create a "Log in with Audius" button on your app. If using HTML (or HTML-like markup) and CSS, you may use [this playground](https://j2jx6f.csb.app/) to easily customize and generate code for an Audius-branded login button.
+## Audius로 수동으로 로그인을 구현하는 방법
 
-Clicking your log in button should begin the authentication flow by directing the user to the Log in with Audius prompt page.
+Audius Javascript SDK를 사용할 수 없는 경우 아래 단계에 따라 수동으로 Audius로 로그인을 구현할 수 있습니다.
 
-On a native app, the log in button should open a secure web browser within the app (for instance ASWebAuthenticationSession or SFSafariViewController on iOS apps, and “Custom Tabs” on Android mobile apps) that loads the Audius login page. A web app, meanwhile, should open the Audius login page in a popup or simply redirect to it.
 
-The Log in with Audius prompt page is located at the following URL:
+
+### 1. Audius로 로그인 프롬프트 페이지 열기
+
+앱에 "Audius로 로그인" 버튼을 만듭니다. HTML(또는 HTML과 유사한 마크업) 및 CSS를 사용하는 경우 [이 플레이그라운드](https://j2jx6f.csb.app/) 을 사용하여 Audius 브랜드 로그인 버튼에 대한 코드를 쉽게 사용자 정의하고 생성할 수 있습니다.
+
+로그인 버튼을 클릭하면 사용자를 Audius로 로그인 프롬프트 페이지로 안내하여 인증 흐름을 시작해야 합니다.
+
+기본 앱에서 로그인 버튼은 Audius 로그인 페이지를 로드하는 앱 내에서 보안 웹 브라우저를 열어야 합니다(예: iOS 앱의 경우 ASWebAuthenticationSession 또는 SFSafariViewController, Android 모바일 앱의 경우 "사용자 지정 탭"). 한편 웹 앱은 팝업으로 Audius 로그인 페이지를 열거나 단순히 리디렉션해야 합니다.
+
+Audius로 로그인 프롬프트 페이지는 다음 URL에 있습니다.
 
 `https://audius.co/oauth/auth?scope=read&app_name={YourAppName}&redirect_uri={YourRedirectURI}&origin={YourAppOrigin}&state={YourStateValue}&response_mode={query|fragment}`
 
-You must open this page with the required URL parameters, described below.
+아래에 설명된 필수 URL 매개변수를 사용하여 이 페이지를 열어야 합니다.
 
-**Params**
+**매개변수**
 
-- scope `"read"` - the scope of the authentication request. Only `"read"` is available (i.e. don't change this).
-- app_name `string` - the name of your app. This will be displayed to the user in the log in prompt page.
-- redirect_uri `string` - the location that the Audius login page should redirect to once the user successfully authenticates. Custom URL schemes are allowed and supported. You can use the special value `postmessage` here if you would like the login page to send the response back to its opener using `window.postMessage` instead of using a redirect. Otherwise, the following validation rules apply:
+- 범위 `"읽기"` - 인증 요청의 범위입니다. `"읽기"` 만 사용할 수 있습니다(즉, 변경하지 않음).
+- app_name `문자열` - 앱의 이름입니다. 이것은 로그인 프롬프트 페이지에서 사용자에게 표시됩니다.
+- redirect_uri `문자열` - 사용자가 성공적으로 인증되면 Audius 로그인 페이지가 리디렉션되어야 하는 위치입니다. 사용자 정의 URL 스키마가 허용되고 지원됩니다. 리디렉션을 사용하는 대신 `window.postMessage` 을 사용하여 로그인 페이지가 오프너에 응답을 다시 보내도록 하려면 여기에서 특수 값 `postmessage` 을 사용할 수 있습니다. 그렇지 않으면 다음 유효성 검사 규칙이 적용됩니다.
+  
+    - 호스트는 localhost IP 주소가 아니면 원시 IP 주소일 수 없습니다.
+  - 조각 구성 요소를 포함할 수 없습니다(`#`).
+  - `사용자 정보` 구성 요소를 포함할 수 없습니다.
+  - 경로 순회를 포함할 수 없습니다( `/..` 또는 `\..`포함).
+  - 유효한 문자와 URI 형식을 포함해야 합니다.
+- origin _선택적_ `string` `redirect_uri` 가 `postmessage`로 설정된 경우에만 적용 가능하고 필수입니다. 그렇다면 이 값은 Audius로 로그인 팝업을 연 창의 [원본](https://developer.mozilla.org/en-US/docs/Web/API/URL/origin) 로 설정해야 합니다.
 
-  - Hosts cannot be raw IP addresses UNLESS they are localhost IP addresses
-  - Cannot contain the fragment component (`#`)
-  - Cannot contain the `userinfo` component
-  - Cannot contain a path traversal (contain `/..` or `\..`)
-  - Must contain valid characters and URI format
+- 상태 _은 선택 사항이지만 적극 권장되는_ - `문자열` 모든 문자열. 사용자가 앱으로 다시 리디렉션되면 여기에 제공하는 정확한 `상태` 값이 리디렉션에 포함됩니다( `상태` URI 조각 매개변수에 있음). **이 필드는 CSRF 보호 메커니즘** (자세한 내용은 [여기](https://auth0.com/docs/secure/attack-protection/state-parameters) 또는 [여기](https://security.stackexchange.com/questions/20187/oauth2-cross-site-request-forgery-and-state-parameter)참조)로 활용해야 하며 `상태` 값이 생성된 위치와 리디렉션이 가는 곳.
+- `response_mode` _선택 사항, 가능한 경우 권장하지 않음_ - `"fragment" | "query"` 는 앱으로 다시 리디렉션할 때 인증 흐름 응답 매개변수가 쿼리 문자열 또는 redirect_uri의 조각 구성 요소로 인코딩되는지 여부를 지정합니다. 기본 동작은 "조각"과 같습니다. 가능하면 변경하지 않는 것이 좋습니다.
 
-- origin _optional_ `string` only applicable and required if `redirect_uri` is set to `postmessage`. If so, this value should be set to the [origin](https://developer.mozilla.org/en-US/docs/Web/API/URL/origin) of the window that opened the Log in with Audius popup.
-- state _optional but highly recommended_ - `string` any string. When the user is redirected back to your app, the exact `state` value you provide here will be included in the redirect (in the `state` URI fragment parameter). **This field should be leveraged as a CSRF protection mechanism** (read more [here](https://auth0.com/docs/secure/attack-protection/state-parameters) or [here](https://security.stackexchange.com/questions/20187/oauth2-cross-site-request-forgery-and-state-parameter)), and may also be used as a way to persist any useful data for your app between where the `state` value is generated and where the redirect goes.
-- `response_mode` _optional, not recommended when possible_ - `"fragment" | "query"` specifies whether the auth flow response parameters will be encoded in the query string or the fragment component of the redirect_uri when redirecting back to your app. Default behavior is equivalent to "fragment". We recommend NOT changing this if possible.
+**예시**
 
-**Example**
+
 
 ```HTML
-<a href="https://audius.co/oauth/auth?scope=read&app_name=My%20Demo%20App&redirect_uri=https://mydemoapp.com/oauth/receive-token&state=a4e0761e-8c21-4e20-819d-5a4daeab4ea9">Click me to log in with Audius!</a>
+<a href="https://audius.co/oauth/auth?scope=read&app_name=My%20Demo%20App&redirect_uri=https://mydemoapp.com/oauth/receive-token&state=a4e0761e-8c21-4e20-819d-5a4daeab4ea9">Audius로 로그인하려면 저를 클릭하십시오!</a>
 ```
 
-### 1.5 Remember to handle early exiting (i.e. failure) of the authentication flow
 
-If the user exits the authentication flow before completing it--e.g. by closing the window--your app should detect this and have the UI respond accordingly.
+
+
+### 1.5 인증 흐름의 조기 종료(즉, 실패)를 처리하는 것을 기억하십시오.
+
+사용자가 인증 흐름을 완료하기 전에(예: 창을 닫아서) 종료하면 앱이 이를 감지하고 UI가 그에 따라 응답해야 합니다.
 
 <br />
 
-### 2. Process and verify the response
 
-#### **If you used a redirect URI**:
 
-When the user has successfully authenticated, the Log in with Audius page will redirect to the redirect URI that you specified, **with 1) the JWT containing the user profile, and 2) the original state value you provided (if any) included in the URI fragment** (or query string, if `response_mode` was set to `query`). To illustrate, going off the example above where we opened the login page with the following URL: `https://audius.co/oauth/auth?scope=read&app_name=My%20Demo%20App&redirect_uri=https://mydemoapp.com/oauth/receive-token&state=a4e0761e-8c21-4e20-819d-5a4daeab4ea9`
+### 2. 응답 처리 및 확인
 
-...when the user successsfully authenticates, the login page would redirect to...: `https://mydemoapp.com/oauth/receive-token#state=a4e0761e-8c21-4e20-819d-5a4daeab4ea9&token={JWT}` where `{JWT}` is a [JSON web token](https://jwt.io/introduction) containing the user's encoded profile information and a signature.
 
-> If you specified `response_mode=query` when opening the login page, the login page would instead redirect to...:
+
+#### **리디렉션 URI**을 사용한 경우:
+
+사용자가 성공적으로 인증되면 Audius로 로그인 페이지는 지정한 리디렉션 URI로 리디렉션됩니다. **은 1) 사용자 프로필이 포함된 JWT, 2) 제공한 원래 상태 값(있는 경우)이 URI 조각** (또는 쿼리 문자열, `response_mode` 이 `쿼리`로 설정된 경우). 설명을 위해 다음 URL을 사용하여 로그인 페이지를 연 위의 예에서 벗어나십시오. `https://audius.co/oauth/auth?scope=read&app_name=My%20Demo%20App&redirect_uri=https:/ /mydemoapp.com/oauth/receive-token&상태=a4e0761e-8c21-4e20-819d-5a4daeab4ea9`
+
+...사용자가 성공적으로 인증되면 로그인 페이지가 다음으로 리디렉션됩니다. `https://mydemoapp.com/oauth/receive-token#state=a4e0761e-8c21-4e20-819d-5a4daeab4ea9&token={JWT}` 여기서 `{JWT}` 은 사용자의 인코딩된 프로필 정보와 서명을 포함하는 [JSON 웹 토큰](https://jwt.io/introduction) 입니다.
+
+
+
+> 로그인 페이지를 열 때 `response_mode=query` 을 지정한 경우 로그인 페이지는 다음으로 리디렉션됩니다.
 > 
-> `https://mydemoapp.com/oauth/receive-token?state=a4e0761e-8c21-4e20-819d-5a4daeab4ea9&token={JWT}`
+> `https://mydemoapp.com/oauth/receive-token?state=a4e0761e-8c21-4e20-819d-5a4daeab4ea9&토큰={JWT}`
 
-See "**Handling the response**" below for what to do next.
+다음에 수행할 작업은 아래의 "**응답 처리**"을 참조하십시오.
 
 <br />
 
-#### **If you used `redirectURI=postmessage`**:
 
-When the user has successfully authenticated, the Log in with Audius page will send a message via `window.postMessage` to the window that opened it. The message will contain a JWT containing the user profile as well as whatever `state` value you originally specified in the corresponding URL param, if any. For instance, if your app opened the login page using the following URL: `https://audius.co/oauth/auth?scope=read&app_name=My%20Demo%20App&redirect_uri=https://mydemoapp.com/oauth/receive-token&state=a4e0761e-8c21-4e20-819d-5a4daeab4ea9`
 
-... the message would look like this:
+#### ** `redirectURI=postmessage`**을 사용한 경우:
+
+사용자가 성공적으로 인증되면 Audius로 로그인 페이지는 `window.postMessage` 을 통해 이를 연 창으로 메시지를 보냅니다. 메시지에는 사용자 프로필과 해당 URL 매개변수(있는 경우)에 원래 지정한 `상태` 값이 포함된 JWT가 포함됩니다. 예를 들어 앱이 다음 URL을 사용하여 로그인 페이지를 연 경우: `https://audius.co/oauth/auth?scope=read&app_name=My%20Demo%20App&redirect_uri=https://mydemoapp.com/ oauth/receive-token&상태=a4e0761e-8c21-4e20-819d-5a4daeab4ea9`
+
+... 메시지는 다음과 같습니다.
+
+
 
 ```
 {
-  token: <JWT>,
-  state: 'a4e0761e-8c21-4e20-819d-5a4daeab4ea9'
+  토큰: <JWT>,
+  상태: 'a4e0761e-8c21-4e20-819d-5a4daeab4ea9'
 }
 ```
 
-where `<JWT>` is a [JSON web token](https://jwt.io/introduction) containing the user's encoded profile information and a signature.
 
-Quick reminder - make sure that your `postMessage` event listener validates that the origin of the incoming event is `https://audius.co`!
+여기서 `<JWT>` 는 사용자의 인코딩된 프로필 정보와 서명을 포함하는 [JSON 웹 토큰](https://jwt.io/introduction) 입니다.
+
+빠른 알림 - `postMessage` 이벤트 리스너가 들어오는 이벤트의 출처가 `https://audius.co`인지 확인하십시오!
 
 <br />
 
-#### **Handling the response**
 
-Extract the JWT (`token`) from the URI fragment or query string (if you used a redirect) or the event message (if you used `postmessage`).
 
-Once you have the token, you must send it to the following Audius API endpoint in order to verify that a) the signature was signed by the Audius user who completed the authentication, and b) the content of the token hasn't been tampered with. Upon verifying the validity of the JWT, the endpoint will return the authenticated user's decoded profile information.
+#### **응답 처리**
+
+URI 조각 또는 쿼리 문자열(리디렉션을 사용한 경우) 또는 이벤트 메시지( `postmessage`을 사용한 경우)에서 JWT(`토큰`)를 추출합니다.
+
+토큰이 있으면 a) 인증을 완료한 Audius 사용자가 서명에 서명했는지, b) 토큰 내용이 변조되지 않았는지 확인하기 위해 다음 Audius API 엔드포인트로 토큰을 보내야 합니다. . JWT의 유효성을 확인하면 끝점은 인증된 사용자의 디코딩된 프로필 정보를 반환합니다.
 
 <ins>GET `/v1/users/verify_token?token=[JWT]`</ins>
 
-**Params**
+**매개변수**
 
-- token `string` - the JWT from the authentication flow that you would like to verify
+- 토큰 `문자열` - 확인하려는 인증 흐름의 JWT
 
-**Sending the request**
+**요청 보내기**
 
-To use the API, you first select an API endpoint from the list of endpoints returned by:
+API를 사용하려면 먼저 다음에서 반환된 엔드포인트 목록에서 API 엔드포인트를 선택합니다.
 
 `GET https://api.audius.co`
 
-Once you've selected a host, all API requests can be sent directly to it. For instance, if you picked this host: `https://audius-dp.singapore.creatorseed.com`, you would issue the verify token request to `https://audius-dp.singapore.creatorseed.com/v1/users/verify_token?token=<JWT>`, where `<JWT>` is replaced with the JWT you retrieved in the auth flow.
+호스트를 선택하면 모든 API 요청을 호스트로 직접 보낼 수 있습니다. 예를 들어 `https://audius-dp.singapore.creatorseed.com`호스트를 선택한 경우 `https://audius-dp.singapore.creatorseed.com/v1에 토큰 확인 요청을 발행합니다. /users/verify_token?token=<JWT>`, 여기서 `<JWT>` 은 인증 흐름에서 검색한 JWT로 대체됩니다.
 
-We recommend selecting a host each time your application starts up as availability may change over time.
+시간이 지남에 따라 가용성이 변경될 수 있으므로 애플리케이션이 시작될 때마다 호스트를 선택하는 것이 좋습니다.
 
-**Success response**
+**성공 응답**
 
-- Code: 200 OK
-- Content: The decoded JWT payload, which contains the user's profile information:
+- 코드: 200 OK
+- 콘텐츠: 사용자 프로필 정보가 포함된 디코딩된 JWT 페이로드:
+
+
 
 ```typescript
 {
-  userId: number, // unique Audius user identifier
-  email: string,
-  name: string, // user's display name
-  handle: string,
-  verified: boolean, // whether the user has the Audius "verified" checkmark
+  userId: 숫자, // 고유한 Audius 사용자 식별자
+  이메일: 문자열,
+  이름: 문자열, // 사용자의 표시 이름
+  핸들: 문자열,
+  확인됨: 부울, // 사용자에게 Audius "확인됨" 체크 표시가 있는지 여부
 
-  /** URLs for the user's profile picture, if any.
-   * In the vast majority of cases, three sizes will be available - 150x150, 480x480, and 1000x1000.
-  * In rare cases, only an unknown size `misc` will be available.
-  * If the user has no profile picture, this field will be empty.
+  /** 사용자 프로필 사진의 URL(있는 경우).
+   * 대부분의 경우 150x150, 480x480 및 1000x1000의 세 가지 크기를 사용할 수 있습니다.
+  * 드문 경우지만 알 수 없는 크기의 '기타'만 사용할 수 있습니다.
+  * 사용자에게 프로필 사진이 없는 경우 이 필드는 비어 있습니다.
   */
-  profilePicture: {"150x150": string, "480x480": string, "1000x1000": string } | { misc: string } | undefined | null
-  sub: number, // alias for userId
-  iat: string, // timestamp for when auth was performed
+  profilePicture: {"150x150": 문자열, "480x480": 문자열, "1000x1000": 문자열 } | { misc: string } | 정의되지 않은 | null
+  sub: number, // userId
+  의 별칭 iat: string, // 인증이 수행된 시간의 타임스탬프
 }
 ```
 
-**Error responses**
 
-<ins>Invalid signature</ins>:
+**오류 응답**
 
-- Code: `404` Not Found
-- Content: Error message describing the issue that occurred, e.g. "The JWT signature is invalid - wallet could not be recovered."
+<ins>유효하지 않은 서명</ins>:
 
-<ins>Problem with `token` input</ins>:
+- 코드: `404` 찾을 수 없음
+- 내용: 발생한 문제를 설명하는 오류 메시지(예: "JWT 서명이 잘못되었습니다. 지갑을 복구할 수 없습니다.")
 
-- Code: `400` Bad Request
-- Content: Error message, e.g. "the JWT signature could not be decoded."
+<ins>`token` 입력</ins>문제:
+
+- 코드: `400` 잘못된 요청
+- 내용: 오류 메시지(예: "JWT 서명을 디코딩할 수 없습니다.")
 
 <br />
 
-### 3. Done!
 
-Once you've verified the JWT, the authentication flow is complete and you now have your user's Audius profile information.
 
-### Addendum: A quick note on email
+### 삼. 완료!
 
-Once you know your user's Audius user id, you can retrieve their Audius information at any time using our SDK or web APIs. However, the one piece of profile information that is not available outside of the Log in with Audius response is the user's email address. If you do not store the user's email address after you receive it in the Log in with Audius success response, you can only re-retrieve the email through having the user re-complete the Log in with Audius flow.
+JWT를 확인하면 인증 흐름이 완료되고 이제 사용자의 Audius 프로필 정보가 생깁니다.
+
+
+
+### 부록: 이메일에 대한 간단한 메모
+
+사용자의 Audius 사용자 ID를 알게 되면 SDK 또는 웹 API를 사용하여 언제든지 Audius 정보를 검색할 수 있습니다. 그러나 Audius로 로그인 응답 외부에서 사용할 수 없는 프로필 정보 중 하나는 사용자의 이메일 주소입니다. Audius로 로그인 성공 응답을 받은 후 사용자의 이메일 주소를 저장하지 않으면 사용자가 Audius로 로그인 흐름을 다시 완료하도록 해야만 이메일을 다시 검색할 수 있습니다.
