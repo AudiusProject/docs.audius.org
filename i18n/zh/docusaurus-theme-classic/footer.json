@@ -1,18 +1,18 @@
 {
   "link.title.Docs": {
-    "message": "Docs",
+    "message": "文档",
     "description": "The title of the footer links column with title=Docs in the footer"
   },
   "link.title.Community": {
-    "message": "Community",
+    "message": "社区",
     "description": "The title of the footer links column with title=Community in the footer"
   },
   "link.title.More": {
-    "message": "More",
+    "message": "更多的",
     "description": "The title of the footer links column with title=More in the footer"
   },
   "link.item.label.Overview": {
-    "message": "Overview",
+    "message": "概述",
     "description": "The label of footer link with label=Overview linking to protocol/overview"
   },
   "link.item.label.API": {
@@ -20,11 +20,11 @@
     "description": "The label of footer link with label=API linking to api/rest-api"
   },
   "link.item.label.Discord": {
-    "message": "Discord",
+    "message": "不和谐",
     "description": "The label of footer link with label=Discord linking to https://discord.com/invite/audius"
   },
   "link.item.label.Twitter": {
-    "message": "Twitter",
+    "message": "推特",
     "description": "The label of footer link with label=Twitter linking to https://twitter.com/AudiusProject"
   },
   "link.item.label.GitHub": {
@@ -32,15 +32,15 @@
     "description": "The label of footer link with label=GitHub linking to https://github.com/AudiusProject"
   },
   "copyright": {
-    "message": "Copyright © 2021 Audius, Inc. Built with Docusaurus.",
+    "message": "版权所有 © 2021 Audius, Inc. 使用 Docusaurus 构建。",
     "description": "The footer copyright"
   },
   "link.item.label.Welcome": {
-    "message": "Welcome",
+    "message": "欢迎",
     "description": "The label of footer link with label=Welcome linking to welcome"
   },
   "link.item.label.Protocol Overview": {
-    "message": "Protocol Overview",
+    "message": "协议概述",
     "description": "The label of footer link with label=Protocol Overview linking to protocol/overview"
   }
 }
