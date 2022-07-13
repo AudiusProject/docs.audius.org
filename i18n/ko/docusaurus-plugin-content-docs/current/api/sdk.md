@@ -1,139 +1,139 @@
 ---
-sidebar_label: Audius SDK
-sidebar_position: 3
+sidebar_label: 오디우스 SDK
+sidebar_position: 삼
 ---
 
-# Audius Javascript SDK
+# 오디우스 자바스크립트 SDK
 
-## Table of contents
-- [Overview](#overview)
-- [Installation](#installation)
-  - [In the browser/Vanilla JS](#in-the-browservanilla-js)
-  - [In Node.js](#in-nodejs)
-  - [Important: include Web3.js](#important-include-web3js)
-- [Initialization](#initialization)
-  - [In the browser/Vanilla JS](#in-the-browservanilla-js-1)
-  - [In Node.js](#in-nodejs-1)
+## 목차
+- [개요](#overview)
+- [설치](#installation)
+  - [브라우저/Vanilla JS에서](#in-the-browservanilla-js)
+  - [Node.js에서](#in-nodejs)
+  - [중요: Web3.js 포함](#important-include-web3js)
+- [초기화](#initialization)
+  - [브라우저/Vanilla JS에서](#in-the-browservanilla-js-1)
+  - [Node.js에서](#in-nodejs-1)
 
-## Overview
+## 개요
 
-The Audius SDK allows you to easily build upon and interact with the Audius network. Currently, we only have a Typescript/Javascript SDK.
+Audius SDK를 사용하면 Audius 네트워크를 쉽게 구축하고 상호 작용할 수 있습니다. 현재 Typescript/Javascript SDK만 있습니다.
 
-We're actively working on building out more SDK features and functionality - stay tuned!
+더 많은 SDK 기능을 구축하기 위해 적극적으로 노력하고 있습니다. 계속 지켜봐 주시기 바랍니다!
 
 <br />
 
-## Installation
+## 설치
 
-### In the browser/Vanilla JS
+### 브라우저/Vanilla JS에서
 
-To use the Audius SDK in the browser, simply add the following script tag to your HTML pages:
+브라우저에서 Audius SDK를 사용하려면 HTML 페이지에 다음 스크립트 태그를 추가하기만 하면 됩니다.
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@audius/sdk@latest/dist/sdk.min.js"></script>
 ```
 
-The Audius SDK will then be assigned to `window.audiusSdk`.
+그러면 Audius SDK가 `window.audiusSdk`에 할당됩니다.
 
-### In Node.js
+### Node.js에서
 
-Install the SDK package using your preferred JS package manager.
+선호하는 JS 패키지 관리자를 사용하여 SDK 패키지를 설치합니다.
 
-Example:
+예시:
 
 ```bash
 npm install @audius/sdk
 ```
 
-### Important: include Web3.js
+### 중요: Web3.js 포함
 
-In a browser environment, you must install [web3.js](https://github.com/ChainSafe/web3.js) separately and ensure that it is present on the window object at `window.Web3`.
+브라우저 환경에서는 [web3.js](https://github.com/ChainSafe/web3.js) 을 별도로 설치하고 `window.Web3`의 window 객체에 존재하는지 확인해야 합니다.
 
-In-browser example:
+브라우저 내 예:
 
 ```HTML
-<!-- Include this BEFORE the Audius SDK script -->
+<!-- Audius SDK 스크립트 전에 이것을 포함하십시오 -->
 <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
 ```
 
-Node.js example:
+Node.js 예시:
 
 ```JS
-// Make sure to run `npm install web3`
+// `npm install web3`을 실행해야 합니다.
 const Web3 = require("web3");
 
-window.Web3 = Web3;
+창.Web3 = Web3;
 ```
 
-## Initialization
+## 초기화
 
-To initialize the SDK, simply call the SDK constructor and pass in the name of your app. Note that the constructor is asynchronous.
+SDK를 초기화하려면 SDK 생성자를 호출하고 앱 이름을 전달하기만 하면 됩니다. 생성자는 비동기식입니다.
 
-### In the browser/Vanilla JS
+### 브라우저/Vanilla JS에서
 
-Example code:
+예제 코드:
 
 ```HTML
 <script>
-  var sdk;
+  var SDK;
   async function init() {
-    // This is how you initialize the SDK:
+    // SDK를 초기화하는 방법은 다음과 같습니다.
     sdk = await window.audiusSdk({ appName: "<Name of your app here>" });
   }
 
-  async function doStuff() {
-    await init();
-    // Now you can call SDK methods, for example:
-    const tracks = await sdk.discoveryNode.getTracks()
-    console.log("Got tracks!", tracks)
+  비동기 함수 doStuff() {
+    init()를 기다립니다.
+    // 이제 다음과 같이 SDK 메서드를 호출할 수 있습니다.
+    const track = await sdk.discoveryNode.getTracks()
+    console.log("Got track!",tracks)
   }
 
   doStuff()
 </script>
 ```
 
-### In Node.js
+### Node.js에서
 
-Example code:
+예제 코드:
 
 ```Javascript
 // audiusSdk.js
 import { sdk } from "@audius/sdk";
 
-let audiusSdk = null;
+audiusSdk = null;
 
 const initAudiusSdk = async () => {
-  // This is how you initialize the SDK:
+  // SDK를 초기화하는 방법은 다음과 같습니다.
   const instance = await sdk({ appName: "<Name of your app here>" });
 
-  // For convenience, you can dispatch an event to broadcast that the SDK is ready
+  // 편의를 위해 SDK가 준비되었음을 알리는 이벤트를 전달할 수 있습니다.
   const event = new CustomEvent("SDK_READY");
-  window.dispatchEvent(event);
-  audiusSdk = instance;
+  window.dispatchEvent(이벤트);
+  audiusSdk = 인스턴스;
 };
 
-// Convenient function to help determine if the SDK is ready
+// SDK가 준비되었는지 판단하는 데 도움이 되는 편리한 함수
 const waitForSdk = () => {
   return new Promise((resolve) => {
     if (audiusSdk) resolve();
-    window.addEventListener("SDK_READY", resolve);
+    window.addEventListener("SDK_READY") , 해결),
   });
 }
 
 initAudiusSdk();
 
-export { audiusSdk, waitForSdk };
+수출 { audiusSdk, waitForSdk };
 ```
 
 ```Javascript
 // anotherFile.js
 import { audiusSdk, waitForSdk } from "./audiusSdk";
 
-const doStuff = async () => {
-  await waitForSdk();
-  // Now you can call SDK methods, for example:
+const doStuff = async() => {
+  waitForSdk()를 기다립니다.
+  // 이제 SDK 메서드를 호출할 수 있습니다. 예를 들면 다음과 같습니다.
   const tracks = await audiusSdk.discoveryNode.getTracks();
-  console.log("Got tracks!", tracks);
+  console.log("트랙이 있습니다!", track);
 }
 
 doStuff();
