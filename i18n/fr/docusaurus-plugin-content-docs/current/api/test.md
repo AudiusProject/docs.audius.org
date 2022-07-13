@@ -15,15 +15,15 @@ curl AUDIUS_API_HOST/v1/users/associated_wallets?id=string
 ```
 
 ```http
-GET AUDIUS_API_HOST/v1/users/associated_wallets?id=string HTTP/1.1
+GET AUDIUS_API_HOST/v1/users/associated_wallets?id=chaîne HTTP/1.1
 
 ```
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
 fetch('AUDIUS_API_HOST/v1/users/associated_wallets?id=string',
 {
@@ -34,7 +34,7 @@ fetch('AUDIUS_API_HOST/v1/users/associated_wallets?id=string',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console .log(corps);
 });
 
 ```
@@ -48,16 +48,16 @@ headers = {
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/users/associated_wallets',
-  params: {
-  'id' => 'string'
-}, headers: headers
+  paramètres : {
+  ' id' => 'chaîne'
+}, en-têtes : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
+demandes d'importation
 headers = {
   'Accept': 'application/json'
 }
@@ -66,25 +66,25 @@ r = requests.get('AUDIUS_API_HOST/v1/users/associated_wallets', params={
   'id': 'string'
 }, headers = headers)
 
-print(r.json())
+print(r.json( ))
 
 ```
 
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/users/associated_wallets', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -93,7 +93,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -102,14 +102,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/users/associated_wallets?id=string");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/users/associated_wallets?id=string");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -147,9 +147,9 @@ func main() {
 
 <h3 id="get-the-user's-id-by-associated-wallet-parameters">Paramètres de requête</h3>
 
-| Name | Type   | Required | Description     |
-| ---- | ------ | -------- | --------------- |
-| id   | string | true     | Encoded User ID |
+| Nom         | Taper                | Obligatoire | La description      |
+| ----------- | -------------------- | ----------- | ------------------- |
+| identifiant | chaîne de caractères | vrai        | ID utilisateur codé |
 
 > Exemple de réponse
 
@@ -170,11 +170,11 @@ func main() {
 
 <h3 id="get-the-user's-id-by-associated-wallet-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                                              |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [associated_wallets_response](#schemaassociated_wallets_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                |
+| Statut | Sens                                                                           | La description    | Schéma                                                                 |
+| ------ | ------------------------------------------------------------------------------ | ----------------- | ---------------------------------------------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | Succès            | [réponse_portefeuilles_associés](#schemaassociated_wallets_response) |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande  | Aucun                                                                  |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur | Aucun                                                                  |
 
 ## Obtenir l'identifiant de l'utilisateur par portefeuille associé
 
@@ -195,9 +195,9 @@ GET AUDIUS_API_HOST/v1/users/id?associated_wallet=string HTTP/1.1
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
 fetch('AUDIUS_API_HOST/v1/users/id?associated_wallet=string',
 {
@@ -208,30 +208,30 @@ fetch('AUDIUS_API_HOST/v1/users/id?associated_wallet=string',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console .log(corps);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+requiert 'rest-client'
+requiert 'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/users/id',
-  params: {
-  'associated_wallet' => 'string'
-}, headers: headers
+  params : {
+  ' associate_wallet' => 'string'
+}, en-têtes : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
+requêtes d'importation
 headers = {
   'Accept': 'application/json'
 }
@@ -240,25 +240,25 @@ r = requests.get('AUDIUS_API_HOST/v1/users/id', params={
   'associated_wallet': 'string'
 }, headers = headers)
 
-print(r.json())
+print(r.json( ))
 
 ```
 
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/users/id', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -267,7 +267,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -276,14 +276,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/users/id?associated_wallet=string");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/users/id?associated_wallet=string");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -317,13 +317,13 @@ func main() {
 
 ```
 
-`GET /users/id`
+`GET /utilisateurs/identifiant`
 
 <h3 id="get-the-user's-associated-wallets-parameters">Paramètres de requête</h3>
 
-| Name              | Type   | Required | Description    |
-| ----------------- | ------ | -------- | -------------- |
-| associated_wallet | string | true     | Wallet address |
+| Nom                  | Taper                | Obligatoire | La description          |
+| -------------------- | -------------------- | ----------- | ----------------------- |
+| portefeuille_associé | chaîne de caractères | vrai        | Adresse du portefeuille |
 
 > Exemple de réponse
 
@@ -331,19 +331,19 @@ func main() {
 
 ```json
 {
-  "data": {
-    "user_id": "string"
+  "données": {
+    "id_utilisateur": "chaîne"
   }
 }
 ```
 
 <h3 id="get-the-user's-associated-wallets-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                                                      |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [user_associated_wallet_response](#schemauser_associated_wallet_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                        |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                        |
+| Statut | Sens                                                                           | La description    | Schéma                                                                      |
+| ------ | ------------------------------------------------------------------------------ | ----------------- | --------------------------------------------------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | Succès            | [user_associated_wallet_response](#schemauser_associated_wallet_response) |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande  | Aucun                                                                       |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur | Aucun                                                                       |
 
 ## Recherche d'utilisateurs
 
@@ -364,9 +364,9 @@ GET AUDIUS_API_HOST/v1/users/search?query=Brownies HTTP/1.1
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
 fetch('AUDIUS_API_HOST/v1/users/search?query=Brownies',
 {
@@ -377,30 +377,30 @@ fetch('AUDIUS_API_HOST/v1/users/search?query=Brownies',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console .log(corps);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+requiert 'rest-client'
+requiert 'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/users/search',
-  params: {
-  'query' => 'string'
-}, headers: headers
+  paramètres : {
+  ' requête' => 'chaîne'
+}, en-têtes : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
+requêtes d'importation
 headers = {
   'Accept': 'application/json'
 }
@@ -409,25 +409,25 @@ r = requests.get('AUDIUS_API_HOST/v1/users/search', params={
   'query': 'Brownies'
 }, headers = headers)
 
-print(r.json())
+print(r.json( ))
 
 ```
 
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essayez {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/users/search', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -436,7 +436,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -445,14 +445,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/users/search?query=Brownies");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/users/search?query=Brownies");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -486,16 +486,16 @@ func main() {
 
 ```
 
-`GET /users/search`
+`GET /utilisateurs/recherche`
 
 *Recherche d'un utilisateur*
 
 <h3 id="search-users-parameters">Paramètres de requête</h3>
 
-| Name              | Type   | Required | Description  |
-| ----------------- | ------ | -------- | ------------ |
-| query             | string | true     | Search query |
-| only_downloadable | string | false    | none         |
+| Nom               | Taper                | Obligatoire | La description       |
+| ----------------- | -------------------- | ----------- | -------------------- |
+| requête           | chaîne de caractères | vrai        | Requête de recherche |
+| only_downloadable | chaîne de caractères | faux        | rien                 |
 
 > Exemple de réponse
 
@@ -504,23 +504,23 @@ func main() {
   "data": [
     {
       "album_count": 0,
-      "bio": "Makin' moves & keeping you on your toes. linktr.ee/browniesandlemonade",
+      "bio": "Faire &  mouvements pour rester éveillé. linktr.ee/browniesandlemonade",
       "cover_photo": {
         "640x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/640x.jpg",
-        "2000x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
+        "2000x": "https://creatornode. audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
       },
       "followee_count": 19,
       "follower_count": 11141,
       "handle": "TeamBandL",
       "id": "nlGNe",
-      "is_verified": true,
-      "location": "Los Angeles, CA",
+      "is_verified " : vrai,
+      "location": "Los Angeles, Californie",
       "name": "Brownies & Lemonade",
       "playlist_count": 2,
       "profile_picture": {
-        "150x150": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
+        "150x150": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
         "480x480": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/480x480.jpg",
-        "1000x1000": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
+        "1000x1000": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
       },
       "repost_count": 5,
       "track_count": 4
@@ -531,11 +531,11 @@ func main() {
 
 <h3 id="search-users-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                            |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [user_search](#schemauser_search) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                              |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                              |
+| Statut | Sens                                                                           | La description    | Schéma                                      |
+| ------ | ------------------------------------------------------------------------------ | ----------------- | ------------------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | rien              | [recherche_utilisateur](#schemauser_search) |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande  | Aucun                                       |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur | Aucun                                       |
 
 ## Accéder à un utilisateur
 
@@ -556,9 +556,9 @@ GET AUDIUS_API_HOST/v1/users/nlGNe HTTP/1.1
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
 fetch('AUDIUS_API_HOST/v1/users/nlGNe',
 {
@@ -569,29 +569,29 @@ fetch('AUDIUS_API_HOST/v1/users/nlGNe',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log(body );
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+requiert 'rest-client'
+requiert 'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/users/nlGNe',
-  params: {
-  }, headers: headers
+  paramètres : {
+  }, headers : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
+requêtes d'importation
 headers = {
   'Accept': 'application/json'
 }
@@ -605,18 +605,18 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/users/nlGNe', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -625,7 +625,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -634,14 +634,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/users/nlGNe");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/users/nlGNe");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -675,15 +675,15 @@ func main() {
 
 ```
 
-`GET /users/{user_id}`
+`GET /utilisateurs/{user_id}`
 
 *Récupérer un seul utilisateur*
 
 <h3 id="get-user-parameters">Paramètres de requête</h3>
 
-| Name    | Type   | Required | Description |
-| ------- | ------ | -------- | ----------- |
-| user_id | string | true     | A User ID   |
+| Nom                       | Taper                | Obligatoire | La description    |
+| ------------------------- | -------------------- | ----------- | ----------------- |
+| identifiant d'utilisateur | chaîne de caractères | vrai        | Un ID utilisateur |
 
 > Exemple de réponse
 
@@ -691,23 +691,23 @@ func main() {
 {
   "data": {
     "album_count": 0,
-    "bio": "Makin' moves & keeping you on your toes. linktr.ee/browniesandlemonade",
+    "bio": "Faire &  mouvements pour rester vigilant. linktr.ee/browniesandlemonade",
     "cover_photo": {
       "640x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/640x.jpg",
-      "2000x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
+      "2000x": "https://creatornode. audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
     },
     "followee_count": 19,
     "follower_count": 11141,
     "handle": "TeamBandL",
     "id": "nlGNe",
-    "is_verified": true,
-    "location": "Los Angeles, CA",
+    "is_verified " : vrai,
+    "location": "Los Angeles, Californie",
     "name": "Brownies & Lemonade",
     "playlist_count": 2,
     "profile_picture": {
-      "150x150": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
+      "150x150": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
       "480x480": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/480x480.jpg",
-      "1000x1000": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
+      "1000x1000": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
     },
     "repost_count": 5,
     "track_count": 4
@@ -717,11 +717,11 @@ func main() {
 
 <h3 id="get-user-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [user_response](#schemauser_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                  |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                  |
+| Statut | Sens                                                                           | La description    | Schéma                                |
+| ------ | ------------------------------------------------------------------------------ | ----------------- | ------------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | rien              | [user_response](#schemauser_response) |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande  | Aucun                                 |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur | Aucun                                 |
 
 ## ID de l'utilisateur
 
@@ -742,9 +742,9 @@ GET AUDIUS_API_HOST/v1/users/string/challenges HTTP/1.1
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
 fetch('AUDIUS_API_HOST/v1/users/string/challenges',
 {
@@ -755,29 +755,29 @@ fetch('AUDIUS_API_HOST/v1/users/string/challenges',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log (corps);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+requiert 'rest-client'
+requiert 'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/users/string/challenges',
-  params: {
-  }, headers: headers
+  paramètres : {
+  }, en-têtes : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
+requêtes d'importation
 headers = {
   'Accept': 'application/json'
 }
@@ -791,18 +791,18 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/users/string/challenges', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -811,7 +811,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -820,14 +820,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/users/string/challenges");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/users/string/challenges");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -852,7 +852,7 @@ func main() {
 
     data := bytes.NewBuffer([]byte{jsonReq})
     req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/users/string/challenges", data)
-    req.Header = headers
+    req.Header = en-têtes
 
     client := &http.Client{}
     resp, err := client.Do(req)
@@ -861,14 +861,14 @@ func main() {
 
 ```
 
-`GET /users/{user_id}/challenges`
+`GET /utilisateurs/{user_id}/défis`
 
 <h3 id="the-users's-id-parameters">Paramètres de requête</h3>
 
-| Name            | Type   | Required | Description                                                |
-| --------------- | ------ | -------- | ---------------------------------------------------------- |
-| show_historical | string | false    | Whether to show challenges that are inactive but completed |
-| user_id         | string | true     | none                                                       |
+| Nom                       | Taper                | Obligatoire | La description                                              |
+| ------------------------- | -------------------- | ----------- | ----------------------------------------------------------- |
+| show_historical           | chaîne de caractères | faux        | Indique s'il faut afficher les défis inactifs mais terminés |
+| identifiant d'utilisateur | chaîne de caractères | vrai        | rien                                                        |
 
 > Exemple de réponse
 
@@ -881,9 +881,9 @@ func main() {
       "challenge_id": "string",
       "user_id": "string",
       "specifier": "string",
-      "is_complete": true,
-      "is_active": true,
-      "is_disbursed": true,
+      "is_complete": vrai,
+      "is_active": vrai,
+      "is_disbursed": vrai,
       "current_step_count": 0,
       "max_steps": 0,
       "challenge_type": "string",
@@ -895,11 +895,11 @@ func main() {
 
 <h3 id="the-users's-id-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                  |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [get_challenges](#schemaget_challenges) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                    |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                    |
+| Statut | Sens                                                                           | La description    | Schéma                                  |
+| ------ | ------------------------------------------------------------------------------ | ----------------- | --------------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | Succès            | [get_challenges](#schemaget_challenges) |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande  | Aucun                                   |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur | Aucun                                   |
 
 ## Obtenez les titres préférés des utilisateurs
 
@@ -908,7 +908,7 @@ func main() {
 > Exemple de code
 
 ```shell
-curl AUDIUS_API_HOST/v1/users/nlGNe/favorites 
+curl AUDIUS_API_HOST/v1/users/nlGNe/favoris 
 
 
 ```
@@ -920,9 +920,9 @@ GET AUDIUS_API_HOST/v1/users/nlGNe/favorites HTTP/1.1
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
 fetch('AUDIUS_API_HOST/v1/users/nlGNe/favorites',
 {
@@ -933,29 +933,29 @@ fetch('AUDIUS_API_HOST/v1/users/nlGNe/favorites',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log (corps);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+requiert 'rest-client'
+requiert 'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/users/nlGNe/favorites',
-  params: {
-  }, headers: headers
+  paramètres : {
+  }, en-têtes : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
+requêtes d'importation
 headers = {
   'Accept': 'application/json'
 }
@@ -969,18 +969,18 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/users/nlGNe/favorites', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -989,7 +989,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -998,14 +998,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/users/nlGNe/favorites");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/users/nlGNe/favorites");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -1039,15 +1039,15 @@ func main() {
 
 ```
 
-`GET /users/{user_id}/favorites`
+`GET /utilisateurs/{user_id}/favoris`
 
 *Récupérer les titres favoris d'un utilisateur*
 
 <h3 id="get-user's-favorite-tracks-parameters">Paramètres de requête</h3>
 
-| Name    | Type   | Required | Description |
-| ------- | ------ | -------- | ----------- |
-| user_id | string | true     | A User ID   |
+| Nom                       | Taper                | Obligatoire | La description    |
+| ------------------------- | -------------------- | ----------- | ----------------- |
+| identifiant d'utilisateur | chaîne de caractères | vrai        | Un ID utilisateur |
 
 > Exemple de réponse
 
@@ -1060,7 +1060,7 @@ func main() {
       "user_id": "nlGNe"
     },
     {
-      "favorite_item_id": "nlv5l",
+      "favorite_item_id": "nlv5l" ,
       "favorite_type": "SaveType.track",
       "user_id": "nlGNe"
     },
@@ -1075,11 +1075,11 @@ func main() {
 
 <h3 id="get-user's-favorite-tracks-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                          |
-| ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [favorites_response](#schemafavorites_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                            |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                            |
+| Statut | Sens                                                                           | La description    | Schéma                                       |
+| ------ | ------------------------------------------------------------------------------ | ----------------- | -------------------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | rien              | [favoris_réponse](#schemafavorites_response) |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande  | Aucun                                        |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur | Aucun                                        |
 
 ## Obtenir les publications de l'utilisateur
 
@@ -1100,9 +1100,9 @@ GET AUDIUS_API_HOST/v1/users/string/reposts HTTP/1.1
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
 fetch('AUDIUS_API_HOST/v1/users/string/reposts',
 {
@@ -1113,29 +1113,29 @@ fetch('AUDIUS_API_HOST/v1/users/string/reposts',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log (corps);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+requiert 'rest-client'
+requiert 'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/users/string/reposts',
-  params: {
-  }, headers: headers
+  paramètres : {
+  }, en-têtes : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
+requêtes d'importation
 headers = {
   'Accept': 'application/json'
 }
@@ -1149,18 +1149,18 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/users/string/reposts', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -1169,7 +1169,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -1178,14 +1178,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/users/string/reposts");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/users/string/reposts");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -1210,7 +1210,7 @@ func main() {
 
     data := bytes.NewBuffer([]byte{jsonReq})
     req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/users/string/reposts", data)
-    req.Header = headers
+    req.Header = en-têtes
 
     client := &http.Client{}
     resp, err := client.Do(req)
@@ -1219,15 +1219,15 @@ func main() {
 
 ```
 
-`GET /users/{user_id}/reposts`
+`GET /utilisateurs/{user_id}/reposts`
 
 <h3 id="get-user's-reposts-parameters">Paramètres de requête</h3>
 
-| Name    | Type   | Required | Description |
-| ------- | ------ | -------- | ----------- |
-| user_id | string | true     | A User ID   |
-| limit   | string | false    | Limit       |
-| offset  | string | false    | Offset      |
+| Nom                       | Taper                | Obligatoire | La description    |
+| ------------------------- | -------------------- | ----------- | ----------------- |
+| identifiant d'utilisateur | chaîne de caractères | vrai        | Un ID utilisateur |
+| limite                    | chaîne de caractères | faux        | Limite            |
+| décalage                  | chaîne de caractères | faux        | Décalage          |
 
 > Exemple de réponse
 
@@ -1235,11 +1235,11 @@ func main() {
 
 ```json
 {
-  "data": [
+  "données": [
     {
-      "timestamp": "string",
-      "item_type": {},
-      "item": {}
+      "horodatage": "chaîne",
+      "type_élément": {},
+      "élément": {}
     }
   ]
 }
@@ -1247,11 +1247,11 @@ func main() {
 
 <h3 id="get-user's-reposts-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                    |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [reposts](#schemareposts) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                      |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                      |
+| Statut | Sens                                                                           | La description    | Schéma                    |
+| ------ | ------------------------------------------------------------------------------ | ----------------- | ------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | Succès            | [reposts](#schemareposts) |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande  | Aucun                     |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur | Aucun                     |
 
 ## Obtenez les marqueurs de suivi les plus utilisés par les utilisateurs
 
@@ -1272,9 +1272,9 @@ GET AUDIUS_API_HOST/v1/users/string/tags?user_id=string HTTP/1.1
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
 fetch('AUDIUS_API_HOST/v1/users/string/tags?user_id=string',
 {
@@ -1285,7 +1285,7 @@ fetch('AUDIUS_API_HOST/v1/users/string/tags?user_id=string',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log(corps);
 });
 
 ```
@@ -1299,16 +1299,16 @@ headers = {
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/users/string/tags',
-  params: {
+  params : {
   'user_id' => 'string'
-}, headers: headers
+}, en-têtes : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
+requêtes d'importation
 headers = {
   'Accept': 'application/json'
 }
@@ -1317,25 +1317,25 @@ r = requests.get('AUDIUS_API_HOST/v1/users/string/tags', params={
   'user_id': 'string'
 }, headers = headers)
 
-print(r.json())
+print(r. json())
 
 ```
 
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/users/string/tags', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -1344,7 +1344,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -1353,14 +1353,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/users/string/tags?user_id=string");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/users/string/tags?user_id=string");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -1385,7 +1385,7 @@ func main() {
 
     data := bytes.NewBuffer([]byte{jsonReq})
     req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/users/string/tags", data)
-    req.Header = headers
+    req.Header = en-têtes
 
     client := &http.Client{}
     resp, err := client.Do(req)
@@ -1394,17 +1394,17 @@ func main() {
 
 ```
 
-`GET /users/{user_id}/tags`
+`GET /utilisateurs/{user_id}/tags`
 
 *Récupérer les marqueurs les plus utilisés dans les pistes d'un utilisateur*
 
 <h3 id="get-user's-most-used-track-tags-parameters">Paramètres de requête</h3>
 
-| Name    | Type    | Required | Description                 |
-| ------- | ------- | -------- | --------------------------- |
-| user_id | string  | true     | A User ID                   |
-| limit   | integer | false    | Limit on the number of tags |
-| user_id | string  | true     | none                        |
+| Nom                       | Taper                | Obligatoire | La description                  |
+| ------------------------- | -------------------- | ----------- | ------------------------------- |
+| identifiant d'utilisateur | chaîne de caractères | vrai        | Un ID utilisateur               |
+| limite                    | entier               | faux        | Limitation du nombre de balises |
+| identifiant d'utilisateur | chaîne de caractères | vrai        | rien                            |
 
 > Exemple de réponse
 
@@ -1412,19 +1412,19 @@ func main() {
 
 ```json
 {
-  "data": [
-    "string"
+  "données": [
+    "chaîne"
   ]
 }
 ```
 
 <h3 id="get-user's-most-used-track-tags-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [tags_response](#schematags_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                  |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                  |
+| Statut | Sens                                                                           | La description    | Schéma                                |
+| ------ | ------------------------------------------------------------------------------ | ----------------- | ------------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | Succès            | [tags_response](#schematags_response) |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande  | Aucun                                 |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur | Aucun                                 |
 
 ## Obtenir les pistes de l'utilisateur
 
@@ -1445,9 +1445,9 @@ GET AUDIUS_API_HOST/v1/users/nlGNe/tracks HTTP/1.1
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
 fetch('AUDIUS_API_HOST/v1/users/nlGNe/tracks',
 {
@@ -1458,29 +1458,29 @@ fetch('AUDIUS_API_HOST/v1/users/nlGNe/tracks',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log (corps);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+requiert 'rest-client'
+requiert 'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/users/nlGNe/tracks',
-  params: {
-  }, headers: headers
+  params : {
+  }, en-têtes : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
+requêtes d'importation
 headers = {
   'Accept': 'application/json'
 }
@@ -1494,18 +1494,18 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/users/nlGNe/tracks', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -1514,7 +1514,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -1523,14 +1523,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/users/nlGNe/tracks");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/users/nlGNe/tracks");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -1555,7 +1555,7 @@ func main() {
 
     data := bytes.NewBuffer([]byte{jsonReq})
     req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/users/nlGNe/tracks", data)
-    req.Header = headers
+    req.Header = en-têtes
 
     client := &http.Client{}
     resp, err := client.Do(req)
@@ -1564,18 +1564,18 @@ func main() {
 
 ```
 
-`GET /users/{user_id}/tracks`
+`GET /utilisateurs/{user_id}/pistes`
 
 *Récupérer une liste de titres pour un utilisateur*
 
 <h3 id="get-user's-tracks-parameters">Paramètres de requête</h3>
 
-| Name    | Type   | Required | Description |
-| ------- | ------ | -------- | ----------- |
-| user_id | string | true     | A User ID   |
-| limit   | string | false    | Limit       |
-| offset  | string | false    | Offset      |
-| sort    | string | false    | Sort mode   |
+| Nom                       | Taper                | Obligatoire | La description    |
+| ------------------------- | -------------------- | ----------- | ----------------- |
+| identifiant d'utilisateur | chaîne de caractères | vrai        | Un ID utilisateur |
+| limite                    | chaîne de caractères | faux        | Limite            |
+| décalage                  | chaîne de caractères | faux        | Décalage          |
+| trier                     | chaîne de caractères | faux        | Mode tri          |
 
 > Exemple de réponse
 
@@ -1585,38 +1585,38 @@ func main() {
     {
       "artwork": {
         "150x150": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/150x150.jpg",
-        "480x480": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/480x480.jpg",
+        "480x480": "https:// creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/480x480.jpg",
         "1000x1000": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/1000x1000.jpg"
       },
-      "description": "@baauer b2b @partyfavormusic live set at Brownies & Lemonade Block Party LA at The Shrine on 7.3.19.",
+      "description": "@baauer b2b @partyfavormusic en direct au Brownies & Lemonade Block Party LA au Shrine le 7.3.19.",
       "genre": "Electronic",
       "id": "D7KyD",
       "mood": "Fiery",
-      "release_date": "Mon Sep 23 2019 12:35:10 GMT-0700",
+      "release_date": "Lun 23 septembre 2019 12:35:10 GMT-0700",
       "repost_count": 47,
       "favorite_count": 143,
       "tags": "baauer,partyfavor,browniesandlemonade,live",
-      "title": "Paauer | Baauer B2B Party Favor | B&L Block Party LA (Live Set)",
+      " title": "Paauer | Baauer B2B Party Favor | B&L Block Party LA (Live Set)",
       "duration": 5265,
       "user": {
         "album_count": 0,
-        "bio": "Makin' moves & keeping you on your toes. linktr.ee/browniesandlemonade",
+        "bio": "Makin ' se déplace & vous gardant sur vos orteils. linktr.ee/browniesandlemonade",
         "cover_photo": {
           "640x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/640x.jpg",
-          "2000x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
+          "2000x": "https://creatornode. audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
         },
         "followee_count": 19,
         "follower_count": 11141,
         "handle": "TeamBandL",
         "id": "nlGNe",
-        "is_verified": true,
-        "location": "Los Angeles, CA",
+        "is_verified " : vrai,
+        "location": "Los Angeles, Californie",
         "name": "Brownies & Lemonade",
         "playlist_count": 2,
         "profile_picture": {
-          "150x150": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
+          "150x150": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
           "480x480": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/480x480.jpg",
-          "1000x1000": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
+          "1000x1000": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
         },
         "repost_count": 5,
         "track_count": 4
@@ -1628,11 +1628,11 @@ func main() {
 
 <h3 id="get-user's-tracks-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                    |
-| ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [tracks_response](#schematracks_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                      |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                      |
+| Statut | Sens                                                                           | La description    | Schéma                                   |
+| ------ | ------------------------------------------------------------------------------ | ----------------- | ---------------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | rien              | [pistes_réponse](#schematracks_response) |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande  | Aucun                                    |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur | Aucun                                    |
 
 <h1 id="api-playlists">playlists</h1>
 
@@ -1643,21 +1643,21 @@ func main() {
 > Exemple de code
 
 ```shell
-curl AUDIUS_API_HOST/v1/playlists/search?query=Hot & New 
+curl AUDIUS_API_HOST/v1/playlists/search?query=Hot & Nouveau 
 
 
 ```
 
 ```http
-GET AUDIUS_API_HOST/v1/playlists/search?query=Hot & New HTTP/1.1
+GET AUDIUS_API_HOST/v1/playlists/search?query=Hot & Nouveau HTTP/1.1
 
 ```
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
 fetch('AUDIUS_API_HOST/v1/playlists/search?query=Hot & New',
 {
@@ -1668,37 +1668,37 @@ fetch('AUDIUS_API_HOST/v1/playlists/search?query=Hot & New',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log(corps );
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+requiert 'rest-client'
+requiert 'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/playlists/search',
-  params: {
-  'query' => 'string'
-}, headers: headers
+  paramètres : {
+  ' requête' => 'chaîne'
+}, en-têtes : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
-headers = {
-  'Accept': 'application/json'
+requêtes d'importation
+en-têtes = {
+  'Accepter' : 'application/json'
 }
 
 r = requests.get('AUDIUS_API_HOST/v1/playlists/search', params={
-  'query': 'Hot & New'
-}, headers = headers)
+  'query' : 'Hot & New'
+} , en-têtes = en-têtes)
 
 print(r.json())
 
@@ -1707,18 +1707,18 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/playlists/search', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -1727,7 +1727,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -1736,14 +1736,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/playlists/search?query=Hot & New");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/playlists/search?query=Hot & New");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+Réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -1777,16 +1777,16 @@ func main() {
 
 ```
 
-`GET /playlists/search`
+`OBTENIR /listes de lecture/recherche`
 
 *Rechercher une playlist*
 
 <h3 id="search-playlists-parameters">Paramètres de requête</h3>
 
-| Name              | Type   | Required | Description  |
-| ----------------- | ------ | -------- | ------------ |
-| query             | string | true     | Search Query |
-| only_downloadable | string | false    | none         |
+| Nom               | Taper                | Obligatoire | La description       |
+| ----------------- | -------------------- | ----------- | -------------------- |
+| requête           | chaîne de caractères | vrai        | Requête de recherche |
+| only_downloadable | chaîne de caractères | faux        | rien                 |
 
 > Exemple de réponse
 
@@ -1796,33 +1796,33 @@ func main() {
     {
       "artwork": {
         "150x150": "https://usermetadata.audius.co/ipfs/Qmc7RFzLGgW3DUTgKK49LzxEwe3Lmb47q85ZwJJRVYTXPr/150x150.jpg",
-        "480x480": "https://usermetadata.audius.co/ipfs/Qmc7RFzLGgW3DUTgKK49LzxEwe3Lmb47q85ZwJJRVYTXPr/480x480.jpg",
+        "480x480": "https:// usermetadata.audius.co/ipfs/Qmc7RFzLGgW3DUTgKK49LzxEwe3Lmb47q85ZwJJRVYTXPr/480x480.jpg",
         "1000x1000": "https://usermetadata.audius.co/ipfs/Qmc7RFzLGgW3DUTgKK49LzxEwe3Lmb47q85ZwJJRVYTXPr/1000x1000.jpg"
       },
-      "description": "All the latest hot new tracks on Audius! Enjoy the eclectic sounds that are created during the peak of this 2020 Summer.",
+      "description": "All the dernières nouvelles pistes chaudes sur Audius ! Profitez des sons éclectiques créés au plus fort de cet été 2020.",
       "id": "DOPRl",
       "is_album": true,
       "playlist_name": "Hot & New on Audius 🔥",
-      "repost_count": 46,
+      "repost_count " : 46,
       "favorite_count": 88,
       "user": {
         "album_count": 0,
-        "bio": "The official Audius account! Creating a decentralized and open-source streaming music platform controlled by artists, fans, & developers.",
+        "bio": "Le compte officiel Audius ! Créer une plateforme de musique en streaming décentralisée et open-source contrôlée par des artistes, des fans, & développeurs.",
         "cover_photo": {
           "640x": "string",
           "2000x": "string"
         },
-        "followee_count": 69,
+        "followee_count " : 69,
         "follower_count": 6763,
         "handle": "Audius",
         "id": "eJ57D",
-        "is_verified": true,
+        "is_verified": vrai,
         "location": "SF & LA",
-        "name": "Audius",
+        "nom " : "Audius",
         "playlist_count": 9,
         "profile_picture": {
           "150x150": "https://usermetadata.audius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f",
-          "480x480": "https://usermetadata.audius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f",
+          "480x480": "https:// usermetadata.audius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f",
           "1000x1000": "https://usermetadata.audius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f"
         },
         "repost_count": 200,
@@ -1835,11 +1835,11 @@ func main() {
 
 <h3 id="search-playlists-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                                    |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist_search_result](#schemaplaylist_search_result) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                      |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                      |
+| Statut | Sens                                                                           | La description    | Schéma                                                    |
+| ------ | ------------------------------------------------------------------------------ | ----------------- | --------------------------------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | rien              | [playlist_search_result](#schemaplaylist_search_result) |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande  | Aucun                                                     |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur | Aucun                                                     |
 
 ## Playlists populaires
 
@@ -1848,23 +1848,23 @@ func main() {
 > Exemple de code
 
 ```shell
-curl AUDIUS_API_HOST/v1/playlists/trending/string 
+curl AUDIUS_API_HOST/v1/playlists/tendance/chaîne 
 
 
 ```
 
 ```http
-GET AUDIUS_API_HOST/v1/playlists/trending/string HTTP/1.1
+OBTENIR AUDIUS_API_HOST/v1/playlists/tendance/chaîne HTTP/1.1
 
 ```
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
-fetch('AUDIUS_API_HOST/v1/playlists/trending/string',
+fetch('AUDIUS_API_HOST/v1/playlists/tendance/string',
 {
   method: 'GET',
 
@@ -1873,29 +1873,29 @@ fetch('AUDIUS_API_HOST/v1/playlists/trending/string',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log (corps);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+requiert 'rest-client'
+requiert 'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/playlists/trending/string',
-  params: {
-  }, headers: headers
+  params : {
+  }, en-têtes : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
+requêtes d'importation
 headers = {
   'Accept': 'application/json'
 }
@@ -1909,18 +1909,18 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/playlists/trending/string', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -1929,7 +1929,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -1938,14 +1938,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/playlists/trending/string");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/playlists/tendance/string");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -1970,7 +1970,7 @@ func main() {
 
     data := bytes.NewBuffer([]byte{jsonReq})
     req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/playlists/trending/string", data)
-    req.Header = headers
+    req.Header = en-têtes
 
     client := &http.Client{}
     resp, err := client.Do(req)
@@ -1979,16 +1979,16 @@ func main() {
 
 ```
 
-`GET /playlists/trending/{version}`
+`OBTENIR /listes de lecture/tendance/{version}`
 
 *Obtenez les playlists les plus populaires pour une période donnée sur Audius*
 
 <h3 id="trending-playlists-parameters">Paramètres de requête</h3>
 
-| Name    | Type   | Required | Description         |
-| ------- | ------ | -------- | ------------------- |
-| time    | string | false    | time range to query |
-| version | string | true     | none                |
+| Nom     | Taper                | Obligatoire | La description                 |
+| ------- | -------------------- | ----------- | ------------------------------ |
+| temps   | chaîne de caractères | faux        | plage de temps pour interroger |
+| version | chaîne de caractères | vrai        | rien                           |
 
 > Exemple de réponse
 
@@ -1996,17 +1996,17 @@ func main() {
 
 ```json
 {
-  "data": [
+  "données": [
     {
-      "artwork": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
+      "oeuvre": {
+        "150x150": "chaîne",
+        "480x480": "chaîne",
+        "1000x1000": "chaîne"
       },
-      "description": "string",
-      "id": "string",
-      "is_album": true,
-      "playlist_name": "string",
+      "description": " chaîne",
+      "id": "chaîne",
+      "is_album": vrai,
+      "playlist_name": "chaîne",
       "repost_count": 0,
       "favorite_count": 0,
       "total_play_count": 0,
@@ -2017,20 +2017,20 @@ func main() {
           "640x": "string",
           "2000x": "string"
         },
-        "followee_count": 0,
+        "followee_count " : 0,
         "follower_count": 0,
-        "handle": "string",
-        "id": "string",
-        "is_verified": true,
-        "location": "string",
-        "name": "string",
+        "handle": "chaîne",
+        "id": "chaîne",
+        "is_verified": vrai,
+        "location": "chaîne",
+        "nom": "chaîne",
         "playlist_count": 0,
         "profile_picture": {
-          "150x150": "string",
-          "480x480": "string",
-          "1000x1000": "string"
+          "150x150": "chaîne",
+          "480x480": "chaîne",
+          "1000x1000": "chaîne"
         },
-        "repost_count": 0,
+        "repost_count" : 0,
         "track_count": 0
       }
     }
@@ -2040,11 +2040,11 @@ func main() {
 
 <h3 id="trending-playlists-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                                              |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [trending_playlists_response](#schematrending_playlists_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                                |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                                |
+| Statut | Sens                                                                           | La description    | Schéma                                                              |
+| ------ | ------------------------------------------------------------------------------ | ----------------- | ------------------------------------------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | Succès            | [trending_playlists_response](#schematrending_playlists_response) |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande  | Aucun                                                               |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur | Aucun                                                               |
 
 ## Récupérer la playlist
 
@@ -2065,9 +2065,9 @@ GET AUDIUS_API_HOST/v1/playlists/DOPRl HTTP/1.1
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
 fetch('AUDIUS_API_HOST/v1/playlists/DOPRl',
 {
@@ -2078,7 +2078,7 @@ fetch('AUDIUS_API_HOST/v1/playlists/DOPRl',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log(body );
 });
 
 ```
@@ -2093,14 +2093,14 @@ headers = {
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/playlists/DOPRl',
   params: {
-  }, headers: headers
+  }, headers : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
+demandes d'importation
 headers = {
   'Accept': 'application/json'
 }
@@ -2114,18 +2114,18 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/playlists/DOPRl', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -2134,7 +2134,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -2143,14 +2143,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/playlists/DOPRl");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/playlists/DOPRl");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -2184,15 +2184,15 @@ func main() {
 
 ```
 
-`GET /playlists/{playlist_id}`
+`OBTENIR /listes de lecture/{playlist_id}`
 
 *Récupérer une playlist*
 
 <h3 id="get-playlist-parameters">Paramètres de requête</h3>
 
-| Name        | Type   | Required | Description   |
-| ----------- | ------ | -------- | ------------- |
-| playlist_id | string | true     | A Playlist ID |
+| Nom         | Taper                | Obligatoire | La description                     |
+| ----------- | -------------------- | ----------- | ---------------------------------- |
+| playlist_id | chaîne de caractères | vrai        | Un identifiant de liste de lecture |
 
 > Exemple de réponse
 
@@ -2201,33 +2201,33 @@ func main() {
   "data": {
     "artwork": {
       "150x150": "https://usermetadata.audius.co/ipfs/Qmc7RFzLGgW3DUTgKK49LzxEwe3Lmb47q85ZwJJRVYTXPr/150x150.jpg",
-      "480x480": "https://usermetadata.audius.co/ipfs/Qmc7RFzLGgW3DUTgKK49LzxEwe3Lmb47q85ZwJJRVYTXPr/480x480.jpg",
+      "480x480": "https://usermetadata. audius.co/ipfs/Qmc7RFzLGgW3DUTgKK49LzxEwe3Lmb47q85ZwJJRVYTXPr/480x480.jpg",
       "1000x1000": "https://usermetadata.audius.co/ipfs/Qmc7RFzLGgW3DUTgKK49LzxEwe3Lmb47q85ZwJJRVYTXPr/1000x1000.jpg"
     },
-    "description": "All the latest hot new tracks on Audius! Enjoy the eclectic sounds that are created during the peak of this 2020 Summer.",
+    "description": "All the latest hot de nouveaux titres sur Audius ! Profitez des sons éclectiques créés au plus fort de cet été 2020.",
     "id": "DOPRl",
     "is_album": true,
     "playlist_name": "Hot & New on Audius 🔥",
-    "repost_count": 46,
+    "repost_count " : 46,
     "favorite_count": 88,
     "user": {
       "album_count": 0,
-      "bio": "The official Audius account! Creating a decentralized and open-source streaming music platform controlled by artists, fans, & developers.",
+      "bio": "Le compte officiel Audius ! Créer une plateforme de musique en streaming décentralisée et open-source contrôlée par des artistes, des fans, & développeurs.",
       "cover_photo": {
         "640x": "string",
         "2000x": "string"
       },
-      "followee_count": 69,
+      "followee_count " : 69,
       "follower_count": 6763,
       "handle": "Audius",
       "id": "eJ57D",
-      "is_verified": true,
+      "is_verified": vrai,
       "location": "SF & LA",
-      "name": "Audius",
+      "nom " : "Audius",
       "playlist_count": 9,
       "profile_picture": {
         "150x150": "https://usermetadata.audius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f",
-        "480x480": "https://usermetadata.audius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f",
+        "480x480": "https:// usermetadata.audius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f",
         "1000x1000": "https://usermetadata.audius.co/ipfs/QmNjJv1wQf2DJq3GNXjXzSL8UXFUGXfchg4NhL7UpbnF1f"
       },
       "repost_count": 200,
@@ -2239,11 +2239,11 @@ func main() {
 
 <h3 id="get-playlist-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                        |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist_response](#schemaplaylist_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                          |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                          |
+| Statut | Sens                                                                           | La description    | Schéma                                        |
+| ------ | ------------------------------------------------------------------------------ | ----------------- | --------------------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | rien              | [playlist_response](#schemaplaylist_response) |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande  | Aucun                                         |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur | Aucun                                         |
 
 ## Obtenir les pistes de la liste de lecture
 
@@ -2264,11 +2264,11 @@ GET AUDIUS_API_HOST/v1/playlists/DOPRl/tracks HTTP/1.1
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
-fetch('AUDIUS_API_HOST/v1/playlists/DOPRl/tracks',
+récupérer('AUDIUS_API_HOST/v1/playlists/DOPRl/tracks',
 {
   method: 'GET',
 
@@ -2277,29 +2277,29 @@ fetch('AUDIUS_API_HOST/v1/playlists/DOPRl/tracks',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log (corps);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+requiert 'rest-client'
+requiert 'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/playlists/DOPRl/tracks',
-  params: {
-  }, headers: headers
+  paramètres : {
+  }, en-têtes : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
+requêtes d'importation
 headers = {
   'Accept': 'application/json'
 }
@@ -2313,18 +2313,18 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/playlists/DOPRl/tracks', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -2333,7 +2333,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -2342,14 +2342,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/playlists/DOPRl/tracks");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/playlists/DOPRl/tracks");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -2374,7 +2374,7 @@ func main() {
 
     data := bytes.NewBuffer([]byte{jsonReq})
     req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/playlists/DOPRl/tracks", data)
-    req.Header = headers
+    req.Header = en-têtes
 
     client := &http.Client{}
     resp, err := client.Do(req)
@@ -2383,15 +2383,15 @@ func main() {
 
 ```
 
-`GET /playlists/{playlist_id}/tracks`
+`OBTENIR /playlists/{playlist_id}/pistes`
 
 *Récupérer ls titres dans une playlist*
 
 <h3 id="get-playlist-tracks-parameters">Paramètres de requête</h3>
 
-| Name        | Type   | Required | Description   |
-| ----------- | ------ | -------- | ------------- |
-| playlist_id | string | true     | A Playlist ID |
+| Nom         | Taper                | Obligatoire | La description                     |
+| ----------- | -------------------- | ----------- | ---------------------------------- |
+| playlist_id | chaîne de caractères | vrai        | Un identifiant de liste de lecture |
 
 > Exemple de réponse
 
@@ -2401,38 +2401,38 @@ func main() {
     {
       "artwork": {
         "150x150": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/150x150.jpg",
-        "480x480": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/480x480.jpg",
+        "480x480": "https:// creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/480x480.jpg",
         "1000x1000": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/1000x1000.jpg"
       },
-      "description": "@baauer b2b @partyfavormusic live set at Brownies & Lemonade Block Party LA at The Shrine on 7.3.19.",
+      "description": "@baauer b2b @partyfavormusic en direct au Brownies & Lemonade Block Party LA au Shrine le 7.3.19.",
       "genre": "Electronic",
       "id": "D7KyD",
       "mood": "Fiery",
-      "release_date": "Mon Sep 23 2019 12:35:10 GMT-0700",
+      "release_date": "Lun 23 septembre 2019 12:35:10 GMT-0700",
       "repost_count": 47,
       "favorite_count": 143,
       "tags": "baauer,partyfavor,browniesandlemonade,live",
-      "title": "Paauer | Baauer B2B Party Favor | B&L Block Party LA (Live Set)",
+      " title": "Paauer | Baauer B2B Party Favor | B&L Block Party LA (Live Set)",
       "duration": 5265,
       "user": {
         "album_count": 0,
-        "bio": "Makin' moves & keeping you on your toes. linktr.ee/browniesandlemonade",
+        "bio": "Makin ' se déplace & vous gardant sur vos orteils. linktr.ee/browniesandlemonade",
         "cover_photo": {
           "640x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/640x.jpg",
-          "2000x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
+          "2000x": "https://creatornode. audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
         },
         "followee_count": 19,
         "follower_count": 11141,
         "handle": "TeamBandL",
         "id": "nlGNe",
-        "is_verified": true,
-        "location": "Los Angeles, CA",
+        "is_verified " : vrai,
+        "location": "Los Angeles, Californie",
         "name": "Brownies & Lemonade",
         "playlist_count": 2,
         "profile_picture": {
-          "150x150": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
+          "150x150": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
           "480x480": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/480x480.jpg",
-          "1000x1000": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
+          "1000x1000": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
         },
         "repost_count": 5,
         "track_count": 4
@@ -2444,11 +2444,11 @@ func main() {
 
 <h3 id="get-playlist-tracks-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                                        |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [playlist_tracks_response](#schemaplaylist_tracks_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                          |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                          |
+| Statut | Sens                                                                           | La description    | Schéma                                                        |
+| ------ | ------------------------------------------------------------------------------ | ----------------- | ------------------------------------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | rien              | [playlist_tracks_response](#schemaplaylist_tracks_response) |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande  | Aucun                                                         |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur | Aucun                                                         |
 
 <h1 id="api-tracks">pistes</h1>
 
@@ -2459,7 +2459,7 @@ func main() {
 > Exemple de code
 
 ```shell
-curl AUDIUS_API_HOST/v1/tracks 
+curl AUDIUS_API_HOST/v1/pistes 
 
 
 ```
@@ -2471,9 +2471,9 @@ GET AUDIUS_API_HOST/v1/tracks HTTP/1.1
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
 fetch('AUDIUS_API_HOST/v1/tracks',
 {
@@ -2490,23 +2490,23 @@ fetch('AUDIUS_API_HOST/v1/tracks',
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+requiert 'rest-client'
+requiert 'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/tracks',
-  params: {
-  }, headers: headers
+  paramètres : {
+  }, headers : headers
 
-p JSON.parse(result)
+p JSON.parse (résultat)
 
 ```
 
 ```python
-import requests
+requêtes d'importation
 headers = {
   'Accept': 'application/json'
 }
@@ -2520,18 +2520,18 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/tracks', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -2540,7 +2540,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -2549,14 +2549,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/tracks");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/tracks");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -2583,21 +2583,21 @@ func main() {
     req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/tracks", data)
     req.Header = headers
 
-    client := &http.Client{}
+    client := &http .Client{}
     resp, err := client.Do(req)
     // ...
 }
 
 ```
 
-`GET /tracks`
+`GET /pistes`
 
 <h3 id="get-track-by-handle-and-slug-parameters">Paramètres de requête</h3>
 
-| Name   | Type   | Required | Description      |
-| ------ | ------ | -------- | ---------------- |
-| handle | string | false    | A User's handle  |
-| slug   | string | false    | The track's slug |
+| Nom       | Taper                | Obligatoire | La description               |
+| --------- | -------------------- | ----------- | ---------------------------- |
+| manipuler | chaîne de caractères | faux        | Un identifiant d'utilisateur |
+| limace    | chaîne de caractères | faux        | La limace de la piste        |
 
 > Exemple de réponse
 
@@ -2611,7 +2611,7 @@ func main() {
       "480x480": "string",
       "1000x1000": "string"
     },
-    "description": "string",
+    "description": "string" ,
     "genre": "string",
     "id": "string",
     "mood": "string",
@@ -2619,39 +2619,39 @@ func main() {
     "remix_of": {
       "tracks": [
         {
-          "parent_track_id": "string"
+          "parent_track_id": "chaîne"
         }
       ]
     },
     "repost_count": 0,
     "favorite_count": 0,
-    "tags": "string",
-    "title": "string",
-    "user": {
+    "tags": "chaîne",
+    "title": "chaîne",
+    " user": {
       "album_count": 0,
       "bio": "string",
       "cover_photo": {
         "640x": "string",
         "2000x": "string"
       },
-      "followee_count": 0,
+      "followee_count" : 0,
       "follower_count": 0,
-      "handle": "string",
-      "id": "string",
-      "is_verified": true,
-      "location": "string",
-      "name": "string",
+      "handle": "chaîne",
+      "id": "chaîne",
+      "is_verified": vrai,
+      "location": "chaîne",
+      "name": " chaîne",
       "playlist_count": 0,
       "profile_picture": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
+        "150x150": "chaîne",
+        "480x480": "chaîne",
+        "1000x1000": "chaîne"
       },
       "repost_count": 0,
       "track_count": 0
     },
     "duration": 0,
-    "downloadable": true,
+    "téléchargeable": vrai,
     "play_count": 0,
     "permalink": "string"
   }
@@ -2660,11 +2660,11 @@ func main() {
 
 <h3 id="get-track-by-handle-and-slug-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                  |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [track_response](#schematrack_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                    |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                    |
+| Statut | Sens                                                                           | La description    | Schéma                                  |
+| ------ | ------------------------------------------------------------------------------ | ----------------- | --------------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | Succès            | [track_response](#schematrack_response) |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande  | Aucun                                   |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur | Aucun                                   |
 
 ## Pistes recommandées
 
@@ -2685,9 +2685,9 @@ GET AUDIUS_API_HOST/v1/tracks/recommended/string HTTP/1.1
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
 fetch('AUDIUS_API_HOST/v1/tracks/recommended/string',
 {
@@ -2698,7 +2698,7 @@ fetch('AUDIUS_API_HOST/v1/tracks/recommended/string',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log (corps);
 });
 
 ```
@@ -2712,15 +2712,15 @@ headers = {
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/tracks/recommended/string',
-  params: {
-  }, headers: headers
+  params : {
+  }, en-têtes : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
+requêtes d'importation
 headers = {
   'Accept': 'application/json'
 }
@@ -2734,18 +2734,18 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/tracks/recommended/string', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -2754,7 +2754,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -2763,14 +2763,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/tracks/recommended/string");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/tracks/recommended/string");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -2795,7 +2795,7 @@ func main() {
 
     data := bytes.NewBuffer([]byte{jsonReq})
     req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/tracks/recommended/string", data)
-    req.Header = headers
+    req.Header = en-têtes
 
     client := &http.Client{}
     resp, err := client.Do(req)
@@ -2804,17 +2804,17 @@ func main() {
 
 ```
 
-`GET /tracks/recommended/{version}`
+`GET /pistes/recommandé/{version}`
 
 <h3 id="recommended-tracks-parameters">Paramètres de requête</h3>
 
-| Name           | Type   | Required | Description                                                        |
-| -------------- | ------ | -------- | ------------------------------------------------------------------ |
-| genre          | string | false    | Recommended trending tracks for a specified genre                  |
-| limit          | string | false    | Number of recommended tracks to fetch                              |
-| exclusion_list | string | false    | List of track ids to exclude                                       |
-| time           | string | false    | Trending tracks over a specified time range (week, month, allTime) |
-| version        | string | true     | none                                                               |
+| Nom               | Taper                | Obligatoire | La description                                                                      |
+| ----------------- | -------------------- | ----------- | ----------------------------------------------------------------------------------- |
+| genre             | chaîne de caractères | faux        | Pistes tendance recommandées pour un genre spécifié                                 |
+| limite            | chaîne de caractères | faux        | Nombre de pistes recommandées à récupérer                                           |
+| liste d'exclusion | chaîne de caractères | faux        | Liste des ID de piste à exclure                                                     |
+| temps             | chaîne de caractères | faux        | Suivi des tendances sur une plage de temps spécifiée (semaine, mois, tout le temps) |
+| version           | chaîne de caractères | vrai        | rien                                                                                |
 
 > Exemple de réponse
 
@@ -2822,14 +2822,14 @@ func main() {
 
 ```json
 {
-  "data": [
+  "données": [
     {
-      "artwork": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
+      "oeuvre": {
+        "150x150": "chaîne",
+        "480x480": "chaîne",
+        "1000x1000": "chaîne"
       },
-      "description": "string",
+      "description": " string",
       "genre": "string",
       "id": "string",
       "mood": "string",
@@ -2837,14 +2837,14 @@ func main() {
       "remix_of": {
         "tracks": [
           {
-            "parent_track_id": "string"
+            "parent_track_id": "chaîne"
           }
         ]
       },
       "repost_count": 0,
       "favorite_count": 0,
-      "tags": "string",
-      "title": "string",
+      "tags": "chaîne",
+      "title": "chaîne",
       "user": {
         "album_count": 0,
         "bio": "string",
@@ -2852,24 +2852,24 @@ func main() {
           "640x": "string",
           "2000x": "string"
         },
-        "followee_count": 0,
+        " followee_count": 0,
         "follower_count": 0,
-        "handle": "string",
-        "id": "string",
-        "is_verified": true,
-        "location": "string",
-        "name": "string",
+        "handle": "chaîne",
+        "id": "chaîne",
+        "is_verified": vrai,
+        "location": "chaîne",
+        "nom" : "chaîne",
         "playlist_count": 0,
         "profile_picture": {
-          "150x150": "string",
-          "480x480": "string",
-          "1000x1000": "string"
+          "150x150": "chaîne",
+          "480x480": "chaîne",
+          "1000x1000": "chaîne"
         },
-        "repost_count": 0,
+        "repost_count " : 0,
         "track_count": 0
       },
       "duration": 0,
-      "downloadable": true,
+      "téléchargeable": vrai,
       "play_count": 0,
       "permalink": "string"
     }
@@ -2879,11 +2879,11 @@ func main() {
 
 <h3 id="recommended-tracks-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                    |
-| ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [tracks_response](#schematracks_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                      |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                      |
+| Statut | Sens                                                                           | La description    | Schéma                                   |
+| ------ | ------------------------------------------------------------------------------ | ----------------- | ---------------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | Succès            | [pistes_réponse](#schematracks_response) |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande  | Aucun                                    |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur | Aucun                                    |
 
 ## Recherche de pistes
 
@@ -2904,9 +2904,9 @@ GET AUDIUS_API_HOST/v1/tracks/search?query=baauer b2b HTTP/1.1
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
 fetch('AUDIUS_API_HOST/v1/tracks/search?query=baauer b2b',
 {
@@ -2923,24 +2923,24 @@ fetch('AUDIUS_API_HOST/v1/tracks/search?query=baauer b2b',
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+requiert 'rest-client'
+requiert 'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/tracks/search',
-  params: {
-  'query' => 'string'
-}, headers: headers
+  paramètres : {
+  ' requête' => 'chaîne'
+}, en-têtes : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
+demandes d'importation
 headers = {
   'Accept': 'application/json'
 }
@@ -2949,25 +2949,25 @@ r = requests.get('AUDIUS_API_HOST/v1/tracks/search', params={
   'query': 'baauer b2b'
 }, headers = headers)
 
-print(r.json())
+print(r.json( ))
 
 ```
 
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/tracks/search', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -2976,7 +2976,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -2985,14 +2985,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/tracks/search?query=baauer b2b");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/tracks/search?query=baauer b2b");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -3017,7 +3017,7 @@ func main() {
 
     data := bytes.NewBuffer([]byte{jsonReq})
     req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/tracks/search", data)
-    req.Header = headers
+    req.Header = en-têtes
 
     client := &http.Client{}
     resp, err := client.Do(req)
@@ -3026,16 +3026,16 @@ func main() {
 
 ```
 
-`GET /tracks/search`
+`GET /pistes/recherche`
 
 *Recherche d'une piste*
 
 <h3 id="search-tracks-parameters">Paramètres de requête</h3>
 
-| Name              | Type   | Required | Description                     |
-| ----------------- | ------ | -------- | ------------------------------- |
-| query             | string | true     | Search Query                    |
-| only_downloadable | string | false    | Return only downloadable tracks |
+| Nom               | Taper                | Obligatoire | La description                                 |
+| ----------------- | -------------------- | ----------- | ---------------------------------------------- |
+| requête           | chaîne de caractères | vrai        | Requête de recherche                           |
+| only_downloadable | chaîne de caractères | faux        | Renvoyer uniquement les pistes téléchargeables |
 
 > Exemple de réponse
 
@@ -3045,38 +3045,38 @@ func main() {
     {
       "artwork": {
         "150x150": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/150x150.jpg",
-        "480x480": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/480x480.jpg",
+        "480x480": "https:// creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/480x480.jpg",
         "1000x1000": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/1000x1000.jpg"
       },
-      "description": "@baauer b2b @partyfavormusic live set at Brownies & Lemonade Block Party LA at The Shrine on 7.3.19.",
+      "description": "@baauer b2b @partyfavormusic en direct au Brownies & Lemonade Block Party LA au Shrine le 7.3.19.",
       "genre": "Electronic",
       "id": "D7KyD",
       "mood": "Fiery",
-      "release_date": "Mon Sep 23 2019 12:35:10 GMT-0700",
+      "release_date": "Lun 23 septembre 2019 12:35:10 GMT-0700",
       "repost_count": 47,
       "favorite_count": 143,
       "tags": "baauer,partyfavor,browniesandlemonade,live",
-      "title": "Paauer | Baauer B2B Party Favor | B&L Block Party LA (Live Set)",
+      " title": "Paauer | Baauer B2B Party Favor | B&L Block Party LA (Live Set)",
       "duration": 5265,
       "user": {
         "album_count": 0,
-        "bio": "Makin' moves & keeping you on your toes. linktr.ee/browniesandlemonade",
+        "bio": "Makin ' se déplace & vous gardant sur vos orteils. linktr.ee/browniesandlemonade",
         "cover_photo": {
           "640x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/640x.jpg",
-          "2000x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
+          "2000x": "https://creatornode. audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
         },
         "followee_count": 19,
         "follower_count": 11141,
         "handle": "TeamBandL",
         "id": "nlGNe",
-        "is_verified": true,
-        "location": "Los Angeles, CA",
+        "is_verified " : vrai,
+        "location": "Los Angeles, Californie",
         "name": "Brownies & Lemonade",
         "playlist_count": 2,
         "profile_picture": {
-          "150x150": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
+          "150x150": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
           "480x480": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/480x480.jpg",
-          "1000x1000": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
+          "1000x1000": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
         },
         "repost_count": 5,
         "track_count": 4
@@ -3088,11 +3088,11 @@ func main() {
 
 <h3 id="search-tracks-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                              |
-| ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [track_search](#schematrack_search) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                |
+| Statut | Sens                                                                           | La description    | Schéma                              |
+| ------ | ------------------------------------------------------------------------------ | ----------------- | ----------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | rien              | [track_search](#schematrack_search) |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande  | Aucun                               |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur | Aucun                               |
 
 ## Pistes populaires
 
@@ -3101,21 +3101,21 @@ func main() {
 > Exemple de code
 
 ```shell
-curl AUDIUS_API_HOST/v1/tracks/trending/string 
+curl AUDIUS_API_HOST/v1/tracks/tendance/chaîne 
 
 
 ```
 
 ```http
-GET AUDIUS_API_HOST/v1/tracks/trending/string HTTP/1.1
+OBTENIR AUDIUS_API_HOST/v1/tracks/tendance/chaîne HTTP/1.1
 
 ```
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
 fetch('AUDIUS_API_HOST/v1/tracks/trending/string',
 {
@@ -3126,29 +3126,29 @@ fetch('AUDIUS_API_HOST/v1/tracks/trending/string',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log (corps);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+requiert 'rest-client'
+requiert 'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/tracks/trending/string',
-  params: {
-  }, headers: headers
+  params : {
+  }, en-têtes : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
+requêtes d'importation
 headers = {
   'Accept': 'application/json'
 }
@@ -3162,18 +3162,18 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/tracks/trending/string', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -3182,7 +3182,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -3191,14 +3191,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/tracks/trending/string");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/tracks/tendance/string");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -3223,7 +3223,7 @@ func main() {
 
     data := bytes.NewBuffer([]byte{jsonReq})
     req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/tracks/trending/string", data)
-    req.Header = headers
+    req.Header = en-têtes
 
     client := &http.Client{}
     resp, err := client.Do(req)
@@ -3232,17 +3232,17 @@ func main() {
 
 ```
 
-`GET /tracks/trending/{version}`
+`GET /pistes/tendance/{version}`
 
 *Obtenez les 100 pistes les plus populaires sur Audius*
 
 <h3 id="trending-tracks-parameters">Paramètres de requête</h3>
 
-| Name    | Type   | Required | Description                                                        |
-| ------- | ------ | -------- | ------------------------------------------------------------------ |
-| genre   | string | false    | Trending tracks for a specified genre                              |
-| time    | string | false    | Trending tracks over a specified time range (week, month, allTime) |
-| version | string | true     | none                                                               |
+| Nom     | Taper                | Obligatoire | La description                                                                      |
+| ------- | -------------------- | ----------- | ----------------------------------------------------------------------------------- |
+| genre   | chaîne de caractères | faux        | Pistes tendance pour un genre spécifié                                              |
+| temps   | chaîne de caractères | faux        | Suivi des tendances sur une plage de temps spécifiée (semaine, mois, tout le temps) |
+| version | chaîne de caractères | vrai        | rien                                                                                |
 
 > Exemple de réponse
 
@@ -3250,14 +3250,14 @@ func main() {
 
 ```json
 {
-  "data": [
+  "données": [
     {
-      "artwork": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
+      "oeuvre": {
+        "150x150": "chaîne",
+        "480x480": "chaîne",
+        "1000x1000": "chaîne"
       },
-      "description": "string",
+      "description": " string",
       "genre": "string",
       "id": "string",
       "mood": "string",
@@ -3265,14 +3265,14 @@ func main() {
       "remix_of": {
         "tracks": [
           {
-            "parent_track_id": "string"
+            "parent_track_id": "chaîne"
           }
         ]
       },
       "repost_count": 0,
       "favorite_count": 0,
-      "tags": "string",
-      "title": "string",
+      "tags": "chaîne",
+      "title": "chaîne",
       "user": {
         "album_count": 0,
         "bio": "string",
@@ -3280,24 +3280,24 @@ func main() {
           "640x": "string",
           "2000x": "string"
         },
-        "followee_count": 0,
+        " followee_count": 0,
         "follower_count": 0,
-        "handle": "string",
-        "id": "string",
-        "is_verified": true,
-        "location": "string",
-        "name": "string",
+        "handle": "chaîne",
+        "id": "chaîne",
+        "is_verified": vrai,
+        "location": "chaîne",
+        "nom" : "chaîne",
         "playlist_count": 0,
         "profile_picture": {
-          "150x150": "string",
-          "480x480": "string",
-          "1000x1000": "string"
+          "150x150": "chaîne",
+          "480x480": "chaîne",
+          "1000x1000": "chaîne"
         },
-        "repost_count": 0,
+        "repost_count " : 0,
         "track_count": 0
       },
       "duration": 0,
-      "downloadable": true,
+      "téléchargeable": vrai,
       "play_count": 0,
       "permalink": "string"
     }
@@ -3307,11 +3307,11 @@ func main() {
 
 <h3 id="trending-tracks-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                    |
-| ------ | -------------------------------------------------------------------------- | ------------ | ----------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [tracks_response](#schematracks_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                      |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                      |
+| Statut | Sens                                                                           | La description    | Schéma                                   |
+| ------ | ------------------------------------------------------------------------------ | ----------------- | ---------------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | Succès            | [pistes_réponse](#schematracks_response) |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande  | Aucun                                    |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur | Aucun                                    |
 
 ## Obtenir une piste
 
@@ -3332,9 +3332,9 @@ GET AUDIUS_API_HOST/v1/tracks/D7KyD HTTP/1.1
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
 fetch('AUDIUS_API_HOST/v1/tracks/D7KyD',
 {
@@ -3345,7 +3345,7 @@ fetch('AUDIUS_API_HOST/v1/tracks/D7KyD',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log(body );
 });
 
 ```
@@ -3360,14 +3360,14 @@ headers = {
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/tracks/D7KyD',
   params: {
-  }, headers: headers
+  }, headers : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
+requêtes d'importation
 headers = {
   'Accept': 'application/json'
 }
@@ -3381,18 +3381,18 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/tracks/D7KyD', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -3401,7 +3401,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -3410,14 +3410,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/tracks/D7KyD");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/tracks/D7KyD");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -3442,7 +3442,7 @@ func main() {
 
     data := bytes.NewBuffer([]byte{jsonReq})
     req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/tracks/D7KyD", data)
-    req.Header = headers
+    req.Header = en-têtes
 
     client := &http.Client{}
     resp, err := client.Do(req)
@@ -3451,15 +3451,15 @@ func main() {
 
 ```
 
-`GET /tracks/{track_id}`
+`GET /pistes/{track_id}`
 
 *Récupérer une piste*
 
 <h3 id="get-track-parameters">Paramètres de requête</h3>
 
-| Name     | Type   | Required | Description |
-| -------- | ------ | -------- | ----------- |
-| track_id | string | true     | A Track ID  |
+| Nom      | Taper                | Obligatoire | La description |
+| -------- | -------------------- | ----------- | -------------- |
+| track_id | chaîne de caractères | vrai        | Un ID de piste |
 
 > Exemple de réponse
 
@@ -3468,38 +3468,38 @@ func main() {
   "data": {
     "artwork": {
       "150x150": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/150x150.jpg",
-      "480x480": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/480x480.jpg",
+      "480x480": "https://creatornode. audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/480x480.jpg",
       "1000x1000": "https://creatornode.audius.co/ipfs/QmVJjA6zXhDZn3BjcjYa33P9NDiPZj7Vyq9TCx1bHjvHmG/1000x1000.jpg"
     },
-    "description": "@baauer b2b @partyfavormusic live set at Brownies & Lemonade Block Party LA at The Shrine on 7.3.19.",
+    "description": "@baauer b2b @ partyfavormusic live au Brownies & Lemonade Block Party LA au Shrine le 7.3.19.",
     "genre": "Electronic",
     "id": "D7KyD",
     "mood": "Fiery",
-    "release_date": "Mon Sep 23 2019 12:35:10 GMT-0700",
+    "release_date " : "Lun 23 septembre 2019 12:35:10 GMT-0700",
     "repost_count": 47,
     "favorite_count": 143,
-    "tags": "baauer,partyfavor,browniesandlemonade,live",
-    "title": "Paauer | Baauer B2B Party Favor | B&L Block Party LA (Live Set)",
+    "tags": "baauer, partyfavor, browniesandlemonade, live",
+    "title" : "Paauer | Baauer B2B Party Favor | B&L Block Party LA (Live Set)",
     "duration": 5265,
     "user": {
       "album_count": 0,
-      "bio": "Makin' moves & keeping you on your toes. linktr.ee/browniesandlemonade",
+      "bio": "Faire des mouvements & vous garder sur vos orteils. linktr.ee/browniesandlemonade",
       "cover_photo": {
         "640x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/640x.jpg",
-        "2000x": "https://creatornode.audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
+        "2000x": "https://creatornode. audius.co/ipfs/QmXVMM1RVqP6EFKuDq49HYq5aNSKXd24S7vcxR7qcPom6e/2000x.jpg"
       },
       "followee_count": 19,
       "follower_count": 11141,
       "handle": "TeamBandL",
       "id": "nlGNe",
-      "is_verified": true,
-      "location": "Los Angeles, CA",
+      "is_verified " : vrai,
+      "location": "Los Angeles, Californie",
       "name": "Brownies & Lemonade",
       "playlist_count": 2,
       "profile_picture": {
-        "150x150": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
+        "150x150": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/150x150.jpg",
         "480x480": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/480x480.jpg",
-        "1000x1000": "https://creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
+        "1000x1000": "https:// creatornode.audius.co/ipfs/QmU9L4beAM96MpiNqqVTZdiDiCRTeBku1AJCh3NXrE5PxV/1000x1000.jpg"
       },
       "repost_count": 5,
       "track_count": 4
@@ -3510,11 +3510,11 @@ func main() {
 
 <h3 id="get-track-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                  |
-| ------ | -------------------------------------------------------------------------- | ------------ | --------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | none         | [track_response](#schematrack_response) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                    |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                    |
+| Statut | Sens                                                                           | La description    | Schéma                                  |
+| ------ | ------------------------------------------------------------------------------ | ----------------- | --------------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | rien              | [track_response](#schematrack_response) |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande  | Aucun                                   |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur | Aucun                                   |
 
 ## Piste de streaming
 
@@ -3542,25 +3542,25 @@ fetch('AUDIUS_API_HOST/v1/tracks/D7KyD/stream',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log( corps);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+nécessite 'rest-client'
+nécessite 'json'
 
-result = RestClient.get 'AUDIUS_API_HOST/v1/tracks/D7KyD/stream',
-  params: {
+résultat = RestClient.get 'AUDIUS_API_HOST/v1/tracks/D7KyD/stream',
+  paramètres : {
   }
 
-p JSON.parse(result)
+p JSON.parse (résultat)
 
 ```
 
 ```python
-import requests
+demandes d'importation
 
 r = requests.get('AUDIUS_API_HOST/v1/tracks/D7KyD/stream')
 
@@ -3571,14 +3571,14 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/tracks/D7KyD/stream', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -3587,7 +3587,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -3596,14 +3596,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/tracks/D7KyD/stream");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/tracks/D7KyD/stream");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -3623,8 +3623,8 @@ import (
 func main() {
 
     data := bytes.NewBuffer([]byte{jsonReq})
-    req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/tracks/D7KyD/stream", data)
-    req.Header = headers
+    req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/tracks/D7KyD/stream", données)
+    req.Header = en-têtes
 
     client := &http.Client{}
     resp, err := client.Do(req)
@@ -3633,7 +3633,7 @@ func main() {
 
 ```
 
-`GET /tracks/{track_id}/stream`
+`GET /pistes/{track_id}/flux`
 
 *Obtenir le fichier mp3 de la piste en streaming*
 
@@ -3641,19 +3641,19 @@ Ce endpoint accepte l'en-tête Range pour le streaming. https://developer.mozill
 
 <h3 id="stream-track-parameters">Paramètres de requête</h3>
 
-| Name     | Type   | Required | Description |
-| -------- | ------ | -------- | ----------- |
-| track_id | string | true     | A Track ID  |
+| Nom      | Taper                | Obligatoire | La description |
+| -------- | -------------------- | ----------- | -------------- |
+| track_id | chaîne de caractères | vrai        | Un ID de piste |
 
 <h3 id="stream-track-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description           | Schema |
-| ------ | -------------------------------------------------------------------------- | --------------------- | ------ |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success               | None   |
-| 216    | Unknown                                                                    | Partial content       | None   |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request           | None   |
-| 416    | [Range Not Satisfiable](https://tools.ietf.org/html/rfc7233#section-4.4)   | Content range invalid | None   |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error          | None   |
+| Statut | Sens                                                                           | La description            | Schéma |
+| ------ | ------------------------------------------------------------------------------ | ------------------------- | ------ |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | Succès                    | Aucun  |
+| 216    | Inconnue                                                                       | Contenu partiel           | Aucun  |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande          | Aucun  |
+| 416    | [Plage non satisfaisante](https://tools.ietf.org/html/rfc7233#section-4.4)     | Plage de contenu invalide | Aucun  |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur         | Aucun  |
 
 <h1 id="api-challenges">challenges</h1>
 
@@ -3664,21 +3664,21 @@ Ce endpoint accepte l'en-tête Range pour le streaming. https://developer.mozill
 > Exemple de code
 
 ```shell
-curl AUDIUS_API_HOST/v1/challenges/undisbursed 
+curl AUDIUS_API_HOST/v1/challenges/non décaissé 
 
 
 ```
 
 ```http
-GET AUDIUS_API_HOST/v1/challenges/undisbursed HTTP/1.1
+OBTENIR AUDIUS_API_HOST/v1/challenges/non décaissé HTTP/1.1
 
 ```
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
 fetch('AUDIUS_API_HOST/v1/challenges/undisbursed',
 {
@@ -3689,7 +3689,7 @@ fetch('AUDIUS_API_HOST/v1/challenges/undisbursed',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console.log(body );
 });
 
 ```
@@ -3704,14 +3704,14 @@ headers = {
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/challenges/undisbursed',
   params: {
-  }, headers: headers
+  }, headers : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
+demandes d'importation
 headers = {
   'Accept': 'application/json'
 }
@@ -3725,18 +3725,18 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/challenges/undisbursed', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -3745,7 +3745,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -3754,14 +3754,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/challenges/undisbursed");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/challenges/undisbursed");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -3786,7 +3786,7 @@ func main() {
 
     data := bytes.NewBuffer([]byte{jsonReq})
     req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/challenges/undisbursed", data)
-    req.Header = headers
+    req.Header = en-têtes
 
     client := &http.Client{}
     resp, err := client.Do(req)
@@ -3795,15 +3795,15 @@ func main() {
 
 ```
 
-`GET /challenges/undisbursed`
+`GET /défis/non décaissé`
 
 <h3 id="get_get_undisbursed_challenges-parameters">Paramètres de requête</h3>
 
-| Name                  | Type   | Required | Description                                                       |
-| --------------------- | ------ | -------- | ----------------------------------------------------------------- |
-| limit                 | string | false    | The maximum number of response challenges                         |
-| offset                | string | false    | The number of challenges to intially skip in the query            |
-| completed_blocknumber | string | false    | Starting blocknumber to retrieve completed undisbursed challenges |
+| Nom                  | Taper                | Obligatoire | La description                                                           |
+| -------------------- | -------------------- | ----------- | ------------------------------------------------------------------------ |
+| limite               | chaîne de caractères | faux        | Le nombre maximum de défis de réponse                                    |
+| décalage             | chaîne de caractères | faux        | Le nombre de défis à ignorer initialement dans la requête                |
+| complete_blocknumber | chaîne de caractères | faux        | Numéro de bloc de départ pour récupérer les défis non décaissés terminés |
 
 > Exemple de réponse
 
@@ -3825,11 +3825,11 @@ func main() {
 
 <h3 id="get_get_undisbursed_challenges-responses">Réponses</h3>
 
-| Status | Meaning                                                                    | Description  | Schema                                                  |
-| ------ | -------------------------------------------------------------------------- | ------------ | ------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1)                    | Success      | [undisbursed_challenges](#schemaundisbursed_challenges) |
-| 400    | [Bad Request](https://tools.ietf.org/html/rfc7231#section-6.5.1)           | Bad request  | None                                                    |
-| 500    | [Internal Server Error](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Server error | None                                                    |
+| Statut | Sens                                                                           | La description    | Schéma                                               |
+| ------ | ------------------------------------------------------------------------------ | ----------------- | ---------------------------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1)                  | Succès            | [défis_non décaissés](#schemaundisbursed_challenges) |
+| 400    | [Mauvaise demande](https://tools.ietf.org/html/rfc7231#section-6.5.1)          | Mauvaise demande  | Aucun                                                |
+| 500    | [Erreur interne du serveur](https://tools.ietf.org/html/rfc7231#section-6.6.1) | Erreur du serveur | Aucun                                                |
 
 ## get_attest
 
@@ -3850,11 +3850,11 @@ GET AUDIUS_API_HOST/v1/challenges/string/attest?user_id=string&oracle=string&spe
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
-fetch('AUDIUS_API_HOST/v1/challenges/string/attest?user_id=string&oracle=string&specifier=string',
+récupérer('AUDIUS_API_HOST/v1/challenges/string/attest?user_id=string&oracle=string&specifier=string',
 {
   method: 'GET',
 
@@ -3862,7 +3862,7 @@ fetch('AUDIUS_API_HOST/v1/challenges/string/attest?user_id=string&oracle=string&
 })
 .then(function(res) {
     return res.json();
-}).then(function(body) {
+}) .then(function(body) {
     console.log(body);
 });
 
@@ -3877,18 +3877,18 @@ headers = {
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/challenges/string/attest',
-  params: {
+  params : {
   'user_id' => 'string',
 'oracle' => 'string',
 'specifier' => 'string'
-}, headers: headers
+}, en-têtes : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
+demandes d'importation
 headers = {
   'Accept': 'application/json'
 }
@@ -3897,25 +3897,25 @@ r = requests.get('AUDIUS_API_HOST/v1/challenges/string/attest', params={
   'user_id': 'string',  'oracle': 'string',  'specifier': 'string'
 }, headers = headers)
 
-print(r.json())
+print(r. json())
 
 ```
 
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/challenges/string/attest', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -3924,7 +3924,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -3933,14 +3933,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/challenges/string/attest?user_id=string&oracle=string&specifier=string");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/challenges/string/attest?user_id=string&oracle=string&specifier=string");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -3965,7 +3965,7 @@ func main() {
 
     data := bytes.NewBuffer([]byte{jsonReq})
     req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/challenges/string/attest", data)
-    req.Header = headers
+    req.Header = en-têtes
 
     client := &http.Client{}
     resp, err := client.Do(req)
@@ -3974,16 +3974,16 @@ func main() {
 
 ```
 
-`GET /challenges/{challenge_id}/attest`
+`OBTENIR /défis/{challenge_id}/attester`
 
 <h3 id="get_attest-parameters">Paramètres de requête</h3>
 
-| Name         | Type   | Required | Description |
-| ------------ | ------ | -------- | ----------- |
-| user_id      | string | true     | none        |
-| oracle       | string | true     | none        |
-| specifier    | string | true     | none        |
-| challenge_id | string | true     | none        |
+| Nom                       | Taper                | Obligatoire | La description |
+| ------------------------- | -------------------- | ----------- | -------------- |
+| identifiant d'utilisateur | chaîne de caractères | vrai        | rien           |
+| oracle                    | chaîne de caractères | vrai        | rien           |
+| spécificateur             | chaîne de caractères | vrai        | rien           |
+| challenge_id              | chaîne de caractères | vrai        | rien           |
 
 > Exemple de réponse
 
@@ -3992,17 +3992,17 @@ func main() {
 ```json
 {
   "data": {
-    "owner_wallet": "string",
-    "attestation": "string"
+    "owner_wallet": "chaîne",
+    "attestation": "chaîne"
   }
 }
 ```
 
 <h3 id="get_attest-responses">Réponses</h3>
 
-| Status | Meaning                                                 | Description | Schema                                            |
-| ------ | ------------------------------------------------------- | ----------- | ------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Success     | [attestation_reponse](#schemaattestation_reponse) |
+| Statut | Sens                                                          | La description | Schéma                                            |
+| ------ | ------------------------------------------------------------- | -------------- | ------------------------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Succès         | [attestation_reponse](#schemaattestation_reponse) |
 
 <h1 id="api-metrics">métriques</h1>
 
@@ -4025,9 +4025,9 @@ GET AUDIUS_API_HOST/v1/metrics/app_name/trailing/string HTTP/1.1
 
 ```javascript
 
-const headers = {
-  'Accept':'application/json'
-};
+en-têtes const = {
+  'Accepter':'application/json'
+} ;
 
 fetch('AUDIUS_API_HOST/v1/metrics/app_name/trailing/string',
 {
@@ -4038,54 +4038,54 @@ fetch('AUDIUS_API_HOST/v1/metrics/app_name/trailing/string',
 .then(function(res) {
     return res.json();
 }).then(function(body) {
-    console.log(body);
+    console .log(corps);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+nécessite 'rest-client'
+nécessite 'json'
 
 headers = {
   'Accept' => 'application/json'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/metrics/app_name/trailing/string',
-  params: {
-  }, headers: headers
+  params : {
+  }, en-têtes : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
+requêtes d'importation
 headers = {
   'Accept': 'application/json'
 }
 
 r = requests.get('AUDIUS_API_HOST/v1/metrics/app_name/trailing/string', headers = headers)
 
-print(r.json())
+print(r.json( ))
 
 ```
 
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'application/json',
+    'Accepter' => 'application/json',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/metrics/app_name/trailing/string', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -4094,7 +4094,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -4103,14 +4103,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/metrics/app_name/trailing/string");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/metrics/app_name/trailing/string");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -4135,7 +4135,7 @@ func main() {
 
     data := bytes.NewBuffer([]byte{jsonReq})
     req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/metrics/app_name/trailing/string", data)
-    req.Header = headers
+    req.Header = en-têtes
 
     client := &http.Client{}
     resp, err := client.Do(req)
@@ -4150,9 +4150,9 @@ func main() {
 
 <h3 id="get_trailing_app_name_metrics-parameters">Paramètres de requête</h3>
 
-| Name       | Type   | Required | Description |
-| ---------- | ------ | -------- | ----------- |
-| time_range | string | true     | none        |
+| Nom                 | Taper                | Obligatoire | La description |
+| ------------------- | -------------------- | ----------- | -------------- |
+| intervalle de temps | chaîne de caractères | vrai        | rien           |
 
 > Exemple de réponse
 
@@ -4160,10 +4160,10 @@ func main() {
 
 ```json
 {
-  "data": [
+  "données": [
     {
-      "count": 0,
-      "name": "string"
+      "compte": 0,
+      "nom": "chaîne"
     }
   ]
 }
@@ -4171,9 +4171,9 @@ func main() {
 
 <h3 id="get_trailing_app_name_metrics-responses">Réponses</h3>
 
-| Status | Meaning                                                 | Description | Schema                                                            |
-| ------ | ------------------------------------------------------- | ----------- | ----------------------------------------------------------------- |
-| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Success     | [app_name_trailing_response](#schemaapp_name_trailing_response) |
+| Statut | Sens                                                          | La description | Schéma                                                            |
+| ------ | ------------------------------------------------------------- | -------------- | ----------------------------------------------------------------- |
+| 200    | [D'ACCORD](https://tools.ietf.org/html/rfc7231#section-6.3.1) | Succès         | [app_name_trailing_response](#schemaapp_name_trailing_response) |
 
 <h1 id="api-resolve">résoudre</h1>
 
@@ -4196,11 +4196,11 @@ GET AUDIUS_API_HOST/v1/resolve?url=https://audius.co/camouflybeats/hypermantra-8
 
 ```javascript
 
-const headers = {
-  'Accept':'text/plain'
-};
+en-têtes const = {
+  'Accepter':'text/plain'
+} ;
 
-fetch('AUDIUS_API_HOST/v1/resolve?url=https://audius.co/camouflybeats/hypermantra-86216',
+chercher('AUDIUS_API_HOST/v1/resolve?url=https://audius.co/camouflybeats/hypermantra-86216',
 {
   method: 'GET',
 
@@ -4208,38 +4208,38 @@ fetch('AUDIUS_API_HOST/v1/resolve?url=https://audius.co/camouflybeats/hypermantr
 })
 .then(function(res) {
     return res.json();
-}).then(function(body) {
+}) .then(function(body) {
     console.log(body);
 });
 
 ```
 
 ```ruby
-require 'rest-client'
-require 'json'
+nécessite 'rest-client'
+nécessite 'json'
 
-headers = {
+en-têtes = {
   'Accept' => 'text/plain'
 }
 
 result = RestClient.get 'AUDIUS_API_HOST/v1/resolve',
-  params: {
-  'url' => 'string'
-}, headers: headers
+  paramètres : {
+  'url' => 'chaîne'
+}, en-têtes : en-têtes
 
-p JSON.parse(result)
+p JSON.parse(résultat)
 
 ```
 
 ```python
-import requests
-headers = {
-  'Accept': 'text/plain'
+requêtes d'importation
+en-têtes = {
+  'Accepter' : 'text/plain'
 }
 
 r = requests.get('AUDIUS_API_HOST/v1/resolve', params={
-  'url': 'https://audius.co/camouflybeats/hypermantra-86216'
-}, headers = headers)
+  'url' : 'https://audius.co/ camouflybeats/hypermantra-86216'
+}, en-têtes = en-têtes)
 
 print(r.json())
 
@@ -4248,18 +4248,18 @@ print(r.json())
 ```php
 <?php
 
-require 'vendor/autoload.php';
+requiert 'vendor/autoload.php';
 
 $headers = array(
-    'Accept' => 'text/plain',
+    'Accepter' => 'text/plain',
 );
 
-$client = new \GuzzleHttp\Client();
+$client = nouveau \GuzzleHttp\Client();
 
-// Define array of request body.
-$request_body = array();
+// Définit le tableau du corps de la requête.
+$request_body = tableau();
 
-try {
+essai {
     $response = $client->request('GET','AUDIUS_API_HOST/v1/resolve', array(
         'headers' => $headers,
         'json' => $request_body,
@@ -4268,7 +4268,7 @@ try {
     print_r($response->getBody()->getContents());
  }
  catch (\GuzzleHttp\Exception\BadResponseException $e) {
-    // handle exception or api errors.
+    // gère les erreurs d'exception ou d'api.
     print_r($e->getMessage());
  }
 
@@ -4277,14 +4277,14 @@ try {
 ```
 
 ```java
-URL obj = new URL("AUDIUS_API_HOST/v1/resolve?url=https://audius.co/camouflybeats/hypermantra-86216");
+URL obj = nouvelle URL("AUDIUS_API_HOST/v1/resolve?url=https://audius.co/camouflybeats/hypermantra-86216");
 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 con.setRequestMethod("GET");
 int responseCode = con.getResponseCode();
 BufferedReader in = new BufferedReader(
     new InputStreamReader(con.getInputStream()));
-String inputLine;
-StringBuffer response = new StringBuffer();
+Ligne d'entrée de chaîne ;
+réponse StringBuffer = nouveau StringBuffer();
 while ((inputLine = in.readLine()) != null) {
     response.append(inputLine);
 }
@@ -4311,14 +4311,14 @@ func main() {
     req, err := http.NewRequest("GET", "AUDIUS_API_HOST/v1/resolve", data)
     req.Header = headers
 
-    client := &http.Client{}
+    client := &http .Client{}
     resp, err := client.Do(req)
     // ...
 }
 
 ```
 
-`GET /resolve`
+`OBTENIR / résoudre`
 
 *Résout et redirige l'URL de l'application Audius fournie vers l'URL de la ressource API qu'elle représente*
 
@@ -4326,23 +4326,23 @@ Ce endpoint vous permet de rechercher et d'accéder aux ressources de l'API lors
 
 <h3 id="resolve-parameters">Paramètres de requête</h3>
 
-| Name | Type   | Required | Description                                                                           |
-| ---- | ------ | -------- | ------------------------------------------------------------------------------------- |
-| url  | string | true     | URL to resolve. Either fully formed URL (https://audius.co) or just the absolute path |
+| Nom | Taper                | Obligatoire | La description                                                                                |
+| --- | -------------------- | ----------- | --------------------------------------------------------------------------------------------- |
+| URL | chaîne de caractères | vrai        | URL à résoudre. Soit une URL entièrement formée (https://audius.co) ou juste le chemin absolu |
 
 > Exemple de réponse
 
 > Redirection interne
 
 ```
-{"HTTP/1.1 302 Found Location":"/v1/tracks/V4W8r"}
+{"HTTP/1.1 302 Emplacement trouvé":"/v1/tracks/V4W8r"}
 ```
 
 <h3 id="resolve-responses">Réponses</h3>
 
-| Status | Meaning                                                    | Description       | Schema |
-| ------ | ---------------------------------------------------------- | ----------------- | ------ |
-| 302    | [Found](https://tools.ietf.org/html/rfc7231#section-6.4.3) | Internal redirect | None   |
+| Statut | Sens                                                        | La description      | Schéma |
+| ------ | ----------------------------------------------------------- | ------------------- | ------ |
+| 302    | [Trouvé](https://tools.ietf.org/html/rfc7231#section-6.4.3) | Redirection interne | Aucun  |
 
 <h3 id="resolve-responseschema">Schéma de réponse</h3>
 
@@ -4367,18 +4367,18 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
     },
     "followee_count": 0,
     "follower_count": 0,
-    "handle": "string",
-    "id": "string",
-    "is_verified": true,
-    "location": "string",
-    "name": "string",
+    "handle": "chaîne",
+    "id": "chaîne",
+    "is_verified": vrai,
+    "location": "chaîne",
+    "nom " : "chaîne",
     "playlist_count": 0,
     "profile_picture": {
-      "150x150": "string",
-      "480x480": "string",
-      "1000x1000": "string"
+      "150x150": "chaîne",
+      "480x480": "chaîne",
+      "1000x1000": "chaîne"
     },
-    "repost_count": 0,
+    " repost_count": 0,
     "track_count": 0
   }
 }
@@ -4387,9 +4387,9 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name | Type                | Required | Restrictions | Description |
-| ---- | ------------------- | -------- | ------------ | ----------- |
-| data | [user](#schemauser) | false    | none         | none        |
+| Nom         | Taper                      | Obligatoire | Restrictions | La description |
+| ----------- | -------------------------- | ----------- | ------------ | -------------- |
+| Les données | [utilisateur](#schemauser) | faux        | rien         | rien           |
 
 <a id="schemauser"></a>
 <a id="schema_user"></a>
@@ -4407,16 +4407,16 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
   },
   "followee_count": 0,
   "follower_count": 0,
-  "handle": "string",
-  "id": "string",
-  "is_verified": true,
-  "location": "string",
-  "name": "string",
+  "handle": "chaîne",
+  "id": "chaîne",
+  "is_verified": vrai,
+  "location": "chaîne",
+  "name": "chaîne",
   "playlist_count": 0,
   "profile_picture": {
-    "150x150": "string",
-    "480x480": "string",
-    "1000x1000": "string"
+    "150x150": "chaîne",
+    "480x480": "chaîne",
+    "1000x1000": "chaîne"
   },
   "repost_count": 0,
   "track_count": 0
@@ -4426,22 +4426,22 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name            | Type                                      | Required | Restrictions | Description |
-| --------------- | ----------------------------------------- | -------- | ------------ | ----------- |
-| album_count     | integer                                   | true     | none         | none        |
-| bio             | string                                    | false    | none         | none        |
-| cover_photo     | [cover_photo](#schemacover_photo)         | false    | none         | none        |
-| followee_count  | integer                                   | true     | none         | none        |
-| follower_count  | integer                                   | true     | none         | none        |
-| handle          | string                                    | true     | none         | none        |
-| id              | string                                    | true     | none         | none        |
-| is_verified     | boolean                                   | true     | none         | none        |
-| location        | string                                    | false    | none         | none        |
-| name            | string                                    | true     | none         | none        |
-| playlist_count  | integer                                   | true     | none         | none        |
-| profile_picture | [profile_picture](#schemaprofile_picture) | false    | none         | none        |
-| repost_count    | integer                                   | true     | none         | none        |
-| track_count     | integer                                   | true     | none         | none        |
+| Nom                 | Taper                                     | Obligatoire | Restrictions | La description |
+| ------------------- | ----------------------------------------- | ----------- | ------------ | -------------- |
+| album_count         | entier                                    | vrai        | rien         | rien           |
+| biologique          | chaîne de caractères                      | faux        | rien         | rien           |
+| photo de couverture | [photo de couverture](#schemacover_photo) | faux        | rien         | rien           |
+| followee_count      | entier                                    | vrai        | rien         | rien           |
+| follower_count      | entier                                    | vrai        | rien         | rien           |
+| manipuler           | chaîne de caractères                      | vrai        | rien         | rien           |
+| identifiant         | chaîne de caractères                      | vrai        | rien         | rien           |
+| est_vérifié         | booléen                                   | vrai        | rien         | rien           |
+| emplacement         | chaîne de caractères                      | faux        | rien         | rien           |
+| Nom                 | chaîne de caractères                      | vrai        | rien         | rien           |
+| playlist_count      | entier                                    | vrai        | rien         | rien           |
+| image de profil     | [image de profil](#schemaprofile_picture) | faux        | rien         | rien           |
+| repost_count        | entier                                    | vrai        | rien         | rien           |
+| track_count         | entier                                    | vrai        | rien         | rien           |
 
 <a id="schemacover_photo"></a>
 <a id="schema_cover_photo"></a>
@@ -4451,18 +4451,18 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "640x": "string",
-  "2000x": "string"
+  "640x": "chaîne",
+  "2000x": "chaîne"
 }
 
 ```
 
 ### Propriétés
 
-| Name  | Type   | Required | Restrictions | Description |
-| ----- | ------ | -------- | ------------ | ----------- |
-| 640x  | string | false    | none         | none        |
-| 2000x | string | false    | none         | none        |
+| Nom   | Taper                | Obligatoire | Restrictions | La description |
+| ----- | -------------------- | ----------- | ------------ | -------------- |
+| 640x  | chaîne de caractères | faux        | rien         | rien           |
+| 2000x | chaîne de caractères | faux        | rien         | rien           |
 
 <a id="schemaprofile_picture"></a>
 <a id="schema_profile_picture"></a>
@@ -4472,20 +4472,20 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "150x150": "string",
-  "480x480": "string",
-  "1000x1000": "string"
+  "150x150": "chaîne",
+  "480x480": "chaîne",
+  "1000x1000": "chaîne"
 }
 
 ```
 
 ### Propriétés
 
-| Name      | Type   | Required | Restrictions | Description |
-| --------- | ------ | -------- | ------------ | ----------- |
-| 150x150   | string | false    | none         | none        |
-| 480x480   | string | false    | none         | none        |
-| 1000x1000 | string | false    | none         | none        |
+| Nom       | Taper                | Obligatoire | Restrictions | La description |
+| --------- | -------------------- | ----------- | ------------ | -------------- |
+| 150x150   | chaîne de caractères | faux        | rien         | rien           |
+| 480x480   | chaîne de caractères | faux        | rien         | rien           |
+| 1000x1000 | chaîne de caractères | faux        | rien         | rien           |
 
 <a id="schematracks_response"></a>
 <a id="schema_tracks_response"></a>
@@ -4495,14 +4495,14 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "data": [
+  "données": [
     {
-      "artwork": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
+      "oeuvre": {
+        "150x150": "chaîne",
+        "480x480": "chaîne",
+        "1000x1000": "chaîne"
       },
-      "description": "string",
+      "description": " string",
       "genre": "string",
       "id": "string",
       "mood": "string",
@@ -4510,14 +4510,14 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
       "remix_of": {
         "tracks": [
           {
-            "parent_track_id": "string"
+            "parent_track_id": "chaîne"
           }
         ]
       },
       "repost_count": 0,
       "favorite_count": 0,
-      "tags": "string",
-      "title": "string",
+      "tags": "chaîne",
+      "title": "chaîne",
       "user": {
         "album_count": 0,
         "bio": "string",
@@ -4525,24 +4525,24 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
           "640x": "string",
           "2000x": "string"
         },
-        "followee_count": 0,
+        " followee_count": 0,
         "follower_count": 0,
-        "handle": "string",
-        "id": "string",
-        "is_verified": true,
-        "location": "string",
-        "name": "string",
+        "handle": "chaîne",
+        "id": "chaîne",
+        "is_verified": vrai,
+        "location": "chaîne",
+        "nom" : "chaîne",
         "playlist_count": 0,
         "profile_picture": {
-          "150x150": "string",
-          "480x480": "string",
-          "1000x1000": "string"
+          "150x150": "chaîne",
+          "480x480": "chaîne",
+          "1000x1000": "chaîne"
         },
-        "repost_count": 0,
+        "repost_count " : 0,
         "track_count": 0
       },
       "duration": 0,
-      "downloadable": true,
+      "téléchargeable": vrai,
       "play_count": 0,
       "permalink": "string"
     }
@@ -4553,9 +4553,9 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name | Type                    | Required | Restrictions | Description |
-| ---- | ----------------------- | -------- | ------------ | ----------- |
-| data | [[Track](#schematrack)] | false    | none         | none        |
+| Nom         | Taper                   | Obligatoire | Restrictions | La description |
+| ----------- | ----------------------- | ----------- | ------------ | -------------- |
+| Les données | [[Piste](#schematrack)] | faux        | rien         | rien           |
 
 <a id="schematrack"></a>
 <a id="schema_Track"></a>
@@ -4565,12 +4565,12 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "artwork": {
-    "150x150": "string",
-    "480x480": "string",
-    "1000x1000": "string"
+  "illustration": {
+    "150x150": "chaîne",
+    "480x480": "chaîne",
+    "1000x1000": "chaîne"
   },
-  "description": "string",
+  "description": "chaîne",
   "genre": "string",
   "id": "string",
   "mood": "string",
@@ -4587,30 +4587,30 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
   "tags": "string",
   "title": "string",
   "user": {
-    "album_count": 0,
-    "bio": "string",
+    " album_count": 0,
+    "bio": "chaîne",
     "cover_photo": {
-      "640x": "string",
-      "2000x": "string"
+      "640x": "chaîne",
+      "2000x": "chaîne"
     },
     "followee_count": 0,
-    "follower_count": 0,
+    "follower_count " : 0,
     "handle": "string",
     "id": "string",
-    "is_verified": true,
+    "is_verified": vrai,
     "location": "string",
     "name": "string",
-    "playlist_count": 0,
+    "playlist_count " : 0,
     "profile_picture": {
-      "150x150": "string",
-      "480x480": "string",
-      "1000x1000": "string"
+      "150x150": "chaîne",
+      "480x480": "chaîne",
+      "1000x1000": "chaîne"
     },
     "repost_count": 0,
-    "track_count": 0
+    "track_count" : 0
   },
   "duration": 0,
-  "downloadable": true,
+  "téléchargeable": vrai,
   "play_count": 0,
   "permalink": "string"
 }
@@ -4619,24 +4619,24 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name           | Type                                  | Required | Restrictions | Description |
-| -------------- | ------------------------------------- | -------- | ------------ | ----------- |
-| artwork        | [track_artwork](#schematrack_artwork) | false    | none         | none        |
-| description    | string                                | false    | none         | none        |
-| genre          | string                                | false    | none         | none        |
-| id             | string                                | true     | none         | none        |
-| mood           | string                                | false    | none         | none        |
-| release_date   | string                                | false    | none         | none        |
-| remix_of       | [remix_parent](#schemaremix_parent)   | false    | none         | none        |
-| repost_count   | integer                               | true     | none         | none        |
-| favorite_count | integer                               | true     | none         | none        |
-| tags           | string                                | false    | none         | none        |
-| title          | string                                | true     | none         | none        |
-| user           | [user](#schemauser)                   | true     | none         | none        |
-| duration       | integer                               | true     | none         | none        |
-| downloadable   | boolean                               | false    | none         | none        |
-| play_count     | integer                               | true     | none         | none        |
-| permalink      | string                                | false    | none         | none        |
+| Nom            | Taper                                 | Obligatoire | Restrictions | La description |
+| -------------- | ------------------------------------- | ----------- | ------------ | -------------- |
+| ouvrages d'art | [track_artwork](#schematrack_artwork) | faux        | rien         | rien           |
+| la description | chaîne de caractères                  | faux        | rien         | rien           |
+| genre          | chaîne de caractères                  | faux        | rien         | rien           |
+| identifiant    | chaîne de caractères                  | vrai        | rien         | rien           |
+| ambiance       | chaîne de caractères                  | faux        | rien         | rien           |
+| date de sortie | chaîne de caractères                  | faux        | rien         | rien           |
+| remix_de       | [remix_parent](#schemaremix_parent)   | faux        | rien         | rien           |
+| repost_count   | entier                                | vrai        | rien         | rien           |
+| nombre_favoris | entier                                | vrai        | rien         | rien           |
+| Mots clés      | chaîne de caractères                  | faux        | rien         | rien           |
+| Titre          | chaîne de caractères                  | vrai        | rien         | rien           |
+| utilisateur    | [utilisateur](#schemauser)            | vrai        | rien         | rien           |
+| durée          | entier                                | vrai        | rien         | rien           |
+| téléchargeable | booléen                               | faux        | rien         | rien           |
+| play_count     | entier                                | vrai        | rien         | rien           |
+| lien permanent | chaîne de caractères                  | faux        | rien         | rien           |
 
 <a id="schematrack_artwork"></a>
 <a id="schema_track_artwork"></a>
@@ -4646,20 +4646,20 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "150x150": "string",
-  "480x480": "string",
-  "1000x1000": "string"
+  "150x150": "chaîne",
+  "480x480": "chaîne",
+  "1000x1000": "chaîne"
 }
 
 ```
 
 ### Propriétés
 
-| Name      | Type   | Required | Restrictions | Description |
-| --------- | ------ | -------- | ------------ | ----------- |
-| 150x150   | string | false    | none         | none        |
-| 480x480   | string | false    | none         | none        |
-| 1000x1000 | string | false    | none         | none        |
+| Nom       | Taper                | Obligatoire | Restrictions | La description |
+| --------- | -------------------- | ----------- | ------------ | -------------- |
+| 150x150   | chaîne de caractères | faux        | rien         | rien           |
+| 480x480   | chaîne de caractères | faux        | rien         | rien           |
+| 1000x1000 | chaîne de caractères | faux        | rien         | rien           |
 
 <a id="schemaremix_parent"></a>
 <a id="schema_remix_parent"></a>
@@ -4669,9 +4669,9 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "tracks": [
+  "pistes": [
     {
-      "parent_track_id": "string"
+      "parent_track_id": "chaîne"
     }
   ]
 }
@@ -4680,9 +4680,9 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name   | Type                                    | Required | Restrictions | Description |
-| ------ | --------------------------------------- | -------- | ------------ | ----------- |
-| tracks | [[track_element](#schematrack_element)] | false    | none         | none        |
+| Nom        | Taper                                   | Obligatoire | Restrictions | La description |
+| ---------- | --------------------------------------- | ----------- | ------------ | -------------- |
+| des pistes | [[track_element](#schematrack_element)] | faux        | rien         | rien           |
 
 <a id="schematrack_element"></a>
 <a id="schema_track_element"></a>
@@ -4692,16 +4692,16 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "parent_track_id": "string"
+  "id_piste_parent": "chaîne"
 }
 
 ```
 
 ### Propriétés
 
-| Name              | Type   | Required | Restrictions | Description |
-| ----------------- | ------ | -------- | ------------ | ----------- |
-| parent_track_id | string | true     | none         | none        |
+| Nom               | Taper                | Obligatoire | Restrictions | La description |
+| ----------------- | -------------------- | ----------- | ------------ | -------------- |
+| parent_track_id | chaîne de caractères | vrai        | rien         | rien           |
 
 <a id="schemareposts"></a>
 <a id="schema_reposts"></a>
@@ -4711,11 +4711,11 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "data": [
+  "données": [
     {
-      "timestamp": "string",
-      "item_type": {},
-      "item": {}
+      "horodatage": "chaîne",
+      "type_élément": {},
+      "élément": {}
     }
   ]
 }
@@ -4724,9 +4724,9 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name | Type                          | Required | Restrictions | Description |
-| ---- | ----------------------------- | -------- | ------------ | ----------- |
-| data | [[activity](#schemaactivity)] | false    | none         | none        |
+| Nom         | Taper                         | Obligatoire | Restrictions | La description |
+| ----------- | ----------------------------- | ----------- | ------------ | -------------- |
+| Les données | [[activité](#schemaactivity)] | faux        | rien         | rien           |
 
 <a id="schemaactivity"></a>
 <a id="schema_activity"></a>
@@ -4745,25 +4745,25 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name      | Type   | Required | Restrictions | Description |
-| --------- | ------ | -------- | ------------ | ----------- |
-| timestamp | string | false    | none         | none        |
-| item_type | object | false    | none         | none        |
-| item      | object | false    | none         | none        |
+| Nom            | Taper                | Obligatoire | Restrictions | La description |
+| -------------- | -------------------- | ----------- | ------------ | -------------- |
+| horodatage     | chaîne de caractères | faux        | rien         | rien           |
+| type d'élément | objet                | faux        | rien         | rien           |
+| Objet          | objet                | faux        | rien         | rien           |
 
 <a id="schemafavorites_response"></a>
 <a id="schema_favorites_response"></a>
 <a id="tocSfavorites_response"></a>
 <a id="tocsfavorites_response"></a>
-<h2 id="tocS_favorites_response">favorites_response</h2>
+<h2 id="tocS_favorites_response">favoris_réponse</h2>
 
 ```json
 {
   "data": [
     {
-      "favorite_item_id": "string",
-      "favorite_type": "string",
-      "user_id": "string"
+      "favorite_item_id": "chaîne",
+      "favorite_type": "chaîne",
+      "user_id": "chaîne"
     }
   ]
 }
@@ -4772,9 +4772,9 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name | Type                          | Required | Restrictions | Description |
-| ---- | ----------------------------- | -------- | ------------ | ----------- |
-| data | [[favorite](#schemafavorite)] | false    | none         | none        |
+| Nom         | Taper                       | Obligatoire | Restrictions | La description |
+| ----------- | --------------------------- | ----------- | ------------ | -------------- |
+| Les données | [[favori](#schemafavorite)] | faux        | rien         | rien           |
 
 <a id="schemafavorite"></a>
 <a id="schema_favorite"></a>
@@ -4784,20 +4784,20 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "favorite_item_id": "string",
-  "favorite_type": "string",
-  "user_id": "string"
+  "favorite_item_id": "chaîne",
+  "favorite_type": "chaîne",
+  "user_id": "chaîne"
 }
 
 ```
 
 ### Propriétés
 
-| Name               | Type   | Required | Restrictions | Description |
-| ------------------ | ------ | -------- | ------------ | ----------- |
-| favorite_item_id | string | true     | none         | none        |
-| favorite_type      | string | true     | none         | none        |
-| user_id            | string | true     | none         | none        |
+| Nom                       | Taper                | Obligatoire | Restrictions | La description |
+| ------------------------- | -------------------- | ----------- | ------------ | -------------- |
+| favori_item_id          | chaîne de caractères | vrai        | rien         | rien           |
+| type_favori               | chaîne de caractères | vrai        | rien         | rien           |
+| identifiant d'utilisateur | chaîne de caractères | vrai        | rien         | rien           |
 
 <a id="schematags_response"></a>
 <a id="schema_tags_response"></a>
@@ -4807,8 +4807,8 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "data": [
-    "string"
+  "données": [
+    "chaîne"
   ]
 }
 
@@ -4816,9 +4816,9 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name | Type     | Required | Restrictions | Description |
-| ---- | -------- | -------- | ------------ | ----------- |
-| data | [string] | false    | none         | none        |
+| Nom         | Taper    | Obligatoire | Restrictions | La description |
+| ----------- | -------- | ----------- | ------------ | -------------- |
+| Les données | [string] | faux        | rien         | rien           |
 
 <a id="schemauser_search"></a>
 <a id="schema_user_search"></a>
@@ -4835,19 +4835,19 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
       "cover_photo": {
         "640x": "string",
         "2000x": "string"
-      },
+      } ,
       "followee_count": 0,
       "follower_count": 0,
-      "handle": "string",
-      "id": "string",
-      "is_verified": true,
-      "location": "string",
-      "name": "string",
+      "handle": "chaîne",
+      "id": "chaîne",
+      "is_verified": vrai,
+      "location": "chaîne",
+      "name": "chaîne",
       "playlist_count": 0,
       "profile_picture": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
+        "150x150": "chaîne",
+        "480x480": "chaîne",
+        "1000x1000": "chaîne"
       },
       "repost_count": 0,
       "track_count": 0
@@ -4859,9 +4859,9 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name | Type                  | Required | Restrictions | Description |
-| ---- | --------------------- | -------- | ------------ | ----------- |
-| data | [[user](#schemauser)] | false    | none         | none        |
+| Nom         | Taper                        | Obligatoire | Restrictions | La description |
+| ----------- | ---------------------------- | ----------- | ------------ | -------------- |
+| Les données | [[utilisateur](#schemauser)] | faux        | rien         | rien           |
 
 <a id="schemaassociated_wallets_response"></a>
 <a id="schema_associated_wallets_response"></a>
@@ -4885,9 +4885,9 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name | Type                                            | Required | Restrictions | Description |
-| ---- | ----------------------------------------------- | -------- | ------------ | ----------- |
-| data | [associated_wallets](#schemaassociated_wallets) | false    | none         | none        |
+| Nom         | Taper                                               | Obligatoire | Restrictions | La description |
+| ----------- | --------------------------------------------------- | ----------- | ------------ | -------------- |
+| Les données | [associés_portefeuilles](#schemaassociated_wallets) | faux        | rien         | rien           |
 
 <a id="schemaassociated_wallets"></a>
 <a id="schema_associated_wallets"></a>
@@ -4897,11 +4897,11 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "wallets": [
-    "string"
+  "portefeuilles": [
+    "chaîne"
   ],
   "sol_wallets": [
-    "string"
+    "chaîne"
   ]
 }
 
@@ -4909,10 +4909,10 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name        | Type     | Required | Restrictions | Description |
-| ----------- | -------- | -------- | ------------ | ----------- |
-| wallets     | [string] | true     | none         | none        |
-| sol_wallets | [string] | true     | none         | none        |
+| Nom               | Taper    | Obligatoire | Restrictions | La description |
+| ----------------- | -------- | ----------- | ------------ | -------------- |
+| portefeuilles     | [string] | vrai        | rien         | rien           |
+| sol_portefeuilles | [string] | vrai        | rien         | rien           |
 
 <a id="schemauser_associated_wallet_response"></a>
 <a id="schema_user_associated_wallet_response"></a>
@@ -4922,8 +4922,8 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "data": {
-    "user_id": "string"
+  "données": {
+    "id_utilisateur": "chaîne"
   }
 }
 
@@ -4931,28 +4931,28 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name | Type                                        | Required | Restrictions | Description |
-| ---- | ------------------------------------------- | -------- | ------------ | ----------- |
-| data | [encoded_user_id](#schemaencoded_user_id) | false    | none         | none        |
+| Nom         | Taper                                             | Obligatoire | Restrictions | La description |
+| ----------- | ------------------------------------------------- | ----------- | ------------ | -------------- |
+| Les données | [id_utilisateur_encodé](#schemaencoded_user_id) | faux        | rien         | rien           |
 
 <a id="schemaencoded_user_id"></a>
 <a id="schema_encoded_user_id"></a>
 <a id="tocSencoded_user_id"></a>
 <a id="tocsencoded_user_id"></a>
-<h2 id="tocS_encoded_user_id">encoded_user_id</h2>
+<h2 id="tocS_encoded_user_id">id_utilisateur_encodé</h2>
 
 ```json
 {
-  "user_id": "string"
+  "id_utilisateur": "chaîne"
 }
 
 ```
 
 ### Propriétés
 
-| Name    | Type   | Required | Restrictions | Description |
-| ------- | ------ | -------- | ------------ | ----------- |
-| user_id | string | false    | none         | none        |
+| Nom                       | Taper                | Obligatoire | Restrictions | La description |
+| ------------------------- | -------------------- | ----------- | ------------ | -------------- |
+| identifiant d'utilisateur | chaîne de caractères | faux        | rien         | rien           |
 
 <a id="schemaget_challenges"></a>
 <a id="schema_get_challenges"></a>
@@ -4967,9 +4967,9 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
       "challenge_id": "string",
       "user_id": "string",
       "specifier": "string",
-      "is_complete": true,
-      "is_active": true,
-      "is_disbursed": true,
+      "is_complete": vrai,
+      "is_active": vrai,
+      "is_disbursed": vrai,
       "current_step_count": 0,
       "max_steps": 0,
       "challenge_type": "string",
@@ -4982,9 +4982,9 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name | Type                                              | Required | Restrictions | Description |
-| ---- | ------------------------------------------------- | -------- | ------------ | ----------- |
-| data | [[challenge_response](#schemachallenge_response)] | false    | none         | none        |
+| Nom         | Taper                                       | Obligatoire | Restrictions | La description |
+| ----------- | ------------------------------------------- | ----------- | ------------ | -------------- |
+| Les données | [[défi_réponse](#schemachallenge_response)] | faux        | rien         | rien           |
 
 <a id="schemachallenge_response"></a>
 <a id="schema_challenge_response"></a>
@@ -4994,12 +4994,12 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "challenge_id": "string",
-  "user_id": "string",
-  "specifier": "string",
-  "is_complete": true,
-  "is_active": true,
-  "is_disbursed": true,
+  "challenge_id": "chaîne",
+  "user_id": "chaîne",
+  "specifier": "chaîne",
+  "is_complete": vrai,
+  "is_active": vrai,
+  "is_disbursed": vrai,
   "current_step_count": 0,
   "max_steps": 0,
   "challenge_type": "string",
@@ -5010,18 +5010,18 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name                 | Type    | Required | Restrictions | Description |
-| -------------------- | ------- | -------- | ------------ | ----------- |
-| challenge_id         | string  | true     | none         | none        |
-| user_id              | string  | true     | none         | none        |
-| specifier            | string  | false    | none         | none        |
-| is_complete          | boolean | true     | none         | none        |
-| is_active            | boolean | true     | none         | none        |
-| is_disbursed         | boolean | true     | none         | none        |
-| current_step_count | integer | false    | none         | none        |
-| max_steps            | integer | false    | none         | none        |
-| challenge_type       | string  | true     | none         | none        |
-| metadata             | object  | true     | none         | none        |
+| Nom                       | Taper                | Obligatoire | Restrictions | La description |
+| ------------------------- | -------------------- | ----------- | ------------ | -------------- |
+| challenge_id              | chaîne de caractères | vrai        | rien         | rien           |
+| identifiant d'utilisateur | chaîne de caractères | vrai        | rien         | rien           |
+| spécificateur             | chaîne de caractères | faux        | rien         | rien           |
+| est complet               | booléen              | vrai        | rien         | rien           |
+| c'est actif               | booléen              | vrai        | rien         | rien           |
+| est_décaissé              | booléen              | vrai        | rien         | rien           |
+| current_step_count      | entier               | faux        | rien         | rien           |
+| max_steps                 | entier               | faux        | rien         | rien           |
+| défi_type                 | chaîne de caractères | vrai        | rien         | rien           |
+| métadonnées               | objet                | vrai        | rien         | rien           |
 
 <a id="schemaplaylist_response"></a>
 <a id="schema_playlist_response"></a>
@@ -5031,17 +5031,17 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "data": [
+  "données": [
     {
-      "artwork": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
+      "oeuvre": {
+        "150x150": "chaîne",
+        "480x480": "chaîne",
+        "1000x1000": "chaîne"
       },
-      "description": "string",
-      "id": "string",
-      "is_album": true,
-      "playlist_name": "string",
+      "description": " chaîne",
+      "id": "chaîne",
+      "is_album": vrai,
+      "playlist_name": "chaîne",
       "repost_count": 0,
       "favorite_count": 0,
       "total_play_count": 0,
@@ -5052,20 +5052,20 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
           "640x": "string",
           "2000x": "string"
         },
-        "followee_count": 0,
+        "followee_count " : 0,
         "follower_count": 0,
-        "handle": "string",
-        "id": "string",
-        "is_verified": true,
-        "location": "string",
-        "name": "string",
+        "handle": "chaîne",
+        "id": "chaîne",
+        "is_verified": vrai,
+        "location": "chaîne",
+        "nom": "chaîne",
         "playlist_count": 0,
         "profile_picture": {
-          "150x150": "string",
-          "480x480": "string",
-          "1000x1000": "string"
+          "150x150": "chaîne",
+          "480x480": "chaîne",
+          "1000x1000": "chaîne"
         },
-        "repost_count": 0,
+        "repost_count" : 0,
         "track_count": 0
       }
     }
@@ -5076,9 +5076,9 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name | Type                          | Required | Restrictions | Description |
-| ---- | ----------------------------- | -------- | ------------ | ----------- |
-| data | [[playlist](#schemaplaylist)] | false    | none         | none        |
+| Nom         | Taper                                 | Obligatoire | Restrictions | La description |
+| ----------- | ------------------------------------- | ----------- | ------------ | -------------- |
+| Les données | [[liste de lecture](#schemaplaylist)] | faux        | rien         | rien           |
 
 <a id="schemaplaylist"></a>
 <a id="schema_playlist"></a>
@@ -5088,37 +5088,37 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "artwork": {
-    "150x150": "string",
-    "480x480": "string",
-    "1000x1000": "string"
+  "illustration": {
+    "150x150": "chaîne",
+    "480x480": "chaîne",
+    "1000x1000": "chaîne"
   },
-  "description": "string",
+  "description": "chaîne",
   "id": "string",
-  "is_album": true,
+  "is_album": vrai,
   "playlist_name": "string",
   "repost_count": 0,
   "favorite_count": 0,
   "total_play_count": 0,
   "user": {
-    "album_count": 0,
-    "bio": "string",
+    "album_count" " : 0,
+    "bio": "chaîne",
     "cover_photo": {
-      "640x": "string",
-      "2000x": "string"
+      "640x": "chaîne",
+      "2000x": "chaîne"
     },
     "followee_count": 0,
-    "follower_count": 0,
+    "follower_count" : 0,
     "handle": "string",
     "id": "string",
-    "is_verified": true,
+    "is_verified": vrai,
     "location": "string",
     "name": "string",
-    "playlist_count": 0,
+    "playlist_count" : 0,
     "profile_picture": {
-      "150x150": "string",
-      "480x480": "string",
-      "1000x1000": "string"
+      "150x150": "chaîne",
+      "480x480": "chaîne",
+      "1000x1000": "chaîne"
     },
     "repost_count": 0,
     "track_count": 0
@@ -5129,17 +5129,17 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name               | Type                                        | Required | Restrictions | Description |
-| ------------------ | ------------------------------------------- | -------- | ------------ | ----------- |
-| artwork            | [playlist_artwork](#schemaplaylist_artwork) | false    | none         | none        |
-| description        | string                                      | false    | none         | none        |
-| id                 | string                                      | true     | none         | none        |
-| is_album           | boolean                                     | true     | none         | none        |
-| playlist_name      | string                                      | true     | none         | none        |
-| repost_count       | integer                                     | true     | none         | none        |
-| favorite_count     | integer                                     | true     | none         | none        |
-| total_play_count | integer                                     | true     | none         | none        |
-| user               | [user](#schemauser)                         | true     | none         | none        |
+| Nom                  | Taper                                       | Obligatoire | Restrictions | La description |
+| -------------------- | ------------------------------------------- | ----------- | ------------ | -------------- |
+| ouvrages d'art       | [playlist_artwork](#schemaplaylist_artwork) | faux        | rien         | rien           |
+| la description       | chaîne de caractères                        | faux        | rien         | rien           |
+| identifiant          | chaîne de caractères                        | vrai        | rien         | rien           |
+| est_album            | booléen                                     | vrai        | rien         | rien           |
+| nom_liste_de_liste | chaîne de caractères                        | vrai        | rien         | rien           |
+| repost_count         | entier                                      | vrai        | rien         | rien           |
+| nombre_favoris       | entier                                      | vrai        | rien         | rien           |
+| total_play_count   | entier                                      | vrai        | rien         | rien           |
+| utilisateur          | [utilisateur](#schemauser)                  | vrai        | rien         | rien           |
 
 <a id="schemaplaylist_artwork"></a>
 <a id="schema_playlist_artwork"></a>
@@ -5149,20 +5149,20 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "150x150": "string",
-  "480x480": "string",
-  "1000x1000": "string"
+  "150x150": "chaîne",
+  "480x480": "chaîne",
+  "1000x1000": "chaîne"
 }
 
 ```
 
 ### Propriétés
 
-| Name      | Type   | Required | Restrictions | Description |
-| --------- | ------ | -------- | ------------ | ----------- |
-| 150x150   | string | false    | none         | none        |
-| 480x480   | string | false    | none         | none        |
-| 1000x1000 | string | false    | none         | none        |
+| Nom       | Taper                | Obligatoire | Restrictions | La description |
+| --------- | -------------------- | ----------- | ------------ | -------------- |
+| 150x150   | chaîne de caractères | faux        | rien         | rien           |
+| 480x480   | chaîne de caractères | faux        | rien         | rien           |
+| 1000x1000 | chaîne de caractères | faux        | rien         | rien           |
 
 <a id="schemaplaylist_tracks_response"></a>
 <a id="schema_playlist_tracks_response"></a>
@@ -5172,14 +5172,14 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "data": [
+  "données": [
     {
-      "artwork": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
+      "oeuvre": {
+        "150x150": "chaîne",
+        "480x480": "chaîne",
+        "1000x1000": "chaîne"
       },
-      "description": "string",
+      "description": " string",
       "genre": "string",
       "id": "string",
       "mood": "string",
@@ -5187,14 +5187,14 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
       "remix_of": {
         "tracks": [
           {
-            "parent_track_id": "string"
+            "parent_track_id": "chaîne"
           }
         ]
       },
       "repost_count": 0,
       "favorite_count": 0,
-      "tags": "string",
-      "title": "string",
+      "tags": "chaîne",
+      "title": "chaîne",
       "user": {
         "album_count": 0,
         "bio": "string",
@@ -5202,24 +5202,24 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
           "640x": "string",
           "2000x": "string"
         },
-        "followee_count": 0,
+        " followee_count": 0,
         "follower_count": 0,
-        "handle": "string",
-        "id": "string",
-        "is_verified": true,
-        "location": "string",
-        "name": "string",
+        "handle": "chaîne",
+        "id": "chaîne",
+        "is_verified": vrai,
+        "location": "chaîne",
+        "nom" : "chaîne",
         "playlist_count": 0,
         "profile_picture": {
-          "150x150": "string",
-          "480x480": "string",
-          "1000x1000": "string"
+          "150x150": "chaîne",
+          "480x480": "chaîne",
+          "1000x1000": "chaîne"
         },
-        "repost_count": 0,
+        "repost_count " : 0,
         "track_count": 0
       },
       "duration": 0,
-      "downloadable": true,
+      "téléchargeable": vrai,
       "play_count": 0,
       "permalink": "string"
     }
@@ -5230,9 +5230,9 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name | Type                    | Required | Restrictions | Description |
-| ---- | ----------------------- | -------- | ------------ | ----------- |
-| data | [[Track](#schematrack)] | false    | none         | none        |
+| Nom         | Taper                   | Obligatoire | Restrictions | La description |
+| ----------- | ----------------------- | ----------- | ------------ | -------------- |
+| Les données | [[Piste](#schematrack)] | faux        | rien         | rien           |
 
 <a id="schemaplaylist_search_result"></a>
 <a id="schema_playlist_search_result"></a>
@@ -5242,17 +5242,17 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "data": [
+  "données": [
     {
-      "artwork": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
+      "oeuvre": {
+        "150x150": "chaîne",
+        "480x480": "chaîne",
+        "1000x1000": "chaîne"
       },
-      "description": "string",
-      "id": "string",
-      "is_album": true,
-      "playlist_name": "string",
+      "description": " chaîne",
+      "id": "chaîne",
+      "is_album": vrai,
+      "playlist_name": "chaîne",
       "repost_count": 0,
       "favorite_count": 0,
       "total_play_count": 0,
@@ -5263,20 +5263,20 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
           "640x": "string",
           "2000x": "string"
         },
-        "followee_count": 0,
+        "followee_count " : 0,
         "follower_count": 0,
-        "handle": "string",
-        "id": "string",
-        "is_verified": true,
-        "location": "string",
-        "name": "string",
+        "handle": "chaîne",
+        "id": "chaîne",
+        "is_verified": vrai,
+        "location": "chaîne",
+        "nom": "chaîne",
         "playlist_count": 0,
         "profile_picture": {
-          "150x150": "string",
-          "480x480": "string",
-          "1000x1000": "string"
+          "150x150": "chaîne",
+          "480x480": "chaîne",
+          "1000x1000": "chaîne"
         },
-        "repost_count": 0,
+        "repost_count" : 0,
         "track_count": 0
       }
     }
@@ -5287,9 +5287,9 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name | Type                          | Required | Restrictions | Description |
-| ---- | ----------------------------- | -------- | ------------ | ----------- |
-| data | [[playlist](#schemaplaylist)] | false    | none         | none        |
+| Nom         | Taper                                 | Obligatoire | Restrictions | La description |
+| ----------- | ------------------------------------- | ----------- | ------------ | -------------- |
+| Les données | [[liste de lecture](#schemaplaylist)] | faux        | rien         | rien           |
 
 <a id="schematrending_playlists_response"></a>
 <a id="schema_trending_playlists_response"></a>
@@ -5299,17 +5299,17 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "data": [
+  "données": [
     {
-      "artwork": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
+      "oeuvre": {
+        "150x150": "chaîne",
+        "480x480": "chaîne",
+        "1000x1000": "chaîne"
       },
-      "description": "string",
-      "id": "string",
-      "is_album": true,
-      "playlist_name": "string",
+      "description": " chaîne",
+      "id": "chaîne",
+      "is_album": vrai,
+      "playlist_name": "chaîne",
       "repost_count": 0,
       "favorite_count": 0,
       "total_play_count": 0,
@@ -5320,20 +5320,20 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
           "640x": "string",
           "2000x": "string"
         },
-        "followee_count": 0,
+        "followee_count " : 0,
         "follower_count": 0,
-        "handle": "string",
-        "id": "string",
-        "is_verified": true,
-        "location": "string",
-        "name": "string",
+        "handle": "chaîne",
+        "id": "chaîne",
+        "is_verified": vrai,
+        "location": "chaîne",
+        "nom": "chaîne",
         "playlist_count": 0,
         "profile_picture": {
-          "150x150": "string",
-          "480x480": "string",
-          "1000x1000": "string"
+          "150x150": "chaîne",
+          "480x480": "chaîne",
+          "1000x1000": "chaîne"
         },
-        "repost_count": 0,
+        "repost_count" : 0,
         "track_count": 0
       }
     }
@@ -5344,9 +5344,9 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name | Type                          | Required | Restrictions | Description |
-| ---- | ----------------------------- | -------- | ------------ | ----------- |
-| data | [[playlist](#schemaplaylist)] | false    | none         | none        |
+| Nom         | Taper                                 | Obligatoire | Restrictions | La description |
+| ----------- | ------------------------------------- | ----------- | ------------ | -------------- |
+| Les données | [[liste de lecture](#schemaplaylist)] | faux        | rien         | rien           |
 
 <a id="schematrack_response"></a>
 <a id="schema_track_response"></a>
@@ -5362,7 +5362,7 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
       "480x480": "string",
       "1000x1000": "string"
     },
-    "description": "string",
+    "description": "string" ,
     "genre": "string",
     "id": "string",
     "mood": "string",
@@ -5370,39 +5370,39 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
     "remix_of": {
       "tracks": [
         {
-          "parent_track_id": "string"
+          "parent_track_id": "chaîne"
         }
       ]
     },
     "repost_count": 0,
     "favorite_count": 0,
-    "tags": "string",
-    "title": "string",
-    "user": {
+    "tags": "chaîne",
+    "title": "chaîne",
+    " user": {
       "album_count": 0,
       "bio": "string",
       "cover_photo": {
         "640x": "string",
         "2000x": "string"
       },
-      "followee_count": 0,
+      "followee_count" : 0,
       "follower_count": 0,
-      "handle": "string",
-      "id": "string",
-      "is_verified": true,
-      "location": "string",
-      "name": "string",
+      "handle": "chaîne",
+      "id": "chaîne",
+      "is_verified": vrai,
+      "location": "chaîne",
+      "name": " chaîne",
       "playlist_count": 0,
       "profile_picture": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
+        "150x150": "chaîne",
+        "480x480": "chaîne",
+        "1000x1000": "chaîne"
       },
       "repost_count": 0,
       "track_count": 0
     },
     "duration": 0,
-    "downloadable": true,
+    "téléchargeable": vrai,
     "play_count": 0,
     "permalink": "string"
   }
@@ -5412,9 +5412,9 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name | Type                  | Required | Restrictions | Description |
-| ---- | --------------------- | -------- | ------------ | ----------- |
-| data | [Track](#schematrack) | false    | none         | none        |
+| Nom         | Taper                  | Obligatoire | Restrictions | La description |
+| ----------- | ---------------------- | ----------- | ------------ | -------------- |
+| Les données | [Pister](#schematrack) | faux        | rien         | rien           |
 
 <a id="schematrack_search"></a>
 <a id="schema_track_search"></a>
@@ -5424,14 +5424,14 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "data": [
+  "données": [
     {
-      "artwork": {
-        "150x150": "string",
-        "480x480": "string",
-        "1000x1000": "string"
+      "oeuvre": {
+        "150x150": "chaîne",
+        "480x480": "chaîne",
+        "1000x1000": "chaîne"
       },
-      "description": "string",
+      "description": " string",
       "genre": "string",
       "id": "string",
       "mood": "string",
@@ -5439,14 +5439,14 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
       "remix_of": {
         "tracks": [
           {
-            "parent_track_id": "string"
+            "parent_track_id": "chaîne"
           }
         ]
       },
       "repost_count": 0,
       "favorite_count": 0,
-      "tags": "string",
-      "title": "string",
+      "tags": "chaîne",
+      "title": "chaîne",
       "user": {
         "album_count": 0,
         "bio": "string",
@@ -5454,24 +5454,24 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
           "640x": "string",
           "2000x": "string"
         },
-        "followee_count": 0,
+        " followee_count": 0,
         "follower_count": 0,
-        "handle": "string",
-        "id": "string",
-        "is_verified": true,
-        "location": "string",
-        "name": "string",
+        "handle": "chaîne",
+        "id": "chaîne",
+        "is_verified": vrai,
+        "location": "chaîne",
+        "nom" : "chaîne",
         "playlist_count": 0,
         "profile_picture": {
-          "150x150": "string",
-          "480x480": "string",
-          "1000x1000": "string"
+          "150x150": "chaîne",
+          "480x480": "chaîne",
+          "1000x1000": "chaîne"
         },
-        "repost_count": 0,
+        "repost_count " : 0,
         "track_count": 0
       },
       "duration": 0,
-      "downloadable": true,
+      "téléchargeable": vrai,
       "play_count": 0,
       "permalink": "string"
     }
@@ -5482,9 +5482,9 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name | Type                    | Required | Restrictions | Description |
-| ---- | ----------------------- | -------- | ------------ | ----------- |
-| data | [[Track](#schematrack)] | false    | none         | none        |
+| Nom         | Taper                   | Obligatoire | Restrictions | La description |
+| ----------- | ----------------------- | ----------- | ------------ | -------------- |
+| Les données | [[Piste](#schematrack)] | faux        | rien         | rien           |
 
 <a id="schemaattestation_reponse"></a>
 <a id="schema_attestation_reponse"></a>
@@ -5495,8 +5495,8 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 ```json
 {
   "data": {
-    "owner_wallet": "string",
-    "attestation": "string"
+    "owner_wallet": "chaîne",
+    "attestation": "chaîne"
   }
 }
 
@@ -5504,9 +5504,9 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name | Type                              | Required | Restrictions | Description |
-| ---- | --------------------------------- | -------- | ------------ | ----------- |
-| data | [attestation](#schemaattestation) | false    | none         | none        |
+| Nom         | Taper                             | Obligatoire | Restrictions | La description |
+| ----------- | --------------------------------- | ----------- | ------------ | -------------- |
+| Les données | [attestation](#schemaattestation) | faux        | rien         | rien           |
 
 <a id="schemaattestation"></a>
 <a id="schema_attestation"></a>
@@ -5516,24 +5516,24 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "owner_wallet": "string",
-  "attestation": "string"
+  "owner_wallet": "chaîne",
+  "attestation": "chaîne"
 }
 
 ```
 
 ### Propriétés
 
-| Name         | Type   | Required | Restrictions | Description |
-| ------------ | ------ | -------- | ------------ | ----------- |
-| owner_wallet | string | true     | none         | none        |
-| attestation  | string | true     | none         | none        |
+| Nom          | Taper                | Obligatoire | Restrictions | La description |
+| ------------ | -------------------- | ----------- | ------------ | -------------- |
+| owner_wallet | chaîne de caractères | vrai        | rien         | rien           |
+| attestation  | chaîne de caractères | vrai        | rien         | rien           |
 
 <a id="schemaundisbursed_challenges"></a>
 <a id="schema_undisbursed_challenges"></a>
 <a id="tocSundisbursed_challenges"></a>
 <a id="tocsundisbursed_challenges"></a>
-<h2 id="tocS_undisbursed_challenges">undisbursed_challenges</h2>
+<h2 id="tocS_undisbursed_challenges">défis_non décaissés</h2>
 
 ```json
 {
@@ -5552,15 +5552,15 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name | Type                                                    | Required | Restrictions | Description |
-| ---- | ------------------------------------------------------- | -------- | ------------ | ----------- |
-| data | [[undisbursed_challenge](#schemaundisbursed_challenge)] | false    | none         | none        |
+| Nom         | Taper                                                  | Obligatoire | Restrictions | La description |
+| ----------- | ------------------------------------------------------ | ----------- | ------------ | -------------- |
+| Les données | [[undisbured_challenge](#schemaundisbursed_challenge)] | faux        | rien         | rien           |
 
 <a id="schemaundisbursed_challenge"></a>
 <a id="schema_undisbursed_challenge"></a>
 <a id="tocSundisbursed_challenge"></a>
 <a id="tocsundisbursed_challenge"></a>
-<h2 id="tocS_undisbursed_challenge">undisbursed_challenge</h2>
+<h2 id="tocS_undisbursed_challenge">undisbured_challenge</h2>
 
 ```json
 {
@@ -5575,13 +5575,13 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name                  | Type    | Required | Restrictions | Description |
-| --------------------- | ------- | -------- | ------------ | ----------- |
-| challenge_id          | string  | true     | none         | none        |
-| user_id               | string  | true     | none         | none        |
-| specifier             | string  | true     | none         | none        |
-| amount                | string  | true     | none         | none        |
-| completed_blocknumber | integer | true     | none         | none        |
+| Nom                       | Taper                | Obligatoire | Restrictions | La description |
+| ------------------------- | -------------------- | ----------- | ------------ | -------------- |
+| challenge_id              | chaîne de caractères | vrai        | rien         | rien           |
+| identifiant d'utilisateur | chaîne de caractères | vrai        | rien         | rien           |
+| spécificateur             | chaîne de caractères | vrai        | rien         | rien           |
+| montant                   | chaîne de caractères | vrai        | rien         | rien           |
+| complete_blocknumber      | entier               | vrai        | rien         | rien           |
 
 <a id="schemaapp_name_trailing_response"></a>
 <a id="schema_app_name_trailing_response"></a>
@@ -5591,10 +5591,10 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "data": [
+  "données": [
     {
-      "count": 0,
-      "name": "string"
+      "compte": 0,
+      "nom": "chaîne"
     }
   ]
 }
@@ -5603,9 +5603,9 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ### Propriétés
 
-| Name | Type                                                            | Required | Restrictions | Description |
-| ---- | --------------------------------------------------------------- | -------- | ------------ | ----------- |
-| data | [[app_name_trailing_metric](#schemaapp_name_trailing_metric)] | false    | none         | none        |
+| Nom         | Taper                                                           | Obligatoire | Restrictions | La description |
+| ----------- | --------------------------------------------------------------- | ----------- | ------------ | -------------- |
+| Les données | [[app_name_trailing_metric](#schemaapp_name_trailing_metric)] | faux        | rien         | rien           |
 
 <a id="schemaapp_name_trailing_metric"></a>
 <a id="schema_app_name_trailing_metric"></a>
@@ -5615,16 +5615,16 @@ Voici des exemples de formats de réponse que vous pouvez vous attendre à recev
 
 ```json
 {
-  "count": 0,
-  "name": "string"
+  "compte": 0,
+  "nom": "chaîne"
 }
 
 ```
 
 ### Propriétés
 
-| Name  | Type    | Required | Restrictions | Description |
-| ----- | ------- | -------- | ------------ | ----------- |
-| count | integer | false    | none         | none        |
-| name  | string  | false    | none         | none        |
+| Nom     | Taper                | Obligatoire | Restrictions | La description |
+| ------- | -------------------- | ----------- | ------------ | -------------- |
+| compter | entier               | faux        | rien         | rien           |
+| Nom     | chaîne de caractères | faux        | rien         | rien           |
 
