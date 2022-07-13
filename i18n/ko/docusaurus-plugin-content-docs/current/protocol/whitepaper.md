@@ -1,14 +1,14 @@
 - - -
-sidebar_label: Whitepaper sidebar_position: 2
+sidebar_label: 백서 sidebar_position: 2
 - - -
 
-# Whitepaper
+# 백지
 
-The Audius Whitepaper lays the theoretical & technical groundwork for how the platform is built and continues to grow.
+Audius 백서는 플랫폼이 구축되고 계속 성장하는 방법에 대한 이론적 & 기술적 토대를 마련합니다.
 
-## [PDF Download](https://whitepaper.audius.co)
-## [Blog post](https://blog.audius.co/posts/the-audius-white-paper-a-decentralized-community-owned-music-sharing-protocol)
+## [PDF 다운로드](https://whitepaper.audius.co)
+## [블로그 게시물](https://blog.audius.co/posts/the-audius-white-paper-a-decentralized-community-owned-music-sharing-protocol)
 
-Questions? Ask & engage with the community on
+질문? 질문 & 커뮤니티 참여
 
-[Discord](https://discord.com/invite/audius) and [Reddit](https://www.reddit.com/r/audius/)
+[Discord](https://discord.com/invite/audius) 및 [Reddit](https://www.reddit.com/r/audius/)
