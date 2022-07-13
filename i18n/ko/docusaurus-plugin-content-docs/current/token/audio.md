@@ -1,29 +1,29 @@
 ---
 sidebar_label: '$AUDIO'
 sidebar_position: 1
-description: '$AUDIO — the Audius platform token underpinning value-added actions in Audius'
+description: '$AUDIO— Audius의 부가 가치 조치를 뒷받침하는 Audius 플랫폼 토큰'
 ---
 
 # $AUDIO
 
-#### How it Works
+#### 작동 원리
 
-Audius platform tokens \(AUDIO\) have three prongs of functionality within the Audius protocol ecosystem:
+Audius 플랫폼 토큰 \(AUDIO\)에는 Audius 프로토콜 에코시스템 내에서 세 가지 기능이 있습니다.
 
-* Security
-* Feature Access
-* Governance
+* 보안
+* 기능 액세스
+* 통치
 
-AUDIO is staked as collateral for a value-added service such as operating a node or participating in governance. In exchange, stakers earn ongoing issuance, governance weight, and access to exclusive features. In the future, AUDIO will govern a global fee pool from value transfers in the network.Offering a native token to align all actors creates a parallel incentive unique to web3, and one which allows our early adopters to share in the upside of Audius as we continue to grow.The Audius community looks to ensure that AUDIO tokens are always being funneled to the most value-added actors. This is done through ongoing issuance using onchain metrics as a measurement to better route distribution to active participants, rather than simply to those staking the most AUDIO.Here’s how this pans out in practice.
+AUDIO는 노드 운영, 거버넌스 참여 등 부가 가치 서비스를 위한 담보로 스테이킹됩니다. 그 대가로 스테이커는 지속적인 발행, 거버넌스 가중치 및 독점 기능에 대한 액세스 권한을 얻습니다. 앞으로 AUDIO는 네트워크의 가치 이전에서 글로벌 수수료 풀을 관리할 것입니다. 모든 행위자를 정렬하기 위해 기본 토큰을 제공하면 web3에 고유한 병렬 인센티브가 생성되며 얼리 어답터가 Audius의 장점을 공유할 수 있습니다. 계속 성장합니다. Audius 커뮤니티는 AUDIO 토큰이 항상 가장 부가가치가 높은 행위자에게 전달되도록 합니다. 이것은 온체인 메트릭을 측정으로 사용하여 진행 중인 발행을 통해 이루어지며 단순히 가장 많은 AUDIO를 스테이킹하는 사람들이 아닌 활성 참가자에게 더 나은 분배 경로를 제공합니다. 이것이 실제로 어떻게 진행되는지 보여줍니다.
 
-**SECURITY**
+**보안**
 
-AUDIO is staked by node operators to secure the network. The larger the stake, the higher the probability of their node being used by fans and artists. Audius is entirely hosted and operated by the community, creating a permissionless ecosystem of node operators securing content for the world’s unstoppable streaming protocol.
+AUDIO는 네트워크를 보호하기 위해 노드 운영자가 스테이킹합니다. 스테이크가 클수록 팬과 아티스트가 노드를 사용할 확률이 높아집니다. Audius는 커뮤니티에서 완전히 호스팅 및 운영하여 전 세계의 막을 수 없는 스트리밍 프로토콜을 위한 콘텐츠를 보호하는 노드 운영자의 무허가 생태계를 만듭니다.
 
-**FEATURE ACCESS**
+**기능 액세스**
 
-AUDIO serves as collateral to unlock additional artist tooling. Early examples incubated by the community include artists tokens, badges, and earnings multipliers. In the future, fans may delegate AUDIO to specific artists and curators to share in their growth on the platform.
+AUDIO는 추가 아티스트 도구를 잠금 해제하기 위한 담보 역할을 합니다. 커뮤니티에서 배양한 초기 사례에는 아티스트 토큰, 배지 및 수입 배율이 포함됩니다. 앞으로 팬들은 플랫폼에서 그들의 성장을 공유하기 위해 특정 아티스트와 큐레이터에게 AUDIO를 위임할 수 있습니다.
 
-**GOVERNANCE**
+**통치**
 
-Any AUDIO staked within Audius is assigned governance weight, used to shape future iterations of the protocol. Every aspect of Audius is governable, starting with one token staked equal to one vote. We envision governance to focus on operator incentives at inception, with the ambition for even passive fans to voice their opinion over product updates and feature upgrades too.The choice to offer ongoing issuance **aligns power with those who are continually the most active on the platform**, a mechanism Audius believes better suits future users of the protocol.
+Audius 내에 스테이킹된 모든 AUDIO에는 프로토콜의 향후 반복을 형성하는 데 사용되는 거버넌스 가중치가 할당됩니다. Audius의 모든 측면은 하나의 투표와 동일한 하나의 토큰으로 시작하여 통제 가능합니다. 우리는 초기부터 운영자 인센티브에 초점을 맞추는 거버넌스를 구상하고 있으며, 수동적인 팬도 제품 업데이트 및 기능 업그레이드에 대해 의견을 표명할 수 있도록 하고자 합니다. 지속적인 발행 **을 제공하는 선택은 플랫폼에서 지속적으로 가장 활동적인 사람들과 힘을 맞춥니다. 도**에 도시된 바와 같이, Audius가 프로토콜의 미래 사용자에게 더 적합하다고 믿는 메커니즘.
