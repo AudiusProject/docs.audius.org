@@ -1,88 +1,88 @@
 ---
-sidebar_label: Hedgehog
+sidebar_label: 刺猬
 sidebar_position: 2
 ---
 
-# Hedgehog
+# 刺猬
 
-Build DApps Like Apps
+像应用程序一样构建 DApps
 
-[Github](https://github.com/AudiusProject/hedgehog) 👈
+[Github](https://github.com/AudiusProject/hedgehog)👈
 
-Hedgehog is an open-source, client-side Ethereum wallet that uses a username and password. It aims to lower the barrier of entry to crypto projects for non tech-savvy users.
+Hedgehog 是一个使用用户名和密码的开源客户端以太坊钱包。 它旨在降低非技术用户进入加密项目的门槛。
 
-Allow users to interact with your DApp just like they would any other website, no extensions required, without centralizing control of keys.
+允许用户像与任何其他网站一样与您的 DApp 进行交互，无需扩展，无需集中控制密钥。
 
-**Hedgehog** is alternative to Metamask that manages a user's private key and wallet on the browser. It exposes a simple API to allow you to create an authentication scheme to let users sign up and login to their wallet across multiple browsers and devices.
+**Hedgehog** 是 Metamask 的替代品，它在浏览器上管理用户的私钥和钱包。 它公开了一个简单的 API，允许您创建身份验证方案，让用户在多个浏览器和设备上注册并登录他们的钱包。
 
-### Not All Transactions Are Created Equal
+### 并非所有交易都是平等的
 
-Current Ethereum wallets treat every transaction as if it were moving your life’s savings. Hedgehog was built for use-cases involving low-to-no financial value.
+当前的以太坊钱包将每笔交易都视为转移您一生的积蓄。 Hedgehog 是为涉及低到没有财务价值的用例而构建的。
 
-> Note: The primary improvement to end-user experience is gained by hiding wallet complexity and not forcing users to confirm transactions - the opposite of what you’d want when moving significant money around.
+> 注意：最终用户体验的主要改进是通过隐藏钱包的复杂性和不强迫用户确认交易来获得的——这与转移大量资金时想要的相反。
 
-#### No More Popups 🦊
+#### 没有更多的弹出窗口🦊
 
-Decentralized apps today require lots of technical knowledge to configure and use, limiting your user base and reducing the potential for growth.
+今天的去中心化应用程序需要大量技术知识来配置和使用，从而限制了您的用户群并降低了增长潜力。
 
-### Installation
+### 安装
 
 ```bash
 npm i --save @audius/hedgehog
 ```
 
-### Docs & Examples
+### 文档 & 示例
 
-Check out our full technical [docs](http://audiusproject.github.io/hedgehog-docs) and [api how-to](http://audiusproject.github.io/hedgehog-docs#how-to).
+查看我们完整的技术 [文档](http://audiusproject.github.io/hedgehog-docs) 和 [api how-to](http://audiusproject.github.io/hedgehog-docs#how-to)。
 
-For a quick browser-side demo, [look no further](https://codesandbox.io/embed/pp9zzv2n00). For a full end-to-end auth demonstration, see our [demo repo](https://github.com/AudiusProject/audius-hedgehog-demo).
+对于浏览器端的快速演示， [不要再看了](https://codesandbox.io/embed/pp9zzv2n00)。 有关完整的端到端身份验证演示，请参阅我们的 [demo repo](https://github.com/AudiusProject/audius-hedgehog-demo)。
 
-### Why Use This?
+### 为什么使用这个？
 
-#### Not All Transactions Are Created Equal
+#### 并非所有交易都是平等的
 
-Currently available wallets treat every transaction as if it were moving around your life’s savings. Hedgehog was built for use-cases involving low-to-no financial value.
+当前可用的钱包将每笔交易都视为在您一生的积蓄中移动。 Hedgehog 是为涉及低到没有财务价值的用例而构建的。
 
-**NOTE**: The primary improvement to end-user experience is by hiding wallet complexity and not forcing users to constantly confirm transactions - The opposite of what you’d want when moving significant money around.
+**注**：最终用户体验的主要改进是隐藏钱包的复杂性，而不是强迫用户不断确认交易——这与转移大量资金时想要的相反。
 
-#### Is Hedgehog Right for your DApp?
+#### Hedgehog 适合你的 DApp 吗？
 
-Hedgehog isn’t right for every DApp. Massive improvements in user experience are only possible through tradeoffs. As a general rule Hedgehog should not be used for apps involving significant sums of money. As a bridge, one could start users on Hedgehog and suggest migrating to a more secure wallet if their stored value increases beyond a certain threshold; the Hedgehog paradigm is interoperable with existing web3 providers too.
+Hedgehog 并不适合所有 DApp。 只有通过权衡，才能大幅提升用户体验。 作为一般规则，Hedgehog 不应用于涉及大量资金的应用程序。 作为桥梁，可以在 Hedgehog 上启动用户，如果他们的储值增加超过某个阈值，则建议迁移到更安全的钱包； Hedgehog 范式也可以与现有的 web3 提供程序互操作。
 
-_\[Good use cases\]_
+_\[好的用例\]_
 
-* **Signing data**: If you’re building decentralized applications that rely on user signed data \(eg. via EIP-712-esque signing schemes\), Hedgehog could help simplify the experience if the stakes are low enough.
-* **Gaming DApp**: Nothing ruins fun as much as signing transactions. If you’re building a gaming DApp that doesn’t use significant financial assets, improving UX is key.
-* **Decentralized Music Player**: If you’re building consumer-facing DApps, Hedgehog will dramatically improve user experience and significantly increase your potential userbase.
+* **签名数据**：如果您正在构建依赖用户签名数据的去中心化应用程序\（例如，通过 EIP-712-esque 签名方案\），如果风险足够低，Hedgehog 可以帮助简化体验。
+* **游戏 DApp**：没有什么比签署交易更能破坏乐趣了。 如果你正在构建一个不使用大量金融资产的游戏 DApp，那么改进用户体验是关键。
+* **去中心化音乐播放器**：如果您正在构建面向消费者的 DApp，Hedgehog 将显着改善用户体验并显着增加您的潜在用户群。
 
-_\[Bad use cases\]_
+_\[不良用例\]_
 
-If your DApp involves moving around significant sums of money, then the tradeoff in security is most likely not worth it. Hedgehog’s primary improvement to end-user experience is by hiding the wallet and not forcing users to confirm transactions - The opposite of what you’d want when moving money around. We absolutely don’t recommend using Hedgehog in situations like these:
+如果你的 DApp 涉及转移大量资金，那么在安全性方面的权衡很可能是不值得的。 Hedgehog 对最终用户体验的主要改进是隐藏钱包而不是强迫用户确认交易——这与你在转移资金时想要的相反。 我们绝对不建议在以下情况下使用 Hedgehog：
 
-* **Banking DApp**
-* **Decentralized Lending**
-* **Prediction Markets**
+* **银行 DApp**
+* **去中心化借贷**
+* **预测市场**
 
-### A Closer Look
+### 仔细观察
 
-Hedgehog is a package that lives in your front end application to create and manage a user's entropy \(from which a private key is derived\). Hedgehog relies on a username and password to create auth artifacts, so it's able to simulate a familiar authentication system that allows users to sign up or login from multiple browsers or devices and retrieve their entropy. Those artifacts, through hedgehog, are persisted to a backend of your choosing.
+Hedgehog 是一个存在于前端应用程序中的包，用于创建和管理用户的熵\（从中派生出私钥\）。 Hedgehog 依靠用户名和密码来创建身份验证工件，因此它能够模拟熟悉的身份验证系统，允许用户从多个浏览器或设备注册或登录并检索他们的熵。 这些工件通过 Hedgehog 保存到您选择的后端。
 
-**NOTE**: A private key is only computed and available client side and is never transmitted or stored anywhere besides the user's browser.
+**注**：私钥仅在客户端计算和可用，并且永远不会在用户浏览器之外的任何地方传输或存储。
 
 ```javascript
-// Provide getFn, setAuthFn, setUserFn as requests to your database/backend service (more details in docs).
-const hedgehog = new Hedgehog(getFn, setAuthFn, setUserFn)
-let wallet
-if (hedgehog.isLoggedIn()) {
-  wallet = hedgehog.getWallet()
-} else {
-  wallet = await hedgehog.login('username', 'password')
-  // or
-  wallet = await hedgehog.signUp('username', 'password')
+// 提供 getFn、setAuthFn、setUserFn 作为对您的数据库/后端服务的请求（文档中的更多详细信息）。
+常量刺猬=新刺猬（getFn，setAuthFn，setUserFn）
+让钱包
+如果（hedgehog.isLoggedIn（））{
+  钱包=hedgehog.getWallet（）
+}否则{
+  钱包=等待hedgehog.login（'用户名'，' password')
+  // 或
+  wallet = await Hedgehog.signUp('username', 'password')
 }
 ```
 
-After creating or retrieving a user's wallet, you can either **fund their wallet directly** to pay transaction fees or **relay their transactions through a EIP-712 relayer**.
+在创建或检索用户的钱包后，您可以 **直接为他们的钱包注资** 支付交易费用或 **通过 EIP-712 中继器**中继他们的交易。
 
 
-### 👉 [Take a deeper dive into the docs](https://audiusproject.github.io/hedgehog-docs/#installation) 👈
+### 👉 [深入了解文档](https://audiusproject.github.io/hedgehog-docs/#installation)👈
