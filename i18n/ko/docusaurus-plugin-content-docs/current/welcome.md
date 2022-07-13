@@ -1,34 +1,34 @@
 ---
-description: Welcome to the Audius technical documents.
-sidebar_label: Welcome
+description: Audius 기술 문서에 오신 것을 환영합니다.
+sidebar_label: 어서 오십시오
 sidebar_position: 1
 ---
 
-# 🎶 Welcome 🎶
+# 🎶 환영합니다 🎶
 
-Welcome to the Audius technical documentation!
-
-
-## What is Audius?
-
-[Audius](https://audius.co) is a digital streaming service that connects fans directly with artists and exclusive new music.
-
-It does this by being fully decentralized: Audius is owned and run by a vibrant, open-source community of artists, fans, and developers all around the world. Audius gives artists the power to share never-before-heard music and monetize streams directly. Developers can build their own apps on top of Audius, giving them access to one of the most unique audio catalogs in existence.
-
-Under the hood, Audius is both a protocol & platform built on top of the blockchain (several, in fact) and community run nodes. Audius is open source, open data & access, and open ownership.
+Audius 기술 문서에 오신 것을 환영합니다!
 
 
-## Why Audius?
+## 오디우스란?
 
-Music creation and distribution have been dramatically changed by technology in the last two decades. Creating music no longer requires a team of producers and audio engineers. Anyone in their bedroom can start with inexpensive software. Similarly, distributing music no longer requires factories that produce physical records and retail relationships for getting those records into stores; music platforms have enabled artists to distribute their own music.
+[Audius](https://audius.co) 은 팬과 아티스트 및 독점 신곡을 직접 연결하는 디지털 스트리밍 서비스입니다.
 
-Though redundant in the age of digital distribution, the network of intermediaries and middlemen that formed in the early days of recorded music still persists, thriving on the back of artists and curators while the mechanics of value transfer and accrual are still largely obfuscated.
+이는 완전히 분산되어 수행됩니다. Audius는 전 세계의 아티스트, 팬 및 개발자로 구성된 활기찬 오픈 소스 커뮤니티가 소유하고 운영합니다. Audius는 아티스트에게 전례 없는 음악을 공유하고 스트림으로 직접 수익을 창출할 수 있는 기능을 제공합니다. 개발자는 Audius 위에 자체 앱을 구축하여 현존하는 가장 독특한 오디오 카탈로그 중 하나에 액세스할 수 있습니다.
 
-Audius is the most direct to consumer alternative to existing digital streaming platforms, giving Artists and Fans direct access to one another and ownership & equity in the network they (and you!) are helping to create.
+내부적으로 Audius는 블록체인(사실상 여러 개)과 커뮤니티 실행 노드 위에 구축된 프로토콜 & 플랫폼입니다. Audius는 오픈 소스, 오픈 데이터 & 액세스 및 오픈 소유권입니다.
 
 
-## Documentation
+## 왜 오디우스인가?
 
-This documentation site guides you through how to familiarize yourself with Audius concepts, how to participate in the protocol & community from a technical perspective, and how to interact with and use the $AUDIO token.
+음악 제작 및 배포는 지난 20년 동안 기술에 의해 극적으로 변화했습니다. 음악을 만드는 데 더 이상 프로듀서와 오디오 엔지니어 팀이 필요하지 않습니다. 침실에 있는 누구나 저렴한 소프트웨어로 시작할 수 있습니다. 마찬가지로, 음악을 배포하는 데 더 이상 물리적 레코드를 생산하는 공장과 해당 레코드를 매장에 가져오기 위한 소매 관계가 필요하지 않습니다. 음악 플랫폼을 통해 아티스트는 자신의 음악을 배포할 수 있습니다.
 
-If you've found yourself here and are confused, check out the reference music player implementation at [audius.co](https://audius.co) and join our [Discord](https://discord.com/invite/audius).
+디지털 유통의 시대에 중복되었지만 녹음된 음악의 초기에 형성된 중개자와 중개인의 네트워크는 여전히 존속하며, 가치 이전 및 발생 메커니즘이 여전히 대부분 모호한 상태에서 아티스트와 큐레이터의 지원을 받아 번성합니다.
+
+Audius는 기존 디지털 스트리밍 플랫폼에 대한 가장 직접적인 소비자 대안으로 아티스트와 팬이 서로에게 직접 액세스할 수 있고 그들이(그리고 귀하!) 생성하는 데 도움이 되는 네트워크에서 소유권 & 의 지분을 제공합니다.
+
+
+## 선적 서류 비치
+
+이 문서 사이트는 Audius 개념에 익숙해지는 방법, 기술적 관점에서 프로토콜 & 커뮤니티에 참여하는 방법, $AUDIO 토큰과 상호 작용하고 사용하는 방법을 안내합니다.
+
+여기에서 자신을 발견하고 혼란스럽다면 [audius.co](https://audius.co) 에서 참조 뮤직 플레이어 구현을 확인하고 [Discord](https://discord.com/invite/audius)에 참여하세요.
