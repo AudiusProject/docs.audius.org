@@ -1,14 +1,14 @@
 - - -
-sidebar_label: Whitepaper sidebar_position: 2
+sidebar_label：白皮书 sidebar_position：2
 - - -
 
-# Whitepaper
+# 白皮书
 
-The Audius Whitepaper lays the theoretical & technical groundwork for how the platform is built and continues to grow.
+Audius 白皮书为平台的构建和持续发展奠定了理论上的 & 技术基础。
 
-## [PDF Download](https://whitepaper.audius.co)
-## [Blog post](https://blog.audius.co/posts/the-audius-white-paper-a-decentralized-community-owned-music-sharing-protocol)
+## [PDF下载](https://whitepaper.audius.co)
+## [博文](https://blog.audius.co/posts/the-audius-white-paper-a-decentralized-community-owned-music-sharing-protocol)
 
-Questions? Ask & engage with the community on
+问题？ 询问 & 与社区互动
 
-[Discord](https://discord.com/invite/audius) and [Reddit](https://www.reddit.com/r/audius/)
+[不和谐](https://discord.com/invite/audius) 和 [Reddit](https://www.reddit.com/r/audius/)
